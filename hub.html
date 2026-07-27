@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product Hub — Scoop Sense</title>
+  <meta name="description" content="Every pre-workout we've logged, side by side: caffeine per serving, key ingredient doses, and the cautions worth knowing before you scoop.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="sc-header">
+  <div class="sc-container sc-header-inner">
+    <a class="sc-logo" href="index.html">Scoop<span>Sense</span></a>
+    <nav class="sc-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="hub.html" class="sc-active">Product Hub</a>
+      <a href="disclosure.html">How We Make Money</a>
+      <a href="disclaimer.html">Health &amp; Safety</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="sc-hub-intro">
+    <div class="sc-container">
+      <h1>Every tub on file</h1>
+      <p class="sc-hub-lead">Caffeine, key doses, and cautions for every product we've logged — pulled straight from the label and lined up side by side.</p>
+      <p class="sc-disclosure-line">Heads up: the product links below are affiliate links. We may earn a commission if you buy — at no extra cost to you. <a href="disclosure.html">Details</a>.</p>
+    </div>
+  </section>
+
+  <section class="sc-hub-results">
+    <div class="sc-container">
+
+      <div class="sc-filterbar">
+        <div class="sc-field sc-field-search">
+          <span class="sc-field-label" aria-hidden="true">Search</span>
+          <input type="search" id="sc-search" placeholder="Search product, brand, or ingredient…" aria-label="Search products">
+        </div>
+
+        <div class="sc-field sc-field-sort">
+          <span class="sc-field-label" aria-hidden="true">Sort</span>
+          <select id="sc-sort" aria-label="Sort products">
+            <option value="name">Name (A–Z)</option>
+            <option value="caffeine-asc">Caffeine: low to high</option>
+            <option value="caffeine-desc">Caffeine: high to low</option>
+          </select>
+        </div>
+
+        <div class="sc-field sc-field-buckets">
+          <span class="sc-field-label" aria-hidden="true">Caffeine level</span>
+          <div class="sc-bucket-group" id="sc-caffeine-buttons" role="group" aria-label="Caffeine level">
+            <button type="button" class="sc-bucket sc-active" data-bucket="all">Any caffeine</button>
+            <button type="button" class="sc-bucket" data-bucket="none">Stim-free (0 mg)</button>
+            <button type="button" class="sc-bucket" data-bucket="low">Low (under 150 mg)</button>
+            <button type="button" class="sc-bucket" data-bucket="moderate">Standard (150–249 mg)</button>
+            <button type="button" class="sc-bucket" data-bucket="high">Strong (250 mg+)</button>
+          </div>
+        </div>
+
+        <div class="sc-field sc-field-toggle">
+          <label class="sc-toggle"><input type="checkbox" id="sc-stimfree"> Stim-free only</label>
+        </div>
+
+        <div class="sc-field sc-field-legend">
+          <p class="sc-price-legend">Price guide: $ budget · $$ mid · $$$ premium (per serving — we don't show dollar prices because they change daily)</p>
+        </div>
+      </div>
+
+      <p class="sc-count" id="sc-count"></p>
+
+      <div class="sc-grid" id="sc-hub-grid"></div>
+
+      <p class="sc-empty" id="sc-empty" hidden>No products match those filters. Clear one — or tell us which tub we should put on file.</p>
+
+      <p class="sc-verify-note">Ingredient figures come from manufacturer labels and can change without notice. Always verify against the current label on the product you buy.</p>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="sc-footer">
+  <div class="sc-container">
+    <p class="sc-footer-brand">Scoop Sense — the no-hype read on what's actually in your pre-workout.</p>
+    <p class="sc-footer-legal">Affiliate disclosure: some links on this site are affiliate links. We may earn a commission if you buy through them, at no extra cost to you. <a href="disclosure.html">How we make money</a></p>
+    <p class="sc-footer-legal">These statements have not been evaluated by the Food and Drug Administration. These products are not intended to diagnose, treat, cure, or prevent any disease.</p>
+    <p class="sc-footer-legal">Ingredient figures come from manufacturer labels and can change — always verify against the current label. Nothing on this site is medical advice; talk to your doctor before starting any supplement. <a href="disclaimer.html">Health &amp; safety notes</a></p>
+    <p class="sc-footer-copy">&copy; 2026 Scoop Sense</p>
+  </div>
+</footer>
+
+<script src="data/products.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
