@@ -1,0 +1,229 @@
+{
+  "id": "legion-pulse",
+  "name": "Pulse Pre-Workout",
+  "brand": "Legion Athletics",
+  "researchedAt": "2026-07-27",
+  "sources": [
+    {
+      "url": "https://legionathletics.com/products/supplements/pulse-pre-workout/",
+      "used_for": "Manufacturer product page: confirmed 350 mg caffeine, all six active doses stated inline, '15.1 grams per serving' total actives, 20-serving bottle, list price $49.99 ($2.50/serving) and subscribe price $34.99 ($1.75/serving), current flavor list, Bottle vs Stick Packs formats, Labdoor certification claim"
+    },
+    {
+      "url": "https://legionathletics.com/wp-content/uploads/2022/12/Image-2-pulse-Fruit-Punch-20S-ingredients-carousel-2.png",
+      "used_for": "PRIMARY LABEL SOURCE. The actual Supplement Facts panel image served on the current manufacturer product page (Fruit Punch, 20-serving). Read directly to settle serving size (2 scoops, 23.5 g), servings per container (20), calories, carbs, calcium/sodium/potassium, every active dose, and the verbatim Other Ingredients line"
+    },
+    {
+      "url": "https://www.samedaysupplements.com/legion-pulse-pre-workout.html",
+      "used_for": "Independent full text transcription of the supplement facts panel, directions (1 scoop vs 2 scoops), allergen statement, and the complete label warnings block. Also a third-party price point ($44.99 / $2.25 per serving)"
+    },
+    {
+      "url": "https://barbend.com/legion-pulse-pre-workout-review/",
+      "used_for": "Cross-check of the six active doses and the two-scoop serving scheme; source of the conflicting 22.76 g / 21-serving figures that identify the previous packaging"
+    },
+    {
+      "url": "https://www.garagegymreviews.com/legion-pulse",
+      "used_for": "Cross-check of active doses, independent confirmation of 20 servings per container and the two-scoop serving, 'no proprietary blends', erythritol/stevia sweeteners, flavor list"
+    },
+    {
+      "url": "https://torokhtiy.com/blogs/review/legion-pulse-pre-workout-review",
+      "used_for": "Independent corroboration of the 23.5 g serving size and ~20 servings, Labdoor third-party testing, beta-alanine paresthesia note"
+    },
+    {
+      "url": "https://feastgood.com/legion-pulse-pre-workout-review/",
+      "used_for": "Cross-check of active doses and two-scoop serving; source of conflicting sodium/potassium and beta-alanine figures recorded in gaps"
+    },
+    {
+      "url": "https://fitnessvolt.com/legion-pulse-pre-workout-review/",
+      "used_for": "Corroboration of 350 mg caffeine, two-scoop serving, stevia/erythritol sweetening, no artificial colors, fully disclosed doses"
+    },
+    {
+      "url": "https://www.living.fit/products/legion-athletics-pulse",
+      "used_for": "Retailer size options (10, 20 and 40 serving/travel packet configurations), gluten-free and ISO 17025 third-party testing claims, retailer image gallery count"
+    }
+  ],
+  "servingSizeG": 23.5,
+  "servingsPerTub": 20,
+  "scoopNote": "A full serving is 2 scoops (23.5 g); all doses in fullPanel are per 2-scoop serving. Legion explicitly markets a half-serving protocol: the label directions say to use 1 scoop before normal weight training or intense cardio, and 2 scoops (described as 'full clinical dosages') only for intense training lasting longer than 45 minutes. First-time users are told to start at 1 scoop. Taken at 1 scoop the tub yields 40 servings and every dose below is halved (e.g. 175 mg caffeine). Sold as a 20-serving bottle; some retailers also carry 10-serving and 40-serving/stick-pack configurations. A separate caffeine-free 'Pulse Stim-Free' SKU exists and is a different product. Nutrition-facts rows per 2-scoop serving (Fruit Punch panel): 4 calories and 5 g total carbohydrate, almost entirely the erythritol bulk sweetener.",
+  "caffeineMg": 350,
+  "caffeineForms": [
+    { "form": "Caffeine Anhydrous", "mg": 350 }
+  ],
+  "fullPanel": [
+    {
+      "name": "L-Citrulline DL-Malate 2:1",
+      "doseMg": 8000,
+      "doseLabel": "8 g",
+      "form": "Citrulline malate 2:1 (2 parts L-citrulline to 1 part DL-malic acid), so roughly 5.3 g of actual L-citrulline",
+      "inProprietaryBlend": false,
+      "clinicalRange": "6-8 g citrulline malate in most performance studies",
+      "assessment": "at studied range"
+    },
+    {
+      "name": "Beta-Alanine",
+      "doseMg": 3600,
+      "doseLabel": "3.6 g",
+      "form": "CarnoSyn brand beta-alanine per manufacturer marketing; the printed panel lists it simply as 'Beta Alanine'",
+      "inProprietaryBlend": false,
+      "clinicalRange": "3.2-6.4 g per day, taken daily to saturate muscle carnosine",
+      "assessment": "at studied range"
+    },
+    {
+      "name": "Betaine Anhydrous",
+      "doseMg": 2500,
+      "doseLabel": "2.5 g",
+      "form": "Betaine anhydrous (trimethylglycine)",
+      "inProprietaryBlend": false,
+      "clinicalRange": "2.5 g per day is the standard dose in power/strength studies",
+      "assessment": "at studied range"
+    },
+    {
+      "name": "Caffeine Anhydrous",
+      "doseMg": 350,
+      "doseLabel": "350 mg",
+      "form": "Caffeine anhydrous, single unbuffered form (no dicaffeine malate or extended-release blend)",
+      "inProprietaryBlend": false,
+      "clinicalRange": "3-6 mg per kg bodyweight, roughly 200-450 mg for most adults",
+      "assessment": "at studied range"
+    },
+    {
+      "name": "L-Theanine",
+      "doseMg": 350,
+      "doseLabel": "350 mg",
+      "form": "L-theanine, dosed 1:1 against caffeine",
+      "inProprietaryBlend": false,
+      "clinicalRange": "100-400 mg, commonly paired 1:1 or 2:1 with caffeine for jitter reduction",
+      "assessment": "at studied range"
+    },
+    {
+      "name": "Alpha-Glyceryl Phosphoryl Choline (GPC) 50%",
+      "doseMg": 300,
+      "doseLabel": "300 mg",
+      "form": "AlphaSize alpha-GPC at 50% concentration per manufacturer marketing. The panel lists 300 mg of the 50% material, which is about 150 mg of actual alpha-GPC",
+      "inProprietaryBlend": false,
+      "clinicalRange": "300-600 mg of actual alpha-GPC in power-output and cognition studies",
+      "assessment": "below studied range"
+    },
+    {
+      "name": "Sodium (as Sodium Citrate and naturally occurring)",
+      "doseMg": 400,
+      "doseLabel": "400 mg (17% DV)",
+      "form": "Sodium citrate plus sodium naturally occurring in other ingredients",
+      "inProprietaryBlend": false,
+      "clinicalRange": null,
+      "assessment": "not enough research"
+    },
+    {
+      "name": "Potassium (as Tripotassium Citrate and naturally occurring)",
+      "doseMg": 440,
+      "doseLabel": "440 mg (9% DV)",
+      "form": "Tripotassium citrate plus potassium naturally occurring in other ingredients",
+      "inProprietaryBlend": false,
+      "clinicalRange": null,
+      "assessment": "not enough research"
+    },
+    {
+      "name": "Calcium (as Calcium Silicate and naturally occurring)",
+      "doseMg": 27,
+      "doseLabel": "27 mg (2% DV)",
+      "form": "Calcium silicate (anti-caking agent) plus calcium naturally occurring in other ingredients",
+      "inProprietaryBlend": false,
+      "clinicalRange": null,
+      "assessment": "not enough research"
+    }
+  ],
+  "otherIngredients": [
+    "Natural Sweetener (Erythritol)",
+    "Natural Flavors",
+    "Silica",
+    "Stevia Leaf Extract",
+    "Fruit and Vegetable Juice (Color)"
+  ],
+  "sweeteners": [
+    "Erythritol",
+    "Stevia Leaf Extract"
+  ],
+  "dyes": [],
+  "flavors": [
+    "Fruit Punch",
+    "Blue Raspberry",
+    "Sour Mango",
+    "Red Gummy Fish",
+    "Strawberry Blast",
+    "Cotton Candy",
+    "Strawberry Kiwi",
+    "Frosted Cranberry",
+    "Peach Ring",
+    "Pink Lemonade",
+    "Grape",
+    "Lemon Iced Tea",
+    "Watermelon",
+    "Strawberry Margarita",
+    "Pina Colada",
+    "Sour Candy",
+    "Blueberry Lemonade",
+    "Arctic Blast",
+    "Green Apple",
+    "Cherry Limeade",
+    "Berries & Cream",
+    "Lemon Lime",
+    "Rainbow Sherbet",
+    "Tropical Punch",
+    "Blood Orange",
+    "Mojito",
+    "Pineapple Whip"
+  ],
+  "certifications": [
+    "Labdoor certified (manufacturer states it is independently certified by Labdoor to meet or exceed FDA safety guidelines)",
+    "Third-party lab tested for purity and label accuracy; a current Certificate of Analysis is published on the product page",
+    "Manufactured in NSF-certified and FDA-inspected facilities in the USA (facility certification, not product certification)",
+    "Gluten free (retailer claim)"
+  ],
+  "labelWarnings": [
+    "Read the entire label before use and use only as directed.",
+    "Do not use if you are under 18 years of age.",
+    "Do not use if you are pregnant or nursing.",
+    "Do not use if the safety seal is damaged or missing.",
+    "Do not use if you are consuming caffeine or stimulant products from other sources.",
+    "Consult a physician before use if you have any pre-existing medical condition.",
+    "Consult a physician before use if you are taking any prescription medication.",
+    "Contains 350 mg of caffeine per full two-scoop serving; do not combine with other caffeine or stimulant sources.",
+    "First-time users should assess tolerance with a single scoop, and stop and consult a doctor if any adverse effects occur.",
+    "Allergen statement: produced in a facility that may also process milk, eggs, fish, shellfish, tree nuts, peanuts, wheat and soybeans.",
+    "Beta-alanine at this dose commonly causes harmless temporary skin tingling (paresthesia)."
+  ],
+  "priceUsd": {
+    "amazonTypical": null,
+    "brandSiteList": 49.99,
+    "perServing": 2.5,
+    "note": "prices move - checked 2026-07-27. Brand site one-time purchase is $49.99 for the 20-serving bottle, which is $2.50 per two-scoop serving (about $1.25 per scoop if dosing one scoop). Legion's subscribe-and-save price at time of checking was $34.99, or $1.75 per serving, and multi-tub 3/4/5 packs carry a 30% discount. Third-party retailer SameDaySupplements listed $44.99 ($2.25/serving) and Living.Fit listed a $39.99 sale price against a $49.99 list. Amazon price could not be verified because the listing blocked automated access."
+  },
+  "imageNotes": {
+    "retailerImageCount": 22,
+    "angleTypes": [
+      "front",
+      "facts panel",
+      "lifestyle"
+    ],
+    "rightsNote": "The brand product page carousel serves a small set of first-party assets at 1000x1000: a front-of-bottle hero rendered per flavor (file naming follows the pattern pulse-20-serving-<flavor>-image-1, so a distinct front image exists for each of the 27 flavors), a transparent-background variant of the same front shot, a dedicated Supplement Facts panel graphic that also carries the six headline doses as callouts, a second shared half-bottle facts image, a Labdoor report graphic and a Certificate of Analysis graphic. There is also a wide lifestyle/editorial banner (Desktop-Pulse.jpg, 561x811). Living.Fit's retail listing showed 22 gallery thumbnails, the largest gallery observed. Rights: Amazon listing imagery must come through the Amazon Product Advertising API (PA-API) and may only be displayed under its terms, so it cannot be scraped or hotlinked; the brand's own carousel and facts-panel assets should be requested through the Legion affiliate/brand kit rather than hotlinked off legionathletics.com, since direct linking is both a rights and a hotlinking-bandwidth problem. The Supplement Facts graphic is the highest-value asset for a comparison page and is the one most worth explicitly licensing. No images were downloaded for redistribution or hotlinked during this research; the facts panel was read once solely to verify label numbers."
+  },
+  "reformulationNotes": "The current formula is the post-2019 'new formula' Pulse and is what the manufacturer ships today. Relative to the original Pulse, taurine and L-ornithine HCl were removed and AlphaSize alpha-GPC (300 mg) and betaine anhydrous (2.5 g) were added, while Legion held the price flat. The current label is 6 active ingredients totalling 15.1 g per serving, fully disclosed with no proprietary blend. Separately, the PACKAGING changed more recently: the tub is now a 20-serving, 23.5 g-per-serving bottle, whereas reviews written against the previous packaging (Barbend among them) still cite 21 servings at 22.76 g per serving. The active ingredient doses did not change with that packaging update - only the tub count and the rounding of the serving weight. Legion has also expanded the delivery formats, now offering stick packs alongside the bottle, and retailers list 10-, 20- and 40-serving configurations. A separate caffeine-free SKU, Pulse Stim-Free, carries the same four non-stimulant actives but drops both caffeine and L-theanine; it is a distinct product and should not be merged into this record. Mineral content appears to vary by flavor, and the coloring agent differs by flavor (fruit and vegetable juice on the Fruit Punch panel, spirulina extract on at least one other).",
+  "fieldConfidence": {
+    "caffeineMg": "high",
+    "fullPanel": "high",
+    "flavors": "medium",
+    "priceUsd": "medium"
+  },
+  "gaps": [
+    "Serving size in grams is reported inconsistently across sources: the manufacturer's own current Supplement Facts panel says 2 scoops (23.5 g) and Torokhtiy agrees, but SameDaySupplements transcribes 24 g, Garage Gym Reviews says 23 g, and Barbend says 22.76 g. Recorded the manufacturer label value of 23.5 g. The 22.76 g figure is almost certainly the previous packaging.",
+    "Servings per container disagreed: the manufacturer label, Garage Gym Reviews and Torokhtiy all say 20, while Barbend says 21. Recorded the manufacturer value of 20; 21 reflects the prior tub.",
+    "Electrolyte values conflict sharply between the manufacturer's Fruit Punch panel (sodium 400 mg, potassium 440 mg, calcium 27 mg from calcium silicate) and SameDaySupplements' transcription (sodium 110 mg, potassium 340 mg, calcium 107 mg from calcium carbonate plus calcium silicate). FeastGood reports a third set (sodium 200 mg, potassium 400 mg). Used the manufacturer panel. This most likely means mineral content genuinely varies by flavor, but that was not confirmed, and per-flavor panels for the other 26 flavors were not retrieved.",
+    "The alpha-GPC dose is ambiguous on the label. It reads 'Alpha-Glyceryl Phosphoryl Choline (GPC) 50% - 300 mg', which conventionally means 300 mg of a 50% concentrate and therefore about 150 mg of actual alpha-GPC. Legion's marketing copy says '300 milligrams of alpha-GPC (50%)'. Whether the 300 mg refers to the raw material or the active was not resolved with a second source, and the 'below studied range' assessment depends on that reading.",
+    "Beta-alanine is 3.6 g on the manufacturer panel and per Barbend, Garage Gym Reviews and Torokhtiy; FeastGood alone reports 3.5 g. Treated FeastGood as a rounding error.",
+    "The coloring agent differs by flavor. The Fruit Punch panel reads 'Fruit and Vegetable Juice (Color)' while SameDaySupplements lists 'Spirulina Extract'. The otherIngredients list reflects Fruit Punch only and will not be accurate for every flavor.",
+    "Flavor list was scraped from the live brand-site selector and is current as of the check, but flavor lineups rotate frequently and third-party reviews reported counts ranging from 14 to 20. Pineapple Whip was showing out of stock. Retailer-exclusive flavors were not surveyed.",
+    "Amazon could not be verified at all. Both the WebFetch attempt and a browser session were blocked by Amazon's bot protection, so amazonTypical price is null and the Amazon gallery image count and angle mix are unconfirmed. The retailerImageCount of 22 is from Living.Fit, not Amazon.",
+    "The Labdoor certification and Certificate of Analysis are asserted by the manufacturer and rendered as modal images rather than linked documents, so the underlying report was not opened and the certification could not be independently verified. Pulse is not Informed Sport or NSF Certified for Sport at the product level; only the manufacturing facility is described as NSF-certified.",
+    "Net tub weight in grams or ounces was not confirmed for the current 20-serving bottle. Older listings cite 1.04 lb (472 g), which matches the previous 21-serving packaging rather than the current one.",
+    "Per-serving price for the stick pack and the 10- and 40-serving configurations was not captured; only the 20-serving bottle was priced."
+  ]
+}

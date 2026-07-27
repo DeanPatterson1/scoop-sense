@@ -1,0 +1,312 @@
+{
+  "id": "gorilla-mode",
+  "name": "Gorilla Mode",
+  "brand": "Gorilla Mind",
+  "researchedAt": "2026-07-27",
+  "sources": [
+    {
+      "url": "https://gorillamind.com/products/gorilla-mode",
+      "used_for": "Official product page: current formula version (Gorilla Mode 2.0), list price $59.99 / $53.99 subscribe, current 14-flavor lineup, '40 grams of active ingredients per maximum daily dose' and 'naturally colored' claims, image gallery count"
+    },
+    {
+      "url": "https://gorillamind.com/pages/gorilla-mode",
+      "used_for": "Manufacturer's legacy/long-form ingredient page, which still documents the ORIGINAL (pre-2024) formula dose-by-dose - used only as the reference for reformulationNotes"
+    },
+    {
+      "url": "https://www.muscleandstrength.com/store/gorilla-mode.html",
+      "used_for": "Primary transcription of the current supplement facts panel per 1 scoop (20.3 g), servings per container, other ingredients, label warnings, price per serving"
+    },
+    {
+      "url": "https://www.priceplow.com/gorilla-mind/gorilla-mode-pre-workout",
+      "used_for": "Independent cross-check of every current per-scoop dose; retail price range including Amazon"
+    },
+    {
+      "url": "https://www.dpsnutrition.net/i/33451/gorilla-mind-gorilla-mode-pre-workout-bombsicle-4.htm",
+      "used_for": "Third cross-check of the panel with both 1-scoop and 2-scoop columns, vitamins and minerals, other ingredients (red beet root color)"
+    },
+    {
+      "url": "https://illpumpyouup.com/gorilla-mind-gorilla-mode-pre-workout/",
+      "used_for": "Cross-check of the 2-scoop column, verbatim label warnings including Prop 65, directions for use"
+    },
+    {
+      "url": "https://nutricartel.com/products/gorilla-mode-pre-workout",
+      "used_for": "Cross-check of per-scoop doses, other ingredients / colorant wording, flavor list"
+    },
+    {
+      "url": "https://world.openfoodfacts.org/product/0810113510828/pre-workout-gorilla-mode",
+      "used_for": "Independent database cross-check of the vitamin and mineral row values and other ingredients"
+    },
+    {
+      "url": "https://www.stack3d.com/2024/03/gorilla-mode-2024.html",
+      "used_for": "Industry-press confirmation of the 2024 reformulation: doses of citrulline, creatine, HydroPrime, betaine, tyrosine, alpha-GPC, huperzine, caffeine; ingredients removed"
+    },
+    {
+      "url": "https://www.stack3d.com/2024/03/gorilla-mind-improved-formula-teaser.html",
+      "used_for": "Pre-launch dose teaser for the reformulation (secondary confirmation of the 400 mg caffeine / 800 mg alpha-GPC / 200 mcg huperzine figures)"
+    },
+    {
+      "url": "https://barbend.com/gorilla-mode-pre-workout-review/",
+      "used_for": "Detailed third-party review: 200 mg caffeine per scoop / 400 mg per 2 scoops, price per tub and per serving, sweeteners, Dyad Labs third-party testing, note that the formula was updated"
+    },
+    {
+      "url": "https://www.amazon.com/Gorilla-Mode-Pre-Workout-Dimethylamine/dp/B09D667JS7",
+      "used_for": "Amazon listing: 812 g tub, '2 scoops' serving, current-formula ingredient callouts (Betaine, Hydroprime, Alpha-GPC, 400 mg Caffeine) in the title"
+    },
+    {
+      "url": "https://www.amazon.com/Gorilla-Mode-Pre-Workout-Dimethylamine/dp/B0948F352F",
+      "used_for": "Second Amazon ASIN showing a 792 g tub weight for a different flavor (evidence that net weight varies by flavor)"
+    },
+    {
+      "url": "https://www.mybodygoods.com/products/gorilla-mode-2-0",
+      "used_for": "Retailer restatement of the reformulation claim: max daily dose raised from ~30 g to ~40 g, naturally colored, improved mixability"
+    },
+    {
+      "url": "https://www.getyokd.com/products/gorilla-mind-gorilla-mode",
+      "used_for": "Evidence of a stale/older panel still circulating at retail (9,000 mg citrulline, 2,500 mg betaine, 1,500 mg tyrosine, 300 mg alpha-GPC, 39.4 g per 2 scoops) - recorded as a discrepancy, not used for values"
+    },
+    {
+      "url": "https://nutritionfaktory.com/products/gorilla-mode-40srv",
+      "used_for": "Evidence of an outdated retail listing still quoting 350 mg caffeine, GlycerPump, agmatine and Bioperine - recorded as a discrepancy, not used for values"
+    }
+  ],
+  "servingSizeG": 40.6,
+  "servingsPerTub": 20,
+  "scoopNote": "All doses in fullPanel and caffeineMg are for the FULL 2-scoop maximum dose (~40.6 g), which is how Gorilla Mind markets the product (400 mg caffeine, ~40 g of active ingredients). The printed label serving size is 1 scoop (~20.3 g) at 40 servings per tub, and the panel prints two columns (1 scoop and 2 scoops); every 1-scoop value is exactly half of the 2-scoop value. A 812 g tub therefore yields 40 one-scoop servings or 20 two-scoop servings. Label instructs 1-2 scoops in 12-14 oz water, and explicitly caps use at 2 scoops per 24 hours.",
+  "caffeineMg": 400,
+  "caffeineForms": [
+    {
+      "form": "Caffeine Anhydrous",
+      "mg": 400
+    }
+  ],
+  "fullPanel": [
+    {
+      "name": "Niacin (as Niacinamide)",
+      "doseMg": 32,
+      "doseLabel": "32 mg (200% DV)",
+      "form": "Niacinamide (non-flushing form)",
+      "inProprietaryBlend": false,
+      "clinicalRange": "RDA is 14-16 mg NE/day; 32 mg is a supplemental multiple of the RDA, well under the 35 mg/day UL for nicotinic acid but niacinamide has a higher tolerance",
+      "assessment": "not enough research"
+    },
+    {
+      "name": "Vitamin B6 (as Pyridoxal 5'-Phosphate)",
+      "doseMg": 20,
+      "doseLabel": "20 mg (1176% DV)",
+      "form": "Pyridoxal 5'-phosphate (P5P), the active coenzyme form",
+      "inProprietaryBlend": false,
+      "clinicalRange": "RDA is 1.3-1.7 mg/day; tolerable upper intake level is 100 mg/day",
+      "assessment": "not enough research"
+    },
+    {
+      "name": "Vitamin B12 (as Methylcobalamin)",
+      "doseMg": 0.25,
+      "doseLabel": "250 mcg (10417% DV)",
+      "form": "Methylcobalamin",
+      "inProprietaryBlend": false,
+      "clinicalRange": "RDA is 2.4 mcg/day; no established UL, oral megadoses are routinely used and considered low risk",
+      "assessment": "not enough research"
+    },
+    {
+      "name": "Magnesium (as Magnesium Bisglycinate)",
+      "doseMg": 50,
+      "doseLabel": "50 mg elemental (12% DV)",
+      "form": "Magnesium bisglycinate (chelate)",
+      "inProprietaryBlend": false,
+      "clinicalRange": "RDA is 310-420 mg/day; supplemental performance/sleep studies use 200-450 mg elemental",
+      "assessment": "below studied range"
+    },
+    {
+      "name": "Sodium",
+      "doseMg": 380,
+      "doseLabel": "380 mg (17% DV)",
+      "form": "From pink Himalayan sea salt and other sodium sources in the formula",
+      "inProprietaryBlend": false,
+      "clinicalRange": "Pre-exercise sodium loading studies typically use 1,000-3,600 mg (or ~10-20 mmol/kg) for plasma volume expansion",
+      "assessment": "below studied range"
+    },
+    {
+      "name": "Potassium (as Potassium Chloride)",
+      "doseMg": 380,
+      "doseLabel": "380 mg (8% DV)",
+      "form": "Potassium chloride",
+      "inProprietaryBlend": false,
+      "clinicalRange": "Adequate intake is 2,600-3,400 mg/day; sports rehydration formulas typically supply 150-500 mg per serving",
+      "assessment": "not enough research"
+    },
+    {
+      "name": "L-Citrulline",
+      "doseMg": 10000,
+      "doseLabel": "10 g",
+      "form": "Pure free-form L-citrulline (NOT citrulline malate 2:1 - the malic acid is listed separately, so this is 10 g of actual citrulline)",
+      "inProprietaryBlend": false,
+      "clinicalRange": "6-8 g of pure L-citrulline (or 8 g citrulline malate 2:1) in most blood-flow, pump and resistance-training endurance studies",
+      "assessment": "above studied range"
+    },
+    {
+      "name": "Creatine Monohydrate",
+      "doseMg": 5000,
+      "doseLabel": "5 g",
+      "form": "Micronized creatine monohydrate",
+      "inProprietaryBlend": false,
+      "clinicalRange": "3-5 g/day maintenance dose in the overwhelming majority of creatine trials",
+      "assessment": "at studied range"
+    },
+    {
+      "name": "L-Tyrosine",
+      "doseMg": 5000,
+      "doseLabel": "5 g",
+      "form": "Free-form L-tyrosine (not N-acetyl-L-tyrosine)",
+      "inProprietaryBlend": false,
+      "clinicalRange": "Acute cognition-under-stress studies dose 100-150 mg/kg (roughly 7-12 g for a 75 kg person); most commercial pre-workouts use 0.5-2 g",
+      "assessment": "below studied range"
+    },
+    {
+      "name": "Betaine Anhydrous",
+      "doseMg": 4000,
+      "doseLabel": "4 g",
+      "form": "Betaine anhydrous (trimethylglycine)",
+      "inProprietaryBlend": false,
+      "clinicalRange": "2.5 g/day in nearly all strength/power and body-composition trials",
+      "assessment": "above studied range"
+    },
+    {
+      "name": "HydroPrime Glycerol Powder (65%)",
+      "doseMg": 4000,
+      "doseLabel": "4 g (yields ~2.6 g glycerol)",
+      "form": "HydroPrime branded glycerol powder standardized to 65% glycerol; replaced GlycerPump in the 2024 reformulation",
+      "inProprietaryBlend": false,
+      "clinicalRange": "Supplement-style hyperhydration/pump dosing is ~2-4 g of 65% glycerol powder; classic clinical hyperhydration protocols use ~1.0-1.5 g/kg body weight of glycerol (60-110 g), far higher than any pre-workout supplies",
+      "assessment": "at studied range"
+    },
+    {
+      "name": "Malic Acid",
+      "doseMg": 3000,
+      "doseLabel": "3 g",
+      "form": "Free malic acid, dosed separately rather than bound as citrulline malate",
+      "inProprietaryBlend": false,
+      "clinicalRange": "No established standalone ergogenic dose; human evidence for isolated malic acid on performance is minimal",
+      "assessment": "not enough research"
+    },
+    {
+      "name": "Pink Himalayan Sea Salt",
+      "doseMg": 1000,
+      "doseLabel": "1 g",
+      "form": "Pink Himalayan sea salt (contributes to the listed sodium)",
+      "inProprietaryBlend": false,
+      "clinicalRange": "No specific studied dose; sodium-loading research uses far larger sodium quantities",
+      "assessment": "not enough research"
+    },
+    {
+      "name": "Alpha-GPC 50%",
+      "doseMg": 800,
+      "doseLabel": "800 mg of 50% material (yields 400 mg alpha-GPC)",
+      "form": "L-Alpha glycerylphosphorylcholine standardized to 50%, so actual alpha-GPC delivered is 400 mg",
+      "inProprietaryBlend": false,
+      "clinicalRange": "300-600 mg of actual alpha-GPC in power-output and cognitive studies",
+      "assessment": "at studied range"
+    },
+    {
+      "name": "Caffeine Anhydrous",
+      "doseMg": 400,
+      "doseLabel": "400 mg",
+      "form": "Caffeine anhydrous (single form, no extended-release or dicaffeine malate)",
+      "inProprietaryBlend": false,
+      "clinicalRange": "3-6 mg/kg body weight (roughly 200-450 mg for most adults); 400 mg/day is the FDA-cited general safe ceiling for healthy adults",
+      "assessment": "at studied range"
+    },
+    {
+      "name": "Huperzine A (from Huperzia serrata extract)",
+      "doseMg": 0.2,
+      "doseLabel": "200 mcg",
+      "form": "Standardized Huperzia serrata extract; acetylcholinesterase inhibitor",
+      "inProprietaryBlend": false,
+      "clinicalRange": "50-200 mcg per dose in cognitive studies",
+      "assessment": "at studied range"
+    }
+  ],
+  "otherIngredients": [
+    "Natural Flavors (some retailer transcriptions read 'Natural and Artificial Flavors')",
+    "Calcium Silicate",
+    "Silicon Dioxide",
+    "Malic Acid (also used as a flavoring/acidulant in addition to the labeled 3 g active dose)",
+    "Sucralose",
+    "Acesulfame Potassium",
+    "Fruit and vegetable powder for color, varies by flavor (e.g. grape fruit powder, red beet root)"
+  ],
+  "sweeteners": [
+    "Sucralose",
+    "Acesulfame Potassium"
+  ],
+  "dyes": [],
+  "flavors": [
+    "Fruit Punch",
+    "Blackberry Lemonade",
+    "Orange Ice Dream",
+    "Cherry Blackout",
+    "White Gummy Bear",
+    "Rocket Frost",
+    "Tiger's Blood",
+    "Mouthwatering Watermelon",
+    "Orange Rush",
+    "Blue Raspberry",
+    "Rainbow Sherbet",
+    "Cotton Candy Grape",
+    "Pink Lemonade",
+    "Red Gummy Fish"
+  ],
+  "certifications": [
+    "Third-party batch tested by Dyad Labs (a Merieux NutriSciences company) for identity, potency, purity and composition, with certificates of analysis published on gorillamind.com"
+  ],
+  "labelWarnings": [
+    "Do not exceed 2 scoops in any 24-hour period.",
+    "Not intended for use by persons under 18 years of age.",
+    "Do not use if pregnant or nursing.",
+    "Consult a physician or licensed qualified health professional before use, especially if you have or are at risk for any medical condition (including cardiovascular conditions) or are taking any medication.",
+    "Do not use in combination with other caffeinated products, other stimulants, MAO inhibitors, alcohol, or other medications.",
+    "Discontinue use at least 2 weeks prior to surgery.",
+    "Discontinue use and consult a physician if any adverse reactions occur.",
+    "California Proposition 65 warning: this product contains a chemical known to the State of California to cause cancer and/or reproductive harm.",
+    "Keep out of reach of children. Store in a cool, dry place."
+  ],
+  "priceUsd": {
+    "amazonTypical": 59.99,
+    "brandSiteList": 59.99,
+    "perServing": 3.0,
+    "note": "prices move - checked 2026-07-27. Brand site list is $59.99 per 812 g tub ($53.99 with subscribe & save); Amazon typically also $59.99. Third-party retail seen from about $42.74 (iHerb promo) up to $64.99 (I'll Pump You Up); a brand-site BOGO promo was live at the time of checking. perServing of $3.00 is for the full 2-scoop maximum dose used throughout this dossier ($59.99 / 20); at the printed 1-scoop label serving it is $1.50 ($59.99 / 40)."
+  },
+  "imageNotes": {
+    "retailerImageCount": null,
+    "angleTypes": [
+      "front",
+      "facts panel",
+      "lifestyle",
+      "ingredient breakdown infographic",
+      "benefit/callout graphic",
+      "directions-for-use graphic",
+      "flavor variant tub fronts"
+    ],
+    "rightsNote": "The official gorillamind.com product page carries the richest gallery - roughly 20+ assets including a front-of-tub shot per flavor, a readable supplement facts panel image, ingredient-breakdown charts, benefit callout graphics and usage/directions graphics. Muscle & Strength shows 1 straight product photo plus about 4 brand-supplied marketing graphics (facts, ingredient breakdown, benefits, usage). Amazon gallery contents could not be enumerated (the listing body was not retrievable), so no Amazon image count is recorded. For an affiliate gallery: Amazon-sourced images must come through the Product Advertising API (PA-API) under the Amazon Associates terms and cannot be scraped or hotlinked; brand-supplied assets (front-of-tub renders, facts panel, infographics) should be requested through Gorilla Mind's affiliate/press kit rather than pulled from the storefront. No images were downloaded or hotlinked during this research."
+  },
+  "reformulationNotes": "This product WAS reformulated. The current label is the post-March-2024 formula that Gorilla Mind and retailers refer to as 'Gorilla Mode 2.0' - the first revamp since the product launched around 2019. The ORIGINAL formula (per 2 scoops) was: L-Citrulline 9,000 mg, Creatine Monohydrate 5,000 mg, GlycerPump 65% glycerol powder 3,000 mg, Betaine Anhydrous 2,500 mg, L-Tyrosine 1,500 mg, Agmatine Sulfate 1,000 mg, Kanna (Sceletium tortuosum) 500 mg, Caffeine Anhydrous 350 mg, N-Phenethyl Dimethylamine Citrate (eria jarensis) 350 mg, BioPerine 10 mg, Huperzine A 400 mcg - roughly 30 g of actives. The 2024 reformulation removed eria jarensis, kanna, agmatine sulfate and BioPerine; swapped GlycerPump for HydroPrime; raised caffeine from 350 mg to 400 mg; raised citrulline to 10 g, betaine to 4 g, tyrosine to 5 g, glycerol powder to 4 g and alpha-GPC to 800 mg of 50% material; cut huperzine A from 400 mcg to 200 mcg; and added electrolytes (magnesium bisglycinate, sodium, potassium chloride, pink Himalayan sea salt) plus niacin, B6 as P5P and B12 as methylcobalamin. Total actives went from ~30 g to ~40 g per max dose, the product moved to natural colorants, and mixability was reportedly improved. IMPORTANT for the comparison site: Gorilla Mind's own legacy long-form page at gorillamind.com/pages/gorilla-mode still describes the OLD formula, and several retailers (Get Yok'd, Nutrition Faktory and others) still publish the old panel or old 350 mg caffeine figure - do not trust a Gorilla Mode panel found in the wild without checking for HydroPrime, betaine 4 g and the vitamin/electrolyte rows, which only appear on the current label. There is also a separate, smaller SKU called 'Gorilla Mode Base' and a stim-free 'Gorilla Mode Nitric' - neither is this product.",
+  "fieldConfidence": {
+    "caffeineMg": "high",
+    "fullPanel": "high",
+    "flavors": "medium",
+    "priceUsd": "medium"
+  },
+  "gaps": [
+    "The official gorillamind.com supplement facts panel is published only as an image, so no numeric value in this dossier was read directly off the manufacturer's own panel text. Every dose here rests on at least two independent transcriptions of the current label (Muscle & Strength and PricePlow agreeing exactly per scoop, with DPS Nutrition, I'll Pump You Up, NutriCartel and Open Food Facts corroborating), plus Stack3d's independent reporting of the reformulation doses. A human should visually confirm the numbers against the panel image before publishing.",
+    "L-Citrulline discrepancy: I'll Pump You Up lists 9,000 mg per 2 scoops while Muscle & Strength, PricePlow, DPS Nutrition, NutriCartel and Stack3d all give 10,000 mg. Get Yok'd also shows 9,000 mg alongside other old-formula values (2,500 mg betaine, 1,500 mg tyrosine, 300 mg alpha-GPC), indicating 9,000 mg is the pre-2024 figure. Used 10,000 mg as the current value.",
+    "Pink Himalayan Sea Salt discrepancy: DPS Nutrition lists 1,600 mg per scoop / 3,200 mg per 2 scoops, while Muscle & Strength, PricePlow, NutriCartel and I'll Pump You Up all give 500 mg / 1,000 mg. Used 500 mg per scoop / 1,000 mg per 2 scoops (the majority and the value consistent with the 380 mg listed sodium).",
+    "Serving-size discrepancy: I'll Pump You Up states 2 scoops = 30 g, which contradicts the ~20.3 g per scoop figure from Muscle & Strength, DPS Nutrition (~20.4 g) and PricePlow (~20 g), and contradicts the 812 g / 40 servings math. Used 20.3 g per scoop, 40.6 g per 2 scoops.",
+    "Net tub weight varies by flavor across Amazon ASINs (792 g, 800 g, 812 g and 816 g were all seen) while servings per container stays at 40. Gorilla Mind's own Shopify data lists 907 g for most variants, which is almost certainly shipping weight rather than net weight. Exact net weight for a given flavor is unverified.",
+    "Calorie count is inconsistent: Muscle & Strength shows 10 calories and 1 g carbohydrate per scoop, BarBend reports 5 calories per serving. Not resolved.",
+    "Amazon listing detail could not be verified directly - both ASIN pages returned only head/metadata to the fetcher, so the live Amazon price, review count, and the number and type of gallery images are unconfirmed. The $59.99 Amazon figure comes from PricePlow's price tracker, not from the listing itself.",
+    "Flavor list is medium confidence: the 14 flavors recorded come from the brand site's current variant list, but retailers still sell or list Bombsicle, Jungle Juice, Volcano Burst, Strawberry Kiwi, Pina Colada, Sour Gummy Worm and Patty's Iced Tea. Which of these are currently in production versus clearance stock was not determined, and flavor availability changes frequently.",
+    "The exact date of the reformulation cutover at retail is unknown; Stack3d covered the launch in March 2024, but old-panel stock and old retailer listings were still circulating as of this research.",
+    "Vitamin Shoppe, GNC and SameDaySupplements pages returned 403/307 and could not be used as cross-checks. Vitamin Shoppe's title advertised a '1.36 lbs / 40 servings' Upgraded Formula tub (about 617 g), which does not reconcile with the ~812 g / 40-serving tub documented everywhere else - this may be a different or repackaged SKU and was not resolved.",
+    "No banned-substance certification (Informed Sport / NSF Certified for Sport) was found for this product; the absence is inferred from not finding a listing rather than from an explicit manufacturer statement.",
+    "Actual glycerol content is derived (4,000 mg of a 65% powder yields about 2,600 mg glycerol) rather than label-stated; the same applies to alpha-GPC (800 mg of 50% material yields 400 mg alpha-GPC)."
+  ]
+}

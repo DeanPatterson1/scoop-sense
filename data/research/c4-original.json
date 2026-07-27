@@ -1,0 +1,217 @@
+{
+  "id": "c4-original",
+  "name": "C4 Original",
+  "brand": "Cellucor (Nutrabolt)",
+  "researchedAt": "2026-07-27",
+  "sources": [
+    {
+      "url": "https://cellucor.com/products/c4-original",
+      "used_for": "Official product page for the CURRENT (5th-generation, 2024) formula: 200 mg caffeine and 2 g CarnoSyn beta-alanine callouts, 30 servings, $34.99 one-time / $24.50 subscribe (30% off), current flavor selector, 'Old vs New' comparison graphic"
+    },
+    {
+      "url": "https://nutricartel.com/products/c4-original-pre-workout",
+      "used_for": "Only complete supplement facts transcription found: serving size 9 g / 30 servings, 10 calories, 1 g carbs, vitamin rows (B6 3.4 mg, folate 100 mcg DFE, B12 6 mcg, choline 225 mg), Velox 2.4 g with 1.2 g / 1.2 g split, PeptiPump 100 mg, creatine nitrate 1 g, caffeine 200 mg, toothed clubmoss 5 mg at 1% huperzine A, verbatim other-ingredients line, 8-week continuous-use warning"
+    },
+    {
+      "url": "https://blog.priceplow.com/supplement-news/c4-2024",
+      "used_for": "Industry-press coverage of the February 2024 5th-generation relaunch: 2.4 g Velox blend, fully disclosed formula with no proprietary blends, B6 as pyridoxal-5-phosphate, B12 as methylcobalamin, choline from choline bitartrate, 30 servings"
+    },
+    {
+      "url": "https://blog.priceplow.com/supplement-news/c4-original-bubble-yum",
+      "used_for": "Independent dose-by-dose cross-check of the current formula: 8.9 g scoop, caffeine 200 mg, beta-alanine 2 g, L-citrulline 1.2 g + L-arginine 1.2 g, creatine nitrate 1 g, PeptiPump 100 mg, toothed clubmoss 5 mg, section totals 4.5 g and 205 mg; Bubble Yum collaboration flavor"
+    },
+    {
+      "url": "https://www.prnewswire.com/news-releases/c4-reclaims-its-throne-with-its-hardest-hitting-pre-workout-line-ever-302105375.html",
+      "used_for": "February 18, 2024 announcement date of the 5th-generation C4 line (surfaced via search results; release not fetched directly)"
+    },
+    {
+      "url": "https://www.gotprotein.com/c4-original-pre-workout",
+      "used_for": "Retailer cross-check of 200 mg caffeine, 2 g CarnoSyn beta-alanine, 1.2 g L-citrulline, 1 g NO3-T creatine nitrate; third-party price point $29.99"
+    },
+    {
+      "url": "https://www.nbs-supplements.com/product/c4-original/",
+      "used_for": "Retailer cross-check of current-formula marketing bullets (200 mg caffeine, 2 g CarnoSyn, Velox, NO3-T, PeptiPump, huperzine A) and 30 / 50 serving size options"
+    },
+    {
+      "url": "https://www.garagegymreviews.com/c4-pre-workout-review",
+      "used_for": "Documentation of the PRE-2024 formula (150 mg caffeine, 1.6 g beta-alanine, 1 g creatine nitrate, 1 g citrulline malate, Explosive Energy Blend with velvet bean and theacrine, ~6 g scoop, ~$30 per 30 servings) - used only for reformulationNotes"
+    },
+    {
+      "url": "https://cellucor.com/products/c4-original-old",
+      "used_for": "Cellucor's own still-live legacy product page for the 150 mg caffeine formula in 30 and 60 serving sizes - evidence that the old formula remains in circulation"
+    },
+    {
+      "url": "https://www.walmart.com/ip/C4-Original-Pre-Workout-Powder-200mg-Caffeine-Energy-Formula-Beta-Alanine-Creatine-Endurance-Focus-Performance-Zero-Sugar-Preworkout-Men-Women-POPSIC/20297513143",
+      "used_for": "Title-level evidence of a 25-serving Walmart SKU of the current 200 mg formula in a Popsicle Grape flavor (listing body not retrieved)"
+    }
+  ],
+  "servingSizeG": 9.0,
+  "servingsPerTub": 30,
+  "scoopNote": "All doses are per the printed single-scoop serving (1 level scoop, approximately 9 g); the label directs 1 scoop in 6 fl oz of water 20-30 minutes before training. Unlike Gorilla Mode and Pulse, no 2-scoop protocol is marketed for the current formula. The standard tub is 30 servings; 25-serving (Walmart) and 50-serving SKUs also exist at some retailers. Nutrition-facts rows per serving: 10 calories, 1 g total carbohydrate.",
+  "caffeineMg": 200,
+  "caffeineForms": [
+    {
+      "form": "Caffeine Anhydrous",
+      "mg": 200
+    }
+  ],
+  "fullPanel": [
+    {
+      "name": "Vitamin B6 (as Pyridoxal-5-Phosphate)",
+      "doseMg": 3.4,
+      "doseLabel": "3.4 mg (200% DV)",
+      "form": "Pyridoxal-5-phosphate (P5P), the active coenzyme form, per PricePlow's coverage of the 2024 formula",
+      "inProprietaryBlend": false,
+      "clinicalRange": "RDA is 1.3-1.7 mg/day; tolerable upper intake level is 100 mg/day",
+      "assessment": "not enough research"
+    },
+    {
+      "name": "Folate",
+      "doseMg": 0.1,
+      "doseLabel": "100 mcg DFE (25% DV)",
+      "form": null,
+      "inProprietaryBlend": false,
+      "clinicalRange": "RDA is 400 mcg DFE/day",
+      "assessment": "not enough research"
+    },
+    {
+      "name": "Vitamin B12 (as Methylcobalamin)",
+      "doseMg": 0.006,
+      "doseLabel": "6 mcg (250% DV)",
+      "form": "Methylcobalamin per PricePlow's coverage of the 2024 formula",
+      "inProprietaryBlend": false,
+      "clinicalRange": "RDA is 2.4 mcg/day; no established UL",
+      "assessment": "not enough research"
+    },
+    {
+      "name": "Choline",
+      "doseMg": 225,
+      "doseLabel": "225 mg (41% DV)",
+      "form": "From choline bitartrate per PricePlow's coverage; the panel row reads simply 'Choline'",
+      "inProprietaryBlend": false,
+      "clinicalRange": "Adequate intake is 425-550 mg/day; performance and cognition studies of supplemental choline bitartrate generally use 1-2 g",
+      "assessment": "below studied range"
+    },
+    {
+      "name": "CarnoSyn Beta-Alanine",
+      "doseMg": 2000,
+      "doseLabel": "2 g",
+      "form": "CarnoSyn branded beta-alanine",
+      "inProprietaryBlend": false,
+      "clinicalRange": "3.2-6.4 g per day, taken daily to saturate muscle carnosine",
+      "assessment": "below studied range"
+    },
+    {
+      "name": "Velox Performance Blend (L-Citrulline + L-Arginine)",
+      "doseMg": 2400,
+      "doseLabel": "2.4 g (1.2 g L-citrulline + 1.2 g L-arginine)",
+      "form": "Kyowa's patented Velox blend; the citrulline/arginine split is fully disclosed on the panel, so this is a branded combination rather than a hidden proprietary blend",
+      "inProprietaryBlend": false,
+      "clinicalRange": "Pure L-citrulline is studied at 6-8 g per serving; L-arginine at 3-6 g",
+      "assessment": "below studied range"
+    },
+    {
+      "name": "Creatine Nitrate (NO3-T)",
+      "doseMg": 1000,
+      "doseLabel": "1 g",
+      "form": "NO3-T branded creatine nitrate (supplies both creatine and nitrate; 1 g yields less than 1 g of creatine)",
+      "inProprietaryBlend": false,
+      "clinicalRange": "Creatine is studied at 3-5 g/day maintenance (as monohydrate)",
+      "assessment": "below studied range"
+    },
+    {
+      "name": "PeptiPump Bioactive Lentil Peptides",
+      "doseMg": 100,
+      "doseLabel": "100 mg",
+      "form": "Nutrabolt-exclusive 'AI-designed' bioactive lentil peptide ingredient, new in the 2024 formula",
+      "inProprietaryBlend": false,
+      "clinicalRange": "No published independent human performance research on this ingredient",
+      "assessment": "not enough research"
+    },
+    {
+      "name": "Caffeine Anhydrous",
+      "doseMg": 200,
+      "doseLabel": "200 mg",
+      "form": "Caffeine anhydrous (single form)",
+      "inProprietaryBlend": false,
+      "clinicalRange": "3-6 mg/kg body weight (roughly 200-450 mg for most adults)",
+      "assessment": "at studied range"
+    },
+    {
+      "name": "Toothed Clubmoss (Huperzia serrata) Extract",
+      "doseMg": 5,
+      "doseLabel": "5 mg standardized to 1% huperzine A (yields 50 mcg huperzine A)",
+      "form": "Huperzia serrata aerial parts extract, 1% huperzine A; acetylcholinesterase inhibitor",
+      "inProprietaryBlend": false,
+      "clinicalRange": "50-200 mcg huperzine A per dose in cognitive studies",
+      "assessment": "at studied range"
+    }
+  ],
+  "otherIngredients": [
+    "Citric Acid",
+    "Silicon Dioxide",
+    "Malic Acid",
+    "Natural & Artificial Flavors",
+    "Calcium Silicate",
+    "Sucralose",
+    "Acesulfame Potassium",
+    "FD&C Red #40 (red flavors; colorant varies by flavor)"
+  ],
+  "sweeteners": [
+    "Sucralose",
+    "Acesulfame Potassium"
+  ],
+  "dyes": [
+    "FD&C Red #40 (seen on a red-flavor panel; other flavors use other FD&C dyes, not verified per flavor)"
+  ],
+  "flavors": [
+    "Icy Blue Razz",
+    "Watermelon",
+    "Rainbow Blast",
+    "Jolly Rancher Green Apple",
+    "Hawaiian Punch (Fruit Juicy Red)",
+    "Popsicle (Cherry)"
+  ],
+  "certifications": [],
+  "labelWarnings": [
+    "Do not use this product continuously for more than 8 weeks.",
+    "Do not combine with other caffeine- or stimulant-containing products."
+  ],
+  "priceUsd": {
+    "amazonTypical": null,
+    "brandSiteList": 34.99,
+    "perServing": 1.17,
+    "note": "prices move - checked 2026-07-27. Brand site one-time price is $34.99 for the 30-serving tub ($1.17 per serving); subscribe & save is $24.50 (30% off). GotProtein listed $29.99 ($1.00 per serving). Amazon price could not be retrieved - listing bodies were not fetchable, only search-result titles. The 25-serving Walmart SKU and 50-serving SKU were not priced."
+  },
+  "imageNotes": {
+    "retailerImageCount": null,
+    "angleTypes": [
+      "front",
+      "facts panel",
+      "old vs new formula comparison graphic"
+    ],
+    "rightsNote": "Cellucor's product page serves per-flavor tub renders, a Supplement Facts image and an 'Old vs New' formula comparison graphic; no image counts were enumerated and nothing was downloaded or hotlinked. The Amazon gallery could not be inspected at all. For an affiliate gallery: Amazon-sourced imagery must come through the Product Advertising API (PA-API) under Amazon Associates terms and cannot be scraped or hotlinked; brand assets should be requested through Nutrabolt/Cellucor's affiliate or press kit rather than pulled from the storefront."
+  },
+  "reformulationNotes": "C4 Original WAS reformulated, as part of Nutrabolt's 5th-generation C4 line announced February 18, 2024. The PRE-2024 formula (per ~6-6.5 g scoop) was: 150 mg caffeine anhydrous, 1.6 g CarnoSyn beta-alanine, 1 g creatine nitrate, roughly 1 g of citrulline malate and/or arginine AKG (reviews of different label revisions differ), an 'Explosive Energy Blend' (~371 mg) containing N-acetyl-L-tyrosine, velvet bean seed extract and theacrine with undisclosed splits, plus vitamin C (~250 mg) and niacin (~30 mg). The current 5th-generation formula roughly doubles the scoop to ~9 g, raises caffeine to 200 mg and beta-alanine to 2 g, replaces the old pump base with the fully disclosed 2.4 g Velox L-citrulline/L-arginine blend, keeps 1 g NO3-T creatine nitrate, adds 100 mg PeptiPump bioactive lentil peptides and 5 mg toothed clubmoss (50 mcg huperzine A), switches B-vitamins to active forms (pyridoxal-5-phosphate, methylcobalamin), adds 225 mg choline, and eliminates proprietary blends entirely. CAUTION for the comparison site: Cellucor still hosts a live legacy product page (cellucor.com/products/c4-original-old) with the 150 mg formula, and old-formula 60-serving stock still circulates (e.g. Amazon ASIN B00U464HYK's title still advertises 150 mg caffeine) - any C4 Original panel found in the wild must be checked for PeptiPump/Velox rows to confirm it is the current label. C4 Sport, C4 Ultimate, C4 Ripped and C4 Energy (ready-to-drink) are separate product lines, not this product.",
+  "fieldConfidence": {
+    "caffeineMg": "high",
+    "fullPanel": "medium",
+    "flavors": "low",
+    "priceUsd": "medium"
+  },
+  "gaps": [
+    "The assigned researcher for this product returned no dossier at all; this file was assembled in a single pass by the audit gate on 2026-07-27 from the 10 sources listed, and is thinner than the Gorilla Mode and Pulse dossiers (fewer independent transcriptions per number).",
+    "Only one complete supplement-facts transcription was found (NutriCartel). The active doses (caffeine 200 mg, beta-alanine 2 g, Velox 2.4 g at 1.2 g/1.2 g, creatine nitrate 1 g, PeptiPump 100 mg, toothed clubmoss 5 mg) are independently corroborated by PricePlow's dose-by-dose coverage and partially by Cellucor's and GotProtein's callouts, but the vitamin and choline rows (B6 3.4 mg, folate 100 mcg DFE, B12 6 mcg, choline 225 mg) rest on the single NutriCartel transcription; PricePlow confirms the forms (P5P, methylcobalamin, choline bitartrate) but not the amounts.",
+    "Serving-size discrepancy: NutriCartel's panel transcription reads 9 g per level scoop while PricePlow's article says 8.9 g; stale listings elsewhere show 8.3 g and ~6 g (old formula). Used 9 g. Net tub weight was never confirmed (9 g x 30 implies ~270 g).",
+    "No value was read directly from Cellucor's own supplement facts panel, which is published only as an image.",
+    "Label warnings are incomplete: only the 8-week continuous-use warning and the stimulant-combination warning were retrieved; the standard age/pregnancy/physician-consultation block was not transcribed from the actual label.",
+    "A sodium row, if present on the panel, was not captured; only 10 calories and 1 g carbohydrate were transcribed.",
+    "Flavor list is low confidence: the brand-site selector showed the 6 flavors recorded, but a Bubble Yum collaboration flavor exists per PricePlow, Walmart lists a Popsicle Grape 25-serving SKU, and NutriCartel used variant names (Fruit Juicy Red, Cherry Popsicle); production versus limited-edition status was not determined.",
+    "Dyes vary by flavor: FD&C Red #40 comes from a red-flavor panel transcription; the specific artificial color in each other flavor (e.g. Icy Blue Razz) was not verified.",
+    "Amazon could not be verified: listing bodies were not retrievable, so amazonTypical is null and Amazon review counts and gallery contents are unknown; only search-result listing titles were seen.",
+    "No banned-substance certification (Informed Sport / NSF Certified for Sport) was found for C4 Original - the NSF Certified for Sport product in this family is the separate C4 Sport line; the absence is inferred from not finding a listing rather than an explicit manufacturer statement.",
+    "The pre-2024 formula description in reformulationNotes is medium confidence, assembled from Garage Gym Reviews' review of the 150 mg formula and older listing titles; the old Explosive Energy Blend's exact composition and the arginine-AKG versus citrulline-malate question were not fully resolved.",
+    "The February 18, 2024 launch date comes from a PR Newswire release surfaced in search results that was not fetched directly.",
+    "The 25-serving and 50-serving SKUs were not priced; perServing covers the 30-serving tub only."
+  ]
+}
