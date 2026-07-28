@@ -364,7 +364,10 @@
     list.innerHTML = results.map(tileHTML).join("");
 
     if (count) {
-      count.textContent = "Showing " + results.length + " of " + PRODUCTS.length + " products";
+      var pool = PAGE_CATEGORY
+        ? PRODUCTS.filter(function (p) { return categoryOf(p) === PAGE_CATEGORY; }).length
+        : PRODUCTS.length;
+      count.textContent = "Showing " + results.length + " of " + pool + " products";
     }
     if (empty) {
       empty.hidden = results.length !== 0;
@@ -377,6 +380,7 @@
   function populateBrands(select) {
     var brands = [];
     for (var i = 0; i < PRODUCTS.length; i++) {
+      if (PAGE_CATEGORY && categoryOf(PRODUCTS[i]) !== PAGE_CATEGORY) continue;
       if (brands.indexOf(PRODUCTS[i].brand) === -1) brands.push(PRODUCTS[i].brand);
     }
     brands.sort(function (a, b) { return a.localeCompare(b); });

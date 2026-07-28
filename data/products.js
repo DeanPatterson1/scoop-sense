@@ -6,14 +6,18 @@
 //   category       string  lowercase category slug ("pre-workout", "creatine", ...);
 //                  drives the hub category filter and page copy
 //   stimFree       boolean true only when caffeineMg is 0
-//   badges         array of strings — exactly ONE stim badge, plus 0–2 extras.
+//   badges         array of strings. Stim badge rule BY CATEGORY:
+//                    pre-workout      -> exactly ONE stim badge, always
+//                    other categories -> ONE stim badge only when caffeineMg > 0
 //                  Stim badge is derived from caffeineMg:
 //                    0        -> "Stim-Free"
 //                    1–149    -> "Low Stim"
 //                    150–249  -> "Moderate Stim"
 //                    250+     -> "High Stim"
-//                  Allowed extras: "Fully Disclosed Label", "Proprietary Blend",
-//                  "Budget Pick", "Beginner Friendly"
+//                  Plus 0–2 extras: "Fully Disclosed Label", "Proprietary Blend",
+//                  "Budget Pick", "Beginner Friendly", "Third-Party Tested"
+//                  ("Third-Party Tested" ONLY for a label-verified NSF Certified
+//                  for Sport / Informed Sport / Informed Choice mark)
 //   caffeineMg     number  mg caffeine per full serving (0 if stim-free)
 //   keyIngredients array of 2–4 objects: { name: string, dose: string (with unit,
 //                  e.g. "8 g" or "350 mg"), clinicalNote: string (plain-English,
@@ -42,6 +46,13 @@
 //                  content-type) when the entry was last verified.
 //   sources        array of { url, label } OPTIONAL — the label sources
 //                  actually used to research/verify the entry.
+//   metrics        object — REQUIRED for every category except pre-workout;
+//                  the category-specific figures that drive tiles, compare
+//                  columns, and product-page facts rows (see js/categories.js):
+//                    creatine     { creatineG, form: "monohydrate"|"HCl"|"blend" }
+//                    protein      { proteinG, servingG, source, sweetener }
+//                    eaa          { eaaG, bcaaG, leucineG }  (null = undisclosed)
+//                    electrolytes { sodiumMg, potassiumMg, magnesiumMg, sugarG }
 //
 // Figures come from manufacturer labels as of mid-2026. Formulas change —
 // ALWAYS verify against the current label before trusting or updating a number.

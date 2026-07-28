@@ -1,6 +1,6 @@
 # Scoop Sense
 
-Scoop Sense is an independent static site that logs what is actually in popular pre-workout supplements: caffeine per serving, key ingredient doses compared against the amounts used in published research, label transparency (proprietary blends flagged), and plain-language cautions. It is not a supplement brand and it does not sell anything — the site earns money through affiliate links to retailers, disclosed near the links and explained in full on its own page.
+Scoop Sense is an independent static site that logs what is actually in popular sports supplements across five categories — pre-workouts, creatine, protein powders, EAA/BCAA formulas, and electrolyte mixes: key doses compared against the amounts used in published research, label transparency (proprietary blends flagged), and plain-language cautions. It is not a supplement brand and it does not sell anything — the site earns money through affiliate links to retailers, disclosed near the links and explained in full on its own page.
 
 The design language is editorial research publication plus product database: warm near-black background, charcoal surfaces, one restrained lime accent, and "facts panel" data tables (thick top rule, hairline rows, right-aligned tabular figures) that echo the supplement facts panel the site is about.
 
@@ -13,13 +13,17 @@ Built with vanilla HTML, CSS, and JavaScript. No frameworks, no build step. The 
 | File | What it does |
 | --- | --- |
 | `index.html` | Homepage. Left-aligned editorial hero with credibility row, a six-row database preview table, the methodology section (`#methodology`) with an annotated real label (C4 Original) and a labelled dose scale, three "places to start" picks, and a compact safety callout. |
-| `hub.html` | The product database. Sticky compact toolbar (search, caffeine filter, brand filter, sort, stim-free toggle, clear all — collapsing into a Filters drawer on mobile), result count, and an image-forward tile grid. Clicking a tile opens the full label breakdown in a modal dialog. Supports deep links: `hub.html#p-<product-id>` opens that product's breakdown. |
-| `compare.html` | Full database in one sortable table: caffeine, citrulline, beta-alanine, blend status, stim tier, servings, price tier. Column headers sort; product names link to each label breakdown on the hub. |
+| `hub.html` | The all-products database. Sticky compact toolbar (search, category filter, caffeine filter, brand filter, sort, stim-free toggle, clear all — collapsing into a Filters drawer on mobile), category chip row, result count, and an image-forward tile grid. Tiles link to static product pages. Deep links: `hub.html#cat-<slug>` preselects a category; legacy `#p-<id>` links redirect to the product page. |
+| `creatine.html` `protein.html` `eaa.html` `electrolytes.html` | Category landing pages. Each declares `<body data-category="...">`, which locks the grid and the embedded compare table (at `#compare`) to that category with category-specific columns from `js/categories.js`. |
+| `compare.html` | Pre-workout compare table (locked via `data-category="pre-workout"`): caffeine, citrulline, beta-alanine, blend status, stim tier, servings, price tier. Column headers sort; other categories compare on their own pages. |
 | `disclosure.html` | About page: what the site is, plus the FTC affiliate disclosure — how the site makes money and what commissions never buy. Loads no scripts. |
 | `disclaimer.html` | Health & safety page: FDA disclaimer box, not-medical-advice statement, general caffeine guidance, individual tolerance, medication/medical conditions, pregnancy and nursing, and the verify-current-label note. Loads no scripts. |
-| `css/styles.css` | The whole design system in one stylesheet: design tokens, typography, facts-panel tables, product rows, toolbar/drawer, tags, footer, responsive rules. All classes use the `sc-` prefix. |
-| `js/app.js` | One IIFE. Reads the globals `PRODUCTS` and `FEATURED_IDS`. Renders the hub rows, homepage preview + picks, and the compare table; handles filtering, sorting, the details toggles, and hash deep links. |
-| `data/products.js` | **The single source of truth.** Every product object, plus the schema documented in a header comment. `FEATURED_IDS` picks the three "places to start" on the homepage. |
+| `css/styles.css` | The whole design system in one stylesheet: design tokens, typography, facts-panel tables, product rows, toolbar/drawer, tags, chips, category cards, footer, responsive rules. All classes use the `sc-` prefix. |
+| `js/categories.js` | The category registry: `CATEGORY_CONFIG` maps each category slug to its label, landing page, tile facts, compare columns, and whether caffeine filters apply. Adding a category starts here. |
+| `js/app.js` | One IIFE. Reads the globals `PRODUCTS`, `FEATURED_IDS`, and `CATEGORY_CONFIG`. Renders grids, compare tables, homepage preview + picks, and the saved page from config; handles filtering, sorting, and hash deep links. |
+| `data/products.js` | **The single source of truth.** Every product object across all categories, plus the schema documented in a header comment. `FEATURED_IDS` picks the three "places to start" on the homepage. |
+| `scripts/build-product-pages.js` | Generates one static page per product into `products/`, plus `sitemap.xml`. Category-aware. Re-run after any data change: `node scripts/build-product-pages.js`. |
+| `scripts/integrate-research.js` | Validates researched product JSON (schema, badges, claim language, affiliate URL form) and appends it to `data/products.js`. |
 | `README.md` | This file. |
 
 Script order matters: `index.html`, `hub.html`, and `compare.html` load `data/products.js` first and `js/app.js` second. `disclosure.html` and `disclaimer.html` load no scripts at all.
@@ -69,7 +73,8 @@ Open `data/products.js`, copy an existing object in the `PRODUCTS` array, and ed
 A few rules that keep the site honest and legally clean:
 
 - **Verify every number against the current manufacturer label** before you publish it, and set `labelVerified` to the month you checked.
-- The `badges` array carries exactly one stim badge derived from `caffeineMg` (`Stim-Free` at 0, `Low Stim` for 1–149, `Moderate Stim` for 150–249, `High Stim` at 250 and up), plus up to two extras. The hub derives its stim tier and blend/disclosure tags from these fields.
+- Pre-workout entries carry exactly one stim badge derived from `caffeineMg` (`Stim-Free` at 0, `Low Stim` for 1–149, `Moderate Stim` for 150–249, `High Stim` at 250 and up). Entries in every other category carry a stim badge **only when caffeinated** — no "Stim-Free" badge on a protein tub. Up to two extras; `Third-Party Tested` only for a label-verified NSF Certified for Sport / Informed Sport / Informed Choice mark.
+- Every non-pre-workout entry needs the category's `metrics` object (see the schema comment in `data/products.js`) — those figures drive the tiles, compare columns, and product-page facts rows.
 - Set `stimFree: true` only when `caffeineMg` is `0`.
 - Keep every `clinicalNote` in structure/function language — describe how an ingredient has been studied in relation to normal body function. Never say a product treats, cures, prevents, or diagnoses anything.
 - Write the `blurb` as one concise editorial takeaway — specific and factual, no marketing language. It renders on the row face.
@@ -80,6 +85,12 @@ A few rules that keep the site honest and legally clean:
 To change which products appear in the homepage "places to start," edit `FEATURED_IDS` (and the matching `START_META` labels in `js/app.js`). The database preview rows come from `PREVIEW_IDS` in `js/app.js`.
 
 **Product imagery.** Tiles show a neutral monogram placeholder until a product has an `imageUrl`. Set the optional `imageUrl` field in `data/products.js` to an affiliate-approved image (e.g., via the Amazon PA-API) and the tile and detail dialog render it automatically. Do not use manufacturer artwork without permission, and never invent packaging.
+
+---
+
+## Sitemap & domain
+
+`scripts/build-product-pages.js` writes `sitemap.xml` with a placeholder origin. When the site has a real domain: set `SITE_ORIGIN` in that script, re-run it, and activate the `Sitemap:` line in `robots.txt`. Until then search engines simply ignore the placeholder file.
 
 ---
 
