@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Products — Scoop Sense</title>
-  <meta name="description" content="Every supplement on file — pre-workouts, creatine, protein, EAAs, electrolytes: doses, label transparency, and cautions taken from manufacturer labels.">
+  <title>Protein Powders Compared — Scoop Sense</title>
+  <meta name="description" content="Whey, casein, and plant protein powders compared: protein per serving, protein-per-scoop percentage, source, and sweetener — taken from manufacturer labels.">
   <meta name="theme-color" content="#0F1114">
   <meta property="og:site_name" content="Scoop Sense">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Products — Scoop Sense">
-  <meta property="og:description" content="Every supplement on file — pre-workouts, creatine, protein, EAAs, electrolytes: doses, label transparency, and cautions taken from manufacturer labels.">
+  <meta property="og:title" content="Protein Powders Compared — Scoop Sense">
+  <meta property="og:description" content="Whey, casein, and plant protein powders compared: protein per serving, protein-per-scoop percentage, source, and sweetener — taken from manufacturer labels.">
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥄</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css?v=20260728m">
 </head>
-<body>
+<body data-category="protein">
 
 <a class="sc-skip" href="#main">Skip to content</a>
 
@@ -39,16 +39,10 @@
 
   <section class="sc-hub-intro">
     <div class="sc-container">
-      <p class="sc-eyebrow">Product database</p>
-      <h1>Every supplement on file</h1>
-      <p class="sc-lead">Caffeine, key ingredient doses, label transparency, and cautions for every formula we track — taken from the manufacturer's label.</p>
-      <nav class="sc-cat-chips" aria-label="Browse by category">
-        <a href="hub.html" class="sc-chip sc-chip-active" aria-current="page">All</a>
-        <a href="creatine.html" class="sc-chip">Creatine</a>
-        <a href="protein.html" class="sc-chip">Protein</a>
-        <a href="eaa.html" class="sc-chip">EAA / BCAA</a>
-        <a href="electrolytes.html" class="sc-chip">Electrolytes</a>
-      </nav>
+      <p class="sc-eyebrow">Protein database</p>
+      <h1>Every protein powder on file</h1>
+      <p class="sc-lead">Protein per serving, protein-per-scoop percentage, source, and sweetener for every powder we track — taken from the manufacturer's label.</p>
+      <p class="sc-hub-intro-body">A protein label tells you two numbers that matter together: grams of protein and grams per scoop. A 24 g serving from a 30 g scoop is a leaner formula than 24 g from a 40 g scoop — the rest is flavoring, fats, and carbs. Every entry below logs both, plus the protein source and the sweetener used.</p>
       <p class="sc-disclosure-line">Some product links are affiliate links. Scoop Sense may earn a commission at no additional cost to you. <a href="disclosure.html">Details</a></p>
     </div>
   </section>
@@ -56,28 +50,12 @@
   <section class="sc-toolbar" aria-label="Search and filters">
     <div class="sc-container">
       <div class="sc-toolbar-row">
-        <input class="sc-input" type="search" id="sc-search" placeholder="Search product, brand, or ingredient" aria-label="Search products">
+        <input class="sc-input" type="search" id="sc-search" placeholder="Search product, brand, or source" aria-label="Search products">
         <button type="button" class="sc-filters-btn" id="sc-filters-btn" aria-expanded="false" aria-controls="sc-filters">Filters</button>
         <div class="sc-toolbar-filters" id="sc-filters">
-          <select class="sc-select" id="sc-category" aria-label="Category">
-            <option value="all">All categories</option>
-          </select>
-          <select class="sc-select" id="sc-caffeine" aria-label="Caffeine level">
-            <option value="all">Any caffeine</option>
-            <option value="none">Stim-free (0 mg)</option>
-            <option value="low">Under 150 mg</option>
-            <option value="moderate">150–249 mg</option>
-            <option value="high">250 mg and up</option>
-          </select>
           <select class="sc-select" id="sc-brand" aria-label="Brand">
             <option value="all">All brands</option>
           </select>
-          <select class="sc-select" id="sc-sort" aria-label="Sort products">
-            <option value="name">Sort: name (A–Z)</option>
-            <option value="caffeine-asc">Sort: caffeine, low to high</option>
-            <option value="caffeine-desc">Sort: caffeine, high to low</option>
-          </select>
-          <label class="sc-check"><input type="checkbox" id="sc-stimfree"> Stim-free only</label>
           <button type="button" class="sc-clear-btn" id="sc-clear">Clear all</button>
         </div>
       </div>
@@ -91,6 +69,21 @@
       <div class="sc-products" id="sc-products"></div>
       <p class="sc-empty" id="sc-empty" hidden>No products match the current filters. Clear a filter to widen the results.</p>
       <p class="sc-verify-note">Figures come from manufacturer labels and can change without notice — always verify against the current label on the product you buy. Price tiers (Budget · Mid-range · Premium) reflect rough cost per full serving.</p>
+    </div>
+  </section>
+
+  <section class="sc-hub-results" id="compare">
+    <div class="sc-container">
+      <div class="sc-section-head">
+        <h2>Compare every protein on file</h2>
+      </div>
+      <div class="sc-table-scroll">
+        <table class="sc-table" id="sc-compare" aria-label="Every protein powder on file compared">
+          <thead><!-- built from CATEGORY_CONFIG by js/app.js --></thead>
+          <tbody id="sc-compare-body"></tbody>
+        </table>
+      </div>
+      <p class="sc-table-note">“Protein %” is grams of protein divided by scoop weight — higher means less filler per scoop. Price tiers (Budget · Mid-range · Premium) reflect rough cost per full serving.</p>
     </div>
   </section>
 

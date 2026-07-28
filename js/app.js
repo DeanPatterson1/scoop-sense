@@ -283,12 +283,12 @@
   var DISCLOSED_TIP = "Every active ingredient and its dosage is individually listed on the label. No proprietary blends.";
   var BLEND_TIP = "One or more combined blend totals hide the individual ingredient amounts inside.";
 
-  // Stim tag rule: pre-workout tiles always carry one; other categories only
-  // when the formula is actually caffeinated (a "Stim-Free" chip on a protein
-  // shelf is noise), and only if the category opts in via stimBadges.
+  // Stim tag rule: pre-workout tiles always carry one; every other category
+  // shows one only when the formula is actually caffeinated — a "Stim-Free"
+  // chip on a protein shelf is noise, but caffeine anywhere deserves a flag.
+  // (The config stimBadges flag gates the caffeine FILTERS on landing pages,
+  // not this tag.)
   function showsStimTag(p) {
-    var cfg = cfgOf(p);
-    if (!cfg.stimBadges) return false;
     return categoryOf(p) === "pre-workout" || p.caffeineMg > 0;
   }
 
@@ -399,7 +399,9 @@
     for (var j = 0; j < cats.length; j++) {
       var option = document.createElement("option");
       option.value = cats[j];
-      option.textContent = cats[j].charAt(0).toUpperCase() + cats[j].slice(1);
+      option.textContent = CATEGORY_CONFIG[cats[j]]
+        ? CATEGORY_CONFIG[cats[j]].label
+        : cats[j].charAt(0).toUpperCase() + cats[j].slice(1);
       select.appendChild(option);
     }
   }
@@ -649,8 +651,10 @@
       "name": PAGE_CATEGORY && CATEGORY_CONFIG[PAGE_CATEGORY]
         ? CATEGORY_CONFIG[PAGE_CATEGORY].label + " label database"
         : "Supplement label database",
-      "numberOfItems": PRODUCTS.length,
-      "itemListElement": PRODUCTS.map(function (p, i) {
+      "numberOfItems": undefined,
+      "itemListElement": PRODUCTS.filter(function (p) {
+        return !PAGE_CATEGORY || categoryOf(p) === PAGE_CATEGORY;
+      }).map(function (p, i) {
         return {
           "@type": "ListItem",
           "position": i + 1,

@@ -1000,6 +1000,108 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   margin-bottom: 8px;
 }
 
+/* Category intro paragraph on landing pages — under the lead, quieter. */
+.sc-hub-intro-body {
+  color: var(--sc-muted);
+  font-size: 0.95rem;
+  max-width: 72ch;
+  margin-top: 10px;
+}
+
+/* Category chip row — crawlable links to each category's landing page. */
+.sc-cat-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.sc-chip {
+  font-family: var(--sc-font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--sc-muted);
+  text-decoration: none;
+  background: var(--sc-surface);
+  border: 1px solid var(--sc-border-strong);
+  border-radius: 999px;
+  padding: 6px 14px;
+  transition: color 120ms ease, border-color 120ms ease, background 120ms ease;
+}
+
+.sc-chip:hover,
+.sc-chip:focus-visible {
+  color: var(--sc-ink);
+  border-color: var(--sc-accent);
+}
+
+.sc-chip-active {
+  color: var(--sc-accent-ink);
+  background: var(--sc-accent);
+  border-color: var(--sc-accent);
+}
+
+.sc-chip-active:hover,
+.sc-chip-active:focus-visible {
+  color: var(--sc-accent-ink);
+  background: var(--sc-accent-down);
+  border-color: var(--sc-accent-down);
+}
+
+/* Homepage category cards — five doors into the database. */
+.sc-cats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 640px) {
+  .sc-cats { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .sc-cats { grid-template-columns: repeat(5, 1fr); }
+}
+
+.sc-cat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: var(--sc-surface);
+  border: 1px solid var(--sc-border);
+  border-radius: 10px;
+  padding: 18px 16px;
+  text-decoration: none;
+  transition: border-color 120ms ease, background 120ms ease, transform 120ms ease;
+}
+
+.sc-cat-card:hover,
+.sc-cat-card:focus-visible {
+  background: var(--sc-surface-2);
+  border-color: var(--sc-border-strong);
+  transform: translateY(-2px);
+}
+
+.sc-cat-card-name {
+  font-family: var(--sc-font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--sc-ink);
+}
+
+.sc-cat-card-count {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--sc-accent);
+}
+
+.sc-cat-card-what {
+  font-size: 0.88rem;
+  color: var(--sc-muted);
+}
+
 /* Sticky, compact toolbar. */
 .sc-toolbar {
   position: sticky;
