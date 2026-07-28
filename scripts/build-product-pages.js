@@ -17,7 +17,7 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const OUT = path.join(ROOT, "products");
-const VERSION = "20260728m"; // keep in sync with the ?v= on the other pages
+const VERSION = "20260728n"; // keep in sync with the ?v= on the other pages
 
 /* ---- load data ---------------------------------------------------------- */
 
@@ -77,8 +77,11 @@ function betaAlanineOf(p) {
   return ing ? ing.dose : null;
 }
 
+// Ingredient-name heuristic only for pre-workout labels — mirrors js/app.js.
 function hasBlend(p) {
-  return p.badges.indexOf("Proprietary Blend") !== -1 || !!findIngredient(p, /blend/i);
+  if (p.badges.indexOf("Proprietary Blend") !== -1) return true;
+  if (categoryOf(p) !== "pre-workout") return false;
+  return !!findIngredient(p, /blend/i);
 }
 
 function isDisclosed(p) {

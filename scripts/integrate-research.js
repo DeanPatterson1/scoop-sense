@@ -121,7 +121,10 @@ for (const cat of Object.keys(byCat)) {
 // Insert before the closing "];" of the PRODUCTS array (its first occurrence).
 const closeIdx = dataSrc.indexOf("\n];");
 if (closeIdx === -1) { console.error("Could not find PRODUCTS array close"); process.exit(1); }
-const out = dataSrc.slice(0, closeIdx) + ",\n" + block + dataSrc.slice(closeIdx + 1);
+const head = dataSrc.slice(0, closeIdx);
+// Don't double the comma if the last element already carries a trailing one.
+const sep = /,\s*$/.test(head) ? "\n" : ",\n";
+const out = head + sep + block + dataSrc.slice(closeIdx + 1);
 
 fs.writeFileSync(DATA, out);
 console.log(`Integrated ${all.length} products (${Object.keys(byCat).map((c) => c + ":" + byCat[c].length).join(", ")}).`);

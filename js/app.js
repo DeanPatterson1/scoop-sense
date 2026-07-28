@@ -99,8 +99,12 @@
     return ing ? ing.dose : null;
   }
 
+  // The ingredient-name heuristic only applies to pre-workout labels, where
+  // "blend" always means a dose-hiding proprietary blend. Elsewhere ("whey
+  // protein blend" with a disclosed total) the badge is the source of truth.
   function hasBlend(p) {
     if (p.badges.indexOf("Proprietary Blend") !== -1) return true;
+    if (categoryOf(p) !== "pre-workout") return false;
     return !!findIngredient(p, /blend/i);
   }
 
