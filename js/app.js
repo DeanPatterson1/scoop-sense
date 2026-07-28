@@ -282,6 +282,7 @@
   };
   var DISCLOSED_TIP = "Every active ingredient and its dosage is individually listed on the label. No proprietary blends.";
   var BLEND_TIP = "One or more combined blend totals hide the individual ingredient amounts inside.";
+  var TESTED_TIP = "Certified by an independent banned-substance testing program (NSF Certified for Sport, Informed Sport, or Informed Choice), per the label or brand page.";
 
   // Stim tag rule: pre-workout tiles always carry one; every other category
   // shows one only when the formula is actually caffeinated — a "Stim-Free"
@@ -305,6 +306,9 @@
       tags.push('<span class="sc-tag sc-tag-caution" title="' + esc(BLEND_TIP) + '">Proprietary blend</span>');
     } else if (isDisclosed(p)) {
       tags.push('<span class="sc-tag" title="' + esc(DISCLOSED_TIP) + '">Label fully disclosed</span>');
+    }
+    if (p.badges.indexOf("Third-Party Tested") !== -1) {
+      tags.push('<span class="sc-tag sc-tag-calm" title="' + esc(TESTED_TIP) + '">Third-party tested</span>');
     }
     return tags.join("");
   }

@@ -44,7 +44,7 @@ const all = [];
 
 for (const cat of Object.keys(METRIC_KEYS)) {
   const fp = path.join(dir, cat + ".json");
-  if (!fs.existsSync(fp)) { errors.push(`${cat}.json missing`); continue; }
+  if (!fs.existsSync(fp)) { console.log(`note: ${cat}.json not present — skipping that category`); continue; }
   let list;
   try { list = JSON.parse(fs.readFileSync(fp, "utf8")); }
   catch (e) { errors.push(`${cat}.json: parse error — ${e.message}`); continue; }

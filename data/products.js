@@ -2441,5 +2441,1576 @@ const PRODUCTS = [
         label: "SuppCo independent label listing (Operation OJ, 30 servings) confirming all six ingredient doses"
       }
     ]
-  }
+  },
+
+  /* ---- creatine (label-verified July 2026) ---- */
+
+  {
+    "id": "on-micronized-creatine",
+    "name": "Micronized Creatine Powder",
+    "brand": "Optimum Nutrition",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Beginner Friendly"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "One of the most-researched supplement ingredients, studied for supporting muscle strength, power output, and the body's ATP energy recycling during short, high-intensity efforts."
+      },
+      {
+        "name": "Micronized processing",
+        "dose": "5 g",
+        "clinicalNote": "Micronization shrinks the particle size so the powder disperses more easily in liquid; the creatine itself is unchanged."
+      }
+    ],
+    "cautions": [
+      "Draws water into muscle — drink more water",
+      "Loading phases are optional; 3–5 g daily reaches saturation in about 4 weeks",
+      "Talk to your doctor if you have kidney conditions"
+    ],
+    "servings": 60,
+    "priceRange": "$$",
+    "flavorsNote": "Mostly sold unflavored; a Blueberry Lemonade flavored version also exists.",
+    "affiliateUrl": "https://www.amazon.com/s?k=optimum+nutrition+micronized+creatine&tag=YOURTAG-20",
+    "blurb": "The default single-ingredient monohydrate from the biggest name in the category, micronized for easier mixing and labeled banned-substance tested.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://www.optimumnutrition.com/en-us/products/creatine-monohydrate-micronized-powder",
+        "label": "Optimum Nutrition product page"
+      }
+    ]
+  },
+
+  {
+    "id": "thorne-creatine",
+    "name": "Creatine",
+    "brand": "Thorne",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Third-Party Tested",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "Studied for supporting the regeneration of ATP, the energy currency used during short-duration, high-intensity activity, and for supporting cellular energy metabolism in muscle."
+      },
+      {
+        "name": "Micronized creatine monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "Micronized for improved dissolution in water; the label lists creatine monohydrate as the sole ingredient with no sweeteners or fillers."
+      }
+    ],
+    "cautions": [
+      "Draws water into muscle — drink more water",
+      "Talk to your doctor if you have kidney conditions"
+    ],
+    "servings": 90,
+    "priceRange": "$$",
+    "flavorsNote": "Unflavored powder with no sweeteners; dissolves cleanly in water or a shake.",
+    "affiliateUrl": "https://www.amazon.com/s?k=thorne+creatine&tag=YOURTAG-20",
+    "blurb": "Plain 5 g monohydrate with NSF Certified for Sport screening, aimed at athletes subject to drug testing.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://store.mayoclinic.com/thorne-creatine-nsf-certified.html",
+        "label": "Mayo Clinic Store listing"
+      },
+      {
+        "url": "https://thefeed.com/products/thorne-creatine",
+        "label": "The Feed listing"
+      }
+    ]
+  },
+
+  {
+    "id": "nutricost-creatine-monohydrate",
+    "name": "Creatine Monohydrate",
+    "brand": "Nutricost",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Budget Pick",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "Studied for supporting muscle strength and power alongside resistance training by helping recycle ATP during brief, intense efforts."
+      },
+      {
+        "name": "Micronized powder",
+        "dose": "5 g",
+        "clinicalNote": "Micronized creatine monohydrate with no additives or fillers listed; brand states independent lab testing of finished product."
+      }
+    ],
+    "cautions": [
+      "Draws water into muscle — drink more water",
+      "Loading phases are optional; 3–5 g daily reaches saturation in about 4 weeks",
+      "Talk to your doctor if you have kidney conditions"
+    ],
+    "servings": 100,
+    "priceRange": "$",
+    "flavorsNote": "Unflavored plus a wide flavored range including Blue Raspberry, Fruit Punch, and Watermelon.",
+    "affiliateUrl": "https://www.amazon.com/s?k=nutricost+creatine+monohydrate&tag=YOURTAG-20",
+    "blurb": "5 g of micronized monohydrate at one of the lowest costs per serving in the category; the 500 g tub holds 100 servings.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://www.target.com/p/nutricost-creatine-monohydrate-powder-500-grams/-/A-89144833",
+        "label": "Target listing"
+      },
+      {
+        "url": "https://nutricost.com/products/nutricost-creatine-monohydrate-powder-500-grams",
+        "label": "Nutricost product page"
+      }
+    ]
+  },
+
+  {
+    "id": "transparent-labs-creatine-hmb",
+    "name": "Creatine HMB",
+    "brand": "Transparent Labs",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Third-Party Tested",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "The most-studied creatine form, researched for supporting strength, power, and ATP recycling during high-intensity exercise."
+      },
+      {
+        "name": "myHMB (beta-hydroxy beta-methylbutyrate)",
+        "dose": "1.5 g",
+        "clinicalNote": "A leucine metabolite studied for supporting retention of lean mass during hard training blocks."
+      },
+      {
+        "name": "Vitamin D3",
+        "dose": "12.5 mcg (500 IU)",
+        "clinicalNote": "Studied for its role in normal muscle function and bone maintenance."
+      },
+      {
+        "name": "BioPerine black pepper extract",
+        "dose": "5 mg",
+        "clinicalNote": "A standardized black pepper fruit extract studied for supporting absorption of co-ingested nutrients."
+      }
+    ],
+    "cautions": [
+      "Draws water into muscle — drink more water",
+      "Contains vitamin D — count it toward your total daily intake across supplements",
+      "Talk to your doctor if you have kidney conditions"
+    ],
+    "servings": 30,
+    "priceRange": "$$$",
+    "flavorsNote": "Thirteen options from Unflavored to Blue Raspberry and Peach Mango, with no artificial sweeteners, colors, or preservatives.",
+    "affiliateUrl": "https://www.amazon.com/s?k=transparent+labs+creatine+hmb&tag=YOURTAG-20",
+    "blurb": "Pairs a full 5 g of monohydrate with 1.5 g myHMB, vitamin D3, and BioPerine; Informed Choice certified, and priced well above plain monohydrate.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://www.transparentlabs.com/products/creatine-hmb",
+        "label": "Transparent Labs product page"
+      }
+    ]
+  },
+
+  {
+    "id": "kaged-creatine-hcl",
+    "name": "Creatine HCl",
+    "brand": "Kaged",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Third-Party Tested"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine HCl",
+        "dose": "750 mg",
+        "clinicalNote": "A hydrochloride salt of creatine studied for high water solubility, which is why the labeled serving is much smaller than a monohydrate scoop."
+      },
+      {
+        "name": "Patented creatine hydrochloride form",
+        "dose": "750 mg",
+        "clinicalNote": "Creatine itself is studied for supporting ATP recycling during short, intense efforts; the HCl form delivers it in a roughly 1 g scoop."
+      }
+    ],
+    "cautions": [
+      "Most long-term saturation research was done on monohydrate, not HCl",
+      "Draws water into muscle — drink more water",
+      "Talk to your doctor if you have kidney conditions"
+    ],
+    "servings": 75,
+    "priceRange": "$$",
+    "flavorsNote": "Unflavored, Fruit Punch, and Lemon Lime; flavored versions use stevia and sucralose, and the plain powder is notably tart.",
+    "affiliateUrl": "https://www.amazon.com/s?k=kaged+creatine+hcl&tag=YOURTAG-20",
+    "blurb": "750 mg of creatine HCl per roughly 1 g scoop with every batch tested by Informed Sport; also sold in capsule form.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "creatineG": 0.75,
+      "form": "HCl"
+    },
+    "sources": [
+      {
+        "url": "https://www.kaged.com/products/creatine-hcl",
+        "label": "Kaged product page"
+      }
+    ]
+  },
+
+  {
+    "id": "con-cret-creatine-hcl",
+    "name": "Con-Cret Creatine HCl",
+    "brand": "Con-Cret",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine HCl",
+        "dose": "750 mg",
+        "clinicalNote": "The original concentrated creatine hydrochloride, studied for high solubility that allows sub-gram serving sizes."
+      },
+      {
+        "name": "Single-ingredient formula",
+        "dose": "750 mg",
+        "clinicalNote": "Creatine is studied for supporting muscle strength and power during repeated high-intensity efforts; this label lists no blends or added performance ingredients."
+      }
+    ],
+    "cautions": [
+      "Label suggests scaling servings to body weight — read directions before dosing",
+      "Most long-term saturation research was done on monohydrate, not HCl",
+      "Talk to your doctor if you have kidney conditions"
+    ],
+    "servings": 64,
+    "priceRange": "$$",
+    "flavorsNote": "Unflavored powder plus flavors like Lemon Lime, Raspberry, and Pineapple; capsules are also available.",
+    "affiliateUrl": "https://www.amazon.com/s?k=con+cret+creatine+hcl&tag=YOURTAG-20",
+    "blurb": "The original 750 mg creatine HCl in 64 or 100-serving tubs, certified vegan, gluten-free, and kosher.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "creatineG": 0.75,
+      "form": "HCl"
+    },
+    "sources": [
+      {
+        "url": "https://con-cret.com/products.json?limit=50",
+        "label": "CON-CRET brand site product data"
+      }
+    ]
+  },
+
+  {
+    "id": "klean-athlete-klean-creatine",
+    "name": "Klean Creatine",
+    "brand": "Klean Athlete",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Third-Party Tested",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "Studied for supporting muscle strength, performance, and recovery from strenuous exercise by aiding ATP re-synthesis."
+      },
+      {
+        "name": "Single-ingredient formula",
+        "dose": "5 g",
+        "clinicalNote": "The label lists creatine monohydrate as the only ingredient; the product is gluten-free and vegan."
+      }
+    ],
+    "cautions": [
+      "Draws water into muscle — drink more water",
+      "Loading phases are optional; 3–5 g daily reaches saturation in about 4 weeks",
+      "Talk to your doctor if you have kidney conditions"
+    ],
+    "servings": 60,
+    "priceRange": "$$$",
+    "flavorsNote": "Unflavored single-ingredient powder.",
+    "affiliateUrl": "https://www.amazon.com/s?k=klean+athlete+klean+creatine&tag=YOURTAG-20",
+    "blurb": "Single-ingredient 5 g monohydrate carrying NSF Certified for Sport certification, priced at a premium for the tested-athlete market.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://thefeed.com/products/klean-creatine",
+        "label": "The Feed listing"
+      }
+    ]
+  },
+
+  {
+    "id": "jacked-factory-creatine-monohydrate",
+    "name": "Creatine Monohydrate",
+    "brand": "Jacked Factory",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "Studied for supporting strength, power output, and ATP recycling during short, high-intensity training."
+      },
+      {
+        "name": "Single-ingredient powder",
+        "dose": "5 g",
+        "clinicalNote": "The label lists 5,000 mg of pure creatine monohydrate per scoop with no other active ingredients."
+      }
+    ],
+    "cautions": [
+      "Draws water into muscle — drink more water",
+      "Loading phases are optional; 3–5 g daily reaches saturation in about 4 weeks",
+      "Talk to your doctor if you have kidney conditions"
+    ],
+    "servings": 85,
+    "priceRange": "$",
+    "flavorsNote": "Unflavored, with Blue Raspberry and Peach Mango options in the 85-serving size.",
+    "affiliateUrl": "https://www.amazon.com/s?k=jacked+factory+creatine+monohydrate&tag=YOURTAG-20",
+    "blurb": "Straight 5 g monohydrate sold in 30, 85, and 200-serving tubs at a low cost per serving.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://jackedfactory.com/products/creatine-monohydrate",
+        "label": "Jacked Factory product page"
+      }
+    ]
+  },
+
+  {
+    "id": "muscletech-cell-tech",
+    "name": "Cell-Tech",
+    "brand": "MuscleTech",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Proprietary Blend"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "Studied for supporting muscle strength and power by aiding ATP re-synthesis during high-intensity efforts."
+      },
+      {
+        "name": "Multi-Stage Carb Blend (maltodextrin, dextrose, and others)",
+        "dose": "38 g carbs",
+        "clinicalNote": "Fast-digesting carbohydrates studied for supporting post-exercise glycogen replenishment; the insulin response has been studied in relation to creatine uptake."
+      },
+      {
+        "name": "Taurine",
+        "dose": "1 g",
+        "clinicalNote": "An amino acid studied in relation to cell hydration and exercise performance."
+      },
+      {
+        "name": "Alpha Lipoic Acid",
+        "dose": "100 mg",
+        "clinicalNote": "A compound studied alongside carbohydrate for supporting nutrient uptake into muscle."
+      }
+    ],
+    "cautions": [
+      "38 g of carbohydrate per scoop — account for it in your daily intake",
+      "Draws water into muscle — drink more water",
+      "Talk to your doctor if you have kidney conditions"
+    ],
+    "servings": 27,
+    "priceRange": "$$$",
+    "flavorsNote": "Fruit Punch and Citrus Punch; a sweet, carbohydrate-heavy mix rather than a plain powder.",
+    "affiliateUrl": "https://www.amazon.com/s?k=muscletech+cell+tech+creatine&tag=YOURTAG-20",
+    "blurb": "A carb-and-creatine recovery formula: 5 g of monohydrate rides on a 38 g multi-stage carb blend plus taurine, alpha lipoic acid, and BCAAs, with a two-scoop option doubling everything.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "creatineG": 5,
+      "form": "blend"
+    },
+    "sources": [
+      {
+        "url": "https://www.muscletech.com/products/cell-tech",
+        "label": "MuscleTech product page"
+      }
+    ]
+  },
+
+  {
+    "id": "now-sports-creatine-monohydrate",
+    "name": "Creatine Monohydrate",
+    "brand": "NOW Sports",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Third-Party Tested",
+      "Budget Pick"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "Studied as a precursor in the body's ATP energy system, with research on supporting lean mass and performance during short bouts of intense exercise."
+      },
+      {
+        "name": "Single-ingredient powder",
+        "dose": "5 g",
+        "clinicalNote": "The supplement facts panel lists creatine monohydrate 5 g (5,000 mg) with other ingredients listed as none."
+      }
+    ],
+    "cautions": [
+      "Draws water into muscle — drink more water",
+      "Loading phases are optional; 3–5 g daily reaches saturation in about 4 weeks",
+      "Talk to your doctor if you have kidney conditions"
+    ],
+    "servings": 200,
+    "priceRange": "$",
+    "flavorsNote": "Unflavored powder; mixes best in warm liquid.",
+    "affiliateUrl": "https://www.amazon.com/s?k=now+sports+creatine+monohydrate&tag=YOURTAG-20",
+    "blurb": "Informed Sport and Informed Choice certified 5 g monohydrate at commodity pricing, with about 200 servings in the large tub.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://www.nhc.com/products/creatine-monohydrate-powder-by-now-foods",
+        "label": "Natural Healthy Concepts listing"
+      },
+      {
+        "url": "https://supplementfirst.com/products/now-sports-creatine-monohydrate-powder",
+        "label": "Supplement First listing"
+      }
+    ]
+  },
+
+  /* ---- eaa (label-verified July 2026) ---- */
+
+  {
+    "id": "transparent-labs-intra",
+    "name": "Intra",
+    "brand": "Transparent Labs",
+    "category": "eaa",
+    "stimFree": true,
+    "badges": [
+      "Third-Party Tested",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Amino9 EAA blend",
+        "dose": "6.7 g",
+        "clinicalNote": "Supplies all nine essential amino acids the body cannot make, studied for supporting muscle protein balance around training."
+      },
+      {
+        "name": "Taurine",
+        "dose": "2 g",
+        "clinicalNote": "Amino acid studied for supporting hydration and endurance during longer sessions."
+      },
+      {
+        "name": "BetaPure betaine anhydrous",
+        "dose": "1.25 g",
+        "clinicalNote": "Studied for supporting cellular hydration and power output."
+      },
+      {
+        "name": "Coconut water powder",
+        "dose": "1 g",
+        "clinicalNote": "Natural potassium source that supports fluid balance alongside the 415 mg chelated electrolyte trio."
+      }
+    ],
+    "cautions": [
+      "Amino drinks supplement protein intake, not replace it",
+      "Leucine, isoleucine, and valine amounts inside the Amino9 blend are not broken out individually"
+    ],
+    "servings": 30,
+    "priceRange": "$$$",
+    "flavorsNote": "Fruit flavors sweetened with stevia only, with no artificial sweeteners or colors.",
+    "affiliateUrl": "https://www.amazon.com/s?k=transparent+labs+intra+workout&tag=YOURTAG-20",
+    "blurb": "Stim-free intra-workout built on 6.7 g of the Amino9 EAA blend plus taurine and betaine, with Informed Choice certification listed on the brand page.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "eaaG": 6.7,
+      "bcaaG": null,
+      "leucineG": null
+    },
+    "sources": [
+      {
+        "url": "https://www.transparentlabs.com/products/intra-workout",
+        "label": "Transparent Labs product page"
+      }
+    ]
+  },
+
+  {
+    "id": "momentous-vital-aminos",
+    "name": "Vital Aminos",
+    "brand": "Momentous",
+    "category": "eaa",
+    "stimFree": true,
+    "badges": [
+      "Third-Party Tested",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "L-Leucine",
+        "dose": "2.5 g",
+        "clinicalNote": "The essential amino acid most studied for its role in triggering muscle protein synthesis after training."
+      },
+      {
+        "name": "Full EAA spectrum",
+        "dose": "5.6 g total",
+        "clinicalNote": "All nine essential amino acids, individually dosed on the label, supporting whole-body protein balance."
+      },
+      {
+        "name": "L-Arginine",
+        "dose": "525 mg",
+        "clinicalNote": "Conditionally essential amino acid involved in nitric oxide production and blood flow."
+      }
+    ],
+    "cautions": [
+      "Amino drinks supplement protein intake, not replace it",
+      "Contains 40 calories per serving, unlike most zero-calorie amino mixes"
+    ],
+    "servings": 30,
+    "priceRange": "$$$",
+    "flavorsNote": "Tropical Punch flavor sweetened with stevia-derived Rebaudioside A and colored with beta-carotene and beet root.",
+    "affiliateUrl": "https://www.amazon.com/s?k=momentous+vital+aminos&tag=YOURTAG-20",
+    "blurb": "Fully itemized 13-amino panel with 2.5 g leucine and NSF Certified for Sport testing, priced at the premium end of the category.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "eaaG": 5.6,
+      "bcaaG": 3.75,
+      "leucineG": 2.5
+    },
+    "sources": [
+      {
+        "url": "https://www.livemomentous.com/products/vital-amino",
+        "label": "Momentous product page"
+      }
+    ]
+  },
+
+  {
+    "id": "thorne-amino-complex",
+    "name": "Amino Complex",
+    "brand": "Thorne",
+    "category": "eaa",
+    "stimFree": true,
+    "badges": [
+      "Third-Party Tested",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "L-Leucine",
+        "dose": "1.25 g",
+        "clinicalNote": "The essential amino acid most studied for switching on muscle protein synthesis."
+      },
+      {
+        "name": "EAA spectrum",
+        "dose": "3.8 g total",
+        "clinicalNote": "All nine essential amino acids individually dosed, supporting protein balance in muscle."
+      },
+      {
+        "name": "L-Lysine",
+        "dose": "650 mg",
+        "clinicalNote": "Essential amino acid the body uses in building muscle and connective tissue proteins."
+      }
+    ],
+    "cautions": [
+      "Doses per amino are lighter than most gym-brand EAA powders",
+      "Amino drinks supplement protein intake, not replace it"
+    ],
+    "servings": 30,
+    "priceRange": "$$$",
+    "flavorsNote": "Lemon and Berry flavors sweetened with stevia (Rebaudioside A) and colored with fruit and vegetable juice.",
+    "affiliateUrl": "https://www.amazon.com/s?k=thorne+amino+complex&tag=YOURTAG-20",
+    "blurb": "Clinically oriented EAA profile with 3.8 g of EAAs and 1.25 g leucine per 7.6 g scoop, carrying NSF Certified for Sport status at a premium price.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "eaaG": 3.8,
+      "bcaaG": 2.5,
+      "leucineG": 1.25
+    },
+    "sources": [
+      {
+        "url": "https://thefeed.com/products/thorne-amino-complex",
+        "label": "The Feed product listing"
+      },
+      {
+        "url": "https://www.professionalsupplementcenter.com/amino-complex-by-thorne-research",
+        "label": "Professional Supplement Center listing"
+      }
+    ]
+  },
+
+  {
+    "id": "ghost-amino-v2",
+    "name": "Ghost Amino",
+    "brand": "Ghost",
+    "category": "eaa",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "BCAA 4:1:1 (leucine-forward)",
+        "dose": "4.5 g",
+        "clinicalNote": "Delivers 3 g leucine, the amino most tied to muscle protein synthesis signaling in research."
+      },
+      {
+        "name": "Additional EAAs",
+        "dose": "5.5 g",
+        "clinicalNote": "The six non-BCAA essential amino acids, completing the full spectrum needed for protein balance."
+      },
+      {
+        "name": "Taurine",
+        "dose": "2 g",
+        "clinicalNote": "Studied for supporting hydration and endurance during training."
+      },
+      {
+        "name": "Raw coconut water powder",
+        "dose": "1 g",
+        "clinicalNote": "Natural potassium source supporting fluid balance, paired with Aquamin marine minerals."
+      }
+    ],
+    "cautions": [
+      "Full label doses are per two-scoop serving; one scoop delivers half",
+      "Amino drinks supplement protein intake, not replace it"
+    ],
+    "servings": 40,
+    "priceRange": "$$",
+    "flavorsNote": "Licensed and fruit flavors such as Welch's Grape, Mango, and Blue Raspberry, sweetened with sucralose.",
+    "affiliateUrl": "https://www.amazon.com/s?k=ghost+amino+v2&tag=YOURTAG-20",
+    "blurb": "Full 10 g EAA dose with a 4:1:1 leucine-heavy BCAA core, but that dose takes two scoops, so the 40-scoop tub works out to 20 full servings.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "eaaG": 10,
+      "bcaaG": 4.5,
+      "leucineG": 3
+    },
+    "sources": [
+      {
+        "url": "https://www.gymsupplements.co.uk/products/ghost-amino-v2-404g",
+        "label": "Retailer listing with full supplement facts"
+      }
+    ]
+  },
+
+  {
+    "id": "dymatize-all9-amino",
+    "name": "All9 Amino",
+    "brand": "Dymatize",
+    "category": "eaa",
+    "stimFree": true,
+    "badges": [
+      "Beginner Friendly"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Full-spectrum EAAs",
+        "dose": "10 g",
+        "clinicalNote": "All nine essential amino acids, supporting muscle protein synthesis and whole-body protein balance."
+      },
+      {
+        "name": "BCAAs (leucine, isoleucine, valine)",
+        "dose": "7.2 g",
+        "clinicalNote": "An unusually large branched-chain share of the total, the trio most studied for muscle recovery."
+      },
+      {
+        "name": "Coconut water fruit powder",
+        "dose": "200 mg",
+        "clinicalNote": "Small hydration-support addition alongside B vitamins and vitamin C."
+      }
+    ],
+    "cautions": [
+      "Individual amino doses beyond the two blend totals are not itemized on the web listings",
+      "Amino drinks supplement protein intake, not replace it"
+    ],
+    "servings": 30,
+    "priceRange": "$$",
+    "flavorsNote": "Flavors include Juicy Watermelon and Jolly Green Apple, sweetened with sucralose, acesulfame potassium, and stevia.",
+    "affiliateUrl": "https://www.amazon.com/s?k=dymatize+all9+amino&tag=YOURTAG-20",
+    "blurb": "10 g of all nine EAAs with a BCAA-heavy 7.2 g share per serving; one retailer lists it as discontinued, though the brand storefront still sells five flavors.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "eaaG": 10,
+      "bcaaG": 7.2,
+      "leucineG": null
+    },
+    "sources": [
+      {
+        "url": "https://dymatize-nutrition.myshopify.com/products/all-9-amino",
+        "label": "Dymatize brand storefront"
+      },
+      {
+        "url": "https://www.allstarhealth.com/f/dymatize_nutrition-all_9_amino.htm",
+        "label": "AllStarHealth listing"
+      }
+    ]
+  },
+
+  {
+    "id": "jacked-factory-eaa-surge",
+    "name": "EAA Surge",
+    "brand": "Jacked Factory",
+    "category": "eaa",
+    "stimFree": true,
+    "badges": [],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Amino9 EAA blend",
+        "dose": "6.7 g",
+        "clinicalNote": "Clinically studied nine-EAA blend supporting muscle protein balance around training."
+      },
+      {
+        "name": "L-Citrulline malate",
+        "dose": "2 g",
+        "clinicalNote": "Studied for supporting blood flow and training endurance."
+      },
+      {
+        "name": "Taurine",
+        "dose": "2 g",
+        "clinicalNote": "Studied for supporting hydration and endurance during longer sessions."
+      },
+      {
+        "name": "Coconut water powder blend",
+        "dose": "500 mg",
+        "clinicalNote": "Natural potassium source that supports fluid balance."
+      }
+    ],
+    "cautions": [
+      "Individual amino amounts inside the Amino9 blend are not disclosed",
+      "Amino drinks supplement protein intake, not replace it"
+    ],
+    "servings": 20,
+    "priceRange": "$$",
+    "flavorsNote": "Fruit flavors such as Pineapple and Blackberry Lemonade, sweetened with sucralose and acesulfame potassium.",
+    "affiliateUrl": "https://www.amazon.com/s?k=jacked+factory+eaa+surge&tag=YOURTAG-20",
+    "blurb": "Stim-free intra with 6.7 g Amino9 EAAs plus 2 g each of citrulline malate and taurine; the blend total is disclosed but not each amino, and the tub is only 20 servings.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "eaaG": 6.7,
+      "bcaaG": null,
+      "leucineG": null
+    },
+    "sources": [
+      {
+        "url": "https://www.muscleandstrength.com/store/eaa-surge.html",
+        "label": "Muscle & Strength label listing"
+      },
+      {
+        "url": "https://www.jackedfactory.com/products/eaa-surge",
+        "label": "Jacked Factory product page"
+      }
+    ]
+  },
+
+  {
+    "id": "nutricost-eaa",
+    "name": "EAA Powder",
+    "brand": "Nutricost",
+    "category": "eaa",
+    "stimFree": true,
+    "badges": [
+      "Budget Pick"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Essential amino acid blend (9 EAAs)",
+        "dose": "8 g",
+        "clinicalNote": "Provides all nine essential amino acids the body cannot synthesize, supporting whole-body protein balance."
+      },
+      {
+        "name": "Instantized BCAAs (leucine, isoleucine, valine)",
+        "dose": "2:1:1 ratio within the 8 g",
+        "clinicalNote": "The branched-chain trio studied for its role in muscle protein synthesis and recovery."
+      }
+    ],
+    "cautions": [
+      "Per-amino milligram breakdown is printed on the tub but not shown on the brand's web listing",
+      "Amino drinks supplement protein intake, not replace it"
+    ],
+    "servings": 30,
+    "priceRange": "$",
+    "flavorsNote": "Blue Raspberry, Fruit Punch, Peach Mango, POG, and Unflavored options.",
+    "affiliateUrl": "https://www.amazon.com/s?k=nutricost+eaa+powder&tag=YOURTAG-20",
+    "blurb": "8 g of all nine EAAs at one of the lowest per-serving costs in the category; batch testing is by ISO-accredited labs rather than a sport-certification program.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "eaaG": 8,
+      "bcaaG": null,
+      "leucineG": null
+    },
+    "sources": [
+      {
+        "url": "https://nutricost.com/products/nutricost-eaa-powder",
+        "label": "Nutricost product page"
+      }
+    ]
+  },
+
+  {
+    "id": "xtend-original-bcaa",
+    "name": "Xtend Original BCAA",
+    "brand": "Xtend",
+    "category": "eaa",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "BCAA 2:1:1 blend",
+        "dose": "7 g",
+        "clinicalNote": "The branched-chain trio studied for supporting muscle recovery and reducing post-training soreness."
+      },
+      {
+        "name": "L-Leucine",
+        "dose": "3.5 g",
+        "clinicalNote": "The amino acid most directly tied to triggering muscle protein synthesis in research."
+      },
+      {
+        "name": "L-Glutamine",
+        "dose": "2.5 g",
+        "clinicalNote": "The most abundant free amino acid in muscle tissue, commonly added to recovery formulas."
+      },
+      {
+        "name": "Electrolyte blend",
+        "dose": "1.17 g",
+        "clinicalNote": "Sodium, potassium, and magnesium to support hydration during sweat loss."
+      }
+    ],
+    "cautions": [
+      "BCAA-only formulas lack six of the nine essential amino acids",
+      "Amino drinks supplement protein intake, not replace it"
+    ],
+    "servings": 30,
+    "priceRange": "$$",
+    "flavorsNote": "Wide fruit-flavor range sweetened with sucralose and acesulfame potassium.",
+    "affiliateUrl": "https://www.amazon.com/s?k=xtend+original+bcaa&tag=YOURTAG-20",
+    "blurb": "Longtime intra-workout staple with a fully dosed 7 g BCAA panel plus glutamine and citrulline malate, though it covers only three of the nine essential amino acids.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "eaaG": null,
+      "bcaaG": 7,
+      "leucineG": 3.5
+    },
+    "sources": [
+      {
+        "url": "https://tigerfitness.com/products/xtend-bcaa",
+        "label": "Tiger Fitness label listing"
+      }
+    ]
+  },
+
+  {
+    "id": "musclepharm-bcaa-312",
+    "name": "BCAA 3:1:2",
+    "brand": "MusclePharm",
+    "category": "eaa",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "L-Leucine",
+        "dose": "3 g",
+        "clinicalNote": "The essential amino acid most studied for stimulating muscle protein synthesis."
+      },
+      {
+        "name": "L-Valine",
+        "dose": "2 g",
+        "clinicalNote": "Branched-chain amino acid weighted above isoleucine in this formula's 3:1:2 ratio."
+      },
+      {
+        "name": "L-Isoleucine",
+        "dose": "1 g",
+        "clinicalNote": "Branched-chain amino acid involved in muscle energy metabolism."
+      }
+    ],
+    "cautions": [
+      "BCAA-only formulas lack six of the nine essential amino acids",
+      "Amino drinks supplement protein intake, not replace it"
+    ],
+    "servings": 30,
+    "priceRange": "$",
+    "flavorsNote": "Blue Raspberry and Fruit Punch flavors sweetened with sucralose.",
+    "affiliateUrl": "https://www.amazon.com/s?k=musclepharm+bcaa+3+1+2&tag=YOURTAG-20",
+    "blurb": "Budget classic BCAA using an unconventional 3:1:2 ratio that weights valine over isoleucine; like all BCAA-only formulas it omits the six other essential aminos.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "eaaG": null,
+      "bcaaG": 6,
+      "leucineG": 3
+    },
+    "sources": [
+      {
+        "url": "https://tigerfitness.com/products/musclepharm-bcaa-3-1-2",
+        "label": "Tiger Fitness label listing"
+      }
+    ]
+  },
+
+  {
+    "id": "optimum-nutrition-amino-energy",
+    "name": "Amino Energy",
+    "brand": "Optimum Nutrition",
+    "category": "eaa",
+    "stimFree": false,
+    "badges": [
+      "Low Stim",
+      "Proprietary Blend"
+    ],
+    "caffeineMg": 100,
+    "keyIngredients": [
+      {
+        "name": "Micronized amino blend",
+        "dose": "5 g",
+        "clinicalNote": "Proprietary mix of essential aminos plus taurine, glutamine, arginine, and citrulline supporting protein balance and training."
+      },
+      {
+        "name": "Caffeine (green tea and green coffee extracts)",
+        "dose": "100 mg",
+        "clinicalNote": "Studied for supporting alertness and perceived energy during training."
+      }
+    ],
+    "cautions": [
+      "Amino doses sit inside a proprietary blend, so individual amounts are not disclosed",
+      "100 mg caffeine per two-scoop serving counts toward daily caffeine intake",
+      "Amino drinks supplement protein intake, not replace it"
+    ],
+    "servings": 30,
+    "priceRange": "$$",
+    "flavorsNote": "Long flavor list spanning fruit and coffee-shop options, sweetened with sucralose.",
+    "affiliateUrl": "https://www.amazon.com/s?k=optimum+nutrition+amino+energy&tag=YOURTAG-20",
+    "blurb": "The one caffeinated pick here: 100 mg caffeine with a 5 g proprietary amino blend, making it closer to a light energy drink than a fully dosed EAA product.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "eaaG": null,
+      "bcaaG": null,
+      "leucineG": null
+    },
+    "sources": [
+      {
+        "url": "https://www.muscleandstrength.com/store/amino-energy.html",
+        "label": "Muscle & Strength label listing"
+      }
+    ]
+  },
+
+  /* ---- electrolytes (label-verified July 2026) ---- */
+
+  {
+    "id": "lmnt-drink-mix",
+    "name": "LMNT Electrolyte Drink Mix",
+    "brand": "LMNT",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Sodium (from salt)",
+        "dose": "1000 mg",
+        "clinicalNote": "Sodium is the primary electrolyte lost in sweat and is studied for its role in fluid balance during prolonged sweating."
+      },
+      {
+        "name": "Potassium (potassium chloride)",
+        "dose": "200 mg",
+        "clinicalNote": "Potassium contributes to normal muscle function and works alongside sodium in fluid balance."
+      },
+      {
+        "name": "Magnesium (magnesium malate)",
+        "dose": "60 mg",
+        "clinicalNote": "Magnesium plays a role in normal muscle and nerve function."
+      }
+    ],
+    "cautions": [
+      "1000 mg sodium per serving — significant if you watch sodium intake",
+      "Talk to your doctor if you take blood-pressure medication",
+      "Formulated for sweat loss, not everyday casual sipping"
+    ],
+    "servings": 30,
+    "priceRange": "$$$",
+    "flavorsNote": "Salty-citrus lineup including Citrus Salt, Watermelon Salt, and Raw Unflavored, sweetened with stevia leaf extract.",
+    "affiliateUrl": "https://www.amazon.com/s?k=lmnt+electrolyte+drink+mix&tag=YOURTAG-20",
+    "blurb": "Sodium-forward design: 1000 mg sodium with zero sugar targets heavy sweat replacement rather than carb-based rehydration.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "sodiumMg": 1000,
+      "potassiumMg": 200,
+      "magnesiumMg": 60,
+      "sugarG": 0
+    },
+    "sources": [
+      {
+        "url": "https://drinklmnt.com/pages/ingredients",
+        "label": "LMNT ingredients page (electrolyte amounts per stick)"
+      },
+      {
+        "url": "https://drinklmnt.com/products/lmnt-recharge-electrolyte-drink",
+        "label": "LMNT product page (30-stick box, flavors)"
+      }
+    ]
+  },
+
+  {
+    "id": "liquid-iv-hydration-multiplier",
+    "name": "Hydration Multiplier",
+    "brand": "Liquid I.V.",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Beginner Friendly"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Sodium",
+        "dose": "500 mg",
+        "clinicalNote": "Sodium is studied for its role in helping the body retain and distribute fluid during sweating."
+      },
+      {
+        "name": "Potassium",
+        "dose": "380 mg",
+        "clinicalNote": "Potassium contributes to normal muscle function and fluid balance."
+      },
+      {
+        "name": "Cane sugar + dextrose",
+        "dose": "11 g",
+        "clinicalNote": "Glucose paired with sodium is the classic oral-rehydration-solution approach studied for fluid absorption in the gut."
+      }
+    ],
+    "cautions": [
+      "11 g added sugar per stick — this is a sugar-based rehydration design, not a zero-sugar mix",
+      "500 mg sodium per serving counts toward daily sodium",
+      "Talk to your doctor if you manage blood pressure or blood sugar"
+    ],
+    "servings": 16,
+    "priceRange": "$$$",
+    "flavorsNote": "Large flavor range led by Lemon Lime and Passion Fruit, sweetened mainly with cane sugar and dextrose.",
+    "affiliateUrl": "https://www.amazon.com/s?k=liquid+iv+hydration+multiplier&tag=YOURTAG-20",
+    "blurb": "Sugar-based ORS-style stick: 11 g of sugars alongside 500 mg sodium, the glucose-plus-sodium pairing used in oral rehydration formulas.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "sodiumMg": 500,
+      "potassiumMg": 380,
+      "magnesiumMg": 0,
+      "sugarG": 11
+    },
+    "sources": [
+      {
+        "url": "https://www.myfooddiary.com/foods/7681582/liquid-iv-lemon-lime-hydration-multiplier",
+        "label": "Nutrition panel for Lemon Lime Hydration Multiplier"
+      },
+      {
+        "url": "https://www.liquid-iv.com/products/lemon-lime-hydration-multiplier",
+        "label": "Liquid I.V. product page (16 sticks per pouch)"
+      }
+    ]
+  },
+
+  {
+    "id": "nuun-sport",
+    "name": "Nuun Sport",
+    "brand": "Nuun",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Beginner Friendly",
+      "Budget Pick"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Sodium",
+        "dose": "300 mg",
+        "clinicalNote": "Sodium is the main electrolyte lost in sweat and is studied for its role in fluid balance."
+      },
+      {
+        "name": "Potassium",
+        "dose": "150 mg",
+        "clinicalNote": "Potassium contributes to normal muscle function."
+      },
+      {
+        "name": "Magnesium",
+        "dose": "25 mg",
+        "clinicalNote": "Magnesium plays a role in normal muscle and nerve function."
+      }
+    ],
+    "cautions": [
+      "300 mg sodium per tablet still counts toward daily sodium intake",
+      "Talk to your doctor if you manage blood pressure or kidney conditions"
+    ],
+    "servings": 10,
+    "priceRange": "$",
+    "flavorsNote": "Ten light, fizzy flavors such as Lemon Lime and Tri-Berry, sweetened with stevia and about 1 g of sugar per tablet.",
+    "affiliateUrl": "https://www.amazon.com/s?k=nuun+sport+electrolyte+tablets&tag=YOURTAG-20",
+    "blurb": "Low-calorie dissolving-tablet format: 300 mg sodium and 1 g sugar per tablet suits lighter sessions and travel-friendly dosing.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "sodiumMg": 300,
+      "potassiumMg": 150,
+      "magnesiumMg": 25,
+      "sugarG": 1
+    },
+    "sources": [
+      {
+        "url": "https://nuunlife.com/products/nuun-sport",
+        "label": "Nuun Sport product page (per-tablet facts, 10 tablets per tube)"
+      }
+    ]
+  },
+
+  {
+    "id": "dripdrop-ors",
+    "name": "DripDrop ORS Electrolyte Powder",
+    "brand": "DripDrop",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Sodium (sodium citrate)",
+        "dose": "330 mg",
+        "clinicalNote": "Sodium is studied for its role in fluid retention and balance during sweat loss."
+      },
+      {
+        "name": "Potassium (potassium citrate)",
+        "dose": "185 mg",
+        "clinicalNote": "Potassium contributes to normal muscle function and fluid balance."
+      },
+      {
+        "name": "Magnesium (magnesium citrate)",
+        "dose": "39 mg",
+        "clinicalNote": "Magnesium plays a role in normal muscle function."
+      },
+      {
+        "name": "Zinc",
+        "dose": "1.5 mg",
+        "clinicalNote": "Zinc contributes to normal immune function and is a common addition in oral rehydration formulas."
+      }
+    ],
+    "cautions": [
+      "7 g added sugar per stick is intentional to the ORS-style glucose-sodium design",
+      "Talk to your doctor if you manage blood pressure or blood sugar"
+    ],
+    "servings": 16,
+    "priceRange": "$$",
+    "flavorsNote": "Sold in Bold and Juicy variety packs (Berry, Watermelon, Lemon, Orange, Fruit Punch and more), each stick carrying 7 g of sugar.",
+    "affiliateUrl": "https://www.amazon.com/s?k=dripdrop+ors+electrolyte+powder&tag=YOURTAG-20",
+    "blurb": "ORS-style ratio with less sugar than typical sports drinks: 7 g sugar with 330 mg sodium and added zinc per 10 g stick.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "sodiumMg": 330,
+      "potassiumMg": 185,
+      "magnesiumMg": 39,
+      "sugarG": 7
+    },
+    "sources": [
+      {
+        "url": "https://www.hydrationdepot.com/dripdrop-watermelon-electrolyte-powder-sticks-pack-of-100.html",
+        "label": "Retailer listing with full nutrition panel per stick"
+      },
+      {
+        "url": "https://dripdrop.com/products/bold-variety-pack-8-16",
+        "label": "DripDrop product page (16-stick box)"
+      }
+    ]
+  },
+
+  {
+    "id": "gatorlyte-rapid-rehydration",
+    "name": "Gatorlyte Rapid Rehydration Electrolyte Beverage Powder",
+    "brand": "Gatorade",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Beginner Friendly"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Sodium",
+        "dose": "490 mg",
+        "clinicalNote": "Sodium is studied for its role in fluid balance during prolonged sweating."
+      },
+      {
+        "name": "Potassium",
+        "dose": "350 mg",
+        "clinicalNote": "Potassium contributes to normal muscle function and fluid balance."
+      },
+      {
+        "name": "Magnesium",
+        "dose": "105 mg",
+        "clinicalNote": "Magnesium plays a role in normal muscle and nerve function."
+      }
+    ],
+    "cautions": [
+      "10 g sugar and 490 mg sodium per stick",
+      "Talk to your doctor if you take blood-pressure medication"
+    ],
+    "servings": 6,
+    "priceRange": "$$$",
+    "flavorsNote": "Flavors include Orange, Strawberry Kiwi, Cherry Lime, and Watermelon, sweetened with sugar at 10 g per stick.",
+    "affiliateUrl": "https://www.amazon.com/s?k=gatorlyte+electrolyte+beverage+powder&tag=YOURTAG-20",
+    "blurb": "Highest magnesium in this set at 105 mg, with a five-electrolyte blend and a mid-pack 490 mg sodium plus 10 g sugar per stick.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "sodiumMg": 490,
+      "potassiumMg": 350,
+      "magnesiumMg": 105,
+      "sugarG": 10
+    },
+    "sources": [
+      {
+        "url": "https://www.gatorade.com/powders/gatorlyte/orange-single-serve-sticks",
+        "label": "Gatorade official Gatorlyte Orange stick page (electrolyte panel)"
+      },
+      {
+        "url": "https://giantfoodstores.com/groceries/product/gatorade-gatorlyte-orange-electrolyte-beverage-powder-sticks-6-ct-3-1-oz-pkg/346804",
+        "label": "Retailer listing confirming 6 sticks per box"
+      }
+    ]
+  },
+
+  {
+    "id": "transparent-labs-hydrate",
+    "name": "Hydrate",
+    "brand": "Transparent Labs",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Third-Party Tested",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Sodium",
+        "dose": "500 mg",
+        "clinicalNote": "Sodium is the primary electrolyte lost in sweat and is studied for its role in fluid balance."
+      },
+      {
+        "name": "Taurine",
+        "dose": "1000 mg",
+        "clinicalNote": "Taurine is an amino acid studied in the context of cell hydration and muscle function."
+      },
+      {
+        "name": "Organic coconut water powder",
+        "dose": "500 mg",
+        "clinicalNote": "Coconut water naturally supplies small amounts of potassium and other minerals."
+      },
+      {
+        "name": "Potassium",
+        "dose": "250 mg",
+        "clinicalNote": "Potassium contributes to normal muscle function and fluid balance."
+      }
+    ],
+    "cautions": [
+      "500 mg sodium per serving counts toward daily sodium",
+      "Talk to your doctor before use if you are pregnant, nursing, or take medication"
+    ],
+    "servings": 40,
+    "priceRange": "$$",
+    "flavorsNote": "Fourteen stevia-sweetened options from Peach Mango to Unflavored, all zero sugar.",
+    "affiliateUrl": "https://www.amazon.com/s?k=transparent+labs+hydrate+electrolyte&tag=YOURTAG-20",
+    "blurb": "Zero-sugar electrolyte blend that layers 1 g taurine and coconut water powder on a 500 mg sodium base; Informed Choice tested per the brand page.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "sodiumMg": 500,
+      "potassiumMg": 250,
+      "magnesiumMg": 50,
+      "sugarG": 0
+    },
+    "sources": [
+      {
+        "url": "https://www.transparentlabs.com/products/hydrate",
+        "label": "Transparent Labs Hydrate product page (supplement facts, Informed Choice)"
+      }
+    ]
+  },
+
+  {
+    "id": "ultima-replenisher",
+    "name": "Ultima Replenisher Electrolyte Mix",
+    "brand": "Ultima",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Beginner Friendly"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Potassium",
+        "dose": "250 mg",
+        "clinicalNote": "Potassium contributes to normal muscle function and fluid balance."
+      },
+      {
+        "name": "Magnesium (magnesium citrate)",
+        "dose": "100 mg",
+        "clinicalNote": "Magnesium plays a role in normal muscle and nerve function."
+      },
+      {
+        "name": "Vitamin C",
+        "dose": "100 mg",
+        "clinicalNote": "Vitamin C contributes to normal immune function."
+      },
+      {
+        "name": "Sodium",
+        "dose": "55 mg",
+        "clinicalNote": "Sodium is studied for its role in fluid balance, though this dose is far below sweat-replacement levels."
+      }
+    ],
+    "cautions": [
+      "Only 55 mg sodium per serving — light relative to products built for heavy sweat loss",
+      "Talk to your doctor if you take medication affecting potassium or magnesium levels"
+    ],
+    "servings": 30,
+    "priceRange": "$",
+    "flavorsNote": "Wide zero-sugar flavor range (Grape, Orange, Raspberry, Watermelon and more) sweetened with organic stevia leaf extract.",
+    "affiliateUrl": "https://www.amazon.com/s?k=ultima+replenisher+electrolyte+powder&tag=YOURTAG-20",
+    "blurb": "Potassium- and magnesium-leaning profile with only 55 mg sodium — an everyday flavored-water mix rather than a sweat-replacement formula.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "sodiumMg": 55,
+      "potassiumMg": 250,
+      "magnesiumMg": 100,
+      "sugarG": 0
+    },
+    "sources": [
+      {
+        "url": "https://www.heb.com/product-detail/ultima-replenisher-raspberry-nbsp-electrolyte-hydration-powder/2067443",
+        "label": "H-E-B listing with supplement facts panel"
+      },
+      {
+        "url": "https://www.ultimareplenisher.com/products/grape-electrolyte-powder-drink",
+        "label": "Ultima brand product page (supplement facts, sweetener)"
+      }
+    ]
+  },
+
+  {
+    "id": "skratch-hydration-sport-mix",
+    "name": "Hydration Sport Drink Mix",
+    "brand": "Skratch Labs",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Cane sugar carbohydrates",
+        "dose": "19 g",
+        "clinicalNote": "Simple carbohydrates taken during long exercise are studied for maintaining energy availability and aiding fluid absorption."
+      },
+      {
+        "name": "Sodium",
+        "dose": "400 mg",
+        "clinicalNote": "Sodium is studied for its role in replacing sweat losses during prolonged exercise."
+      },
+      {
+        "name": "Magnesium",
+        "dose": "50 mg",
+        "clinicalNote": "Magnesium plays a role in normal muscle function."
+      }
+    ],
+    "cautions": [
+      "19 g sugar per serving — designed as workout fuel, not everyday hydration",
+      "Talk to your doctor if you manage blood sugar"
+    ],
+    "servings": 20,
+    "priceRange": "$$",
+    "flavorsNote": "Real-fruit flavors like Lemon + Lime and Strawberry Lemonade, sweetened with cane sugar and no artificial sweeteners.",
+    "affiliateUrl": "https://www.amazon.com/s?k=skratch+labs+hydration+sport+drink+mix&tag=YOURTAG-20",
+    "blurb": "Endurance carb-mix profile: 19 g of sugar-based carbohydrate with 400 mg sodium, built for fueling plus fluid replacement on long efforts.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "sodiumMg": 400,
+      "potassiumMg": 50,
+      "magnesiumMg": 50,
+      "sugarG": 19
+    },
+    "sources": [
+      {
+        "url": "https://www.skratchlabs.com/products/hydration-sport-drink-mix",
+        "label": "Skratch Labs product page (400 mg sodium, 19 g carbs, bag sizes)"
+      },
+      {
+        "url": "https://thefeed.com/products/skratch-labs-exercise-hydration-mix",
+        "label": "Retailer listing with full nutrition panel per scoop"
+      }
+    ]
+  },
+
+  {
+    "id": "tailwind-endurance-fuel",
+    "name": "Endurance Fuel",
+    "brand": "Tailwind Nutrition",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Dextrose + sucrose",
+        "dose": "25 g",
+        "clinicalNote": "Glucose-based carbohydrates taken during endurance exercise are studied for sustaining energy output."
+      },
+      {
+        "name": "Sodium",
+        "dose": "303 mg",
+        "clinicalNote": "Sodium is studied for its role in replacing sweat losses during prolonged exercise."
+      },
+      {
+        "name": "Potassium",
+        "dose": "88 mg",
+        "clinicalNote": "Potassium contributes to normal muscle function."
+      }
+    ],
+    "cautions": [
+      "25 g sugar per scoop, and typical endurance use is 2-3 scoops per bottle",
+      "Calorie-dense by design — talk to your doctor if you manage blood sugar"
+    ],
+    "servings": 30,
+    "priceRange": "$$",
+    "flavorsNote": "Light flavors such as Mandarin, Lemon, and unflavored Naked, with sweetness coming from its dextrose and sucrose fuel rather than added sweeteners.",
+    "affiliateUrl": "https://www.amazon.com/s?k=tailwind+nutrition+endurance+fuel&tag=YOURTAG-20",
+    "blurb": "All-in-one endurance fuel: 100 calories of dextrose and sucrose per scoop with modest electrolytes, meant to be scaled up per bottle on long efforts.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "sodiumMg": 303,
+      "potassiumMg": 88,
+      "magnesiumMg": 14,
+      "sugarG": 25
+    },
+    "sources": [
+      {
+        "url": "https://www.runningwarehouse.com/Tailwind_Nutrition_Endurance_Fuel_Drink_30-Serving/descpage-TWEFD30.html",
+        "label": "Retailer listing with per-scoop nutrition panel (30-serving bag)"
+      },
+      {
+        "url": "https://thefeed.com/products/tailwind-endurance-fuel",
+        "label": "Retailer listing with stick-pack nutrition panel"
+      }
+    ]
+  },
+
+  {
+    "id": "redmond-re-lyte-hydration",
+    "name": "Re-Lyte Hydration",
+    "brand": "Redmond",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Budget Pick",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Sodium (from Real Salt)",
+        "dose": "810 mg",
+        "clinicalNote": "Sodium is the primary electrolyte lost in sweat and is studied for its role in fluid balance during prolonged sweating."
+      },
+      {
+        "name": "Potassium",
+        "dose": "400 mg",
+        "clinicalNote": "Potassium contributes to normal muscle function and works with sodium in fluid balance."
+      },
+      {
+        "name": "Magnesium",
+        "dose": "50 mg",
+        "clinicalNote": "Magnesium plays a role in normal muscle and nerve function."
+      }
+    ],
+    "cautions": [
+      "810 mg sodium per serving — significant if you watch sodium intake",
+      "Talk to your doctor if you take blood-pressure medication",
+      "Hydration mixes are formulated for sweat loss, not everyday sipping"
+    ],
+    "servings": 60,
+    "priceRange": "$",
+    "flavorsNote": "Flavored options like Lemon Lime plus an Unflavored version, sweetened with stevia leaf extract and zero sugar.",
+    "affiliateUrl": "https://www.amazon.com/s?k=redmond+re-lyte+hydration+electrolyte+mix&tag=YOURTAG-20",
+    "blurb": "Sodium-forward at 810 mg with 400 mg potassium and zero sugar; 60 servings per tub makes it one of the cheapest per-serving options in the high-sodium tier.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "sodiumMg": 810,
+      "potassiumMg": 400,
+      "magnesiumMg": 50,
+      "sugarG": 0
+    },
+    "sources": [
+      {
+        "url": "https://living.redmond.com/products/re-lyte-hydration",
+        "label": "Redmond product page (supplement facts, 60 servings)"
+      }
+    ]
+  },
 ];
