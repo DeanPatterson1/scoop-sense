@@ -24,8 +24,21 @@ const VERSION = "20260728m"; // keep in sync with the ?v= on the other pages
 const dataSrc = fs.readFileSync(path.join(ROOT, "data", "products.js"), "utf8");
 const { PRODUCTS } = new Function(dataSrc + "\nreturn { PRODUCTS, FEATURED_IDS };")();
 
+const catSrc = fs.readFileSync(path.join(ROOT, "js", "categories.js"), "utf8");
+const CATEGORY_CONFIG = new Function(catSrc + "\nreturn CATEGORY_CONFIG;")();
+
+// Products predate the category field; missing means pre-workout.
+function categoryOf(p) {
+  return p.category || "pre-workout";
+}
+
+function cfgOf(p) {
+  return CATEGORY_CONFIG[categoryOf(p)] || CATEGORY_CONFIG["pre-workout"];
+}
+
 const COUNT = PRODUCTS.length;
-const MAX_CAF = Math.max(...PRODUCTS.map((p) => p.caffeineMg));
+const preWorkouts = PRODUCTS.filter((p) => categoryOf(p) === "pre-workout");
+const MAX_CAF = Math.max(...preWorkouts.map((p) => p.caffeineMg));
 
 /* ---- helpers (mirror js/app.js) ----------------------------------------- */
 
@@ -87,16 +100,61 @@ const STIM_TIPS = {
 const DISCLOSED_TIP = "Every active ingredient and its dosage is individually listed on the label. No proprietary blends.";
 const BLEND_TIP = "One or more combined blend totals hide the individual ingredient amounts inside.";
 
+// Mirrors showsStimTag in js/app.js: pre-workouts always carry a stim tag,
+// every other category only when actually caffeinated.
+function showsStimTag(p) {
+  return categoryOf(p) === "pre-workout" || p.caffeineMg > 0;
+}
+
 function tagsHTML(p) {
   const tags = [];
   const b = bucketOf(p);
-  let cls = "sc-tag";
-  if (b === "high") cls += " sc-tag-caution";
-  if (b === "none") cls += " sc-tag-calm";
-  tags.push(`<span class="${cls}" title="${esc(STIM_TIPS[b])}">${esc(stimLabelOf(p))}</span>`);
+  if (showsStimTag(p)) {
+    let cls = "sc-tag";
+    if (b === "high") cls += " sc-tag-caution";
+    if (b === "none") cls += " sc-tag-calm";
+    tags.push(`<span class="${cls}" title="${esc(STIM_TIPS[b])}">${esc(stimLabelOf(p))}</span>`);
+  }
   if (hasBlend(p)) tags.push(`<span class="sc-tag sc-tag-caution" title="${esc(BLEND_TIP)}">Proprietary blend</span>`);
   else if (isDisclosed(p)) tags.push(`<span class="sc-tag" title="${esc(DISCLOSED_TIP)}">Label fully disclosed</span>`);
+  if (p.badges.indexOf("Third-Party Tested") !== -1) tags.push(`<span class="sc-tag sc-tag-calm" title="Certified by an independent banned-substance testing program (NSF Certified for Sport, Informed Sport, or Informed Choice), per the label or brand page.">Third-party tested</span>`);
   return tags.join("");
+}
+
+/* Config fact-key resolver — mirrors factOf in js/app.js. */
+const DASH = '<span class="sc-dim">—</span>';
+
+function metricOf(p, key) {
+  if (!p.metrics) return null;
+  const v = p.metrics[key];
+  return v === undefined || v === null || v === "" ? null : v;
+}
+
+function factOf(p, key) {
+  if (key === "caffeineMg") return p.caffeineMg === 0 ? "0 mg" : esc(p.caffeineMg) + " mg";
+  if (key === "servings") return esc(p.servings);
+  if (key === "blend") return hasBlend(p) ? "Yes" : "No";
+  if (key === "stim") return esc(stimLabelOf(p));
+  if (key === "price") return priceWordHTML(p);
+  if (key === "protPct") {
+    const pg = metricOf(p, "proteinG"), sg = metricOf(p, "servingG");
+    return pg && sg ? Math.round((pg / sg) * 100) + "%" : DASH;
+  }
+  if (key.indexOf("ing:") === 0) {
+    const pattern = key.slice(4);
+    if (/citrulline/.test(pattern)) {
+      const cit = citrullineOf(p);
+      return cit ? esc(cit.dose) + (cit.form ? " <small>" + esc(cit.form) + "</small>" : "") : DASH;
+    }
+    const ing = findIngredient(p, new RegExp(pattern, "i"));
+    return ing ? esc(ing.dose) : DASH;
+  }
+  if (key.indexOf("m:") === 0) {
+    const parts = key.split(":");
+    const v = metricOf(p, parts[1]);
+    return v === null ? DASH : esc(v) + (parts[2] ? " " + parts[2] : "");
+  }
+  return DASH;
 }
 
 // "$" | "$$" | "$$$" -> plain-English cost-per-serving tier, with the basis
@@ -129,11 +187,37 @@ function factsLinkOf(p) {
 // never invented claims.
 function whoForHTML(p) {
   const parts = [];
-  if (p.caffeineMg === 0) parts.push("People who train late in the day or want zero caffeine — the effects here come from the non-stimulant ingredients.");
-  else if (p.caffeineMg < 150) parts.push("Caffeine-sensitive users, or coffee drinkers who only want a modest top-up.");
-  else if (p.caffeineMg < 250) parts.push("Most regular gym-goers — the caffeine dose is in the range of about two cups of coffee.");
-  else if (p.caffeineMg < 350) parts.push("Users with an established caffeine tolerance.");
-  else parts.push("Experienced high-stimulant users only — not a sensible first pre-workout.");
+  const cat = categoryOf(p);
+
+  if (cat === "pre-workout") {
+    if (p.caffeineMg === 0) parts.push("People who train late in the day or want zero caffeine — the effects here come from the non-stimulant ingredients.");
+    else if (p.caffeineMg < 150) parts.push("Caffeine-sensitive users, or coffee drinkers who only want a modest top-up.");
+    else if (p.caffeineMg < 250) parts.push("Most regular gym-goers — the caffeine dose is in the range of about two cups of coffee.");
+    else if (p.caffeineMg < 350) parts.push("Users with an established caffeine tolerance.");
+    else parts.push("Experienced high-stimulant users only — not a sensible first pre-workout.");
+  } else if (cat === "creatine") {
+    const form = metricOf(p, "form");
+    if (form === "monohydrate") parts.push("Anyone who wants the form with the deepest research base — most creatine studies use 3–5 g of monohydrate daily.");
+    else if (form === "HCl") parts.push("People who prefer a smaller powder dose; note that HCl has a thinner research base than monohydrate.");
+    else parts.push("People who want creatine bundled with other ingredients — check what each addition does before paying for it.");
+  } else if (cat === "protein") {
+    const pg = metricOf(p, "proteinG"), sg = metricOf(p, "servingG");
+    if (pg && sg && pg / sg >= 0.8) parts.push("A lean-ratio pick — at least 80% of each scoop is protein, which suits anyone counting calories closely.");
+    else parts.push("A standard-ratio powder — fine as a food supplement when total daily protein is what matters.");
+    const src = metricOf(p, "source") || "";
+    if (/plant|pea|soy|rice/i.test(src)) parts.push("Suits anyone avoiding dairy.");
+  } else if (cat === "eaa") {
+    if (metricOf(p, "eaaG")) parts.push("People who want the full essential amino spectrum around training.");
+    else parts.push("A BCAA-only formula — three of the nine essential amino acids, which suits taste-driven intra-workout sipping more than protein replacement.");
+    if (p.caffeineMg > 0) parts.push("The added caffeine makes it double as a light pre-workout — count it toward your daily total.");
+  } else if (cat === "electrolytes") {
+    const na = metricOf(p, "sodiumMg") || 0;
+    const sugar = metricOf(p, "sugarG") || 0;
+    if (na >= 500) parts.push("Heavy sweaters and low-carb dieters — this is a sodium-forward mix.");
+    else parts.push("Lighter sessions and everyday training — the sodium load is moderate.");
+    if (sugar >= 7) parts.push("The sugar is part of the design, aiding fluid uptake the way oral rehydration research uses glucose — skip it if you want zero sugar.");
+  }
+
   if (p.badges.indexOf("Budget Pick") !== -1) parts.push("A reasonable pick when cost per serving matters.");
   if (p.badges.indexOf("Beginner Friendly") !== -1) parts.push("Doses are mild enough to suit a first tub.");
   if (hasBlend(p)) parts.push("Skip it if you want every individual dose disclosed on the label.");
@@ -230,10 +314,24 @@ const GALLERY_SCRIPT = `<script>
 </script>
 `;
 
+// Category metric rows shown at the top of the label-data panel; the row set
+// comes from the category's compare columns (minus derived/duplicate cells).
+const METRIC_FACT_ROWS = {
+  creatine: [["Creatine per serving", "m:creatineG:g"], ["Form", "m:form"]],
+  protein: [["Protein per serving", "m:proteinG:g"], ["Serving size", "m:servingG:g"], ["Protein per scoop", "protPct"], ["Source", "m:source"], ["Sweetener", "m:sweetener"]],
+  eaa: [["Total EAAs", "m:eaaG:g"], ["BCAAs", "m:bcaaG:g"], ["Leucine", "m:leucineG:g"]],
+  electrolytes: [["Sodium", "m:sodiumMg:mg"], ["Potassium", "m:potassiumMg:mg"], ["Magnesium", "m:magnesiumMg:mg"], ["Sugar", "m:sugarG:g"]]
+};
+
 function factsRowsHTML(p) {
-  const rows = [
-    `<tr><td>Caffeine</td><td class="sc-num">${p.caffeineMg === 0 ? "0 mg" : esc(p.caffeineMg) + " mg"}</td></tr>`
-  ];
+  const rows = [];
+  for (const [label, key] of METRIC_FACT_ROWS[categoryOf(p)] || []) {
+    const v = factOf(p, key);
+    if (v !== DASH) rows.push(`<tr><td>${esc(label)}</td><td class="sc-num">${v}</td></tr>`);
+  }
+  if (categoryOf(p) === "pre-workout" || p.caffeineMg > 0) {
+    rows.push(`<tr><td>Caffeine</td><td class="sc-num">${p.caffeineMg === 0 ? "0 mg" : esc(p.caffeineMg) + " mg"}</td></tr>`);
+  }
   for (const ing of p.keyIngredients) {
     if (/caffeine/i.test(ing.name)) continue;
     rows.push(`<tr><td>${esc(ing.name)}</td><td class="sc-num">${esc(ing.dose)}</td></tr>`);
@@ -252,18 +350,57 @@ function fullNameOf(p) {
 function faqFor(p) {
   const name = fullNameOf(p);
   const faqs = [];
+  const cat = categoryOf(p);
 
-  if (p.caffeineMg === 0) {
+  if (cat === "pre-workout" && p.caffeineMg === 0) {
     faqs.push({
       q: `Is ${name} really caffeine-free?`,
       a: `The label lists 0 mg of caffeine. It is still an active formula — ingredients like ${p.keyIngredients.map((i) => i.name).slice(0, 2).join(" and ")} are dosed to have effects — so read the full label rather than treating stim-free as effect-free.`
     });
-  } else {
+  } else if (p.caffeineMg > 0) {
     const cups = Math.round((p.caffeineMg / 95) * 10) / 10;
+    const tier = cat === "pre-workout"
+      ? ` Within the Scoop Sense pre-workout database (0–${MAX_CAF} mg per serving) that places it in the ${stimLabelOf(p).toLowerCase()} tier.`
+      : "";
     faqs.push({
       q: `How much caffeine is in ${name}?`,
-      a: `${p.caffeineMg} mg per full labeled serving — roughly ${cups} small cups of coffee. Within the Scoop Sense database (0–${MAX_CAF} mg per serving) that places it in the ${stimLabelOf(p).toLowerCase()} tier. The FDA cites about 400 mg per day as an amount generally not associated with negative effects in healthy adults, and coffee, tea, and energy drinks count toward the same total.`
+      a: `${p.caffeineMg} mg per full labeled serving — roughly ${cups} small cups of coffee.${tier} The FDA cites about 400 mg per day as an amount generally not associated with negative effects in healthy adults, and coffee, tea, and energy drinks count toward the same total.`
     });
+  }
+
+  if (cat === "creatine") {
+    const g = metricOf(p, "creatineG");
+    const form = metricOf(p, "form");
+    if (g) {
+      faqs.push({
+        q: `Do I need a loading phase with ${name}?`,
+        a: `Loading is optional. Research shows a steady ${g} g daily serving of creatine reaches muscle saturation in about three to four weeks; a loading week of around 20 g per day just gets there faster. ${form === "monohydrate" ? "This label is creatine monohydrate, the form used in most of that research." : ""}`
+      });
+    }
+  } else if (cat === "protein") {
+    const pg = metricOf(p, "proteinG"), sg = metricOf(p, "servingG");
+    if (pg && sg) {
+      faqs.push({
+        q: `How much of a ${name} scoop is actually protein?`,
+        a: `${pg} g of protein from a ${sg} g serving — about ${Math.round((pg / sg) * 100)}%. The rest is flavoring, fats, carbs, and whatever else the label lists. A higher percentage means less filler per scoop.`
+      });
+    }
+  } else if (cat === "eaa") {
+    const eaaG = metricOf(p, "eaaG"), bcaaG = metricOf(p, "bcaaG");
+    faqs.push({
+      q: `Is ${name} an EAA or a BCAA product?`,
+      a: eaaG
+        ? `A full-spectrum EAA product: ${eaaG} g of essential amino acids per serving${bcaaG ? `, of which ${bcaaG} g are the three BCAAs` : ""}. Research on muscle protein synthesis centers on the full nine essential aminos rather than BCAAs alone.`
+        : `BCAA-only: it supplies the three branched-chain aminos${bcaaG ? ` (${bcaaG} g per serving)` : ""} but not the other six essential amino acids that full-EAA formulas include.`
+    });
+  } else if (cat === "electrolytes") {
+    const na = metricOf(p, "sodiumMg"), sugar = metricOf(p, "sugarG");
+    if (na !== null) {
+      faqs.push({
+        q: `How much sodium is in ${name}?`,
+        a: `${na} mg per serving${sugar ? `, alongside ${sugar} g of sugar` : ", with no sugar"}. Sodium is the main electrolyte lost in sweat, but needs vary widely with sweat rate and diet — and daily sodium from food counts toward the same total.`
+      });
+    }
   }
 
   const beta = betaAlanineOf(p);
@@ -299,8 +436,9 @@ function faqFor(p) {
 
 /* ---- related products ---------------------------------------------------- */
 
+// Same category only — a creatine page never recommends a pre-workout.
 function relatedFor(p) {
-  const others = PRODUCTS.filter((x) => x.id !== p.id);
+  const others = PRODUCTS.filter((x) => x.id !== p.id && categoryOf(x) === categoryOf(p));
   const sameBrand = others.filter((x) => x.brand === p.brand);
   const rest = others
     .filter((x) => x.brand !== p.brand)
@@ -330,13 +468,21 @@ function pageHTML(p) {
     }))
   };
 
+  const LD_CATEGORY = {
+    "pre-workout": "Pre-workout supplement",
+    creatine: "Creatine supplement",
+    protein: "Protein powder",
+    eaa: "Amino acid supplement",
+    electrolytes: "Electrolyte supplement"
+  };
+
   const productLD = {
     "@context": "https://schema.org",
     "@type": "Product",
     name,
     brand: { "@type": "Brand", name: p.brand },
     description: p.blurb,
-    category: p.category === "creatine" ? "Creatine supplement" : "Pre-workout supplement"
+    category: LD_CATEGORY[categoryOf(p)] || "Dietary supplement"
   };
   if (p.images && p.images.length) productLD.image = p.images;
   const ogImage = p.images && p.images.length
@@ -385,7 +531,7 @@ function pageHTML(p) {
   <section class="sc-pdp"${accent}>
     <div class="sc-container">
       <nav class="sc-crumbs" aria-label="Breadcrumb">
-        <a href="../hub.html">All supplements</a> <span aria-hidden="true">/</span> ${esc(name)}
+        <a href="../hub.html">All supplements</a> <span aria-hidden="true">/</span> <a href="../${esc(cfgOf(p).page)}">${esc(cfgOf(p).label)}</a> <span aria-hidden="true">/</span> ${esc(name)}
       </nav>
 
       <div class="sc-pdp-grid">
@@ -402,9 +548,7 @@ function pageHTML(p) {
           <p class="sc-lead sc-pdp-lead">${esc(p.blurb)}</p>
 
           <dl class="sc-detail-stats">
-            <div><dt>Caffeine</dt><dd>${p.caffeineMg === 0 ? "0 mg" : esc(p.caffeineMg) + " mg"}</dd></div>
-            <div><dt>Citrulline</dt><dd>${cit ? esc(cit.dose) + (cit.form ? " <small>" + esc(cit.form) + "</small>" : "") : '<span class="sc-dim">—</span>'}</dd></div>
-            <div><dt>Beta-alanine</dt><dd>${beta ? esc(beta) : '<span class="sc-dim">—</span>'}</dd></div>
+            ${cfgOf(p).tileFacts.map((f) => `<div><dt>${esc(f.label)}</dt><dd>${factOf(p, f.key)}</dd></div>`).join("\n            ")}
             <div><dt>Servings</dt><dd>${esc(p.servings)}</dd></div>
             <div><dt>Price tier</dt><dd>${priceWordHTML(p)}</dd></div>
           </dl>
@@ -413,7 +557,9 @@ function pageHTML(p) {
             <p class="sc-buybox-tier">Price tier: <strong>${priceWordHTML(p)}</strong> <span>· relative cost per full serving across this database</span></p>
             <p class="sc-buybox-why">We don't list dollar prices — they change daily and go stale. Check the live price instead:</p>
             <a class="sc-btn sc-btn-primary sc-btn-lg" href="${esc(p.affiliateUrl)}" target="_blank" rel="sponsored nofollow noopener">View current price <span class="sc-ext" aria-hidden="true">&#8599;</span></a>
-            <a class="sc-btn sc-btn-secondary" href="../compare.html">Compare all ${COUNT} formulas</a>
+            ${categoryOf(p) === "pre-workout"
+              ? `<a class="sc-btn sc-btn-secondary" href="../compare.html">Compare all ${preWorkouts.length} pre-workouts</a>`
+              : `<a class="sc-btn sc-btn-secondary" href="../${esc(cfgOf(p).page)}#compare">Compare all ${esc(cfgOf(p).plural)}</a>`}
             <button type="button" class="sc-btn sc-btn-secondary sc-save-btn-pdp" data-save-id="${esc(p.id)}" aria-pressed="false"><span class="sc-save-icon" aria-hidden="true"></span> <span class="sc-save-text">Save to compare</span></button>
             <p class="sc-detail-note">Affiliate link — Scoop Sense may earn a commission at no additional cost to you.</p>
           </div>
@@ -449,7 +595,9 @@ function pageHTML(p) {
           <div class="sc-faq">
             <details open>
               <summary>What is ${esc(name)}?</summary>
-              <p>${esc(p.blurb)} It sits in the ${esc(stimLabelOf(p).toLowerCase())} tier of the Scoop Sense database, which spans 0–${MAX_CAF} mg of caffeine per serving. Everything on this page comes from the manufacturer's supplement facts panel as of ${esc(p.labelVerified)} — never from the marketing page.</p>
+              <p>${esc(p.blurb)} ${categoryOf(p) === "pre-workout"
+                ? `It sits in the ${esc(stimLabelOf(p).toLowerCase())} tier of the Scoop Sense pre-workout database, which spans 0–${MAX_CAF} mg of caffeine per serving. `
+                : `It is one of the ${esc(cfgOf(p).plural)} in the Scoop Sense database. `}Everything on this page comes from the manufacturer's supplement facts panel as of ${esc(p.labelVerified)} — never from the marketing page.</p>
             </details>
             <details>
               <summary>Key ingredients &amp; studied doses</summary>
@@ -528,7 +676,11 @@ function pageHTML(p) {
         <p class="sc-footer-head">Browse</p>
         <ul>
           <li><a href="../hub.html">All products</a></li>
-          <li><a href="../compare.html">Compare formulas</a></li>
+          <li><a href="../creatine.html">Creatine</a></li>
+          <li><a href="../protein.html">Protein</a></li>
+          <li><a href="../eaa.html">EAA / BCAA</a></li>
+          <li><a href="../electrolytes.html">Electrolytes</a></li>
+          <li><a href="../compare.html">Compare pre-workouts</a></li>
           <li><a href="../index.html#methodology">How we evaluate labels</a></li>
         </ul>
       </nav>
@@ -574,3 +726,26 @@ for (const p of PRODUCTS) {
   count++;
 }
 console.log(`Built ${count} product pages in products/`);
+
+/* ---- sitemap ------------------------------------------------------------- */
+
+// Set to the real production origin (no trailing slash) once the site has a
+// domain, then activate the Sitemap line in robots.txt. Until then the file
+// is generated with a placeholder and is harmless to ship.
+const SITE_ORIGIN = "https://YOUR-DOMAIN";
+
+const ROOT_PAGES = [
+  "index.html", "hub.html", "creatine.html", "protein.html", "eaa.html",
+  "electrolytes.html", "compare.html", "disclosure.html", "disclaimer.html"
+];
+
+const urls = ROOT_PAGES.map((f) => `${SITE_ORIGIN}/${f}`)
+  .concat(PRODUCTS.map((p) => `${SITE_ORIGIN}/products/${p.id}.html`));
+
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls.map((u) => `  <url><loc>${u}</loc></url>`).join("\n")}
+</urlset>
+`;
+fs.writeFileSync(path.join(ROOT, "sitemap.xml"), sitemap);
+console.log(`Wrote sitemap.xml (${urls.length} URLs)`);

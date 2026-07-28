@@ -55,8 +55,7 @@ var CATEGORY_CONFIG = {
     stimBadges: false,
     tileFacts: [
       { label: "Creatine", key: "m:creatineG:g" },
-      { label: "Form", key: "m:form" },
-      { label: "Servings", key: "servings" }
+      { label: "Form", key: "m:form" }
     ],
     compareCols: [
       { label: "Creatine", key: "m:creatineG:g", sortable: true, num: true },

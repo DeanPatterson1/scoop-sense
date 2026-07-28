@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Scoop Sense — Independent Supplement Label Database</title>
-  <meta name="description" content="Compare caffeine, clinically studied ingredient doses, serving sizes, label transparency, and important cautions across popular pre-workout formulas.">
+  <meta name="description" content="Compare clinically studied ingredient doses, label transparency, and important cautions across popular pre-workouts, creatine, protein powders, EAAs, and electrolyte mixes.">
   <meta name="theme-color" content="#0F1114">
   <meta property="og:site_name" content="Scoop Sense">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Scoop Sense — Independent Supplement Label Database">
-  <meta property="og:description" content="Compare caffeine, clinically studied ingredient doses, serving sizes, label transparency, and important cautions across popular pre-workout formulas.">
+  <meta property="og:description" content="Compare clinically studied ingredient doses, label transparency, and important cautions across popular pre-workouts, creatine, protein powders, EAAs, and electrolyte mixes.">
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥄</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,7 +46,7 @@
           <h1>Read the label.<br><span class="sc-hl">Skip the hype.</span></h1>
           <p class="sc-lead">Compare caffeine, clinically studied ingredient doses, serving sizes, label transparency, and important cautions across popular formulas.</p>
           <div class="sc-hero-actions">
-            <a class="sc-btn sc-btn-primary" href="hub.html">Browse all pre-workouts</a>
+            <a class="sc-btn sc-btn-primary" href="hub.html">Browse the database</a>
             <a class="sc-btn sc-btn-secondary" href="#methodology">How we evaluate labels</a>
           </div>
           <ul class="sc-cred">
@@ -58,13 +58,13 @@
         </div>
         <aside class="sc-heropanel" aria-label="Database at a glance">
           <p class="sc-heropanel-title">Scoop Sense Facts</p>
-          <p class="sc-heropanel-sub">38 supplement labels on file</p>
+          <p class="sc-heropanel-sub">NN supplement labels on file</p>
           <div class="sc-heropanel-bar"></div>
           <dl>
-            <div><dt>Caffeine range</dt><dd>0–400 mg</dd></div>
-            <div><dt>Citrulline range</dt><dd>0–10 g</dd></div>
-            <div><dt>Fully disclosed labels</dt><dd>31 of 38</dd></div>
-            <div><dt>Proprietary blends flagged</dt><dd>4 of 38</dd></div>
+            <div><dt>Categories tracked</dt><dd>5</dd></div>
+            <div><dt>Caffeine range, pre-workouts</dt><dd>0–400 mg</dd></div>
+            <div><dt>Fully disclosed labels</dt><dd>DD of NN</dd></div>
+            <div><dt>Proprietary blends flagged</dt><dd>BB of NN</dd></div>
             <div><dt>Labels last checked</dt><dd>July 2026</dd></div>
           </dl>
           <p class="sc-heropanel-note">Every figure comes from the manufacturer's panel — never the marketing page.</p>
@@ -73,12 +73,49 @@
     </div>
   </section>
 
+  <!-- Categories -->
+  <section class="sc-section" id="categories">
+    <div class="sc-container">
+      <div class="sc-section-head">
+        <h2>Browse by category</h2>
+        <a class="sc-action-link" href="hub.html">All products</a>
+      </div>
+      <div class="sc-cats">
+        <a class="sc-cat-card" href="hub.html#cat-pre-workout">
+          <span class="sc-cat-card-name">Pre-workout</span>
+          <span class="sc-cat-card-count">PW labels</span>
+          <span class="sc-cat-card-what">Caffeine, citrulline, and beta-alanine doses lined up against studied amounts.</span>
+        </a>
+        <a class="sc-cat-card" href="creatine.html">
+          <span class="sc-cat-card-name">Creatine</span>
+          <span class="sc-cat-card-count">CR labels</span>
+          <span class="sc-cat-card-what">Creatine per serving and form — monohydrate, HCl, or blend.</span>
+        </a>
+        <a class="sc-cat-card" href="protein.html">
+          <span class="sc-cat-card-name">Protein</span>
+          <span class="sc-cat-card-count">PR labels</span>
+          <span class="sc-cat-card-what">Protein per serving, protein-per-scoop percentage, source, and sweetener.</span>
+        </a>
+        <a class="sc-cat-card" href="eaa.html">
+          <span class="sc-cat-card-name">EAA / BCAA</span>
+          <span class="sc-cat-card-count">EA labels</span>
+          <span class="sc-cat-card-what">Full-EAA vs BCAA-only, leucine dose, and caffeinated formulas flagged.</span>
+        </a>
+        <a class="sc-cat-card" href="electrolytes.html">
+          <span class="sc-cat-card-name">Electrolytes</span>
+          <span class="sc-cat-card-count">EL labels</span>
+          <span class="sc-cat-card-what">Sodium, potassium, magnesium, and how much sugar comes with them.</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- Database preview -->
   <section class="sc-section">
     <div class="sc-container">
       <div class="sc-section-head">
-        <h2>The database at a glance</h2>
-        <a class="sc-action-link" href="hub.html">All 38 products</a>
+        <h2>The pre-workout shelf at a glance</h2>
+        <a class="sc-action-link" href="hub.html">All products</a>
       </div>
       <div class="sc-table-scroll">
         <table class="sc-table" aria-label="Preview of the product database">
@@ -95,7 +132,7 @@
           <tbody id="sc-preview-body"></tbody>
         </table>
       </div>
-      <p class="sc-table-note">Six of thirty-eight entries shown. Doses are per full labeled serving; "blend: yes" marks a proprietary blend that hides individual amounts.</p>
+      <p class="sc-table-note">Six of the pre-workouts on file. Doses are per full labeled serving; "blend: yes" marks a proprietary blend that hides individual amounts. Creatine, protein, EAA, and electrolyte shelves live on their own pages above.</p>
     </div>
   </section>
 
@@ -107,6 +144,7 @@
           <p class="sc-eyebrow">Methodology</p>
           <h2>How we evaluate labels</h2>
           <p class="sc-lead">Every entry is built the same way, from the manufacturer's own supplement facts panel — never from the marketing page.</p>
+          <p class="sc-hub-intro-body">The metrics change by category — creatine grams and form, protein per scoop, sodium per serving — but the method never does.</p>
           <ol class="sc-method-steps">
             <li>
               <strong>Read the current panel</strong>
@@ -214,6 +252,10 @@
           <p>Zero caffeine. Stim-free formulas keep the pump and focus ingredients — citrulline, beta-alanine, glycerol, choline compounds — without the stimulants, which suits evening training or anyone managing caffeine intake. Beta-alanine tingles still apply; they aren't caused by caffeine.</p>
         </details>
         <details>
+          <summary>What categories does Scoop Sense cover?</summary>
+          <p>Five: pre-workouts, <a href="creatine.html">creatine</a>, <a href="protein.html">protein powders</a>, <a href="eaa.html">EAA/BCAA formulas</a>, and <a href="electrolytes.html">electrolyte mixes</a>. Every category gets the same treatment — figures from the manufacturer's panel, key doses compared against published research, proprietary blends flagged — with metrics that fit the category, like creatine form, protein per scoop, or sodium per serving.</p>
+        </details>
+        <details>
           <summary>How does Scoop Sense make money?</summary>
           <p>Some product links are affiliate links, and Scoop Sense may earn a commission at no additional cost to you. No brand owns, sponsors, or edits the site, there is no paid placement, and every figure comes from the manufacturer's label — <a href="disclosure.html">the full disclosure explains what commissions never change</a>.</p>
         </details>
@@ -225,8 +267,8 @@
   <section class="sc-section">
     <div class="sc-container">
       <div class="sc-safety">
-        <h2>Using pre-workout safely</h2>
-        <p>Many formulas carry 150–350 mg of caffeine per serving, and coffee, tea, and energy drinks count toward the same daily total. The FDA cites about 400 mg per day as an amount generally not associated with negative effects in healthy adults; individual tolerance varies widely.</p>
+        <h2>Using supplements safely</h2>
+        <p>Many pre-workout formulas carry 150–350 mg of caffeine per serving, and coffee, tea, and energy drinks count toward the same daily total. The FDA cites about 400 mg per day as an amount generally not associated with negative effects in healthy adults; individual tolerance varies widely.</p>
         <p>Nothing on this site is medical advice. Talk to your doctor before starting any supplement, and always verify the current label on the product you buy. <a href="disclaimer.html">Read the full health &amp; safety notes</a>.</p>
       </div>
     </div>
@@ -236,7 +278,7 @@
   <section class="sc-cta-band">
     <div class="sc-container">
       <h2>Find <span>your</span> formula.</h2>
-      <p>Sixteen labels logged and compared — filter by caffeine, brand, or stim-free, then read the breakdown before you buy.</p>
+      <p>Five categories of labels logged and compared — filter by category, caffeine, or brand, then read the breakdown before you buy.</p>
       <a class="sc-btn sc-btn-primary" href="hub.html">Browse the database</a>
     </div>
   </section>
@@ -312,6 +354,11 @@
       "@type": "Question",
       "name": "What does stim-free mean?",
       "acceptedAnswer": { "@type": "Answer", "text": "Zero caffeine. Stim-free formulas keep pump and focus ingredients such as citrulline, beta-alanine, glycerol, and choline compounds without stimulants. Beta-alanine tingles still apply; they are not caused by caffeine." }
+    },
+    {
+      "@type": "Question",
+      "name": "What categories does Scoop Sense cover?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Five: pre-workouts, creatine, protein powders, EAA/BCAA formulas, and electrolyte mixes. Every category is logged the same way — figures from the manufacturer's panel, key doses compared against published research, proprietary blends flagged — with category-appropriate metrics such as creatine form, protein per scoop, or sodium per serving." }
     },
     {
       "@type": "Question",

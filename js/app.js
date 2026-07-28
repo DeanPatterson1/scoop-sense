@@ -426,6 +426,12 @@
 
     if (category) {
       populateCategories(category);
+      // Deep link: hub.html#cat-<slug> preselects a category.
+      var mcat = /^#cat-([a-z-]+)$/.exec(location.hash);
+      if (mcat && !PAGE_CATEGORY && CATEGORY_CONFIG[mcat[1]]) {
+        state.category = mcat[1];
+        category.value = mcat[1];
+      }
       category.addEventListener("change", function () {
         state.category = category.value;
         renderHub();
