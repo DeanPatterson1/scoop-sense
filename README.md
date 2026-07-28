@@ -1,8 +1,10 @@
 # Scoop Sense
 
-Scoop Sense is an independent static site that logs what is actually in popular pre-workout supplements: caffeine per serving, the doses of the key ingredients, and honest cautions worth knowing before you scoop. It is not a supplement brand and it does not sell anything — the site earns money through affiliate links to retailers, which is disclosed in plain English next to every buy button and explained in full on its own page. The landing page (`index.html`) is deliberately warm and story-first: it explains who we are and how entries get built before it hands you off to the product hub (`hub.html`), where the full database lives with search, caffeine filters, and sorting.
+Scoop Sense is an independent static site that logs what is actually in popular pre-workout supplements: caffeine per serving, key ingredient doses compared against the amounts used in published research, label transparency (proprietary blends flagged), and plain-language cautions. It is not a supplement brand and it does not sell anything — the site earns money through affiliate links to retailers, disclosed near the links and explained in full on its own page.
 
-Built with vanilla HTML, CSS, and JavaScript. No frameworks, no build step, no external CDNs, no images.
+The design language is editorial research publication plus product database: warm near-black background, charcoal surfaces, one restrained lime accent, and "facts panel" data tables (thick top rule, hairline rows, right-aligned tabular figures) that echo the supplement facts panel the site is about.
+
+Built with vanilla HTML, CSS, and JavaScript. No frameworks, no build step. The only external dependency is Google Fonts (Barlow Condensed for display headings, Source Sans 3 for body).
 
 ---
 
@@ -10,24 +12,25 @@ Built with vanilla HTML, CSS, and JavaScript. No frameworks, no build step, no e
 
 | File | What it does |
 | --- | --- |
-| `index.html` | Landing page. Hero, the "wall of tubs" story, how every entry gets built (with a CSS-only example dose bar), the transparency block about affiliate revenue, three JS-rendered featured products, and honest cautions. |
-| `hub.html` | The product hub. Filter bar (search, caffeine buckets, stim-free toggle, sort), a results count, and the full product grid rendered by JavaScript. |
-| `disclosure.html` | FTC affiliate disclosure page — how the site makes money and what commissions never buy. Loads no scripts. |
-| `disclaimer.html` | FDA supplement disclaimer plus health and safety notes: not medical advice, talk to your doctor, about caffeine, always check the current label. Loads no scripts. |
-| `css/styles.css` | The whole design system in one stylesheet: custom properties, typography, layout, cards, chips, dose bars, filter bar, responsive rules. All classes use the `sc-` prefix. |
-| `js/app.js` | One IIFE. Reads the globals `PRODUCTS` and `FEATURED_IDS`, handles filtering, sorting, and the shared card renderer used by both the hub grid and the homepage teasers. |
-| `data/products.js` | **The single source of truth.** Every product object, plus the schema documented in a header comment. `FEATURED_IDS` picks the three products shown on the homepage. |
+| `index.html` | Homepage. Left-aligned editorial hero with credibility row, a six-row database preview table, the methodology section (`#methodology`) with an annotated real label (C4 Original) and a labelled dose scale, three "places to start" picks, and a compact safety callout. |
+| `hub.html` | The product database. Sticky compact toolbar (search, caffeine filter, brand filter, sort, stim-free toggle, clear all — collapsing into a Filters drawer on mobile), result count, and an image-forward tile grid. Clicking a tile opens the full label breakdown in a modal dialog. Supports deep links: `hub.html#p-<product-id>` opens that product's breakdown. |
+| `compare.html` | Full database in one sortable table: caffeine, citrulline, beta-alanine, blend status, stim tier, servings, price tier. Column headers sort; product names link to each label breakdown on the hub. |
+| `disclosure.html` | About page: what the site is, plus the FTC affiliate disclosure — how the site makes money and what commissions never buy. Loads no scripts. |
+| `disclaimer.html` | Health & safety page: FDA disclaimer box, not-medical-advice statement, general caffeine guidance, individual tolerance, medication/medical conditions, pregnancy and nursing, and the verify-current-label note. Loads no scripts. |
+| `css/styles.css` | The whole design system in one stylesheet: design tokens, typography, facts-panel tables, product rows, toolbar/drawer, tags, footer, responsive rules. All classes use the `sc-` prefix. |
+| `js/app.js` | One IIFE. Reads the globals `PRODUCTS` and `FEATURED_IDS`. Renders the hub rows, homepage preview + picks, and the compare table; handles filtering, sorting, the details toggles, and hash deep links. |
+| `data/products.js` | **The single source of truth.** Every product object, plus the schema documented in a header comment. `FEATURED_IDS` picks the three "places to start" on the homepage. |
 | `README.md` | This file. |
 
-Script order matters: `index.html` and `hub.html` load `data/products.js` first and `js/app.js` second. `disclosure.html` and `disclaimer.html` load no scripts at all.
+Script order matters: `index.html`, `hub.html`, and `compare.html` load `data/products.js` first and `js/app.js` second. `disclosure.html` and `disclaimer.html` load no scripts at all.
 
 ---
 
 ## Run locally
 
-Open `index.html` in any browser. That is the whole process — there is no build and no server required, and every link on the site is relative so it works straight off the filesystem.
+Open `index.html` in any browser — there is no build step and every internal link is relative. (Google Fonts needs a network connection; without one the system font fallbacks render.)
 
-If you would rather browse it over a real URL (closer to production behavior), run a one-line static server from the project folder:
+For a real URL, run a one-line static server from the project folder:
 
 ```
 python -m http.server 8000
@@ -53,49 +56,51 @@ Either host works because the site is static files only.
 2. Get your tracking ID. It looks like `yourname-20`.
 3. Open `data/products.js` and find-and-replace every occurrence of the placeholder `YOURTAG-20` with your real tracking ID. Every `affiliateUrl` in the file uses that placeholder, so one find-and-replace covers the whole site.
 
-Two things worth knowing before you apply. Amazon requires roughly three qualifying sales within 180 days of signing up to keep your account approved, so apply when you are ready to send real traffic. Amazon also expects your affiliate disclosure to be live and visible when they review the site — `disclosure.html` and the near-link disclosure lines already satisfy that, but make sure the site is actually deployed first.
+Two things worth knowing before you apply. Amazon requires roughly three qualifying sales within 180 days of signing up to keep your account approved, so apply when you are ready to send real traffic. Amazon also expects your affiliate disclosure to be live and visible when they review the site — `disclosure.html` and the on-page disclosure lines already satisfy that, but make sure the site is actually deployed first.
 
-**Upgrade path.** Amazon pays roughly 1–3% on supplements. Brand-direct affiliate programs (usually run through Impact or ShareASale) pay substantially more on the same products. As you get accepted into individual brand programs, swap that brand's `affiliateUrl` in `data/products.js` for its program link. Nothing else in the site has to change — the card renderer just reads the field.
+**Upgrade path.** Amazon pays roughly 1–3% on supplements. Brand-direct affiliate programs (usually run through Impact or ShareASale) pay substantially more on the same products. As you get accepted into individual brand programs, swap that brand's `affiliateUrl` in `data/products.js` for its program link. Nothing else in the site has to change — the renderer just reads the field.
 
 ---
 
 ## Add or edit a product
 
-Open `data/products.js`, copy an existing object in the `PRODUCTS` array, and edit it. Follow the schema comment at the top of the file exactly — `js/app.js` reads those field names directly, so a typo in a field name means a blank spot on a card.
+Open `data/products.js`, copy an existing object in the `PRODUCTS` array, and edit it. Follow the schema comment at the top of the file exactly — `js/app.js` reads those field names directly, so a typo in a field name means a blank spot on a row.
 
 A few rules that keep the site honest and legally clean:
 
-- **Verify every number against the current manufacturer label** before you publish it. Formulas change without notice.
-- The `badges` array carries exactly one stim badge derived from `caffeineMg` (`Stim-Free` at 0, `Low Stim` for 1–149, `Moderate Stim` for 150–249, `High Stim` at 250 and up), plus up to two extras.
+- **Verify every number against the current manufacturer label** before you publish it, and set `labelVerified` to the month you checked.
+- The `badges` array carries exactly one stim badge derived from `caffeineMg` (`Stim-Free` at 0, `Low Stim` for 1–149, `Moderate Stim` for 150–249, `High Stim` at 250 and up), plus up to two extras. The hub derives its stim tier and blend/disclosure tags from these fields.
 - Set `stimFree: true` only when `caffeineMg` is `0`.
 - Keep every `clinicalNote` in structure/function language — describe how an ingredient has been studied in relation to normal body function. Never say a product treats, cures, prevents, or diagnoses anything.
+- Write the `blurb` as one concise editorial takeaway — specific and factual, no marketing language. It renders on the row face.
 - Write `cautions` as short, factual statements. One to three per product.
 - Use the `priceRange` tiers (`$`, `$$`, `$$$`). Never put a dollar amount anywhere on the site; prices go stale within days.
 - Keep `affiliateUrl` in the standard form: `https://www.amazon.com/s?k=<product+words>&tag=YOURTAG-20`.
 
-To change which products appear on the homepage, edit the three ids in `FEATURED_IDS` at the top of the same file.
+To change which products appear in the homepage "places to start," edit `FEATURED_IDS` (and the matching `START_META` labels in `js/app.js`). The database preview rows come from `PREVIEW_IDS` in `js/app.js`.
+
+**Product imagery.** Tiles show a neutral monogram placeholder until a product has an `imageUrl`. Set the optional `imageUrl` field in `data/products.js` to an affiliate-approved image (e.g., via the Amazon PA-API) and the tile and detail dialog render it automatically. Do not use manufacturer artwork without permission, and never invent packaging.
 
 ---
 
 ## Legal checklist recap
 
-- [ ] **FTC near-link disclosure.** A plain-language affiliate line sits directly beneath every buy button, above the featured grid on the homepage, and at the top of the hub before any product renders. Never tooltip-only, never footer-only.
-- [ ] **FTC dedicated page.** `disclosure.html` carries the full explanation and is linked from the main nav on every page ("How We Make Money") and from the homepage transparency block.
-- [ ] **Amazon Associates.** The exact sentence "As an Amazon Associate, Scoop Sense earns from qualifying purchases." appears on `disclosure.html`. No prices anywhere. Buy buttons are verb-based ("Check price on Amazon").
+- [ ] **FTC disclosure near links.** A plain-language affiliate line sits at the top of the hub before any product renders, and the full explanation is one click away. Never tooltip-only.
+- [ ] **FTC dedicated page.** `disclosure.html` carries the full explanation and is linked from the main nav on every page ("About") and from the footer of every page.
+- [ ] **Amazon Associates.** The exact sentence "As an Amazon Associate, Scoop Sense earns from qualifying purchases." appears on `disclosure.html`. No prices anywhere. Affiliate links are verb-based ("Check current price").
 - [ ] **FDA disclaimer.** The exact statement "These statements have not been evaluated by the Food and Drug Administration. These products are not intended to diagnose, treat, cure, or prevent any disease." appears in the shared footer on every page and in a highlighted box on `disclaimer.html`.
 - [ ] **No disease or medical claims anywhere.** Structure/function language only. Health cautions are framed as general information plus "talk to your doctor."
-- [ ] **Verify-current-label note.** Present in the shared footer, below the hub grid, under the homepage dose-bar example, in the `data/products.js` header comment, and as its own section on `disclaimer.html`.
+- [ ] **Verify-current-label note.** Present below the hub results, on every product's cautions, in the `data/products.js` header comment, and as its own section on `disclaimer.html`.
 - [ ] **Link hygiene.** Every affiliate anchor carries `rel="sponsored nofollow noopener"` and `target="_blank"`.
-- [ ] **No impersonation.** Brand names appear only as factual product references. No brand logos, no marketing imagery.
-- [ ] **Replace `hello@scoopsense.example`** with a real, monitored email address on both `disclosure.html` and `disclaimer.html` before launch.
+- [ ] **No impersonation.** Brand names appear only as factual product references. No brand logos, no marketing imagery, no invented packaging.
 
 ---
 
 ## Before launch
 
-- Re-verify every label figure in `data/products.js` against the manufacturer's current supplement facts panel. Anything you cannot confirm should come off the site rather than go up unverified.
-- Load all four pages and confirm the FDA statement renders in the footer of each one.
+- Re-verify every label figure in `data/products.js` against the manufacturer's current supplement facts panel, and update each `labelVerified`. Anything you cannot confirm should come off the site rather than go up unverified.
+- Load all five pages and confirm the FDA statement renders in the footer of each one.
 - Click every affiliate link and confirm it opens the right product search in a new tab, with your real tracking tag in the URL.
-- Confirm the disclosure line is visible above the fold on the hub, before any product card.
-- Resize to a phone width and check the header nav, the filter bar, and the card grid all reflow cleanly.
-- Replace the placeholder email address, and set a reminder to re-check label figures on a schedule — quarterly is reasonable.
+- Confirm the disclosure line is visible on the hub before any product row.
+- Resize to a phone width and check the header nav, the filter drawer, the tile grid, the detail dialog, and the compare table's horizontal scroll all reflow cleanly.
+- Set a reminder to re-check label figures on a schedule — quarterly is reasonable.

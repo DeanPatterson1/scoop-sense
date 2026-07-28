@@ -1,7 +1,13 @@
 /* ==========================================================================
    Scoop Sense — one stylesheet for the whole site.
    Class prefix: sc-  |  flat kebab-case naming  |  mobile-first
-   No frameworks, no external fonts, no images. Type + CSS shapes only.
+
+   Design language: editorial research publication + product database.
+   The signature device is the "facts panel" table — thick top rule,
+   hairline row rules, right-aligned tabular figures — echoing the
+   supplement facts panel the site is about.
+
+   Spacing: 8px system (8 / 16 / 24 / 32 / 48 / 64).
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -11,31 +17,54 @@
 :root {
   color-scheme: dark;
 
-  --sc-bg: #0B0D0C;            /* near-black, faint green undertone */
-  --sc-surface: #16191A;       /* card/panel plate */
-  --sc-ink: #F4F1E8;           /* warm off-white */
-  --sc-muted: #9A9C93;         /* secondary text */
-  --sc-green: #C6FF33;         /* the volt accent */
-  --sc-green-dark: #A8E01F;    /* volt hover */
-  --sc-green-tint: #1A2308;    /* dark volt-tinted panel */
-  --sc-terracotta: #FF8A4C;    /* hot orange — high-stim + under-dosed bar */
-  --sc-terracotta-tint: #2A1810;
-  --sc-amber: #FFB020;         /* caution text/border */
-  --sc-amber-bg: #241012;      /* garnet-black warning plate */
-  --sc-amber-border: #7A5410;
-  --sc-border: #2A2D2A;
-  --sc-radius: 2px;            /* cards/panels */
-  --sc-radius-sm: 2px;         /* inputs/buttons */
-  --sc-radius-pill: 2px;       /* pills stop being pills */
-  --sc-shadow: 0 1px 0 rgba(0, 0, 0, 0.6), 0 4px 12px rgba(0, 0, 0, 0.35);
+  /* Color — cool graphite black, gym-floor neutral. No warm/brown cast. */
+  --sc-bg: #0F1114;            /* page background */
+  --sc-bg-deep: #0A0C0E;       /* footer / recessed areas */
+  --sc-surface: #171A1F;       /* cards, panels, controls */
+  --sc-surface-2: #1F242B;     /* hover / raised */
+  --sc-ink: #E9EBEE;           /* primary text */
+  --sc-muted: #9AA3AD;         /* secondary text */
+  --sc-border: #262B33;        /* hairlines */
+  --sc-border-strong: #3A424D; /* control borders, emphasis rules */
 
-  --sc-font-body: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --sc-font-display: "Arial Narrow", "Roboto Condensed", "Helvetica Neue", Arial, sans-serif;
+  /* The accent — muted steel blue: calm, credible, research-tool register.
+     Primary CTA, active states, focus. Brightens on hover. */
+  --sc-accent: #6E93B8;
+  --sc-accent-down: #8FB6DC;   /* hover/active brightening */
+  --sc-accent-ink: #0C141D;    /* text on accent */
+
+  /* Data/verification accent — muted blue-gray for "this is maintained
+     information" furniture: verified lines, label sources, method links. */
+  --sc-info: #8FA6BA;
+  --sc-paper-info: #4E6478;    /* same role on paper panels */
+
+  /* Paper — the supplement-facts-panel surface. Warm off-white "label"
+     panels on the dark shell, like the facts panel on a dark tub. */
+  --sc-paper: #F2EDE3;
+  --sc-paper-ink: #17140F;
+  --sc-paper-muted: rgba(23, 20, 15, 0.64);
+  --sc-paper-line: rgba(23, 20, 15, 0.22);
+  --sc-paper-amber: #8A5E1B;
+
+  /* Cautions only. */
+  --sc-amber: #D6A62E;
+  --sc-amber-dim: rgba(214, 166, 46, 0.10);
+  --sc-amber-line: rgba(214, 166, 46, 0.38);
+
+  /* Stim-free status (used with text, never color alone). */
+  --sc-calm: #8FBF95;
+  --sc-calm-dim: rgba(143, 191, 149, 0.10);
+  --sc-calm-line: rgba(143, 191, 149, 0.32);
+
+  --sc-radius: 6px;
+  --sc-radius-sm: 4px;
+  --sc-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+
+  --sc-font-body: "Inter", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --sc-font-display: "Barlow Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
   --sc-font-mono: Consolas, "Cascadia Mono", "SF Mono", Menlo, monospace;
 
-  --sc-stim-green: #57B27C;    /* status green: stim-free signal only */
-  --sc-stim-green-bg: #14201A;
-  --sc-stim-green-border: #2E4A38;
+  --sc-max: 1220px;
 }
 
 /* --------------------------------------------------------------------------
@@ -50,47 +79,49 @@
 
 html {
   -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   font-family: var(--sc-font-body);
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.65;
   color: var(--sc-ink);
   background: var(--sc-bg);
   -webkit-font-smoothing: antialiased;
 }
 
 h1,
-h2,
-h3 {
+h2 {
   font-family: var(--sc-font-display);
-  font-weight: 800;
-  text-transform: uppercase;
-  line-height: 1.05;
+  font-weight: 600;
+  line-height: 1.08;
   margin: 0 0 16px;
   color: var(--sc-ink);
+  letter-spacing: 0.005em;
 }
 
 h1 {
-  font-size: clamp(2.6rem, 7vw, 4.25rem);
-  letter-spacing: -0.015em;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
 }
 
 h2 {
-  font-size: clamp(1.6rem, 4vw, 2.4rem);
-  letter-spacing: -0.01em;
+  font-size: clamp(1.6rem, 2.8vw, 2.1rem);
 }
 
 h3 {
-  font-size: 1.15rem;
-  letter-spacing: 0.02em;
+  font-family: var(--sc-font-body);
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.35;
+  margin: 0 0 8px;
+  color: var(--sc-ink);
 }
 
 ::selection {
-  background: var(--sc-green);
-  color: #0B0D0C;
+  background: var(--sc-accent);
+  color: var(--sc-accent-ink);
 }
 
 p {
@@ -102,11 +133,14 @@ p:last-child {
 }
 
 a {
-  color: var(--sc-green);
+  color: var(--sc-ink);
+  text-decoration: underline;
+  text-decoration-color: var(--sc-border-strong);
+  text-underline-offset: 3px;
 }
 
 a:hover {
-  color: var(--sc-green-dark);
+  text-decoration-color: var(--sc-accent);
 }
 
 ul,
@@ -123,59 +157,144 @@ strong {
   font-weight: 600;
 }
 
-/* Visible, consistent keyboard focus everywhere. */
+small {
+  font-size: 0.85em;
+}
+
+table {
+  border-collapse: collapse;
+}
+
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
-select:focus-visible {
-  outline: 2px solid var(--sc-green);
+select:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--sc-accent);
   outline-offset: 2px;
   border-radius: var(--sc-radius-sm);
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   *,
   *::before,
   *::after {
     transition-duration: 0.01ms !important;
     transition-delay: 0.01ms !important;
     animation-duration: 0.01ms !important;
-  }
-
-  .sc-card {
-    opacity: 1 !important;
-    transform: none !important;
-  }
-
-  .sc-btn-buy:active,
-  .sc-details-toggle:active,
-  .sc-bucket:active {
-    transform: none !important;
+    animation-delay: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
 
 /* --------------------------------------------------------------------------
-   3. Layout helpers
+   3. Layout helpers + shared text styles
    -------------------------------------------------------------------------- */
 
 .sc-container {
-  max-width: 1080px;
+  max-width: var(--sc-max);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 16px;
 }
 
-.sc-narrow {
-  max-width: 680px;
-  margin-left: auto;
-  margin-right: auto;
+@media (min-width: 768px) {
+  .sc-container {
+    padding: 0 24px;
+  }
 }
 
-.sc-center {
-  text-align: center;
+.sc-section {
+  padding: 40px 0;
 }
 
-.sc-featured-cta {
-  margin-top: 32px;
+main > .sc-section + .sc-section {
+  border-top: 1px solid var(--sc-border);
+}
+
+@media (min-width: 768px) {
+  .sc-section {
+    padding: 64px 0;
+  }
+}
+
+/* Small uppercase label — the ONLY place uppercase is allowed besides
+   table headers, tags, and data labels. */
+.sc-eyebrow {
+  font-family: var(--sc-font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sc-muted);
+  margin: 0 0 16px;
+}
+
+.sc-kicker {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sc-muted);
+}
+
+.sc-lead {
+  font-size: 1.125rem;
+  color: var(--sc-muted);
+  max-width: 62ch;
+}
+
+.sc-skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--sc-accent);
+  color: var(--sc-accent-ink);
+  padding: 8px 16px;
+  font-weight: 600;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.sc-skip:focus-visible {
+  left: 8px;
+  top: 8px;
+}
+
+/* Section heading row: title left, contextual link right. */
+.sc-section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 24px;
+  margin-bottom: 24px;
+}
+
+.sc-section-head h2 {
+  margin-bottom: 0;
+}
+
+.sc-action-link {
+  display: inline-block;
+  color: var(--sc-accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.15s ease;
+}
+
+.sc-action-link:hover {
+  transform: translateX(3px);
+}
+
+.sc-action-link:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--sc-accent);
+  text-underline-offset: 3px;
 }
 
 /* --------------------------------------------------------------------------
@@ -183,8 +302,9 @@ select:focus-visible {
    -------------------------------------------------------------------------- */
 
 .sc-header {
-  background: var(--sc-surface);
+  background: var(--sc-bg);
   border-bottom: 1px solid var(--sc-border);
+  animation: sc-drop 0.4s ease-out backwards;
 }
 
 .sc-header-inner {
@@ -192,1029 +312,857 @@ select:focus-visible {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 8px 20px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  gap: 8px 24px;
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 
 .sc-logo {
   font-family: var(--sc-font-display);
-  font-weight: 800;
-  text-transform: uppercase;
-  font-size: 1.35rem;
-  line-height: 1.2;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.1;
   color: var(--sc-ink);
   text-decoration: none;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
 }
 
 .sc-logo span {
-  color: var(--sc-green);
+  color: var(--sc-accent);
 }
 
 .sc-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 20px;
+  gap: 4px 20px;
   align-items: center;
 }
 
 .sc-nav a {
+  position: relative;
   color: var(--sc-muted);
   text-decoration: none;
-  font-size: 0.78rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  font-size: 0.95rem;
+  font-weight: 600;
   padding: 4px 0;
   border-bottom: 2px solid transparent;
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 
 .sc-nav a:hover {
-  color: var(--sc-green);
-  border-bottom-color: var(--sc-border);
+  color: var(--sc-ink);
+}
+
+/* Underline grows out from the left on hover; active links keep the
+   static accent border below. */
+.sc-nav a:not(.sc-active)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 2px;
+  background: var(--sc-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+
+.sc-nav a:not(.sc-active):hover::after {
+  transform: scaleX(1);
 }
 
 .sc-nav a.sc-active {
-  color: var(--sc-green);
-  font-weight: 600;
-  border-bottom-color: var(--sc-green);
+  color: var(--sc-ink);
+  border-bottom-color: var(--sc-accent);
 }
 
 /* --------------------------------------------------------------------------
-   5. Buttons + inline links
+   5. Buttons
    -------------------------------------------------------------------------- */
 
 .sc-btn {
-  display: inline-block;
-  font-family: var(--sc-font-display);
-  font-size: 1rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  line-height: 1.4;
-  padding: 12px 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--sc-font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.3;
+  padding: 10px 20px;
   border: 1px solid transparent;
   border-radius: var(--sc-radius-sm);
-  background: var(--sc-green);
-  color: #0B0D0C;
   text-decoration: none;
-  text-align: center;
   cursor: pointer;
-  transition: background-color 0.15s ease, transform 0.15s ease;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease,
+    transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .sc-btn:hover {
-  background: var(--sc-green-dark);
-  color: #0B0D0C;
+  transform: translateY(-1px);
+}
+
+/* Primary — the main lime moment on a page. Use once or twice per page. */
+.sc-btn-primary {
+  background: var(--sc-accent);
+  color: var(--sc-accent-ink);
+}
+
+.sc-btn-primary:hover {
+  background: var(--sc-accent-down);
+  color: var(--sc-accent-ink);
+  box-shadow: 0 6px 20px rgba(143, 182, 220, 0.25);
+}
+
+/* Secondary — quiet bordered button. */
+.sc-btn-secondary {
+  background: transparent;
+  border-color: var(--sc-border-strong);
+  color: var(--sc-ink);
+}
+
+.sc-btn-secondary:hover {
+  background: var(--sc-surface-2);
+  border-color: var(--sc-border-strong);
+}
+
+/* Ghost — for the affiliate action: present, never the loudest thing. */
+.sc-btn-ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--sc-muted);
+  text-decoration: underline;
+  text-decoration-color: var(--sc-border-strong);
+  text-underline-offset: 3px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.sc-btn-ghost:hover {
+  color: var(--sc-ink);
+  text-decoration-color: var(--sc-accent);
 }
 
 .sc-btn:active {
   transform: translateY(1px);
 }
 
-.sc-btn-buy {
-  display: block;
-  width: 100%;
-  padding: 11px 20px;
-  font-size: 0.95rem;
-}
-
-.sc-btn-buy:active {
-  transform: scale(0.97);
-}
-
-.sc-link {
-  color: var(--sc-green);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.sc-link:hover {
-  text-decoration: underline;
-}
-
 /* --------------------------------------------------------------------------
-   6. Hero
+   6. Hero (homepage)
    -------------------------------------------------------------------------- */
 
 .sc-hero {
-  background: var(--sc-bg);
-  background-image: linear-gradient(180deg, rgba(198, 255, 51, 0.05), transparent 320px);
-  padding: 72px 20px;
-  text-align: center;
+  position: relative;
+  padding: 48px 0 40px;
   border-bottom: 1px solid var(--sc-border);
+  background: var(--sc-bg);
 }
 
-.sc-hero-inner {
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-.sc-eyebrow {
-  display: inline-block;
-  background: transparent;
-  border: 1px solid var(--sc-border);
-  color: var(--sc-muted);
-  font-family: var(--sc-font-mono);
-  font-size: 0.78rem;
-  font-weight: 400;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  padding: 5px 14px;
-  border-radius: var(--sc-radius-sm);
-  margin: 0 0 24px;
-}
-
-.sc-hero h1 {
-  margin-bottom: 20px;
-}
-
-/* Redaction bar under the hero headline. */
-.sc-hero h1::after {
+/* The volt glow lives on a pseudo-element so it can breathe — a very
+   slow ambient pulse, never a flash. */
+.sc-hero::before {
   content: "";
-  display: block;
-  width: 96px;
-  height: 4px;
-  margin: 22px auto 0;
-  background: var(--sc-green);
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 90% 70% at 85% -10%, rgba(110, 147, 184, 0.09), transparent 60%);
+  animation: sc-glow 9s ease-in-out infinite alternate;
+  pointer-events: none;
 }
 
-.sc-hero-lead {
-  font-size: 1.1rem;
-  color: var(--sc-muted);
-  margin-bottom: 32px;
-}
-
-.sc-hero-actions {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 40px;
-}
-
-.sc-trust-strip {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px 28px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.sc-trust-strip li {
-  margin: 0;
-  font-size: 0.85rem;
-  color: var(--sc-muted);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.sc-trust-strip li::before {
-  content: "";
-  width: 7px;
-  height: 7px;
-  flex: 0 0 auto;
-  border-radius: 0;
-  background: var(--sc-green);
-}
-
-@media (min-width: 640px) {
-  .sc-hero-actions {
-    flex-direction: row;
-    justify-content: center;
-    gap: 24px;
-  }
+.sc-hero > .sc-container {
+  position: relative;
 }
 
 @media (min-width: 768px) {
   .sc-hero {
-    padding: 104px 20px;
+    padding: 72px 0 64px;
   }
 }
 
-/* --------------------------------------------------------------------------
-   7. Story section
-   -------------------------------------------------------------------------- */
-
-.sc-story {
-  padding: 48px 0;
-}
-
-.sc-story .sc-narrow > p {
-  font-size: 1.05rem;
-  color: var(--sc-muted);
-}
-
-.sc-story-close {
-  color: var(--sc-ink) !important;
-  font-family: var(--sc-font-display);
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.01em;
-  font-size: 1.35rem !important;
-  line-height: 1.5;
-}
-
-@media (min-width: 768px) {
-  .sc-story {
-    padding: 72px 0;
-  }
-}
-
-/* --------------------------------------------------------------------------
-   8. Methodology section
-   -------------------------------------------------------------------------- */
-
-.sc-method {
-  padding: 48px 0;
-  background: var(--sc-surface);
-  border-top: 1px solid var(--sc-border);
-  border-bottom: 1px solid var(--sc-border);
-}
-
-.sc-steps {
+.sc-hero-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
-  list-style: none;
-  margin: 32px 0 0;
-  padding: 0;
+  gap: 40px;
+  align-items: start;
 }
 
-.sc-steps li {
+@media (min-width: 920px) {
+  .sc-hero-grid {
+    grid-template-columns: minmax(0, 7fr) minmax(300px, 4fr);
+    gap: 64px;
+  }
+}
+
+/* Uppercase condensed display — the one loud typographic moment. */
+.sc-hero h1 {
+  margin-bottom: 16px;
+  font-size: clamp(2.6rem, 6.5vw, 4.4rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.015em;
+  line-height: 0.98;
+}
+
+.sc-hero h1 .sc-hl {
+  color: var(--sc-accent);
+}
+
+.sc-hero .sc-lead {
+  margin-bottom: 32px;
+}
+
+/* Hero facts panel — a Scoop Sense Facts label, set in the iconic
+   thick-and-thin rule system of a real supplement facts panel. */
+.sc-heropanel {
+  background: var(--sc-paper);
+  color: var(--sc-paper-ink);
+  border-radius: var(--sc-radius);
+  padding: 16px 18px 14px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(23, 20, 15, 0.9);
+}
+
+.sc-heropanel-title {
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  margin: 0 0 2px;
+}
+
+.sc-heropanel-sub {
+  font-size: 0.85rem;
+  color: var(--sc-paper-muted);
+  margin: 0 0 8px;
+}
+
+.sc-heropanel-bar {
+  height: 8px;
+  background: var(--sc-paper-ink);
+  margin-bottom: 4px;
+}
+
+.sc-heropanel dl {
   margin: 0;
 }
 
-.sc-step {
-  height: 100%;
-  background: var(--sc-bg);
-  border: 1px solid var(--sc-border);
-  border-radius: var(--sc-radius);
-  padding: 24px;
+.sc-heropanel dl > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--sc-paper-line);
+  font-size: 0.92rem;
 }
 
-.sc-step-num {
-  display: inline-flex;
+.sc-heropanel dl > div:last-child {
+  border-bottom: 4px solid var(--sc-paper-ink);
+}
+
+.sc-heropanel dt {
+  margin: 0;
+}
+
+.sc-heropanel dd {
+  margin: 0;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.sc-heropanel-note {
+  font-size: 0.78rem;
+  color: var(--sc-paper-muted);
+  margin: 8px 0 0;
+}
+
+.sc-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: var(--sc-radius-sm);
-  background: var(--sc-green-tint);
-  color: var(--sc-green);
-  font-family: var(--sc-font-display);
-  font-weight: 800;
-  font-size: 1rem;
-  margin-bottom: 12px;
+  gap: 12px 16px;
+  margin-bottom: 40px;
 }
 
-.sc-step h3 {
-  margin-bottom: 8px;
+/* Credibility row — quiet, hairline-separated facts. */
+.sc-cred {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 40px;
+  margin: 0;
+  padding: 16px 0 0;
+  list-style: none;
+  border-top: 1px solid var(--sc-border);
 }
 
-.sc-step p {
+.sc-cred li {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--sc-muted);
+  padding-left: 12px;
+  border-left: 2px solid var(--sc-border-strong);
+}
+
+/* --------------------------------------------------------------------------
+   7. Data tables — the site's signature device.
+   Thick top rule, hairline rows, right-aligned tabular figures.
+   -------------------------------------------------------------------------- */
+
+.sc-table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sc-table {
+  width: 100%;
+  border-top: 3px solid var(--sc-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.sc-table th,
+.sc-table td {
+  padding: 10px 16px 10px 0;
+  border-bottom: 1px solid var(--sc-border);
+  text-align: left;
+  font-size: 0.95rem;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.sc-table th:last-child,
+.sc-table td:last-child {
+  padding-right: 0;
+}
+
+.sc-table thead th {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sc-muted);
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.sc-table .sc-num {
+  text-align: right;
+}
+
+.sc-table td.sc-num {
+  font-weight: 600;
+}
+
+.sc-table .sc-dim {
+  color: var(--sc-muted);
+  font-weight: 400;
+}
+
+.sc-table tbody td {
+  transition: background-color 0.15s ease;
+}
+
+.sc-table tbody tr:hover td {
+  background: rgba(255, 255, 255, 0.015);
+}
+
+/* Product cell: brand small over name. */
+.sc-table .sc-cell-brand {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--sc-muted);
+}
+
+.sc-table .sc-cell-name {
+  font-weight: 600;
+}
+
+.sc-table a {
+  text-decoration: none;
+}
+
+.sc-table a .sc-cell-name {
+  text-decoration: underline;
+  text-decoration-color: var(--sc-border-strong);
+  text-underline-offset: 3px;
+}
+
+.sc-table a:hover .sc-cell-name {
+  text-decoration-color: var(--sc-accent);
+}
+
+/* Sortable headers (compare page). */
+.sc-sort-btn {
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.sc-sort-btn:hover {
+  color: var(--sc-ink);
+}
+
+th[aria-sort="ascending"] .sc-sort-btn::after {
+  content: " ↑";
+}
+
+th[aria-sort="descending"] .sc-sort-btn::after {
+  content: " ↓";
+}
+
+.sc-table-note {
+  font-size: 0.85rem;
+  color: var(--sc-muted);
+  margin-top: 12px;
+}
+
+/* --------------------------------------------------------------------------
+   8. Methodology + annotated label example
+   -------------------------------------------------------------------------- */
+
+.sc-method-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+@media (min-width: 900px) {
+  .sc-method-grid {
+    grid-template-columns: 5fr 4fr;
+    gap: 64px;
+  }
+}
+
+.sc-method-steps {
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+  counter-reset: step;
+}
+
+.sc-method-steps li {
+  counter-increment: step;
+  margin: 0 0 20px;
+  padding: 0 0 20px 40px;
+  position: relative;
+  border-bottom: 1px solid var(--sc-border);
+}
+
+.sc-method-steps li:last-child {
+  border-bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.sc-method-steps li::before {
+  content: counter(step, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  font-family: var(--sc-font-mono);
+  font-size: 0.8rem;
+  color: var(--sc-muted);
+}
+
+.sc-method-steps strong {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.sc-method-steps p {
+  margin: 0;
   color: var(--sc-muted);
   font-size: 0.95rem;
 }
 
-/* Example dose-bar card (static, CSS only) */
-.sc-example {
-  margin-top: 32px;
-  background: var(--sc-bg);
-  border: 1px solid var(--sc-border);
+/* Annotated label card — set on paper, like the panel it explains. */
+.sc-annotated {
+  background: var(--sc-paper);
+  color: var(--sc-paper-ink);
+  border: 1px solid rgba(23, 20, 15, 0.9);
   border-radius: var(--sc-radius);
-  padding: 24px;
-  max-width: 560px;
+  padding: 20px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
 }
 
-.sc-example-title {
-  font-family: var(--sc-font-mono);
+@media (min-width: 768px) {
+  .sc-annotated {
+    padding: 24px;
+  }
+}
+
+.sc-annotated-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--sc-paper-ink);
+  margin: 0 0 4px;
+}
+
+.sc-annotated-sub {
+  font-size: 0.85rem;
+  color: var(--sc-paper-muted);
+  margin: 0 0 16px;
+}
+
+.sc-annotated .sc-table {
+  border-top-color: var(--sc-paper-ink);
+}
+
+.sc-annotated .sc-table th,
+.sc-annotated .sc-table td {
+  white-space: normal;
+  border-bottom-color: var(--sc-paper-line);
+}
+
+.sc-annotated tr.sc-note-row td {
+  border-bottom: 1px solid var(--sc-paper-line);
+  padding-top: 6px;
+  padding-bottom: 10px;
+  font-size: 0.85rem;
+  color: var(--sc-paper-amber);
+  white-space: normal;
+}
+
+.sc-annotated tr.sc-flagged td {
+  border-bottom: 0;
+}
+
+/* Dose scale — used only where the comparison is meaningful, always with
+   a labelled range and marker. */
+.sc-scale {
+  margin-top: 20px;
+}
+
+.sc-scale-title {
   font-size: 0.78rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sc-paper-muted);
+  margin: 0 0 8px;
+}
+
+.sc-scale-bar {
+  position: relative;
+  height: 8px;
+  background: rgba(23, 20, 15, 0.08);
+  border: 1px solid rgba(23, 20, 15, 0.3);
+  border-radius: 2px;
+}
+
+.sc-scale-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: var(--sc-paper-amber);
+  border-radius: 1px;
+}
+
+.sc-scale-marker {
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  width: 2px;
+  background: var(--sc-paper-ink);
+}
+
+.sc-scale-caption {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 0.82rem;
+  color: var(--sc-paper-muted);
+  margin: 8px 0 0;
+}
+
+/* --------------------------------------------------------------------------
+   9. "Places to start" rows (homepage)
+   -------------------------------------------------------------------------- */
+
+.sc-starts {
+  border-top: 3px solid var(--sc-ink);
+}
+
+.sc-start {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px 24px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--sc-border);
+}
+
+@media (min-width: 768px) {
+  .sc-start {
+    grid-template-columns: 200px minmax(0, 1fr) auto;
+    align-items: baseline;
+    gap: 24px;
+    padding: 20px 0;
+  }
+}
+
+.sc-start-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--sc-muted);
-  margin-bottom: 20px;
+  margin: 0;
 }
 
-.sc-dose {
-  margin-bottom: 20px;
+.sc-start-body {
+  margin: 0;
 }
 
-.sc-dose:last-of-type {
-  margin-bottom: 0;
-}
-
-.sc-dose-label {
-  font-family: var(--sc-font-display);
-  font-size: 0.85rem;
+.sc-start-body strong {
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+}
+
+.sc-start-body .sc-start-why {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--sc-muted);
+}
+
+.sc-start .sc-action-link {
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   10. Safety callout
+   -------------------------------------------------------------------------- */
+
+.sc-safety {
+  background: var(--sc-surface);
+  border: 1px solid var(--sc-border);
+  border-left: 3px solid var(--sc-amber);
+  border-radius: var(--sc-radius);
+  padding: 20px;
+  max-width: 820px;
+}
+
+@media (min-width: 768px) {
+  .sc-safety {
+    padding: 24px 32px;
+  }
+}
+
+.sc-safety h2 {
+  font-family: var(--sc-font-body);
+  font-size: 1.1rem;
+  font-weight: 700;
   margin-bottom: 8px;
 }
 
-.sc-bar {
-  position: relative;
-  background: #0F1110;
-  border: 1px solid var(--sc-border);
-  border-radius: 0;
-  height: 12px;
-  overflow: hidden;
+.sc-safety p {
+  color: var(--sc-muted);
+  font-size: 0.95rem;
 }
 
-/* Studied-threshold tick. */
-.sc-bar::after {
-  content: "";
-  position: absolute;
-  left: 75%;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  background: rgba(244, 241, 232, 0.45);
-}
+/* --------------------------------------------------------------------------
+   11. Affiliate disclosure line — plain, visible, restrained.
+   -------------------------------------------------------------------------- */
 
-.sc-bar-fill {
-  height: 100%;
-  border-radius: 0;
-  background: var(--sc-green);
-  box-shadow: 0 0 8px rgba(198, 255, 51, 0.35);
-}
-
-.sc-bar-fill-low {
-  background: var(--sc-terracotta);
-  box-shadow: 0 0 8px rgba(255, 138, 76, 0.30);
-}
-
-.sc-dose-caption {
+.sc-disclosure-line {
   font-size: 0.85rem;
   color: var(--sc-muted);
-  font-variant-numeric: tabular-nums;
-  margin: 8px 0 0;
-}
-
-.sc-footnote {
-  font-size: 0.82rem;
-  color: var(--sc-muted);
-  font-variant-numeric: tabular-nums;
-  margin: 16px 0 0;
-}
-
-@media (min-width: 768px) {
-  .sc-method {
-    padding: 72px 0;
-  }
-
-  .sc-steps {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* --------------------------------------------------------------------------
-   9. Money / transparency block
-   -------------------------------------------------------------------------- */
-
-.sc-money {
-  padding: 48px 0;
-}
-
-.sc-money-panel {
-  background: var(--sc-green-tint);
-  border: 1px solid #2E3B12;
-  border-radius: var(--sc-radius);
-  padding: 32px 24px;
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-.sc-money-panel p {
-  color: var(--sc-ink);
-}
-
-.sc-money-emphasis {
-  font-weight: 600;
-  border-left: 3px solid var(--sc-green);
-  padding-left: 16px;
-  margin: 24px 0;
-}
-
-@media (min-width: 768px) {
-  .sc-money {
-    padding: 72px 0;
-  }
-
-  .sc-money-panel {
-    padding: 40px;
-  }
-}
-
-/* --------------------------------------------------------------------------
-   10. Featured + care sections
-   -------------------------------------------------------------------------- */
-
-.sc-featured {
-  padding: 48px 0;
-  background: var(--sc-surface);
   border-top: 1px solid var(--sc-border);
-  border-bottom: 1px solid var(--sc-border);
-}
-
-.sc-section-intro {
-  color: var(--sc-muted);
-  max-width: 680px;
-  margin: 0 auto 8px;
-}
-
-.sc-care {
-  padding: 48px 0;
-}
-
-.sc-care-list {
-  margin: 24px 0 0;
-}
-
-.sc-care-list dt {
-  font-family: var(--sc-font-display);
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  font-size: 1rem;
-  margin-top: 24px;
-}
-
-.sc-care-list dt:first-child {
-  margin-top: 0;
-}
-
-.sc-care-list dd {
-  margin: 6px 0 0;
-  color: var(--sc-muted);
-}
-
-.sc-care-link {
-  margin-top: 32px;
-}
-
-@media (min-width: 768px) {
-  .sc-featured,
-  .sc-care {
-    padding: 72px 0;
-  }
+  padding-top: 12px;
+  margin: 20px 0 0;
+  max-width: 72ch;
 }
 
 /* --------------------------------------------------------------------------
-   11. Grid + product cards
-   -------------------------------------------------------------------------- */
-
-.sc-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  align-items: start; /* an expanding card must not stretch its row mates */
-}
-
-@media (min-width: 640px) {
-  .sc-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 960px) {
-  .sc-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Cards render hidden (pre-reveal); JS adds .sc-visible via
-   IntersectionObserver, with a JS-side stagger. */
-.sc-card {
-  display: flex;
-  flex-direction: column;
-  background: var(--sc-surface);
-  border: 1px solid var(--sc-border);
-  border-top: 2px solid var(--sc-accent, var(--sc-green));
-  border-radius: var(--sc-radius);
-  box-shadow: var(--sc-shadow);
-  padding: 20px;
-  opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 300ms ease, transform 220ms ease, box-shadow 220ms ease;
-}
-
-.sc-card.sc-visible {
-  opacity: 1;
-  transform: none;
-}
-
-.sc-card.sc-visible:hover,
-.sc-card.sc-visible:focus-within {
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.6), 0 12px 28px rgba(0, 0, 0, 0.55);
-  transform: translateY(-4px);
-}
-
-/* --- Compact face: top row (tub visual + identity) --- */
-
-.sc-card-top {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  margin-bottom: 14px;
-}
-
-/* Stable slot for the product visual. CSS-generated tub today; a real
-   <img> can drop into this container later without card changes. */
-.sc-card-visual {
-  flex: 0 0 auto;
-  width: 64px;
-}
-
-.sc-tub {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 64px;
-  height: 76px;
-  border-radius: 3px 3px 5px 5px;
-  background-color: var(--sc-accent, var(--sc-green));
-  background-image: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.20) 0%,
-    rgba(255, 255, 255, 0.04) 40%,
-    rgba(0, 0, 0, 0.38) 100%
-  );
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 6px 16px color-mix(in srgb, var(--sc-accent, var(--sc-green)) 40%, transparent);
-}
-
-/* Lid band */
-.sc-tub::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 14px;
-  border-radius: 3px 3px 2px 2px;
-  background-color: var(--sc-accent, var(--sc-green));
-  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45));
-}
-
-/* Scoop accent overlapping the bottom corner */
-.sc-tub::after {
-  content: "";
-  position: absolute;
-  right: -6px;
-  bottom: -5px;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  border: 2px solid var(--sc-surface);
-  background-color: var(--sc-accent, var(--sc-green));
-  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75));
-}
-
-.sc-tub-initial {
-  position: relative;
-  margin-top: 10px; /* optically center in the body area below the lid */
-  font-family: var(--sc-font-display);
-  font-weight: 800;
-  font-size: 1.7rem;
-  line-height: 1;
-  color: #fff;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.85), 0 0 6px rgba(0, 0, 0, 0.45);
-}
-
-.sc-card-id {
-  min-width: 0;
-}
-
-.sc-card-brand {
-  font-family: var(--sc-font-mono);
-  font-size: 0.75rem;
-  font-weight: 400;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--sc-muted);
-  margin: 0 0 2px;
-}
-
-.sc-card-name {
-  font-family: var(--sc-font-display);
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.01em;
-  font-size: 1.3rem;
-  margin: 0 0 8px;
-}
-
-/* --- Caffeine stat --- */
-
-.sc-card-stat {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-  background: var(--sc-green-tint);
-  border: 1px solid #2E3B12;
-  border-radius: var(--sc-radius-sm);
-  padding: 8px 12px;
-  margin: 0 0 10px;
-}
-
-.sc-stat-num {
-  font-family: var(--sc-font-display);
-  font-weight: 800;
-  font-size: 1.9rem;
-  line-height: 1.1;
-  color: var(--sc-green);
-  font-variant-numeric: tabular-nums;
-}
-
-.sc-stat-unit {
-  margin-left: 2px;
-  font-family: var(--sc-font-body);
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--sc-muted);
-}
-
-.sc-stat-zero {
-  font-size: 1.25rem;
-  color: var(--sc-stim-green);
-  letter-spacing: 0.02em;
-}
-
-.sc-stat-label {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--sc-muted);
-}
-
-/* --- Details toggle --- */
-
-.sc-details-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  width: 100%;
-  margin-top: 14px;
-  padding: 10px 0 2px;
-  background: none;
-  border: 0;
-  border-top: 1px solid var(--sc-border);
-  font-family: var(--sc-font-body);
-  font-size: 0.78rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--sc-muted);
-  cursor: pointer;
-  transition: color 150ms ease, transform 120ms ease;
-}
-
-.sc-details-toggle:hover,
-.sc-details-toggle:focus-visible {
-  color: var(--sc-green);
-}
-
-.sc-details-toggle:active {
-  transform: scale(0.97);
-}
-
-.sc-toggle-chevron {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  margin-top: -2px;
-  border-right: 2px solid currentColor;
-  border-bottom: 2px solid currentColor;
-  transform: rotate(45deg);
-  transition: transform 260ms ease;
-}
-
-.sc-card.sc-open .sc-toggle-chevron {
-  transform: rotate(-135deg);
-}
-
-/* --- Details panel: grid-template-rows 0fr -> 1fr height animation.
-   visibility keeps collapsed content out of screen-reader/find flow;
-   its 0s transition is delayed on close so content stays visible
-   while the panel collapses. --- */
-
-.sc-card-details {
-  display: grid;
-  grid-template-rows: 0fr;
-  visibility: hidden;
-  transition: grid-template-rows 260ms ease, visibility 0s linear 260ms;
-}
-
-.sc-card.sc-open .sc-card-details {
-  grid-template-rows: 1fr;
-  visibility: visible;
-  transition: grid-template-rows 260ms ease, visibility 0s linear 0s;
-}
-
-.sc-card-details-inner {
-  overflow: hidden;
-  min-height: 0;
-}
-
-/* No padding on the inner wrapper (padding would leak height at 0fr);
-   space the content with child margins instead. */
-.sc-card-details-inner > *:first-child {
-  margin-top: 12px;
-}
-
-.sc-details-heading {
-  font-family: var(--sc-font-mono);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--sc-muted);
-  margin: 0 0 8px;
-}
-
-.sc-card-blurb {
-  font-size: 0.92rem;
-  margin: 0 0 14px;
-}
-
-.sc-card-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-bottom: 16px;
-}
-
-.sc-card-ingredients {
-  list-style: none;
-  margin: 0 0 16px;
-  padding: 0;
-  border-top: 1px solid var(--sc-border);
-}
-
-.sc-card-ingredients li {
-  margin: 0;
-  padding: 12px 0;
-  font-size: 0.9rem;
-  border-bottom: 1px solid var(--sc-border);
-}
-
-.sc-note {
-  color: var(--sc-muted);
-}
-
-.sc-card-cautions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-bottom: 16px;
-}
-
-.sc-card-cautions:empty {
-  display: none;
-}
-
-.sc-card-meta {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--sc-muted);
-  margin: 0 0 6px;
-}
-
-.sc-card-flavors {
-  font-size: 0.85rem;
-  color: var(--sc-muted);
-  margin: 0 0 12px;
-}
-
-.sc-card-cta {
-  margin-top: auto;
-}
-
-.sc-affiliate-note {
-  font-size: 0.75rem;
-  color: var(--sc-muted);
-  text-align: center;
-  margin: 8px 0 0;
-}
-
-/* --------------------------------------------------------------------------
-   12. Chips
-   -------------------------------------------------------------------------- */
-
-.sc-chip {
-  display: inline-block;
-  border-radius: var(--sc-radius-sm);
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  line-height: 1.5;
-  padding: 3px 8px;
-  border: 1px solid transparent;
-}
-
-.sc-chip-stimfree {
-  background: var(--sc-stim-green-bg);
-  color: var(--sc-stim-green);
-  border-color: var(--sc-stim-green-border);
-}
-
-.sc-chip-highstim {
-  background: var(--sc-terracotta-tint);
-  color: var(--sc-terracotta);
-  border-color: #57301C;
-}
-
-.sc-chip-neutral {
-  background: #1D201E;
-  color: var(--sc-muted);
-  border-color: var(--sc-border);
-}
-
-.sc-chip-caution {
-  background: var(--sc-amber-bg);
-  color: var(--sc-amber);
-  border: 1px solid var(--sc-amber-border);
-  border-left: 3px solid var(--sc-amber);
-  padding-left: 7px;
-}
-
-/* --------------------------------------------------------------------------
-   13. Hub: intro, disclosure line, filter bar, count, empty state
+   12. Hub: intro, toolbar, filters
    -------------------------------------------------------------------------- */
 
 .sc-hub-intro {
   padding: 40px 0 24px;
 }
 
+@media (min-width: 768px) {
+  .sc-hub-intro {
+    padding: 56px 0 32px;
+  }
+}
+
 .sc-hub-intro h1 {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
-.sc-hub-lead {
-  color: var(--sc-muted);
-  font-size: 1.05rem;
-  max-width: 680px;
-}
-
-.sc-disclosure-line {
-  position: relative;
-  background: var(--sc-amber-bg);
-  border: 1px solid var(--sc-amber-border);
-  border-radius: var(--sc-radius-sm);
-  color: #F0C87A;
-  font-size: 0.9rem;
-  padding: 18px 16px 12px;
-  margin: 24px 0 0;
-  overflow: hidden;
-}
-
-/* Hazard tape edge */
-.sc-disclosure-line::before {
-  content: "";
-  position: absolute;
+/* Sticky, compact toolbar. */
+.sc-toolbar {
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
-  height: 5px;
-  background: repeating-linear-gradient(
-    135deg,
-    rgba(255, 176, 32, 0.55) 0 8px,
-    transparent 8px 16px
-  );
+  z-index: 30;
+  background: rgba(15, 17, 20, 0.96);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-top: 1px solid var(--sc-border);
+  border-bottom: 1px solid var(--sc-border);
+  padding: 12px 0;
 }
 
-.sc-disclosure-line a {
-  color: #F0C87A;
-}
-
-.sc-filterbar {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  background: var(--sc-surface);
-  border: 1px solid var(--sc-border);
-  border-radius: var(--sc-radius);
-  box-shadow: var(--sc-shadow);
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-.sc-field {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.sc-field-label {
-  font-family: var(--sc-font-mono);
-  font-size: 0.75rem;
-  font-weight: 400;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--sc-muted);
-}
-
-#sc-search,
-#sc-sort {
-  font-family: var(--sc-font-body);
-  font-size: 0.95rem;
-  color: var(--sc-ink);
-  background: var(--sc-bg);
-  border: 1px solid var(--sc-border);
-  border-radius: var(--sc-radius-sm);
-  padding: 10px 12px;
-  width: 100%;
-}
-
-#sc-search::placeholder {
-  color: #8B8E85;
-}
-
-.sc-bucket-group {
+.sc-toolbar-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  align-items: center;
+  gap: 8px 12px;
 }
 
-.sc-bucket {
+.sc-input,
+.sc-select {
   font-family: var(--sc-font-body);
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--sc-ink);
+  background: var(--sc-surface);
+  border: 1px solid var(--sc-border-strong);
+  border-radius: var(--sc-radius-sm);
+  padding: 8px 12px;
+  min-height: 40px;
+}
+
+.sc-input::placeholder {
   color: var(--sc-muted);
-  background: var(--sc-bg);
-  border: 1px solid var(--sc-border);
-  border-radius: var(--sc-radius-pill);
-  padding: 7px 14px;
+}
+
+.sc-select {
   cursor: pointer;
-  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 120ms ease;
 }
 
-.sc-bucket:hover {
-  border-color: var(--sc-green);
-  color: var(--sc-green);
+.sc-toolbar .sc-input {
+  flex: 1 1 200px;
+  min-width: 0;
 }
 
-.sc-bucket.sc-active {
-  background: var(--sc-green);
-  border-color: var(--sc-green);
-  color: #0B0D0C;
-}
-
-.sc-bucket:active {
-  transform: scale(0.96);
-}
-
-.sc-toggle {
+.sc-check {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   font-weight: 600;
   color: var(--sc-ink);
   cursor: pointer;
+  min-height: 40px;
+  padding: 0 4px;
 }
 
-.sc-toggle input {
+.sc-check input {
   width: 16px;
   height: 16px;
-  accent-color: var(--sc-green);
+  accent-color: var(--sc-accent);
   cursor: pointer;
 }
 
-.sc-price-legend {
-  font-size: 0.8rem;
+.sc-clear-btn {
+  font-family: var(--sc-font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
   color: var(--sc-muted);
-  margin: 0;
+  background: none;
+  border: 0;
+  padding: 8px 4px;
+  min-height: 40px;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: var(--sc-border-strong);
+  text-underline-offset: 3px;
+}
+
+.sc-clear-btn:hover {
+  color: var(--sc-ink);
+}
+
+/* Mobile: filters live in a drawer under the search row. */
+.sc-filters-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sc-font-body);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--sc-ink);
+  background: var(--sc-surface);
+  border: 1px solid var(--sc-border-strong);
+  border-radius: var(--sc-radius-sm);
+  padding: 8px 14px;
+  min-height: 40px;
+  cursor: pointer;
+}
+
+.sc-filters-btn::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translateY(-2px);
+  transition: transform 0.2s ease;
+}
+
+.sc-filters-btn[aria-expanded="true"]::after {
+  transform: rotate(-135deg) translateY(-2px);
+}
+
+.sc-toolbar-filters {
+  display: none;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  padding-top: 4px;
+}
+
+.sc-toolbar-filters.sc-open {
+  display: flex;
+  animation: sc-fade 0.25s ease-out;
+}
+
+.sc-toolbar-filters .sc-select {
+  flex: 1 1 150px;
+}
+
+@media (min-width: 880px) {
+  .sc-filters-btn {
+    display: none;
+  }
+
+  .sc-toolbar-filters {
+    display: flex;
+    flex-basis: auto;
+    flex: 1 1 auto;
+    padding-top: 0;
+  }
+
+  .sc-toolbar-filters .sc-select {
+    flex: 0 1 auto;
+  }
 }
 
 .sc-count {
-  font-family: var(--sc-font-mono);
-  font-size: 0.8rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  font-size: 0.85rem;
   color: var(--sc-muted);
-  margin: 0 0 20px;
+  margin: 16px 0;
+  font-variant-numeric: tabular-nums;
 }
 
 .sc-empty {
-  background: var(--sc-surface);
-  border: 1px dashed var(--sc-border);
+  border: 1px dashed var(--sc-border-strong);
   border-radius: var(--sc-radius);
   color: var(--sc-muted);
-  text-align: center;
   padding: 40px 24px;
   margin: 0;
+  animation: sc-fade 0.35s ease-out; /* re-runs each time [hidden] flips off */
 }
 
 .sc-empty[hidden] {
@@ -1225,8 +1173,9 @@ select:focus-visible {
   font-size: 0.85rem;
   color: var(--sc-muted);
   margin: 32px 0 0;
-  padding-top: 24px;
+  padding-top: 16px;
   border-top: 1px solid var(--sc-border);
+  max-width: 72ch;
 }
 
 .sc-hub-results {
@@ -1234,131 +1183,1355 @@ select:focus-visible {
 }
 
 @media (min-width: 768px) {
-  .sc-hub-intro {
-    padding: 56px 0 24px;
-  }
-
-  .sc-filterbar {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    gap: 16px 24px;
-    padding: 24px;
-  }
-
-  .sc-field-search {
-    flex: 1 1 260px;
-  }
-
-  .sc-field-sort {
-    flex: 0 1 220px;
-  }
-
-  .sc-field-buckets {
-    flex: 1 1 100%;
-  }
-
-  .sc-field-toggle,
-  .sc-field-legend {
-    flex: 1 1 100%;
-  }
-
   .sc-hub-results {
     padding-bottom: 72px;
   }
 }
 
 /* --------------------------------------------------------------------------
-   14. Text pages (disclosure, disclaimer)
+   13. Product grid (data-forward cards) + detail dialog
+   -------------------------------------------------------------------------- */
+
+.sc-products {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 560px) {
+  .sc-products {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (min-width: 900px) {
+  .sc-products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.sc-tile {
+  background: var(--sc-surface);
+  border: 1px solid var(--sc-border);
+  border-radius: var(--sc-radius);
+  box-shadow: var(--sc-shadow);
+  overflow: hidden;
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.sc-tile:hover,
+.sc-tile:focus-within {
+  border-color: var(--sc-border-strong);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+/* The tile's top half is one link to the product page; the CTA row below
+   holds the two actions (full breakdown / price on Amazon). */
+.sc-tile-link {
+  display: block;
+  padding: 0 14px 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Shop-style art area: the stylized generic tub (never real packaging). */
+.sc-tile-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 4 / 3;
+  margin: 0 -14px 12px;
+  background:
+    radial-gradient(ellipse 65% 55% at 50% 45%, rgba(255, 255, 255, 0.035), transparent 70%),
+    var(--sc-bg);
+  border-bottom: 1px solid var(--sc-border);
+}
+
+.sc-tile-art svg,
+.sc-tile-art img {
+  height: 82%;
+  width: auto;
+  max-width: 70%;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+}
+
+.sc-tile:hover .sc-tile-art svg,
+.sc-tile:hover .sc-tile-art img {
+  transform: translateY(-4px);
+}
+
+.sc-tile-top {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.sc-tile-id {
+  display: block;
+  min-width: 0;
+}
+
+.sc-tile-brand {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--sc-muted);
+}
+
+.sc-tile-name {
+  display: block;
+  font-weight: 700;
+  font-size: 1.02rem;
+  line-height: 1.25;
+}
+
+.sc-tile-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+/* Mini facts panel — a small paper label on the dark card, like the
+   white facts panel on a dark tub. */
+.sc-tile-facts {
+  display: block;
+  background: var(--sc-paper);
+  color: var(--sc-paper-ink);
+  border-radius: var(--sc-radius-sm);
+  padding: 4px 10px 2px;
+  border-top: 4px solid var(--sc-paper-ink);
+}
+
+.sc-tile-fact {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--sc-paper-line);
+  font-size: 0.85rem;
+}
+
+.sc-tile-fact:last-child {
+  border-bottom: 0;
+}
+
+.sc-tile-fact-label {
+  color: var(--sc-paper-muted);
+}
+
+.sc-tile-fact-value {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.sc-tile-fact-value .sc-dim {
+  color: var(--sc-paper-muted);
+  font-weight: 400;
+}
+
+.sc-tile-fact-value small {
+  font-weight: 400;
+  color: var(--sc-paper-muted);
+}
+
+.sc-tile-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px 12px;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  font-size: 0.82rem;
+  color: var(--sc-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.sc-tile-more {
+  color: var(--sc-accent);
+  font-weight: 600;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+/* Card CTA row — honest twin of the shop card's add-to-cart / buy-now. */
+.sc-tile-ctas {
+  display: grid;
+  gap: 8px;
+  padding: 0 14px 14px;
+}
+
+.sc-tile-ctas .sc-btn {
+  width: 100%;
+  font-size: 0.88rem;
+  padding: 9px 12px;
+}
+
+/* --- Detail dialog --- */
+
+.sc-detail {
+  width: min(680px, calc(100vw - 32px));
+  max-height: min(85vh, 860px);
+  overflow-y: auto;
+  background: var(--sc-surface);
+  color: var(--sc-ink);
+  border: 1px solid var(--sc-border-strong);
+  border-radius: var(--sc-radius);
+  padding: 20px;
+  margin: auto;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.55);
+}
+
+@media (min-width: 640px) {
+  .sc-detail {
+    padding: 28px;
+  }
+}
+
+.sc-detail::backdrop {
+  background: rgba(8, 10, 12, 0.72);
+}
+
+.sc-detail-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.sc-detail-media {
+  flex: 0 0 auto;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--sc-bg);
+  border: 1px solid var(--sc-border);
+  border-left: 3px solid var(--sc-p-accent, var(--sc-border-strong));
+  border-radius: var(--sc-radius-sm);
+  overflow: hidden;
+}
+
+.sc-detail-media span {
+  font-family: var(--sc-font-display);
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--sc-muted);
+}
+
+.sc-detail-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 6px;
+}
+
+.sc-detail-id {
+  min-width: 0;
+}
+
+.sc-detail-id h2 {
+  font-family: var(--sc-font-body);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.sc-detail-brand {
+  font-size: 0.8rem;
+  color: var(--sc-muted);
+  margin: 0;
+}
+
+.sc-detail-close {
+  flex: 0 0 auto;
+  margin-left: auto;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1px solid var(--sc-border-strong);
+  border-radius: var(--sc-radius-sm);
+  color: var(--sc-muted);
+  font-size: 1.15rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.sc-detail-close:hover {
+  color: var(--sc-ink);
+  background: var(--sc-surface-2);
+}
+
+.sc-detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 12px;
+}
+
+.sc-detail-take {
+  color: var(--sc-muted);
+  font-size: 0.95rem;
+  margin: 0 0 16px;
+}
+
+.sc-detail-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 16px;
+  margin: 0 0 20px;
+  padding: 12px 0;
+  border-top: 1px solid var(--sc-border);
+  border-bottom: 1px solid var(--sc-border);
+  font-variant-numeric: tabular-nums;
+}
+
+.sc-detail-stats dt {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sc-muted);
+  margin: 0 0 2px;
+}
+
+.sc-detail-stats dd {
+  margin: 0;
+  font-size: 0.98rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.sc-detail-stats dd small {
+  font-weight: 400;
+  color: var(--sc-muted);
+}
+
+.sc-detail .sc-facts {
+  margin-bottom: 20px;
+}
+
+/* Sticky inside the scrolling dialog so the price link and its disclosure
+   stay visible while the label breakdown scrolls. */
+.sc-detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  border-top: 1px solid var(--sc-border);
+  position: sticky;
+  bottom: -20px; /* cancels the dialog's bottom padding so the bar sits flush */
+  background: var(--sc-surface);
+  margin: 20px -20px -20px;
+  padding: 14px 20px 18px;
+}
+
+@media (min-width: 640px) {
+  .sc-detail-actions {
+    bottom: -28px;
+    margin-left: -28px;
+    margin-right: -28px;
+    margin-bottom: -28px;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-bottom: 24px;
+  }
+}
+
+.sc-detail-verified {
+  margin-left: auto;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sc-info);
+}
+
+.sc-detail-note {
+  flex-basis: 100%;
+  font-size: 0.78rem;
+  color: var(--sc-muted);
+  margin: 0;
+}
+
+/* Formula snapshot — a real paper facts panel inside the dialog. */
+.sc-facts {
+  background: var(--sc-paper);
+  color: var(--sc-paper-ink);
+  border-radius: var(--sc-radius-sm);
+  padding: 14px 16px 4px;
+}
+
+.sc-facts-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--sc-paper-ink);
+  margin: 0 0 2px;
+}
+
+.sc-facts-sub {
+  font-size: 0.82rem;
+  color: var(--sc-paper-muted);
+  margin: 0 0 10px;
+}
+
+.sc-facts .sc-table {
+  border-top: 6px solid var(--sc-paper-ink);
+}
+
+.sc-facts .sc-table th,
+.sc-facts .sc-table td {
+  white-space: normal;
+  font-size: 0.92rem;
+  border-bottom-color: var(--sc-paper-line);
+}
+
+.sc-facts .sc-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.sc-facts .sc-table tbody tr:hover td {
+  background: transparent;
+}
+
+.sc-details-heading {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sc-ink);
+  margin: 0 0 8px;
+}
+
+.sc-notes-list {
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+.sc-notes-list li {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 8px;
+  font-size: 0.92rem;
+  color: var(--sc-muted);
+}
+
+.sc-notes-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 6px;
+  height: 2px;
+  background: var(--sc-border-strong);
+}
+
+.sc-notes-list li strong {
+  color: var(--sc-ink);
+}
+
+/* Cautions — amber rule + label + plain text (never color alone). */
+.sc-cautions {
+  border-left: 3px solid var(--sc-amber);
+  padding-left: 14px;
+  margin: 0 0 20px;
+}
+
+.sc-cautions .sc-details-heading {
+  color: var(--sc-amber);
+}
+
+.sc-cautions ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sc-cautions li {
+  font-size: 0.92rem;
+  margin-bottom: 6px;
+}
+
+.sc-details-flavors {
+  font-size: 0.88rem;
+  color: var(--sc-muted);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   13a. Product pages (products/<id>.html) — shop-style layout, honest CTAs.
+   -------------------------------------------------------------------------- */
+
+.sc-crumbs {
+  font-size: 0.85rem;
+  color: var(--sc-muted);
+  margin: 24px 0 20px;
+}
+
+.sc-crumbs a {
+  color: var(--sc-muted);
+  text-decoration: none;
+}
+
+.sc-crumbs a:hover {
+  color: var(--sc-ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.sc-crumbs span {
+  margin: 0 6px;
+}
+
+.sc-pdp {
+  border-bottom: 1px solid var(--sc-border);
+  padding-bottom: 40px;
+}
+
+.sc-pdp-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (min-width: 880px) {
+  .sc-pdp-grid {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    gap: 56px;
+  }
+}
+
+.sc-pdp-media {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 45%, rgba(255, 255, 255, 0.04), transparent 70%),
+    var(--sc-surface);
+  border: 1px solid var(--sc-border);
+  border-radius: var(--sc-radius);
+  padding: 32px;
+}
+
+.sc-pdp-media svg {
+  width: min(320px, 70%);
+  height: auto;
+  display: block;
+}
+
+.sc-pdp-caption {
+  font-size: 0.78rem;
+  color: var(--sc-muted);
+  margin: 10px 0 0;
+}
+
+/* Trust furniture: analysis label, label-source line, external-link marker,
+   how-we-evaluate link near the hub filters. */
+.sc-analysis-tag {
+  font-family: var(--sc-font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sc-muted);
+  margin: 14px 0 4px;
+}
+
+.sc-facts-source {
+  font-size: 0.78rem;
+  color: var(--sc-paper-info);
+  margin: 10px 0 0;
+}
+
+.sc-facts-source a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.sc-ext {
+  font-size: 0.85em;
+  opacity: 0.8;
+}
+
+.sc-eval-link {
+  font-size: 0.82rem;
+  color: var(--sc-info);
+  margin: 10px 0 0;
+}
+
+.sc-eval-link a {
+  color: inherit;
+}
+
+/* Shortlist — "save to compare" (never cart language). */
+.sc-nav .sc-saved-count {
+  font-size: 0.85em;
+  opacity: 0.75;
+}
+
+.sc-save-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  width: 100%;
+  padding: 9px 14px;
+  font: 600 0.8rem/1 var(--sc-font-body);
+  color: var(--sc-muted);
+  background: none;
+  border: 1px dashed var(--sc-border-strong);
+  border-radius: var(--sc-radius-sm);
+  cursor: pointer;
+}
+
+.sc-save-btn:hover {
+  color: var(--sc-ink);
+  border-color: var(--sc-info);
+}
+
+.sc-save-btn[aria-pressed="true"] {
+  color: var(--sc-accent);
+  border-color: var(--sc-accent);
+  border-style: solid;
+}
+
+.sc-save-btn-pdp[aria-pressed="true"] {
+  color: var(--sc-accent);
+  border-color: var(--sc-accent);
+}
+
+.sc-save-icon::before {
+  content: "\2606"; /* ☆ */
+}
+
+[aria-pressed="true"] .sc-save-icon::before {
+  content: "\2605"; /* ★ */
+}
+
+/* Saved-for-comparison page */
+.sc-saved-table th[scope="row"] {
+  text-align: left;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.sc-saved-col {
+  min-width: 220px;
+  vertical-align: top;
+}
+
+.sc-saved-scroll td {
+  vertical-align: top;
+}
+
+.sc-saved-art {
+  display: block;
+}
+
+.sc-saved-art img {
+  height: 120px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 8px;
+}
+
+.sc-saved-name {
+  display: block;
+  font-weight: 700;
+  margin: 2px 0 8px;
+  color: inherit;
+}
+
+.sc-saved-remove {
+  padding: 0;
+  font-size: 0.78rem;
+  background: none;
+  border: none;
+  color: inherit;
+  opacity: 0.7;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.sc-saved-remove:hover {
+  opacity: 1;
+}
+
+.sc-saved-links .sc-btn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+/* Retailer photo gallery (replaces the stylized tub when images exist).
+   Paper backdrop so white listing photos blend instead of glaring on the
+   dark shell; the first slide is our transparent local render. */
+.sc-pdp-media-photo {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  position: relative;
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 45%, rgba(255, 255, 255, 0.5), transparent 75%),
+    #E7E2D8;
+}
+
+.sc-pdp-media-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  cursor: zoom-in;
+}
+
+.sc-zoom-btn {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 10px;
+  font: 600 0.72rem/1 var(--sc-font-body);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--sc-paper-ink);
+  background: rgba(242, 237, 227, 0.9);
+  border: 1px solid rgba(23, 20, 15, 0.25);
+  border-radius: var(--sc-radius-sm);
+  cursor: zoom-in;
+}
+
+.sc-zoom-btn:hover {
+  background: #FFFFFF;
+}
+
+.sc-lightbox[hidden] {
+  display: none;
+}
+
+.sc-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(10, 12, 14, 0.92);
+  cursor: zoom-out;
+}
+
+.sc-lightbox img {
+  max-width: min(92vw, 1100px);
+  max-height: 92vh;
+  background: #E7E2D8;
+  border-radius: var(--sc-radius);
+  cursor: default;
+}
+
+.sc-lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--sc-ink);
+  background: var(--sc-surface);
+  border: 1px solid var(--sc-border-strong);
+  border-radius: var(--sc-radius-sm);
+  cursor: pointer;
+}
+
+.sc-lightbox-close:hover {
+  border-color: var(--sc-accent);
+  color: var(--sc-accent);
+}
+
+.sc-safety-cue {
+  margin: 8px 0 0;
+  font-size: 0.8rem;
+}
+
+.sc-safety-cue a {
+  color: var(--sc-amber);
+  text-decoration: underline;
+}
+
+.sc-detail-verified a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.sc-gallery-thumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.sc-gallery-thumb {
+  width: 64px;
+  height: 64px;
+  padding: 4px;
+  background: #E7E2D8;
+  border: 1px solid var(--sc-border);
+  cursor: pointer;
+}
+
+.sc-gallery-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.sc-gallery-thumb[aria-current="true"] {
+  border-color: var(--sc-p-accent, var(--sc-border-strong));
+}
+
+.sc-pdp-title {
+  margin-bottom: 12px;
+}
+
+.sc-pdp-lead {
+  margin-bottom: 20px;
+}
+
+.sc-buybox {
+  background: var(--sc-surface);
+  border: 1px solid var(--sc-border-strong);
+  border-radius: var(--sc-radius);
+  padding: 18px 20px;
+  margin: 20px 0 16px;
+  box-shadow: var(--sc-shadow);
+}
+
+.sc-buybox-tier {
+  font-size: 0.95rem;
+  margin: 0 0 4px;
+}
+
+.sc-buybox-tier span {
+  color: var(--sc-muted);
+  font-size: 0.82rem;
+}
+
+.sc-buybox-why {
+  font-size: 0.85rem;
+  color: var(--sc-muted);
+  margin: 0 0 14px;
+}
+
+.sc-buybox .sc-btn {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.sc-btn-lg {
+  font-size: 1.05rem;
+  padding: 14px 24px;
+}
+
+.sc-buybox .sc-detail-note {
+  margin-top: 4px;
+}
+
+.sc-pdp-flavors {
+  font-size: 0.88rem;
+  color: var(--sc-muted);
+  margin: 0 0 8px;
+}
+
+.sc-pdp-h2 {
+  margin-bottom: 20px;
+}
+
+.sc-pdp-cols {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+@media (min-width: 880px) {
+  .sc-pdp-cols {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    gap: 56px;
+  }
+}
+
+.sc-pdp-reviews-note {
+  max-width: 72ch;
+  color: var(--sc-muted);
+}
+
+.sc-related {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 640px) {
+  .sc-related {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+
+.sc-related-card {
+  display: block;
+  background: var(--sc-surface);
+  border: 1px solid var(--sc-border);
+  border-left: 3px solid var(--sc-p-accent, var(--sc-border-strong));
+  border-radius: var(--sc-radius);
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.sc-related-card:hover {
+  border-color: var(--sc-border-strong);
+  border-left-color: var(--sc-p-accent, var(--sc-border-strong));
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+}
+
+.sc-related-meta {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--sc-muted);
+  margin-top: 6px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* --------------------------------------------------------------------------
+   13b. FAQ (homepage) — native details/summary, facts-panel rules.
+   -------------------------------------------------------------------------- */
+
+.sc-faq {
+  max-width: 820px;
+  border-top: 3px solid var(--sc-ink);
+}
+
+.sc-faq details {
+  border-bottom: 1px solid var(--sc-border);
+}
+
+.sc-faq summary {
+  cursor: pointer;
+  font-weight: 700;
+  padding: 14px 36px 14px 0;
+  position: relative;
+  list-style: none;
+}
+
+.sc-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.sc-faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--sc-muted);
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1;
+  transition: transform 0.25s ease, color 0.15s ease;
+}
+
+/* The + rotates into an × when open — same glyph, no content swap. */
+.sc-faq details[open] summary::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.sc-faq summary {
+  transition: color 0.15s ease;
+}
+
+.sc-faq summary:hover {
+  color: var(--sc-accent);
+}
+
+.sc-faq summary:hover::after {
+  color: var(--sc-accent);
+}
+
+.sc-faq details p {
+  color: var(--sc-muted);
+  font-size: 0.95rem;
+  max-width: 70ch;
+  margin: 0 0 16px;
+}
+
+/* --------------------------------------------------------------------------
+   14. Tags
+   -------------------------------------------------------------------------- */
+
+.sc-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.6;
+  padding: 1px 8px;
+  border: 1px solid var(--sc-border-strong);
+  border-radius: 3px;
+  color: var(--sc-muted);
+  background: transparent;
+}
+
+.sc-tag-caution {
+  color: var(--sc-amber);
+  border-color: var(--sc-amber-line);
+  background: var(--sc-amber-dim);
+}
+
+.sc-tag-calm {
+  color: var(--sc-calm);
+  border-color: var(--sc-calm-line);
+  background: var(--sc-calm-dim);
+}
+
+/* --------------------------------------------------------------------------
+   15. Text pages (about, health & safety)
    -------------------------------------------------------------------------- */
 
 .sc-page {
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 48px 0;
+  max-width: 720px;
+  padding: 40px 0 56px;
+}
+
+@media (min-width: 768px) {
+  .sc-page {
+    padding: 56px 0 72px;
+  }
 }
 
 .sc-page h2 {
-  margin-top: 40px;
-  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  font-family: var(--sc-font-body);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 36px 0 8px;
 }
 
-.sc-page ul {
-  padding-left: 20px;
-}
-
+.sc-page p,
 .sc-page li {
   color: var(--sc-muted);
 }
 
+.sc-page p strong,
+.sc-page li strong {
+  color: var(--sc-ink);
+}
+
 .sc-updated {
-  font-family: var(--sc-font-mono);
-  font-size: 0.85rem;
-  font-weight: 400;
-  letter-spacing: 0.04em;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--sc-muted);
   margin-bottom: 32px;
 }
 
 .sc-fda-box {
-  background: var(--sc-amber-bg);
-  border: 1px solid var(--sc-amber-border);
-  border-left: 4px solid var(--sc-amber);
+  background: var(--sc-surface);
+  border: 1px solid var(--sc-border);
+  border-left: 3px solid var(--sc-amber);
   border-radius: var(--sc-radius);
-  color: #F0C87A;
-  padding: 20px 24px;
-  margin: 0 0 16px;
-  font-size: 0.95rem;
-}
-
-@media (min-width: 768px) {
-  .sc-page {
-    padding: 72px 0;
-  }
+  color: var(--sc-ink);
+  padding: 16px 20px;
+  margin: 0 0 24px;
+  font-size: 0.92rem;
 }
 
 /* --------------------------------------------------------------------------
-   15. Footer
+   15b. CTA band — one loud closing moment before the footer.
+   -------------------------------------------------------------------------- */
+
+.sc-cta-band {
+  background: var(--sc-bg-deep);
+  border-top: 1px solid var(--sc-border);
+  padding: 64px 0;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .sc-cta-band {
+    padding: 88px 0;
+  }
+}
+
+.sc-cta-band h2 {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  text-transform: uppercase;
+  letter-spacing: 0.015em;
+  margin-bottom: 8px;
+}
+
+.sc-cta-band h2 span {
+  color: var(--sc-accent);
+}
+
+.sc-cta-band p {
+  color: var(--sc-muted);
+  max-width: 52ch;
+  margin: 0 auto 24px;
+}
+
+/* --------------------------------------------------------------------------
+   15c. Motion — one subtle system: rise-in on load (hero), rise-in on
+   scroll (JS adds .sc-reveal, then .sc-in when visible), small hovers.
+   The global prefers-reduced-motion rule zeroes all of it.
+   -------------------------------------------------------------------------- */
+
+@keyframes sc-rise {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes sc-fade {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Header settles down from above on load. */
+@keyframes sc-drop {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Bars and rules draw in from the left (scale bars, panel rules). */
+@keyframes sc-grow {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+/* Ambient volt glow behind the hero — slow breathing, never a flash. */
+@keyframes sc-glow {
+  from {
+    opacity: 0.45;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Hero page-load sequence (CSS-only, works without JS). */
+.sc-hero .sc-eyebrow { animation: sc-rise 0.5s ease-out backwards; }
+.sc-hero h1 { animation: sc-rise 0.5s ease-out 0.08s backwards; }
+.sc-hero .sc-lead { animation: sc-rise 0.5s ease-out 0.16s backwards; }
+.sc-hero-actions { animation: sc-rise 0.5s ease-out 0.24s backwards; }
+.sc-hero .sc-cred { animation: sc-rise 0.5s ease-out 0.32s backwards; }
+.sc-heropanel { animation: sc-rise 0.55s ease-out 0.28s backwards; }
+
+/* Inside the hero facts panel: the thick rule draws, then rows tick in
+   one by one — a label printing itself. */
+.sc-heropanel-bar {
+  transform-origin: left;
+  animation: sc-grow 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) 0.5s backwards;
+}
+
+.sc-heropanel dl > div { animation: sc-fade 0.4s ease-out backwards; }
+.sc-heropanel dl > div:nth-child(1) { animation-delay: 0.6s; }
+.sc-heropanel dl > div:nth-child(2) { animation-delay: 0.66s; }
+.sc-heropanel dl > div:nth-child(3) { animation-delay: 0.72s; }
+.sc-heropanel dl > div:nth-child(4) { animation-delay: 0.78s; }
+.sc-heropanel dl > div:nth-child(5) { animation-delay: 0.84s; }
+.sc-heropanel dl > div:nth-child(6) { animation-delay: 0.9s; }
+.sc-heropanel-note { animation: sc-fade 0.4s ease-out 0.98s backwards; }
+
+/* Hub + compare intro load sequence (CSS-only, static markup). */
+.sc-hub-intro .sc-eyebrow { animation: sc-rise 0.5s ease-out backwards; }
+.sc-hub-intro h1 { animation: sc-rise 0.5s ease-out 0.08s backwards; }
+.sc-hub-intro .sc-lead { animation: sc-rise 0.5s ease-out 0.16s backwards; }
+.sc-hub-intro .sc-disclosure-line { animation: sc-fade 0.45s ease-out 0.24s backwards; }
+.sc-toolbar { animation: sc-fade 0.45s ease-out 0.3s backwards; }
+
+/* Product-page top block load sequence (above the fold, CSS-only). */
+.sc-crumbs { animation: sc-fade 0.4s ease-out backwards; }
+.sc-pdp-media-col { animation: sc-rise 0.55s ease-out 0.05s backwards; }
+.sc-pdp .sc-eyebrow { animation: sc-rise 0.5s ease-out 0.08s backwards; }
+.sc-pdp-title { animation: sc-rise 0.5s ease-out 0.12s backwards; }
+.sc-pdp .sc-detail-tags { animation: sc-rise 0.5s ease-out 0.16s backwards; }
+.sc-pdp-lead { animation: sc-rise 0.5s ease-out 0.2s backwards; }
+.sc-pdp .sc-detail-stats { animation: sc-rise 0.5s ease-out 0.26s backwards; }
+.sc-buybox { animation: sc-rise 0.55s ease-out 0.32s backwards; }
+.sc-pdp-flavors,
+.sc-pdp .sc-detail-verified { animation: sc-fade 0.45s ease-out 0.42s backwards; }
+
+/* Text pages (about, health & safety) rise in as one block. */
+.sc-page { animation: sc-rise 0.5s ease-out backwards; }
+
+/* Scroll reveal. JS applies .sc-reveal only when IntersectionObserver is
+   available, so no-JS and old browsers see everything immediately. */
+.sc-reveal {
+  opacity: 0;
+}
+
+.sc-reveal.sc-in {
+  opacity: 1;
+  animation: sc-rise 0.65s cubic-bezier(0.22, 0.61, 0.36, 1) backwards;
+}
+
+/* Gentle stagger across grid columns. */
+.sc-products .sc-tile.sc-in:nth-child(3n + 2) { animation-delay: 0.07s; }
+.sc-products .sc-tile.sc-in:nth-child(3n) { animation-delay: 0.14s; }
+.sc-related .sc-related-card.sc-in:nth-child(2) { animation-delay: 0.07s; }
+.sc-related .sc-related-card.sc-in:nth-child(3) { animation-delay: 0.14s; }
+.sc-method-steps li.sc-in:nth-child(2) { animation-delay: 0.06s; }
+.sc-method-steps li.sc-in:nth-child(3) { animation-delay: 0.12s; }
+.sc-method-steps li.sc-in:nth-child(4) { animation-delay: 0.18s; }
+
+/* Footer columns rise with a small stagger once the grid reveals. */
+.sc-footer-grid.sc-in > * { animation: sc-rise 0.55s ease-out backwards; }
+.sc-footer-grid.sc-in > *:nth-child(2) { animation-delay: 0.07s; }
+.sc-footer-grid.sc-in > *:nth-child(3) { animation-delay: 0.14s; }
+.sc-footer-grid.sc-in > *:nth-child(4) { animation-delay: 0.21s; }
+
+/* Table rows tick in when their container reveals — and again whenever
+   a sort or filter re-render inserts fresh rows. */
+.sc-table-scroll.sc-in tbody tr { animation: sc-fade 0.35s ease-out backwards; }
+.sc-table-scroll.sc-in tbody tr:nth-child(2) { animation-delay: 0.03s; }
+.sc-table-scroll.sc-in tbody tr:nth-child(3) { animation-delay: 0.06s; }
+.sc-table-scroll.sc-in tbody tr:nth-child(4) { animation-delay: 0.09s; }
+.sc-table-scroll.sc-in tbody tr:nth-child(5) { animation-delay: 0.12s; }
+.sc-table-scroll.sc-in tbody tr:nth-child(6) { animation-delay: 0.15s; }
+.sc-table-scroll.sc-in tbody tr:nth-child(7) { animation-delay: 0.18s; }
+.sc-table-scroll.sc-in tbody tr:nth-child(8) { animation-delay: 0.21s; }
+.sc-table-scroll.sc-in tbody tr:nth-child(n + 9) { animation-delay: 0.24s; }
+
+/* Dose scale draws itself once the annotated card is in view. */
+.sc-annotated.sc-in .sc-scale-fill {
+  transform-origin: left;
+  animation: sc-grow 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) 0.35s backwards;
+}
+
+.sc-annotated.sc-in .sc-scale-marker {
+  animation: sc-fade 0.35s ease-out 0.95s backwards;
+}
+
+/* Accordion content eases in when opened. */
+.sc-faq details[open] > *:not(summary) {
+  animation: sc-fade 0.35s ease-out;
+}
+
+/* --------------------------------------------------------------------------
+   16. Footer
    -------------------------------------------------------------------------- */
 
 .sc-footer {
-  background: #060707;
-  color: #A9ACA3;
+  background: var(--sc-bg-deep);
   border-top: 1px solid var(--sc-border);
-  padding: 48px 0;
-  font-size: 0.85rem;
+  padding: 48px 0 24px;
+  font-size: 0.9rem;
+  color: var(--sc-muted);
 }
 
-.sc-footer a {
-  color: var(--sc-green);
+.sc-footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-bottom: 40px;
 }
 
-.sc-footer a:hover {
-  color: var(--sc-green-dark);
+@media (min-width: 768px) {
+  .sc-footer-grid {
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    gap: 40px;
+  }
 }
 
-.sc-footer p {
-  max-width: 760px;
+.sc-footer-logo {
+  font-family: var(--sc-font-display);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--sc-ink);
+  margin: 0 0 8px;
+}
+
+.sc-footer-head {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sc-muted);
   margin: 0 0 12px;
 }
 
-.sc-footer-brand {
-  font-family: var(--sc-font-display);
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  font-size: 1.05rem;
+.sc-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sc-footer li {
+  margin-bottom: 8px;
+}
+
+.sc-footer a {
+  color: var(--sc-muted);
+  text-decoration: none;
+}
+
+.sc-footer a:hover {
   color: var(--sc-ink);
-  margin-bottom: 20px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
-.sc-footer-legal {
-  color: #A9ACA3;
-  line-height: 1.6;
+.sc-footer-legal p {
+  font-size: 0.85rem;
+  margin-bottom: 12px;
 }
 
-.sc-footer-copy {
-  margin-top: 24px;
-  color: #8F938A;
+.sc-footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 24px;
+  border-top: 1px solid var(--sc-border);
+  padding-top: 16px;
+  font-size: 0.82rem;
+}
+
+.sc-footer-bottom p {
+  margin: 0;
 }

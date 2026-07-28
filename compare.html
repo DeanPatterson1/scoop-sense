@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Compare Formulas — Scoop Sense</title>
+  <meta name="description" content="Every pre-workout on file in one sortable table: caffeine, citrulline, beta-alanine, blend status, stim tier, servings, and price tier.">
+  <meta name="theme-color" content="#0F1114">
+  <meta property="og:site_name" content="Scoop Sense">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Compare Formulas — Scoop Sense">
+  <meta property="og:description" content="Every pre-workout on file in one sortable table: caffeine, citrulline, beta-alanine, blend status, stim tier, servings, and price tier.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥄</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=20260728m">
+</head>
+<body>
+
+<a class="sc-skip" href="#main">Skip to content</a>
+
+<header class="sc-header">
+  <div class="sc-container sc-header-inner">
+    <a class="sc-logo" href="index.html">Scoop Sense<span>.</span></a>
+    <nav class="sc-nav" aria-label="Main navigation">
+      <a href="hub.html">Products</a>
+      <a href="compare.html" class="sc-active">Compare</a>
+      <a href="saved.html">Saved <span class="sc-saved-count"></span></a>
+      <a href="index.html#methodology">Methodology</a>
+      <a href="disclaimer.html">Health &amp; Safety</a>
+      <a href="disclosure.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="sc-hub-intro">
+    <div class="sc-container">
+      <p class="sc-eyebrow">Compare</p>
+      <h1>Compare formulas side by side</h1>
+      <p class="sc-lead">The full database in one table. Click a column heading to sort; doses are per full labeled serving. Product names link to each label breakdown.</p>
+    </div>
+  </section>
+
+  <section class="sc-hub-results">
+    <div class="sc-container">
+      <div class="sc-table-scroll">
+        <table class="sc-table" id="sc-compare" aria-label="All products compared">
+          <thead>
+            <tr>
+              <th scope="col" data-sortkey="name" aria-sort="ascending">
+                <button type="button" class="sc-sort-btn">Product</button>
+              </th>
+              <th scope="col" class="sc-num" data-sortkey="caffeine">
+                <button type="button" class="sc-sort-btn">Caffeine</button>
+              </th>
+              <th scope="col" class="sc-num" data-sortkey="citrulline">
+                <button type="button" class="sc-sort-btn">Citrulline</button>
+              </th>
+              <th scope="col" class="sc-num" data-sortkey="beta">
+                <button type="button" class="sc-sort-btn">Beta-alanine</button>
+              </th>
+              <th scope="col">Blend</th>
+              <th scope="col">Stim tier</th>
+              <th scope="col" class="sc-num" data-sortkey="servings">
+                <button type="button" class="sc-sort-btn">Servings</button>
+              </th>
+              <th scope="col">Price</th>
+            </tr>
+          </thead>
+          <tbody id="sc-compare-body"></tbody>
+        </table>
+      </div>
+      <p class="sc-table-note">"Malate" marks labels using citrulline malate, which is not interchangeable gram for gram with pure L-citrulline. "Blend: yes" means a proprietary blend hides individual amounts. Price tiers (Budget · Mid-range · Premium) reflect rough cost per full serving.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="sc-footer">
+  <div class="sc-container">
+    <div class="sc-footer-grid">
+      <div>
+        <p class="sc-footer-logo">Scoop Sense</p>
+        <p>An independent supplement label database. Caffeine figures, ingredient doses, and cautions come from manufacturer labels, compared against amounts used in published research.</p>
+      </div>
+      <nav aria-label="Browse">
+        <p class="sc-footer-head">Browse</p>
+        <ul>
+          <li><a href="hub.html">All products</a></li>
+          <li><a href="compare.html">Compare formulas</a></li>
+          <li><a href="index.html#methodology">How we evaluate labels</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Reference">
+        <p class="sc-footer-head">Reference</p>
+        <ul>
+          <li><a href="disclaimer.html">Health &amp; safety</a></li>
+          <li><a href="disclosure.html">About &amp; disclosure</a></li>
+          <li><a href="disclosure.html#contact">Contact &amp; corrections</a></li>
+        </ul>
+      </nav>
+      <div class="sc-footer-legal">
+        <p class="sc-footer-head">Disclosure</p>
+        <p>Some product links are affiliate links. Scoop Sense may earn a commission at no additional cost to you.</p>
+        <p>These statements have not been evaluated by the Food and Drug Administration. These products are not intended to diagnose, treat, cure, or prevent any disease.</p>
+      </div>
+    </div>
+    <div class="sc-footer-bottom">
+      <p>&copy; 2026 Scoop Sense</p>
+      <p>Labels last reviewed July 2026</p>
+    </div>
+  </div>
+</footer>
+
+<script src="data/products.js?v=20260728m"></script>
+<script src="js/app.js?v=20260728m"></script>
+</body>
+</html>
