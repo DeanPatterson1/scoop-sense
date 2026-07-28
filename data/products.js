@@ -2693,7 +2693,7 @@ const PRODUCTS = [
 
   {
     "id": "con-cret-creatine-hcl",
-    "name": "Con-Cret Creatine HCl",
+    "name": "Creatine HCl",
     "brand": "Con-Cret",
     "category": "creatine",
     "stimFree": true,
@@ -3098,7 +3098,7 @@ const PRODUCTS = [
 
   {
     "id": "ghost-amino-v2",
-    "name": "Ghost Amino",
+    "name": "Amino",
     "brand": "Ghost",
     "category": "eaa",
     "stimFree": true,
@@ -3309,7 +3309,7 @@ const PRODUCTS = [
 
   {
     "id": "xtend-original-bcaa",
-    "name": "Xtend Original BCAA",
+    "name": "Original BCAA",
     "brand": "Xtend",
     "category": "eaa",
     "stimFree": true,
@@ -3463,7 +3463,7 @@ const PRODUCTS = [
 
   {
     "id": "lmnt-drink-mix",
-    "name": "LMNT Electrolyte Drink Mix",
+    "name": "Electrolyte Drink Mix",
     "brand": "LMNT",
     "category": "electrolytes",
     "stimFree": true,
@@ -3575,7 +3575,7 @@ const PRODUCTS = [
 
   {
     "id": "nuun-sport",
-    "name": "Nuun Sport",
+    "name": "Sport",
     "brand": "Nuun",
     "category": "electrolytes",
     "stimFree": true,
@@ -3627,7 +3627,7 @@ const PRODUCTS = [
 
   {
     "id": "dripdrop-ors",
-    "name": "DripDrop ORS Electrolyte Powder",
+    "name": "ORS Electrolyte Powder",
     "brand": "DripDrop",
     "category": "electrolytes",
     "stimFree": true,
@@ -3797,7 +3797,7 @@ const PRODUCTS = [
 
   {
     "id": "ultima-replenisher",
-    "name": "Ultima Replenisher Electrolyte Mix",
+    "name": "Replenisher Electrolyte Mix",
     "brand": "Ultima",
     "category": "electrolytes",
     "stimFree": true,

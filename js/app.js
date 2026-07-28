@@ -663,16 +663,17 @@
    * ------------------------------------------------------------------- */
 
   function injectCatalogLD() {
+    var scoped = PRODUCTS.filter(function (p) {
+      return !PAGE_CATEGORY || categoryOf(p) === PAGE_CATEGORY;
+    });
     var ld = {
       "@context": "https://schema.org",
       "@type": "ItemList",
       "name": PAGE_CATEGORY && CATEGORY_CONFIG[PAGE_CATEGORY]
         ? CATEGORY_CONFIG[PAGE_CATEGORY].label + " label database"
         : "Supplement label database",
-      "numberOfItems": undefined,
-      "itemListElement": PRODUCTS.filter(function (p) {
-        return !PAGE_CATEGORY || categoryOf(p) === PAGE_CATEGORY;
-      }).map(function (p, i) {
+      "numberOfItems": scoped.length,
+      "itemListElement": scoped.map(function (p, i) {
         return {
           "@type": "ListItem",
           "position": i + 1,
