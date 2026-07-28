@@ -15,9 +15,13 @@
 (function () {
   "use strict";
 
+  // Category landing pages declare themselves via <body data-category="...">;
+  // the dataset (grid AND compare rows) is then locked to that category.
+  var PAGE_CATEGORY = document.body.getAttribute("data-category") || null;
+
   var state = {
     search: "",
-    category: "all",
+    category: PAGE_CATEGORY || "all",
     caffeine: "all",
     brand: "all",
     stimFreeOnly: false,
@@ -29,8 +33,13 @@
     return p.category || "pre-workout";
   }
 
+  function cfgOf(p) {
+    return CATEGORY_CONFIG[categoryOf(p)] || CATEGORY_CONFIG["pre-workout"];
+  }
+
   function categoryLabelOf(p) {
     var c = categoryOf(p);
+    if (CATEGORY_CONFIG[c]) return CATEGORY_CONFIG[c].label;
     return c.charAt(0).toUpperCase() + c.slice(1);
   }
 
@@ -165,6 +174,68 @@
     return '<span title="' + esc(PRICE_TIPS[w]) + '">' + w + "</span>";
   }
 
+  /* Config fact-key resolver — see the key grammar comment in
+   * js/categories.js. Returns an HTML cell fragment; missing -> em-dash. */
+
+  var DASH = '<span class="sc-dim">—</span>';
+
+  function metricOf(p, key) {
+    if (!p.metrics) return null;
+    var v = p.metrics[key];
+    return v === undefined || v === null || v === "" ? null : v;
+  }
+
+  function factOf(p, key) {
+    if (key === "caffeineMg") {
+      return p.caffeineMg === 0 ? "0 mg" : esc(p.caffeineMg) + " mg";
+    }
+    if (key === "servings") return esc(p.servings);
+    if (key === "blend") return blendHTML(p);
+    if (key === "stim") return esc(stimLabelOf(p));
+    if (key === "price") return priceWordHTML(p);
+    if (key === "protPct") {
+      var pg = metricOf(p, "proteinG"), sg = metricOf(p, "servingG");
+      if (!pg || !sg) return DASH;
+      return Math.round((pg / sg) * 100) + "%";
+    }
+    if (key.indexOf("ing:") === 0) {
+      var pattern = key.slice(4);
+      if (/citrulline/.test(pattern)) return citrullineHTML(p);
+      var ing = findIngredient(p, new RegExp(pattern, "i"));
+      return ing ? esc(ing.dose) : DASH;
+    }
+    if (key.indexOf("m:") === 0) {
+      var parts = key.split(":");
+      var v = metricOf(p, parts[1]);
+      if (v === null) return DASH;
+      return esc(v) + (parts[2] ? " " + parts[2] : "");
+    }
+    return DASH;
+  }
+
+  // Numeric twin for sorting; missing -> -1 so gaps sink to the bottom.
+  function factSortValue(p, key) {
+    if (key === "name") return (p.brand + " " + p.name).toLowerCase();
+    if (key === "caffeineMg") return p.caffeineMg;
+    if (key === "servings") return p.servings;
+    if (key === "blend") return hasBlend(p) ? 1 : 0;
+    if (key === "stim") return p.caffeineMg;
+    if (key === "price") return p.priceRange === "$" ? 1 : p.priceRange === "$$" ? 2 : 3;
+    if (key === "protPct") {
+      var pg = metricOf(p, "proteinG"), sg = metricOf(p, "servingG");
+      return pg && sg ? pg / sg : -1;
+    }
+    if (key.indexOf("ing:") === 0) {
+      var ing = findIngredient(p, new RegExp(key.slice(4), "i"));
+      return ing ? (parseDoseMg(ing.dose) || -1) : -1;
+    }
+    if (key.indexOf("m:") === 0) {
+      var v = metricOf(p, key.split(":")[1]);
+      return typeof v === "number" ? v : -1;
+    }
+    return 0;
+  }
+
   function productLinkCell(p) {
     return '<a href="products/' + esc(p.id) + '.html">' +
       '<span class="sc-cell-brand">' + esc(p.brand) + "</span>" +
@@ -212,13 +283,24 @@
   var DISCLOSED_TIP = "Every active ingredient and its dosage is individually listed on the label. No proprietary blends.";
   var BLEND_TIP = "One or more combined blend totals hide the individual ingredient amounts inside.";
 
+  // Stim tag rule: pre-workout tiles always carry one; other categories only
+  // when the formula is actually caffeinated (a "Stim-Free" chip on a protein
+  // shelf is noise), and only if the category opts in via stimBadges.
+  function showsStimTag(p) {
+    var cfg = cfgOf(p);
+    if (!cfg.stimBadges) return false;
+    return categoryOf(p) === "pre-workout" || p.caffeineMg > 0;
+  }
+
   function tagsHTML(p) {
     var tags = [];
     var bucket = bucketOf(p);
-    var stimClass = "sc-tag";
-    if (bucket === "high") stimClass += " sc-tag-caution";
-    if (bucket === "none") stimClass += " sc-tag-calm";
-    tags.push('<span class="' + stimClass + '" title="' + esc(STIM_TIPS[bucket]) + '">' + esc(stimLabelOf(p)) + "</span>");
+    if (showsStimTag(p)) {
+      var stimClass = "sc-tag";
+      if (bucket === "high") stimClass += " sc-tag-caution";
+      if (bucket === "none") stimClass += " sc-tag-calm";
+      tags.push('<span class="' + stimClass + '" title="' + esc(STIM_TIPS[bucket]) + '">' + esc(stimLabelOf(p)) + "</span>");
+    }
     if (hasBlend(p)) {
       tags.push('<span class="sc-tag sc-tag-caution" title="' + esc(BLEND_TIP) + '">Proprietary blend</span>');
     } else if (isDisclosed(p)) {
@@ -250,10 +332,9 @@
         "</span>" +
         '<span class="sc-tile-tags">' + tagsHTML(p) + "</span>" +
         '<span class="sc-tile-facts">' +
-          tileFactHTML("Caffeine",
-            p.caffeineMg === 0 ? "0 mg" : esc(p.caffeineMg) + " mg") +
-          tileFactHTML("Citrulline", citrullineHTML(p)) +
-          tileFactHTML("Beta-alanine", betaHTML(p)) +
+          cfgOf(p).tileFacts.map(function (f) {
+            return tileFactHTML(esc(f.label), factOf(p, f.key));
+          }).join("") +
         "</span>" +
         '<span class="sc-tile-foot">' +
           "<span>" + esc(p.servings) + " servings · " + priceWordHTML(p) + "</span>" +
@@ -381,7 +462,7 @@
     if (clear) {
       clear.addEventListener("click", function () {
         state.search = "";
-        state.category = "all";
+        state.category = PAGE_CATEGORY || "all";
         state.caffeine = "all";
         state.brand = "all";
         state.stimFreeOnly = false;
@@ -478,39 +559,47 @@
 
   var compareState = { key: "name", dir: 1 };
 
-  function compareValue(p, key) {
-    if (key === "name") return (p.brand + " " + p.name).toLowerCase();
-    if (key === "caffeine") return p.caffeineMg;
-    if (key === "citrulline") {
-      var cit = citrullineOf(p);
-      return cit ? (parseDoseMg(cit.dose) || -1) : -1;
+  // Compare tables are per-category: the page's data-category picks the
+  // column set from CATEGORY_CONFIG and locks the row set. The <thead> is
+  // built here so category pages ship an empty table shell.
+  function compareCfg() {
+    return CATEGORY_CONFIG[PAGE_CATEGORY] || CATEGORY_CONFIG["pre-workout"];
+  }
+
+  function buildCompareHead() {
+    var head = document.querySelector("#sc-compare thead");
+    var cols = compareCfg().compareCols;
+    var cells = ['<th scope="col" data-sortkey="name">' +
+      '<button type="button" class="sc-sort-btn">Product</button></th>'];
+    for (var i = 0; i < cols.length; i++) {
+      var c = cols[i];
+      cells.push('<th scope="col"' + (c.num ? ' class="sc-num"' : "") +
+        (c.sortable ? ' data-sortkey="' + esc(c.key) + '"' : "") + ">" +
+        (c.sortable
+          ? '<button type="button" class="sc-sort-btn">' + esc(c.label) + "</button>"
+          : esc(c.label)) +
+      "</th>");
     }
-    if (key === "beta") {
-      var dose = betaAlanineOf(p);
-      return dose ? (parseDoseMg(dose) || -1) : -1;
-    }
-    if (key === "servings") return p.servings;
-    return 0;
+    head.innerHTML = "<tr>" + cells.join("") + "</tr>";
   }
 
   function compareRowHTML(p) {
-    return "<tr>" +
-      "<td>" + productLinkCell(p) + "</td>" +
-      '<td class="sc-num">' + esc(p.caffeineMg) + " mg</td>" +
-      '<td class="sc-num">' + citrullineHTML(p) + "</td>" +
-      '<td class="sc-num">' + betaHTML(p) + "</td>" +
-      "<td>" + blendHTML(p) + "</td>" +
-      "<td>" + esc(stimLabelOf(p)) + "</td>" +
-      '<td class="sc-num">' + esc(p.servings) + "</td>" +
-      "<td>" + priceWordOf(p) + "</td>" +
-    "</tr>";
+    var cols = compareCfg().compareCols;
+    var cells = ["<td>" + productLinkCell(p) + "</td>"];
+    for (var i = 0; i < cols.length; i++) {
+      cells.push("<td" + (cols[i].num ? ' class="sc-num"' : "") + ">" +
+        factOf(p, cols[i].key) + "</td>");
+    }
+    return "<tr>" + cells.join("") + "</tr>";
   }
 
   function renderCompare() {
     var body = document.getElementById("sc-compare-body");
-    var rows = PRODUCTS.slice().sort(function (a, b) {
-      var va = compareValue(a, compareState.key);
-      var vb = compareValue(b, compareState.key);
+    var rows = PRODUCTS.filter(function (p) {
+      return !PAGE_CATEGORY || categoryOf(p) === PAGE_CATEGORY;
+    }).sort(function (a, b) {
+      var va = factSortValue(a, compareState.key);
+      var vb = factSortValue(b, compareState.key);
       if (va < vb) return -1 * compareState.dir;
       if (va > vb) return 1 * compareState.dir;
       return 0;
@@ -531,6 +620,7 @@
 
   function wireCompare() {
     var head = document.querySelector("#sc-compare thead");
+    buildCompareHead();
     head.addEventListener("click", function (event) {
       var btn = event.target.closest(".sc-sort-btn");
       if (!btn) return;
@@ -556,7 +646,9 @@
     var ld = {
       "@context": "https://schema.org",
       "@type": "ItemList",
-      "name": "Pre-workout label database",
+      "name": PAGE_CATEGORY && CATEGORY_CONFIG[PAGE_CATEGORY]
+        ? CATEGORY_CONFIG[PAGE_CATEGORY].label + " label database"
+        : "Supplement label database",
       "numberOfItems": PRODUCTS.length,
       "itemListElement": PRODUCTS.map(function (p, i) {
         return {
@@ -696,26 +788,40 @@
       "</td>";
     });
 
+    // Saves cross categories, so metric rows come from the configs of the
+    // categories actually present — a dash marks "does not apply".
+    var factRows = [];
+    var seenLabels = {};
+    products.forEach(function (p) {
+      cfgOf(p).tileFacts.forEach(function (f) {
+        if (seenLabels[f.label]) return;
+        seenLabels[f.label] = true;
+        factRows.push(savedRowHTML(f.label, products.map(function (q) {
+          return '<td class="sc-num">' + factOf(q, f.key) + "</td>";
+        })));
+      });
+    });
+
+    var anyStim = products.some(showsStimTag);
+
     var rows = [
-      savedRowHTML("Category", products.map(function (p) { return "<td>" + esc(categoryLabelOf(p)) + "</td>"; })),
-      savedRowHTML("Caffeine", products.map(function (p) { return '<td class="sc-num">' + (p.caffeineMg === 0 ? "0 mg" : esc(p.caffeineMg) + " mg") + "</td>"; })),
-      savedRowHTML("Citrulline", products.map(function (p) { return '<td class="sc-num">' + citrullineHTML(p) + "</td>"; })),
-      savedRowHTML("Beta-alanine", products.map(function (p) { return '<td class="sc-num">' + betaHTML(p) + "</td>"; })),
-      savedRowHTML("Creatine", products.map(function (p) {
-        var ing = findIngredient(p, /creatine/i);
-        return '<td class="sc-num">' + (ing ? esc(ing.dose) : '<span class="sc-dim">—</span>') + "</td>";
-      })),
+      savedRowHTML("Category", products.map(function (p) { return "<td>" + esc(categoryLabelOf(p)) + "</td>"; }))
+    ].concat(factRows, [
       savedRowHTML("Proprietary blend", products.map(function (p) { return "<td>" + blendHTML(p) + "</td>"; })),
       savedRowHTML("Servings", products.map(function (p) { return '<td class="sc-num">' + esc(p.servings) + "</td>"; })),
-      savedRowHTML("Price tier", products.map(function (p) { return "<td>" + priceWordHTML(p) + "</td>"; })),
-      savedRowHTML("Stim tier", products.map(function (p) { return "<td>" + esc(stimLabelOf(p)) + "</td>"; })),
+      savedRowHTML("Price tier", products.map(function (p) { return "<td>" + priceWordHTML(p) + "</td>"; }))
+    ], anyStim ? [
+      savedRowHTML("Stim tier", products.map(function (p) {
+        return "<td>" + (showsStimTag(p) || categoryOf(p) === "pre-workout" ? esc(stimLabelOf(p)) : '<span class="sc-dim">—</span>') + "</td>";
+      }))
+    ] : [], [
       "<tr><th scope=\"row\">Links</th>" + products.map(function (p) {
         return '<td class="sc-saved-links">' +
           '<a class="sc-btn sc-btn-primary" href="products/' + esc(p.id) + '.html">Full breakdown</a>' +
           '<a class="sc-btn sc-btn-secondary" href="' + esc(p.affiliateUrl) + '" target="_blank" rel="sponsored nofollow noopener">View current price <span class="sc-ext" aria-hidden="true">&#8599;</span></a>' +
         "</td>";
       }).join("") + "</tr>"
-    ];
+    ]);
 
     root.innerHTML =
       '<p class="sc-count">' + products.length + " saved · stored only in this browser</p>" +

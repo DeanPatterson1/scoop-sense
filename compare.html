@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Compare Formulas — Scoop Sense</title>
+  <title>Compare Pre-Workouts — Scoop Sense</title>
   <meta name="description" content="Every pre-workout on file in one sortable table: caffeine, citrulline, beta-alanine, blend status, stim tier, servings, and price tier.">
   <meta name="theme-color" content="#0F1114">
   <meta property="og:site_name" content="Scoop Sense">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Compare Formulas — Scoop Sense">
+  <meta property="og:title" content="Compare Pre-Workouts — Scoop Sense">
   <meta property="og:description" content="Every pre-workout on file in one sortable table: caffeine, citrulline, beta-alanine, blend status, stim tier, servings, and price tier.">
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥄</text></svg>">
@@ -17,7 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css?v=20260728m">
 </head>
-<body>
+<body data-category="pre-workout">
 
 <a class="sc-skip" href="#main">Skip to content</a>
 
@@ -40,37 +40,16 @@
   <section class="sc-hub-intro">
     <div class="sc-container">
       <p class="sc-eyebrow">Compare</p>
-      <h1>Compare formulas side by side</h1>
-      <p class="sc-lead">The full database in one table. Click a column heading to sort; doses are per full labeled serving. Product names link to each label breakdown.</p>
+      <h1>Compare pre-workouts side by side</h1>
+      <p class="sc-lead">Every pre-workout on file in one table. Click a column heading to sort; doses are per full labeled serving. Product names link to each label breakdown. Other categories compare on their own pages: <a href="creatine.html#compare">creatine</a>, <a href="protein.html#compare">protein</a>, <a href="eaa.html#compare">EAA</a>, <a href="electrolytes.html#compare">electrolytes</a>.</p>
     </div>
   </section>
 
   <section class="sc-hub-results">
     <div class="sc-container">
       <div class="sc-table-scroll">
-        <table class="sc-table" id="sc-compare" aria-label="All products compared">
-          <thead>
-            <tr>
-              <th scope="col" data-sortkey="name" aria-sort="ascending">
-                <button type="button" class="sc-sort-btn">Product</button>
-              </th>
-              <th scope="col" class="sc-num" data-sortkey="caffeine">
-                <button type="button" class="sc-sort-btn">Caffeine</button>
-              </th>
-              <th scope="col" class="sc-num" data-sortkey="citrulline">
-                <button type="button" class="sc-sort-btn">Citrulline</button>
-              </th>
-              <th scope="col" class="sc-num" data-sortkey="beta">
-                <button type="button" class="sc-sort-btn">Beta-alanine</button>
-              </th>
-              <th scope="col">Blend</th>
-              <th scope="col">Stim tier</th>
-              <th scope="col" class="sc-num" data-sortkey="servings">
-                <button type="button" class="sc-sort-btn">Servings</button>
-              </th>
-              <th scope="col">Price</th>
-            </tr>
-          </thead>
+        <table class="sc-table" id="sc-compare" aria-label="All pre-workouts compared">
+          <thead><!-- built from CATEGORY_CONFIG by js/app.js --></thead>
           <tbody id="sc-compare-body"></tbody>
         </table>
       </div>
@@ -117,6 +96,7 @@
 </footer>
 
 <script src="data/products.js?v=20260728m"></script>
+<script src="js/categories.js?v=20260728m"></script>
 <script src="js/app.js?v=20260728m"></script>
 </body>
 </html>
