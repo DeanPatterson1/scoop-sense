@@ -377,8 +377,15 @@
     return '<article class="sc-tile" id="p-' + esc(p.id) + '"' + accent + ">" +
       '<a class="sc-tile-link" href="' + page + '" ' +
         'aria-label="Full label breakdown: ' + esc(p.brand + " " + p.name) + '">' +
-        '<span class="sc-tile-art" aria-hidden="true">' +
-          (p.imageUrl ? '<img src="' + esc(p.imageUrl) + '" alt="" loading="lazy" decoding="async">' : tubSVG(p)) +
+        // A photo shot on white needs a light plate behind it, or it reads as
+        // a white slab pasted on the dark card. Transparent renders don't.
+        '<span class="sc-tile-art' + (p.imageOpaque ? " sc-art-plate" : "") + '" aria-hidden="true">' +
+          // referrerpolicy: several brand CDNs refuse hotlinks that send a
+          // referrer, and imageUrl is a retailer URL for products without a
+          // locally stored render.
+          (p.imageUrl
+            ? '<img src="' + esc(p.imageUrl) + '" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">'
+            : tubSVG(p)) +
         "</span>" +
         '<span class="sc-tile-top">' +
           '<span class="sc-tile-brand">' + esc(p.brand) + "</span>" +
@@ -882,7 +889,9 @@
         // Decorative twin of the named link below it: hidden from assistive
         // tech rather than announced as a second, nameless "link".
         '<span class="sc-saved-art" aria-hidden="true">' +
-          (p.imageUrl ? '<img src="' + esc(p.imageUrl) + '" alt="" loading="lazy">' : tubSVG(p)) +
+          (p.imageUrl
+            ? '<img src="' + esc(p.imageUrl) + '" alt="" loading="lazy" referrerpolicy="no-referrer">'
+            : tubSVG(p)) +
         "</span>" +
         '<span class="sc-tile-brand">' + esc(p.brand) + "</span>" +
         '<a class="sc-saved-name" href="products/' + esc(p.id) + '.html">' + esc(p.name) + "</a>" +

@@ -36,6 +36,12 @@
 //   accentColor    string  OPTIONAL — hex color used as a subtle accent on the
 //                  product tile and detail view. Stylized brand-family color,
 //                  NOT official brand artwork. Omit for a neutral fallback.
+//   imageOpaque    boolean OPTIONAL — true when the lead image is a photo shot
+//                  on a white/solid sweep rather than a transparent render.
+//                  Puts the paper surface behind it on tiles and the product
+//                  page so it reads as a printed plate, not a white slab on
+//                  the dark card. Set by scripts/integrate-images.js from the
+//                  downloaded file's alpha channel — do not hand-guess it.
 //   imageUrl       string  OPTIONAL — official product image URL published by
 //                  the seller (brand-site or listing CDN). Kept equal to
 //                  images[0]. Hub tile and detail views render it instead of
@@ -2441,7 +2447,8 @@ const PRODUCTS = [
         label: "SuppCo independent label listing (Operation OJ, 30 servings) confirming all six ingredient doses"
       }
     ]
-  },
+  }
+,
 
   /* ---- creatine (label-verified July 2026) ---- */
 
@@ -2479,6 +2486,11 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=optimum+nutrition+micronized+creatine&tag=YOURTAG-20",
     "blurb": "The default single-ingredient monohydrate from the biggest name in the category, micronized for easier mixing and labeled banned-substance tested.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/on-micronized-creatine.png",
+    "images": [
+      "https://www.optimumnutrition.com/cdn/shop/files/on-1153060_Image_01.png?v=1769135392&width=2048",
+      "https://www.optimumnutrition.com/cdn/shop/files/US_CREATINE_240SV_UNFLAV_FOP.png?v=1784673185"
+    ],
     "metrics": {
       "creatineG": 5,
       "form": "monohydrate"
@@ -2524,6 +2536,12 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=thorne+creatine&tag=YOURTAG-20",
     "blurb": "Plain 5 g monohydrate with NSF Certified for Sport screening, aimed at athletes subject to drug testing.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/thorne-creatine.png",
+    "images": [
+      "https://d1vo8zfysxy97v.cloudfront.net/media/product/sf903__ve8382489c6ce9fb7f28cdddef00e6f1ece146591.png",
+      "https://d1vo8zfysxy97v.cloudfront.net/media/product/sf903__vb5ca0e34dbdc8dc4000b29c8ba0bb48387eb2496.jpg",
+      "https://d1vo8zfysxy97v.cloudfront.net/media/product/sf903__v67f933512454449d24c5c855f503305e97e11c01.jpg"
+    ],
     "metrics": {
       "creatineG": 5,
       "form": "monohydrate"
@@ -2574,6 +2592,13 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=nutricost+creatine+monohydrate&tag=YOURTAG-20",
     "blurb": "5 g of micronized monohydrate at one of the lowest costs per serving in the category; the 500 g tub holds 100 servings.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/nutricost-creatine-monohydrate.jpg",
+    "imageOpaque": true,
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_CreatineMonohydrate_Unflavored_500G_Front_SQUARE_98526928-e1cc-4ff6-9918-430654760159.jpg?v=1760650358",
+      "https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_CreatineMonohydrate_Unflavored_500G_SFP_SQUARE_72b4208e-51d7-42f8-8147-d2502f9c3035.jpg?v=1760650358",
+      "https://cdn.shopify.com/s/files/1/0222/4128/0074/products/nutricost-creatine-monohydrate-powder-601968.jpg?v=1760650358"
+    ],
     "metrics": {
       "creatineG": 5,
       "form": "monohydrate"
@@ -2634,6 +2659,11 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=transparent+labs+creatine+hmb&tag=YOURTAG-20",
     "blurb": "Pairs a full 5 g of monohydrate with 1.5 g myHMB, vitamin D3, and BioPerine; Informed Choice certified, and priced well above plain monohydrate.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/transparent-labs-creatine-hmb.png",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0866/7664/files/TL_CreatineHMB_30S_U_1_2.png?v=1745537479",
+      "https://cdn.shopify.com/s/files/1/0866/7664/files/TL-227_CreatineHMB_60S_SL_1_5_FRONT.png?v=1781272810"
+    ],
     "metrics": {
       "creatineG": 5,
       "form": "monohydrate"
@@ -2679,6 +2709,12 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=kaged+creatine+hcl&tag=YOURTAG-20",
     "blurb": "750 mg of creatine HCl per roughly 1 g scoop with every batch tested by Informed Sport; also sold in capsule form.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/kaged-creatine-hcl.png",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/1110/3248/files/CREATINEHCLUNFLAVOREDFRONT.png?v=1774384723",
+      "https://cdn.shopify.com/s/files/1/1110/3248/files/CREATINEHCLNORMALFRONT.png?v=1774384752",
+      "https://cdn.shopify.com/s/files/1/1110/3248/files/CREATINEHCLFRUITPUNCHFRONT.png?v=1774384752"
+    ],
     "metrics": {
       "creatineG": 0.75,
       "form": "HCl"
@@ -2724,6 +2760,12 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=con+cret+creatine+hcl&tag=YOURTAG-20",
     "blurb": "The original 750 mg creatine HCl in 64 or 100-serving tubs, certified vegan, gluten-free, and kosher.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/con-cret-creatine-hcl.webp",
+    "imageOpaque": true,
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0267/4576/6070/files/100Unflavored.webp?v=1784816901",
+      "https://cdn.shopify.com/s/files/1/0267/4576/6070/files/64Unflavored.webp?v=1784816901"
+    ],
     "metrics": {
       "creatineG": 0.75,
       "form": "HCl"
@@ -2770,6 +2812,11 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=klean+athlete+klean+creatine&tag=YOURTAG-20",
     "blurb": "Single-ingredient 5 g monohydrate carrying NSF Certified for Sport certification, priced at a premium for the tested-athlete market.",
     "labelVerified": "July 2026",
+    "imageUrl": "https://www.kleanathlete.com/media/catalog/product/cache/37591acc653ec2757cfe265b0f58a86c/image/5702ba5e/klean-creatine-ka57692p-315.jpeg",
+    "images": [
+      "https://www.kleanathlete.com/media/catalog/product/cache/37591acc653ec2757cfe265b0f58a86c/image/5702ba5e/klean-creatine-ka57692p-315.jpeg",
+      "https://www.kleanathlete.com/media/catalog/product/cache/a287c6f2e449530c93d8323c62e761d8/image/570267ab/klean-creatine-ka57692p-315.jpeg"
+    ],
     "metrics": {
       "creatineG": 5,
       "form": "monohydrate"
@@ -2815,6 +2862,12 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=jacked+factory+creatine+monohydrate&tag=YOURTAG-20",
     "blurb": "Straight 5 g monohydrate sold in 30, 85, and 200-serving tubs at a low cost per serving.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/jacked-factory-creatine-monohydrate.png",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/2704/4962/files/Creatine_30_-_Front.png?v=1768247360",
+      "https://cdn.shopify.com/s/files/1/2704/4962/files/creatine-mono-product-01.jpg?v=1768315321",
+      "https://cdn.shopify.com/s/files/1/2704/4962/files/JF_Creatine_200_Front.png?v=1770125863"
+    ],
     "metrics": {
       "creatineG": 5,
       "form": "monohydrate"
@@ -2870,6 +2923,13 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=muscletech+cell+tech+creatine&tag=YOURTAG-20",
     "blurb": "A carb-and-creatine recovery formula: 5 g of monohydrate rides on a 38 g multi-stage carb blend plus taurine, alpha lipoic acid, and BCAAs, with a two-scoop option doubling everything.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/muscletech-cell-tech.jpg",
+    "imageOpaque": true,
+    "images": [
+      "https://cdn.shopify.com/s/files/1/1214/7132/files/celltech-citrus-3lb_aa616c64-0d61-4104-a07a-e8b6cc84ad27.jpg?v=1753299077",
+      "https://cdn.shopify.com/s/files/1/1214/7132/files/celltech-fruitpunch-3lb_682798d8-2c20-4c66-8883-92ec542a9751.jpg?v=1754063797",
+      "https://cdn.shopify.com/s/files/1/1214/7132/files/celltech-fruitpunch-6lb_887f541a-63a0-47c6-99e4-944098a18181.jpg?v=1753299062"
+    ],
     "metrics": {
       "creatineG": 5,
       "form": "blend"
@@ -2916,6 +2976,12 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=now+sports+creatine+monohydrate&tag=YOURTAG-20",
     "blurb": "Informed Sport and Informed Choice certified 5 g monohydrate at commodity pricing, with about 200 servings in the large tub.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/now-sports-creatine-monohydrate.png",
+    "images": [
+      "https://www.nowfoods.com/sites/default/files/2023-10/2030_mainimage.png",
+      "https://www.nowfoods.com/sites/default/files/2023-10/2030_nowproductlabels.png",
+      "https://www.nowfoods.com/sites/default/files/2023-10/2030_nowproductlabels2.png"
+    ],
     "metrics": {
       "creatineG": 5,
       "form": "monohydrate"
@@ -2977,6 +3043,11 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=transparent+labs+intra+workout&tag=YOURTAG-20",
     "blurb": "Stim-free intra-workout built on 6.7 g of the Amino9 EAA blend plus taurine and betaine, with Informed Choice certification listed on the brand page.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/transparent-labs-intra.png",
+    "images": [
+      "https://www.transparentlabs.com/cdn/shop/files/TL_INTRA_30_BR_1_2.png?v=1746463908",
+      "https://www.transparentlabs.com/cdn/shop/files/TL_INTRA_30_SL_1_2.png?v=1746463908"
+    ],
     "metrics": {
       "eaaG": 6.7,
       "bcaaG": null,
@@ -3028,6 +3099,10 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=momentous+vital+aminos&tag=YOURTAG-20",
     "blurb": "Fully itemized 13-amino panel with 2.5 g leucine and NSF Certified for Sport testing, priced at the premium end of the category.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/momentous-vital-aminos.png",
+    "images": [
+      "https://www.livemomentous.com/cdn/shop/files/Vital-Aminos_HERO.png?v=1778100483"
+    ],
     "metrics": {
       "eaaG": 5.6,
       "bcaaG": 3.75,
@@ -3079,6 +3154,11 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=thorne+amino+complex&tag=YOURTAG-20",
     "blurb": "Clinically oriented EAA profile with 3.8 g of EAAs and 1.25 g leucine per 7.6 g scoop, carrying NSF Certified for Sport status at a premium price.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/thorne-amino-complex.png",
+    "images": [
+      "https://d1vo8zfysxy97v.cloudfront.net/media/product/sp641__v5d864686891ec733704f50f55b51dbb6f3c911a5.png",
+      "https://d1vo8zfysxy97v.cloudfront.net/media/product/sp641__v53f677a27e0fa152e77753edb45149613e71b6e2.jpg"
+    ],
     "metrics": {
       "eaaG": 3.8,
       "bcaaG": 2.5,
@@ -3188,6 +3268,11 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=dymatize+all9+amino&tag=YOURTAG-20",
     "blurb": "10 g of all nine EAAs with a BCAA-heavy 7.2 g share per serving; one retailer lists it as discontinued, though the brand storefront still sells five flavors.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/dymatize-all9-amino.png",
+    "images": [
+      "https://dymatize-nutrition.myshopify.com/cdn/shop/products/all9amino_juicy_watermelon.png?v=1585311958",
+      "https://dymatize-nutrition.myshopify.com/cdn/shop/products/all9amino_fruit_fusion_rush.png?v=1585311972"
+    ],
     "metrics": {
       "eaaG": 10,
       "bcaaG": 7.2,
@@ -3245,6 +3330,11 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=jacked+factory+eaa+surge&tag=YOURTAG-20",
     "blurb": "Stim-free intra with 6.7 g Amino9 EAAs plus 2 g each of citrulline malate and taurine; the blend total is disclosed but not each amino, and the tub is only 20 servings.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/jacked-factory-eaa-surge.png",
+    "images": [
+      "https://www.jackedfactory.com/cdn/shop/files/eaa-surge-20-pineapple-front_0bad065a-f89e-40ac-81dc-05f732d48bb0.png?v=1755280613&width=1200",
+      "https://www.jackedfactory.com/cdn/shop/files/JF_D2C_EAA_20_01.png?v=1774449809&width=4000"
+    ],
     "metrics": {
       "eaaG": 6.7,
       "bcaaG": null,
@@ -3294,6 +3384,12 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=nutricost+eaa+powder&tag=YOURTAG-20",
     "blurb": "8 g of all nine EAAs at one of the lowest per-serving costs in the category; batch testing is by ISO-accredited labs rather than a sport-certification program.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/nutricost-eaa.jpg",
+    "imageOpaque": true,
+    "images": [
+      "https://nutricost.com/cdn/shop/files/NTC_EAA_BlueRaspberry_30SERV_20OZ_Front_Square_1800x1800.jpg?v=1738964098",
+      "https://nutricost.com/cdn/shop/files/NTC_EAA_POG_30SERV_20OZ_Front_Square_1800x1800.jpg?v=1770138766"
+    ],
     "metrics": {
       "eaaG": 8,
       "bcaaG": null,
@@ -3349,6 +3445,12 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=xtend+original+bcaa&tag=YOURTAG-20",
     "blurb": "Longtime intra-workout staple with a fully dosed 7 g BCAA panel plus glutamine and citrulline malate, though it covers only three of the nine essential amino acids.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/xtend-original-bcaa.png",
+    "imageOpaque": true,
+    "images": [
+      "https://cellucor.com/cdn/shop/files/XTEND_1144_Digital_Relabel_FlowThrough_Assets_PDPs_OnGreyBackground-XTEND-OG30-BRI.png?v=1771552623",
+      "https://cellucor.com/cdn/shop/files/XTEND_1144_Digital_Relabel_FlowThrough_Assets_PDPs_OnGreyBackground-XTEND-OG30-FI-Label.png?v=1776889586"
+    ],
     "metrics": {
       "eaaG": null,
       "bcaaG": 7,
@@ -3399,6 +3501,12 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=musclepharm+bcaa+3+1+2&tag=YOURTAG-20",
     "blurb": "Budget classic BCAA using an unconventional 3:1:2 ratio that weights valine over isoleucine; like all BCAA-only formulas it omits the six other essential aminos.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/musclepharm-bcaa-312.jpg",
+    "imageOpaque": true,
+    "images": [
+      "https://musclepharm.com/cdn/shop/files/BCAA_Fruit_Punch.jpg?v=1754064987&width=1800",
+      "https://musclepharm.com/cdn/shop/files/BCAA_Blue_Rasp.jpg?v=1754064987&width=1800"
+    ],
     "metrics": {
       "eaaG": null,
       "bcaaG": 6,
@@ -3446,6 +3554,11 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=optimum+nutrition+amino+energy&tag=YOURTAG-20",
     "blurb": "The one caffeinated pick here: 100 mg caffeine with a 5 g proprietary amino blend, making it closer to a light energy drink than a fully dosed EAA product.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/optimum-nutrition-amino-energy.png",
+    "images": [
+      "https://www.optimumnutrition.com/cdn/shop/files/on-1122241_Image_01.png?v=1761656281&width=2000",
+      "https://www.optimumnutrition.com/cdn/shop/files/on-1122232_Image_01.png?v=1761656281&width=2000"
+    ],
     "metrics": {
       "eaaG": null,
       "bcaaG": null,
@@ -3499,6 +3612,13 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=lmnt+electrolyte+drink+mix&tag=YOURTAG-20",
     "blurb": "Sodium-forward design: 1000 mg sodium with zero sugar targets heavy sweat replacement rather than carb-based rehydration.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/lmnt-drink-mix.webp",
+    "imageOpaque": true,
+    "images": [
+      "https://res.cloudinary.com/drinklmnt/image/upload/f_auto,q_auto/v1759900501/lmnt-citrus-salt-30ct-box_ux0v3u.webp",
+      "https://res.cloudinary.com/drinklmnt/image/upload/f_auto,q_auto/v1759900501/lmnt-citrus-salt-open-box-dark_uczoih.webp",
+      "https://res.cloudinary.com/drinklmnt/image/upload/f_auto,q_auto/v1759900502/lmnt-citrus-salt-pump-satiety_upwzxr.webp"
+    ],
     "metrics": {
       "sodiumMg": 1000,
       "potassiumMg": 200,
@@ -3555,6 +3675,14 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=liquid+iv+hydration+multiplier&tag=YOURTAG-20",
     "blurb": "Sugar-based ORS-style stick: 11 g of sugars alongside 500 mg sodium, the glucose-plus-sodium pairing used in oral rehydration formulas.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/liquid-iv-hydration-multiplier.jpg",
+    "imageOpaque": true,
+    "images": [
+      "https://cdn.shopify.com/s/files/1/1338/1013/files/HMO_PFC_16ct_PDP.jpg?v=1762182360",
+      "https://cdn.shopify.com/s/files/1/1338/1013/files/HMO_LL_16ct_PDP_5d06a7d4-5650-432a-9c54-78fc806aa73b.jpg?v=1762182393",
+      "https://cdn.shopify.com/s/files/1/1338/1013/files/Web_-_PDP_Images_-_Static_-_New_HM_Mango_-_Product_Only_-_Pouch_on_Beige_Background_-_2880x2880_8c6ae7c0-f5f9-4b2a-997a-37686529ac9e.png?v=1762182430",
+      "https://cdn.shopify.com/s/files/1/1338/1013/files/HMO_CC_VP_16ct_PDP.jpg?v=1762182365"
+    ],
     "metrics": {
       "sodiumMg": 500,
       "potassiumMg": 380,
@@ -3611,6 +3739,12 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=nuun+sport+electrolyte+tablets&tag=YOURTAG-20",
     "blurb": "Low-calorie dissolving-tablet format: 300 mg sodium and 1 g sugar per tablet suits lighter sessions and travel-friendly dosing.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/nuun-sport.png",
+    "images": [
+      "https://nuunlife.com/cdn/shop/files/Nuun_Tube_Upright_withTabs_Strawberry_lemonade_web.png?v=1744037007&width=800",
+      "https://nuunlife.com/cdn/shop/files/B018NZJ9YQ.PT02.jpg?v=1780507230&width=800",
+      "https://nuunlife.com/cdn/shop/files/B018NZJ9YQ.PT04.png?v=1780507263&width=800"
+    ],
     "metrics": {
       "sodiumMg": 300,
       "potassiumMg": 150,
@@ -3665,6 +3799,12 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=dripdrop+ors+electrolyte+powder&tag=YOURTAG-20",
     "blurb": "ORS-style ratio with less sugar than typical sports drinks: 7 g sugar with 330 mg sodium and added zinc per 10 g stick.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/dripdrop-ors.png",
+    "images": [
+      "https://dripdrop.com/cdn/shop/files/Pouch_30ct_Front16ozSticks_ZSPWatermelon.png?crop=center&height=1200&v=1783954560&width=1200",
+      "https://dripdrop.com/cdn/shop/files/Bold_Variety_-_32ct_-_Transparent.png?crop=center&height=1200&v=1763672888&width=1200",
+      "https://dripdrop.com/cdn/shop/files/DripDrop_Pouch_Image_V2_Vizit_Watermelon_-_32ct.png?crop=center&height=1200&v=1763766377&width=1200"
+    ],
     "metrics": {
       "sodiumMg": 330,
       "potassiumMg": 185,
@@ -3720,6 +3860,12 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=gatorlyte+electrolyte+beverage+powder&tag=YOURTAG-20",
     "blurb": "Highest magnesium in this set at 105 mg, with a five-electrolyte blend and a mid-pack 490 mg sodium plus 10 g sugar per stick.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/gatorlyte-rapid-rehydration.png",
+    "images": [
+      "https://www.datocms-assets.com/101859/1776960107-gatorlyte_powder_orange_sachet_pdp-hero_desktop_2026_3708x2780.png?auto=format&fit=max&w=3840",
+      "https://www.datocms-assets.com/101859/1776959992-gatorlyte_powder_orange_carton_pdpwhatyouget_desktop_2026_1812x2720.png?auto=format&fit=max&w=3840",
+      "https://www.datocms-assets.com/101859/1776959958-gatorlyte_orange_pdp_lifestyle_desktop_3708x2780.png?auto=format&fit=max&w=3840"
+    ],
     "metrics": {
       "sodiumMg": 490,
       "potassiumMg": 350,
@@ -3781,6 +3927,11 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=transparent+labs+hydrate+electrolyte&tag=YOURTAG-20",
     "blurb": "Zero-sugar electrolyte blend that layers 1 g taurine and coconut water powder on a 500 mg sodium base; Informed Choice tested per the brand page.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/transparent-labs-hydrate.png",
+    "images": [
+      "https://www.transparentlabs.com/cdn/shop/files/TL_Hydrate_40S_PM_1_3.png?v=1745607400&width=1946",
+      "https://www.transparentlabs.com/cdn/shop/files/peachmango40.jpg?v=1780945564&width=1946"
+    ],
     "metrics": {
       "sodiumMg": 500,
       "potassiumMg": 250,
@@ -3837,6 +3988,12 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=ultima+replenisher+electrolyte+powder&tag=YOURTAG-20",
     "blurb": "Potassium- and magnesium-leaning profile with only 55 mg sodium — an everyday flavored-water mix rather than a sweat-replacement formula.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/ultima-replenisher.jpg",
+    "imageOpaque": true,
+    "images": [
+      "https://www.ultimareplenisher.com/cdn/shop/files/Variety_Stickpacks.jpg?v=1743096987&width=1600",
+      "https://www.ultimareplenisher.com/cdn/shop/files/Original_Flavor_Stickpacks.jpg?v=1743096625&width=1600"
+    ],
     "metrics": {
       "sodiumMg": 55,
       "potassiumMg": 250,
@@ -3890,6 +4047,13 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=skratch+labs+hydration+sport+drink+mix&tag=YOURTAG-20",
     "blurb": "Endurance carb-mix profile: 19 g of sugar-based carbohydrate with 400 mg sodium, built for fueling plus fluid replacement on long efforts.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/skratch-hydration-sport-mix.jpg",
+    "imageOpaque": true,
+    "images": [
+      "https://www.skratchlabs.com/cdn/shop/files/hydration_sport_drink_mix_mango_front_of_bag_400mg_of_sodium.jpg?v=1774390853&width=800",
+      "https://www.skratchlabs.com/cdn/shop/files/WebsitePDPGalleryRefresh_SDM_LL_440g_01.jpg?v=1765569821&width=800",
+      "https://www.skratchlabs.com/cdn/shop/files/400mg_sodium_per_serving_variety_pack.jpg?v=1778354803&width=800"
+    ],
     "metrics": {
       "sodiumMg": 400,
       "potassiumMg": 50,
@@ -3943,6 +4107,12 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=tailwind+nutrition+endurance+fuel&tag=YOURTAG-20",
     "blurb": "All-in-one endurance fuel: 100 calories of dextrose and sucrose per scoop with modest electrolytes, meant to be scaled up per bottle on long efforts.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/tailwind-endurance-fuel.png",
+    "images": [
+      "https://tailwindnutrition.com/cdn/shop/files/TW_End_Family_Dauwaltermelon_2000x2000_d24ecffc-2a48-4feb-80f2-6d49cc1e4f4a_1500x.png?v=1779229566",
+      "https://tailwindnutrition.com/cdn/shop/files/TW_End_Family_Lemon_2000x2000_2f3edef0-6e55-43b7-b349-0ddad82064b7_1500x.png?v=1779229565",
+      "https://tailwindnutrition.com/cdn/shop/files/TW_End_Family_Naked_2000x2000_10286890-1c72-4953-a0ae-fcfd276d1da7_1500x.png?v=1779229565"
+    ],
     "metrics": {
       "sodiumMg": 303,
       "potassiumMg": 88,
@@ -4000,6 +4170,13 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=redmond+re-lyte+hydration+electrolyte+mix&tag=YOURTAG-20",
     "blurb": "Sodium-forward at 810 mg with 400 mg potassium and zero sugar; 60 servings per tub makes it one of the cheapest per-serving options in the high-sodium tier.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/redmond-re-lyte-hydration.jpg",
+    "imageOpaque": true,
+    "images": [
+      "https://living.redmond.com/cdn/shop/files/Re-lyteHydrationJars_NewLabel_AllFamily_Whitebackground_1024x1024.jpg?v=1717079208",
+      "https://living.redmond.com/cdn/shop/files/Grape_For_web_Front_7af57f43-2abb-4a05-8fb0-b4dab9212cb9.jpg?v=1770922504&width=1024",
+      "https://living.redmond.com/cdn/shop/files/Re-Lyte_Hydration_60-servings_jar_Lemon_Lime_Front_-_AMZ.jpg?v=1784269649&width=1024"
+    ],
     "metrics": {
       "sodiumMg": 810,
       "potassiumMg": 400,
@@ -4054,6 +4231,13 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=optimum+nutrition+gold+standard+whey&tag=YOURTAG-20",
     "blurb": "The long-running benchmark whey blend: isolate listed first, 24 g protein in a 31 g scoop, and a 73-serving 5 lb tub that keeps per-serving cost in the middle of the pack.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/on-gold-standard-whey.png",
+    "images": [
+      "https://www.optimumnutrition.com/cdn/shop/files/GSW_DRC_2lb_FOP.png?v=1776170438&width=2500",
+      "https://www.optimumnutrition.com/cdn/shop/files/GSW_DRC_5lb_FOP.png?v=1776173227&width=2500",
+      "https://www.optimumnutrition.com/cdn/shop/files/US_GSW_5LB_DELSTRAW_FOP.png?v=1784666447&width=2500",
+      "https://www.optimumnutrition.com/cdn/shop/files/US_GSW_5LB_BANANA_Main_Image.png?v=1777475395&width=2500"
+    ],
     "metrics": {
       "proteinG": 24,
       "servingG": 31,
@@ -4108,6 +4292,13 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=dymatize+iso100+hydrolyzed+whey+isolate&tag=YOURTAG-20",
     "blurb": "A hydrolyzed whey isolate that hits 25 g protein in a 32 g scoop with about 1 g of carbs — one of the leanest macro profiles in the category, priced accordingly.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/dymatize-iso100.png",
+    "images": [
+      "https://dymatize.imgix.net/production/products/DYMA_ISO100_MCC_20srv.png",
+      "https://dymatize.imgix.net/production/products/dym0001-8_ISO100_20s_PCThumbnail_540x678_GormetVanilla.jpg",
+      "https://dymatize.imgix.net/production/products/dym0001-8_ISO100_20s_PCThumbnail_540x678_GormetChocolate.jpg",
+      "https://dymatize.imgix.net/production/products/iso_salted_thumb.png"
+    ],
     "metrics": {
       "proteinG": 25,
       "servingG": 32,
@@ -4160,6 +4351,13 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=transparent+labs+grass+fed+whey+protein+isolate&tag=YOURTAG-20",
     "blurb": "Short ingredient list, Informed Choice and Informed Protein certifications on the brand page, and published third-party test results — you pay a premium for the paperwork.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/transparent-labs-grass-fed-whey-isolate.png",
+    "images": [
+      "https://www.transparentlabs.com/cdn/shop/files/01_chocolate.png?v=1778514112&width=1920",
+      "https://www.transparentlabs.com/cdn/shop/files/01_vanilla.png?v=1778514138&width=1920",
+      "https://www.transparentlabs.com/cdn/shop/files/02_unflav.png?v=1778514249&width=1920",
+      "https://www.transparentlabs.com/cdn/shop/files/01_strawberry.png?v=1778514276&width=1920"
+    ],
     "metrics": {
       "proteinG": 28,
       "servingG": 32,
@@ -4216,6 +4414,12 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=ascent+native+fuel+whey+protein&tag=YOURTAG-20",
     "blurb": "Informed Sport certification is verified on the brand page, and the formula skips artificial sweeteners — a clean pick for tested athletes at a mid-premium price.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/ascent-native-fuel-whey.png",
+    "images": [
+      "https://www.ascentprotein.com/cdn/shop/products/whey-van-2lb-main.png?v=1695075692&width=1200",
+      "https://www.ascentprotein.com/cdn/shop/products/whey-van-4lb-main.png?v=1695075692&width=1200",
+      "https://www.ascentprotein.com/cdn/shop/products/whey-cpb-2lb-main.png?v=1693322324&width=1200"
+    ],
     "metrics": {
       "proteinG": 25,
       "servingG": 33,
@@ -4266,6 +4470,12 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=optimum+nutrition+gold+standard+casein&tag=YOURTAG-20",
     "blurb": "The most widely available micellar casein: 24 g slow-digesting protein per 34 g scoop, thicker in water than whey by design, at a noticeably higher cost per serving.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/on-gold-standard-casein.png",
+    "images": [
+      "https://www.optimumnutrition.com/cdn/shop/files/Casein_Van_4lb_FOP.png?v=1776366533&width=2500",
+      "https://www.optimumnutrition.com/cdn/shop/files/US_GS_Casein_4lb_Chocolate_FOP.png?v=1780494368&width=2500",
+      "https://www.optimumnutrition.com/cdn/shop/files/on-1116316_Image_01_62f70313-b8a4-4c2c-ab3f-1049763310bd.png?v=1761914250&width=2000"
+    ],
     "metrics": {
       "proteinG": 24,
       "servingG": 34,
@@ -4317,6 +4527,11 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=orgain+organic+protein+plant+based+powder&tag=YOURTAG-20",
     "blurb": "The grocery-store default for vegan protein: USDA Organic, 21 g protein from a four-source plant blend, and a reformulated sweetener system that dropped erythritol.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/orgain-organic-protein.webp",
+    "images": [
+      "https://orgain.com/cdn/shop/files/851770003179-v13-Orgain-ProteinPowder-2.03lb-Chocolate-20240311-Front-HIRES-web_1200px.webp",
+      "https://orgain.com/cdn/shop/files/851770003919-v8-Orgain-ProteinPowder-1.02lb-Label-Chocolate-20240311-Front-HIRES-web_1200px.webp"
+    ],
     "metrics": {
       "proteinG": 21,
       "servingG": 46,
@@ -4373,6 +4588,12 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=vega+sport+premium+protein&tag=YOURTAG-20",
     "blurb": "The highest per-serving protein of the plant picks at 30 g, with NSF Certified for Sport verification on the brand page — the vegan option for drug-tested athletes.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/vega-sport-premium-protein.png",
+    "images": [
+      "https://myvega.com/cdn/shop/files/Vega_Performance_Protein_Recovery_Vanilla_4lb_1.png?width=1200",
+      "https://myvega.com/cdn/shop/files/Vega_Performance_Protein_Recovery_Chocolate_4lb_1.png?width=1200",
+      "https://myvega.com/cdn/shop/files/Vega_Performance_Protein_Recovery_Vanilla_29oz.png?width=1200"
+    ],
     "metrics": {
       "proteinG": 30,
       "servingG": 44,
@@ -4480,6 +4701,10 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=now+sports+whey+protein+isolate+unflavored&tag=YOURTAG-20",
     "blurb": "A two-ingredient isolate — whey isolate plus sunflower lecithin — with 25 g protein in a 28 g scoop and 81 servings per 5 lb tub, ideal for smoothie mixers who don't want sweeteners.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/now-sports-whey-protein-isolate.png",
+    "images": [
+      "https://www.nowfoods.com/sites/default/files/2025-11/2172_v13.png"
+    ],
     "metrics": {
       "proteinG": 25,
       "servingG": 28,
@@ -4527,6 +4752,13 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=nutricost+whey+protein+concentrate&tag=YOURTAG-20",
     "blurb": "The lowest cost per serving on this list: 25 g protein per scoop across a 63-serving 5 lb bag, with independent lab testing claimed by the brand (not an NSF or Informed Sport certification).",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/nutricost-whey-protein-concentrate.jpg",
+    "imageOpaque": true,
+    "images": [
+      "https://nutricost.com/cdn/shop/files/NTC_WPC_Chocolate_2LB_2750CC_Front_Square_906cc793-3c2c-497a-ac90-c8265275b423.jpg?width=1200",
+      "https://nutricost.com/cdn/shop/files/NTC_WPC_Vanilla_2LB_2750CC_Front_Square_b1e55d34-9c12-4401-9bcb-1f5c29ef1de9.jpg?width=1200",
+      "https://nutricost.com/cdn/shop/files/NTC_WPC_Unflavored_2LB_2750CC_Front_Square.jpg?width=1200"
+    ],
     "metrics": {
       "proteinG": 25,
       "servingG": 36,

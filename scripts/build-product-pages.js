@@ -17,7 +17,7 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const OUT = path.join(ROOT, "products");
-const VERSION = "20260729a"; // keep in sync with the ?v= on the other pages
+const VERSION = "20260729b"; // keep in sync with the ?v= on the other pages
 
 // Set this to the real origin at domain time (see README "Sitemap & domain").
 // Absolute-URL metadata — canonical, og:url, BreadcrumbList — is emitted only
@@ -275,9 +275,14 @@ function tubSVG(p) {
    background-removed render (same art as the hub card); the rest are hotlinked
    from the retailer's own CDN — never re-hosted. Clicking the main image (or
    the zoom control) opens a full-screen lightbox. */
+// The locally stored render is the preferred first slide, but only products
+// that actually have one get it — otherwise the gallery opened on a 404.
 function slidesOf(p) {
   const name = fullNameOf(p);
-  const slides = [{ src: `../images/products/${p.id}.png`, alt: `${name} — product render` }];
+  const slides = [];
+  if (fs.existsSync(path.join(ROOT, "images", "products", `${p.id}.png`))) {
+    slides.push({ src: `../images/products/${p.id}.png`, alt: `${name} — product render` });
+  }
   for (const u of p.images) slides.push({ src: u, alt: `${name} — retailer photo` });
   return slides;
 }
@@ -293,7 +298,7 @@ function mediaHTML(p) {
             ${slides.map((s, i) => `<button type="button" class="sc-gallery-thumb" data-src="${esc(s.src)}" data-alt="${esc(s.alt)}" aria-current="${i === 0 ? "true" : "false"}" aria-label="Show image ${i + 1} of ${slides.length}"><img src="${esc(s.src)}" alt="" loading="lazy" referrerpolicy="no-referrer"></button>`).join("\n            ")}
           </div>`
     : "";
-  return `<figure class="sc-pdp-media sc-pdp-media-photo">
+  return `<figure class="sc-pdp-media sc-pdp-media-photo${p.imageOpaque ? " sc-art-plate" : ""}">
             <img id="sc-gallery-main" src="${esc(slides[0].src)}" alt="${esc(slides[0].alt)}" referrerpolicy="no-referrer">
             <button type="button" class="sc-zoom-btn" id="sc-zoom-btn" aria-label="Zoom image">&#10530;<span> Zoom</span></button>
           </figure>${thumbs}

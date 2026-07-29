@@ -25,6 +25,7 @@ Built with vanilla HTML, CSS, and JavaScript. No frameworks, no build step. The 
 | `data/products.js` | **The single source of truth.** Every product object across all categories, plus the schema documented in a header comment. `FEATURED_IDS` picks the three "places to start" on the homepage. |
 | `scripts/build-product-pages.js` | Generates one static page per product into `products/`, plus `sitemap.xml`. Category-aware. Re-run after any change to `data/products.js`, `js/categories.js`, or `js/doses.js`: `node scripts/build-product-pages.js`. |
 | `scripts/integrate-research.js` | Validates researched product JSON (schema, badges, claim language, affiliate URL form) and appends it to `data/products.js`. |
+| `scripts/integrate-images.js` | Takes researched image JSON, downloads each product's lead image into `images/products/`, and writes `imageUrl` / `imageOpaque` / `images` into the entry. Re-checks that every URL really downloads as an image and derives `imageOpaque` from the file's alpha channel. Skips products that already have imagery, so it is safe to re-run: `node scripts/integrate-images.js <json-dir>`. |
 | `README.md` | This file. |
 
 Script order matters: every page that renders products loads `data/products.js` first, `js/categories.js` second, and `js/app.js` last. `disclosure.html` and `disclaimer.html` load only `js/app.js`, which is enough to keep the nav's saved counter accurate; it no-ops when `PRODUCTS` is undefined. `js/doses.js` is **not** loaded in the browser — it is a build-time reference table.
@@ -85,7 +86,9 @@ A few rules that keep the site honest and legally clean:
 
 To change which products appear in the homepage "places to start," edit `FEATURED_IDS` (and the matching `START_META` labels in `js/app.js`). The database preview rows come from `PREVIEW_IDS` in `js/app.js`.
 
-**Product imagery.** Tiles show a neutral monogram placeholder until a product has an `imageUrl`. Set the optional `imageUrl` field in `data/products.js` to an affiliate-approved image (e.g., via the Amazon PA-API) and the tile, saved-list column, and product page render it automatically. Do not use manufacturer artwork without permission, and never invent packaging. As of this writing 38 of 78 entries have real imagery and the other 40 render the placeholder, which is the most visible unfinished edge on the site.
+**Product imagery.** Tiles show a neutral monogram placeholder until a product has an `imageUrl`. The lead image is stored locally in `images/products/<id>.<ext>` and the seller's own gallery URLs go in `images`, which feeds the product page's gallery and lightbox. `imageOpaque: true` marks a photo shot on a white sweep so the art area switches to the paper surface behind it — otherwise a white product shot reads as a white slab on the dark card.
+
+Add imagery by writing per-category JSON (`[{ "id": …, "images": […], "source": … }]`) and running `node scripts/integrate-images.js <json-dir>`, then regenerating the product pages. Every URL must be a real, checked image published by the brand or retailer — never invent or pattern-guess one, and never invent packaging.
 
 **Studied-dose bars.** Every product page ends with "This label against the research", drawn from `js/doses.js`. An ingredient only gets a bar when the research has settled on an amount; anything else carries the explanatory note alone. If you add an ingredient the catalog has not used before and it has a settled studied range, add an entry there and re-run the build — otherwise the row simply does not appear, which is the correct failure mode.
 
