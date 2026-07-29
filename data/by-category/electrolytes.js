@@ -609,5 +609,1706 @@ var PRODUCTS = [
         "label": "Redmond product page (supplement facts, 60 servings)"
       }
     ]
+  },
+  {
+    "id": "gatorade-endurance-formula-powder",
+    "name": "Endurance Formula Powder",
+    "brand": "Gatorade",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Sodium",
+        "dose": "300 mg",
+        "clinicalNote": "Sodium is the primary electrolyte lost in sweat and supports fluid balance and normal nerve and muscle function."
+      },
+      {
+        "name": "Potassium",
+        "dose": "140 mg",
+        "clinicalNote": "Potassium works alongside sodium to help maintain fluid balance inside and outside cells."
+      }
+    ],
+    "cautions": [
+      "Contains 13 g of sugar per serving from added sugar and fructose.",
+      "Roughly double the sodium of standard Gatorade Thirst Quencher powder, formulated for longer training sessions with heavier sweat losses."
+    ],
+    "servings": 38,
+    "priceRange": "$",
+    "flavorsNote": "Sold in Lemon-Lime, Orange, Cherry, and Watermelon, sweetened with sugar and fructose rather than artificial sweeteners.",
+    "affiliateUrl": "https://www.amazon.com/s?k=gatorade+endurance+formula+powder&tag=YOURTAG-20",
+    "blurb": "Roughly double the sodium and triple the potassium of standard Gatorade powder, aimed at longer sessions with heavier sweat losses rather than casual sipping.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/gatorade-endurance-formula-powder.png",
+    "images": [
+      "https://www.datocms-assets.com/101859/1692392101-gatorade_endurance_formula_lemonlime_pdpwhat_desktop.png?auto=format&fit=max&w=3840",
+      "https://www.datocms-assets.com/101859/1691723715-10052000322825_gatorade_endurance_formula_lemonlime_producttile_2680x3344.png?ar64=MTox&fit=crop&fp-z=1.4&auto=format&w=3840",
+      "https://www.datocms-assets.com/101859/1691723618-10052000322801_gatorade_endurance_formula_orange_producttile_2680x3344.png?ar64=MTox&fit=crop&fp-z=1.4&auto=format&w=256"
+    ],
+    "metrics": {
+      "sodiumMg": 300,
+      "potassiumMg": 140,
+      "magnesiumMg": null,
+      "sugarG": 13
+    },
+    "sources": [
+      {
+        "url": "https://www.gatorade.com/powders/endurance-formula/lemon-lime-powder-32-oz-canister",
+        "label": "Gatorade — official product page"
+      },
+      {
+        "url": "https://world.openfoodfacts.org/product/0052000322828/endurance-formula-powder-lemon-lime-gatorade",
+        "label": "Open Food Facts — label transcription"
+      }
+    ]
+  },
+  {
+    "id": "pedialyte-electrolyte-powder",
+    "name": "Electrolyte Powder Packs",
+    "brand": "Pedialyte",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Sodium",
+        "dose": "260 mg",
+        "clinicalNote": "Sodium supports normal fluid balance and is the electrolyte most concentrated in this formula."
+      },
+      {
+        "name": "Potassium",
+        "dose": "180 mg",
+        "clinicalNote": "Potassium supports normal muscle and nerve function alongside sodium."
+      },
+      {
+        "name": "Chloride",
+        "dose": "290 mg",
+        "clinicalNote": "Chloride pairs with sodium to help the body maintain normal fluid balance."
+      }
+    ],
+    "cautions": [
+      "Contains 6 g of added sugar per packet.",
+      "Formulated for general and pediatric hydration support; check with a doctor before use in infants under 1 year."
+    ],
+    "servings": 8,
+    "priceRange": "$$",
+    "flavorsNote": "Variety pack includes Fruit Punch, Grape, Apple, and Strawberry, sweetened with dextrose plus sucralose and acesulfame potassium.",
+    "affiliateUrl": "https://www.amazon.com/s?k=pedialyte+electrolyte+powder+packets&tag=YOURTAG-20",
+    "blurb": "A lower-sodium, lower-potassium formulation than Pedialyte Sport, dosed for everyday hydration support rather than heavy-sweat athletic use.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/pedialyte-electrolyte-powder.png",
+    "images": [
+      "https://www.pedialyte.com/products/powder-packs/grape/_jcr_content/root/container/columncontrol/tab_item_no_1/image_copy_copy.coreimg.png/1756488181417/powder-packs-grape-317x319-v1.png",
+      "https://www.pedialyte.com/products/powder-packs/grape/_jcr_content/root/container/columncontrol/tab_item_no_1/columncontrol_copy_c/tab_item_no_0/image_copy.coreimg.jpeg/1691150365823/pedialyte-pdp-classic-powderpacks-grape-110x110.jpeg"
+    ],
+    "metrics": {
+      "sodiumMg": 260,
+      "potassiumMg": 180,
+      "magnesiumMg": null,
+      "sugarG": 6
+    },
+    "sources": [
+      {
+        "url": "https://abbottstore.com/infant-and-child/pedialyte/pedialyte-powder-packs/pedialyte-powderpacks/pedialyte-powder-packs-variety-8-5g-stickpacks-8-pack-56090p8.html",
+        "label": "Abbott Store — official Pedialyte retailer, Nutrition Facts"
+      },
+      {
+        "url": "https://giantfood.com/groceries/health-beauty/digestive-health-nausea/electrolyte-solution/pedialyte-variety-pack-electrolyte-powder-packets-8-ct-24-oz-box.html",
+        "label": "Giant Food — product listing with Nutrition Facts"
+      }
+    ]
+  },
+  {
+    "id": "pedialyte-sport-powder-packs",
+    "name": "Sport Powder Packs",
+    "brand": "Pedialyte",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Sodium",
+        "dose": "650 mg",
+        "clinicalNote": "Sodium is the electrolyte lost in the largest amount through sweat during exercise."
+      },
+      {
+        "name": "Potassium",
+        "dose": "600 mg",
+        "clinicalNote": "Potassium supports normal muscle contraction and fluid balance alongside sodium."
+      },
+      {
+        "name": "Magnesium",
+        "dose": "55 mg",
+        "clinicalNote": "Magnesium supports normal muscle and nerve function as part of the electrolyte balance."
+      }
+    ],
+    "cautions": [
+      "Contains 7 g of added sugar per packet.",
+      "Sodium and chloride levels are higher than standard hydration drinks; not intended for sodium-restricted diets without medical guidance."
+    ],
+    "servings": 36,
+    "priceRange": "$$",
+    "flavorsNote": "Available in Fruit Punch, Lemon-Lime, and Berry Freeze, sweetened with dextrose plus sucralose and acesulfame potassium.",
+    "affiliateUrl": "https://www.amazon.com/s?k=pedialyte+sport+powder+packs&tag=YOURTAG-20",
+    "blurb": "Delivers roughly 2.5 times the sodium of Pedialyte's classic powder, positioning it for athletes with heavier sweat losses rather than everyday sipping.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/pedialyte-sport-powder-packs.png",
+    "images": [
+      "https://www.pedialyte.com/products/sport-powder-packs/fruit-punch/_jcr_content/root/container/columncontrol/tab_item_no_1/image_copy_copy_copy.coreimg.png/1756489259316/pedialyte-sport-powder-pack-fruit-punch-317-x-320.png",
+      "https://www.pedialyte.com/products/sport-powder-packs/lemon-lime/_jcr_content/root/container/columncontrol/tab_item_no_1/image_copy_copy_copy.coreimg.png/1756489770398/pedialyte-sport-powder-pack-lemon-lime-317-x-320.png",
+      "https://www.pedialyte.com/products/sport-powder-packs/lemon-lime/_jcr_content/root/container/columncontrol/tab_item_no_1/columncontrol_copy_c/tab_item_no_0/image_copy.coreimg.jpeg/1691150034895/pedialyte-pdp-sport-powderpacks-lemonlime-110x110.jpeg"
+    ],
+    "metrics": {
+      "sodiumMg": 650,
+      "potassiumMg": 600,
+      "magnesiumMg": 55,
+      "sugarG": 7
+    },
+    "sources": [
+      {
+        "url": "https://abbottstore.com/infant-and-child/pedialyte/pedialyte-powder-packs/pedialyte-sport-powder/pedialyte-sport-fruit-punch-powder-packs-0-48-oz-stickpack-36-count-67848.html",
+        "label": "Abbott Store — official Pedialyte retailer, Nutrition Facts"
+      }
+    ]
+  },
+  {
+    "id": "propel-powder-packets",
+    "name": "Powder Packets",
+    "brand": "Propel",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Sodium",
+        "dose": "260 mg",
+        "clinicalNote": "Sodium supports normal fluid balance and is the main electrolyte in this formula."
+      },
+      {
+        "name": "Potassium",
+        "dose": "80 mg",
+        "clinicalNote": "Potassium supports normal muscle and nerve function alongside sodium."
+      },
+      {
+        "name": "Vitamin C & E blend",
+        "dose": "with B3, B5, B6, B12",
+        "clinicalNote": "Added vitamins support normal energy metabolism; they are not electrolytes themselves."
+      }
+    ],
+    "cautions": [
+      "Zero sugar and zero calories; sweetened with acesulfame potassium and sucralose rather than a carbohydrate source.",
+      "Lower sodium and potassium per serving than most dedicated electrolyte mixes in this category."
+    ],
+    "servings": 50,
+    "priceRange": "$",
+    "flavorsNote": "Available in Berry, Grape, Lemon, Kiwi-Strawberry, and Mango, all zero-sugar and sweetened with acesulfame potassium and sucralose.",
+    "affiliateUrl": "https://www.amazon.com/s?k=propel+powder+packets+electrolyte&tag=YOURTAG-20",
+    "blurb": "A zero-sugar, zero-calorie electrolyte mix built around added B-vitamins and vitamins C and E, with lower sodium and potassium than most competitors in this set.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/propel-powder-packets.png",
+    "images": [
+      "https://www.datocms-assets.com/101859/1776347345-propel_powder_berry_pdpwhatyouget_desktop_2026_1812x2720.png?auto=format&fit=max&w=3840",
+      "https://www.datocms-assets.com/101859/1776281628-propel_powder_berry_sachet_producttile_2026_2680x3344.png?ar64=MTox&fit=crop&fp-z=1.4&auto=format&w=256"
+    ],
+    "metrics": {
+      "sodiumMg": 260,
+      "potassiumMg": 80,
+      "magnesiumMg": null,
+      "sugarG": 0
+    },
+    "sources": [
+      {
+        "url": "https://www.gatorade.com/powders/propel/berry-single-serve-sticks",
+        "label": "Propel (Gatorade) — official product page"
+      }
+    ]
+  },
+  {
+    "id": "bodyarmor-flash-iv-electrolyte-sticks",
+    "name": "Flash I.V. Electrolyte Drink Mix Sticks",
+    "brand": "BodyArmor",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Sodium",
+        "dose": "510 mg",
+        "clinicalNote": "Sodium supports normal fluid balance and is a major electrolyte lost through sweat."
+      },
+      {
+        "name": "Potassium",
+        "dose": "700 mg",
+        "clinicalNote": "Potassium supports normal muscle contraction and fluid balance alongside sodium."
+      },
+      {
+        "name": "Magnesium",
+        "dose": "65 mg",
+        "clinicalNote": "Magnesium supports normal muscle and nerve function as part of electrolyte balance."
+      },
+      {
+        "name": "Calcium",
+        "dose": "80 mg",
+        "clinicalNote": "Calcium plays a role in normal muscle contraction alongside the other electrolytes here."
+      }
+    ],
+    "cautions": [
+      "Zero grams of sugar; sweetened with stevia leaf extract, and formulated with coconut water powder.",
+      "This Lemon Lime variety is caffeine-free, but the Blue Raspberry flavor in this line contains caffeine — check the label before buying."
+    ],
+    "servings": 6,
+    "priceRange": "$$",
+    "flavorsNote": "Available in Lemon Lime, Tropical Punch, Strawberry Kiwi, and Blue Raspberry; only Blue Raspberry contains caffeine.",
+    "affiliateUrl": "https://www.amazon.com/s?k=bodyarmor+flash+iv+electrolyte+drink+mix+sticks&tag=YOURTAG-20",
+    "blurb": "Carries the highest total electrolyte load in this lineup, led by 700 mg potassium and 510 mg sodium per stick, in a zero-sugar powder built around coconut water powder.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "sodiumMg": 510,
+      "potassiumMg": 700,
+      "magnesiumMg": 65,
+      "sugarG": 0
+    },
+    "sources": [
+      {
+        "url": "https://foodlion.com/groceries/beverages/drink-mixes-water-enhancers/more-drink-mixes/bodyarmor-flash-iv-lemon-lime-electrolyte-drink-mix-6-ct-15-oz-box.html",
+        "label": "Food Lion — product listing with Nutrition Facts"
+      }
+    ]
+  },
+  {
+    "id": "emergen-c-hydration-plus",
+    "name": "Hydration+ Sports Drink Mix",
+    "brand": "Emergen-C",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Potassium",
+        "dose": "400 mg",
+        "clinicalNote": "Potassium supports normal muscle and nerve function and fluid balance."
+      },
+      {
+        "name": "Sodium",
+        "dose": "160 mg",
+        "clinicalNote": "Sodium supports normal fluid balance and is lost through sweat during activity."
+      },
+      {
+        "name": "Magnesium",
+        "dose": "120 mg",
+        "clinicalNote": "Magnesium supports normal muscle and nerve function as part of electrolyte balance."
+      },
+      {
+        "name": "Vitamin C",
+        "dose": "250 mg",
+        "clinicalNote": "Vitamin C is an antioxidant that supports normal immune system function."
+      }
+    ],
+    "cautions": [
+      "Contains 5 g total sugars per packet, including 4 g added sugar.",
+      "Also supplies 384 mg phosphorus and 100 mg calcium per packet — factor this in if you track total mineral intake."
+    ],
+    "servings": 18,
+    "priceRange": "$$",
+    "flavorsNote": "Sold in Orange Spritz and Raspberry Splash, sweetened with a small amount of added sugar plus stevia leaf extract.",
+    "affiliateUrl": "https://www.amazon.com/s?k=emergen-c+hydration+plus+drink+mix&tag=YOURTAG-20",
+    "blurb": "Leads this set on magnesium disclosure at 120 mg per packet, paired with a 250 mg vitamin C dose that's unusually high for a hydration mix.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/emergen-c-hydration-plus.png",
+    "imageOpaque": true,
+    "images": [
+      "https://i-cf65.ch-static.com/content/dam/cf-consumer-healthcare/bp-emergenc/en_US/products/hydration-category.png?auto=format"
+    ],
+    "metrics": {
+      "sodiumMg": 160,
+      "potassiumMg": 400,
+      "magnesiumMg": 120,
+      "sugarG": 5
+    },
+    "sources": [
+      {
+        "url": "https://www.emergenc.com/content/dam/cf-consumer-healthcare/bp-emergenc/en_US/src/pdfs/lbl-00000641-web-ready-emergen-c-hydration+orange-spritz-(ve.pdf",
+        "label": "Emergen-C — official Nutrition Facts label PDF"
+      }
+    ]
+  },
+  {
+    "id": "trioral-oral-rehydration-salts",
+    "name": "Oral Rehydration Salts",
+    "brand": "Trioral",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Sodium",
+        "dose": "1725 mg (75 mEq) per packet as mixed",
+        "clinicalNote": "Sodium supports fluid balance and is the electrolyte this formula is built around replacing."
+      },
+      {
+        "name": "Potassium",
+        "dose": "782 mg (20 mEq) per packet as mixed",
+        "clinicalNote": "Potassium supports normal muscle and nerve function alongside sodium."
+      },
+      {
+        "name": "Glucose",
+        "dose": "13.5 g per packet",
+        "clinicalNote": "Glucose is included at a WHO-specified ratio to support intestinal absorption of sodium."
+      }
+    ],
+    "cautions": [
+      "Mix the full packet with exactly 1 liter of water and discard any unused solution after 24 hours.",
+      "Delivers roughly 1,725 mg sodium and 782 mg potassium once reconstituted — meant to be sipped gradually across the day, not consumed as a single dose.",
+      "Consult a healthcare provider before use for infants, or for kidney, heart, or other conditions affected by sodium and potassium intake."
+    ],
+    "servings": 50,
+    "priceRange": "$$",
+    "flavorsNote": "Unflavored powder with no artificial sweeteners, flavors, colors, or preservatives.",
+    "affiliateUrl": "https://www.amazon.com/s?k=trioral+oral+rehydration+salts&tag=YOURTAG-20",
+    "blurb": "An unflavored, WHO-formula oral rehydration powder with higher sodium and potassium per liter than typical sports drinks; each packet is designed to be sipped across a day rather than taken as one serving.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/trioral-oral-rehydration-salts.jpg",
+    "imageOpaque": true,
+    "images": [
+      "https://trioralors.com/wp-content/uploads/2023/01/teaser.jpg"
+    ],
+    "metrics": {
+      "sodiumMg": 1725,
+      "potassiumMg": 782,
+      "magnesiumMg": null,
+      "sugarG": 13.5
+    },
+    "sources": [
+      {
+        "url": "https://trioralors.com/",
+        "label": "TRIORAL — official product site"
+      },
+      {
+        "url": "https://cdn.ymaws.com/oley.org/resource/resmgr/ors_recipes/ORS_recipes_handout.pdf",
+        "label": "The Oley Foundation — oral rehydration solution composition reference"
+      }
+    ]
+  },
+  {
+    "id": "vitalyte-electrolyte-replacement",
+    "name": "Electrolyte Replacement Drink Mix",
+    "brand": "Vitalyte",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Sodium",
+        "dose": "135 mg",
+        "clinicalNote": "Sodium supports normal fluid balance and is lost through sweat during exercise."
+      },
+      {
+        "name": "Potassium",
+        "dose": "193 mg",
+        "clinicalNote": "Potassium supports normal muscle and nerve function alongside sodium."
+      },
+      {
+        "name": "Magnesium",
+        "dose": "3 mg",
+        "clinicalNote": "Magnesium is present in a minor amount here compared with the sodium and potassium doses."
+      }
+    ],
+    "cautions": [
+      "Contains 21 g of added sugar per serving from glucose and fructose.",
+      "Lower sodium and potassium per serving than several rival electrolyte mixes in this category."
+    ],
+    "servings": 40,
+    "priceRange": "$",
+    "flavorsNote": "Available in Orange, Lemon, Grape, Fruit Punch, and Cool Citrus, sweetened primarily with glucose and fructose rather than artificial sweeteners.",
+    "affiliateUrl": "https://www.amazon.com/s?k=vitalyte+electrolyte+replacement+drink+mix&tag=YOURTAG-20",
+    "blurb": "A glucose-and-fructose-sweetened mix with a sodium-to-potassium ratio the brand designs to echo blood plasma, though its 21 g sugar per serving is among the highest in this set.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/vitalyte-electrolyte-replacement.jpg",
+    "imageOpaque": true,
+    "images": [
+      "https://vitalyte.com/cdn/shop/files/webmain1.jpg",
+      "https://vitalyte.com/cdn/shop/files/71TOF8t7MML._AC_SL1500.jpg"
+    ],
+    "metrics": {
+      "sodiumMg": 135,
+      "potassiumMg": 193,
+      "magnesiumMg": 3,
+      "sugarG": 21
+    },
+    "sources": [
+      {
+        "url": "https://www.hydrationdepot.com/vitalyte-natural-grape-5-gallon-electrolyte-replacement-stand-up-pouch.html",
+        "label": "Hydration Depot — product listing with Nutrition Facts"
+      },
+      {
+        "url": "https://vitalyte.com/blogs/news/electrolyte-drink-mix-the-complete-science-based-guide-from-50-years-of-athlete-testing",
+        "label": "Vitalyte — official electrolyte content reference"
+      }
+    ]
+  },
+  {
+    "id": "prime-hydration-plus-sticks",
+    "name": "Hydration Zero Sugar Stick Packs",
+    "brand": "Prime",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Potassium",
+        "dose": "700 mg",
+        "clinicalNote": "Potassium supports normal muscle and nerve function and fluid balance."
+      },
+      {
+        "name": "Magnesium",
+        "dose": "124 mg",
+        "clinicalNote": "Magnesium supports normal muscle and nerve function as part of electrolyte balance."
+      },
+      {
+        "name": "Sodium",
+        "dose": "40 mg",
+        "clinicalNote": "Sodium supports normal fluid balance, though the dose here is modest compared with potassium."
+      }
+    ],
+    "cautions": [
+      "Only 40 mg sodium per stick — among the lowest in this category, so it may not fully replace sodium lost through heavy sweating.",
+      "Contains coconut water concentrate; the label carries a tree nut allergen statement for coconut."
+    ],
+    "servings": 6,
+    "priceRange": "$$",
+    "flavorsNote": "Available in Tropical Punch, Ice Pop, Blue Raspberry, and Meta Moon, sweetened with sucralose and zero added sugar.",
+    "affiliateUrl": "https://www.amazon.com/s?k=prime+hydration+stick+packs+electrolyte&tag=YOURTAG-20",
+    "blurb": "Leans heavily on potassium and magnesium at 700 mg and 124 mg per stick, while sodium sits at just 40 mg — the inverse ratio of most electrolyte mixes in this category.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/prime-hydration-plus-sticks.png",
+    "images": [
+      "https://drinkprime.com/cdn/shop/files/PRIME_stick_16serve_gussted_US_BerryCitrus_0000_1000x.png?v=1779132448",
+      "https://drinkprime.com/cdn/shop/files/PRIME_stick_16serve_gussted_US_OceanCherry_0000_1000x.png?v=1779132384"
+    ],
+    "metrics": {
+      "sodiumMg": 40,
+      "potassiumMg": 700,
+      "magnesiumMg": 124,
+      "sugarG": 2
+    },
+    "sources": [
+      {
+        "url": "https://www.heb.com/product-detail/prime-hydration-zero-added-sugar-stick-packs-tropical-punch/10247035",
+        "label": "H-E-B — product listing with Nutrition Facts"
+      }
+    ]
+  },
+  {
+    "id": "zipfizz-energy-drink-mix",
+    "name": "Energy Drink Mix",
+    "brand": "Zipfizz",
+    "category": "electrolytes",
+    "stimFree": false,
+    "badges": [
+      "Low Stim",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 100,
+    "keyIngredients": [
+      {
+        "name": "Potassium",
+        "dose": "950 mg",
+        "clinicalNote": "Potassium supports normal muscle and nerve function and fluid balance."
+      },
+      {
+        "name": "Caffeine (green tea leaf extract + guarana)",
+        "dose": "100 mg",
+        "clinicalNote": "Caffeine is commonly used to support alertness and reduce perceived effort during activity."
+      },
+      {
+        "name": "Magnesium",
+        "dose": "100 mg",
+        "clinicalNote": "Magnesium supports normal muscle and nerve function as part of electrolyte balance."
+      },
+      {
+        "name": "Sodium",
+        "dose": "70 mg",
+        "clinicalNote": "Sodium supports normal fluid balance, though the dose here is modest compared with potassium."
+      }
+    ],
+    "cautions": [
+      "Contains 100 mg caffeine from green tea leaf extract and guarana, about the same as a cup of coffee.",
+      "950 mg potassium per serving is the highest dose in this category; consult a doctor if you take potassium-sparing medication or have kidney disease.",
+      "Sweetened with sucralose; zero sugar."
+    ],
+    "servings": 20,
+    "priceRange": "$$",
+    "flavorsNote": "Sold in 20+ flavors including Grape, Citrus, and Pink Lemonade, sweetened with sucralose rather than sugar.",
+    "affiliateUrl": "https://www.amazon.com/s?k=zipfizz+energy+drink+mix+electrolyte&tag=YOURTAG-20",
+    "blurb": "Functions more like an energy drink than a pure hydration mix, pairing 100 mg caffeine with the highest potassium dose, 950 mg, of any product in this set.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/zipfizz-energy-drink-mix.png",
+    "images": [
+      "https://zipfizz.com/cdn/shop/files/Zipfizz_Energy_Powder_-_Hover_State.png?v=1765559704&width=1080",
+      "https://zipfizz.com/cdn/shop/files/Product_Color_BG_Orange_Soda_0e12ae1b-adb5-4a10-b30f-c73649e693cd.png?v=1765559704&width=1080"
+    ],
+    "metrics": {
+      "sodiumMg": 70,
+      "potassiumMg": 950,
+      "magnesiumMg": 100,
+      "sugarG": 0
+    },
+    "sources": [
+      {
+        "url": "https://www.carbmanager.com/food-detail/md:8205a6e6e1690501f90a9e0a2d181916/zipfizz-orange-soda-healthy-energy-drink-mix",
+        "label": "Carb Manager — label nutrition data"
+      },
+      {
+        "url": "https://zipfizz.com/pages/faq",
+        "label": "Zipfizz — official FAQ (caffeine and sugar content)"
+      }
+    ]
+  },
+  {
+    "id": "precision-fuel-hydration-ph-1500",
+    "name": "PH 1500 Electrolyte Drink Mix",
+    "brand": "Precision Fuel & Hydration",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Third-Party Tested"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Sodium",
+        "dose": "750 mg",
+        "clinicalNote": "Sodium is the main electrolyte lost in sweat and is studied for its role in fluid balance and hydration during exercise."
+      },
+      {
+        "name": "Potassium",
+        "dose": "125 mg",
+        "clinicalNote": "Potassium works alongside sodium to support normal fluid balance and muscle function."
+      },
+      {
+        "name": "Magnesium",
+        "dose": "12 mg",
+        "clinicalNote": "Magnesium contributes to normal muscle and nerve function and to electrolyte balance."
+      }
+    ],
+    "cautions": [
+      "750 mg sodium per packet is one of the higher single-serving doses on the market; not intended for general daily hydration outside heavy sweat loss.",
+      "Contains 15 g of sugar per serving from cane sugar; factor into daily carbohydrate intake.",
+      "Talk to your doctor before use if you manage blood pressure or kidney conditions."
+    ],
+    "servings": 8,
+    "priceRange": "$$$",
+    "flavorsNote": "Fruit-flavored powder sweetened with cane sugar; no artificial sweeteners.",
+    "affiliateUrl": "https://www.amazon.com/s?k=precision+hydration+ph+1500+electrolyte&tag=YOURTAG-20",
+    "blurb": "Each 16 oz packet delivers 750 mg sodium and 125 mg potassium, among the highest per-serving sodium doses of any consumer electrolyte mix, built for heavy or salty sweaters rather than everyday hydration.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/precision-fuel-hydration-ph-1500.png",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0334/2368/7725/products/PH-1500-Packets-1.png?v=1668599009&width=1000",
+      "https://cdn.shopify.com/s/files/1/0334/2368/7725/products/2-1500_SachetFront.jpg?v=1668599009&width=1000"
+    ],
+    "metrics": {
+      "sodiumMg": 750,
+      "potassiumMg": 125,
+      "magnesiumMg": 12,
+      "sugarG": 15
+    },
+    "sources": [
+      {
+        "url": "https://www.precisionhydration.com/us/en/products/ph-1500-electrolyte-drink-mix/",
+        "label": "Precision Fuel & Hydration — official product page (PH 1500 powder)"
+      }
+    ]
+  },
+  {
+    "id": "precision-fuel-hydration-ph-1000",
+    "name": "PH 1000 Electrolyte Tablets",
+    "brand": "Precision Fuel & Hydration",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Third-Party Tested"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Sodium",
+        "dose": "500 mg",
+        "clinicalNote": "Sodium is the main electrolyte lost in sweat and is studied for its role in fluid balance and hydration during exercise."
+      },
+      {
+        "name": "Potassium",
+        "dose": "130 mg",
+        "clinicalNote": "Potassium works alongside sodium to support normal fluid balance and muscle function."
+      },
+      {
+        "name": "Magnesium",
+        "dose": "10 mg",
+        "clinicalNote": "Magnesium contributes to normal muscle and nerve function and to electrolyte balance."
+      }
+    ],
+    "cautions": [
+      "500 mg sodium per tablet is a moderate-to-high dose; not intended for general daily hydration outside exercise without medical guidance.",
+      "NSF Certified for Sport confirms label accuracy and screening for banned substances but does not remove all risk of interaction with medications."
+    ],
+    "servings": 10,
+    "priceRange": "$$",
+    "flavorsNote": "Mild citrus-flavored effervescent tablet, low-calorie with minimal added sugar.",
+    "affiliateUrl": "https://www.amazon.com/s?k=precision+hydration+ph+1000+tablets&tag=YOURTAG-20",
+    "blurb": "One tablet dissolved in 16 oz of water provides 500 mg sodium and 130 mg potassium, the mid-strength option in Precision's tablet lineup, and it carries an NSF Certified for Sport mark.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/precision-fuel-hydration-ph-1000.webp",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0334/2368/7725/files/singleOpen_IM_2026_4477deac-8566-4ea1-bef4-ac6663fb7be8.webp?v=1765279380&width=1000",
+      "https://cdn.shopify.com/s/files/1/0334/2368/7725/products/2-TabletInBottle.jpg?v=1765279380&width=1000"
+    ],
+    "metrics": {
+      "sodiumMg": 500,
+      "potassiumMg": 130,
+      "magnesiumMg": 10,
+      "sugarG": 2
+    },
+    "sources": [
+      {
+        "url": "https://www.precisionhydration.com/us/en/products/ph-1000-low-calorie-electrolyte-supplement/",
+        "label": "Precision Fuel & Hydration — official product page (PH 1000 tablets)"
+      }
+    ]
+  },
+  {
+    "id": "sis-go-hydro-tablets",
+    "name": "GO Hydro Tablets",
+    "brand": "Science in Sport",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Third-Party Tested"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Sodium",
+        "dose": "350 mg",
+        "clinicalNote": "Sodium is the main electrolyte lost in sweat and is studied for its role in fluid balance and hydration during exercise."
+      },
+      {
+        "name": "Potassium",
+        "dose": "300 mg",
+        "clinicalNote": "Potassium works alongside sodium to support normal fluid balance and muscle function."
+      },
+      {
+        "name": "Magnesium",
+        "dose": "56 mg",
+        "clinicalNote": "Magnesium contributes to normal muscle and nerve function and to electrolyte balance."
+      }
+    ],
+    "cautions": [
+      "Label instructions cap intake at 4 tablets per day; do not exceed.",
+      "Also supplies 750 mg chloride per tablet, so total electrolyte load per serving is high compared with lighter hydration tablets."
+    ],
+    "servings": 20,
+    "priceRange": "$$",
+    "flavorsNote": "Effervescent tablets in lemon and berry flavors, sugar-free.",
+    "affiliateUrl": "https://www.amazon.com/s?k=science+in+sport+go+hydro+tablets&tag=YOURTAG-20",
+    "blurb": "One tablet dissolved in 500 ml water supplies 350 mg sodium plus 300 mg potassium and 750 mg chloride, a fuller electrolyte spread than most tablet-format competitors, and it's Informed Sport tested.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/sis-go-hydro-tablets.png",
+    "images": [
+      "https://www.scienceinsport.com/media/catalog/product/h/y/hydro_single_lemon.png?optimize=medium&fit=bounds&height=680&width=680&canvas=680:680",
+      "https://www.scienceinsport.com/media/wysiwyg/Phoenix_-_HYDRO_Tablets_-_Block_2.jpg",
+      "https://www.scienceinsport.com/media/wysiwyg/Phoenix_-_HYDRO_Tablets_-_Block_3.jpg"
+    ],
+    "metrics": {
+      "sodiumMg": 350,
+      "potassiumMg": 300,
+      "magnesiumMg": 56,
+      "sugarG": 0
+    },
+    "sources": [
+      {
+        "url": "https://www.scienceinsport.com/sis-hydro-tablets-pack",
+        "label": "Science in Sport — official product page (GO Hydro Tablets)"
+      }
+    ]
+  },
+  {
+    "id": "gu-energy-hydration-drink-tabs",
+    "name": "Hydration Drink Tabs",
+    "brand": "GU Energy",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Third-Party Tested"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Sodium",
+        "dose": "320 mg",
+        "clinicalNote": "Sodium is the main electrolyte lost in sweat and is studied for its role in fluid balance and hydration during exercise."
+      },
+      {
+        "name": "Potassium",
+        "dose": "55 mg",
+        "clinicalNote": "Potassium works alongside sodium to support normal fluid balance and muscle function."
+      }
+    ],
+    "cautions": [
+      "320 mg sodium per tab is a relatively high single-serving dose; account for it if combining with other sodium sources.",
+      "Sweetened partly with xylitol; those sensitive to sugar alcohols may notice digestive effects.",
+      "A Strawberry Hibiscus flavor in this line contains caffeine — check the flavor before choosing if avoiding stimulants."
+    ],
+    "servings": 12,
+    "priceRange": "$$",
+    "flavorsNote": "Six flavors including one caffeinated option; sweetened with stevia, xylitol, and a small amount of cane sugar.",
+    "affiliateUrl": "https://www.amazon.com/s?k=gu+hydration+drink+tabs&tag=YOURTAG-20",
+    "blurb": "One tab dissolved in 16 oz of water delivers 320 mg sodium and 55 mg potassium for about 10 calories; magnesium and calcium are not disclosed on this panel.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/gu-energy-hydration-drink-tabs.png",
+    "images": [
+      "https://guenergy.com/cdn/shop/files/tubes_4.png?v=1719248200",
+      "https://guenergy.com/cdn/shop/files/tubes_3.png?v=1697580425",
+      "https://guenergy.com/cdn/shop/files/tubes_2.png?v=1697580425"
+    ],
+    "metrics": {
+      "sodiumMg": 320,
+      "potassiumMg": 55,
+      "magnesiumMg": null,
+      "sugarG": 1
+    },
+    "sources": [
+      {
+        "url": "https://guenergy.com/products/hydration-drink-tabs",
+        "label": "GU Energy — official product page"
+      },
+      {
+        "url": "https://thefeed.com/products/gu-brew-hydration-tablets",
+        "label": "The Feed — retailer listing showing full Supplement Facts panel"
+      }
+    ]
+  },
+  {
+    "id": "nuun-endurance",
+    "name": "Endurance",
+    "brand": "Nuun",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Third-Party Tested"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Sodium",
+        "dose": "380 mg",
+        "clinicalNote": "Sodium is the main electrolyte lost in sweat and is studied for its role in fluid balance and hydration during exercise."
+      },
+      {
+        "name": "Potassium",
+        "dose": "200 mg",
+        "clinicalNote": "Potassium works alongside sodium to support normal fluid balance and muscle function."
+      },
+      {
+        "name": "Magnesium",
+        "dose": "20 mg",
+        "clinicalNote": "Magnesium contributes to normal muscle and nerve function and to electrolyte balance."
+      }
+    ],
+    "cautions": [
+      "Contains 16 g carbohydrate (15 g sugar) per serving; factor into carbohydrate intake during long sessions.",
+      "A caffeinated Strawberry Lemonade flavor (25 mg) exists in this line — confirm flavor before use if avoiding stimulants."
+    ],
+    "servings": 16,
+    "priceRange": "$$",
+    "flavorsNote": "Plant-based powder with dual carbohydrate sources, sold in Mixed Berry, Lemon Lime, Citrus Mango, and a caffeinated Strawberry Lemonade.",
+    "affiliateUrl": "https://www.amazon.com/s?k=nuun+endurance+electrolyte+drink+mix&tag=YOURTAG-20",
+    "blurb": "Distinct from Nuun Sport, this scoop-based mix pairs a higher electrolyte dose (380 mg sodium, 200 mg potassium) with 16 g of carbohydrate per serving, aimed at sessions past 90 minutes.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/nuun-endurance.png",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0014/3563/1652/files/3D_Canister-Front_Endurance_Citrus-Mango_r1v1_large.png?v=1552611748",
+      "https://cdn.shopify.com/s/files/1/1515/2714/products/nuun-hydration-citrus-mango-16-serving-canister-nuun-endurance-14599688126527.jpg",
+      "https://cdn.shopify.com/s/files/1/1515/2714/products/nuun-hydration-nuun-endurance-14599688290367_1200x1200.jpg"
+    ],
+    "metrics": {
+      "sodiumMg": 380,
+      "potassiumMg": 200,
+      "magnesiumMg": 20,
+      "sugarG": 15
+    },
+    "sources": [
+      {
+        "url": "https://thefeed.com/products/nuun-endurance",
+        "label": "The Feed — retailer listing showing full Supplement Facts panel"
+      },
+      {
+        "url": "https://nuunlife.com/blogs/news/introducing-nuun-endurance",
+        "label": "Nuun — official product announcement"
+      }
+    ]
+  },
+  {
+    "id": "saltstick-fastchews",
+    "name": "FastChews",
+    "brand": "SaltStick",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Third-Party Tested"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Sodium",
+        "dose": "100 mg",
+        "clinicalNote": "Sodium is the main electrolyte lost in sweat and is studied for its role in fluid balance and hydration during exercise."
+      },
+      {
+        "name": "Potassium",
+        "dose": "30 mg",
+        "clinicalNote": "Potassium works alongside sodium to support normal fluid balance and muscle function."
+      },
+      {
+        "name": "Magnesium",
+        "dose": "6 mg",
+        "clinicalNote": "Magnesium contributes to normal muscle and nerve function and to electrolyte balance."
+      }
+    ],
+    "cautions": [
+      "The labeled serving is 2 chews; the product is meant for repeated small doses through a race, not one large bolus.",
+      "Contains 2 g added sugar per 2-chew serving from dextrose."
+    ],
+    "servings": 30,
+    "priceRange": "$",
+    "flavorsNote": "Chewable tablets sweetened with dextrose and stevia leaf extract, in several fruit flavors.",
+    "affiliateUrl": "https://www.amazon.com/s?k=saltstick+fastchews+electrolyte&tag=YOURTAG-20",
+    "blurb": "The labeled serving of 2 chews provides 100 mg sodium and 30 mg potassium; built to be dosed repeatedly through exercise rather than mixed as a drink.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/saltstick-fastchews.png",
+    "imageOpaque": true,
+    "images": [
+      "https://aletenutrition.com/cdn/shop/files/SaltStick-FastChews-Lemon-Lime-60ct-Packet_Hero.png?v=1778523638&width=1946",
+      "https://cdn.shopify.com/s/files/1/0510/6660/1644/files/SS_FC_60ct_BottleRenders_LemonLime_0426.png?v=1778627260"
+    ],
+    "metrics": {
+      "sodiumMg": 100,
+      "potassiumMg": 30,
+      "magnesiumMg": 6,
+      "sugarG": 2
+    },
+    "sources": [
+      {
+        "url": "https://aletenutrition.com/products/saltstick-fastchews-lemon-lime-1",
+        "label": "Alete Nutrition — authorized SaltStick retailer, full Supplement Facts panel"
+      }
+    ]
+  },
+  {
+    "id": "first-endurance-efs-drink-mix",
+    "name": "EFS Drink Mix",
+    "brand": "First Endurance",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Sodium",
+        "dose": "300 mg",
+        "clinicalNote": "Sodium is the main electrolyte lost in sweat and is studied for its role in fluid balance and hydration during exercise."
+      },
+      {
+        "name": "Potassium",
+        "dose": "160 mg",
+        "clinicalNote": "Potassium works alongside sodium to support normal fluid balance and muscle function."
+      },
+      {
+        "name": "Magnesium",
+        "dose": "150 mg",
+        "clinicalNote": "Magnesium contributes to normal muscle and nerve function and to electrolyte balance."
+      }
+    ],
+    "cautions": [
+      "Contains 25 g of added sugar per serving as part of a 30 g carbohydrate energy drink; not a low-sugar hydration option.",
+      "465 mg chloride plus 300 mg sodium per serving is a substantial electrolyte load suited for extended exercise rather than casual sipping."
+    ],
+    "servings": 30,
+    "priceRange": "$$",
+    "flavorsNote": "Powder in Orange Splash, Fruit Punch, and Sour Watermelon, sweetened with cane sugar and dextrose.",
+    "affiliateUrl": "https://www.amazon.com/s?k=first+endurance+efs+drink+mix&tag=YOURTAG-20",
+    "blurb": "One 35 g scoop mixed with water supplies 300 mg sodium, 160 mg potassium, and 150 mg magnesium alongside 30 g of carbohydrate (25 g added sugar), positioning it as a combined fuel-and-electrolyte drink rather than a low-sugar hydration mix.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/first-endurance-efs-drink-mix.jpg",
+    "imageOpaque": true,
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0659/0182/2211/files/shopify-efs-fp-24.jpg?v=1715723179",
+      "https://cdn.shopify.com/s/files/1/0659/0182/2211/products/efs-fp-tray.png?v=1715723179"
+    ],
+    "metrics": {
+      "sodiumMg": 300,
+      "potassiumMg": 160,
+      "magnesiumMg": 150,
+      "sugarG": 25
+    },
+    "sources": [
+      {
+        "url": "https://firstendurance.com/products/efs-drink",
+        "label": "First Endurance — official product page"
+      }
+    ]
+  },
+  {
+    "id": "hammer-nutrition-heed",
+    "name": "HEED Sports Drink",
+    "brand": "Hammer Nutrition",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Budget Pick"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Sodium",
+        "dose": "150 mg",
+        "clinicalNote": "Sodium is the main electrolyte lost in sweat and is studied for its role in fluid balance and hydration during exercise."
+      },
+      {
+        "name": "Potassium",
+        "dose": "35 mg",
+        "clinicalNote": "Potassium works alongside sodium to support normal fluid balance and muscle function."
+      },
+      {
+        "name": "Magnesium",
+        "dose": "31 mg",
+        "clinicalNote": "Magnesium contributes to normal muscle and nerve function and to electrolyte balance."
+      }
+    ],
+    "cautions": [
+      "A Cherry Bomb flavor variant in this line contains 25 mg caffeine and 500 mg taurine — confirm flavor before use if avoiding stimulants.",
+      "Sodium (150 mg) is lower than many endurance mixes; heavy or salty sweaters may need additional sodium from another source."
+    ],
+    "servings": 32,
+    "priceRange": "$",
+    "flavorsNote": "Powder in multiple fruit flavors; low-sugar formula relying mainly on complex carbohydrate (maltodextrin) for energy.",
+    "affiliateUrl": "https://www.amazon.com/s?k=hammer+nutrition+heed+sports+drink&tag=YOURTAG-20",
+    "blurb": "One 30 g scoop provides 150 mg sodium and 35 mg potassium with only 2 g of sugar, drawing most of its 28 g carbohydrate from complex carbohydrate rather than simple sugars.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/hammer-nutrition-heed.jpg",
+    "imageOpaque": true,
+    "images": [
+      "https://hammernutrition.com/cdn/shop/files/HCB70_25_1200x.progressive.jpg?v=1747863941",
+      "https://hammernutrition.com/cdn/shop/files/HCB32_25_204x.progressive.jpg?v=1747863941"
+    ],
+    "metrics": {
+      "sodiumMg": 150,
+      "potassiumMg": 35,
+      "magnesiumMg": 31,
+      "sugarG": 2
+    },
+    "sources": [
+      {
+        "url": "https://hammernutrition.com/products/heed-sports-drink",
+        "label": "Hammer Nutrition — official product page"
+      }
+    ]
+  },
+  {
+    "id": "maurten-drink-mix-320",
+    "name": "Drink Mix 320",
+    "brand": "Maurten",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Sodium",
+        "dose": "245 mg",
+        "clinicalNote": "Sodium is the main electrolyte lost in sweat and is studied for its role in fluid balance and hydration during exercise."
+      },
+      {
+        "name": "Carbohydrate (maltodextrin + fructose)",
+        "dose": "78 g",
+        "clinicalNote": "A mixed glucose-fructose carbohydrate source is studied for supporting higher carbohydrate absorption rates during prolonged exercise than single-source formulas."
+      }
+    ],
+    "cautions": [
+      "A very high carbohydrate load (78 g) per serving is intended for race or training fueling, not general hydration; introduce gradually to assess GI tolerance.",
+      "The label does not disclose potassium or magnesium; pair with another source if targeting full electrolyte replacement."
+    ],
+    "servings": 14,
+    "priceRange": "$$$",
+    "flavorsNote": "Neutral-forward flavor typical of hydrogel-technology drink mixes; each 83 g sachet is mixed with 500 ml water.",
+    "affiliateUrl": "https://www.amazon.com/s?k=maurten+drink+mix+320&tag=YOURTAG-20",
+    "blurb": "Each 83 g sachet mixed with 500 ml water (the label's own serving) is built primarily as a carbohydrate fuel — 78 g carbohydrate including 37 g sugar — using hydrogel-encapsulated maltodextrin and fructose; sodium is 245 mg and potassium/magnesium are not disclosed.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/maurten-drink-mix-320.png",
+    "images": [
+      "https://maurten.imgix.net/photos/Products/Entry-Card-Maurten-Drink-Mix-320-1.png?auto=compress%2Cformat&fit=max&q=80&w=120&s=f3d7495dec7fea87fba326ce887c16ac",
+      "https://maurten.imgix.net/branding/Screenshot-2025-03-14-at-16.39.51.png?auto=compress%2Cformat&fit=max&q=80&w=1000&s=165f3bb0f1c61dc593dae9d44fba39ea"
+    ],
+    "metrics": {
+      "sodiumMg": 245,
+      "potassiumMg": null,
+      "magnesiumMg": null,
+      "sugarG": 37
+    },
+    "sources": [
+      {
+        "url": "https://www.maurten.com.au/products/drink-mix-320",
+        "label": "Maurten Australia — official regional site, full nutrition panel"
+      },
+      {
+        "url": "https://www.runningwarehouse.com/Maurten_Drink_Mix_320/descpage-MAU12.html",
+        "label": "Running Warehouse — retailer listing showing Nutrition Facts panel"
+      }
+    ]
+  },
+  {
+    "id": "amacx-hydro-tabs",
+    "name": "Hydro Tabs",
+    "brand": "Amacx",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Third-Party Tested"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Sodium",
+        "dose": "205 mg",
+        "clinicalNote": "Sodium is the main electrolyte lost in sweat and is studied for its role in fluid balance and hydration during exercise."
+      },
+      {
+        "name": "Potassium",
+        "dose": "70 mg",
+        "clinicalNote": "Potassium works alongside sodium to support normal fluid balance and muscle function."
+      },
+      {
+        "name": "Magnesium",
+        "dose": "56 mg",
+        "clinicalNote": "Magnesium contributes to normal muscle and nerve function and to electrolyte balance."
+      }
+    ],
+    "cautions": [
+      "Label instructions cap intake at 3 tablets per day; do not exceed.",
+      "Also supplies 28 mg vitamin C per tablet in addition to electrolytes."
+    ],
+    "servings": 20,
+    "priceRange": "$$",
+    "flavorsNote": "Effervescent, sugar-free tablets sweetened with sucralose, dissolved in 500-750 ml water.",
+    "affiliateUrl": "https://www.amazon.com/s?k=amacx+hydro+tabs+electrolyte&tag=YOURTAG-20",
+    "blurb": "One tablet dissolved in 500-750 ml water supplies 205 mg sodium, 70 mg potassium, and 56 mg magnesium with no sugar; Informed Sport certified.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/amacx-hydro-tabs.webp",
+    "imageOpaque": true,
+    "images": [
+      "https://amacx.com/cdn/shop/files/6e2a9831a8c7820ffbd216fab9193f846fd826c0_Hydro_Tabs_Lime___3_pack_Amacx_73203849__1_cf33a78e-0aee-4f60-bc51-1114b81bb594.webp?v=1783693090&width=800",
+      "https://amacx.com/cdn/shop/files/7aeec5b3e7b075e12cc1a69f7860aea10bc89db0_Hydro_tabs_lime_visma_b13b4e1b-3081-45cf-a66c-dbc59c1029db.jpg?v=1783693091&width=800"
+    ],
+    "metrics": {
+      "sodiumMg": 205,
+      "potassiumMg": 70,
+      "magnesiumMg": 56,
+      "sugarG": 0
+    },
+    "sources": [
+      {
+        "url": "https://amacx.com/products/hydro-tabs-lime",
+        "label": "Amacx — official product page"
+      }
+    ]
+  },
+  {
+    "id": "key-nutrients-electrolyte-recovery-plus",
+    "name": "Electrolyte Recovery Plus",
+    "brand": "Key Nutrients",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Sodium (sodium chloride)",
+        "dose": "110 mg",
+        "clinicalNote": "Sodium is the primary electrolyte lost in sweat and is studied for its role in fluid balance."
+      },
+      {
+        "name": "Potassium (potassium aspartate)",
+        "dose": "250 mg",
+        "clinicalNote": "Potassium works alongside sodium to support normal muscle and nerve function."
+      },
+      {
+        "name": "Magnesium (magnesium citrate)",
+        "dose": "100 mg",
+        "clinicalNote": "Provides 25% of the Daily Value; magnesium supports normal muscle relaxation and energy metabolism."
+      },
+      {
+        "name": "Zinc (zinc citrate)",
+        "dose": "2.9 mg",
+        "clinicalNote": "Zinc contributes to normal immune function alongside the electrolyte blend."
+      }
+    ],
+    "cautions": [
+      "Only 110 mg sodium per packet — light for replacing heavy sweat losses compared with sodium-forward mixes",
+      "Naturally sweetened with stevia leaf extract (Reb A); no sugar or calories",
+      "Packet also supplies 20 vitamins and minerals beyond electrolytes — check total intake if you take a separate multivitamin"
+    ],
+    "servings": 20,
+    "priceRange": "$",
+    "flavorsNote": "Wide lineup including Lemonade, Blueberry Lemonade, Peach Mango, and Watermelon, all sweetened with stevia leaf extract and naturally flavored.",
+    "affiliateUrl": "https://www.amazon.com/s?k=key+nutrients+electrolyte+recovery+plus&tag=YOURTAG-20",
+    "blurb": "Vitamin-heavy formula: a light 110 mg sodium dose sits alongside 20 total vitamins and minerals, including 25% DV magnesium, on a fully itemized zero-calorie label.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/key-nutrients-electrolyte-recovery-plus.png",
+    "images": [
+      "https://keynutrients.com/cdn/shop/files/01_-_Product_Shot.png?width=1000",
+      "https://keynutrients.com/cdn/shop/files/02_-_Nutrition_Facts_6b204a57-45d0-492c-afd6-e48620751479.png?v=1776850099&width=1000"
+    ],
+    "metrics": {
+      "sodiumMg": 110,
+      "potassiumMg": 250,
+      "magnesiumMg": 100,
+      "sugarG": 0
+    },
+    "sources": [
+      {
+        "url": "https://keynutrients.com/products/electrolyte-recovery-plus",
+        "label": "Key Nutrients — official product page and label image"
+      }
+    ]
+  },
+  {
+    "id": "cure-hydration-electrolyte-mix",
+    "name": "Hydrating Electrolyte Mix",
+    "brand": "Cure",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Sodium (pink Himalayan salt)",
+        "dose": "240 mg",
+        "clinicalNote": "Sodium is studied for its role in fluid retention and absorption, the basis of oral-rehydration formulas."
+      },
+      {
+        "name": "Potassium",
+        "dose": "310 mg",
+        "clinicalNote": "Potassium supports fluid balance alongside sodium and contributes to normal muscle function."
+      },
+      {
+        "name": "Coconut water powder + fruit juice powder",
+        "dose": "4 g total sugars",
+        "clinicalNote": "Carbohydrate paired with sodium reflects the WHO oral-rehydration-solution ratio studied for fluid absorption."
+      }
+    ],
+    "cautions": [
+      "4 g of sugar per packet from fruit and coconut water powder — labeled 'no added sugar' but not a zero-sugar mix",
+      "240 mg sodium counts toward daily sodium intake if you're tracking it",
+      "Magnesium is not listed on the Nutrition Facts panel"
+    ],
+    "servings": 14,
+    "priceRange": "$$",
+    "flavorsNote": "Grapefruit is one of several fruit-forward flavors (also Watermelon, Lemon, Pink Lemonade); sweetened only with real fruit and coconut water, no added sugar or artificial sweeteners.",
+    "affiliateUrl": "https://www.amazon.com/s?k=cure+hydration+electrolyte+mix&tag=YOURTAG-20",
+    "blurb": "Built to WHO oral-rehydration-solution ratios: 240 mg sodium and 310 mg potassium paired with 4 g of fruit-derived sugar rather than an added sweetener; magnesium isn't disclosed on the panel.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/cure-hydration-electrolyte-mix.jpg",
+    "imageOpaque": true,
+    "images": [
+      "https://www.curehydration.com/cdn/shop/files/Cure-Pouch-Packet-Grapefruit_c9b23260-236c-40c2-b5af-1e3cee28edd0_1000x.jpg",
+      "https://www.curehydration.com/cdn/shop/files/Cure-Pouch-Classic-Variety-Front.jpg"
+    ],
+    "metrics": {
+      "sodiumMg": 240,
+      "potassiumMg": 310,
+      "magnesiumMg": null,
+      "sugarG": 4
+    },
+    "sources": [
+      {
+        "url": "https://www.curehydration.com/products/hydrating-electrolyte-mix-grapefruit",
+        "label": "Cure — official product page (Grapefruit Nutrition Facts)"
+      }
+    ]
+  },
+  {
+    "id": "hydrant-rapid-hydration-mix",
+    "name": "Rapid Hydration Mix",
+    "brand": "Hydrant",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Sodium citrate",
+        "dose": "260 mg",
+        "clinicalNote": "Sodium activates water absorption in the gut, the mechanism behind WHO-style rehydration formulas."
+      },
+      {
+        "name": "Potassium citrate",
+        "dose": "200 mg",
+        "clinicalNote": "Potassium supports normal nerve function and works with sodium to maintain fluid balance."
+      },
+      {
+        "name": "Magnesium gluconate",
+        "dose": "30 mg",
+        "clinicalNote": "Magnesium supports over 300 normal enzymatic reactions in the body, including energy metabolism."
+      },
+      {
+        "name": "Zinc gluconate",
+        "dose": "2 mg",
+        "clinicalNote": "Zinc contributes to normal immune function alongside the core electrolyte blend."
+      }
+    ],
+    "cautions": [
+      "4 g of cane sugar per stick in this Core Blend formula — Hydrant also sells a monk-fruit zero-sugar line if you want to avoid it",
+      "260 mg sodium counts toward daily sodium intake",
+      "Formulated for active sweat replacement, not an everyday sipping mix"
+    ],
+    "servings": 30,
+    "priceRange": "$$",
+    "flavorsNote": "Blood Orange, Lemon Lime, and Fruit Punch use a cane-sugar Core Blend; a separate Zero Sugar line swaps in monk fruit extract.",
+    "affiliateUrl": "https://www.amazon.com/s?k=hydrant+rapid+hydration+mix&tag=YOURTAG-20",
+    "blurb": "Mid-range sodium (260 mg) built on the WHO glucose-sodium cotransport ratio, with 4 g of cane sugar doing the absorption work rather than allulose or stevia.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/hydrant-rapid-hydration-mix.png",
+    "images": [
+      "https://www.drinkhydrant.com/cdn/shop/files/01-Hydration-Variety-Front-min.png",
+      "https://www.drinkhydrant.com/cdn/shop/files/HYD_Bulk-Grapefruit_PDP_1080_1.png"
+    ],
+    "metrics": {
+      "sodiumMg": 260,
+      "potassiumMg": 200,
+      "magnesiumMg": 30,
+      "sugarG": 4
+    },
+    "sources": [
+      {
+        "url": "https://www.drinkhydrant.com/products/hydration-mix",
+        "label": "Hydrant — official product page (Blood Orange ingredient panel)"
+      }
+    ]
+  },
+  {
+    "id": "kaged-hydra-charge",
+    "name": "Hydra-Charge",
+    "brand": "Kaged",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Third-Party Tested"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Sodium",
+        "dose": "115 mg",
+        "clinicalNote": "A moderate sodium dose studied for its role in fluid retention without pushing daily sodium too high."
+      },
+      {
+        "name": "Potassium",
+        "dose": "107 mg",
+        "clinicalNote": "Potassium works alongside sodium to support normal muscle contraction and fluid balance."
+      },
+      {
+        "name": "Magnesium (citrate)",
+        "dose": "15 mg",
+        "clinicalNote": "Magnesium contributes to normal energy metabolism and muscle function."
+      },
+      {
+        "name": "Coconut water powder",
+        "dose": "500 mg",
+        "clinicalNote": "A whole-food source of additional potassium and trace minerals."
+      }
+    ],
+    "cautions": [
+      "Sweetened with steviol glycosides and sucralose — check the label if avoiding artificial sweeteners",
+      "115 mg sodium is moderate; pair with added salt if replacing large sweat losses",
+      "Contains 1,000 mg taurine per serving"
+    ],
+    "servings": 30,
+    "priceRange": "$$",
+    "flavorsNote": "Red Raspberry among a dozen flavors including Watermelon and Piña Colada; sweetened with steviol glycosides and sucralose.",
+    "affiliateUrl": "https://www.amazon.com/s?k=kaged+hydra+charge+electrolyte&tag=YOURTAG-20",
+    "blurb": "Informed Sport-certified electrolyte scoop with a moderate 115 mg sodium dose, coconut water powder, and an antioxidant blend layered on top of the base minerals.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/kaged-hydra-charge.png",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/1110/3248/files/HydrationRedRaspberryFront.png?v=1774385176",
+      "https://cdn.shopify.com/s/files/1/1110/3248/files/Hydration30servings-AMZ_HydrationSFPRR30srvLarge.jpg?v=1774385176"
+    ],
+    "metrics": {
+      "sodiumMg": 115,
+      "potassiumMg": 107,
+      "magnesiumMg": 15,
+      "sugarG": 0
+    },
+    "sources": [
+      {
+        "url": "https://www.kaged.com/products/hydra-charge-30sv",
+        "label": "Kaged — official product page (30-serving Nutrition Facts)"
+      }
+    ]
+  },
+  {
+    "id": "jocko-fuel-rapid-hydration-plus",
+    "name": "Rapid Hydration+ Electrolyte Stick Packets",
+    "brand": "Jocko Fuel",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Sodium",
+        "dose": "500 mg",
+        "clinicalNote": "A sodium-forward dose studied for replacing what's lost during heavy sweating."
+      },
+      {
+        "name": "Chloride",
+        "dose": "740 mg",
+        "clinicalNote": "Chloride works with sodium to help maintain normal fluid and acid-base balance."
+      },
+      {
+        "name": "Potassium",
+        "dose": "350 mg",
+        "clinicalNote": "Potassium supports normal muscle contraction and fluid balance alongside sodium."
+      },
+      {
+        "name": "Magnesium",
+        "dose": "120 mg",
+        "clinicalNote": "Magnesium contributes to normal muscle relaxation and energy metabolism."
+      }
+    ],
+    "cautions": [
+      "500 mg sodium per stick is high — significant if you're also salting food or using other electrolyte products the same day",
+      "Sweetened with allulose and Reb-M monk fruit extract, not sugar",
+      "Formulated for active sweat replacement, not everyday casual sipping"
+    ],
+    "servings": 12,
+    "priceRange": "$$",
+    "flavorsNote": "Strawberry, Blue Raspberry, Fruit Punch, Island Orange, and Lemon-Lime, all zero-sugar and sweetened with allulose and monk fruit extract.",
+    "affiliateUrl": "https://www.amazon.com/s?k=jocko+fuel+rapid+hydration&tag=YOURTAG-20",
+    "blurb": "One of the highest-sodium sticks in the category at 500 mg, plus 740 mg chloride and 120 mg magnesium — built for heavy sweat loss rather than light daily sipping.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/jocko-fuel-rapid-hydration-plus.jpg",
+    "imageOpaque": true,
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0793/7802/2695/files/STRAW_12_1.jpg?v=1782151900",
+      "https://cdn.shopify.com/s/files/1/0793/7802/2695/files/JF-Hydrate_-Flavor-chart.jpg?v=1782148362"
+    ],
+    "metrics": {
+      "sodiumMg": 500,
+      "potassiumMg": 350,
+      "magnesiumMg": 120,
+      "sugarG": 0
+    },
+    "sources": [
+      {
+        "url": "https://jockofuel.com/products/rapid-hydration",
+        "label": "Jocko Fuel — official product page (Rapid Hydration+ 12-pack)"
+      },
+      {
+        "url": "https://www.priceplow.com/jocko-fuel/rapid-hydration-electrolyte-stick-packets",
+        "label": "PricePlow — Supplement Facts transcription"
+      }
+    ]
+  },
+  {
+    "id": "lyteshow-electrolyte-concentrate",
+    "name": "Electrolyte Concentrate",
+    "brand": "LyteShow",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Magnesium",
+        "dose": "40 mg",
+        "clinicalNote": "Magnesium contributes to normal muscle and energy metabolism and is often under-supplied in liquid electrolyte drops."
+      },
+      {
+        "name": "Potassium (chloride)",
+        "dose": "130 mg",
+        "clinicalNote": "Potassium supports normal fluid balance and muscle function alongside sodium."
+      },
+      {
+        "name": "Sodium (sea mineral concentrate)",
+        "dose": "125 mg",
+        "clinicalNote": "A lower sodium dose intended to be added to water throughout the day rather than replace one large sweat loss."
+      },
+      {
+        "name": "Zinc (sulfate)",
+        "dose": "2 mg",
+        "clinicalNote": "Zinc contributes to normal immune function."
+      }
+    ],
+    "cautions": [
+      "Low-sodium formula (125 mg) — not designed to replace large single sweat losses on its own",
+      "Liquid concentrate: measure the 3 mL (about 40-drop) dose rather than drinking it straight",
+      "Contains zinc sulfate; account for this if you also take a separate zinc supplement"
+    ],
+    "servings": 40,
+    "priceRange": "$$",
+    "flavorsNote": "Unflavored with a subtle mineral taste; free of sweeteners, starch, and common allergens.",
+    "affiliateUrl": "https://www.amazon.com/s?k=lyteshow+electrolyte+concentrate&tag=YOURTAG-20",
+    "blurb": "A 3 mL drop dose (about 40 drops) rather than a mixed drink: lower sodium than most powders, but one of the few labels that discloses magnesium (40 mg) and zinc (2 mg) alongside sodium and potassium.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "sodiumMg": 125,
+      "potassiumMg": 130,
+      "magnesiumMg": 40,
+      "sugarG": 0
+    },
+    "sources": [
+      {
+        "url": "https://dsld.od.nih.gov/label/46571",
+        "label": "NIH Dietary Supplement Label Database — LyteShow label transcription"
+      },
+      {
+        "url": "https://www.lyteline.com/products/electrolyte-concentrate-lyteshow",
+        "label": "LyteLine (LyteShow) — official product page"
+      }
+    ]
+  },
+  {
+    "id": "dr-berg-electrolyte-powder",
+    "name": "Electrolyte Powder",
+    "brand": "Dr. Berg",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Potassium (citrate)",
+        "dose": "1000 mg",
+        "clinicalNote": "A high potassium dose (21% DV) studied for its role in normal muscle contraction and fluid balance."
+      },
+      {
+        "name": "Magnesium (citrate)",
+        "dose": "120 mg",
+        "clinicalNote": "Magnesium supports normal energy metabolism and muscle relaxation."
+      },
+      {
+        "name": "Sodium (pink Himalayan salt)",
+        "dose": "40 mg",
+        "clinicalNote": "A light sodium dose relative to most electrolyte mixes."
+      },
+      {
+        "name": "Chloride (pink Himalayan salt)",
+        "dose": "60 mg",
+        "clinicalNote": "Chloride works with sodium to help maintain normal fluid balance."
+      }
+    ],
+    "cautions": [
+      "Label warns to consult a physician before use if you have kidney disease, a low pulse rate, or high blood potassium",
+      "1000 mg potassium (21% DV) is high — the brand recommends its separate Sports Hydration product if you need more sodium for heavy exercise",
+      "Not intended for pregnant or nursing individuals or anyone under 18 without medical guidance"
+    ],
+    "servings": 50,
+    "priceRange": "$",
+    "flavorsNote": "Raspberry & Lemon among nine flavors; sweetened with stevia leaf extract, no added sugar or maltodextrin.",
+    "affiliateUrl": "https://www.amazon.com/s?k=dr+berg+electrolyte+powder&tag=YOURTAG-20",
+    "blurb": "Potassium-forward outlier: 1000 mg potassium against just 40 mg sodium, the inverse of most sports electrolyte mixes, with an on-label warning for kidney disease or high blood potassium.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/dr-berg-electrolyte-powder.png",
+    "images": [
+      "https://shop.drberg.com/cdn/shop/files/Electrolyte_Powder_Rasp_Lemon_50_2025_3D2_1000px.png",
+      "https://shop.drberg.com/cdn/shop/files/Electrolyte_Powder_Lemonade_50_serv_Supplement_Panel_V5_17.12.24-01.jpg"
+    ],
+    "metrics": {
+      "sodiumMg": 40,
+      "potassiumMg": 1000,
+      "magnesiumMg": 120,
+      "sugarG": 0
+    },
+    "sources": [
+      {
+        "url": "https://shop.drberg.com/products/electrolyte-powder-with-1-000-mg",
+        "label": "Dr. Berg — official product page and Supplement Facts panel"
+      }
+    ]
+  },
+  {
+    "id": "ryse-hydration-sticks",
+    "name": "Hydration Sticks",
+    "brand": "RYSE",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Sodium (citrate and pink Himalayan sea salt)",
+        "dose": "320 mg",
+        "clinicalNote": "A sodium-forward dose studied for replacing electrolytes lost during sweating."
+      },
+      {
+        "name": "Potassium",
+        "dose": "173 mg",
+        "clinicalNote": "Potassium supports normal fluid balance and muscle function alongside sodium."
+      },
+      {
+        "name": "Magnesium (citrate)",
+        "dose": "74 mg",
+        "clinicalNote": "Magnesium contributes to normal muscle and energy metabolism."
+      },
+      {
+        "name": "Vitamin B12",
+        "dose": "69 mcg",
+        "clinicalNote": "Vitamin B12 supports normal energy-yielding metabolism."
+      }
+    ],
+    "cautions": [
+      "320 mg sodium per stick — significant if you're also salting food or stacking other electrolyte products",
+      "Contains 1,000 mg taurine and 200 mg choline bitartrate beyond the core electrolytes",
+      "69 mcg vitamin B12 is well above typical daily needs — check with a doctor if you take B12-affecting medication"
+    ],
+    "servings": 16,
+    "priceRange": "$$",
+    "flavorsNote": "Lemon Lime, Blue Raspberry, Pink Splash, and a licensed Kool-Aid Grape; the Supplement Facts panel shows no sugar line.",
+    "affiliateUrl": "https://www.amazon.com/s?k=ryse+hydration+sticks&tag=YOURTAG-20",
+    "blurb": "One of the higher-sodium sticks on the market at 320 mg, layered with a full B-vitamin, taurine, and choline stack that most electrolyte-only mixes leave out.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/ryse-hydration-sticks.jpg",
+    "imageOpaque": true,
+    "images": [
+      "https://rysesupps.com/cdn/shop/files/RYSEHydrationLemonLime-3_2.jpg",
+      "https://rysesupps.com/cdn/shop/files/sfp-h-ps-16.png"
+    ],
+    "metrics": {
+      "sodiumMg": 320,
+      "potassiumMg": 173,
+      "magnesiumMg": 74,
+      "sugarG": 0
+    },
+    "sources": [
+      {
+        "url": "https://rysesupps.com/products/hydration-sticks",
+        "label": "RYSE — official product page and Supplement Facts panel"
+      }
+    ]
+  },
+  {
+    "id": "ghost-hydration",
+    "name": "Hydration",
+    "brand": "GHOST",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Potassium (citrate)",
+        "dose": "375 mg",
+        "clinicalNote": "Potassium supports normal muscle contraction and fluid balance."
+      },
+      {
+        "name": "Sodium (citrate)",
+        "dose": "150 mg",
+        "clinicalNote": "Sodium is studied for its role in fluid retention during sweating."
+      },
+      {
+        "name": "Magnesium (citrate)",
+        "dose": "83 mg",
+        "clinicalNote": "Magnesium contributes to normal energy metabolism and muscle relaxation."
+      },
+      {
+        "name": "Calcium (Aquamin, seaweed-derived)",
+        "dose": "60 mg",
+        "clinicalNote": "A whole-food seaweed-derived calcium source that also supplies trace ocean minerals."
+      }
+    ],
+    "cautions": [
+      "375 mg potassium (8% DV) — check with a doctor if you take potassium-sparing medication",
+      "Contains 1,500 mg taurine and a Senactiv botanical blend beyond the core electrolytes",
+      "Sweetened with rebaudioside M (a stevia leaf extract), not sugar"
+    ],
+    "servings": 40,
+    "priceRange": "$$",
+    "flavorsNote": "Iced Tea Lemonade among a wide flavor lineup; sweetened with rebaudioside M, zero sugar.",
+    "affiliateUrl": "https://www.amazon.com/s?k=ghost+hydration+electrolyte+powder&tag=YOURTAG-20",
+    "blurb": "Potassium-heavy scoop (375 mg) built around citrate-bound minerals, plus 1,500 mg taurine and a Senactiv botanical blend layered on top of the base electrolytes.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/ghost-hydration.webp",
+    "images": [
+      "https://www.ghostlifestyle.com/cdn/shop/files/HydrationIcedTeaLemonade.webp",
+      "https://www.ghostlifestyle.com/cdn/shop/files/GHOST_Hydration_IcedTeaLemonade_SFP.png?v=1778616848"
+    ],
+    "metrics": {
+      "sodiumMg": 150,
+      "potassiumMg": 375,
+      "magnesiumMg": 83,
+      "sugarG": 0
+    },
+    "sources": [
+      {
+        "url": "https://www.ghostlifestyle.com/products/ghost-hydration-kiwi-strawberry",
+        "label": "GHOST Lifestyle — official product page and Supplement Facts panel"
+      }
+    ]
   }
 ];
