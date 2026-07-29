@@ -2255,7 +2255,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=ryse+loaded+creatine&tag=YOURTAG-20",
     "blurb": "A fully disclosed three-form creatine blend — monohydrate, MagnaPower, and HCl — plus betaine and PeakATP, totaling roughly 6.25 g of labeled creatine per scoop.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/ryse-loaded-creatine.webp",
+    "imageUrl": "images/products/ryse-loaded-creatine.png",
     "images": [
       "https://rysesupps.com/cdn/shop/files/u_1.webp",
       "https://rysesupps.com/cdn/shop/files/nfp-loadedcre-unflav.png"

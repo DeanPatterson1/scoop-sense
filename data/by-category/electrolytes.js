@@ -1504,7 +1504,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=precision+hydration+ph+1000+tablets&tag=YOURTAG-20",
     "blurb": "One tablet dissolved in 16 oz of water provides 500 mg sodium and 130 mg potassium, the mid-strength option in Precision's tablet lineup, and it carries an NSF Certified for Sport mark.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/precision-fuel-hydration-ph-1000.webp",
+    "imageUrl": "images/products/precision-fuel-hydration-ph-1000.png",
     "images": [
       "https://cdn.shopify.com/s/files/1/0334/2368/7725/files/singleOpen_IM_2026_4477deac-8566-4ea1-bef4-ac6663fb7be8.webp?v=1765279380&width=1000",
       "https://cdn.shopify.com/s/files/1/0334/2368/7725/products/2-TabletInBottle.jpg?v=1765279380&width=1000"
