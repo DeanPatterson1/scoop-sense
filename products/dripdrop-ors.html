@@ -49,11 +49,11 @@
       <div class="sc-pdp-grid">
         <div class="sc-pdp-media-col">
           <figure class="sc-pdp-media sc-pdp-media-photo">
-            <img id="sc-gallery-main" src="../images/products/dripdrop-ors.png" alt="DripDrop ORS Electrolyte Powder — product render" referrerpolicy="no-referrer">
+            <img id="sc-gallery-main" src="../images/products/dripdrop-ors.png" alt="DripDrop ORS Electrolyte Powder — product image" referrerpolicy="no-referrer">
             <button type="button" class="sc-zoom-btn" id="sc-zoom-btn" aria-label="Zoom image">&#10530;<span> Zoom</span></button>
           </figure>
           <div class="sc-gallery-thumbs">
-            <button type="button" class="sc-gallery-thumb" data-src="../images/products/dripdrop-ors.png" data-alt="DripDrop ORS Electrolyte Powder — product render" aria-current="true" aria-label="Show image 1 of 4"><img src="../images/products/dripdrop-ors.png" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
+            <button type="button" class="sc-gallery-thumb" data-src="../images/products/dripdrop-ors.png" data-alt="DripDrop ORS Electrolyte Powder — product image" aria-current="true" aria-label="Show image 1 of 4"><img src="../images/products/dripdrop-ors.png" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
             <button type="button" class="sc-gallery-thumb" data-src="https://dripdrop.com/cdn/shop/files/Pouch_30ct_Front16ozSticks_ZSPWatermelon.png?crop=center&amp;height=1200&amp;v=1783954560&amp;width=1200" data-alt="DripDrop ORS Electrolyte Powder — retailer photo" aria-current="false" aria-label="Show image 2 of 4"><img src="https://dripdrop.com/cdn/shop/files/Pouch_30ct_Front16ozSticks_ZSPWatermelon.png?crop=center&amp;height=1200&amp;v=1783954560&amp;width=1200" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
             <button type="button" class="sc-gallery-thumb" data-src="https://dripdrop.com/cdn/shop/files/Bold_Variety_-_32ct_-_Transparent.png?crop=center&amp;height=1200&amp;v=1763672888&amp;width=1200" data-alt="DripDrop ORS Electrolyte Powder — retailer photo" aria-current="false" aria-label="Show image 3 of 4"><img src="https://dripdrop.com/cdn/shop/files/Bold_Variety_-_32ct_-_Transparent.png?crop=center&amp;height=1200&amp;v=1763672888&amp;width=1200" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
             <button type="button" class="sc-gallery-thumb" data-src="https://dripdrop.com/cdn/shop/files/DripDrop_Pouch_Image_V2_Vizit_Watermelon_-_32ct.png?crop=center&amp;height=1200&amp;v=1763766377&amp;width=1200" data-alt="DripDrop ORS Electrolyte Powder — retailer photo" aria-current="false" aria-label="Show image 4 of 4"><img src="https://dripdrop.com/cdn/shop/files/DripDrop_Pouch_Image_V2_Vizit_Watermelon_-_32ct.png?crop=center&amp;height=1200&amp;v=1763766377&amp;width=1200" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
@@ -61,7 +61,9 @@
           <p class="sc-pdp-caption">Product imagery supplied by the retailer. Packaging may vary — verify the Supplement Facts panel on the container you receive.</p>
           <div class="sc-lightbox" id="sc-lightbox" hidden role="dialog" aria-modal="true" aria-label="Enlarged product image">
             <button type="button" class="sc-lightbox-close" id="sc-lightbox-close" aria-label="Close enlarged image">&times;</button>
-            <img id="sc-lightbox-img" src="" alt="" referrerpolicy="no-referrer">
+            <!-- No src until the lightbox opens: src="" resolves to the page
+                 itself, costing a request and registering as a broken image. -->
+            <img id="sc-lightbox-img" alt="" referrerpolicy="no-referrer">
           </div>
         </div>
 
@@ -220,7 +222,7 @@
               <span class="sc-related-meta">Stim-free · 0 mg · $</span>
             </a>
           </div>
-          <p class="sc-related-more"><a href="../electrolytes.html">Every hydration mixes on file</a></p>
+          <p class="sc-related-more"><a href="../electrolytes.html">All hydration mixes on file</a></p>
         </div>
       </div>
     </div>

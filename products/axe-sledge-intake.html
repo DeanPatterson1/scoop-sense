@@ -49,11 +49,11 @@
       <div class="sc-pdp-grid">
         <div class="sc-pdp-media-col">
           <figure class="sc-pdp-media sc-pdp-media-photo">
-            <img id="sc-gallery-main" src="../images/products/axe-sledge-intake.png" alt="Axe &amp; Sledge Supplements Intake — product render" referrerpolicy="no-referrer">
+            <img id="sc-gallery-main" src="../images/products/axe-sledge-intake.png" alt="Axe &amp; Sledge Supplements Intake — product image" referrerpolicy="no-referrer">
             <button type="button" class="sc-zoom-btn" id="sc-zoom-btn" aria-label="Zoom image">&#10530;<span> Zoom</span></button>
           </figure>
           <div class="sc-gallery-thumbs">
-            <button type="button" class="sc-gallery-thumb" data-src="../images/products/axe-sledge-intake.png" data-alt="Axe &amp; Sledge Supplements Intake — product render" aria-current="true" aria-label="Show image 1 of 5"><img src="../images/products/axe-sledge-intake.png" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
+            <button type="button" class="sc-gallery-thumb" data-src="../images/products/axe-sledge-intake.png" data-alt="Axe &amp; Sledge Supplements Intake — product image" aria-current="true" aria-label="Show image 1 of 5"><img src="../images/products/axe-sledge-intake.png" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
             <button type="button" class="sc-gallery-thumb" data-src="https://axeandsledge.com/cdn/shop/files/Intake_80af80da-6d54-43ff-a2d3-b4c07a866041.png" data-alt="Axe &amp; Sledge Supplements Intake — retailer photo" aria-current="false" aria-label="Show image 2 of 5"><img src="https://axeandsledge.com/cdn/shop/files/Intake_80af80da-6d54-43ff-a2d3-b4c07a866041.png" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
             <button type="button" class="sc-gallery-thumb" data-src="https://axeandsledge.com/cdn/shop/files/Intake_SFP_Fruit_Kaboom_dcad3006-fd52-479d-ac4c-8aba8c618738_2048x2048.jpg" data-alt="Axe &amp; Sledge Supplements Intake — retailer photo" aria-current="false" aria-label="Show image 3 of 5"><img src="https://axeandsledge.com/cdn/shop/files/Intake_SFP_Fruit_Kaboom_dcad3006-fd52-479d-ac4c-8aba8c618738_2048x2048.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
             <button type="button" class="sc-gallery-thumb" data-src="https://axeandsledge.com/cdn/shop/files/Intake-4.jpg" data-alt="Axe &amp; Sledge Supplements Intake — retailer photo" aria-current="false" aria-label="Show image 4 of 5"><img src="https://axeandsledge.com/cdn/shop/files/Intake-4.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
@@ -62,7 +62,9 @@
           <p class="sc-pdp-caption">Product imagery supplied by the retailer. Packaging may vary — verify the Supplement Facts panel on the container you receive.</p>
           <div class="sc-lightbox" id="sc-lightbox" hidden role="dialog" aria-modal="true" aria-label="Enlarged product image">
             <button type="button" class="sc-lightbox-close" id="sc-lightbox-close" aria-label="Close enlarged image">&times;</button>
-            <img id="sc-lightbox-img" src="" alt="" referrerpolicy="no-referrer">
+            <!-- No src until the lightbox opens: src="" resolves to the page
+                 itself, costing a request and registering as a broken image. -->
+            <img id="sc-lightbox-img" alt="" referrerpolicy="no-referrer">
           </div>
         </div>
 
@@ -260,7 +262,7 @@
               <span class="sc-related-meta">300 mg caffeine · $</span>
             </a>
           </div>
-          <p class="sc-related-more"><a href="../hub.html#cat-pre-workout">Every pre-workouts on file</a></p>
+          <p class="sc-related-more"><a href="../hub.html#cat-pre-workout">All pre-workouts on file</a></p>
         </div>
       </div>
     </div>

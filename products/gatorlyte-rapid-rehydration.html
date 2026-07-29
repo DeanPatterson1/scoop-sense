@@ -49,11 +49,11 @@
       <div class="sc-pdp-grid">
         <div class="sc-pdp-media-col">
           <figure class="sc-pdp-media sc-pdp-media-photo">
-            <img id="sc-gallery-main" src="../images/products/gatorlyte-rapid-rehydration.png" alt="Gatorade Gatorlyte Rapid Rehydration Electrolyte Beverage Powder — product render" referrerpolicy="no-referrer">
+            <img id="sc-gallery-main" src="../images/products/gatorlyte-rapid-rehydration.png" alt="Gatorade Gatorlyte Rapid Rehydration Electrolyte Beverage Powder — product image" referrerpolicy="no-referrer">
             <button type="button" class="sc-zoom-btn" id="sc-zoom-btn" aria-label="Zoom image">&#10530;<span> Zoom</span></button>
           </figure>
           <div class="sc-gallery-thumbs">
-            <button type="button" class="sc-gallery-thumb" data-src="../images/products/gatorlyte-rapid-rehydration.png" data-alt="Gatorade Gatorlyte Rapid Rehydration Electrolyte Beverage Powder — product render" aria-current="true" aria-label="Show image 1 of 4"><img src="../images/products/gatorlyte-rapid-rehydration.png" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
+            <button type="button" class="sc-gallery-thumb" data-src="../images/products/gatorlyte-rapid-rehydration.png" data-alt="Gatorade Gatorlyte Rapid Rehydration Electrolyte Beverage Powder — product image" aria-current="true" aria-label="Show image 1 of 4"><img src="../images/products/gatorlyte-rapid-rehydration.png" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
             <button type="button" class="sc-gallery-thumb" data-src="https://www.datocms-assets.com/101859/1776960107-gatorlyte_powder_orange_sachet_pdp-hero_desktop_2026_3708x2780.png?auto=format&amp;fit=max&amp;w=3840" data-alt="Gatorade Gatorlyte Rapid Rehydration Electrolyte Beverage Powder — retailer photo" aria-current="false" aria-label="Show image 2 of 4"><img src="https://www.datocms-assets.com/101859/1776960107-gatorlyte_powder_orange_sachet_pdp-hero_desktop_2026_3708x2780.png?auto=format&amp;fit=max&amp;w=3840" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
             <button type="button" class="sc-gallery-thumb" data-src="https://www.datocms-assets.com/101859/1776959992-gatorlyte_powder_orange_carton_pdpwhatyouget_desktop_2026_1812x2720.png?auto=format&amp;fit=max&amp;w=3840" data-alt="Gatorade Gatorlyte Rapid Rehydration Electrolyte Beverage Powder — retailer photo" aria-current="false" aria-label="Show image 3 of 4"><img src="https://www.datocms-assets.com/101859/1776959992-gatorlyte_powder_orange_carton_pdpwhatyouget_desktop_2026_1812x2720.png?auto=format&amp;fit=max&amp;w=3840" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
             <button type="button" class="sc-gallery-thumb" data-src="https://www.datocms-assets.com/101859/1776959958-gatorlyte_orange_pdp_lifestyle_desktop_3708x2780.png?auto=format&amp;fit=max&amp;w=3840" data-alt="Gatorade Gatorlyte Rapid Rehydration Electrolyte Beverage Powder — retailer photo" aria-current="false" aria-label="Show image 4 of 4"><img src="https://www.datocms-assets.com/101859/1776959958-gatorlyte_orange_pdp_lifestyle_desktop_3708x2780.png?auto=format&amp;fit=max&amp;w=3840" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
@@ -61,7 +61,9 @@
           <p class="sc-pdp-caption">Product imagery supplied by the retailer. Packaging may vary — verify the Supplement Facts panel on the container you receive.</p>
           <div class="sc-lightbox" id="sc-lightbox" hidden role="dialog" aria-modal="true" aria-label="Enlarged product image">
             <button type="button" class="sc-lightbox-close" id="sc-lightbox-close" aria-label="Close enlarged image">&times;</button>
-            <img id="sc-lightbox-img" src="" alt="" referrerpolicy="no-referrer">
+            <!-- No src until the lightbox opens: src="" resolves to the page
+                 itself, costing a request and registering as a broken image. -->
+            <img id="sc-lightbox-img" alt="" referrerpolicy="no-referrer">
           </div>
         </div>
 
@@ -218,7 +220,7 @@
               <span class="sc-related-meta">Stim-free · 0 mg · $$$</span>
             </a>
           </div>
-          <p class="sc-related-more"><a href="../electrolytes.html">Every hydration mixes on file</a></p>
+          <p class="sc-related-more"><a href="../electrolytes.html">All hydration mixes on file</a></p>
         </div>
       </div>
     </div>

@@ -49,13 +49,19 @@
       <div class="sc-pdp-grid">
         <div class="sc-pdp-media-col">
           <figure class="sc-pdp-media sc-pdp-media-photo sc-art-plate" style="--sc-art-bg:rgb(204,204,204)">
-            <img id="sc-gallery-main" src="https://trioralors.com/wp-content/uploads/2023/01/teaser.jpg" alt="Trioral Oral Rehydration Salts — retailer photo" referrerpolicy="no-referrer">
+            <img id="sc-gallery-main" src="../images/products/trioral-oral-rehydration-salts.jpg" alt="Trioral Oral Rehydration Salts — product image" referrerpolicy="no-referrer">
             <button type="button" class="sc-zoom-btn" id="sc-zoom-btn" aria-label="Zoom image">&#10530;<span> Zoom</span></button>
           </figure>
+          <div class="sc-gallery-thumbs">
+            <button type="button" class="sc-gallery-thumb" data-src="../images/products/trioral-oral-rehydration-salts.jpg" data-alt="Trioral Oral Rehydration Salts — product image" aria-current="true" aria-label="Show image 1 of 2"><img src="../images/products/trioral-oral-rehydration-salts.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
+            <button type="button" class="sc-gallery-thumb" data-src="https://trioralors.com/wp-content/uploads/2023/01/teaser.jpg" data-alt="Trioral Oral Rehydration Salts — retailer photo" aria-current="false" aria-label="Show image 2 of 2"><img src="https://trioralors.com/wp-content/uploads/2023/01/teaser.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
+          </div>
           <p class="sc-pdp-caption">Product imagery supplied by the retailer. Packaging may vary — verify the Supplement Facts panel on the container you receive.</p>
           <div class="sc-lightbox" id="sc-lightbox" hidden role="dialog" aria-modal="true" aria-label="Enlarged product image">
             <button type="button" class="sc-lightbox-close" id="sc-lightbox-close" aria-label="Close enlarged image">&times;</button>
-            <img id="sc-lightbox-img" src="" alt="" referrerpolicy="no-referrer">
+            <!-- No src until the lightbox opens: src="" resolves to the page
+                 itself, costing a request and registering as a broken image. -->
+            <img id="sc-lightbox-img" alt="" referrerpolicy="no-referrer">
           </div>
         </div>
 
@@ -216,7 +222,7 @@
               <span class="sc-related-meta">Stim-free · 0 mg · $</span>
             </a>
           </div>
-          <p class="sc-related-more"><a href="../electrolytes.html">Every hydration mixes on file</a></p>
+          <p class="sc-related-more"><a href="../electrolytes.html">All hydration mixes on file</a></p>
         </div>
       </div>
     </div>

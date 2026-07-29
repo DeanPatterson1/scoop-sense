@@ -49,18 +49,20 @@
       <div class="sc-pdp-grid">
         <div class="sc-pdp-media-col">
           <figure class="sc-pdp-media sc-pdp-media-photo">
-            <img id="sc-gallery-main" src="../images/products/kaged-bcaa-211.png" alt="Kaged BCAA 2:1:1 — product render" referrerpolicy="no-referrer">
+            <img id="sc-gallery-main" src="../images/products/kaged-bcaa-211.png" alt="Kaged BCAA 2:1:1 — product image" referrerpolicy="no-referrer">
             <button type="button" class="sc-zoom-btn" id="sc-zoom-btn" aria-label="Zoom image">&#10530;<span> Zoom</span></button>
           </figure>
           <div class="sc-gallery-thumbs">
-            <button type="button" class="sc-gallery-thumb" data-src="../images/products/kaged-bcaa-211.png" data-alt="Kaged BCAA 2:1:1 — product render" aria-current="true" aria-label="Show image 1 of 3"><img src="../images/products/kaged-bcaa-211.png" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
+            <button type="button" class="sc-gallery-thumb" data-src="../images/products/kaged-bcaa-211.png" data-alt="Kaged BCAA 2:1:1 — product image" aria-current="true" aria-label="Show image 1 of 3"><img src="../images/products/kaged-bcaa-211.png" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
             <button type="button" class="sc-gallery-thumb" data-src="https://www.kaged.com/cdn/shop/files/BCAAAFRONT_ac1a0751-087f-4bab-8697-c92f6ea75a7b.png" data-alt="Kaged BCAA 2:1:1 — retailer photo" aria-current="false" aria-label="Show image 2 of 3"><img src="https://www.kaged.com/cdn/shop/files/BCAAAFRONT_ac1a0751-087f-4bab-8697-c92f6ea75a7b.png" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
             <button type="button" class="sc-gallery-thumb" data-src="https://www.kaged.com/cdn/shop/files/BCAA_BCAASFP.jpg" data-alt="Kaged BCAA 2:1:1 — retailer photo" aria-current="false" aria-label="Show image 3 of 3"><img src="https://www.kaged.com/cdn/shop/files/BCAA_BCAASFP.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
           </div>
           <p class="sc-pdp-caption">Product imagery supplied by the retailer. Packaging may vary — verify the Supplement Facts panel on the container you receive.</p>
           <div class="sc-lightbox" id="sc-lightbox" hidden role="dialog" aria-modal="true" aria-label="Enlarged product image">
             <button type="button" class="sc-lightbox-close" id="sc-lightbox-close" aria-label="Close enlarged image">&times;</button>
-            <img id="sc-lightbox-img" src="" alt="" referrerpolicy="no-referrer">
+            <!-- No src until the lightbox opens: src="" resolves to the page
+                 itself, costing a request and registering as a broken image. -->
+            <img id="sc-lightbox-img" alt="" referrerpolicy="no-referrer">
           </div>
         </div>
 
@@ -219,7 +221,7 @@
               <span class="sc-related-meta">Stim-free · 0 mg · $$$</span>
             </a>
           </div>
-          <p class="sc-related-more"><a href="../eaa.html">Every amino formulas on file</a></p>
+          <p class="sc-related-more"><a href="../eaa.html">All amino formulas on file</a></p>
         </div>
       </div>
     </div>

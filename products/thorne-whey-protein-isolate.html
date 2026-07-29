@@ -49,11 +49,11 @@
       <div class="sc-pdp-grid">
         <div class="sc-pdp-media-col">
           <figure class="sc-pdp-media sc-pdp-media-photo">
-            <img id="sc-gallery-main" src="../images/products/thorne-whey-protein-isolate.png" alt="Thorne Whey Protein Isolate — product render" referrerpolicy="no-referrer">
+            <img id="sc-gallery-main" src="../images/products/thorne-whey-protein-isolate.png" alt="Thorne Whey Protein Isolate — product image" referrerpolicy="no-referrer">
             <button type="button" class="sc-zoom-btn" id="sc-zoom-btn" aria-label="Zoom image">&#10530;<span> Zoom</span></button>
           </figure>
           <div class="sc-gallery-thumbs">
-            <button type="button" class="sc-gallery-thumb" data-src="../images/products/thorne-whey-protein-isolate.png" data-alt="Thorne Whey Protein Isolate — product render" aria-current="true" aria-label="Show image 1 of 4"><img src="../images/products/thorne-whey-protein-isolate.png" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
+            <button type="button" class="sc-gallery-thumb" data-src="../images/products/thorne-whey-protein-isolate.png" data-alt="Thorne Whey Protein Isolate — product image" aria-current="true" aria-label="Show image 1 of 4"><img src="../images/products/thorne-whey-protein-isolate.png" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
             <button type="button" class="sc-gallery-thumb" data-src="https://d1vo8zfysxy97v.cloudfront.net/media/product/sp111__v496b30d9bd6d9b49984937cf925408c168a0561f.png" data-alt="Thorne Whey Protein Isolate — retailer photo" aria-current="false" aria-label="Show image 2 of 4"><img src="https://d1vo8zfysxy97v.cloudfront.net/media/product/sp111__v496b30d9bd6d9b49984937cf925408c168a0561f.png" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
             <button type="button" class="sc-gallery-thumb" data-src="https://d1vo8zfysxy97v.cloudfront.net/media/product/sp111__vd8d76843226cf38cf557ca0a5d8135e2f7952d2a.jpg" data-alt="Thorne Whey Protein Isolate — retailer photo" aria-current="false" aria-label="Show image 3 of 4"><img src="https://d1vo8zfysxy97v.cloudfront.net/media/product/sp111__vd8d76843226cf38cf557ca0a5d8135e2f7952d2a.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
             <button type="button" class="sc-gallery-thumb" data-src="https://d1vo8zfysxy97v.cloudfront.net/media/product/sp111__v7583bad18bef72094fa64af52a30940d1e5cf75f.jpg" data-alt="Thorne Whey Protein Isolate — retailer photo" aria-current="false" aria-label="Show image 4 of 4"><img src="https://d1vo8zfysxy97v.cloudfront.net/media/product/sp111__v7583bad18bef72094fa64af52a30940d1e5cf75f.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
@@ -61,7 +61,9 @@
           <p class="sc-pdp-caption">Product imagery supplied by the retailer. Packaging may vary — verify the Supplement Facts panel on the container you receive.</p>
           <div class="sc-lightbox" id="sc-lightbox" hidden role="dialog" aria-modal="true" aria-label="Enlarged product image">
             <button type="button" class="sc-lightbox-close" id="sc-lightbox-close" aria-label="Close enlarged image">&times;</button>
-            <img id="sc-lightbox-img" src="" alt="" referrerpolicy="no-referrer">
+            <!-- No src until the lightbox opens: src="" resolves to the page
+                 itself, costing a request and registering as a broken image. -->
+            <img id="sc-lightbox-img" alt="" referrerpolicy="no-referrer">
           </div>
         </div>
 
@@ -224,7 +226,7 @@
               <span class="sc-related-meta">Stim-free · 0 mg · $$$</span>
             </a>
           </div>
-          <p class="sc-related-more"><a href="../protein.html">Every protein powders on file</a></p>
+          <p class="sc-related-more"><a href="../protein.html">All protein powders on file</a></p>
         </div>
       </div>
     </div>

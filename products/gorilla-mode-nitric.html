@@ -49,11 +49,11 @@
       <div class="sc-pdp-grid">
         <div class="sc-pdp-media-col">
           <figure class="sc-pdp-media sc-pdp-media-photo">
-            <img id="sc-gallery-main" src="../images/products/gorilla-mode-nitric.png" alt="Gorilla Mind Gorilla Mode Nitric — product render" referrerpolicy="no-referrer">
+            <img id="sc-gallery-main" src="../images/products/gorilla-mode-nitric.png" alt="Gorilla Mind Gorilla Mode Nitric — product image" referrerpolicy="no-referrer">
             <button type="button" class="sc-zoom-btn" id="sc-zoom-btn" aria-label="Zoom image">&#10530;<span> Zoom</span></button>
           </figure>
           <div class="sc-gallery-thumbs">
-            <button type="button" class="sc-gallery-thumb" data-src="../images/products/gorilla-mode-nitric.png" data-alt="Gorilla Mind Gorilla Mode Nitric — product render" aria-current="true" aria-label="Show image 1 of 5"><img src="../images/products/gorilla-mode-nitric.png" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
+            <button type="button" class="sc-gallery-thumb" data-src="../images/products/gorilla-mode-nitric.png" data-alt="Gorilla Mind Gorilla Mode Nitric — product image" aria-current="true" aria-label="Show image 1 of 5"><img src="../images/products/gorilla-mode-nitric.png" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
             <button type="button" class="sc-gallery-thumb" data-src="https://gorillamind.com/cdn/shop/files/GM_HERO_Nitric_FruitPunch_working_020626_1_1.png?v=1782938971&amp;width=1500" data-alt="Gorilla Mind Gorilla Mode Nitric — retailer photo" aria-current="false" aria-label="Show image 2 of 5"><img src="https://gorillamind.com/cdn/shop/files/GM_HERO_Nitric_FruitPunch_working_020626_1_1.png?v=1782938971&amp;width=1500" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
             <button type="button" class="sc-gallery-thumb" data-src="https://gorillamind.com/cdn/shop/files/GM_THUMBS_NITRIC_KeyCallouts_1500x1500_719faea0-7d5e-4e16-ae64-785c22f74de6.jpg?v=1771872781&amp;width=1500" data-alt="Gorilla Mind Gorilla Mode Nitric — retailer photo" aria-current="false" aria-label="Show image 3 of 5"><img src="https://gorillamind.com/cdn/shop/files/GM_THUMBS_NITRIC_KeyCallouts_1500x1500_719faea0-7d5e-4e16-ae64-785c22f74de6.jpg?v=1771872781&amp;width=1500" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
             <button type="button" class="sc-gallery-thumb" data-src="https://gorillamind.com/cdn/shop/files/GM_THUMBS_NITRIC_IngBreakdown_1500x1500_cb238dfa-5fdb-449b-8561-5ea9de056e1e.jpg?v=1771872781&amp;width=1500" data-alt="Gorilla Mind Gorilla Mode Nitric — retailer photo" aria-current="false" aria-label="Show image 4 of 5"><img src="https://gorillamind.com/cdn/shop/files/GM_THUMBS_NITRIC_IngBreakdown_1500x1500_cb238dfa-5fdb-449b-8561-5ea9de056e1e.jpg?v=1771872781&amp;width=1500" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
@@ -62,7 +62,9 @@
           <p class="sc-pdp-caption">Product imagery supplied by the retailer. Packaging may vary — verify the Supplement Facts panel on the container you receive.</p>
           <div class="sc-lightbox" id="sc-lightbox" hidden role="dialog" aria-modal="true" aria-label="Enlarged product image">
             <button type="button" class="sc-lightbox-close" id="sc-lightbox-close" aria-label="Close enlarged image">&times;</button>
-            <img id="sc-lightbox-img" src="" alt="" referrerpolicy="no-referrer">
+            <!-- No src until the lightbox opens: src="" resolves to the page
+                 itself, costing a request and registering as a broken image. -->
+            <img id="sc-lightbox-img" alt="" referrerpolicy="no-referrer">
           </div>
         </div>
 
@@ -235,7 +237,7 @@
               <span class="sc-related-meta">Stim-free · 0 mg · $$$</span>
             </a>
           </div>
-          <p class="sc-related-more"><a href="../hub.html#cat-pre-workout">Every pre-workouts on file</a></p>
+          <p class="sc-related-more"><a href="../hub.html#cat-pre-workout">All pre-workouts on file</a></p>
         </div>
       </div>
     </div>

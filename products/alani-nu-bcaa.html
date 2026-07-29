@@ -49,18 +49,20 @@
       <div class="sc-pdp-grid">
         <div class="sc-pdp-media-col">
           <figure class="sc-pdp-media sc-pdp-media-photo">
-            <img id="sc-gallery-main" src="../images/products/alani-nu-bcaa.png" alt="Alani Nu BCAA — product render" referrerpolicy="no-referrer">
+            <img id="sc-gallery-main" src="../images/products/alani-nu-bcaa.png" alt="Alani Nu BCAA — product image" referrerpolicy="no-referrer">
             <button type="button" class="sc-zoom-btn" id="sc-zoom-btn" aria-label="Zoom image">&#10530;<span> Zoom</span></button>
           </figure>
           <div class="sc-gallery-thumbs">
-            <button type="button" class="sc-gallery-thumb" data-src="../images/products/alani-nu-bcaa.png" data-alt="Alani Nu BCAA — product render" aria-current="true" aria-label="Show image 1 of 3"><img src="../images/products/alani-nu-bcaa.png" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
+            <button type="button" class="sc-gallery-thumb" data-src="../images/products/alani-nu-bcaa.png" data-alt="Alani Nu BCAA — product image" aria-current="true" aria-label="Show image 1 of 3"><img src="../images/products/alani-nu-bcaa.png" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
             <button type="button" class="sc-gallery-thumb" data-src="https://www.alaninu.com/cdn/shop/files/Stretch_AN-Website-PDP-BCAA-SPR-01_V1.png?v=1782507258&amp;width=2000" data-alt="Alani Nu BCAA — retailer photo" aria-current="false" aria-label="Show image 2 of 3"><img src="https://www.alaninu.com/cdn/shop/files/Stretch_AN-Website-PDP-BCAA-SPR-01_V1.png?v=1782507258&amp;width=2000" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
             <button type="button" class="sc-gallery-thumb" data-src="https://www.alaninu.com/cdn/shop/files/Stretch_AN-Website-PDP-BCAA-SPR-02_V1.png?v=1782507258&amp;width=2000" data-alt="Alani Nu BCAA — retailer photo" aria-current="false" aria-label="Show image 3 of 3"><img src="https://www.alaninu.com/cdn/shop/files/Stretch_AN-Website-PDP-BCAA-SPR-02_V1.png?v=1782507258&amp;width=2000" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
           </div>
           <p class="sc-pdp-caption">Product imagery supplied by the retailer. Packaging may vary — verify the Supplement Facts panel on the container you receive.</p>
           <div class="sc-lightbox" id="sc-lightbox" hidden role="dialog" aria-modal="true" aria-label="Enlarged product image">
             <button type="button" class="sc-lightbox-close" id="sc-lightbox-close" aria-label="Close enlarged image">&times;</button>
-            <img id="sc-lightbox-img" src="" alt="" referrerpolicy="no-referrer">
+            <!-- No src until the lightbox opens: src="" resolves to the page
+                 itself, costing a request and registering as a broken image. -->
+            <img id="sc-lightbox-img" alt="" referrerpolicy="no-referrer">
           </div>
         </div>
 
@@ -219,7 +221,7 @@
               <span class="sc-related-meta">Stim-free · 0 mg · $$$</span>
             </a>
           </div>
-          <p class="sc-related-more"><a href="../eaa.html">Every amino formulas on file</a></p>
+          <p class="sc-related-more"><a href="../eaa.html">All amino formulas on file</a></p>
         </div>
       </div>
     </div>

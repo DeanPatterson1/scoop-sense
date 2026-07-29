@@ -49,11 +49,11 @@
       <div class="sc-pdp-grid">
         <div class="sc-pdp-media-col">
           <figure class="sc-pdp-media sc-pdp-media-photo">
-            <img id="sc-gallery-main" src="../images/products/thorne-creatine.png" alt="Thorne Creatine — product render" referrerpolicy="no-referrer">
+            <img id="sc-gallery-main" src="../images/products/thorne-creatine.png" alt="Thorne Creatine — product image" referrerpolicy="no-referrer">
             <button type="button" class="sc-zoom-btn" id="sc-zoom-btn" aria-label="Zoom image">&#10530;<span> Zoom</span></button>
           </figure>
           <div class="sc-gallery-thumbs">
-            <button type="button" class="sc-gallery-thumb" data-src="../images/products/thorne-creatine.png" data-alt="Thorne Creatine — product render" aria-current="true" aria-label="Show image 1 of 4"><img src="../images/products/thorne-creatine.png" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
+            <button type="button" class="sc-gallery-thumb" data-src="../images/products/thorne-creatine.png" data-alt="Thorne Creatine — product image" aria-current="true" aria-label="Show image 1 of 4"><img src="../images/products/thorne-creatine.png" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
             <button type="button" class="sc-gallery-thumb" data-src="https://d1vo8zfysxy97v.cloudfront.net/media/product/sf903__ve8382489c6ce9fb7f28cdddef00e6f1ece146591.png" data-alt="Thorne Creatine — retailer photo" aria-current="false" aria-label="Show image 2 of 4"><img src="https://d1vo8zfysxy97v.cloudfront.net/media/product/sf903__ve8382489c6ce9fb7f28cdddef00e6f1ece146591.png" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
             <button type="button" class="sc-gallery-thumb" data-src="https://d1vo8zfysxy97v.cloudfront.net/media/product/sf903__vb5ca0e34dbdc8dc4000b29c8ba0bb48387eb2496.jpg" data-alt="Thorne Creatine — retailer photo" aria-current="false" aria-label="Show image 3 of 4"><img src="https://d1vo8zfysxy97v.cloudfront.net/media/product/sf903__vb5ca0e34dbdc8dc4000b29c8ba0bb48387eb2496.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
             <button type="button" class="sc-gallery-thumb" data-src="https://d1vo8zfysxy97v.cloudfront.net/media/product/sf903__v67f933512454449d24c5c855f503305e97e11c01.jpg" data-alt="Thorne Creatine — retailer photo" aria-current="false" aria-label="Show image 4 of 4"><img src="https://d1vo8zfysxy97v.cloudfront.net/media/product/sf903__v67f933512454449d24c5c855f503305e97e11c01.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
@@ -61,7 +61,9 @@
           <p class="sc-pdp-caption">Product imagery supplied by the retailer. Packaging may vary — verify the Supplement Facts panel on the container you receive.</p>
           <div class="sc-lightbox" id="sc-lightbox" hidden role="dialog" aria-modal="true" aria-label="Enlarged product image">
             <button type="button" class="sc-lightbox-close" id="sc-lightbox-close" aria-label="Close enlarged image">&times;</button>
-            <img id="sc-lightbox-img" src="" alt="" referrerpolicy="no-referrer">
+            <!-- No src until the lightbox opens: src="" resolves to the page
+                 itself, costing a request and registering as a broken image. -->
+            <img id="sc-lightbox-img" alt="" referrerpolicy="no-referrer">
           </div>
         </div>
 
@@ -217,7 +219,7 @@
               <span class="sc-related-meta">Stim-free · 0 mg · $$$</span>
             </a>
           </div>
-          <p class="sc-related-more"><a href="../creatine.html">Every creatine products on file</a></p>
+          <p class="sc-related-more"><a href="../creatine.html">All creatine products on file</a></p>
         </div>
       </div>
     </div>

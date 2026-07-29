@@ -275,15 +275,21 @@ function tubSVG(p) {
    background-removed render (same art as the hub card); the rest are hotlinked
    from the retailer's own CDN — never re-hosted. Clicking the main image (or
    the zoom control) opens a full-screen lightbox. */
-// The locally stored render is the preferred first slide, but only products
-// that actually have one get it — otherwise the gallery opened on a 404.
+// The locally stored image leads the gallery when there is one — whatever its
+// extension, which is why this follows imageUrl rather than assuming .png.
+// Products with no local file fall through to the retailer URLs; a hard-coded
+// path opened the gallery on a 404.
 function slidesOf(p) {
   const name = fullNameOf(p);
   const slides = [];
-  if (fs.existsSync(path.join(ROOT, "images", "products", `${p.id}.png`))) {
-    slides.push({ src: `../images/products/${p.id}.png`, alt: `${name} — product render` });
+  const local = p.imageUrl && !/^https?:/i.test(p.imageUrl) ? p.imageUrl : null;
+  if (local && fs.existsSync(path.join(ROOT, local))) {
+    slides.push({ src: `../${local}`, alt: `${name} — product image` });
   }
-  for (const u of p.images) slides.push({ src: u, alt: `${name} — retailer photo` });
+  for (const u of p.images) {
+    if (local && u === p.imageUrl) continue; // don't show the same shot twice
+    slides.push({ src: u, alt: `${name} — retailer photo` });
+  }
   return slides;
 }
 
@@ -305,7 +311,9 @@ function mediaHTML(p) {
           <p class="sc-pdp-caption">Product imagery supplied by the retailer. Packaging may vary — verify the Supplement Facts panel on the container you receive.</p>
           <div class="sc-lightbox" id="sc-lightbox" hidden role="dialog" aria-modal="true" aria-label="Enlarged product image">
             <button type="button" class="sc-lightbox-close" id="sc-lightbox-close" aria-label="Close enlarged image">&times;</button>
-            <img id="sc-lightbox-img" src="" alt="" referrerpolicy="no-referrer">
+            <!-- No src until the lightbox opens: src="" resolves to the page
+                 itself, costing a request and registering as a broken image. -->
+            <img id="sc-lightbox-img" alt="" referrerpolicy="no-referrer">
           </div>`;
 }
 
@@ -841,7 +849,7 @@ ${doseComparisonHTML(p)}
               <span class="sc-related-meta">${r.caffeineMg === 0 ? "Stim-free · 0 mg" : esc(r.caffeineMg) + " mg caffeine"} · ${esc(r.priceRange)}</span>
             </a>`).join("\n            ")}
           </div>
-          <p class="sc-related-more"><a href="../${esc(categoryPageOf(p))}">Every ${esc(cfgOf(p).plural)} on file</a></p>
+          <p class="sc-related-more"><a href="../${esc(categoryPageOf(p))}">All ${esc(cfgOf(p).plural)} on file</a></p>
         </div>
       </div>
     </div>

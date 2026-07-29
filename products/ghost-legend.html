@@ -49,18 +49,20 @@
       <div class="sc-pdp-grid">
         <div class="sc-pdp-media-col">
           <figure class="sc-pdp-media sc-pdp-media-photo">
-            <img id="sc-gallery-main" src="../images/products/ghost-legend.png" alt="Ghost Legend — product render" referrerpolicy="no-referrer">
+            <img id="sc-gallery-main" src="../images/products/ghost-legend.png" alt="Ghost Legend — product image" referrerpolicy="no-referrer">
             <button type="button" class="sc-zoom-btn" id="sc-zoom-btn" aria-label="Zoom image">&#10530;<span> Zoom</span></button>
           </figure>
           <div class="sc-gallery-thumbs">
-            <button type="button" class="sc-gallery-thumb" data-src="../images/products/ghost-legend.png" data-alt="Ghost Legend — product render" aria-current="true" aria-label="Show image 1 of 3"><img src="../images/products/ghost-legend.png" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
+            <button type="button" class="sc-gallery-thumb" data-src="../images/products/ghost-legend.png" data-alt="Ghost Legend — product image" aria-current="true" aria-label="Show image 1 of 3"><img src="../images/products/ghost-legend.png" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
             <button type="button" class="sc-gallery-thumb" data-src="https://cdn.shopify.com/s/files/1/2060/6331/files/LegendxWelchs.webp?v=1761234119" data-alt="Ghost Legend — retailer photo" aria-current="false" aria-label="Show image 2 of 3"><img src="https://cdn.shopify.com/s/files/1/2060/6331/files/LegendxWelchs.webp?v=1761234119" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
             <button type="button" class="sc-gallery-thumb" data-src="https://cdn.shopify.com/s/files/1/2060/6331/files/LegendWelchsBack.webp?v=1761234119" data-alt="Ghost Legend — retailer photo" aria-current="false" aria-label="Show image 3 of 3"><img src="https://cdn.shopify.com/s/files/1/2060/6331/files/LegendWelchsBack.webp?v=1761234119" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
           </div>
           <p class="sc-pdp-caption">Product imagery supplied by the retailer. Packaging may vary — verify the Supplement Facts panel on the container you receive.</p>
           <div class="sc-lightbox" id="sc-lightbox" hidden role="dialog" aria-modal="true" aria-label="Enlarged product image">
             <button type="button" class="sc-lightbox-close" id="sc-lightbox-close" aria-label="Close enlarged image">&times;</button>
-            <img id="sc-lightbox-img" src="" alt="" referrerpolicy="no-referrer">
+            <!-- No src until the lightbox opens: src="" resolves to the page
+                 itself, costing a request and registering as a broken image. -->
+            <img id="sc-lightbox-img" alt="" referrerpolicy="no-referrer">
           </div>
         </div>
 
@@ -240,7 +242,7 @@
               <span class="sc-related-meta">260 mg caffeine · $$</span>
             </a>
           </div>
-          <p class="sc-related-more"><a href="../hub.html#cat-pre-workout">Every pre-workouts on file</a></p>
+          <p class="sc-related-more"><a href="../hub.html#cat-pre-workout">All pre-workouts on file</a></p>
         </div>
       </div>
     </div>

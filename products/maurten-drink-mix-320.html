@@ -49,18 +49,20 @@
       <div class="sc-pdp-grid">
         <div class="sc-pdp-media-col">
           <figure class="sc-pdp-media sc-pdp-media-photo">
-            <img id="sc-gallery-main" src="../images/products/maurten-drink-mix-320.png" alt="Maurten Drink Mix 320 — product render" referrerpolicy="no-referrer">
+            <img id="sc-gallery-main" src="../images/products/maurten-drink-mix-320.png" alt="Maurten Drink Mix 320 — product image" referrerpolicy="no-referrer">
             <button type="button" class="sc-zoom-btn" id="sc-zoom-btn" aria-label="Zoom image">&#10530;<span> Zoom</span></button>
           </figure>
           <div class="sc-gallery-thumbs">
-            <button type="button" class="sc-gallery-thumb" data-src="../images/products/maurten-drink-mix-320.png" data-alt="Maurten Drink Mix 320 — product render" aria-current="true" aria-label="Show image 1 of 3"><img src="../images/products/maurten-drink-mix-320.png" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
+            <button type="button" class="sc-gallery-thumb" data-src="../images/products/maurten-drink-mix-320.png" data-alt="Maurten Drink Mix 320 — product image" aria-current="true" aria-label="Show image 1 of 3"><img src="../images/products/maurten-drink-mix-320.png" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
             <button type="button" class="sc-gallery-thumb" data-src="https://maurten.imgix.net/photos/Products/Entry-Card-Maurten-Drink-Mix-320-1.png?auto=compress%2Cformat&amp;fit=max&amp;q=80&amp;w=120&amp;s=f3d7495dec7fea87fba326ce887c16ac" data-alt="Maurten Drink Mix 320 — retailer photo" aria-current="false" aria-label="Show image 2 of 3"><img src="https://maurten.imgix.net/photos/Products/Entry-Card-Maurten-Drink-Mix-320-1.png?auto=compress%2Cformat&amp;fit=max&amp;q=80&amp;w=120&amp;s=f3d7495dec7fea87fba326ce887c16ac" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
             <button type="button" class="sc-gallery-thumb" data-src="https://maurten.imgix.net/branding/Screenshot-2025-03-14-at-16.39.51.png?auto=compress%2Cformat&amp;fit=max&amp;q=80&amp;w=1000&amp;s=165f3bb0f1c61dc593dae9d44fba39ea" data-alt="Maurten Drink Mix 320 — retailer photo" aria-current="false" aria-label="Show image 3 of 3"><img src="https://maurten.imgix.net/branding/Screenshot-2025-03-14-at-16.39.51.png?auto=compress%2Cformat&amp;fit=max&amp;q=80&amp;w=1000&amp;s=165f3bb0f1c61dc593dae9d44fba39ea" alt="" loading="lazy" referrerpolicy="no-referrer"></button>
           </div>
           <p class="sc-pdp-caption">Product imagery supplied by the retailer. Packaging may vary — verify the Supplement Facts panel on the container you receive.</p>
           <div class="sc-lightbox" id="sc-lightbox" hidden role="dialog" aria-modal="true" aria-label="Enlarged product image">
             <button type="button" class="sc-lightbox-close" id="sc-lightbox-close" aria-label="Close enlarged image">&times;</button>
-            <img id="sc-lightbox-img" src="" alt="" referrerpolicy="no-referrer">
+            <!-- No src until the lightbox opens: src="" resolves to the page
+                 itself, costing a request and registering as a broken image. -->
+            <img id="sc-lightbox-img" alt="" referrerpolicy="no-referrer">
           </div>
         </div>
 
@@ -217,7 +219,7 @@
               <span class="sc-related-meta">Stim-free · 0 mg · $</span>
             </a>
           </div>
-          <p class="sc-related-more"><a href="../electrolytes.html">Every hydration mixes on file</a></p>
+          <p class="sc-related-more"><a href="../electrolytes.html">All hydration mixes on file</a></p>
         </div>
       </div>
     </div>
