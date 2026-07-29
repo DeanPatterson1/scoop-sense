@@ -133,10 +133,29 @@
       return true;
     });
 
+    function byName(a, b) {
+      return a.name.localeCompare(b.name) || a.brand.localeCompare(b.brand);
+    }
+
+    // "f:<asc|desc>:<fact key>" — the key itself may contain colons
+    // ("m:creatineG"), so only the first two segments are the directive.
+    var factSort = /^f:(asc|desc):(.+)$/.exec(state.sort);
+
     results.sort(function (a, b) {
       if (state.sort === "caffeine-asc") return a.caffeineMg - b.caffeineMg;
       if (state.sort === "caffeine-desc") return b.caffeineMg - a.caffeineMg;
-      return a.name.localeCompare(b.name) || a.brand.localeCompare(b.brand);
+      if (factSort) {
+        var av = factSortValue(a, factSort[2]);
+        var bv = factSortValue(b, factSort[2]);
+        // factSortValue uses -1 for "label doesn't disclose it"; those sort
+        // last in both directions rather than pretending to be a low figure.
+        if (av === -1 && bv === -1) return byName(a, b);
+        if (av === -1) return 1;
+        if (bv === -1) return -1;
+        if (av !== bv) return factSort[1] === "asc" ? av - bv : bv - av;
+        return byName(a, b);
+      }
+      return byName(a, b);
     });
 
     return results;
@@ -146,15 +165,29 @@
    * Shared cell fragments
    * ------------------------------------------------------------------- */
 
+  /* A dose cell is a figure plus, sometimes, a qualifier ("8 g malate",
+   * "4.68 g blend"). Printing them as one string pushes the numerals off the
+   * right-aligned edge, which is the whole point of a comparison column — so
+   * the qualifier is floated to the left of the cell and the figure keeps the
+   * edge. Splits "<number><unit>" from whatever follows it. */
+  function doseCellHTML(dose, extraQual) {
+    if (!dose) return '<span class="sc-dim">—</span>';
+    var m = /^\s*([\d.]+\s*(?:mg|g|%))\s*(.*)$/i.exec(dose);
+    var figure = m ? m[1] : dose;
+    var qual = [m && m[2] ? m[2] : "", extraQual || ""].filter(Boolean).join(" ");
+    // The qualifier slot is always emitted, even when empty: it reserves the
+    // same width on every row, so the figures keep one shared right edge.
+    return esc(figure) + '<span class="sc-qual">' + esc(qual) + "</span>";
+  }
+
   function citrullineHTML(p) {
     var cit = citrullineOf(p);
     if (!cit) return '<span class="sc-dim">—</span>';
-    return esc(cit.dose) + (cit.form ? " <small>" + esc(cit.form) + "</small>" : "");
+    return doseCellHTML(cit.dose, cit.form);
   }
 
   function betaHTML(p) {
-    var dose = betaAlanineOf(p);
-    return dose ? esc(dose) : '<span class="sc-dim">—</span>';
+    return doseCellHTML(betaAlanineOf(p));
   }
 
   function blendHTML(p) {
@@ -164,9 +197,9 @@
   // "$" | "$$" | "$$$" -> plain-English cost-per-serving tier, with the basis
   // for the judgment exposed as a tooltip.
   var PRICE_TIPS = {
-    Budget: "Estimated cost per full serving sits in the lowest third of this database — roughly $1.10 or less at the time of the last label check.",
-    "Mid-range": "Estimated cost per full serving sits in the middle third of this database — roughly $1.10–$1.90 at the time of the last label check.",
-    Premium: "Estimated cost per full serving sits in the highest third of this database — roughly $1.90 or more at the time of the last label check."
+    Budget: "Estimated cost per full serving sits in the lowest third of this database. We rank the tier rather than print a dollar figure, because prices move faster than we can check them.",
+    "Mid-range": "Estimated cost per full serving sits in the middle third of this database. We rank the tier rather than print a dollar figure, because prices move faster than we can check them.",
+    Premium: "Estimated cost per full serving sits in the highest third of this database. We rank the tier rather than print a dollar figure, because prices move faster than we can check them."
   };
 
   function priceWordOf(p) {
@@ -206,7 +239,7 @@
       var pattern = key.slice(4);
       if (/citrulline/.test(pattern)) return citrullineHTML(p);
       var ing = findIngredient(p, new RegExp(pattern, "i"));
-      return ing ? esc(ing.dose) : DASH;
+      return ing ? doseCellHTML(ing.dose) : DASH;
     }
     if (key.indexOf("m:") === 0) {
       var parts = key.split(":");
@@ -262,10 +295,13 @@
   }
 
   // Mirrors tubSVG in scripts/build-product-pages.js — keep in sync.
+  // The lid overlaps the body (y 6–50 against a body starting at 44) so it
+  // reads as a lid, and it is lighter than the body, not darker: a lid drawn
+  // below the page background floats off as a detached rectangle.
   function tubSVG(p) {
-    var accent = p.accentColor || "#4A4237";
+    var accent = p.accentColor || "#3A424D";
     return '<svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">' +
-      '<rect x="34" y="6" width="132" height="34" rx="10" fill="#0B0D10" stroke="#333A44"/>' +
+      '<rect x="34" y="6" width="132" height="44" rx="8" fill="#232830" stroke="#333A44"/>' +
       '<rect x="24" y="44" width="152" height="186" rx="14" fill="#191D23" stroke="#333A44"/>' +
       '<rect x="38" y="78" width="124" height="118" rx="6" fill="#F2EDE3"/>' +
       '<rect x="38" y="78" width="124" height="14" rx="6" fill="' + esc(accent) + '"/>' +
@@ -287,6 +323,8 @@
   var DISCLOSED_TIP = "Every active ingredient and its dosage is individually listed on the label. No proprietary blends.";
   var BLEND_TIP = "One or more combined blend totals hide the individual ingredient amounts inside.";
   var TESTED_TIP = "Certified by an independent banned-substance testing program (NSF Certified for Sport, Informed Sport, or Informed Choice), per the label or brand page.";
+  var BEGINNER_TIP = "A reasonable first tub: moderate or no caffeine, a fully disclosed label, and nothing on the panel that surprises a new user.";
+  var BUDGET_TIP = "Cost per full serving sits in the lowest third of this database while the label still discloses its doses.";
 
   // Stim tag rule: pre-workout tiles always carry one; every other category
   // shows one only when the formula is actually caffeinated — a "Stim-Free"
@@ -297,7 +335,7 @@
     return categoryOf(p) === "pre-workout" || p.caffeineMg > 0;
   }
 
-  function tagsHTML(p) {
+  function tagsHTML(p, limit) {
     var tags = [];
     var bucket = bucketOf(p);
     if (showsStimTag(p)) {
@@ -314,7 +352,15 @@
     if (p.badges.indexOf("Third-Party Tested") !== -1) {
       tags.push('<span class="sc-tag sc-tag-calm" title="' + esc(TESTED_TIP) + '">Third-party tested</span>');
     }
-    return tags.join("");
+    if (p.badges.indexOf("Beginner Friendly") !== -1) {
+      tags.push('<span class="sc-tag" title="' + esc(BEGINNER_TIP) + '">Beginner friendly</span>');
+    }
+    if (p.badges.indexOf("Budget Pick") !== -1) {
+      tags.push('<span class="sc-tag" title="' + esc(BUDGET_TIP) + '">Budget pick</span>');
+    }
+    // Tiles cap the row so one product's five tags can't push its facts panel
+    // out of line with the rest of the grid; product pages show all of them.
+    return (limit ? tags.slice(0, limit) : tags).join("");
   }
 
   function tileFactHTML(label, valueHTML) {
@@ -332,28 +378,32 @@
       '<a class="sc-tile-link" href="' + page + '" ' +
         'aria-label="Full label breakdown: ' + esc(p.brand + " " + p.name) + '">' +
         '<span class="sc-tile-art" aria-hidden="true">' +
-          (p.imageUrl ? '<img src="' + esc(p.imageUrl) + '" alt="">' : tubSVG(p)) +
+          (p.imageUrl ? '<img src="' + esc(p.imageUrl) + '" alt="" loading="lazy" decoding="async">' : tubSVG(p)) +
         "</span>" +
         '<span class="sc-tile-top">' +
           '<span class="sc-tile-brand">' + esc(p.brand) + "</span>" +
           '<span class="sc-tile-name">' + esc(p.name) + "</span>" +
         "</span>" +
-        '<span class="sc-tile-tags">' + tagsHTML(p) + "</span>" +
+        '<span class="sc-tile-tags">' + tagsHTML(p, 3) + "</span>" +
         '<span class="sc-tile-facts">' +
+          '<span class="sc-tile-facts-title">Label data</span>' +
           cfgOf(p).tileFacts.map(function (f) {
             return tileFactHTML(esc(f.label), factOf(p, f.key));
           }).join("") +
-        "</span>" +
-        '<span class="sc-tile-foot">' +
-          "<span>" + esc(p.servings) + " servings · " + priceWordHTML(p) + "</span>" +
+          '<span class="sc-tile-foot">' +
+            "<span>" + esc(p.servings) + " servings</span>" +
+            "<span>" + priceWordHTML(p) + "</span>" +
+          "</span>" +
         "</span>" +
       "</a>" +
+      // The tile itself is the link to the breakdown, so the row underneath
+      // carries only the two things that are not "read this label": the
+      // outbound price check and the shortlist toggle.
       '<div class="sc-tile-ctas">' +
-        '<a class="sc-btn sc-btn-primary" href="' + page + '">Full breakdown</a>' +
-        '<a class="sc-btn sc-btn-secondary" href="' + esc(p.affiliateUrl) + '" ' +
+        '<a class="sc-tile-price" href="' + esc(p.affiliateUrl) + '" ' +
           'target="_blank" rel="sponsored nofollow noopener" ' +
-          'aria-label="View current price for ' + esc(p.brand + " " + p.name) +
-          ' on Amazon (affiliate link)">View current price <span class="sc-ext" aria-hidden="true">&#8599;</span></a>' +
+          'aria-label="Check current price for ' + esc(p.brand + " " + p.name) +
+          ' on Amazon (affiliate link)">Check price <span class="sc-ext" aria-hidden="true">&#8599;</span></a>' +
         saveBtnHTML(p) +
       "</div>" +
     "</article>";
@@ -418,6 +468,26 @@
     }
   }
 
+  // A category page sorts on the figures that category is actually chosen on
+  // (creatine grams, protein per scoop, sodium) — those come from its
+  // sortOptions entry. The all-products hub keeps the markup it ships with.
+  function populateSorts(select) {
+    if (!PAGE_CATEGORY) return;
+    var opts = (CATEGORY_CONFIG[PAGE_CATEGORY] || {}).sortOptions;
+    if (!opts || !opts.length) return;
+    select.innerHTML = "";
+    var base = document.createElement("option");
+    base.value = "name";
+    base.textContent = "Sort: name (A–Z)";
+    select.appendChild(base);
+    for (var i = 0; i < opts.length; i++) {
+      var option = document.createElement("option");
+      option.value = opts[i].value;
+      option.textContent = "Sort: " + opts[i].label;
+      select.appendChild(option);
+    }
+  }
+
   function wireFilters() {
     var search = document.getElementById("sc-search");
     var category = document.getElementById("sc-category");
@@ -473,29 +543,36 @@
     }
 
     if (sort) {
+      populateSorts(sort);
       sort.addEventListener("change", function () {
         state.sort = sort.value;
         renderHub();
       });
     }
 
-    if (clear) {
-      clear.addEventListener("click", function () {
-        state.search = "";
-        state.category = PAGE_CATEGORY || "all";
-        state.caffeine = "all";
-        state.brand = "all";
-        state.stimFreeOnly = false;
-        state.sort = "name";
-        if (search) search.value = "";
-        if (category) category.value = "all";
-        if (caffeine) caffeine.value = "all";
-        if (brand) brand.value = "all";
-        if (stimFree) stimFree.checked = false;
-        if (sort) sort.value = "name";
-        renderHub();
-      });
+    function clearAll() {
+      state.search = "";
+      state.category = PAGE_CATEGORY || "all";
+      state.caffeine = "all";
+      state.brand = "all";
+      state.stimFreeOnly = false;
+      state.sort = "name";
+      if (search) search.value = "";
+      if (category) category.value = "all";
+      if (caffeine) caffeine.value = "all";
+      if (brand) brand.value = "all";
+      if (stimFree) stimFree.checked = false;
+      if (sort) sort.value = "name";
+      renderHub();
+      if (search) search.focus();
     }
+
+    if (clear) clear.addEventListener("click", clearAll);
+
+    // The dead end needs its own way out — the toolbar's "Clear all" can be
+    // scrolled well off screen by the time a reader hits an empty result.
+    var emptyClear = document.getElementById("sc-empty-clear");
+    if (emptyClear) emptyClear.addEventListener("click", clearAll);
 
     if (filtersBtn && filtersPanel) {
       filtersBtn.addEventListener("click", function () {
@@ -802,9 +879,11 @@
 
     var head = products.map(function (p) {
       return '<td class="sc-saved-col">' +
-        '<a class="sc-saved-art" href="products/' + esc(p.id) + '.html">' +
-          (p.imageUrl ? '<img src="' + esc(p.imageUrl) + '" alt="">' : "") +
-        "</a>" +
+        // Decorative twin of the named link below it: hidden from assistive
+        // tech rather than announced as a second, nameless "link".
+        '<span class="sc-saved-art" aria-hidden="true">' +
+          (p.imageUrl ? '<img src="' + esc(p.imageUrl) + '" alt="" loading="lazy">' : tubSVG(p)) +
+        "</span>" +
         '<span class="sc-tile-brand">' + esc(p.brand) + "</span>" +
         '<a class="sc-saved-name" href="products/' + esc(p.id) + '.html">' + esc(p.name) + "</a>" +
         '<button type="button" class="sc-saved-remove" data-remove-id="' + esc(p.id) + '">Remove</button>' +
@@ -878,8 +957,67 @@
    * Init
    * ------------------------------------------------------------------- */
 
+  /* A sticky table head has to clear the sticky toolbar on pages that have
+   * one. The toolbar's height changes when its controls wrap, so measure it
+   * rather than hard-coding an offset. */
+  function syncStickyOffsets() {
+    var toolbar = document.querySelector(".sc-toolbar");
+    if (!toolbar) return;
+    var set = function () {
+      document.body.style.setProperty(
+        "--sc-table-head-top", Math.round(toolbar.getBoundingClientRect().height) + "px"
+      );
+    };
+    set();
+    if (window.ResizeObserver) new ResizeObserver(set).observe(toolbar);
+    else window.addEventListener("resize", set);
+  }
+
+  /* The browse pages left their whole top-right quadrant empty while the
+   * homepage filled it with the facts panel. Same device here, scoped to
+   * whatever the page is actually showing — counts come from the data, so
+   * they cannot drift out of date the way hand-written figures do. */
+  function renderIntroPanel() {
+    var panel = document.getElementById("sc-intropanel");
+    if (!panel || typeof PRODUCTS === "undefined") return;
+
+    var scope = PAGE_CATEGORY
+      ? PRODUCTS.filter(function (p) { return categoryOf(p) === PAGE_CATEGORY; })
+      : PRODUCTS;
+    if (!scope.length) return;
+
+    var cfg = PAGE_CATEGORY ? CATEGORY_CONFIG[PAGE_CATEGORY] : null;
+    var disclosed = scope.filter(isDisclosed).length;
+    var blends = scope.filter(hasBlend).length;
+    var tested = scope.filter(function (p) {
+      return p.badges.indexOf("Third-Party Tested") !== -1;
+    }).length;
+
+    var rows = [
+      ["Labels on file", scope.length],
+      ["Fully disclosed", disclosed + " of " + scope.length],
+      ["Proprietary blends", blends + " of " + scope.length],
+      ["Third-party tested", tested + " of " + scope.length]
+    ];
+
+    if (!PAGE_CATEGORY || (cfg && cfg.stimBadges)) {
+      var caf = scope.map(function (p) { return p.caffeineMg; });
+      rows.splice(1, 0, ["Caffeine range", Math.min.apply(null, caf) + "–" + Math.max.apply(null, caf) + " mg"]);
+    }
+
+    panel.innerHTML =
+      '<p class="sc-intropanel-title">' + esc(cfg ? cfg.label + " facts" : "Database facts") + "</p>" +
+      "<dl>" + rows.map(function (r) {
+        return "<div><dt>" + esc(r[0]) + "</dt><dd>" + esc(r[1]) + "</dd></div>";
+      }).join("") + "</dl>" +
+      '<p class="sc-intropanel-note">Every figure is counted from the labels on file, checked July 2026.</p>';
+    panel.hidden = false;
+  }
+
   function init() {
     syncSaveUI(); // nav counter + save toggles work on every page
+    syncStickyOffsets();
+    renderIntroPanel();
 
     if (typeof PRODUCTS === "undefined") {
       initReveal(); // product pages: motion only, no data renderers

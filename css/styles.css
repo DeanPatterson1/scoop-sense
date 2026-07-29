@@ -25,7 +25,11 @@
   --sc-ink: #E9EBEE;           /* primary text */
   --sc-muted: #9AA3AD;         /* secondary text */
   --sc-border: #262B33;        /* hairlines */
-  --sc-border-strong: #3A424D; /* control borders, emphasis rules */
+  /* Control borders carry meaning (this is an input, this is a button), so
+     they have to clear WCAG 1.4.11's 3:1 for non-text contrast. #3A424D was
+     1.86:1 on the page and 1.72:1 on a card — effectively borderless.
+     #656E7B measures 3.9:1 on the page and 3.4:1 on a card. */
+  --sc-border-strong: #656E7B; /* control borders, emphasis rules */
 
   /* The accent — muted steel blue: calm, credible, research-tool register.
      Primary CTA, active states, focus. Brightens on hover. */
@@ -175,6 +179,16 @@ summary:focus-visible {
   border-radius: var(--sc-radius-sm);
 }
 
+/* The accent is a dark-shell colour: on the cream paper panels it measures
+   2.76:1, under the 3:1 a focus indicator needs. Inside paper, focus goes
+   dark instead. */
+.sc-facts :focus-visible,
+.sc-annotated :focus-visible,
+.sc-heropanel :focus-visible,
+.sc-tile-facts :focus-visible {
+  outline-color: var(--sc-paper-ink);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -221,6 +235,19 @@ main > .sc-section + .sc-section {
   }
 }
 
+/* One band per page may change surface instead of repeating the hairline
+   rule. Used for the methodology block, which is the page's argument rather
+   than another list. */
+.sc-section-deep {
+  background: var(--sc-bg-deep);
+  border-top: 1px solid var(--sc-border);
+  border-bottom: 1px solid var(--sc-border);
+}
+
+main > .sc-section-deep + .sc-section {
+  border-top: 0;
+}
+
 /* Small uppercase label — the ONLY place uppercase is allowed besides
    table headers, tags, and data labels. */
 .sc-eyebrow {
@@ -262,6 +289,20 @@ main > .sc-section + .sc-section {
 .sc-skip:focus-visible {
   left: 8px;
   top: 8px;
+}
+
+/* Available to assistive tech, off the visual page — table captions and
+   labels that the layout states visually by other means. */
+.sc-vh {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* Section heading row: title left, contextual link right. */
@@ -331,11 +372,38 @@ main > .sc-section + .sc-section {
   color: var(--sc-accent);
 }
 
+/* Six links wrapped to two rows on a phone and ate ~130px of the fold before
+   any content. One scrolling row instead, with a fade telling the reader it
+   continues. Desktop keeps the plain inline row. */
 .sc-nav {
   display: flex;
-  flex-wrap: wrap;
   gap: 4px 20px;
   align-items: center;
+  max-width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  padding-right: 12px;
+  -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 20px), transparent);
+  mask-image: linear-gradient(to right, #000 calc(100% - 20px), transparent);
+}
+
+.sc-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.sc-nav a {
+  white-space: nowrap;
+}
+
+@media (min-width: 860px) {
+  .sc-nav {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    padding-right: 0;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
 }
 
 .sc-nav a {
@@ -611,9 +679,37 @@ main > .sc-section + .sc-section {
    Thick top rule, hairline rows, right-aligned tabular figures.
    -------------------------------------------------------------------------- */
 
+/* Narrow screens scroll the table sideways. Wide screens must not: an
+   overflow container becomes the scroll parent, and a sticky <thead> inside
+   one has nothing to stick to. The edge fade tells a phone reader that
+   columns continue past the right edge. */
 .sc-table-scroll {
+  position: relative;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+}
+
+.sc-table-scroll::after {
+  content: "";
+  position: sticky;
+  right: 0;
+  top: 0;
+  float: right;
+  width: 28px;
+  height: 100%;
+  margin-left: -28px;
+  background: linear-gradient(to right, rgba(15, 17, 20, 0), var(--sc-bg));
+  pointer-events: none;
+}
+
+@media (min-width: 1100px) {
+  .sc-table-scroll {
+    overflow-x: visible;
+  }
+
+  .sc-table-scroll::after {
+    display: none;
+  }
 }
 
 .sc-table {
@@ -637,14 +733,22 @@ main > .sc-section + .sc-section {
   padding-right: 0;
 }
 
+/* The head sticks: a 38-row comparison table whose column meanings scroll
+   away is unreadable past the first screen. The offset clears the sticky
+   toolbar where one exists; pages without a toolbar set it to 0. */
 .sc-table thead th {
+  position: sticky;
+  top: var(--sc-table-head-top, 0px);
+  z-index: 3;
+  background: var(--sc-bg);
+  box-shadow: inset 0 -1px 0 var(--sc-border-strong);
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--sc-muted);
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .sc-table .sc-num {
@@ -660,12 +764,34 @@ main > .sc-section + .sc-section {
   font-weight: 400;
 }
 
+/* Dose qualifier ("malate", "blend"). It sits in a fixed-width slot after the
+   figure, emitted even when empty, so a column of numbers still shares one
+   right edge — tabular figures are pointless if a trailing word pushes every
+   numeral to a different horizontal position. */
+.sc-qual {
+  display: inline-block;
+  width: 5.4em;
+  text-align: left;
+  padding-left: 8px;
+  font-size: 0.78em;
+  font-weight: 400;
+  color: var(--sc-muted);
+  vertical-align: baseline;
+}
+
+.sc-tile-fact-value .sc-qual,
+.sc-facts .sc-table .sc-qual {
+  color: var(--sc-paper-muted);
+}
+
 .sc-table tbody td {
   transition: background-color 0.15s ease;
 }
 
+/* Tracking one row across eight columns needs a lift you can actually see;
+   the previous 0.015 was below threshold on this background. */
 .sc-table tbody tr:hover td {
-  background: rgba(255, 255, 255, 0.015);
+  background: rgba(255, 255, 255, 0.045);
 }
 
 /* Product cell: brand small over name. */
@@ -1000,6 +1126,108 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   margin-bottom: 8px;
 }
 
+/* Intro composition: copy left, a compact facts panel right — the same
+   masthead shape as the homepage, so all three landing pages read as one
+   publication instead of leaving half the fold empty. */
+.sc-intro-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .sc-intro-grid {
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 48px;
+  }
+}
+
+.sc-intropanel {
+  background: var(--sc-paper);
+  color: var(--sc-paper-ink);
+  border-top: 6px solid var(--sc-paper-ink);
+  padding: 14px 16px 12px;
+}
+
+.sc-intropanel-title {
+  font-family: var(--sc-font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--sc-paper-ink);
+}
+
+.sc-intropanel dl {
+  margin: 0;
+}
+
+.sc-intropanel dl div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--sc-paper-line);
+}
+
+.sc-intropanel dt {
+  font-size: 0.85rem;
+  color: var(--sc-paper-muted);
+}
+
+.sc-intropanel dd {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.sc-intropanel-note {
+  font-size: 0.74rem;
+  line-height: 1.5;
+  color: var(--sc-paper-muted);
+  margin: 10px 0 0;
+  padding-top: 8px;
+  border-top: 3px solid var(--sc-paper-ink);
+}
+
+/* On a phone this panel sits between the reader and the products, so it
+   folds into two compact columns and drops its footnote. The database is
+   what they came for. */
+@media (max-width: 899px) {
+  .sc-intropanel {
+    padding: 10px 12px;
+  }
+
+  .sc-intropanel dl {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 16px;
+  }
+
+  .sc-intropanel dl div {
+    padding: 5px 0;
+  }
+
+  /* Four figures fit two rows; the rest are a desktop luxury. */
+  .sc-intropanel dl div:nth-child(n + 5) {
+    display: none;
+  }
+
+  .sc-intropanel dt {
+    font-size: 0.78rem;
+  }
+
+  .sc-intropanel-note {
+    display: none;
+  }
+}
+
 /* Category intro paragraph on landing pages — under the lead, quieter. */
 .sc-hub-intro-body {
   color: var(--sc-muted);
@@ -1059,8 +1287,10 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   .sc-cats { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* Three across, not five: at five the description column was ~26 characters
+   wide, below any readable measure. Two rows of wider cards read faster. */
 @media (min-width: 1024px) {
-  .sc-cats { grid-template-columns: repeat(5, 1fr); }
+  .sc-cats { grid-template-columns: repeat(3, 1fr); gap: 16px; }
 }
 
 .sc-cat-card {
@@ -1069,7 +1299,7 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   gap: 6px;
   background: var(--sc-surface);
   border: 1px solid var(--sc-border);
-  border-radius: 10px;
+  border-radius: var(--sc-radius);
   padding: 18px 16px;
   text-decoration: none;
   transition: border-color 120ms ease, background 120ms ease, transform 120ms ease;
@@ -1264,7 +1494,12 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   color: var(--sc-muted);
   padding: 40px 24px;
   margin: 0;
+  text-align: center;
   animation: sc-fade 0.35s ease-out; /* re-runs each time [hidden] flips off */
+}
+
+.sc-empty p {
+  margin: 0 0 16px;
 }
 
 .sc-empty[hidden] {
@@ -1313,7 +1548,12 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   }
 }
 
+/* Tiles are a column so the label panel can be pushed to the bottom of the
+   card: names and tag rows vary in height, and a grid of facts panels only
+   reads as a database if the panels line up across the row. */
 .sc-tile {
+  display: flex;
+  flex-direction: column;
   background: var(--sc-surface);
   border: 1px solid var(--sc-border);
   border-radius: var(--sc-radius);
@@ -1329,31 +1569,44 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
 }
 
-/* The tile's top half is one link to the product page; the CTA row below
-   holds the two actions (full breakdown / price on Amazon). */
+/* The whole tile is the link to the label breakdown — that is the site's
+   job, so it gets the whole surface rather than a button competing with 77
+   others. The row below holds only what is not "read this label". */
 .sc-tile-link {
-  display: block;
-  padding: 0 14px 12px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 0 16px 16px;
   text-decoration: none;
   color: inherit;
+}
+
+.sc-tile-link .sc-tile-facts {
+  margin-top: auto;
 }
 
 /* Shop-style art area: the stylized generic tub (never real packaging). */
 .sc-tile-art {
   display: flex;
+  flex: none;
+  min-height: 0; /* else a flex item's auto min-size lets a tall photo beat the ratio */
   align-items: center;
   justify-content: center;
   aspect-ratio: 4 / 3;
-  margin: 0 -14px 12px;
+  margin: 0 -16px 14px;
   background:
     radial-gradient(ellipse 65% 55% at 50% 45%, rgba(255, 255, 255, 0.035), transparent 70%),
     var(--sc-bg);
   border-bottom: 1px solid var(--sc-border);
 }
 
+/* max-height, not height: a percentage height against a flex-sized parent is
+   dropped, and the art area then grows to each photo's intrinsic size —
+   which is what pulled tiles in the same row out of alignment. */
 .sc-tile-art svg,
 .sc-tile-art img {
-  height: 82%;
+  max-height: 82%;
+  height: auto;
   width: auto;
   max-width: 70%;
   object-fit: contain;
@@ -1395,15 +1648,29 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   margin-bottom: 10px;
 }
 
-/* Mini facts panel — a small paper label on the dark card, like the
-   white facts panel on a dark tub. */
+/* Mini facts panel — a small paper label on the dark card, like the white
+   facts panel on a dark tub. Squared off on purpose: a printed panel has
+   corners, and rounding them is the one detail that breaks the illusion.
+   Same rule grammar as the hero panel — thick top rule, a title, hairline
+   rows, a heavier rule closing the figures off from the footer. */
 .sc-tile-facts {
   display: block;
   background: var(--sc-paper);
   color: var(--sc-paper-ink);
-  border-radius: var(--sc-radius-sm);
-  padding: 4px 10px 2px;
-  border-top: 4px solid var(--sc-paper-ink);
+  border-radius: 0;
+  padding: 8px 12px 10px;
+  border-top: 6px solid var(--sc-paper-ink);
+}
+
+.sc-tile-facts-title {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sc-paper-muted);
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--sc-paper-ink);
 }
 
 .sc-tile-fact {
@@ -1414,10 +1681,6 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   padding: 6px 0;
   border-bottom: 1px solid var(--sc-paper-line);
   font-size: 0.85rem;
-}
-
-.sc-tile-fact:last-child {
-  border-bottom: 0;
 }
 
 .sc-tile-fact-label {
@@ -1441,15 +1704,19 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   color: var(--sc-paper-muted);
 }
 
+/* Servings and price tier close the panel, below its heavier bottom rule —
+   the same place a printed panel puts its container count. */
 .sc-tile-foot {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   gap: 8px 12px;
   flex-wrap: wrap;
-  padding-top: 10px;
-  font-size: 0.82rem;
-  color: var(--sc-muted);
+  margin-top: 2px;
+  padding-top: 8px;
+  border-top: 3px solid var(--sc-paper-ink);
+  font-size: 0.78rem;
+  color: var(--sc-paper-muted);
   font-variant-numeric: tabular-nums;
 }
 
@@ -1460,129 +1727,46 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   white-space: nowrap;
 }
 
-/* Card CTA row — honest twin of the shop card's add-to-cart / buy-now. */
+/* Card action row. Deliberately quiet: two text-weight controls, no filled
+   button. The accent stays rare enough to mean something. */
 .sc-tile-ctas {
-  display: grid;
-  gap: 8px;
-  padding: 0 14px 14px;
-}
-
-.sc-tile-ctas .sc-btn {
-  width: 100%;
-  font-size: 0.88rem;
-  padding: 9px 12px;
-}
-
-/* --- Detail dialog --- */
-
-.sc-detail {
-  width: min(680px, calc(100vw - 32px));
-  max-height: min(85vh, 860px);
-  overflow-y: auto;
-  background: var(--sc-surface);
-  color: var(--sc-ink);
-  border: 1px solid var(--sc-border-strong);
-  border-radius: var(--sc-radius);
-  padding: 20px;
-  margin: auto;
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.55);
-}
-
-@media (min-width: 640px) {
-  .sc-detail {
-    padding: 28px;
-  }
-}
-
-.sc-detail::backdrop {
-  background: rgba(8, 10, 12, 0.72);
-}
-
-.sc-detail-head {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  margin-bottom: 16px;
-}
-
-.sc-detail-media {
-  flex: 0 0 auto;
-  width: 72px;
-  height: 72px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background: var(--sc-bg);
-  border: 1px solid var(--sc-border);
-  border-left: 3px solid var(--sc-p-accent, var(--sc-border-strong));
-  border-radius: var(--sc-radius-sm);
-  overflow: hidden;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 16px 14px;
+  border-top: 1px solid var(--sc-border);
 }
 
-.sc-detail-media span {
-  font-family: var(--sc-font-display);
+.sc-tile-price {
+  color: var(--sc-accent);
   font-weight: 600;
-  font-size: 1.2rem;
-  color: var(--sc-muted);
+  font-size: 0.85rem;
+  text-decoration: none;
+  white-space: nowrap;
+  border-bottom: 1px solid transparent;
+  padding: 4px 0;
 }
 
-.sc-detail-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  padding: 6px;
+.sc-tile-price:hover {
+  color: var(--sc-accent-down);
+  border-bottom-color: currentColor;
 }
 
-.sc-detail-id {
-  min-width: 0;
+.sc-tile-ctas .sc-save-btn {
+  width: auto;
+  padding: 6px 10px;
+  border-style: solid;
+  border-color: var(--sc-border);
 }
 
-.sc-detail-id h2 {
-  font-family: var(--sc-font-body);
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin: 0 0 8px;
-}
-
-.sc-detail-brand {
-  font-size: 0.8rem;
-  color: var(--sc-muted);
-  margin: 0;
-}
-
-.sc-detail-close {
-  flex: 0 0 auto;
-  margin-left: auto;
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: none;
-  border: 1px solid var(--sc-border-strong);
-  border-radius: var(--sc-radius-sm);
-  color: var(--sc-muted);
-  font-size: 1.15rem;
-  line-height: 1;
-  cursor: pointer;
-}
-
-.sc-detail-close:hover {
-  color: var(--sc-ink);
-  background: var(--sc-surface-2);
-}
+/* --- Product page: identity, stats, buy box --- */
 
 .sc-detail-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
   margin: 0 0 12px;
-}
-
-.sc-detail-take {
-  color: var(--sc-muted);
-  font-size: 0.95rem;
-  margin: 0 0 16px;
 }
 
 .sc-detail-stats {
@@ -1617,37 +1801,8 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   color: var(--sc-muted);
 }
 
-.sc-detail .sc-facts {
-  margin-bottom: 20px;
-}
-
 /* Sticky inside the scrolling dialog so the price link and its disclosure
    stay visible while the label breakdown scrolls. */
-.sc-detail-actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px 16px;
-  border-top: 1px solid var(--sc-border);
-  position: sticky;
-  bottom: -20px; /* cancels the dialog's bottom padding so the bar sits flush */
-  background: var(--sc-surface);
-  margin: 20px -20px -20px;
-  padding: 14px 20px 18px;
-}
-
-@media (min-width: 640px) {
-  .sc-detail-actions {
-    bottom: -28px;
-    margin-left: -28px;
-    margin-right: -28px;
-    margin-bottom: -28px;
-    padding-left: 28px;
-    padding-right: 28px;
-    padding-bottom: 24px;
-  }
-}
-
 .sc-detail-verified {
   margin-left: auto;
   font-size: 0.72rem;
@@ -1696,6 +1851,21 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   white-space: normal;
   font-size: 0.92rem;
   border-bottom-color: var(--sc-paper-line);
+}
+
+/* Row headers are the ingredient names: they read as label text, not as the
+   uppercase column heads the base table style gives <th>. */
+.sc-facts .sc-table tbody th[scope="row"] {
+  font-size: 0.92rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--sc-paper-ink);
+  background: none;
+  box-shadow: none;
+  position: static;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .sc-facts .sc-table tbody tr:last-child td {
@@ -1763,6 +1933,36 @@ th[aria-sort="descending"] .sc-sort-btn::after {
 .sc-cautions li {
   font-size: 0.92rem;
   margin-bottom: 6px;
+}
+
+.sc-facts + .sc-cautions,
+.sc-facts-source + .sc-cautions {
+  margin-top: 28px;
+}
+
+/* On the cream panel the dark-shell amber drops to about 2:1. The paper
+   amber is the readable twin of the same colour role. */
+.sc-facts .sc-cautions {
+  border-left-color: var(--sc-paper-amber);
+}
+
+.sc-facts .sc-cautions .sc-details-heading,
+.sc-facts .sc-cautions-more a {
+  color: var(--sc-paper-amber);
+}
+
+.sc-facts .sc-cautions li {
+  color: var(--sc-paper-ink);
+}
+
+.sc-cautions-more {
+  margin: 12px 0 0;
+  font-size: 0.85rem;
+}
+
+.sc-cautions-more a {
+  color: var(--sc-amber);
+  font-weight: 600;
 }
 
 .sc-details-flavors {
@@ -1872,6 +2072,18 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   margin: 10px 0 0;
 }
 
+/* The toolbar is sticky, so every line inside it costs screen for the whole
+   session. On a phone the method note keeps its link and drops its sentence. */
+.sc-eval-extra {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .sc-eval-extra {
+    display: inline;
+  }
+}
+
 .sc-eval-link a {
   color: inherit;
 }
@@ -1941,7 +2153,8 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   display: block;
 }
 
-.sc-saved-art img {
+.sc-saved-art img,
+.sc-saved-art svg {
   height: 120px;
   width: auto;
   max-width: 100%;
@@ -2195,11 +2408,44 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   }
 }
 
+/* Product-page tail: the questions column is measured at ~70ch, so on a wide
+   screen it left 400px of empty page beside it. The comparison picks fill
+   that column instead of getting a band of their own. */
+.sc-pdp-tail {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 1000px) {
+  .sc-pdp-tail {
+    grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+    gap: 56px;
+  }
+
+  .sc-pdp-tail .sc-related {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sc-related-more {
+  margin: 16px 0 0;
+  font-size: 0.88rem;
+}
+
+.sc-related-more a {
+  color: var(--sc-accent);
+  font-weight: 600;
+}
+
+/* The left rule used to carry each brand's colour — 35 saturated hexes on an
+   otherwise monochrome page, encoding nothing a reader could decode. It is a
+   neutral rule now; colour on this site means caution, stim-free, or accent. */
 .sc-related-card {
   display: block;
   background: var(--sc-surface);
   border: 1px solid var(--sc-border);
-  border-left: 3px solid var(--sc-p-accent, var(--sc-border-strong));
+  border-left: 3px solid var(--sc-border-strong);
   border-radius: var(--sc-radius);
   padding: 14px 16px;
   text-decoration: none;
@@ -2208,7 +2454,7 @@ th[aria-sort="descending"] .sc-sort-btn::after {
 
 .sc-related-card:hover {
   border-color: var(--sc-border-strong);
-  border-left-color: var(--sc-p-accent, var(--sc-border-strong));
+  border-left-color: var(--sc-accent);
   transform: translateY(-2px);
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
 }
@@ -2281,6 +2527,140 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   font-size: 0.95rem;
   max-width: 70ch;
   margin: 0 0 16px;
+}
+
+/* --------------------------------------------------------------------------
+   13b. Studied-dose comparison (product pages)
+
+   The one section on a product page that states the site's actual thesis:
+   here is the dose, here is what the research used. Built as a measuring
+   scale, not a score — no grades, no colour-coded verdicts beyond "at or
+   under", and a note under every row explaining the range.
+   -------------------------------------------------------------------------- */
+
+.sc-dose-intro {
+  color: var(--sc-muted);
+  max-width: 72ch;
+  margin: 0 0 28px;
+}
+
+.sc-dose-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 28px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 900px) {
+  .sc-dose-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px 48px;
+  }
+}
+
+.sc-dose-row {
+  border-top: 3px solid var(--sc-ink);
+  padding-top: 12px;
+}
+
+.sc-dose-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 0 0 6px;
+}
+
+.sc-dose-name {
+  font-family: var(--sc-font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.sc-dose-amount {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.sc-dose-verdict {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.sc-dose-at {
+  color: var(--sc-calm);
+}
+
+.sc-dose-under {
+  color: var(--sc-amber);
+}
+
+.sc-dose-bar {
+  position: relative;
+  height: 10px;
+  background: var(--sc-surface);
+  border: 1px solid var(--sc-border-strong);
+}
+
+/* The studied band is the reference, so it reads as printed rule, not fill. */
+.sc-dose-band {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(233, 235, 238, 0.30) 0 2px,
+    rgba(233, 235, 238, 0.10) 2px 5px
+  );
+  border-left: 1px solid var(--sc-ink);
+  border-right: 1px solid var(--sc-ink);
+}
+
+.sc-dose-mark {
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  width: 3px;
+  background: var(--sc-accent-down);
+}
+
+.sc-dose-scale {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.74rem;
+  color: var(--sc-muted);
+  font-variant-numeric: tabular-nums;
+  margin: 8px 0 0;
+}
+
+.sc-dose-scale span:nth-child(2) {
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.sc-dose-note {
+  font-size: 0.88rem;
+  color: var(--sc-muted);
+  max-width: 60ch;
+  margin: 10px 0 0;
+}
+
+.sc-dose-blendnote {
+  margin: 28px 0 0;
+  padding: 12px 16px;
+  background: var(--sc-amber-dim);
+  border-left: 3px solid var(--sc-amber-line);
+  font-size: 0.9rem;
+  color: var(--sc-ink);
 }
 
 /* --------------------------------------------------------------------------

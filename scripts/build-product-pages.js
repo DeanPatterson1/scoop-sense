@@ -17,7 +17,14 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const OUT = path.join(ROOT, "products");
-const VERSION = "20260728n"; // keep in sync with the ?v= on the other pages
+const VERSION = "20260729a"; // keep in sync with the ?v= on the other pages
+
+// Set this to the real origin at domain time (see README "Sitemap & domain").
+// Absolute-URL metadata — canonical, og:url, BreadcrumbList — is emitted only
+// once it is real: a canonical pointing at a placeholder host is worse than
+// none at all.
+const SITE_ORIGIN = "https://YOUR-DOMAIN";
+const HAS_ORIGIN = !/YOUR-DOMAIN/.test(SITE_ORIGIN);
 
 /* ---- load data ---------------------------------------------------------- */
 
@@ -34,6 +41,14 @@ function categoryOf(p) {
 
 function cfgOf(p) {
   return CATEGORY_CONFIG[categoryOf(p)] || CATEGORY_CONFIG["pre-workout"];
+}
+
+// Pre-workout has no landing page of its own, so its browse link is the hub
+// scoped by deep link — not the unfiltered catalog every other category
+// avoids landing on.
+function categoryPageOf(p) {
+  const cat = categoryOf(p);
+  return cat === "pre-workout" ? "hub.html#cat-pre-workout" : cfgOf(p).page;
 }
 
 const COUNT = PRODUCTS.length;
@@ -121,11 +136,23 @@ function tagsHTML(p) {
   if (hasBlend(p)) tags.push(`<span class="sc-tag sc-tag-caution" title="${esc(BLEND_TIP)}">Proprietary blend</span>`);
   else if (isDisclosed(p)) tags.push(`<span class="sc-tag" title="${esc(DISCLOSED_TIP)}">Label fully disclosed</span>`);
   if (p.badges.indexOf("Third-Party Tested") !== -1) tags.push(`<span class="sc-tag sc-tag-calm" title="Certified by an independent banned-substance testing program (NSF Certified for Sport, Informed Sport, or Informed Choice), per the label or brand page.">Third-party tested</span>`);
+  if (p.badges.indexOf("Beginner Friendly") !== -1) tags.push(`<span class="sc-tag" title="A reasonable first tub: moderate or no caffeine, a fully disclosed label, and nothing on the panel that surprises a new user.">Beginner friendly</span>`);
+  if (p.badges.indexOf("Budget Pick") !== -1) tags.push(`<span class="sc-tag" title="Cost per full serving sits in the lowest third of this database while the label still discloses its doses.">Budget pick</span>`);
   return tags.join("");
 }
 
 /* Config fact-key resolver — mirrors factOf in js/app.js. */
 const DASH = '<span class="sc-dim">—</span>';
+
+// Mirrors doseCellHTML in js/app.js: the qualifier ("malate", "blend") goes
+// left so the figures keep the right-aligned edge they are compared on.
+function doseCellHTML(dose, extraQual) {
+  if (!dose) return DASH;
+  const m = /^\s*([\d.]+\s*(?:mg|g|%))\s*(.*)$/i.exec(dose);
+  const figure = m ? m[1] : dose;
+  const qual = [m && m[2] ? m[2] : "", extraQual || ""].filter(Boolean).join(" ");
+  return esc(figure) + `<span class="sc-qual">${esc(qual)}</span>`;
+}
 
 function metricOf(p, key) {
   if (!p.metrics) return null;
@@ -147,10 +174,10 @@ function factOf(p, key) {
     const pattern = key.slice(4);
     if (/citrulline/.test(pattern)) {
       const cit = citrullineOf(p);
-      return cit ? esc(cit.dose) + (cit.form ? " <small>" + esc(cit.form) + "</small>" : "") : DASH;
+      return cit ? doseCellHTML(cit.dose, cit.form) : DASH;
     }
     const ing = findIngredient(p, new RegExp(pattern, "i"));
-    return ing ? esc(ing.dose) : DASH;
+    return ing ? doseCellHTML(ing.dose) : DASH;
   }
   if (key.indexOf("m:") === 0) {
     const parts = key.split(":");
@@ -163,9 +190,9 @@ function factOf(p, key) {
 // "$" | "$$" | "$$$" -> plain-English cost-per-serving tier, with the basis
 // for the judgment exposed as a tooltip.
 const PRICE_TIPS = {
-  Budget: "Estimated cost per full serving sits in the lowest third of this database — roughly $1.10 or less at the time of the last label check.",
-  "Mid-range": "Estimated cost per full serving sits in the middle third of this database — roughly $1.10–$1.90 at the time of the last label check.",
-  Premium: "Estimated cost per full serving sits in the highest third of this database — roughly $1.90 or more at the time of the last label check."
+  Budget: "Estimated cost per full serving sits in the lowest third of this database. We rank the tier rather than print a dollar figure, because prices move faster than we can check them.",
+  "Mid-range": "Estimated cost per full serving sits in the middle third of this database. We rank the tier rather than print a dollar figure, because prices move faster than we can check them.",
+  Premium: "Estimated cost per full serving sits in the highest third of this database. We rank the tier rather than print a dollar figure, because prices move faster than we can check them."
 };
 
 function priceWordOf(p) {
@@ -229,10 +256,10 @@ function whoForHTML(p) {
 
 /* Generic stylized tub — deliberately NOT the real packaging. */
 function tubSVG(p) {
-  const accent = p.accentColor || "#4A4237";
+  const accent = p.accentColor || "#3A424D";
   const mono = esc(monogramOf(p));
   return `<svg viewBox="0 0 200 240" role="img" aria-label="Stylized illustration of a supplement tub" xmlns="http://www.w3.org/2000/svg">
-  <rect x="34" y="6" width="132" height="34" rx="10" fill="#0B0D10" stroke="#333A44"/>
+  <rect x="34" y="6" width="132" height="44" rx="8" fill="#232830" stroke="#333A44"/>
   <rect x="24" y="44" width="152" height="186" rx="14" fill="#191D23" stroke="#333A44"/>
   <rect x="38" y="78" width="124" height="118" rx="6" fill="#F2EDE3"/>
   <rect x="38" y="78" width="124" height="14" rx="6" fill="${esc(accent)}"/>
@@ -312,7 +339,13 @@ const GALLERY_SCRIPT = `<script>
   if (zoomBtn) zoomBtn.addEventListener("click", openBox);
   closeBtn.addEventListener("click", closeBox);
   box.addEventListener("click", function (e) { if (e.target === box) closeBox(); });
-  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !box.hidden) closeBox(); });
+  document.addEventListener("keydown", function (e) {
+    if (box.hidden) return;
+    if (e.key === "Escape") { closeBox(); return; }
+    // aria-modal alone does not stop Tab: without this the keyboard walks out
+    // of the overlay into the page it is covering. Close is the only stop.
+    if (e.key === "Tab") { e.preventDefault(); closeBtn.focus(); }
+  });
 })();
 </script>
 `;
@@ -326,21 +359,138 @@ const METRIC_FACT_ROWS = {
   electrolytes: [["Sodium", "m:sodiumMg:mg"], ["Potassium", "m:potassiumMg:mg"], ["Magnesium", "m:magnesiumMg:mg"], ["Sugar", "m:sugarG:g"]]
 };
 
+// Ingredient name is the row header, so a screen reader reading cell by cell
+// still pairs "Caffeine" with "200 mg" instead of reading two loose values.
 function factsRowsHTML(p) {
   const rows = [];
+  const row = (label, value) =>
+    `<tr><th scope="row">${label}</th><td class="sc-num">${value}</td></tr>`;
   for (const [label, key] of METRIC_FACT_ROWS[categoryOf(p)] || []) {
     const v = factOf(p, key);
-    if (v !== DASH) rows.push(`<tr><td>${esc(label)}</td><td class="sc-num">${v}</td></tr>`);
+    if (v !== DASH) rows.push(row(esc(label), v));
   }
   if (categoryOf(p) === "pre-workout" || p.caffeineMg > 0) {
-    rows.push(`<tr><td>Caffeine</td><td class="sc-num">${p.caffeineMg === 0 ? "0 mg" : esc(p.caffeineMg) + " mg"}</td></tr>`);
+    rows.push(row("Caffeine", p.caffeineMg === 0 ? "0 mg" : esc(p.caffeineMg) + " mg"));
   }
   for (const ing of p.keyIngredients) {
     if (/caffeine/i.test(ing.name)) continue;
-    rows.push(`<tr><td>${esc(ing.name)}</td><td class="sc-num">${esc(ing.dose)}</td></tr>`);
+    rows.push(row(esc(ing.name), esc(ing.dose)));
   }
-  rows.push(`<tr><td>Proprietary blend</td><td class="sc-num">${hasBlend(p) ? "Yes" : "No"}</td></tr>`);
+  rows.push(row("Proprietary blend", hasBlend(p) ? "Yes" : "No"));
   return rows.join("\n              ");
+}
+
+/* ---- studied-dose comparison ------------------------------------------- */
+
+// The site's whole claim is that it lines a labeled dose up against the
+// amount used in published research. That comparison was buried in an
+// accordion; these bars put it on the page. Only ingredients with a settled
+// research range get a bar — the rest get the note and no drawn scale.
+const DOSES = new Function(
+  fs.readFileSync(path.join(ROOT, "js", "doses.js"), "utf8") + "\nreturn STUDIED_DOSES;"
+)();
+
+function parseDoseMg(dose) {
+  const m = /([\d.]+)\s*(mg|g)\b/i.exec(dose || "");
+  if (!m) return null;
+  const n = parseFloat(m[1]);
+  return m[2].toLowerCase() === "g" ? n * 1000 : n;
+}
+
+function toUnit(mg, unit) {
+  return unit === "g" ? mg / 1000 : mg;
+}
+
+function fmtAmount(n, unit) {
+  return (Math.round(n * 100) / 100) + " " + unit;
+}
+
+// One comparison row: the labeled amount, the studied band drawn behind it,
+// and a marker where this product actually lands.
+function doseRowHTML(entry, amount) {
+  const hasRange = entry.low !== null && entry.high !== null;
+  const scale = entry.scaleTo;
+  const pct = (v) => Math.max(0, Math.min(100, (v / scale) * 100));
+
+  const verdict = !hasRange
+    ? ""
+    : amount === null
+      ? ""
+      : amount >= entry.low
+        ? `<span class="sc-dose-verdict sc-dose-at">At or above the studied amount</span>`
+        : `<span class="sc-dose-verdict sc-dose-under">${Math.round((amount / entry.low) * 100)}% of the low end of the studied range</span>`;
+
+  const bar = !hasRange
+    ? ""
+    : `<div class="sc-dose-bar" role="img" aria-label="${esc(
+        `${entry.label}: this label has ${amount === null ? "no disclosed amount" : fmtAmount(amount, entry.unit)}; studied amounts run ${fmtAmount(entry.low, entry.unit)} to ${fmtAmount(entry.high, entry.unit)}`
+      )}">
+          <span class="sc-dose-band" style="left:${pct(entry.low).toFixed(1)}%;width:${(pct(entry.high) - pct(entry.low)).toFixed(1)}%"></span>
+          ${amount === null ? "" : `<span class="sc-dose-mark" style="left:${pct(amount).toFixed(1)}%"></span>`}
+        </div>
+        <p class="sc-dose-scale"><span>0</span><span>studied range ${fmtAmount(entry.low, entry.unit)}${entry.low === entry.high ? "" : "–" + fmtAmount(entry.high, entry.unit)}</span><span>${fmtAmount(scale, entry.unit)}</span></p>`;
+
+  return `<li class="sc-dose-row">
+        <p class="sc-dose-head"><span class="sc-dose-name">${esc(entry.label)}</span><span class="sc-dose-amount">${amount === null ? "not disclosed" : esc(fmtAmount(amount, entry.unit))}</span></p>
+        ${verdict}
+        ${bar}
+        <p class="sc-dose-note">${esc(entry.note)}</p>
+      </li>`;
+}
+
+// Ingredient rows first (pre-workouts), then the category's own metric rows.
+function doseComparisonHTML(p) {
+  const rows = [];
+  const seen = new Set();
+
+  for (const ing of p.keyIngredients) {
+    const entry = DOSES.ingredients.find((e) => new RegExp(e.match, "i").test(ing.name));
+    if (!entry || seen.has(entry.label)) continue;
+    seen.add(entry.label);
+    const mg = parseDoseMg(ing.dose);
+    rows.push(doseRowHTML(entry, mg === null ? null : toUnit(mg, entry.unit)));
+  }
+
+  if (p.metrics) {
+    for (const key of Object.keys(DOSES.metrics)) {
+      let entry = DOSES.metrics[key];
+      if (seen.has(entry.label)) continue;
+      const v = metricOf(p, key);
+      if (v === null || typeof v !== "number") continue;
+      // The 3–5 g figure is monohydrate research. HCl and blends are dosed on
+      // a different argument, so they get the note without a drawn range.
+      if (key === "creatineG" && metricOf(p, "form") !== "monohydrate") {
+        entry = Object.assign({}, entry, {
+          low: null, high: null,
+          note: "The 3–5 g studied range is monohydrate research. This label uses another form, which has no separately established studied dose — the amounts are not interchangeable."
+        });
+      }
+      seen.add(entry.label);
+      rows.push(doseRowHTML(entry, v));
+    }
+  }
+
+  if (p.caffeineMg > 0 && !seen.has("Caffeine")) {
+    const entry = DOSES.ingredients.find((e) => e.label === "Caffeine");
+    rows.push(doseRowHTML(entry, p.caffeineMg));
+  }
+
+  if (!rows.length) return "";
+
+  return `
+  <section class="sc-section" id="studied-doses">
+    <div class="sc-container">
+      <div class="sc-section-head">
+        <h2 class="sc-pdp-h2">This label against the research</h2>
+        <a class="sc-action-link" href="../index.html#methodology">How we evaluate labels</a>
+      </div>
+      <p class="sc-dose-intro">Each bar shows the amount commonly used in published human research, and where this label's dose falls against it. Research amounts are context, not a recommendation — they are not doses, and nothing here is medical advice.</p>
+      <ul class="sc-dose-list">
+        ${rows.join("\n        ")}
+      </ul>
+      ${hasBlend(p) ? `<p class="sc-dose-blendnote">One or more amounts on this label sit inside a proprietary blend, so the individual doses behind the blend total cannot be compared at all.</p>` : ""}
+    </div>
+  </section>`;
 }
 
 /* ---- generated, data-derived FAQ (no invented claims) ------------------- */
@@ -460,6 +610,24 @@ function pageHTML(p) {
   const faqs = faqFor(p);
   const related = relatedFor(p);
   const accent = p.accentColor ? ` style="--sc-p-accent:${esc(p.accentColor)}"` : "";
+  const pageUrl = `${SITE_ORIGIN}/products/${p.id}.html`;
+
+  const canonicalTags = HAS_ORIGIN
+    ? `\n  <meta property="og:url" content="${esc(pageUrl)}">\n  <link rel="canonical" href="${esc(pageUrl)}">`
+    : "";
+
+  // Mirrors the visible .sc-crumbs trail above the product title.
+  const breadcrumbLD = HAS_ORIGIN
+    ? {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "All supplements", item: `${SITE_ORIGIN}/hub.html` },
+          { "@type": "ListItem", position: 2, name: cfgOf(p).label, item: `${SITE_ORIGIN}/${categoryPageOf(p)}` },
+          { "@type": "ListItem", position: 3, name: fullNameOf(p), item: pageUrl }
+        ]
+      }
+    : null;
 
   const faqLD = {
     "@context": "https://schema.org",
@@ -504,7 +672,9 @@ function pageHTML(p) {
   <meta property="og:type" content="website">
   <meta property="og:title" content="${esc(title)}">
   <meta property="og:description" content="${esc(desc)}">
-  <meta name="twitter:card" content="summary">${ogImage}
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="${esc(title)}">
+  <meta name="twitter:description" content="${esc(desc)}">${ogImage}${canonicalTags}
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥄</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -534,7 +704,7 @@ function pageHTML(p) {
   <section class="sc-pdp"${accent}>
     <div class="sc-container">
       <nav class="sc-crumbs" aria-label="Breadcrumb">
-        <a href="../hub.html">All supplements</a> <span aria-hidden="true">/</span> <a href="../${esc(cfgOf(p).page)}">${esc(cfgOf(p).label)}</a> <span aria-hidden="true">/</span> ${esc(name)}
+        <a href="../hub.html">All supplements</a> <span aria-hidden="true">/</span> <a href="../${esc(categoryPageOf(p))}">${esc(cfgOf(p).label)}</a> <span aria-hidden="true">/</span> ${esc(name)}
       </nav>
 
       <div class="sc-pdp-grid">
@@ -553,7 +723,6 @@ function pageHTML(p) {
           <dl class="sc-detail-stats">
             ${cfgOf(p).tileFacts.map((f) => `<div><dt>${esc(f.label)}</dt><dd>${factOf(p, f.key)}</dd></div>`).join("\n            ")}
             <div><dt>Servings</dt><dd>${esc(p.servings)}</dd></div>
-            <div><dt>Price tier</dt><dd>${priceWordHTML(p)}</dd></div>
           </dl>
 
           <div class="sc-buybox">
@@ -564,7 +733,8 @@ function pageHTML(p) {
               ? `<a class="sc-btn sc-btn-secondary" href="../compare.html">Compare all ${preWorkouts.length} pre-workouts</a>`
               : `<a class="sc-btn sc-btn-secondary" href="../${esc(cfgOf(p).page)}#compare">Compare all ${esc(cfgOf(p).plural)}</a>`}
             <button type="button" class="sc-btn sc-btn-secondary sc-save-btn-pdp" data-save-id="${esc(p.id)}" aria-pressed="false"><span class="sc-save-icon" aria-hidden="true"></span> <span class="sc-save-text">Save to compare</span></button>
-            <p class="sc-detail-note">Affiliate link — Scoop Sense may earn a commission at no additional cost to you.</p>
+            <p class="sc-buybox-reviews">Scoop Sense doesn't collect user reviews and won't invent them. <a href="${esc(p.affiliateUrl)}" target="_blank" rel="sponsored nofollow noopener">Read customer reviews on Amazon <span class="sc-ext" aria-hidden="true">&#8599;</span></a></p>
+            <p class="sc-detail-note">Affiliate links — Scoop Sense may earn a commission at no additional cost to you.</p>
           </div>
 
           <p class="sc-pdp-flavors">${esc(p.flavorsNote)}</p>
@@ -586,33 +756,44 @@ function pageHTML(p) {
           <p class="sc-facts-title">Label data</p>
           <p class="sc-facts-sub">Per full serving · ${esc(p.servings)} servings per container · from the manufacturer's panel</p>
           <table class="sc-table">
+            <caption class="sc-vh">Supplement facts for ${esc(name)}, per full serving</caption>
             <tbody>
               ${factsRowsHTML(p)}
             </tbody>
           </table>
           ${p.sources && p.sources.length ? `<p class="sc-facts-source">Primary label source: <a href="${esc(p.sources[0].url)}" target="_blank" rel="noopener">${esc(p.sources[0].label)}</a> · verified ${esc(p.labelVerified)}</p>` : ""}
+
+          <!-- Cautions belong beside the figures that produce them, not one
+               click away inside an accordion. -->
+          <div class="sc-cautions">
+            <p class="sc-details-heading">Cautions</p>
+            <ul>
+              ${p.cautions.map((c) => `<li>${esc(c)}</li>`).join("\n              ")}
+            </ul>
+            <p class="sc-cautions-more"><a href="../disclaimer.html">Full health &amp; safety notes</a></p>
+          </div>
         </div>
 
         <div>
           <h2 class="sc-pdp-h2">Product details</h2>
           <div class="sc-faq">
             <details open>
-              <summary>What is ${esc(name)}?</summary>
-              <p>${esc(p.blurb)} ${categoryOf(p) === "pre-workout"
-                ? `It sits in the ${esc(stimLabelOf(p).toLowerCase())} tier of the Scoop Sense pre-workout database, which spans 0–${MAX_CAF} mg of caffeine per serving. `
-                : `It is one of the ${esc(cfgOf(p).plural)} in the Scoop Sense database. `}Everything on this page comes from the manufacturer's supplement facts panel as of ${esc(p.labelVerified)} — never from the marketing page.</p>
+              <summary>Where this label sits</summary>
+              <p>${categoryOf(p) === "pre-workout"
+                ? `${esc(name)} sits in the ${esc(stimLabelOf(p).toLowerCase())} tier of the Scoop Sense pre-workout database, which spans 0–${MAX_CAF} mg of caffeine per serving. `
+                : `${esc(name)} is one of the ${esc(cfgOf(p).plural)} in the Scoop Sense database. `}${
+                  hasBlend(p)
+                    ? `The label uses at least one proprietary blend, so a blend total stands in place of the individual amounts inside it. `
+                    : isDisclosed(p)
+                      ? `Every active ingredient on the panel is listed with its own dose — nothing is hidden inside a blend total. `
+                      : ""
+                }It runs ${esc(p.servings)} servings per container at the full labeled serving. Everything on this page comes from the manufacturer's supplement facts panel as of ${esc(p.labelVerified)} — never from the marketing page.</p>
             </details>
             <details>
               <summary>Key ingredients &amp; studied doses</summary>
               <ul class="sc-notes-list">
                 ${p.keyIngredients.map((i) => `<li><strong>${esc(i.name)} · ${esc(i.dose)}.</strong> ${esc(i.clinicalNote)}</li>`).join("\n                ")}
               </ul>
-            </details>
-            <details>
-              <summary>Cautions</summary>
-              <div class="sc-cautions"><ul>
-                ${p.cautions.map((c) => `<li>${esc(c)}</li>`).join("\n                ")}
-              </ul></div>
             </details>
             <details>
               <summary>Flavors &amp; sweetener</summary>
@@ -632,36 +813,31 @@ function pageHTML(p) {
     </div>
   </section>
 
-  <section class="sc-section">
-    <div class="sc-container">
-      <h2 class="sc-pdp-h2">Common questions about ${esc(name)}</h2>
-      <div class="sc-faq">
-        ${faqs.map((f) => `<details>
-          <summary>${esc(f.q)}</summary>
-          <p>${esc(f.a)}</p>
-        </details>`).join("\n        ")}
-      </div>
-    </div>
-  </section>
+${doseComparisonHTML(p)}
 
   <section class="sc-section">
     <div class="sc-container">
-      <h2 class="sc-pdp-h2">Reviews</h2>
-      <p class="sc-pdp-reviews-note">Scoop Sense doesn't collect user reviews, and we won't invent them. Our editorial read: <strong>${esc(p.blurb)}</strong></p>
-      <a class="sc-btn sc-btn-secondary" href="${esc(p.affiliateUrl)}" target="_blank" rel="sponsored nofollow noopener">Read customer reviews on Amazon</a>
-      <p class="sc-detail-note">Affiliate link — Scoop Sense may earn a commission at no additional cost to you.</p>
-    </div>
-  </section>
-
-  <section class="sc-section">
-    <div class="sc-container">
-      <h2 class="sc-pdp-h2">Compare it against</h2>
-      <div class="sc-related">
-        ${related.map((r) => `<a class="sc-related-card" href="${esc(r.id)}.html"${r.accentColor ? ` style="--sc-p-accent:${esc(r.accentColor)}"` : ""}>
-          <span class="sc-tile-brand">${esc(r.brand)}</span>
-          <span class="sc-tile-name">${esc(r.name)}</span>
-          <span class="sc-related-meta">${r.caffeineMg === 0 ? "Stim-free · 0 mg" : esc(r.caffeineMg) + " mg caffeine"} · ${esc(r.priceRange)}</span>
-        </a>`).join("\n        ")}
+      <div class="sc-pdp-tail">
+        <div>
+          <h2 class="sc-pdp-h2">Common questions about ${esc(name)}</h2>
+          <div class="sc-faq">
+            ${faqs.map((f) => `<details>
+              <summary>${esc(f.q)}</summary>
+              <p>${esc(f.a)}</p>
+            </details>`).join("\n            ")}
+          </div>
+        </div>
+        <div>
+          <h2 class="sc-pdp-h2">Compare it against</h2>
+          <div class="sc-related">
+            ${related.map((r) => `<a class="sc-related-card" href="${esc(r.id)}.html">
+              <span class="sc-tile-brand">${esc(r.brand)}</span>
+              <span class="sc-tile-name">${esc(r.name)}</span>
+              <span class="sc-related-meta">${r.caffeineMg === 0 ? "Stim-free · 0 mg" : esc(r.caffeineMg) + " mg caffeine"} · ${esc(r.priceRange)}</span>
+            </a>`).join("\n            ")}
+          </div>
+          <p class="sc-related-more"><a href="../${esc(categoryPageOf(p))}">Every ${esc(cfgOf(p).plural)} on file</a></p>
+        </div>
       </div>
     </div>
   </section>
@@ -714,7 +890,7 @@ ${JSON.stringify(productLD, null, 2)}
 <script type="application/ld+json">
 ${JSON.stringify(faqLD, null, 2)}
 </script>
-${p.images && p.images.length > 1 ? GALLERY_SCRIPT : ""}<script src="../js/app.js?v=${VERSION}"></script>
+${breadcrumbLD ? `<script type="application/ld+json">\n${JSON.stringify(breadcrumbLD, null, 2)}\n</script>\n` : ""}${p.images && p.images.length > 1 ? GALLERY_SCRIPT : ""}<script src="../js/app.js?v=${VERSION}"></script>
 </body>
 </html>
 `;
@@ -735,8 +911,6 @@ console.log(`Built ${count} product pages in products/`);
 // Set to the real production origin (no trailing slash) once the site has a
 // domain, then activate the Sitemap line in robots.txt. Until then the file
 // is generated with a placeholder and is harmless to ship.
-const SITE_ORIGIN = "https://YOUR-DOMAIN";
-
 const ROOT_PAGES = [
   "index.html", "hub.html", "creatine.html", "protein.html", "eaa.html",
   "electrolytes.html", "compare.html", "disclosure.html", "disclaimer.html"
