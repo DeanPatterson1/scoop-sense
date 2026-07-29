@@ -37,6 +37,54 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=optimum+nutrition+micronized+creatine&tag=YOURTAG-20",
     "blurb": "The default single-ingredient monohydrate from the biggest name in the category, micronized for easier mixing and labeled banned-substance tested.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.5,
+        "count": 365,
+        "source": {
+          "url": "https://www.optimumnutrition.com/en-us/products/creatine-monohydrate-micronized-powder",
+          "label": "Optimum Nutrition — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Widely trusted as a Creapure-sourced staple that a lot of other brands get compared against, though some report it settling at the bottom of shakes and question whether it is worth paying more than cheaper competitors.",
+        "points": [
+          {
+            "label": "Ingredient sourcing",
+            "tone": "positive",
+            "note": "Users note ON's creatine is Creapure-sourced, the German form widely regarded as a benchmark for purity."
+          },
+          {
+            "label": "Mixability",
+            "tone": "negative",
+            "note": "Several people report the powder settling undissolved at the bottom of a shaker no matter how long they mix it."
+          },
+          {
+            "label": "Value vs. cheaper brands",
+            "tone": "mixed",
+            "note": "Shoppers frequently compare the price against budget brands like Nutricost and ask whether the difference is worth it."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=%22Optimum+Nutrition%22&restrict_sr=on&sort=top&t=all",
+            "label": "r/creatine search results, thread on Creapure sourcing",
+            "quote": "the German made \"Creapure\" gets a lot of recognition as being the best form of creatine"
+          },
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=%22Optimum+Nutrition%22&restrict_sr=on&sort=top&t=all",
+            "label": "r/creatine, \"Creatine sinks to bottom no matter how much I mix it\"",
+            "quote": "The creatine is always at the bottom, the same thing happens no matter how much I stir, and even when I mix it with water."
+          },
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=%22Optimum+Nutrition%22&restrict_sr=on&sort=top&t=all",
+            "label": "r/creatine, \"Nutricost is literally half the price of Optimum Nutrition\"",
+            "quote": "Nutricost is literally half the price of Optimum Nutrition. Is there any appreciable difference in quality?"
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/on-micronized-creatine.png",
     "images": [
       "https://www.optimumnutrition.com/cdn/shop/files/on-1153060_Image_01.png?v=1769135392&width=2048",
@@ -86,6 +134,54 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=thorne+creatine&tag=YOURTAG-20",
     "blurb": "Plain 5 g monohydrate with NSF Certified for Sport screening, aimed at athletes subject to drug testing.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.5,
+        "count": 1722,
+        "source": {
+          "url": "https://www.thorne.com/products/dp/creatine",
+          "label": "Thorne — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Consistently named among the most trusted, third-party-tested options and used as a step-up from problem-prone budget brands, though it sits in the same premium price tier people debate against Momentous and Transparent Labs.",
+        "points": [
+          {
+            "label": "Trust and testing",
+            "tone": "positive",
+            "note": "Frequently paired with Momentous as a go-to pick specifically because of its reputation and NSF Certified for Sport testing."
+          },
+          {
+            "label": "Upgrade from budget brands",
+            "tone": "positive",
+            "note": "People experiencing issues with cheaper powders ask about switching to Thorne as a trusted alternative."
+          },
+          {
+            "label": "Premium pricing tier",
+            "tone": "mixed",
+            "note": "Comes up repeatedly in \"which clean brand\" threads alongside other higher-priced options, where cost is part of the debate."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/search?q=%22Momentous+Creatine%22&sort=top&t=all",
+            "label": "r/crossfit, \"Momentous vs Thorne Creatine after Momentous switched away from Creapure\"",
+            "quote": "Momentous and Thorne stood out to me because of their reputation and third-party testing."
+          },
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=%22Optimum+Nutrition%22&restrict_sr=on&sort=top&t=all",
+            "label": "r/creatine, \"3g/day for 4 days\" thread",
+            "quote": "I'm using cheap-o Optimum Nutrition brand from Amazon, should I try another brand? Thorne?"
+          },
+          {
+            "url": "https://old.reddit.com/search?q=%22Transparent+Labs%22+creatine+subreddit%3A(Supplements+OR+creatine+OR+Fitness+OR+naturalbodybuilding+OR+Gainit)&sort=top&t=all",
+            "label": "r/Supplements, \"Cleanest supplement brand?\"",
+            "quote": "I keep seeing momentous, Thorne, and transparent labs come up a lot"
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/thorne-creatine.png",
     "images": [
       "https://d1vo8zfysxy97v.cloudfront.net/media/product/sf903__ve8382489c6ce9fb7f28cdddef00e6f1ece146591.png",
@@ -141,6 +237,54 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=nutricost+creatine+monohydrate&tag=YOURTAG-20",
     "blurb": "5 g of micronized monohydrate at one of the lowest costs per serving in the category; the 500 g tub holds 100 servings.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 5,
+        "count": 1717,
+        "source": {
+          "url": "https://nutricost.com/products/nutricost-creatine-monohydrate-powder-500-grams",
+          "label": "Nutricost — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Seen as a reliable budget alternative to premium brands with little taste to get in the way, though some report it not fully dissolving and one buyer received an unlabeled, damaged package that raised authenticity concerns.",
+        "points": [
+          {
+            "label": "Taste",
+            "tone": "positive",
+            "note": "Praised for having essentially no flavor compared with other brands some found unpleasant."
+          },
+          {
+            "label": "Mixability",
+            "tone": "negative",
+            "note": "Some buyers report powder still floating and settling at the bottom even after shaking in a full water bottle."
+          },
+          {
+            "label": "Packaging / authenticity",
+            "tone": "negative",
+            "note": "One buyer received a container with no labeling and damage, and asked whether it was safe to use."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=%22Nutricost%22&restrict_sr=on&sort=top&t=all",
+            "label": "r/creatine, \"Curses upon SixStar\"",
+            "quote": "Got some from nutricost, can't taste a thing."
+          },
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=%22Nutricost%22&restrict_sr=on&sort=top&t=all",
+            "label": "r/creatine, \"Can't get creatine to fully dissolve?\"",
+            "quote": "24oz is supposed to be more than enough to dissolve it, but I still see powder floating around and sitting at the bottom."
+          },
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=%22Nutricost%22&restrict_sr=on&sort=top&t=all",
+            "label": "r/creatine, \"Fake TRANSPARENT CREATINE\"",
+            "quote": "i just buy nutricost monohydrate creatine and it comes in transparent box no labels no details"
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/nutricost-creatine-monohydrate.png",
     "images": [
       "https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_CreatineMonohydrate_Unflavored_500G_Front_SQUARE_98526928-e1cc-4ff6-9918-430654760159.jpg?v=1760650358",
@@ -206,6 +350,54 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=transparent+labs+creatine+hmb&tag=YOURTAG-20",
     "blurb": "Pairs a full 5 g of monohydrate with 1.5 g myHMB, vitamin D3, and BioPerine; Informed Choice certified, and priced well above plain monohydrate.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.8,
+        "count": 3280,
+        "source": {
+          "url": "https://www.transparentlabs.com/products/creatine-hmb",
+          "label": "Transparent Labs — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Users report solid results and easy digestion, but the loudest recurring criticism is that paying extra for the HMB blend is not worth it compared with buying monohydrate and HMB separately.",
+        "points": [
+          {
+            "label": "Value of the HMB add-in",
+            "tone": "negative",
+            "note": "The most common complaint is that the HMB blend costs much more than sourcing plain monohydrate and HMB on their own for a comparable total."
+          },
+          {
+            "label": "Perceived effectiveness",
+            "tone": "positive",
+            "note": "Some users report noticeably better recovery and more consistent workouts after switching to it."
+          },
+          {
+            "label": "Stomach tolerance",
+            "tone": "positive",
+            "note": "Recommended by some as an easy-on-the-stomach option when shopping for a gentler creatine."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/search?q=%22Transparent+Labs%22+creatine+subreddit%3A(Supplements+OR+creatine+OR+Fitness+OR+naturalbodybuilding+OR+Gainit)&sort=top&t=all",
+            "label": "r/Supplements, \"I'm getting tired of Transparent Labs BS.\"",
+            "quote": "It's a nasty marketing scheme transparent labs uses where people over pay and it sets a bad precedent in the supplement world"
+          },
+          {
+            "url": "https://old.reddit.com/search?q=%22Transparent+Labs%22+creatine+subreddit%3A(Supplements+OR+creatine+OR+Fitness+OR+naturalbodybuilding+OR+Gainit)&sort=top&t=all",
+            "label": "r/Supplements, \"Creatine HMB vs creatine monohydrate, is there a better choice for beginners?\"",
+            "quote": "I've noticed my recovery has been better and my workouts feel more consistent. I'm happy with how it's been working for me."
+          },
+          {
+            "url": "https://old.reddit.com/search?q=%22Transparent+Labs%22+creatine+subreddit%3A(Supplements+OR+creatine+OR+Fitness+OR+naturalbodybuilding+OR+Gainit)&sort=top&t=all",
+            "label": "r/Supplements, \"Which Creatine is easy on the stomach?\"",
+            "quote": "I heard German creatine is very good (eg: Transparent Labs Creatine HMB )"
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/transparent-labs-creatine-hmb.png",
     "images": [
       "https://cdn.shopify.com/s/files/1/0866/7664/files/TL_CreatineHMB_30S_U_1_2.png?v=1745537479",
@@ -305,6 +497,54 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=con+cret+creatine+hcl&tag=YOURTAG-20",
     "blurb": "The original 750 mg creatine HCl in 64 or 100-serving tubs, certified vegan, gluten-free, and kosher.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.7,
+        "count": 185,
+        "source": {
+          "url": "https://con-cret.com/products/concret-creatine-hcl-powder-unflavored",
+          "label": "Con-Cret — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Seen as effective by regular users, but the dominant conversation is skepticism about paying a premium for HCl when monohydrate performs comparably, compounded by unclear dosing guidance and occasional tolerability complaints.",
+        "points": [
+          {
+            "label": "Value vs. monohydrate",
+            "tone": "negative",
+            "note": "The recurring argument is that HCl matches monohydrate's effectiveness at a much higher cost per dose, making the premium hard to justify."
+          },
+          {
+            "label": "Dosing clarity",
+            "tone": "mixed",
+            "note": "New users find the smaller HCl serving size confusing next to the more familiar 5-gram monohydrate recommendation."
+          },
+          {
+            "label": "Tolerability",
+            "tone": "negative",
+            "note": "A small number of users report a racing heartbeat after starting on the HCl formula."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=%22Con-Cret%22+OR+%22ConCret%22&restrict_sr=on&sort=top&t=all",
+            "label": "r/creatine, \"Creatine HCl 'no loading' claim\"",
+            "quote": "Studies show that Creatine HCl is equally effective to monohydrate in performance but at a smaller dosage if taken daily (at a much higher cost)."
+          },
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=%22Con-Cret%22+OR+%22ConCret%22&restrict_sr=on&sort=top&t=all",
+            "label": "r/creatine, \"Daily dosing?\"",
+            "quote": "I bought a thing of \"con-cret\" creatine that I've heard good things about, but on the box it says to take 900 something mg at a time"
+          },
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=%22Con-Cret%22+OR+%22ConCret%22&restrict_sr=on&sort=top&t=all",
+            "label": "r/creatine, \"Creatine HCL gave me a racing heart\"",
+            "quote": "But i been getting rapid heart beats taking HCL."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/con-cret-creatine-hcl.png",
     "images": [
       "https://cdn.shopify.com/s/files/1/0267/4576/6070/files/100Unflavored.webp?v=1784816901",
@@ -459,6 +699,54 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=muscletech+cell+tech+creatine&tag=YOURTAG-20",
     "blurb": "A carb-and-creatine recovery formula: 5 g of monohydrate rides on a 38 g multi-stage carb blend plus taurine, alpha lipoic acid, and BCAAs, with a two-scoop option doubling everything.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.6,
+        "count": 7910,
+        "source": {
+          "url": "https://www.muscletech.com/products/cell-tech",
+          "label": "MuscleTech — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "A long-running favorite for gains and price, but some batches draw complaints about clumping and a minority describe tolerability issues serious enough that they switched products.",
+        "points": [
+          {
+            "label": "Clumping / mixability",
+            "tone": "negative",
+            "note": "Some buyers describe tubs arriving with clumps that do not fully break up even after shaking."
+          },
+          {
+            "label": "Value",
+            "tone": "positive",
+            "note": "Named as one of the cheapest flavored options people have found for the money."
+          },
+          {
+            "label": "Effectiveness vs. tolerability",
+            "tone": "mixed",
+            "note": "One long-time user reported good gains but discontinued use after months of lingering discomfort they attributed to the product."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=%22Nutricost%22&restrict_sr=on&sort=top&t=all",
+            "label": "r/Supplements, \"My cell tech creatine is clumpy\"",
+            "quote": "It is a lot of clumps in it, tried shaking it got rid of some of the clumps but a lot still there."
+          },
+          {
+            "url": "https://old.reddit.com/search?q=%22Cell-Tech%22+subreddit%3A(Supplements+OR+creatine+OR+Fitness+OR+naturalbodybuilding+OR+Gainit)&sort=top&t=all",
+            "label": "r/Supplements, \"Is this flavored CellTech creatine good?\"",
+            "quote": "Is this flavored CellTech creatine good? is the cheapest option I've been able to find"
+          },
+          {
+            "url": "https://old.reddit.com/search?q=%22Cell-Tech%22+subreddit%3A(Supplements+OR+creatine+OR+Fitness+OR+naturalbodybuilding+OR+Gainit)&sort=top&t=all",
+            "label": "r/Supplements, \"Creatine monohydrate allergy (a fair warning)\"",
+            "quote": "It worked well in terms of gains. Although the symptoms definitely outweighed the benefits, so I've discontinued using it."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/muscletech-cell-tech.png",
     "images": [
       "https://cdn.shopify.com/s/files/1/1214/7132/files/celltech-citrus-3lb_aa616c64-0d61-4104-a07a-e8b6cc84ad27.jpg?v=1753299077",
@@ -1012,6 +1300,54 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=momentous+creatine+monohydrate&tag=YOURTAG-20",
     "blurb": "Carries both NSF Certified for Sport and Informed Sport marks plus added screening for microplastics and PFAS, made in a pharmaceutical facility with tighter heavy-metal limits than the industry standard.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.9,
+        "count": 3669,
+        "source": {
+          "url": "https://www.livemomentous.com/products/creatine-monohydrate",
+          "label": "Momentous — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Praised for mixing cleanly and sitting well with sensitive stomachs, but a recent switch away from German Creapure sourcing has some longtime buyers questioning purity, and a few report sleep disruption.",
+        "points": [
+          {
+            "label": "Mixability and tolerance",
+            "tone": "positive",
+            "note": "Long-time users describe it mixing completely with no grit, no taste, and no digestive issues."
+          },
+          {
+            "label": "Sourcing change",
+            "tone": "negative",
+            "note": "Momentous moved from German Creapure to its own in-house spec creatine, and some users say the texture and purity now feel noticeably different."
+          },
+          {
+            "label": "Sleep-related reports",
+            "tone": "negative",
+            "note": "A handful of users report new insomnia that resolved after stopping the product."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/search?q=%22Momentous+Creatine%22&sort=top&t=all",
+            "label": "r/crossfit, \"Momentous vs Thorne Creatine after Momentous switched away from Creapure\"",
+            "quote": "It mixes extremely well in water, is virtually tasteless, and has caused me no digestive problems."
+          },
+          {
+            "url": "https://old.reddit.com/search?q=%22Momentous+Creatine%22&sort=top&t=all",
+            "label": "r/HubermanLab, \"Momentous Creatine no longer sourced from Creapure\"",
+            "quote": "they no longer have the supply chain transparency, and texture/purity is noticibly different, especially if you dry scoop it."
+          },
+          {
+            "url": "https://old.reddit.com/search?q=%22Momentous+Creatine%22&sort=top&t=all",
+            "label": "r/Supplements, \"Creatine related insomnia\"",
+            "quote": "I took 5g of Momentous creatine every morning for about 2 weeks until the insomnia took a hold."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/momentous-creatine-monohydrate.png",
     "images": [
       "https://www.livemomentous.com/cdn/shop/files/f8715c729d402ed4a92537f004f161bd028c2e8d.png?v=1781125657&width=1440",
@@ -1336,6 +1672,54 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=create+creatine+monohydrate+gummies&tag=YOURTAG-20",
     "blurb": "NSF Certified for Sport gummy delivering 4.5 g of creatine monohydrate per 3-gummy serving, slightly under the standard 5 g research dose, in a dairy-free pectin base.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 5,
+        "count": 4654,
+        "source": {
+          "url": "https://trycreate.co/products/creatine-monohydrate-gummies",
+          "label": "Create — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Convenient and pleasant-tasting for people who dislike powder, but the dominant skepticism is whether the gummies actually deliver the labeled creatine dose, and one buyer described damaged product paired with an unwanted forced subscription.",
+        "points": [
+          {
+            "label": "Convenience and taste",
+            "tone": "positive",
+            "note": "Users say the gummy format makes it far easier to stay consistent than mixing powder, with flavor described as pleasant."
+          },
+          {
+            "label": "Dosage skepticism",
+            "tone": "negative",
+            "note": "A recurring question is whether the gummies contain as much creatine as labeled, since users cannot verify the claimed dose themselves."
+          },
+          {
+            "label": "Order quality and subscription practices",
+            "tone": "negative",
+            "note": "One buyer described receiving a clumped, poor-quality batch along with a subscription they had already declined, and difficulty getting a refund."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=%22Create%22+gummies&restrict_sr=on&sort=top&t=all",
+            "label": "r/creatine, \"Create brand Creatine?\"",
+            "quote": "Easy for me to remember to take, taste fine, and allow me to be consistent."
+          },
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=%22Create%22+gummies&restrict_sr=on&sort=top&t=all",
+            "label": "r/creatine, \"Create brand Creatine?\"",
+            "quote": "do these have as much creatine in them as they say? Am I getting actual benefits?"
+          },
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=%22Create%22+gummies&restrict_sr=on&sort=top&t=all",
+            "label": "r/creatine, \"AVOID CREATE wellness as a business\"",
+            "quote": "They send a cheap tub full of welded together blobs of sludge, and proceeded to force a subscription which I had already clicked \"no\" to when ordering."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/create-creatine-monohydrate-gummies.png",
     "images": [
       "https://cdn.shopify.com/s/files/1/1515/2714/files/create_creatinegummie_varietypack_ea152171-10c6-47b8-9cd8-92c0c03e5988_80x80.png?v=1780938665",
@@ -1519,6 +1903,54 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=bucked+up+creatine+monohydrate&tag=YOURTAG-20",
     "blurb": "A single-ingredient 5 g micronized monohydrate scoop from a brand better known for stimulant pre-workouts; the label lists nothing beyond the creatine itself.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 5,
+        "count": 47,
+        "source": {
+          "url": "https://www.buckedup.com/shop/creatine-powder/creatine-monohydrate",
+          "label": "Bucked Up — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Popular and frequently discounted, but the brand faces pointed criticism over the lack of published third-party testing for its creatine gummies, and some users report nausea from the monohydrate powder.",
+        "points": [
+          {
+            "label": "Third-party testing transparency",
+            "tone": "negative",
+            "note": "A buyer who asked the company directly for third-party test results on its creatine gummies says they were told nothing was available to share."
+          },
+          {
+            "label": "Tolerability",
+            "tone": "negative",
+            "note": "At least one long-time creatine user reports feeling sick after switching to this brand's powder."
+          },
+          {
+            "label": "Value / deals",
+            "tone": "positive",
+            "note": "Frequently flagged by deal-tracking users as good value when it goes on sale."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/Supplements/search?q=%22Bucked+Up%22+creatine&restrict_sr=on&sort=top&t=all",
+            "label": "r/Supplements, \"Internal or 3rd party ingredient testing\"",
+            "quote": "They responded that basically they have nothing to send or publish that shows the creatine content."
+          },
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=%22Bucked+Up%22&restrict_sr=on&sort=top&t=all",
+            "label": "r/creatine, \"Nauseous\"",
+            "quote": "It's bucked up. I took a scoop after dinner and I feel so sick as I'm typing this."
+          },
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=%22Bucked+Up%22&restrict_sr=on&sort=top&t=all",
+            "label": "r/creatine, \"Lots of creatine deal on Amazon today\"",
+            "quote": "Bucked up creatine is at an all time low, so you may want to cop some"
+          }
+        ]
+      }
+    },
     "metrics": {
       "creatineG": 5,
       "form": "monohydrate"
@@ -1671,6 +2103,54 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=kaged+creatine+monohydrate&tag=YOURTAG-20",
     "blurb": "Every batch is verified by Informed Sport, giving this single-ingredient 5 g monohydrate scoop a label-backed third-party testing claim rather than just a marketing statement.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.9,
+        "count": 35,
+        "source": {
+          "url": "https://www.kaged.com/products/creatine-monohydrate",
+          "label": "Kaged — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Loyal following that considers Kaged's creatine formulations top-tier and hard to replace, but value-conscious buyers point out its HCl blends deliver a fraction of the creatine dose of cheaper monohydrate for a higher price.",
+        "points": [
+          {
+            "label": "Brand loyalty",
+            "tone": "positive",
+            "note": "Some longtime users say no other pre-workout or creatine formulation they've tried compares."
+          },
+          {
+            "label": "Value of HCl dosing",
+            "tone": "negative",
+            "note": "Critics note Kaged's HCl serving delivers far less creatine by weight than a standard monohydrate dose for a higher price, calling the trade-off questionable."
+          },
+          {
+            "label": "Availability frustration",
+            "tone": "positive",
+            "note": "One user calls a discontinued encapsulated version the best creatine on the market and hopes it returns to stock."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/Supplements/search?q=Kaged+creatine&restrict_sr=on&sort=top&t=all",
+            "label": "r/Supplements, on Kaged Pre-Kaged Stim-Free vs. RAW Nutrition",
+            "quote": "raw has 5 g of creatine monohydrate and Kaged has Creatine HCl with only1.5 g, which is pointless"
+          },
+          {
+            "url": "https://old.reddit.com/r/Supplements/search?q=Kaged+creatine&restrict_sr=on&sort=top&t=all",
+            "label": "r/Supplements, \"Need a new all around preworkout\"",
+            "quote": "I've been riding Pre-Kaged for a while and in my opinion nothing comes close."
+          },
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=Kaged&restrict_sr=on&sort=top&t=all",
+            "label": "r/creatine, \"Encapsulated creatine\"",
+            "quote": "To me this was the best creatine on the market."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/kaged-creatine-monohydrate.png",
     "images": [
       "https://www.kaged.com/cdn/shop/files/CreatineMono-Front-UN.png",

@@ -46,6 +46,46 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=transparent+labs+intra+workout&tag=YOURTAG-20",
     "blurb": "Stim-free intra-workout built on 6.7 g of the Amino9 EAA blend plus taurine and betaine, with Informed Choice certification listed on the brand page.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": null,
+      "community": {
+        "takeaway": "Recent r/Supplements sentiment is less about Intra's ingredients than about Transparent Labs' pricing and its once-central promise of batch-level lab transparency, which some longtime buyers feel the brand has drifted away from.",
+        "points": [
+          {
+            "label": "Product-line overlap",
+            "tone": "negative",
+            "note": "One user said Intra duplicates ingredients found in several of the brand's other supplements, making it feel redundant to buy alongside them."
+          },
+          {
+            "label": "Value for price",
+            "tone": "negative",
+            "note": "Commenters argued the brand charges a large premium over cheaper alternatives that deliver similar formulas."
+          },
+          {
+            "label": "Trust in testing claims",
+            "tone": "negative",
+            "note": "A separate thread accused the brand of no longer providing the batch-level lab results it built its transparency reputation on."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/Supplements/comments/1svfu0r/im_getting_tired_of_transparent_labs_bs/",
+            "label": "r/Supplements thread, 2025",
+            "quote": "So if you get a supplement like Intra it has everything some others might have minus the glutamine."
+          },
+          {
+            "url": "https://old.reddit.com/r/Supplements/comments/1svfu0r/im_getting_tired_of_transparent_labs_bs/",
+            "label": "r/Supplements comment, 2025",
+            "quote": "That's my point. Why are people giving companies like TL excessive margins. The whole industry needs a reset."
+          },
+          {
+            "url": "https://old.reddit.com/r/Supplements/comments/1tgk66k/be_aware_of_transparent_labs_enshittification/",
+            "label": "r/Supplements thread, 2025",
+            "quote": "I used to buy transparent labs based off their apparent commitment to, well, transparency."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/transparent-labs-intra.png",
     "images": [
       "https://www.transparentlabs.com/cdn/shop/files/TL_INTRA_30_BR_1_2.png?v=1746463908",
@@ -386,6 +426,54 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=xtend+original+bcaa&tag=YOURTAG-20",
     "blurb": "Longtime intra-workout staple with a fully dosed 7 g BCAA panel plus glutamine and citrulline malate, though it covers only three of the nine essential amino acids.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.8,
+        "count": 432,
+        "source": {
+          "url": "https://www.cellucor.com/products/xtend-original",
+          "label": "Cellucor (XTEND brand) — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Long-time users are more divided over flavor and occasional side effects than over whether BCAAs themselves do anything, with some drinking Xtend mainly for its electrolytes rather than muscle recovery.",
+        "points": [
+          {
+            "label": "Taste",
+            "tone": "mixed",
+            "note": "Flavor opinions split sharply by variant; some users love watermelon and blue raspberry while others found a newer cherry flavor hard to get down even after trying."
+          },
+          {
+            "label": "Reported side effects",
+            "tone": "negative",
+            "note": "One user described headaches, nausea, bloating, and dizziness after several days of regular use, unsure if it was Xtend specifically or BCAAs generally."
+          },
+          {
+            "label": "Used for electrolytes, not gains",
+            "tone": "mixed",
+            "note": "An outdoor worker said the benefit he felt after hard labor came more from the electrolyte blend than from the BCAAs themselves."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/Supplements/comments/1e0adsk/this_is_disgusting_xtend_bcaa_cherry/",
+            "label": "r/Supplements thread, 2024",
+            "quote": "I even tried chugging it. lol, This stuff is gross."
+          },
+          {
+            "url": "https://old.reddit.com/r/Supplements/comments/tahv28/xtend_bcaas_side_effects/",
+            "label": "r/Supplements thread, 2022",
+            "quote": "I’ve had a couple headaches, nausea, bloating, dizziness, balance issue’s, and fatigue at various points after consumption."
+          },
+          {
+            "url": "https://old.reddit.com/r/Supplements/comments/c8fz55/hydration_supplement_during_work/",
+            "label": "r/Supplements thread, 2019",
+            "quote": "I have been taking xtend bcaas because they make me feel better after a hard job. I figured it’s more so from the electrolytes as opposed to the bcaas."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/xtend-original-bcaa.png",
     "images": [
       "https://cellucor.com/cdn/shop/files/XTEND_1144_Digital_Relabel_FlowThrough_Assets_PDPs_OnGreyBackground-XTEND-OG30-BRI.png?v=1771552623",
@@ -491,6 +579,54 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=optimum+nutrition+amino+energy&tag=YOURTAG-20",
     "blurb": "The one caffeinated pick here: 100 mg caffeine with a 5 g proprietary amino blend, making it closer to a light energy drink than a fully dosed EAA product.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.3,
+        "count": 276,
+        "source": {
+          "url": "https://www.target.com/p/optimum-nutrition-essential-amino-energy-powder-fruit-fusion-65-servings/-/A-89392832",
+          "label": "Target — Optimum Nutrition Essential Amino Energy, Fruit Fusion 65-serving (retailer fallback; brand's own site did not render a numeric rating)"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Regular users describe Amino Energy as a reliable everyday pre-workout they've stuck with for years, though Optimum Nutrition has drawn complaints for quietly discontinuing popular flavors and variants.",
+        "points": [
+          {
+            "label": "Habitual use / satisfaction",
+            "tone": "positive",
+            "note": "Some longtime users say they don't like starting a workout without it after using it consistently for over a year."
+          },
+          {
+            "label": "Discontinued flavors/variants",
+            "tone": "negative",
+            "note": "Users have complained about Optimum Nutrition quietly discontinuing favorites like the Amino Energy + Collagen blend and the Cotton Candy flavor."
+          },
+          {
+            "label": "Caffeine level",
+            "tone": "mixed",
+            "note": "A few people like how it makes them feel but wish for a version without the energy/caffeine blend for non-workout use."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/Supplements/comments/3ge9w2/ons_amino_energy_advice_on_usage/",
+            "label": "r/Supplements thread, 2015",
+            "quote": "I like it, have been using it for a little over a year now. Honestly, I don't like to start a workout without it."
+          },
+          {
+            "url": "https://old.reddit.com/r/Supplements/comments/1baxga6/alternative_to_discontinued_on_product_amino/",
+            "label": "r/Supplements thread, 2024",
+            "quote": "So it seems like Optimum Nutrition has discontinued making Amino Energy + Collagen Powder. It is my favorite pre-workout supplement"
+          },
+          {
+            "url": "https://old.reddit.com/r/Supplements/comments/9hipn3/ons_amino_energy_minus_the_caffeine/",
+            "label": "r/Supplements thread, 2018",
+            "quote": "I love how it helps my body feel, but I don't need such a rush"
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/optimum-nutrition-amino-energy.png",
     "images": [
       "https://www.optimumnutrition.com/cdn/shop/files/on-1122241_Image_01.png?v=1761656281&width=2000",
@@ -1222,6 +1358,36 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=ghost+intra+eaa&tag=YOURTAG-20",
     "blurb": "A 10 g EAA formula that pairs the full amino profile with a dosed focus-and-hydration stack (ashwagandha, citicoline, electrolytes) rather than filler ingredients.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": null,
+      "community": {
+        "takeaway": "The one detailed discussion found folds Intra into a broader Ghost stack rather than judging it alone, with a commenter warning that combining several Ghost products at once — not necessarily Intra itself — is what tends to make people feel unwell.",
+        "points": [
+          {
+            "label": "Stacking overlap",
+            "tone": "negative",
+            "note": "A commenter said layering pre-workout, Intra, hydration, and Size together creates heavy overlap in stimulants and electrolytes the products weren't designed to be taken together."
+          },
+          {
+            "label": "Initial feel",
+            "tone": "mixed",
+            "note": "The original poster said the combined stack made them feel 'almost too good' in week one before symptoms appeared, which a commenter attributed to a stimulant honeymoon phase rather than any single product."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/Supplements/comments/1u6wryy/ghost_supplements_dangerous/",
+            "label": "r/Supplements thread, 2025",
+            "quote": "I got ghost legend, size, clear whey protein powder, intra, and hydration. I had them all every day and for the first week, I felt incredible. Almost too good."
+          },
+          {
+            "url": "https://old.reddit.com/r/Supplements/comments/1u6wryy/ghost_supplements_dangerous/",
+            "label": "r/Supplements comment, 2025",
+            "quote": "when you layer pre workout plus intra plus hydration plus size all together you are getting massive overlap in stimulants, electrolytes, and other compounds"
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/ghost-intra.webp",
     "images": [
       "https://www.ghostlifestyle.com/cdn/shop/files/IntraOrangeSqueeze_grande.webp?v=1715709631",

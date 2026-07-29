@@ -41,6 +41,54 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=optimum+nutrition+gold+standard+whey&tag=YOURTAG-20",
     "blurb": "The long-running benchmark whey blend: isolate listed first, 24 g protein in a 31 g scoop, and a 73-serving 5 lb tub that keeps per-serving cost in the middle of the pack.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.73,
+        "count": 1401,
+        "source": {
+          "url": "https://www.target.com/p/optimum-nutrition-gold-standard-100-whey-protein-powder-double-rich-chocolate-24oz/-/A-78807252",
+          "label": "Target — Optimum Nutrition Gold Standard 100% Whey product page (non-Amazon retailer; brand site rating widget did not render)"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Long-time users see Gold Standard as a dependable, good-tasting staple whey, with the main gripes being that the vanilla ice cream flavor clumps more than the chocolate variants and that portion sizes have shrunk while price has climbed.",
+        "points": [
+          {
+            "label": "Taste",
+            "tone": "mixed",
+            "note": "Buyers generally call the flavor solid and additive-free, though one user found the vanilla flavor a little too sweet or sugary."
+          },
+          {
+            "label": "Mixability",
+            "tone": "mixed",
+            "note": "Some report it mixes cleanly in water with minimal foam, while others say the vanilla ice cream flavor clumps even when shaken in a blender bottle."
+          },
+          {
+            "label": "Value over time",
+            "tone": "negative",
+            "note": "A decade-long Costco buyer describes the tub size shrinking while the price climbs, a recurring gripe among repeat purchasers."
+          },
+          {
+            "label": "Ingredient quality",
+            "tone": "positive",
+            "note": "Users describe the whey protein isolate content as high purity and largely free of unnecessary additives."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.reddit.com/r/Supplements/comments/1h5syxa/opinions_on_optimum_nutrition_gold_standard_whey/",
+            "label": "r/Supplements thread, 2024",
+            "quote": "The vanilla ice cream flavor kind of clumps even with a blender bottle so I'd recommend the extreme milk chocolate instead. It tastes better and doesn't clump."
+          },
+          {
+            "url": "https://www.reddit.com/r/Supplements/comments/1jwa14i/on_gold_standard_whey_legit_check/",
+            "label": "r/Supplements thread, 2025",
+            "quote": "The flavor is fine, although a little too sweet, maybe too sugary."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/on-gold-standard-whey.png",
     "images": [
       "https://www.optimumnutrition.com/cdn/shop/files/GSW_DRC_2lb_FOP.png?v=1776170438&width=2500",
@@ -101,6 +149,54 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=dymatize+iso100+hydrolyzed+whey+isolate&tag=YOURTAG-20",
     "blurb": "A hydrolyzed whey isolate that hits 25 g protein in a 32 g scoop with about 1 g of carbs — one of the leanest macro profiles in the category, priced accordingly.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.27,
+        "count": 72,
+        "source": {
+          "url": "https://www.target.com/p/dymatize-nutrition-iso100-hydrolyzed-100-whey-protein-isolate-gourmet-chocolate-3-lb-1-4-kg-protein-powders/-/A-83696894",
+          "label": "Target — Dymatize ISO100 Gourmet Chocolate (3 lb) product page (non-Amazon retailer; brand site rating widget did not render)"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "ISO100 fans favor savory-leaning flavors like cinnamon cereal and cocoa pebbles and say they blend well together, but dessert-style flavors such as vanilla and birthday cake repeatedly draw complaints for being too sweet or artificial.",
+        "points": [
+          {
+            "label": "Flavor variety",
+            "tone": "mixed",
+            "note": "Cinnamon cereal and cocoa pebbles get praised as favorites, while dessert-style options like birthday cake and cereal milk are called far too sweet by some users."
+          },
+          {
+            "label": "Taste consistency",
+            "tone": "negative",
+            "note": "One user who committed to a large tub of gourmet vanilla ended up disliking it across repeated servings, calling it too sweet and too artificial."
+          },
+          {
+            "label": "Flavor pairing/mixability",
+            "tone": "positive",
+            "note": "Fans report favorite flavors mix well together, such as cinnamon cereal and cocoa pebbles blended fifty-fifty."
+          },
+          {
+            "label": "Price sensitivity",
+            "tone": "mixed",
+            "note": "Regular buyers describe hunting for sales and short-dated discount tubs, reflecting cost-consciousness around the isolate's premium pricing."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.reddit.com/r/Supplements/comments/1rk6anv/what_are_the_best_dymatize_iso100_flavours/",
+            "label": "r/Supplements thread, 2025",
+            "quote": "I've always found birthday cake or cereal milk flavours to be far too sweet"
+          },
+          {
+            "url": "https://www.reddit.com/r/Supplements/comments/1fulqtc/did_anyone_try_dymatize_iso100_gourmet_vanilla/",
+            "label": "r/Supplements thread, 2024",
+            "quote": "Too sweet and too artificial for my liking. This is why I never order vanilla."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/dymatize-iso100.png",
     "images": [
       "https://dymatize.imgix.net/production/products/DYMA_ISO100_MCC_20srv.png",
@@ -159,6 +255,54 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=transparent+labs+grass+fed+whey+protein+isolate&tag=YOURTAG-20",
     "blurb": "Short ingredient list, Informed Choice and Informed Protein certifications on the brand page, and published third-party test results — you pay a premium for the paperwork.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.8,
+        "count": 19,
+        "source": {
+          "url": "https://thefeed.com/products/transparent-labs-grass-fed-whey-protein-isolate",
+          "label": "The Feed — retailer product page (brand site review widget did not expose a numeric rating)"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Reddit commenters who bring up Transparent Labs Grass-Fed Whey Isolate consistently name it among their favorite protein powders for taste and easy mixing, with the recurring caveat that it costs more than budget options.",
+        "points": [
+          {
+            "label": "Flavor and everyday use",
+            "tone": "positive",
+            "note": "Users repeatedly cite specific flavors, like vanilla peanut butter and milk chocolate, as favorites for shakes and smoothies."
+          },
+          {
+            "label": "Price vs. quality",
+            "tone": "mixed",
+            "note": "Commenters say they enjoy the product but flag it as a premium-priced pick rather than a budget-friendly deal."
+          },
+          {
+            "label": "Mixing into milk",
+            "tone": "positive",
+            "note": "Users describe blending it into milk, including lactose-free options, as a simple daily routine without complaints."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.reddit.com/r/workout/comments/1sdg87f/what_is_the_best_protein_powder_for_muscle_gain/",
+            "label": "r/workout thread, 2026",
+            "quote": "Transparent labs is good stuff but pricey."
+          },
+          {
+            "url": "https://www.reddit.com/r/Smoothies/comments/1o4ascu/advice_on_how_to_make_my_smoothies_taste_better/",
+            "label": "r/Smoothies thread, 2026",
+            "quote": "I really like transparent labs vanilla peanut butter and ascent cookies and cream"
+          },
+          {
+            "url": "https://www.reddit.com/r/beginnerfitness/comments/1u60xs2/suggestions_on_protein_powder/",
+            "label": "r/beginnerfitness thread, 2026",
+            "quote": "I use transparent whey and mix with fairlife lactose free milk."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/transparent-labs-grass-fed-whey-isolate.png",
     "images": [
       "https://www.transparentlabs.com/cdn/shop/files/01_chocolate.png?v=1778514112&width=1920",
@@ -221,6 +365,54 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=ascent+native+fuel+whey+protein&tag=YOURTAG-20",
     "blurb": "Informed Sport certification is verified on the brand page, and the formula skips artificial sweeteners — a clean pick for tested athletes at a mid-premium price.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.7,
+        "count": 297,
+        "source": {
+          "url": "https://thefeed.com/products/ascent-native-fuel-whey-protein-2lb-bag",
+          "label": "The Feed — retailer product page (brand site did not expose a working product page or numeric rating)"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Reddit mentions of Ascent Native Fuel Whey are largely positive, centered on its clean ingredient list and Costco availability, though it comes up in discussion less often than bigger-name brands so opinion is thinner overall.",
+        "points": [
+          {
+            "label": "Flavor picks",
+            "tone": "positive",
+            "note": "Commenters single out specific flavors, like mocha with a bit of caffeine, as a reason they keep buying it."
+          },
+          {
+            "label": "Clean ingredient profile",
+            "tone": "positive",
+            "note": "Users highlight the simple ingredient list and use of stevia as sweetener as a reason they trust the brand."
+          },
+          {
+            "label": "Costco value",
+            "tone": "positive",
+            "note": "Multiple commenters mention picking it up at Costco and describe it as clean, tested, and good value there."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.reddit.com/r/ninjacreami/comments/1nofu18/on_the_hunt_for_the_best_tasting_vanilla_base/",
+            "label": "r/ninjacreami thread, 2026",
+            "quote": "I like Ascent brand. They have an unflavored one as well."
+          },
+          {
+            "url": "https://www.reddit.com/r/PeterAttia/comments/1o6s1wl/how_are_you_hitting_protein_targets_while_limiting_lead_exposure/",
+            "label": "r/PeterAttia thread, 2026",
+            "quote": "I get it from Costco, seems like a good profile, clean ingredients, and only uses Stevia."
+          },
+          {
+            "url": "https://www.reddit.com/r/Mounjaro/comments/1s3rhf4/which_protein_powder_do_you_prefer_and_why/",
+            "label": "r/Mounjaro thread, 2026",
+            "quote": "Ascent Chocolate from Costco. Extremely clean, tested, and great price."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/ascent-native-fuel-whey.png",
     "images": [
       "https://www.ascentprotein.com/cdn/shop/products/whey-van-2lb-main.png?v=1695075692&width=1200",
@@ -332,6 +524,64 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=orgain+organic+protein+plant+based+powder&tag=YOURTAG-20",
     "blurb": "The grocery-store default for vegan protein: USDA Organic, 21 g protein from a four-source plant blend, and a reformulated sweetener system that dropped erythritol.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.73,
+        "count": 649,
+        "source": {
+          "url": "https://target.com/p/orgain-organic-vegan-protein-plant-based-protein-powder-creamy-chocolate-fudge-2-03lb/-/A-46785364",
+          "label": "Target — Orgain Organic Protein Powder, Creamy Chocolate Fudge 2.03lb product page (brand site rating widget did not render)"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Community sentiment on Orgain is generally favorable toward texture, mixability, and digestion, with a sweet/artificial aftertaste noted by some, but the most consistent complaint has nothing to do with the product's performance — many users say they stopped buying after learning Orgain is owned by Nestle.",
+        "points": [
+          {
+            "label": "Texture and mixability",
+            "tone": "positive",
+            "note": "Users describe it as not chalky and mixing smoothly, though a couple mention some clumping at the bottom of a shaker."
+          },
+          {
+            "label": "Digestion",
+            "tone": "positive",
+            "note": "Multiple users report no stomach issues or bloating and describe it as easy going down."
+          },
+          {
+            "label": "Taste",
+            "tone": "mixed",
+            "note": "Several describe a sweet, slightly artificial-tasting edge despite the use of stevia, though most say it's tolerable enough to keep buying."
+          },
+          {
+            "label": "Brand trust",
+            "tone": "negative",
+            "note": "A recurring theme is users saying they avoid or stopped buying the product specifically because of its Nestle ownership, separate from any taste or performance complaint."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/IsItVeganOrNot/comments/1t6re2s/anyone_tried_this_orgain_protein_powder_from/",
+            "label": "r/IsItVeganOrNot thread, 2025",
+            "quote": "I like it! It's not chalky and mixes well. I didn't have any stomach issues."
+          },
+          {
+            "url": "https://old.reddit.com/r/IsItVeganOrNot/comments/1t6re2s/anyone_tried_this_orgain_protein_powder_from/",
+            "label": "r/IsItVeganOrNot thread, 2025",
+            "quote": "easy on digestion and mixes relatively well in a shaker if you want to take it that way, but can clump some esp on the bottom (rather universal)."
+          },
+          {
+            "url": "https://old.reddit.com/r/IsItVeganOrNot/comments/1t6re2s/anyone_tried_this_orgain_protein_powder_from/",
+            "label": "r/IsItVeganOrNot thread, 2025",
+            "quote": "Generally I do think it’s a little too sweet. Anyway it’s owned by Nestle so I’m not buying it anymore."
+          },
+          {
+            "url": "https://old.reddit.com/r/veganfitness/comments/1o7vjwh/orgain_protein_powder_should_we_avoid/",
+            "label": "r/veganfitness thread, 2025",
+            "quote": "I avoid them due to Nestlé ownership. The CR was poor data collection and reporting to say the least, so I wouldn’t be overly concerned about the lead content."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/orgain-organic-protein.webp",
     "images": [
       "https://orgain.com/cdn/shop/files/851770003179-v13-Orgain-ProteinPowder-2.03lb-Chocolate-20240311-Front-HIRES-web_1200px.webp",
@@ -392,6 +642,64 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=vega+sport+premium+protein&tag=YOURTAG-20",
     "blurb": "The highest per-serving protein of the plant picks at 30 g, with NSF Certified for Sport verification on the brand page — the vegan option for drug-tested athletes.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.67,
+        "count": 1441,
+        "source": {
+          "url": "https://target.com/p/vega-sport-plant-based-premium-protein-berry-1-lb-12-oz-801-g/-/A-1002425179",
+          "label": "Target — Vega Sport Premium Protein, Berry 1lb 12oz product page (brand site rating widget did not render)"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Community sentiment leans negative on taste and texture, with users repeatedly describing the flavor as unpleasant and the mouthfeel as gritty, plus reports of bloating and gas, though a few say it works fine blended into smoothies or baked into recipes.",
+        "points": [
+          {
+            "label": "Taste",
+            "tone": "negative",
+            "note": "Users describe the flavor as unpleasant enough that they recommend switching to a different brand entirely."
+          },
+          {
+            "label": "Texture / grittiness",
+            "tone": "negative",
+            "note": "Users describe the pea-protein base as having a noticeably gritty mouthfeel."
+          },
+          {
+            "label": "Digestion",
+            "tone": "mixed",
+            "note": "Several users report bloating and gassiness after regular use, with some tracing it to the probiotic blend and finding it eases after switching brands."
+          },
+          {
+            "label": "Versatility",
+            "tone": "positive",
+            "note": "Some users say it works fine mixed into smoothies or baked into cookies despite the taste complaints."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/veganfitness/comments/1hwujfu/vega_sport_protein_powder_help_it_tastes_sooo_bad/",
+            "label": "r/veganfitness thread, 2024",
+            "quote": "It’s the worst and so expensive. Choke it down until it’s gone and then move on."
+          },
+          {
+            "url": "https://old.reddit.com/r/veganfitness/comments/zrw3di/vega_sport_pea_protein_makes_me_bloat_will_it_go/",
+            "label": "r/veganfitness thread, 2022",
+            "quote": "Pea protein is one of the cheapest sources out there for us and can really make ya gassy. Vega isn’t very good, it’s gritty."
+          },
+          {
+            "url": "https://old.reddit.com/r/veganfitness/comments/zrw3di/vega_sport_pea_protein_makes_me_bloat_will_it_go/",
+            "label": "r/veganfitness thread, 2022",
+            "quote": "Pea protein can do this. I’d try other blends or try taking a probiotic which usually solves bloating."
+          },
+          {
+            "url": "https://old.reddit.com/r/veganfitness/comments/1bsbvql/does_vega_premium_sport_protein_powder_bake_well/",
+            "label": "r/veganfitness thread, 2024",
+            "quote": "I’ve used it oatmeal cookies and they turned out just fine."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/vega-sport-premium-protein.png",
     "images": [
       "https://myvega.com/cdn/shop/files/Vega_Performance_Protein_Recovery_Vanilla_4lb_1.png?width=1200",
@@ -653,6 +961,59 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=bsn+syntha-6+chocolate+milkshake&tag=YOURTAG-20",
     "blurb": "A milkshake-style protein matrix blending whey and casein sources rather than a single pure protein; total protein and the full ingredient list are disclosed even though the six protein sources aren't broken out gram-by-gram.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.9,
+        "count": 2473,
+        "source": {
+          "url": "https://www.muscleandstrength.com/store/reviews/brands/bsn/syntha-6.html",
+          "label": "Muscle & Strength — BSN Syntha-6 reviews page (bsnonline.net was unreachable)"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Reddit users consistently praise Syntha-6's taste and mixability, but the recurring point of skepticism is that it's a multi-protein blend rather than a straight isolate, which underlies its long-running amino-spiking reputation and higher price for less protein per serving.",
+        "points": [
+          {
+            "label": "Taste",
+            "tone": "positive",
+            "note": "Commenters across multiple threads single out Syntha-6's flavor as notably better than other whey powders."
+          },
+          {
+            "label": "Value vs. plain isolate",
+            "tone": "mixed",
+            "note": "Some users say they prefer it for taste but note it costs more and delivers less protein per serving than simpler whey options."
+          },
+          {
+            "label": "Protein blend, not pure isolate",
+            "tone": "mixed",
+            "note": "Multiple threads point out Syntha-6 is a blend of whey concentrate, caseinate, and other protein sources rather than a straight isolate, the basis of its amino-spiking reputation."
+          },
+          {
+            "label": "Composition confusion",
+            "tone": "mixed",
+            "note": "Buyers comparing it to single-source whey products note the blend contains added carbs and fats alongside the protein mix."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.reddit.com/r/foodscience/comments/hzl65o/why_is_the_flavor_of_bsn_syntha_6_protein_so/",
+            "label": "r/foodscience thread",
+            "quote": "why is the flavor of bsn syntha 6 protein so superior to other companies and how can one understand what makes this so flavorful"
+          },
+          {
+            "url": "https://www.reddit.com/r/Fitness/comments/4gq5q3/syntha6_vs_on_whey_isolatete_protein/",
+            "label": "r/Fitness thread",
+            "quote": "Syntha6 is a blend of a bunch of kinds of proteins, carbs, and fats."
+          },
+          {
+            "url": "https://www.reddit.com/r/Fitness/comments/j9pfj/bsn_syntha6_protein_powder_291lb_15_fs/",
+            "label": "r/Fitness thread",
+            "quote": "Sytha-6 is a blended protein, what you have is probably just whey concentrate or whey isolate."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/bsn-syntha-6.png",
     "images": [
       "https://www.vitacost.com/cdn/shop/files/37_1c4bbfa9-94a0-48e4-8158-564ed42c2794.jpg?v=1781962149",
@@ -1007,6 +1368,54 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=isopure+zero+carb+whey+protein+isolate&tag=YOURTAG-20",
     "blurb": "A zero-carb, zero-sugar whey isolate fortified with 22 vitamins and minerals, delivering 25 g protein per 31 g scoop.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.5,
+        "count": 521,
+        "source": {
+          "url": "https://www.gnc.com/whey-protein/IsopureZeroCarb.html",
+          "label": "GNC — Isopure Zero Carb (Creamy Vanilla) product page (brand site did not expose a numeric rating)"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Reddit threads about Isopure Zero Carb center on whether the premium price is justified, with newcomers repeatedly asking if it actually tastes good and at least one detailed critique calling out weak flavoring and unnecessary added ingredients.",
+        "points": [
+          {
+            "label": "Taste before buying",
+            "tone": "mixed",
+            "note": "Newcomers frequently ask whether it actually tastes good before committing, reflecting isolate protein's general reputation for a chalky or medicinal taste."
+          },
+          {
+            "label": "Price for what you get",
+            "tone": "mixed",
+            "note": "Threads flag it as expensive and question whether it is worth the cost compared to plainer whey isolates."
+          },
+          {
+            "label": "Flavoring and added ingredients",
+            "tone": "negative",
+            "note": "One detailed comparison criticized its flavoring systems and questioned why taurine, glutamine, and extra sodium are added to what is marketed as a simple isolate."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.reddit.com/r/Fitness/comments/txmeo/zero_carb_isopure_protein_shake/",
+            "label": "r/Fitness thread",
+            "quote": "Anyone tried this stuff? I'm looking for a protein shake that A) doesn't taste like ass, B) is low carb (I'm on keto, and try to watch my sugar intake anyways)"
+          },
+          {
+            "url": "https://www.reddit.com/r/Protein/comments/k4rgzh/has_anyone_tried_isopure_zero_carb/",
+            "label": "r/Protein thread",
+            "quote": "I am thinking of buying it but it is very expensive. I was wondering if it tastes good or is worth the high protein content."
+          },
+          {
+            "url": "https://www.reddit.com/r/Supplements/comments/2bss92/amino_acid_spiking_in_protein_supplements/",
+            "label": "r/Supplements thread",
+            "quote": "It also doesn't have very good flavoring systems, in my experience."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/isopure-zero-carb.png",
     "images": [
       "https://www.theisopurecompany.com/cdn/shop/files/US_ZeroCarb_2.7LB_CreamyVanilla_FOP.png?v=1783005063&width=2500",
@@ -1106,6 +1515,59 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=legion+whey+plus+protein&tag=YOURTAG-20",
     "blurb": "Delivers 22 grams of grass-fed whey isolate per 25-gram scoop with a fully disclosed label and no proprietary blends; purity is verified through Labdoor lab testing rather than an NSF or Informed Sport sport-specific certification.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.6,
+        "count": 12101,
+        "source": {
+          "url": "https://legionathletics.com/products/supplements/whey-protein-powder/",
+          "label": "Legion Athletics — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Reddit users generally like Whey+'s taste and value its third-party lab testing, but a recurring complaint is that it doesn't always mix smoothly, and at least one longtime user questioned whether it delivers noticeably better results than cheaper alternatives.",
+        "points": [
+          {
+            "label": "Mixability",
+            "tone": "mixed",
+            "note": "A user who liked the taste in almond milk reported the powder leaves small clumps and doesn't shake as smoothly as they'd like."
+          },
+          {
+            "label": "Third-party testing",
+            "tone": "positive",
+            "note": "Shoppers comparing protein options specifically call out Legion's third-party testing as a reason to consider it over other brands."
+          },
+          {
+            "label": "Taste and everyday use",
+            "tone": "positive",
+            "note": "A longtime user calls the flavors great and says it works decently in baked goods, though the texture isn't top-tier for baking specifically."
+          },
+          {
+            "label": "Perceived results",
+            "tone": "mixed",
+            "note": "One user who used it for months after workouts said they hadn't seen the results they were hoping for."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/Supplements/comments/1hzuizm/protein_powder_question/",
+            "label": "r/Supplements thread, 2025",
+            "quote": "it doesn't shake too well and leaves small clumps here and there."
+          },
+          {
+            "url": "https://old.reddit.com/r/stopdrinkingfitness/comments/1tulr5w/10_months_sober_lifting_34x_a_week_soo_whats_the/",
+            "label": "r/stopdrinkingfitness thread, 2026",
+            "quote": "whey isolate, no artificial sweeteners (uses stevia), 22g protein per ~110 cal, third-party tested."
+          },
+          {
+            "url": "https://old.reddit.com/r/Protein/comments/1m1ncow/pescience_wheycasein_blend_vs_legion_whey/",
+            "label": "r/Protein thread, 2025",
+            "quote": "i've used legion as my tried and true protein powder the flavors r great and the whey does decent in baked goods (not amazing tho texture wise)."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/legion-whey-plus.png",
     "images": [
       "https://legionathletics.com/wp-content/uploads/2026/03/whey-plus-30-servings-dutch-chocolate-image-1.png",
@@ -1331,6 +1793,59 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=ritual+essential+protein+daily+shake&tag=YOURTAG-20",
     "blurb": "A fully disclosed plant-based pea protein shake with 20 g of protein per 31 g scoop and added choline plus L-methionine; its third-party testing covers heavy metals and microbes rather than an NSF Certified for Sport or Informed Sport banned-substance mark.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.6,
+        "count": 50,
+        "source": {
+          "url": "https://ritual.com/products/essential-protein-daily-shake-18",
+          "label": "Ritual — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Community mentions of Ritual's Daily Shake are sparse and mostly come from pregnancy and general-fitness threads rather than bodybuilding subs, with users flagging the single strong vanilla flavor, occasional headaches, and a sense that it costs more per gram of protein than whey options, though its third-party testing counts in its favor.",
+        "points": [
+          {
+            "label": "Flavor variety",
+            "tone": "negative",
+            "note": "The shake only comes in vanilla, and one user found the flavor overpoweringly strong and hard to mask."
+          },
+          {
+            "label": "Reported side effect",
+            "tone": "negative",
+            "note": "One user reported getting headaches after starting the shake and asked whether others experienced the same."
+          },
+          {
+            "label": "Texture and value",
+            "tone": "mixed",
+            "note": "A user comparing options noted the texture takes some getting used to and that it costs more relative to its protein-per-serving than whey powders."
+          },
+          {
+            "label": "Third-party testing",
+            "tone": "positive",
+            "note": "The same comparison still lists it as a serious contender specifically because it is third-party tested and free of random fillers."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/pregnant/comments/1hwsi8r/ritual_pregnancy_protein_powder/",
+            "label": "r/pregnant thread, 2025",
+            "quote": "This vanilla flavor is soo strong and I ask struggling to find ways to mask the flavor a bit."
+          },
+          {
+            "url": "https://old.reddit.com/r/pregnant/comments/1re2l0g/protein_powder/",
+            "label": "r/pregnant thread, 2026",
+            "quote": "I've tried Rituals protein powder but I started getting headaches which was so strange! Anyone else have that happen?"
+          },
+          {
+            "url": "https://old.reddit.com/r/stopdrinkingfitness/comments/1tulr5w/10_months_sober_lifting_34x_a_week_soo_whats_the/",
+            "label": "r/stopdrinkingfitness thread, 2026",
+            "quote": "pea-based, third-party tested, made for women w/o random fillers. 20g protein per ~120 cal. more expensive tho and have read smthn abt the texture that takes getting used to."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/ritual-essential-protein-daily-shake.png",
     "images": [
       "https://ritual.com/cdn/shop/files/PDP-PD18-Bag_f125fdc4-6812-45b7-a56e-faf0bf89e3c2.jpg?v=1774026738&width=2000",

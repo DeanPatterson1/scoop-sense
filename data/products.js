@@ -2508,6 +2508,54 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=optimum+nutrition+micronized+creatine&tag=YOURTAG-20",
     "blurb": "The default single-ingredient monohydrate from the biggest name in the category, micronized for easier mixing and labeled banned-substance tested.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.5,
+        "count": 365,
+        "source": {
+          "url": "https://www.optimumnutrition.com/en-us/products/creatine-monohydrate-micronized-powder",
+          "label": "Optimum Nutrition — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Widely trusted as a Creapure-sourced staple that a lot of other brands get compared against, though some report it settling at the bottom of shakes and question whether it is worth paying more than cheaper competitors.",
+        "points": [
+          {
+            "label": "Ingredient sourcing",
+            "tone": "positive",
+            "note": "Users note ON's creatine is Creapure-sourced, the German form widely regarded as a benchmark for purity."
+          },
+          {
+            "label": "Mixability",
+            "tone": "negative",
+            "note": "Several people report the powder settling undissolved at the bottom of a shaker no matter how long they mix it."
+          },
+          {
+            "label": "Value vs. cheaper brands",
+            "tone": "mixed",
+            "note": "Shoppers frequently compare the price against budget brands like Nutricost and ask whether the difference is worth it."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=%22Optimum+Nutrition%22&restrict_sr=on&sort=top&t=all",
+            "label": "r/creatine search results, thread on Creapure sourcing",
+            "quote": "the German made \"Creapure\" gets a lot of recognition as being the best form of creatine"
+          },
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=%22Optimum+Nutrition%22&restrict_sr=on&sort=top&t=all",
+            "label": "r/creatine, \"Creatine sinks to bottom no matter how much I mix it\"",
+            "quote": "The creatine is always at the bottom, the same thing happens no matter how much I stir, and even when I mix it with water."
+          },
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=%22Optimum+Nutrition%22&restrict_sr=on&sort=top&t=all",
+            "label": "r/creatine, \"Nutricost is literally half the price of Optimum Nutrition\"",
+            "quote": "Nutricost is literally half the price of Optimum Nutrition. Is there any appreciable difference in quality?"
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/on-micronized-creatine.png",
     "images": [
       "https://www.optimumnutrition.com/cdn/shop/files/on-1153060_Image_01.png?v=1769135392&width=2048",
@@ -2558,6 +2606,54 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=thorne+creatine&tag=YOURTAG-20",
     "blurb": "Plain 5 g monohydrate with NSF Certified for Sport screening, aimed at athletes subject to drug testing.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.5,
+        "count": 1722,
+        "source": {
+          "url": "https://www.thorne.com/products/dp/creatine",
+          "label": "Thorne — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Consistently named among the most trusted, third-party-tested options and used as a step-up from problem-prone budget brands, though it sits in the same premium price tier people debate against Momentous and Transparent Labs.",
+        "points": [
+          {
+            "label": "Trust and testing",
+            "tone": "positive",
+            "note": "Frequently paired with Momentous as a go-to pick specifically because of its reputation and NSF Certified for Sport testing."
+          },
+          {
+            "label": "Upgrade from budget brands",
+            "tone": "positive",
+            "note": "People experiencing issues with cheaper powders ask about switching to Thorne as a trusted alternative."
+          },
+          {
+            "label": "Premium pricing tier",
+            "tone": "mixed",
+            "note": "Comes up repeatedly in \"which clean brand\" threads alongside other higher-priced options, where cost is part of the debate."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/search?q=%22Momentous+Creatine%22&sort=top&t=all",
+            "label": "r/crossfit, \"Momentous vs Thorne Creatine after Momentous switched away from Creapure\"",
+            "quote": "Momentous and Thorne stood out to me because of their reputation and third-party testing."
+          },
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=%22Optimum+Nutrition%22&restrict_sr=on&sort=top&t=all",
+            "label": "r/creatine, \"3g/day for 4 days\" thread",
+            "quote": "I'm using cheap-o Optimum Nutrition brand from Amazon, should I try another brand? Thorne?"
+          },
+          {
+            "url": "https://old.reddit.com/search?q=%22Transparent+Labs%22+creatine+subreddit%3A(Supplements+OR+creatine+OR+Fitness+OR+naturalbodybuilding+OR+Gainit)&sort=top&t=all",
+            "label": "r/Supplements, \"Cleanest supplement brand?\"",
+            "quote": "I keep seeing momentous, Thorne, and transparent labs come up a lot"
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/thorne-creatine.png",
     "images": [
       "https://d1vo8zfysxy97v.cloudfront.net/media/product/sf903__ve8382489c6ce9fb7f28cdddef00e6f1ece146591.png",
@@ -2614,6 +2710,54 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=nutricost+creatine+monohydrate&tag=YOURTAG-20",
     "blurb": "5 g of micronized monohydrate at one of the lowest costs per serving in the category; the 500 g tub holds 100 servings.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 5,
+        "count": 1717,
+        "source": {
+          "url": "https://nutricost.com/products/nutricost-creatine-monohydrate-powder-500-grams",
+          "label": "Nutricost — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Seen as a reliable budget alternative to premium brands with little taste to get in the way, though some report it not fully dissolving and one buyer received an unlabeled, damaged package that raised authenticity concerns.",
+        "points": [
+          {
+            "label": "Taste",
+            "tone": "positive",
+            "note": "Praised for having essentially no flavor compared with other brands some found unpleasant."
+          },
+          {
+            "label": "Mixability",
+            "tone": "negative",
+            "note": "Some buyers report powder still floating and settling at the bottom even after shaking in a full water bottle."
+          },
+          {
+            "label": "Packaging / authenticity",
+            "tone": "negative",
+            "note": "One buyer received a container with no labeling and damage, and asked whether it was safe to use."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=%22Nutricost%22&restrict_sr=on&sort=top&t=all",
+            "label": "r/creatine, \"Curses upon SixStar\"",
+            "quote": "Got some from nutricost, can't taste a thing."
+          },
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=%22Nutricost%22&restrict_sr=on&sort=top&t=all",
+            "label": "r/creatine, \"Can't get creatine to fully dissolve?\"",
+            "quote": "24oz is supposed to be more than enough to dissolve it, but I still see powder floating around and sitting at the bottom."
+          },
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=%22Nutricost%22&restrict_sr=on&sort=top&t=all",
+            "label": "r/creatine, \"Fake TRANSPARENT CREATINE\"",
+            "quote": "i just buy nutricost monohydrate creatine and it comes in transparent box no labels no details"
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/nutricost-creatine-monohydrate.png",
     "images": [
       "https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_CreatineMonohydrate_Unflavored_500G_Front_SQUARE_98526928-e1cc-4ff6-9918-430654760159.jpg?v=1760650358",
@@ -2680,6 +2824,54 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=transparent+labs+creatine+hmb&tag=YOURTAG-20",
     "blurb": "Pairs a full 5 g of monohydrate with 1.5 g myHMB, vitamin D3, and BioPerine; Informed Choice certified, and priced well above plain monohydrate.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.8,
+        "count": 3280,
+        "source": {
+          "url": "https://www.transparentlabs.com/products/creatine-hmb",
+          "label": "Transparent Labs — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Users report solid results and easy digestion, but the loudest recurring criticism is that paying extra for the HMB blend is not worth it compared with buying monohydrate and HMB separately.",
+        "points": [
+          {
+            "label": "Value of the HMB add-in",
+            "tone": "negative",
+            "note": "The most common complaint is that the HMB blend costs much more than sourcing plain monohydrate and HMB on their own for a comparable total."
+          },
+          {
+            "label": "Perceived effectiveness",
+            "tone": "positive",
+            "note": "Some users report noticeably better recovery and more consistent workouts after switching to it."
+          },
+          {
+            "label": "Stomach tolerance",
+            "tone": "positive",
+            "note": "Recommended by some as an easy-on-the-stomach option when shopping for a gentler creatine."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/search?q=%22Transparent+Labs%22+creatine+subreddit%3A(Supplements+OR+creatine+OR+Fitness+OR+naturalbodybuilding+OR+Gainit)&sort=top&t=all",
+            "label": "r/Supplements, \"I'm getting tired of Transparent Labs BS.\"",
+            "quote": "It's a nasty marketing scheme transparent labs uses where people over pay and it sets a bad precedent in the supplement world"
+          },
+          {
+            "url": "https://old.reddit.com/search?q=%22Transparent+Labs%22+creatine+subreddit%3A(Supplements+OR+creatine+OR+Fitness+OR+naturalbodybuilding+OR+Gainit)&sort=top&t=all",
+            "label": "r/Supplements, \"Creatine HMB vs creatine monohydrate, is there a better choice for beginners?\"",
+            "quote": "I've noticed my recovery has been better and my workouts feel more consistent. I'm happy with how it's been working for me."
+          },
+          {
+            "url": "https://old.reddit.com/search?q=%22Transparent+Labs%22+creatine+subreddit%3A(Supplements+OR+creatine+OR+Fitness+OR+naturalbodybuilding+OR+Gainit)&sort=top&t=all",
+            "label": "r/Supplements, \"Which Creatine is easy on the stomach?\"",
+            "quote": "I heard German creatine is very good (eg: Transparent Labs Creatine HMB )"
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/transparent-labs-creatine-hmb.png",
     "images": [
       "https://cdn.shopify.com/s/files/1/0866/7664/files/TL_CreatineHMB_30S_U_1_2.png?v=1745537479",
@@ -2781,6 +2973,54 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=con+cret+creatine+hcl&tag=YOURTAG-20",
     "blurb": "The original 750 mg creatine HCl in 64 or 100-serving tubs, certified vegan, gluten-free, and kosher.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.7,
+        "count": 185,
+        "source": {
+          "url": "https://con-cret.com/products/concret-creatine-hcl-powder-unflavored",
+          "label": "Con-Cret — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Seen as effective by regular users, but the dominant conversation is skepticism about paying a premium for HCl when monohydrate performs comparably, compounded by unclear dosing guidance and occasional tolerability complaints.",
+        "points": [
+          {
+            "label": "Value vs. monohydrate",
+            "tone": "negative",
+            "note": "The recurring argument is that HCl matches monohydrate's effectiveness at a much higher cost per dose, making the premium hard to justify."
+          },
+          {
+            "label": "Dosing clarity",
+            "tone": "mixed",
+            "note": "New users find the smaller HCl serving size confusing next to the more familiar 5-gram monohydrate recommendation."
+          },
+          {
+            "label": "Tolerability",
+            "tone": "negative",
+            "note": "A small number of users report a racing heartbeat after starting on the HCl formula."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=%22Con-Cret%22+OR+%22ConCret%22&restrict_sr=on&sort=top&t=all",
+            "label": "r/creatine, \"Creatine HCl 'no loading' claim\"",
+            "quote": "Studies show that Creatine HCl is equally effective to monohydrate in performance but at a smaller dosage if taken daily (at a much higher cost)."
+          },
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=%22Con-Cret%22+OR+%22ConCret%22&restrict_sr=on&sort=top&t=all",
+            "label": "r/creatine, \"Daily dosing?\"",
+            "quote": "I bought a thing of \"con-cret\" creatine that I've heard good things about, but on the box it says to take 900 something mg at a time"
+          },
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=%22Con-Cret%22+OR+%22ConCret%22&restrict_sr=on&sort=top&t=all",
+            "label": "r/creatine, \"Creatine HCL gave me a racing heart\"",
+            "quote": "But i been getting rapid heart beats taking HCL."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/con-cret-creatine-hcl.png",
     "images": [
       "https://cdn.shopify.com/s/files/1/0267/4576/6070/files/100Unflavored.webp?v=1784816901",
@@ -2938,6 +3178,54 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=muscletech+cell+tech+creatine&tag=YOURTAG-20",
     "blurb": "A carb-and-creatine recovery formula: 5 g of monohydrate rides on a 38 g multi-stage carb blend plus taurine, alpha lipoic acid, and BCAAs, with a two-scoop option doubling everything.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.6,
+        "count": 7910,
+        "source": {
+          "url": "https://www.muscletech.com/products/cell-tech",
+          "label": "MuscleTech — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "A long-running favorite for gains and price, but some batches draw complaints about clumping and a minority describe tolerability issues serious enough that they switched products.",
+        "points": [
+          {
+            "label": "Clumping / mixability",
+            "tone": "negative",
+            "note": "Some buyers describe tubs arriving with clumps that do not fully break up even after shaking."
+          },
+          {
+            "label": "Value",
+            "tone": "positive",
+            "note": "Named as one of the cheapest flavored options people have found for the money."
+          },
+          {
+            "label": "Effectiveness vs. tolerability",
+            "tone": "mixed",
+            "note": "One long-time user reported good gains but discontinued use after months of lingering discomfort they attributed to the product."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=%22Nutricost%22&restrict_sr=on&sort=top&t=all",
+            "label": "r/Supplements, \"My cell tech creatine is clumpy\"",
+            "quote": "It is a lot of clumps in it, tried shaking it got rid of some of the clumps but a lot still there."
+          },
+          {
+            "url": "https://old.reddit.com/search?q=%22Cell-Tech%22+subreddit%3A(Supplements+OR+creatine+OR+Fitness+OR+naturalbodybuilding+OR+Gainit)&sort=top&t=all",
+            "label": "r/Supplements, \"Is this flavored CellTech creatine good?\"",
+            "quote": "Is this flavored CellTech creatine good? is the cheapest option I've been able to find"
+          },
+          {
+            "url": "https://old.reddit.com/search?q=%22Cell-Tech%22+subreddit%3A(Supplements+OR+creatine+OR+Fitness+OR+naturalbodybuilding+OR+Gainit)&sort=top&t=all",
+            "label": "r/Supplements, \"Creatine monohydrate allergy (a fair warning)\"",
+            "quote": "It worked well in terms of gains. Although the symptoms definitely outweighed the benefits, so I've discontinued using it."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/muscletech-cell-tech.png",
     "images": [
       "https://cdn.shopify.com/s/files/1/1214/7132/files/celltech-citrus-3lb_aa616c64-0d61-4104-a07a-e8b6cc84ad27.jpg?v=1753299077",
@@ -3057,6 +3345,46 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=transparent+labs+intra+workout&tag=YOURTAG-20",
     "blurb": "Stim-free intra-workout built on 6.7 g of the Amino9 EAA blend plus taurine and betaine, with Informed Choice certification listed on the brand page.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": null,
+      "community": {
+        "takeaway": "Recent r/Supplements sentiment is less about Intra's ingredients than about Transparent Labs' pricing and its once-central promise of batch-level lab transparency, which some longtime buyers feel the brand has drifted away from.",
+        "points": [
+          {
+            "label": "Product-line overlap",
+            "tone": "negative",
+            "note": "One user said Intra duplicates ingredients found in several of the brand's other supplements, making it feel redundant to buy alongside them."
+          },
+          {
+            "label": "Value for price",
+            "tone": "negative",
+            "note": "Commenters argued the brand charges a large premium over cheaper alternatives that deliver similar formulas."
+          },
+          {
+            "label": "Trust in testing claims",
+            "tone": "negative",
+            "note": "A separate thread accused the brand of no longer providing the batch-level lab results it built its transparency reputation on."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/Supplements/comments/1svfu0r/im_getting_tired_of_transparent_labs_bs/",
+            "label": "r/Supplements thread, 2025",
+            "quote": "So if you get a supplement like Intra it has everything some others might have minus the glutamine."
+          },
+          {
+            "url": "https://old.reddit.com/r/Supplements/comments/1svfu0r/im_getting_tired_of_transparent_labs_bs/",
+            "label": "r/Supplements comment, 2025",
+            "quote": "That's my point. Why are people giving companies like TL excessive margins. The whole industry needs a reset."
+          },
+          {
+            "url": "https://old.reddit.com/r/Supplements/comments/1tgk66k/be_aware_of_transparent_labs_enshittification/",
+            "label": "r/Supplements thread, 2025",
+            "quote": "I used to buy transparent labs based off their apparent commitment to, well, transparency."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/transparent-labs-intra.png",
     "images": [
       "https://www.transparentlabs.com/cdn/shop/files/TL_INTRA_30_BR_1_2.png?v=1746463908",
@@ -3404,6 +3732,54 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=xtend+original+bcaa&tag=YOURTAG-20",
     "blurb": "Longtime intra-workout staple with a fully dosed 7 g BCAA panel plus glutamine and citrulline malate, though it covers only three of the nine essential amino acids.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.8,
+        "count": 432,
+        "source": {
+          "url": "https://www.cellucor.com/products/xtend-original",
+          "label": "Cellucor (XTEND brand) — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Long-time users are more divided over flavor and occasional side effects than over whether BCAAs themselves do anything, with some drinking Xtend mainly for its electrolytes rather than muscle recovery.",
+        "points": [
+          {
+            "label": "Taste",
+            "tone": "mixed",
+            "note": "Flavor opinions split sharply by variant; some users love watermelon and blue raspberry while others found a newer cherry flavor hard to get down even after trying."
+          },
+          {
+            "label": "Reported side effects",
+            "tone": "negative",
+            "note": "One user described headaches, nausea, bloating, and dizziness after several days of regular use, unsure if it was Xtend specifically or BCAAs generally."
+          },
+          {
+            "label": "Used for electrolytes, not gains",
+            "tone": "mixed",
+            "note": "An outdoor worker said the benefit he felt after hard labor came more from the electrolyte blend than from the BCAAs themselves."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/Supplements/comments/1e0adsk/this_is_disgusting_xtend_bcaa_cherry/",
+            "label": "r/Supplements thread, 2024",
+            "quote": "I even tried chugging it. lol, This stuff is gross."
+          },
+          {
+            "url": "https://old.reddit.com/r/Supplements/comments/tahv28/xtend_bcaas_side_effects/",
+            "label": "r/Supplements thread, 2022",
+            "quote": "I’ve had a couple headaches, nausea, bloating, dizziness, balance issue’s, and fatigue at various points after consumption."
+          },
+          {
+            "url": "https://old.reddit.com/r/Supplements/comments/c8fz55/hydration_supplement_during_work/",
+            "label": "r/Supplements thread, 2019",
+            "quote": "I have been taking xtend bcaas because they make me feel better after a hard job. I figured it’s more so from the electrolytes as opposed to the bcaas."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/xtend-original-bcaa.png",
     "images": [
       "https://cellucor.com/cdn/shop/files/XTEND_1144_Digital_Relabel_FlowThrough_Assets_PDPs_OnGreyBackground-XTEND-OG30-BRI.png?v=1771552623",
@@ -3511,6 +3887,54 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=optimum+nutrition+amino+energy&tag=YOURTAG-20",
     "blurb": "The one caffeinated pick here: 100 mg caffeine with a 5 g proprietary amino blend, making it closer to a light energy drink than a fully dosed EAA product.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.3,
+        "count": 276,
+        "source": {
+          "url": "https://www.target.com/p/optimum-nutrition-essential-amino-energy-powder-fruit-fusion-65-servings/-/A-89392832",
+          "label": "Target — Optimum Nutrition Essential Amino Energy, Fruit Fusion 65-serving (retailer fallback; brand's own site did not render a numeric rating)"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Regular users describe Amino Energy as a reliable everyday pre-workout they've stuck with for years, though Optimum Nutrition has drawn complaints for quietly discontinuing popular flavors and variants.",
+        "points": [
+          {
+            "label": "Habitual use / satisfaction",
+            "tone": "positive",
+            "note": "Some longtime users say they don't like starting a workout without it after using it consistently for over a year."
+          },
+          {
+            "label": "Discontinued flavors/variants",
+            "tone": "negative",
+            "note": "Users have complained about Optimum Nutrition quietly discontinuing favorites like the Amino Energy + Collagen blend and the Cotton Candy flavor."
+          },
+          {
+            "label": "Caffeine level",
+            "tone": "mixed",
+            "note": "A few people like how it makes them feel but wish for a version without the energy/caffeine blend for non-workout use."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/Supplements/comments/3ge9w2/ons_amino_energy_advice_on_usage/",
+            "label": "r/Supplements thread, 2015",
+            "quote": "I like it, have been using it for a little over a year now. Honestly, I don't like to start a workout without it."
+          },
+          {
+            "url": "https://old.reddit.com/r/Supplements/comments/1baxga6/alternative_to_discontinued_on_product_amino/",
+            "label": "r/Supplements thread, 2024",
+            "quote": "So it seems like Optimum Nutrition has discontinued making Amino Energy + Collagen Powder. It is my favorite pre-workout supplement"
+          },
+          {
+            "url": "https://old.reddit.com/r/Supplements/comments/9hipn3/ons_amino_energy_minus_the_caffeine/",
+            "label": "r/Supplements thread, 2018",
+            "quote": "I love how it helps my body feel, but I don't need such a rush"
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/optimum-nutrition-amino-energy.png",
     "images": [
       "https://www.optimumnutrition.com/cdn/shop/files/on-1122241_Image_01.png?v=1761656281&width=2000",
@@ -3569,6 +3993,54 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=lmnt+electrolyte+drink+mix&tag=YOURTAG-20",
     "blurb": "Sodium-forward design: 1000 mg sodium with zero sugar targets heavy sweat replacement rather than carb-based rehydration.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.6,
+        "count": 14172,
+        "source": {
+          "url": "https://www.target.com/p/lmnt-zero-sugar-electrolytes-drink/-/A-95074512",
+          "label": "Target — LMNT Zero-Sugar Electrolytes Drink (retailer fallback; brand's own site review widget rendered as a JS placeholder with no usable number)"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Regulars are loyal to LMNT for taste and its high sodium content but consistently flag the price as steep for what is essentially flavored salt, and a few say electrolyte mixes like LMNT can make them feel worse rather than better.",
+        "points": [
+          {
+            "label": "Price vs. value",
+            "tone": "negative",
+            "note": "Users repeatedly call the packet price steep for what amounts to salt, potassium, and flavoring, and ask around for cheaper alternatives."
+          },
+          {
+            "label": "Sodium content fits heavy sweaters",
+            "tone": "positive",
+            "note": "Runners and people watching their sodium intake specifically like LMNT for its high salt content per serving compared to lighter mixes."
+          },
+          {
+            "label": "Can feel worse, not better",
+            "tone": "negative",
+            "note": "A few people say LMNT and similar electrolyte powders left them feeling worse rather than better, suggesting the product isn't universally beneficial."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/HydroHomies/comments/1gy2sls/cheap_alternatives_to_lmnt_electrolytes/",
+            "label": "r/HydroHomies thread, 2025",
+            "quote": "I've been using LMNT electrolyte powder and they're great, but I'm almost out and I don't want to pay the ridiculous price"
+          },
+          {
+            "url": "https://old.reddit.com/r/HydroHomies/comments/1bchzwh/how_much_salt_to_add_in_to_water_intake_as_an/",
+            "label": "r/HydroHomies thread, 2024",
+            "quote": "I like LMNT electrolytes packs, as they contain 1000mg of salt and have nice flavor."
+          },
+          {
+            "url": "https://old.reddit.com/r/HydroHomies/comments/1g2ueli/how_long_and_how_to_properly_rehydrate/",
+            "label": "r/HydroHomies thread, 2024",
+            "quote": "Electrolyte powders like LMNT, Relyte, etc make me feel worse, so does a spark in water intake."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/lmnt-drink-mix.png",
     "images": [
       "https://res.cloudinary.com/drinklmnt/image/upload/f_auto,q_auto/v1759900501/lmnt-citrus-salt-30ct-box_ux0v3u.webp",
@@ -3631,6 +4103,54 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=liquid+iv+hydration+multiplier&tag=YOURTAG-20",
     "blurb": "Sugar-based ORS-style stick: 11 g of sugars alongside 500 mg sodium, the glucose-plus-sodium pairing used in oral rehydration formulas.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.6,
+        "count": 1200,
+        "source": {
+          "url": "https://www.target.com/p/liquid-i-v-hydration-multiplier-vegan-powder-electrolyte-supplements-lemon-lime-0-56oz-each-10ct/-/A-78864725",
+          "label": "Target — Liquid I.V. Hydration Multiplier, Lemon Lime 10ct (retailer fallback; brand's own site did not render a numeric rating)"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Opinions split sharply on whether Liquid I.V. actually hydrates better than plain water, with many finding it too salty or artificial-tasting even as some heavy sweaters keep buying it anyway.",
+        "points": [
+          {
+            "label": "Does it work better than water?",
+            "tone": "mixed",
+            "note": "A widely upvoted thread asked whether Liquid I.V. hydrates better than water at all, with the poster saying they found it salty and were not a huge fan despite trying it."
+          },
+          {
+            "label": "Taste",
+            "tone": "negative",
+            "note": "Some users say the flavor is too artificial or overpoweringly salty, with one comparing the sensation to drinking powdered water softener."
+          },
+          {
+            "label": "Tried for outdoor/manual labor",
+            "tone": "mixed",
+            "note": "A landscaper working outside in heat all day tried it for mild dehydration symptoms like headaches and dark urine, though the thread doesn't confirm whether it resolved them."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/HydroHomies/comments/1amtqeb/does_liquid_iv_actually_hydrate_you_better/",
+            "label": "r/HydroHomies thread, 2024",
+            "quote": "I see liquid IV all up in stores and at gas station counters all the time and I've tried it. Salty. Not a huge fan."
+          },
+          {
+            "url": "https://old.reddit.com/r/HydroHomies/comments/stk6fh/liquid_iv_overblown_sugar_water_or_something_to_it/",
+            "label": "r/HydroHomies thread, 2022",
+            "quote": "I adored how wet my water tasted. It was almost like a powdered water softener"
+          },
+          {
+            "url": "https://old.reddit.com/r/HydroHomies/comments/15eftst/liquid_iv_effectiveness/",
+            "label": "r/HydroHomies thread, 2023",
+            "quote": "I notice mild symptoms of dehydration like yellow pee, occasionally headaches, etc. I found this product called liquid iv"
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/liquid-iv-hydration-multiplier.png",
     "images": [
       "https://cdn.shopify.com/s/files/1/1338/1013/files/HMO_PFC_16ct_PDP.jpg?v=1762182360",
@@ -3694,6 +4214,54 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=nuun+sport+electrolyte+tablets&tag=YOURTAG-20",
     "blurb": "Low-calorie dissolving-tablet format: 300 mg sodium and 1 g sugar per tablet suits lighter sessions and travel-friendly dosing.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.5,
+        "count": 526,
+        "source": {
+          "url": "https://www.target.com/p/nuun-hydration-sport-drink-vegan-tabs-10ct/-/A-87971433",
+          "label": "Target — Nuun Sport Hydration Vegan Tabs, 10ct (retailer fallback; brand's own site rating widget did not render)"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "The dominant recent conversation about Nuun isn't taste or effectiveness but the discovery that Nestlé owns the brand, which has pushed some loyal runners to look for substitutes even though most still say they like the product itself.",
+        "points": [
+          {
+            "label": "Nestlé ownership backlash",
+            "tone": "negative",
+            "note": "A highly upvoted thread revealed Nuun is owned by Nestlé, prompting runners who avoid the company to ask for substitutes."
+          },
+          {
+            "label": "Still liked despite the news",
+            "tone": "mixed",
+            "note": "Several commenters in that thread said they still love using Nuun and may keep buying it even after learning about the acquisition."
+          },
+          {
+            "label": "Skepticism it does much",
+            "tone": "negative",
+            "note": "At least one commenter on a separate thread dismissed tablets like Nuun as unlikely to meaningfully help hydration compared to just drinking water."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/running/comments/vd8397/substitute_for_nuun/",
+            "label": "r/running thread, 2022",
+            "quote": "Anyone have a good sub for Nuun when they run? Recently found out they are owned by Nestle and I really try hard not to support that company."
+          },
+          {
+            "url": "https://old.reddit.com/r/running/comments/vd8397/substitute_for_nuun/",
+            "label": "r/running comment, 2022",
+            "quote": "Same. Love using them but may have to try some of these other ones."
+          },
+          {
+            "url": "https://old.reddit.com/r/HydroHomies/comments/rcov7s/nuunhydralyte_any_opinions/",
+            "label": "r/HydroHomies comment, 2021",
+            "quote": "Just drink water. This stuff won't help much at all"
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/nuun-sport.png",
     "images": [
       "https://nuunlife.com/cdn/shop/files/Nuun_Tube_Upright_withTabs_Strawberry_lemonade_web.png?v=1744037007&width=800",
@@ -3754,6 +4322,44 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=dripdrop+ors+electrolyte+powder&tag=YOURTAG-20",
     "blurb": "ORS-style ratio with less sugar than typical sports drinks: 7 g sugar with 330 mg sodium and added zinc per 10 g stick.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.9,
+        "count": 778,
+        "source": {
+          "url": "https://dripdrop.com/products/electrolyte-powder-watermelon-8oz-32-packets",
+          "label": "DripDrop — Watermelon Electrolyte Powder, official site (DripDrop's flagship flavor; the brand no longer sells a single unflavored 'Original ORS' SKU)"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Runners who've tried DripDrop rate its flavor above rival hydration packets, but at least one user reported unexplained symptoms like a headache and cramping shortly after drinking it and wasn't sure whether the mix was the cause.",
+        "points": [
+          {
+            "label": "Flavor preference among runners",
+            "tone": "positive",
+            "note": "In a running hydration-packet thread, one commenter named DripDrop their favorite for flavor among the brands they'd tried, though pricier than alternatives."
+          },
+          {
+            "label": "Unexplained symptoms after use",
+            "tone": "negative",
+            "note": "One person described a headache and calf cramping starting within minutes of their first DripDrop packet and wasn't sure whether the mix caused it."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/running/comments/od83np/any_dripdrop_hydration_packets_recommendations/",
+            "label": "r/running comment, 2021",
+            "quote": "I've used different brands with DripDrops as my favorite in terms of flavor although they're a bit pricey."
+          },
+          {
+            "url": "https://old.reddit.com/r/HydroHomies/comments/1dkiyyh/was_it_dehydration_or_did_dripdrop_electrolyte/",
+            "label": "r/HydroHomies thread, 2024",
+            "quote": "Literally within 5 minutes of starting to drink the bottled water + mix, I had a headache come on and my calves are cramping."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/dripdrop-ors.png",
     "images": [
       "https://dripdrop.com/cdn/shop/files/Pouch_30ct_Front16ozSticks_ZSPWatermelon.png?crop=center&height=1200&v=1783954560&width=1200",
@@ -3943,6 +4549,54 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=ultima+replenisher+electrolyte+powder&tag=YOURTAG-20",
     "blurb": "Potassium- and magnesium-leaning profile with only 55 mg sodium — an everyday flavored-water mix rather than a sweat-replacement formula.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.8,
+        "count": 1371,
+        "source": {
+          "url": "https://ultimareplenisher.com/products/ultima-replenisher-electrolyte-hydration-powder",
+          "label": "Ultima Replenisher — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Keto and low-carb users like Ultima's taste and use it as a lower-carb Gatorade substitute, but a recurring complaint on r/keto is digestive upset — diarrhea or bloating — that some attribute to the formula.",
+        "points": [
+          {
+            "label": "Taste",
+            "tone": "positive",
+            "note": "Fans specifically call out the raspberry and grape flavors as good, with one saying the tartness helps them drink enough water."
+          },
+          {
+            "label": "Digestive side effects",
+            "tone": "negative",
+            "note": "Multiple users on r/keto report diarrhea or puffiness/bloating after regular use, though they aren't certain Ultima is the sole cause."
+          },
+          {
+            "label": "Gatorade substitute",
+            "tone": "positive",
+            "note": "Keto dieters describe switching to it as a substitute for Gatorade to restore electrolytes lost from the diet or workouts."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/keto/comments/143d5ye/looking_for_ultima_replenisher_alternatives/",
+            "label": "r/keto thread, 2023",
+            "quote": "I drink a lot of this product, specifically the raspberry flavor. I love the tartness and it helps me to drink enough water"
+          },
+          {
+            "url": "https://old.reddit.com/r/keto/comments/10vd5cg/ultima_replenisher_for_electrolytes_and_diarrhea/",
+            "label": "r/keto thread, 2023",
+            "quote": "I'm finding these are giving my diarrhea."
+          },
+          {
+            "url": "https://old.reddit.com/r/keto/comments/atpvkr/ultima_replenisher_reactions/",
+            "label": "r/keto thread, 2019",
+            "quote": "The flavor of this stuff is good. I like the grape a lot. However, I've noticed excessive puffiness and bloating lately."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/ultima-replenisher.png",
     "images": [
       "https://www.ultimareplenisher.com/cdn/shop/files/Variety_Stickpacks.jpg?v=1743096987&width=1600",
@@ -4183,6 +4837,54 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=optimum+nutrition+gold+standard+whey&tag=YOURTAG-20",
     "blurb": "The long-running benchmark whey blend: isolate listed first, 24 g protein in a 31 g scoop, and a 73-serving 5 lb tub that keeps per-serving cost in the middle of the pack.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.73,
+        "count": 1401,
+        "source": {
+          "url": "https://www.target.com/p/optimum-nutrition-gold-standard-100-whey-protein-powder-double-rich-chocolate-24oz/-/A-78807252",
+          "label": "Target — Optimum Nutrition Gold Standard 100% Whey product page (non-Amazon retailer; brand site rating widget did not render)"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Long-time users see Gold Standard as a dependable, good-tasting staple whey, with the main gripes being that the vanilla ice cream flavor clumps more than the chocolate variants and that portion sizes have shrunk while price has climbed.",
+        "points": [
+          {
+            "label": "Taste",
+            "tone": "mixed",
+            "note": "Buyers generally call the flavor solid and additive-free, though one user found the vanilla flavor a little too sweet or sugary."
+          },
+          {
+            "label": "Mixability",
+            "tone": "mixed",
+            "note": "Some report it mixes cleanly in water with minimal foam, while others say the vanilla ice cream flavor clumps even when shaken in a blender bottle."
+          },
+          {
+            "label": "Value over time",
+            "tone": "negative",
+            "note": "A decade-long Costco buyer describes the tub size shrinking while the price climbs, a recurring gripe among repeat purchasers."
+          },
+          {
+            "label": "Ingredient quality",
+            "tone": "positive",
+            "note": "Users describe the whey protein isolate content as high purity and largely free of unnecessary additives."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.reddit.com/r/Supplements/comments/1h5syxa/opinions_on_optimum_nutrition_gold_standard_whey/",
+            "label": "r/Supplements thread, 2024",
+            "quote": "The vanilla ice cream flavor kind of clumps even with a blender bottle so I'd recommend the extreme milk chocolate instead. It tastes better and doesn't clump."
+          },
+          {
+            "url": "https://www.reddit.com/r/Supplements/comments/1jwa14i/on_gold_standard_whey_legit_check/",
+            "label": "r/Supplements thread, 2025",
+            "quote": "The flavor is fine, although a little too sweet, maybe too sugary."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/on-gold-standard-whey.png",
     "images": [
       "https://www.optimumnutrition.com/cdn/shop/files/GSW_DRC_2lb_FOP.png?v=1776170438&width=2500",
@@ -4244,6 +4946,54 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=dymatize+iso100+hydrolyzed+whey+isolate&tag=YOURTAG-20",
     "blurb": "A hydrolyzed whey isolate that hits 25 g protein in a 32 g scoop with about 1 g of carbs — one of the leanest macro profiles in the category, priced accordingly.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.27,
+        "count": 72,
+        "source": {
+          "url": "https://www.target.com/p/dymatize-nutrition-iso100-hydrolyzed-100-whey-protein-isolate-gourmet-chocolate-3-lb-1-4-kg-protein-powders/-/A-83696894",
+          "label": "Target — Dymatize ISO100 Gourmet Chocolate (3 lb) product page (non-Amazon retailer; brand site rating widget did not render)"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "ISO100 fans favor savory-leaning flavors like cinnamon cereal and cocoa pebbles and say they blend well together, but dessert-style flavors such as vanilla and birthday cake repeatedly draw complaints for being too sweet or artificial.",
+        "points": [
+          {
+            "label": "Flavor variety",
+            "tone": "mixed",
+            "note": "Cinnamon cereal and cocoa pebbles get praised as favorites, while dessert-style options like birthday cake and cereal milk are called far too sweet by some users."
+          },
+          {
+            "label": "Taste consistency",
+            "tone": "negative",
+            "note": "One user who committed to a large tub of gourmet vanilla ended up disliking it across repeated servings, calling it too sweet and too artificial."
+          },
+          {
+            "label": "Flavor pairing/mixability",
+            "tone": "positive",
+            "note": "Fans report favorite flavors mix well together, such as cinnamon cereal and cocoa pebbles blended fifty-fifty."
+          },
+          {
+            "label": "Price sensitivity",
+            "tone": "mixed",
+            "note": "Regular buyers describe hunting for sales and short-dated discount tubs, reflecting cost-consciousness around the isolate's premium pricing."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.reddit.com/r/Supplements/comments/1rk6anv/what_are_the_best_dymatize_iso100_flavours/",
+            "label": "r/Supplements thread, 2025",
+            "quote": "I've always found birthday cake or cereal milk flavours to be far too sweet"
+          },
+          {
+            "url": "https://www.reddit.com/r/Supplements/comments/1fulqtc/did_anyone_try_dymatize_iso100_gourmet_vanilla/",
+            "label": "r/Supplements thread, 2024",
+            "quote": "Too sweet and too artificial for my liking. This is why I never order vanilla."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/dymatize-iso100.png",
     "images": [
       "https://dymatize.imgix.net/production/products/DYMA_ISO100_MCC_20srv.png",
@@ -4303,6 +5053,54 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=transparent+labs+grass+fed+whey+protein+isolate&tag=YOURTAG-20",
     "blurb": "Short ingredient list, Informed Choice and Informed Protein certifications on the brand page, and published third-party test results — you pay a premium for the paperwork.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.8,
+        "count": 19,
+        "source": {
+          "url": "https://thefeed.com/products/transparent-labs-grass-fed-whey-protein-isolate",
+          "label": "The Feed — retailer product page (brand site review widget did not expose a numeric rating)"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Reddit commenters who bring up Transparent Labs Grass-Fed Whey Isolate consistently name it among their favorite protein powders for taste and easy mixing, with the recurring caveat that it costs more than budget options.",
+        "points": [
+          {
+            "label": "Flavor and everyday use",
+            "tone": "positive",
+            "note": "Users repeatedly cite specific flavors, like vanilla peanut butter and milk chocolate, as favorites for shakes and smoothies."
+          },
+          {
+            "label": "Price vs. quality",
+            "tone": "mixed",
+            "note": "Commenters say they enjoy the product but flag it as a premium-priced pick rather than a budget-friendly deal."
+          },
+          {
+            "label": "Mixing into milk",
+            "tone": "positive",
+            "note": "Users describe blending it into milk, including lactose-free options, as a simple daily routine without complaints."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.reddit.com/r/workout/comments/1sdg87f/what_is_the_best_protein_powder_for_muscle_gain/",
+            "label": "r/workout thread, 2026",
+            "quote": "Transparent labs is good stuff but pricey."
+          },
+          {
+            "url": "https://www.reddit.com/r/Smoothies/comments/1o4ascu/advice_on_how_to_make_my_smoothies_taste_better/",
+            "label": "r/Smoothies thread, 2026",
+            "quote": "I really like transparent labs vanilla peanut butter and ascent cookies and cream"
+          },
+          {
+            "url": "https://www.reddit.com/r/beginnerfitness/comments/1u60xs2/suggestions_on_protein_powder/",
+            "label": "r/beginnerfitness thread, 2026",
+            "quote": "I use transparent whey and mix with fairlife lactose free milk."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/transparent-labs-grass-fed-whey-isolate.png",
     "images": [
       "https://www.transparentlabs.com/cdn/shop/files/01_chocolate.png?v=1778514112&width=1920",
@@ -4366,6 +5164,54 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=ascent+native+fuel+whey+protein&tag=YOURTAG-20",
     "blurb": "Informed Sport certification is verified on the brand page, and the formula skips artificial sweeteners — a clean pick for tested athletes at a mid-premium price.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.7,
+        "count": 297,
+        "source": {
+          "url": "https://thefeed.com/products/ascent-native-fuel-whey-protein-2lb-bag",
+          "label": "The Feed — retailer product page (brand site did not expose a working product page or numeric rating)"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Reddit mentions of Ascent Native Fuel Whey are largely positive, centered on its clean ingredient list and Costco availability, though it comes up in discussion less often than bigger-name brands so opinion is thinner overall.",
+        "points": [
+          {
+            "label": "Flavor picks",
+            "tone": "positive",
+            "note": "Commenters single out specific flavors, like mocha with a bit of caffeine, as a reason they keep buying it."
+          },
+          {
+            "label": "Clean ingredient profile",
+            "tone": "positive",
+            "note": "Users highlight the simple ingredient list and use of stevia as sweetener as a reason they trust the brand."
+          },
+          {
+            "label": "Costco value",
+            "tone": "positive",
+            "note": "Multiple commenters mention picking it up at Costco and describe it as clean, tested, and good value there."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.reddit.com/r/ninjacreami/comments/1nofu18/on_the_hunt_for_the_best_tasting_vanilla_base/",
+            "label": "r/ninjacreami thread, 2026",
+            "quote": "I like Ascent brand. They have an unflavored one as well."
+          },
+          {
+            "url": "https://www.reddit.com/r/PeterAttia/comments/1o6s1wl/how_are_you_hitting_protein_targets_while_limiting_lead_exposure/",
+            "label": "r/PeterAttia thread, 2026",
+            "quote": "I get it from Costco, seems like a good profile, clean ingredients, and only uses Stevia."
+          },
+          {
+            "url": "https://www.reddit.com/r/Mounjaro/comments/1s3rhf4/which_protein_powder_do_you_prefer_and_why/",
+            "label": "r/Mounjaro thread, 2026",
+            "quote": "Ascent Chocolate from Costco. Extremely clean, tested, and great price."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/ascent-native-fuel-whey.png",
     "images": [
       "https://www.ascentprotein.com/cdn/shop/products/whey-van-2lb-main.png?v=1695075692&width=1200",
@@ -4479,6 +5325,64 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=orgain+organic+protein+plant+based+powder&tag=YOURTAG-20",
     "blurb": "The grocery-store default for vegan protein: USDA Organic, 21 g protein from a four-source plant blend, and a reformulated sweetener system that dropped erythritol.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.73,
+        "count": 649,
+        "source": {
+          "url": "https://target.com/p/orgain-organic-vegan-protein-plant-based-protein-powder-creamy-chocolate-fudge-2-03lb/-/A-46785364",
+          "label": "Target — Orgain Organic Protein Powder, Creamy Chocolate Fudge 2.03lb product page (brand site rating widget did not render)"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Community sentiment on Orgain is generally favorable toward texture, mixability, and digestion, with a sweet/artificial aftertaste noted by some, but the most consistent complaint has nothing to do with the product's performance — many users say they stopped buying after learning Orgain is owned by Nestle.",
+        "points": [
+          {
+            "label": "Texture and mixability",
+            "tone": "positive",
+            "note": "Users describe it as not chalky and mixing smoothly, though a couple mention some clumping at the bottom of a shaker."
+          },
+          {
+            "label": "Digestion",
+            "tone": "positive",
+            "note": "Multiple users report no stomach issues or bloating and describe it as easy going down."
+          },
+          {
+            "label": "Taste",
+            "tone": "mixed",
+            "note": "Several describe a sweet, slightly artificial-tasting edge despite the use of stevia, though most say it's tolerable enough to keep buying."
+          },
+          {
+            "label": "Brand trust",
+            "tone": "negative",
+            "note": "A recurring theme is users saying they avoid or stopped buying the product specifically because of its Nestle ownership, separate from any taste or performance complaint."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/IsItVeganOrNot/comments/1t6re2s/anyone_tried_this_orgain_protein_powder_from/",
+            "label": "r/IsItVeganOrNot thread, 2025",
+            "quote": "I like it! It's not chalky and mixes well. I didn't have any stomach issues."
+          },
+          {
+            "url": "https://old.reddit.com/r/IsItVeganOrNot/comments/1t6re2s/anyone_tried_this_orgain_protein_powder_from/",
+            "label": "r/IsItVeganOrNot thread, 2025",
+            "quote": "easy on digestion and mixes relatively well in a shaker if you want to take it that way, but can clump some esp on the bottom (rather universal)."
+          },
+          {
+            "url": "https://old.reddit.com/r/IsItVeganOrNot/comments/1t6re2s/anyone_tried_this_orgain_protein_powder_from/",
+            "label": "r/IsItVeganOrNot thread, 2025",
+            "quote": "Generally I do think it’s a little too sweet. Anyway it’s owned by Nestle so I’m not buying it anymore."
+          },
+          {
+            "url": "https://old.reddit.com/r/veganfitness/comments/1o7vjwh/orgain_protein_powder_should_we_avoid/",
+            "label": "r/veganfitness thread, 2025",
+            "quote": "I avoid them due to Nestlé ownership. The CR was poor data collection and reporting to say the least, so I wouldn’t be overly concerned about the lead content."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/orgain-organic-protein.webp",
     "images": [
       "https://orgain.com/cdn/shop/files/851770003179-v13-Orgain-ProteinPowder-2.03lb-Chocolate-20240311-Front-HIRES-web_1200px.webp",
@@ -4540,6 +5444,64 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=vega+sport+premium+protein&tag=YOURTAG-20",
     "blurb": "The highest per-serving protein of the plant picks at 30 g, with NSF Certified for Sport verification on the brand page — the vegan option for drug-tested athletes.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.67,
+        "count": 1441,
+        "source": {
+          "url": "https://target.com/p/vega-sport-plant-based-premium-protein-berry-1-lb-12-oz-801-g/-/A-1002425179",
+          "label": "Target — Vega Sport Premium Protein, Berry 1lb 12oz product page (brand site rating widget did not render)"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Community sentiment leans negative on taste and texture, with users repeatedly describing the flavor as unpleasant and the mouthfeel as gritty, plus reports of bloating and gas, though a few say it works fine blended into smoothies or baked into recipes.",
+        "points": [
+          {
+            "label": "Taste",
+            "tone": "negative",
+            "note": "Users describe the flavor as unpleasant enough that they recommend switching to a different brand entirely."
+          },
+          {
+            "label": "Texture / grittiness",
+            "tone": "negative",
+            "note": "Users describe the pea-protein base as having a noticeably gritty mouthfeel."
+          },
+          {
+            "label": "Digestion",
+            "tone": "mixed",
+            "note": "Several users report bloating and gassiness after regular use, with some tracing it to the probiotic blend and finding it eases after switching brands."
+          },
+          {
+            "label": "Versatility",
+            "tone": "positive",
+            "note": "Some users say it works fine mixed into smoothies or baked into cookies despite the taste complaints."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/veganfitness/comments/1hwujfu/vega_sport_protein_powder_help_it_tastes_sooo_bad/",
+            "label": "r/veganfitness thread, 2024",
+            "quote": "It’s the worst and so expensive. Choke it down until it’s gone and then move on."
+          },
+          {
+            "url": "https://old.reddit.com/r/veganfitness/comments/zrw3di/vega_sport_pea_protein_makes_me_bloat_will_it_go/",
+            "label": "r/veganfitness thread, 2022",
+            "quote": "Pea protein is one of the cheapest sources out there for us and can really make ya gassy. Vega isn’t very good, it’s gritty."
+          },
+          {
+            "url": "https://old.reddit.com/r/veganfitness/comments/zrw3di/vega_sport_pea_protein_makes_me_bloat_will_it_go/",
+            "label": "r/veganfitness thread, 2022",
+            "quote": "Pea protein can do this. I’d try other blends or try taking a probiotic which usually solves bloating."
+          },
+          {
+            "url": "https://old.reddit.com/r/veganfitness/comments/1bsbvql/does_vega_premium_sport_protein_powder_bake_well/",
+            "label": "r/veganfitness thread, 2024",
+            "quote": "I’ve used it oatmeal cookies and they turned out just fine."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/vega-sport-premium-protein.png",
     "images": [
       "https://myvega.com/cdn/shop/files/Vega_Performance_Protein_Recovery_Vanilla_4lb_1.png?width=1200",
@@ -5225,6 +6187,54 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=momentous+creatine+monohydrate&tag=YOURTAG-20",
     "blurb": "Carries both NSF Certified for Sport and Informed Sport marks plus added screening for microplastics and PFAS, made in a pharmaceutical facility with tighter heavy-metal limits than the industry standard.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.9,
+        "count": 3669,
+        "source": {
+          "url": "https://www.livemomentous.com/products/creatine-monohydrate",
+          "label": "Momentous — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Praised for mixing cleanly and sitting well with sensitive stomachs, but a recent switch away from German Creapure sourcing has some longtime buyers questioning purity, and a few report sleep disruption.",
+        "points": [
+          {
+            "label": "Mixability and tolerance",
+            "tone": "positive",
+            "note": "Long-time users describe it mixing completely with no grit, no taste, and no digestive issues."
+          },
+          {
+            "label": "Sourcing change",
+            "tone": "negative",
+            "note": "Momentous moved from German Creapure to its own in-house spec creatine, and some users say the texture and purity now feel noticeably different."
+          },
+          {
+            "label": "Sleep-related reports",
+            "tone": "negative",
+            "note": "A handful of users report new insomnia that resolved after stopping the product."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/search?q=%22Momentous+Creatine%22&sort=top&t=all",
+            "label": "r/crossfit, \"Momentous vs Thorne Creatine after Momentous switched away from Creapure\"",
+            "quote": "It mixes extremely well in water, is virtually tasteless, and has caused me no digestive problems."
+          },
+          {
+            "url": "https://old.reddit.com/search?q=%22Momentous+Creatine%22&sort=top&t=all",
+            "label": "r/HubermanLab, \"Momentous Creatine no longer sourced from Creapure\"",
+            "quote": "they no longer have the supply chain transparency, and texture/purity is noticibly different, especially if you dry scoop it."
+          },
+          {
+            "url": "https://old.reddit.com/search?q=%22Momentous+Creatine%22&sort=top&t=all",
+            "label": "r/Supplements, \"Creatine related insomnia\"",
+            "quote": "I took 5g of Momentous creatine every morning for about 2 weeks until the insomnia took a hold."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/momentous-creatine-monohydrate.png",
     "images": [
       "https://www.livemomentous.com/cdn/shop/files/f8715c729d402ed4a92537f004f161bd028c2e8d.png?v=1781125657&width=1440",
@@ -5556,6 +6566,54 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=create+creatine+monohydrate+gummies&tag=YOURTAG-20",
     "blurb": "NSF Certified for Sport gummy delivering 4.5 g of creatine monohydrate per 3-gummy serving, slightly under the standard 5 g research dose, in a dairy-free pectin base.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 5,
+        "count": 4654,
+        "source": {
+          "url": "https://trycreate.co/products/creatine-monohydrate-gummies",
+          "label": "Create — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Convenient and pleasant-tasting for people who dislike powder, but the dominant skepticism is whether the gummies actually deliver the labeled creatine dose, and one buyer described damaged product paired with an unwanted forced subscription.",
+        "points": [
+          {
+            "label": "Convenience and taste",
+            "tone": "positive",
+            "note": "Users say the gummy format makes it far easier to stay consistent than mixing powder, with flavor described as pleasant."
+          },
+          {
+            "label": "Dosage skepticism",
+            "tone": "negative",
+            "note": "A recurring question is whether the gummies contain as much creatine as labeled, since users cannot verify the claimed dose themselves."
+          },
+          {
+            "label": "Order quality and subscription practices",
+            "tone": "negative",
+            "note": "One buyer described receiving a clumped, poor-quality batch along with a subscription they had already declined, and difficulty getting a refund."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=%22Create%22+gummies&restrict_sr=on&sort=top&t=all",
+            "label": "r/creatine, \"Create brand Creatine?\"",
+            "quote": "Easy for me to remember to take, taste fine, and allow me to be consistent."
+          },
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=%22Create%22+gummies&restrict_sr=on&sort=top&t=all",
+            "label": "r/creatine, \"Create brand Creatine?\"",
+            "quote": "do these have as much creatine in them as they say? Am I getting actual benefits?"
+          },
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=%22Create%22+gummies&restrict_sr=on&sort=top&t=all",
+            "label": "r/creatine, \"AVOID CREATE wellness as a business\"",
+            "quote": "They send a cheap tub full of welded together blobs of sludge, and proceeded to force a subscription which I had already clicked \"no\" to when ordering."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/create-creatine-monohydrate-gummies.png",
     "images": [
       "https://cdn.shopify.com/s/files/1/1515/2714/files/create_creatinegummie_varietypack_ea152171-10c6-47b8-9cd8-92c0c03e5988_80x80.png?v=1780938665",
@@ -5743,6 +6801,54 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=bucked+up+creatine+monohydrate&tag=YOURTAG-20",
     "blurb": "A single-ingredient 5 g micronized monohydrate scoop from a brand better known for stimulant pre-workouts; the label lists nothing beyond the creatine itself.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 5,
+        "count": 47,
+        "source": {
+          "url": "https://www.buckedup.com/shop/creatine-powder/creatine-monohydrate",
+          "label": "Bucked Up — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Popular and frequently discounted, but the brand faces pointed criticism over the lack of published third-party testing for its creatine gummies, and some users report nausea from the monohydrate powder.",
+        "points": [
+          {
+            "label": "Third-party testing transparency",
+            "tone": "negative",
+            "note": "A buyer who asked the company directly for third-party test results on its creatine gummies says they were told nothing was available to share."
+          },
+          {
+            "label": "Tolerability",
+            "tone": "negative",
+            "note": "At least one long-time creatine user reports feeling sick after switching to this brand's powder."
+          },
+          {
+            "label": "Value / deals",
+            "tone": "positive",
+            "note": "Frequently flagged by deal-tracking users as good value when it goes on sale."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/Supplements/search?q=%22Bucked+Up%22+creatine&restrict_sr=on&sort=top&t=all",
+            "label": "r/Supplements, \"Internal or 3rd party ingredient testing\"",
+            "quote": "They responded that basically they have nothing to send or publish that shows the creatine content."
+          },
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=%22Bucked+Up%22&restrict_sr=on&sort=top&t=all",
+            "label": "r/creatine, \"Nauseous\"",
+            "quote": "It's bucked up. I took a scoop after dinner and I feel so sick as I'm typing this."
+          },
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=%22Bucked+Up%22&restrict_sr=on&sort=top&t=all",
+            "label": "r/creatine, \"Lots of creatine deal on Amazon today\"",
+            "quote": "Bucked up creatine is at an all time low, so you may want to cop some"
+          }
+        ]
+      }
+    },
     "metrics": {
       "creatineG": 5,
       "form": "monohydrate"
@@ -5898,6 +7004,54 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=kaged+creatine+monohydrate&tag=YOURTAG-20",
     "blurb": "Every batch is verified by Informed Sport, giving this single-ingredient 5 g monohydrate scoop a label-backed third-party testing claim rather than just a marketing statement.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.9,
+        "count": 35,
+        "source": {
+          "url": "https://www.kaged.com/products/creatine-monohydrate",
+          "label": "Kaged — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Loyal following that considers Kaged's creatine formulations top-tier and hard to replace, but value-conscious buyers point out its HCl blends deliver a fraction of the creatine dose of cheaper monohydrate for a higher price.",
+        "points": [
+          {
+            "label": "Brand loyalty",
+            "tone": "positive",
+            "note": "Some longtime users say no other pre-workout or creatine formulation they've tried compares."
+          },
+          {
+            "label": "Value of HCl dosing",
+            "tone": "negative",
+            "note": "Critics note Kaged's HCl serving delivers far less creatine by weight than a standard monohydrate dose for a higher price, calling the trade-off questionable."
+          },
+          {
+            "label": "Availability frustration",
+            "tone": "positive",
+            "note": "One user calls a discontinued encapsulated version the best creatine on the market and hopes it returns to stock."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/Supplements/search?q=Kaged+creatine&restrict_sr=on&sort=top&t=all",
+            "label": "r/Supplements, on Kaged Pre-Kaged Stim-Free vs. RAW Nutrition",
+            "quote": "raw has 5 g of creatine monohydrate and Kaged has Creatine HCl with only1.5 g, which is pointless"
+          },
+          {
+            "url": "https://old.reddit.com/r/Supplements/search?q=Kaged+creatine&restrict_sr=on&sort=top&t=all",
+            "label": "r/Supplements, \"Need a new all around preworkout\"",
+            "quote": "I've been riding Pre-Kaged for a while and in my opinion nothing comes close."
+          },
+          {
+            "url": "https://old.reddit.com/r/creatine/search?q=Kaged&restrict_sr=on&sort=top&t=all",
+            "label": "r/creatine, \"Encapsulated creatine\"",
+            "quote": "To me this was the best creatine on the market."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/kaged-creatine-monohydrate.png",
     "images": [
       "https://www.kaged.com/cdn/shop/files/CreatineMono-Front-UN.png",
@@ -8562,6 +9716,36 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=ghost+intra+eaa&tag=YOURTAG-20",
     "blurb": "A 10 g EAA formula that pairs the full amino profile with a dosed focus-and-hydration stack (ashwagandha, citicoline, electrolytes) rather than filler ingredients.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": null,
+      "community": {
+        "takeaway": "The one detailed discussion found folds Intra into a broader Ghost stack rather than judging it alone, with a commenter warning that combining several Ghost products at once — not necessarily Intra itself — is what tends to make people feel unwell.",
+        "points": [
+          {
+            "label": "Stacking overlap",
+            "tone": "negative",
+            "note": "A commenter said layering pre-workout, Intra, hydration, and Size together creates heavy overlap in stimulants and electrolytes the products weren't designed to be taken together."
+          },
+          {
+            "label": "Initial feel",
+            "tone": "mixed",
+            "note": "The original poster said the combined stack made them feel 'almost too good' in week one before symptoms appeared, which a commenter attributed to a stimulant honeymoon phase rather than any single product."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/Supplements/comments/1u6wryy/ghost_supplements_dangerous/",
+            "label": "r/Supplements thread, 2025",
+            "quote": "I got ghost legend, size, clear whey protein powder, intra, and hydration. I had them all every day and for the first week, I felt incredible. Almost too good."
+          },
+          {
+            "url": "https://old.reddit.com/r/Supplements/comments/1u6wryy/ghost_supplements_dangerous/",
+            "label": "r/Supplements comment, 2025",
+            "quote": "when you layer pre workout plus intra plus hydration plus size all together you are getting massive overlap in stimulants, electrolytes, and other compounds"
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/ghost-intra.webp",
     "images": [
       "https://www.ghostlifestyle.com/cdn/shop/files/IntraOrangeSqueeze_grande.webp?v=1715709631",
@@ -9204,6 +10388,59 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=bsn+syntha-6+chocolate+milkshake&tag=YOURTAG-20",
     "blurb": "A milkshake-style protein matrix blending whey and casein sources rather than a single pure protein; total protein and the full ingredient list are disclosed even though the six protein sources aren't broken out gram-by-gram.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.9,
+        "count": 2473,
+        "source": {
+          "url": "https://www.muscleandstrength.com/store/reviews/brands/bsn/syntha-6.html",
+          "label": "Muscle & Strength — BSN Syntha-6 reviews page (bsnonline.net was unreachable)"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Reddit users consistently praise Syntha-6's taste and mixability, but the recurring point of skepticism is that it's a multi-protein blend rather than a straight isolate, which underlies its long-running amino-spiking reputation and higher price for less protein per serving.",
+        "points": [
+          {
+            "label": "Taste",
+            "tone": "positive",
+            "note": "Commenters across multiple threads single out Syntha-6's flavor as notably better than other whey powders."
+          },
+          {
+            "label": "Value vs. plain isolate",
+            "tone": "mixed",
+            "note": "Some users say they prefer it for taste but note it costs more and delivers less protein per serving than simpler whey options."
+          },
+          {
+            "label": "Protein blend, not pure isolate",
+            "tone": "mixed",
+            "note": "Multiple threads point out Syntha-6 is a blend of whey concentrate, caseinate, and other protein sources rather than a straight isolate, the basis of its amino-spiking reputation."
+          },
+          {
+            "label": "Composition confusion",
+            "tone": "mixed",
+            "note": "Buyers comparing it to single-source whey products note the blend contains added carbs and fats alongside the protein mix."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.reddit.com/r/foodscience/comments/hzl65o/why_is_the_flavor_of_bsn_syntha_6_protein_so/",
+            "label": "r/foodscience thread",
+            "quote": "why is the flavor of bsn syntha 6 protein so superior to other companies and how can one understand what makes this so flavorful"
+          },
+          {
+            "url": "https://www.reddit.com/r/Fitness/comments/4gq5q3/syntha6_vs_on_whey_isolatete_protein/",
+            "label": "r/Fitness thread",
+            "quote": "Syntha6 is a blend of a bunch of kinds of proteins, carbs, and fats."
+          },
+          {
+            "url": "https://www.reddit.com/r/Fitness/comments/j9pfj/bsn_syntha6_protein_powder_291lb_15_fs/",
+            "label": "r/Fitness thread",
+            "quote": "Sytha-6 is a blended protein, what you have is probably just whey concentrate or whey isolate."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/bsn-syntha-6.png",
     "images": [
       "https://www.vitacost.com/cdn/shop/files/37_1c4bbfa9-94a0-48e4-8158-564ed42c2794.jpg?v=1781962149",
@@ -9565,6 +10802,54 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=isopure+zero+carb+whey+protein+isolate&tag=YOURTAG-20",
     "blurb": "A zero-carb, zero-sugar whey isolate fortified with 22 vitamins and minerals, delivering 25 g protein per 31 g scoop.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.5,
+        "count": 521,
+        "source": {
+          "url": "https://www.gnc.com/whey-protein/IsopureZeroCarb.html",
+          "label": "GNC — Isopure Zero Carb (Creamy Vanilla) product page (brand site did not expose a numeric rating)"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Reddit threads about Isopure Zero Carb center on whether the premium price is justified, with newcomers repeatedly asking if it actually tastes good and at least one detailed critique calling out weak flavoring and unnecessary added ingredients.",
+        "points": [
+          {
+            "label": "Taste before buying",
+            "tone": "mixed",
+            "note": "Newcomers frequently ask whether it actually tastes good before committing, reflecting isolate protein's general reputation for a chalky or medicinal taste."
+          },
+          {
+            "label": "Price for what you get",
+            "tone": "mixed",
+            "note": "Threads flag it as expensive and question whether it is worth the cost compared to plainer whey isolates."
+          },
+          {
+            "label": "Flavoring and added ingredients",
+            "tone": "negative",
+            "note": "One detailed comparison criticized its flavoring systems and questioned why taurine, glutamine, and extra sodium are added to what is marketed as a simple isolate."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.reddit.com/r/Fitness/comments/txmeo/zero_carb_isopure_protein_shake/",
+            "label": "r/Fitness thread",
+            "quote": "Anyone tried this stuff? I'm looking for a protein shake that A) doesn't taste like ass, B) is low carb (I'm on keto, and try to watch my sugar intake anyways)"
+          },
+          {
+            "url": "https://www.reddit.com/r/Protein/comments/k4rgzh/has_anyone_tried_isopure_zero_carb/",
+            "label": "r/Protein thread",
+            "quote": "I am thinking of buying it but it is very expensive. I was wondering if it tastes good or is worth the high protein content."
+          },
+          {
+            "url": "https://www.reddit.com/r/Supplements/comments/2bss92/amino_acid_spiking_in_protein_supplements/",
+            "label": "r/Supplements thread",
+            "quote": "It also doesn't have very good flavoring systems, in my experience."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/isopure-zero-carb.png",
     "images": [
       "https://www.theisopurecompany.com/cdn/shop/files/US_ZeroCarb_2.7LB_CreamyVanilla_FOP.png?v=1783005063&width=2500",
@@ -9666,6 +10951,59 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=legion+whey+plus+protein&tag=YOURTAG-20",
     "blurb": "Delivers 22 grams of grass-fed whey isolate per 25-gram scoop with a fully disclosed label and no proprietary blends; purity is verified through Labdoor lab testing rather than an NSF or Informed Sport sport-specific certification.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.6,
+        "count": 12101,
+        "source": {
+          "url": "https://legionathletics.com/products/supplements/whey-protein-powder/",
+          "label": "Legion Athletics — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Reddit users generally like Whey+'s taste and value its third-party lab testing, but a recurring complaint is that it doesn't always mix smoothly, and at least one longtime user questioned whether it delivers noticeably better results than cheaper alternatives.",
+        "points": [
+          {
+            "label": "Mixability",
+            "tone": "mixed",
+            "note": "A user who liked the taste in almond milk reported the powder leaves small clumps and doesn't shake as smoothly as they'd like."
+          },
+          {
+            "label": "Third-party testing",
+            "tone": "positive",
+            "note": "Shoppers comparing protein options specifically call out Legion's third-party testing as a reason to consider it over other brands."
+          },
+          {
+            "label": "Taste and everyday use",
+            "tone": "positive",
+            "note": "A longtime user calls the flavors great and says it works decently in baked goods, though the texture isn't top-tier for baking specifically."
+          },
+          {
+            "label": "Perceived results",
+            "tone": "mixed",
+            "note": "One user who used it for months after workouts said they hadn't seen the results they were hoping for."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/Supplements/comments/1hzuizm/protein_powder_question/",
+            "label": "r/Supplements thread, 2025",
+            "quote": "it doesn't shake too well and leaves small clumps here and there."
+          },
+          {
+            "url": "https://old.reddit.com/r/stopdrinkingfitness/comments/1tulr5w/10_months_sober_lifting_34x_a_week_soo_whats_the/",
+            "label": "r/stopdrinkingfitness thread, 2026",
+            "quote": "whey isolate, no artificial sweeteners (uses stevia), 22g protein per ~110 cal, third-party tested."
+          },
+          {
+            "url": "https://old.reddit.com/r/Protein/comments/1m1ncow/pescience_wheycasein_blend_vs_legion_whey/",
+            "label": "r/Protein thread, 2025",
+            "quote": "i've used legion as my tried and true protein powder the flavors r great and the whey does decent in baked goods (not amazing tho texture wise)."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/legion-whey-plus.png",
     "images": [
       "https://legionathletics.com/wp-content/uploads/2026/03/whey-plus-30-servings-dutch-chocolate-image-1.png",
@@ -9895,6 +11233,59 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=ritual+essential+protein+daily+shake&tag=YOURTAG-20",
     "blurb": "A fully disclosed plant-based pea protein shake with 20 g of protein per 31 g scoop and added choline plus L-methionine; its third-party testing covers heavy metals and microbes rather than an NSF Certified for Sport or Informed Sport banned-substance mark.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.6,
+        "count": 50,
+        "source": {
+          "url": "https://ritual.com/products/essential-protein-daily-shake-18",
+          "label": "Ritual — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Community mentions of Ritual's Daily Shake are sparse and mostly come from pregnancy and general-fitness threads rather than bodybuilding subs, with users flagging the single strong vanilla flavor, occasional headaches, and a sense that it costs more per gram of protein than whey options, though its third-party testing counts in its favor.",
+        "points": [
+          {
+            "label": "Flavor variety",
+            "tone": "negative",
+            "note": "The shake only comes in vanilla, and one user found the flavor overpoweringly strong and hard to mask."
+          },
+          {
+            "label": "Reported side effect",
+            "tone": "negative",
+            "note": "One user reported getting headaches after starting the shake and asked whether others experienced the same."
+          },
+          {
+            "label": "Texture and value",
+            "tone": "mixed",
+            "note": "A user comparing options noted the texture takes some getting used to and that it costs more relative to its protein-per-serving than whey powders."
+          },
+          {
+            "label": "Third-party testing",
+            "tone": "positive",
+            "note": "The same comparison still lists it as a serious contender specifically because it is third-party tested and free of random fillers."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/pregnant/comments/1hwsi8r/ritual_pregnancy_protein_powder/",
+            "label": "r/pregnant thread, 2025",
+            "quote": "This vanilla flavor is soo strong and I ask struggling to find ways to mask the flavor a bit."
+          },
+          {
+            "url": "https://old.reddit.com/r/pregnant/comments/1re2l0g/protein_powder/",
+            "label": "r/pregnant thread, 2026",
+            "quote": "I've tried Rituals protein powder but I started getting headaches which was so strange! Anyone else have that happen?"
+          },
+          {
+            "url": "https://old.reddit.com/r/stopdrinkingfitness/comments/1tulr5w/10_months_sober_lifting_34x_a_week_soo_whats_the/",
+            "label": "r/stopdrinkingfitness thread, 2026",
+            "quote": "pea-based, third-party tested, made for women w/o random fillers. 20g protein per ~120 cal. more expensive tho and have read smthn abt the texture that takes getting used to."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/ritual-essential-protein-daily-shake.png",
     "images": [
       "https://ritual.com/cdn/shop/files/PDP-PD18-Bag_f125fdc4-6812-45b7-a56e-faf0bf89e3c2.jpg?v=1774026738&width=2000",

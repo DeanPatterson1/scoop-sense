@@ -41,6 +41,54 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=lmnt+electrolyte+drink+mix&tag=YOURTAG-20",
     "blurb": "Sodium-forward design: 1000 mg sodium with zero sugar targets heavy sweat replacement rather than carb-based rehydration.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.6,
+        "count": 14172,
+        "source": {
+          "url": "https://www.target.com/p/lmnt-zero-sugar-electrolytes-drink/-/A-95074512",
+          "label": "Target — LMNT Zero-Sugar Electrolytes Drink (retailer fallback; brand's own site review widget rendered as a JS placeholder with no usable number)"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Regulars are loyal to LMNT for taste and its high sodium content but consistently flag the price as steep for what is essentially flavored salt, and a few say electrolyte mixes like LMNT can make them feel worse rather than better.",
+        "points": [
+          {
+            "label": "Price vs. value",
+            "tone": "negative",
+            "note": "Users repeatedly call the packet price steep for what amounts to salt, potassium, and flavoring, and ask around for cheaper alternatives."
+          },
+          {
+            "label": "Sodium content fits heavy sweaters",
+            "tone": "positive",
+            "note": "Runners and people watching their sodium intake specifically like LMNT for its high salt content per serving compared to lighter mixes."
+          },
+          {
+            "label": "Can feel worse, not better",
+            "tone": "negative",
+            "note": "A few people say LMNT and similar electrolyte powders left them feeling worse rather than better, suggesting the product isn't universally beneficial."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/HydroHomies/comments/1gy2sls/cheap_alternatives_to_lmnt_electrolytes/",
+            "label": "r/HydroHomies thread, 2025",
+            "quote": "I've been using LMNT electrolyte powder and they're great, but I'm almost out and I don't want to pay the ridiculous price"
+          },
+          {
+            "url": "https://old.reddit.com/r/HydroHomies/comments/1bchzwh/how_much_salt_to_add_in_to_water_intake_as_an/",
+            "label": "r/HydroHomies thread, 2024",
+            "quote": "I like LMNT electrolytes packs, as they contain 1000mg of salt and have nice flavor."
+          },
+          {
+            "url": "https://old.reddit.com/r/HydroHomies/comments/1g2ueli/how_long_and_how_to_properly_rehydrate/",
+            "label": "r/HydroHomies thread, 2024",
+            "quote": "Electrolyte powders like LMNT, Relyte, etc make me feel worse, so does a spark in water intake."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/lmnt-drink-mix.png",
     "images": [
       "https://res.cloudinary.com/drinklmnt/image/upload/f_auto,q_auto/v1759900501/lmnt-citrus-salt-30ct-box_ux0v3u.webp",
@@ -102,6 +150,54 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=liquid+iv+hydration+multiplier&tag=YOURTAG-20",
     "blurb": "Sugar-based ORS-style stick: 11 g of sugars alongside 500 mg sodium, the glucose-plus-sodium pairing used in oral rehydration formulas.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.6,
+        "count": 1200,
+        "source": {
+          "url": "https://www.target.com/p/liquid-i-v-hydration-multiplier-vegan-powder-electrolyte-supplements-lemon-lime-0-56oz-each-10ct/-/A-78864725",
+          "label": "Target — Liquid I.V. Hydration Multiplier, Lemon Lime 10ct (retailer fallback; brand's own site did not render a numeric rating)"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Opinions split sharply on whether Liquid I.V. actually hydrates better than plain water, with many finding it too salty or artificial-tasting even as some heavy sweaters keep buying it anyway.",
+        "points": [
+          {
+            "label": "Does it work better than water?",
+            "tone": "mixed",
+            "note": "A widely upvoted thread asked whether Liquid I.V. hydrates better than water at all, with the poster saying they found it salty and were not a huge fan despite trying it."
+          },
+          {
+            "label": "Taste",
+            "tone": "negative",
+            "note": "Some users say the flavor is too artificial or overpoweringly salty, with one comparing the sensation to drinking powdered water softener."
+          },
+          {
+            "label": "Tried for outdoor/manual labor",
+            "tone": "mixed",
+            "note": "A landscaper working outside in heat all day tried it for mild dehydration symptoms like headaches and dark urine, though the thread doesn't confirm whether it resolved them."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/HydroHomies/comments/1amtqeb/does_liquid_iv_actually_hydrate_you_better/",
+            "label": "r/HydroHomies thread, 2024",
+            "quote": "I see liquid IV all up in stores and at gas station counters all the time and I've tried it. Salty. Not a huge fan."
+          },
+          {
+            "url": "https://old.reddit.com/r/HydroHomies/comments/stk6fh/liquid_iv_overblown_sugar_water_or_something_to_it/",
+            "label": "r/HydroHomies thread, 2022",
+            "quote": "I adored how wet my water tasted. It was almost like a powdered water softener"
+          },
+          {
+            "url": "https://old.reddit.com/r/HydroHomies/comments/15eftst/liquid_iv_effectiveness/",
+            "label": "r/HydroHomies thread, 2023",
+            "quote": "I notice mild symptoms of dehydration like yellow pee, occasionally headaches, etc. I found this product called liquid iv"
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/liquid-iv-hydration-multiplier.png",
     "images": [
       "https://cdn.shopify.com/s/files/1/1338/1013/files/HMO_PFC_16ct_PDP.jpg?v=1762182360",
@@ -164,6 +260,54 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=nuun+sport+electrolyte+tablets&tag=YOURTAG-20",
     "blurb": "Low-calorie dissolving-tablet format: 300 mg sodium and 1 g sugar per tablet suits lighter sessions and travel-friendly dosing.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.5,
+        "count": 526,
+        "source": {
+          "url": "https://www.target.com/p/nuun-hydration-sport-drink-vegan-tabs-10ct/-/A-87971433",
+          "label": "Target — Nuun Sport Hydration Vegan Tabs, 10ct (retailer fallback; brand's own site rating widget did not render)"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "The dominant recent conversation about Nuun isn't taste or effectiveness but the discovery that Nestlé owns the brand, which has pushed some loyal runners to look for substitutes even though most still say they like the product itself.",
+        "points": [
+          {
+            "label": "Nestlé ownership backlash",
+            "tone": "negative",
+            "note": "A highly upvoted thread revealed Nuun is owned by Nestlé, prompting runners who avoid the company to ask for substitutes."
+          },
+          {
+            "label": "Still liked despite the news",
+            "tone": "mixed",
+            "note": "Several commenters in that thread said they still love using Nuun and may keep buying it even after learning about the acquisition."
+          },
+          {
+            "label": "Skepticism it does much",
+            "tone": "negative",
+            "note": "At least one commenter on a separate thread dismissed tablets like Nuun as unlikely to meaningfully help hydration compared to just drinking water."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/running/comments/vd8397/substitute_for_nuun/",
+            "label": "r/running thread, 2022",
+            "quote": "Anyone have a good sub for Nuun when they run? Recently found out they are owned by Nestle and I really try hard not to support that company."
+          },
+          {
+            "url": "https://old.reddit.com/r/running/comments/vd8397/substitute_for_nuun/",
+            "label": "r/running comment, 2022",
+            "quote": "Same. Love using them but may have to try some of these other ones."
+          },
+          {
+            "url": "https://old.reddit.com/r/HydroHomies/comments/rcov7s/nuunhydralyte_any_opinions/",
+            "label": "r/HydroHomies comment, 2021",
+            "quote": "Just drink water. This stuff won't help much at all"
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/nuun-sport.png",
     "images": [
       "https://nuunlife.com/cdn/shop/files/Nuun_Tube_Upright_withTabs_Strawberry_lemonade_web.png?v=1744037007&width=800",
@@ -223,6 +367,44 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=dripdrop+ors+electrolyte+powder&tag=YOURTAG-20",
     "blurb": "ORS-style ratio with less sugar than typical sports drinks: 7 g sugar with 330 mg sodium and added zinc per 10 g stick.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.9,
+        "count": 778,
+        "source": {
+          "url": "https://dripdrop.com/products/electrolyte-powder-watermelon-8oz-32-packets",
+          "label": "DripDrop — Watermelon Electrolyte Powder, official site (DripDrop's flagship flavor; the brand no longer sells a single unflavored 'Original ORS' SKU)"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Runners who've tried DripDrop rate its flavor above rival hydration packets, but at least one user reported unexplained symptoms like a headache and cramping shortly after drinking it and wasn't sure whether the mix was the cause.",
+        "points": [
+          {
+            "label": "Flavor preference among runners",
+            "tone": "positive",
+            "note": "In a running hydration-packet thread, one commenter named DripDrop their favorite for flavor among the brands they'd tried, though pricier than alternatives."
+          },
+          {
+            "label": "Unexplained symptoms after use",
+            "tone": "negative",
+            "note": "One person described a headache and calf cramping starting within minutes of their first DripDrop packet and wasn't sure whether the mix caused it."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/running/comments/od83np/any_dripdrop_hydration_packets_recommendations/",
+            "label": "r/running comment, 2021",
+            "quote": "I've used different brands with DripDrops as my favorite in terms of flavor although they're a bit pricey."
+          },
+          {
+            "url": "https://old.reddit.com/r/HydroHomies/comments/1dkiyyh/was_it_dehydration_or_did_dripdrop_electrolyte/",
+            "label": "r/HydroHomies thread, 2024",
+            "quote": "Literally within 5 minutes of starting to drink the bottled water + mix, I had a headache come on and my calves are cramping."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/dripdrop-ors.png",
     "images": [
       "https://dripdrop.com/cdn/shop/files/Pouch_30ct_Front16ozSticks_ZSPWatermelon.png?crop=center&height=1200&v=1783954560&width=1200",
@@ -409,6 +591,54 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=ultima+replenisher+electrolyte+powder&tag=YOURTAG-20",
     "blurb": "Potassium- and magnesium-leaning profile with only 55 mg sodium — an everyday flavored-water mix rather than a sweat-replacement formula.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.8,
+        "count": 1371,
+        "source": {
+          "url": "https://ultimareplenisher.com/products/ultima-replenisher-electrolyte-hydration-powder",
+          "label": "Ultima Replenisher — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Keto and low-carb users like Ultima's taste and use it as a lower-carb Gatorade substitute, but a recurring complaint on r/keto is digestive upset — diarrhea or bloating — that some attribute to the formula.",
+        "points": [
+          {
+            "label": "Taste",
+            "tone": "positive",
+            "note": "Fans specifically call out the raspberry and grape flavors as good, with one saying the tartness helps them drink enough water."
+          },
+          {
+            "label": "Digestive side effects",
+            "tone": "negative",
+            "note": "Multiple users on r/keto report diarrhea or puffiness/bloating after regular use, though they aren't certain Ultima is the sole cause."
+          },
+          {
+            "label": "Gatorade substitute",
+            "tone": "positive",
+            "note": "Keto dieters describe switching to it as a substitute for Gatorade to restore electrolytes lost from the diet or workouts."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://old.reddit.com/r/keto/comments/143d5ye/looking_for_ultima_replenisher_alternatives/",
+            "label": "r/keto thread, 2023",
+            "quote": "I drink a lot of this product, specifically the raspberry flavor. I love the tartness and it helps me to drink enough water"
+          },
+          {
+            "url": "https://old.reddit.com/r/keto/comments/10vd5cg/ultima_replenisher_for_electrolytes_and_diarrhea/",
+            "label": "r/keto thread, 2023",
+            "quote": "I'm finding these are giving my diarrhea."
+          },
+          {
+            "url": "https://old.reddit.com/r/keto/comments/atpvkr/ultima_replenisher_reactions/",
+            "label": "r/keto thread, 2019",
+            "quote": "The flavor of this stuff is good. I like the grape a lot. However, I've noticed excessive puffiness and bloating lately."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/ultima-replenisher.png",
     "images": [
       "https://www.ultimareplenisher.com/cdn/shop/files/Variety_Stickpacks.jpg?v=1743096987&width=1600",
