@@ -41,8 +41,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=lmnt+electrolyte+drink+mix&tag=YOURTAG-20",
     "blurb": "Sodium-forward design: 1000 mg sodium with zero sugar targets heavy sweat replacement rather than carb-based rehydration.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/lmnt-drink-mix.webp",
-    "imageBg": "255,255,255",
+    "imageUrl": "images/products/lmnt-drink-mix.png",
     "images": [
       "https://res.cloudinary.com/drinklmnt/image/upload/f_auto,q_auto/v1759900501/lmnt-citrus-salt-30ct-box_ux0v3u.webp",
       "https://res.cloudinary.com/drinklmnt/image/upload/f_auto,q_auto/v1759900501/lmnt-citrus-salt-open-box-dark_uczoih.webp",
@@ -103,8 +102,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=liquid+iv+hydration+multiplier&tag=YOURTAG-20",
     "blurb": "Sugar-based ORS-style stick: 11 g of sugars alongside 500 mg sodium, the glucose-plus-sodium pairing used in oral rehydration formulas.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/liquid-iv-hydration-multiplier.jpg",
-    "imageBg": "243,239,230",
+    "imageUrl": "images/products/liquid-iv-hydration-multiplier.png",
     "images": [
       "https://cdn.shopify.com/s/files/1/1338/1013/files/HMO_PFC_16ct_PDP.jpg?v=1762182360",
       "https://cdn.shopify.com/s/files/1/1338/1013/files/HMO_LL_16ct_PDP_5d06a7d4-5650-432a-9c54-78fc806aa73b.jpg?v=1762182393",
@@ -411,8 +409,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=ultima+replenisher+electrolyte+powder&tag=YOURTAG-20",
     "blurb": "Potassium- and magnesium-leaning profile with only 55 mg sodium — an everyday flavored-water mix rather than a sweat-replacement formula.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/ultima-replenisher.jpg",
-    "imageBg": "209,226,236",
+    "imageUrl": "images/products/ultima-replenisher.png",
     "images": [
       "https://www.ultimareplenisher.com/cdn/shop/files/Variety_Stickpacks.jpg?v=1743096987&width=1600",
       "https://www.ultimareplenisher.com/cdn/shop/files/Original_Flavor_Stickpacks.jpg?v=1743096625&width=1600"
@@ -469,8 +466,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=skratch+labs+hydration+sport+drink+mix&tag=YOURTAG-20",
     "blurb": "Endurance carb-mix profile: 19 g of sugar-based carbohydrate with 400 mg sodium, built for fueling plus fluid replacement on long efforts.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/skratch-hydration-sport-mix.jpg",
-    "imageBg": "252,182,0",
+    "imageUrl": "images/products/skratch-hydration-sport-mix.png",
     "images": [
       "https://www.skratchlabs.com/cdn/shop/files/hydration_sport_drink_mix_mango_front_of_bag_400mg_of_sodium.jpg?v=1774390853&width=800",
       "https://www.skratchlabs.com/cdn/shop/files/WebsitePDPGalleryRefresh_SDM_LL_440g_01.jpg?v=1765569821&width=800",
@@ -590,8 +586,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=redmond+re-lyte+hydration+electrolyte+mix&tag=YOURTAG-20",
     "blurb": "Sodium-forward at 810 mg with 400 mg potassium and zero sugar; 60 servings per tub makes it one of the cheapest per-serving options in the high-sodium tier.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/redmond-re-lyte-hydration.jpg",
-    "imageBg": "255,255,255",
+    "imageUrl": "images/products/redmond-re-lyte-hydration.png",
     "images": [
       "https://living.redmond.com/cdn/shop/files/Re-lyteHydrationJars_NewLabel_AllFamily_Whitebackground_1024x1024.jpg?v=1717079208",
       "https://living.redmond.com/cdn/shop/files/Grape_For_web_Front_7af57f43-2abb-4a05-8fb0-b4dab9212cb9.jpg?v=1770922504&width=1024",
@@ -762,7 +757,6 @@ var PRODUCTS = [
     "blurb": "Delivers roughly 2.5 times the sodium of Pedialyte's classic powder, positioning it for athletes with heavier sweat losses rather than everyday sipping.",
     "labelVerified": "July 2026",
     "imageUrl": "images/products/pedialyte-sport-powder-packs.png",
-    "imageBg": "255,255,255",
     "images": [
       "https://www.pedialyte.com/products/sport-powder-packs/fruit-punch/_jcr_content/root/container/columncontrol/tab_item_no_1/image_copy_copy_copy.coreimg.png/1756489259316/pedialyte-sport-powder-pack-fruit-punch-317-x-320.png",
       "https://www.pedialyte.com/products/sport-powder-packs/lemon-lime/_jcr_content/root/container/columncontrol/tab_item_no_1/image_copy_copy_copy.coreimg.png/1756489770398/pedialyte-sport-powder-pack-lemon-lime-317-x-320.png",
@@ -934,7 +928,6 @@ var PRODUCTS = [
     "blurb": "Leads this set on magnesium disclosure at 120 mg per packet, paired with a 250 mg vitamin C dose that's unusually high for a hydration mix.",
     "labelVerified": "July 2026",
     "imageUrl": "images/products/emergen-c-hydration-plus.png",
-    "imageBg": "255,255,255",
     "images": [
       "https://i-cf65.ch-static.com/content/dam/cf-consumer-healthcare/bp-emergenc/en_US/products/hydration-category.png?auto=format"
     ],
@@ -989,11 +982,6 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=trioral+oral+rehydration+salts&tag=YOURTAG-20",
     "blurb": "An unflavored, WHO-formula oral rehydration powder with higher sodium and potassium per liter than typical sports drinks; each packet is designed to be sipped across a day rather than taken as one serving.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/trioral-oral-rehydration-salts.jpg",
-    "imageBg": "204,204,204",
-    "images": [
-      "https://trioralors.com/wp-content/uploads/2023/01/teaser.jpg"
-    ],
     "metrics": {
       "sodiumMg": 1725,
       "potassiumMg": 782,
@@ -1048,8 +1036,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=vitalyte+electrolyte+replacement+drink+mix&tag=YOURTAG-20",
     "blurb": "A glucose-and-fructose-sweetened mix with a sodium-to-potassium ratio the brand designs to echo blood plasma, though its 21 g sugar per serving is among the highest in this set.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/vitalyte-electrolyte-replacement.jpg",
-    "imageBg": "253,239,230",
+    "imageUrl": "images/products/vitalyte-electrolyte-replacement.png",
     "images": [
       "https://vitalyte.com/cdn/shop/files/webmain1.jpg",
       "https://vitalyte.com/cdn/shop/files/71TOF8t7MML._AC_SL1500.jpg"
@@ -1171,7 +1158,6 @@ var PRODUCTS = [
     "blurb": "Functions more like an energy drink than a pure hydration mix, pairing 100 mg caffeine with the highest potassium dose, 950 mg, of any product in this set.",
     "labelVerified": "July 2026",
     "imageUrl": "images/products/zipfizz-energy-drink-mix.png",
-    "imageBg": "255,114,1",
     "images": [
       "https://zipfizz.com/cdn/shop/files/Zipfizz_Energy_Powder_-_Hover_State.png?v=1765559704&width=1080",
       "https://zipfizz.com/cdn/shop/files/Product_Color_BG_Orange_Soda_0e12ae1b-adb5-4a10-b30f-c73649e693cd.png?v=1765559704&width=1080"
@@ -1520,10 +1506,9 @@ var PRODUCTS = [
     "blurb": "The labeled serving of 2 chews provides 100 mg sodium and 30 mg potassium; built to be dosed repeatedly through exercise rather than mixed as a drink.",
     "labelVerified": "July 2026",
     "imageUrl": "images/products/saltstick-fastchews.png",
-    "imageBg": "255,255,255",
     "images": [
-      "https://aletenutrition.com/cdn/shop/files/SaltStick-FastChews-Lemon-Lime-60ct-Packet_Hero.png?v=1778523638&width=1946",
-      "https://cdn.shopify.com/s/files/1/0510/6660/1644/files/SS_FC_60ct_BottleRenders_LemonLime_0426.png?v=1778627260"
+      "https://cdn.shopify.com/s/files/1/0510/6660/1644/files/SS_FC_60ct_BottleRenders_LemonLime_0426.png?v=1778627260",
+      "https://aletenutrition.com/cdn/shop/files/SaltStick-FastChews-Lemon-Lime-60ct-Packet_Hero.png?v=1778523638&width=1946"
     ],
     "metrics": {
       "sodiumMg": 100,
@@ -1575,8 +1560,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=first+endurance+efs+drink+mix&tag=YOURTAG-20",
     "blurb": "One 35 g scoop mixed with water supplies 300 mg sodium, 160 mg potassium, and 150 mg magnesium alongside 30 g of carbohydrate (25 g added sugar), positioning it as a combined fuel-and-electrolyte drink rather than a low-sugar hydration mix.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/first-endurance-efs-drink-mix.jpg",
-    "imageBg": "255,255,255",
+    "imageUrl": "images/products/first-endurance-efs-drink-mix.png",
     "images": [
       "https://cdn.shopify.com/s/files/1/0659/0182/2211/files/shopify-efs-fp-24.jpg?v=1715723179",
       "https://cdn.shopify.com/s/files/1/0659/0182/2211/products/efs-fp-tray.png?v=1715723179"
@@ -1632,8 +1616,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=hammer+nutrition+heed+sports+drink&tag=YOURTAG-20",
     "blurb": "One 30 g scoop provides 150 mg sodium and 35 mg potassium with only 2 g of sugar, drawing most of its 28 g carbohydrate from complex carbohydrate rather than simple sugars.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/hammer-nutrition-heed.jpg",
-    "imageBg": "255,255,255",
+    "imageUrl": "images/products/hammer-nutrition-heed.png",
     "images": [
       "https://hammernutrition.com/cdn/shop/files/HCB70_25_1200x.progressive.jpg?v=1747863941",
       "https://hammernutrition.com/cdn/shop/files/HCB32_25_204x.progressive.jpg?v=1747863941"
@@ -1743,8 +1726,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=amacx+hydro+tabs+electrolyte&tag=YOURTAG-20",
     "blurb": "One tablet dissolved in 500-750 ml water supplies 205 mg sodium, 70 mg potassium, and 56 mg magnesium with no sugar; Informed Sport certified.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/amacx-hydro-tabs.webp",
-    "imageBg": "255,255,255",
+    "imageUrl": "images/products/amacx-hydro-tabs.png",
     "images": [
       "https://amacx.com/cdn/shop/files/6e2a9831a8c7820ffbd216fab9193f846fd826c0_Hydro_Tabs_Lime___3_pack_Amacx_73203849__1_cf33a78e-0aee-4f60-bc51-1114b81bb594.webp?v=1783693090&width=800",
       "https://amacx.com/cdn/shop/files/7aeec5b3e7b075e12cc1a69f7860aea10bc89db0_Hydro_tabs_lime_visma_b13b4e1b-3081-45cf-a66c-dbc59c1029db.jpg?v=1783693091&width=800"
@@ -1856,8 +1838,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=cure+hydration+electrolyte+mix&tag=YOURTAG-20",
     "blurb": "Built to WHO oral-rehydration-solution ratios: 240 mg sodium and 310 mg potassium paired with 4 g of fruit-derived sugar rather than an added sweetener; magnesium isn't disclosed on the panel.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/cure-hydration-electrolyte-mix.jpg",
-    "imageBg": "241,237,234",
+    "imageUrl": "images/products/cure-hydration-electrolyte-mix.png",
     "images": [
       "https://www.curehydration.com/cdn/shop/files/Cure-Pouch-Packet-Grapefruit_c9b23260-236c-40c2-b5af-1e3cee28edd0_1000x.jpg",
       "https://www.curehydration.com/cdn/shop/files/Cure-Pouch-Classic-Variety-Front.jpg"
@@ -2041,8 +2022,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=jocko+fuel+rapid+hydration&tag=YOURTAG-20",
     "blurb": "One of the highest-sodium sticks in the category at 500 mg, plus 740 mg chloride and 120 mg magnesium — built for heavy sweat loss rather than light daily sipping.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/jocko-fuel-rapid-hydration-plus.jpg",
-    "imageBg": "246,244,245",
+    "imageUrl": "images/products/jocko-fuel-rapid-hydration-plus.png",
     "images": [
       "https://cdn.shopify.com/s/files/1/0793/7802/2695/files/STRAW_12_1.jpg?v=1782151900",
       "https://cdn.shopify.com/s/files/1/0793/7802/2695/files/JF-Hydrate_-Flavor-chart.jpg?v=1782148362"

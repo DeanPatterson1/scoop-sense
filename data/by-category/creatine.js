@@ -141,8 +141,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=nutricost+creatine+monohydrate&tag=YOURTAG-20",
     "blurb": "5 g of micronized monohydrate at one of the lowest costs per serving in the category; the 500 g tub holds 100 servings.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/nutricost-creatine-monohydrate.jpg",
-    "imageBg": "255,255,255",
+    "imageUrl": "images/products/nutricost-creatine-monohydrate.png",
     "images": [
       "https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_CreatineMonohydrate_Unflavored_500G_Front_SQUARE_98526928-e1cc-4ff6-9918-430654760159.jpg?v=1760650358",
       "https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_CreatineMonohydrate_Unflavored_500G_SFP_SQUARE_72b4208e-51d7-42f8-8147-d2502f9c3035.jpg?v=1760650358",
@@ -306,8 +305,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=con+cret+creatine+hcl&tag=YOURTAG-20",
     "blurb": "The original 750 mg creatine HCl in 64 or 100-serving tubs, certified vegan, gluten-free, and kosher.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/con-cret-creatine-hcl.webp",
-    "imageBg": "255,255,255",
+    "imageUrl": "images/products/con-cret-creatine-hcl.png",
     "images": [
       "https://cdn.shopify.com/s/files/1/0267/4576/6070/files/100Unflavored.webp?v=1784816901",
       "https://cdn.shopify.com/s/files/1/0267/4576/6070/files/64Unflavored.webp?v=1784816901"
@@ -461,8 +459,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=muscletech+cell+tech+creatine&tag=YOURTAG-20",
     "blurb": "A carb-and-creatine recovery formula: 5 g of monohydrate rides on a 38 g multi-stage carb blend plus taurine, alpha lipoic acid, and BCAAs, with a two-scoop option doubling everything.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/muscletech-cell-tech.jpg",
-    "imageBg": "245,245,245",
+    "imageUrl": "images/products/muscletech-cell-tech.png",
     "images": [
       "https://cdn.shopify.com/s/files/1/1214/7132/files/celltech-citrus-3lb_aa616c64-0d61-4104-a07a-e8b6cc84ad27.jpg?v=1753299077",
       "https://cdn.shopify.com/s/files/1/1214/7132/files/celltech-fruitpunch-3lb_682798d8-2c20-4c66-8883-92ec542a9751.jpg?v=1754063797",
@@ -563,8 +560,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=cellucor+cor+performance+creatine&tag=YOURTAG-20",
     "blurb": "A single-ingredient 5 g monohydrate scoop with no fillers in the unflavored version; the 72-serving tub is one of the larger counts among mass-market creatines.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/cellucor-cor-performance-creatine.jpg",
-    "imageBg": "229,224,218",
+    "imageUrl": "images/products/cellucor-cor-performance-creatine.png",
     "images": [
       "https://cellucor.com/cdn/shop/files/CELL-Creatine-72serv-UNFLAVORED-hero.jpg?v=1777823684",
       "https://cellucor.com/cdn/shop/files/CELL-Creatine-72serv-UNFLAVORED-nutritonal.jpg?v=1777823684",
@@ -655,8 +651,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=muscletech+platinum+100+creatine&tag=YOURTAG-20",
     "blurb": "90 servings of HPLC-tested monohydrate at 5 g per scoop in the unflavored version, with no other ingredients listed on the panel.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/muscletech-platinum-100-creatine.jpg",
-    "imageBg": "244,244,244",
+    "imageUrl": "images/products/muscletech-platinum-100-creatine.png",
     "images": [
       "https://www.muscletech.com/cdn/shop/files/MuscleTech-100Creatine-Unflavored-2000x2000-01a-V2.jpg?v=1766074513&width=2000",
       "https://www.muscletech.com/cdn/shop/files/MuscleTech-100Creatine-Unflavored-2000x2000-10_font.jpg?v=1766074513&width=2000",
@@ -706,8 +701,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=six+star+creatine+x3+caplets&tag=YOURTAG-20",
     "blurb": "A caplet format dosing 3 g of creatine monohydrate per 3-caplet serving alongside a 169 mg proprietary amino blend whose individual ingredient amounts aren't broken out on the label.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/six-star-creatine-x3.jpg",
-    "imageBg": "200,196,195",
+    "imageUrl": "images/products/six-star-creatine-x3.png",
     "images": [
       "https://www.sixstarpro.com/cdn/shop/files/ss-creatine-x3-pill-front.jpg",
       "https://www.sixstarpro.com/cdn/shop/files/ss-creatine-x3-pill-right.jpg",
@@ -795,8 +789,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=allmax+creatine+monohydrate&tag=YOURTAG-20",
     "blurb": "5 g of CreaSyn creatine monohydrate per scoop, verified to 99.9% purity by HPLC testing; the 1000 g size runs 200 servings, among the largest counts in the category.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/allmax-creatine-monohydrate.webp",
-    "imageBg": "251,251,251",
+    "imageUrl": "images/products/allmax-creatine-monohydrate.png",
     "images": [
       "https://www.allmaxnutrition.com/cdn/shop/files/allmax-creatine-unflavored-400g_1.webp",
       "https://www.allmaxnutrition.com/cdn/shop/files/allmax-creatine-unflavored-100g_1.webp",
@@ -1068,8 +1061,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=bpn+bare+performance+nutrition+creatine+monohydrate&tag=YOURTAG-20",
     "blurb": "Single-ingredient Creapure monohydrate with NSF Certified for Sport testing on every batch, aimed at athletes who need label-accuracy assurance.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/bpn-creatine-monohydrate.jpg",
-    "imageBg": "230,230,230",
+    "imageUrl": "images/products/bpn-creatine-monohydrate.png",
     "images": [
       "https://www.bareperformancenutrition.com/cdn/shop/files/BPNCREA-5.jpg?v=1728563526&width=1200",
       "https://www.bareperformancenutrition.com/cdn/shop/files/BPNCREA30SV-2.jpg?v=1749806840&width=1200"
@@ -1113,7 +1105,6 @@ var PRODUCTS = [
     "blurb": "Single-ingredient micronized monohydrate at the full 5 g clinical dose with no flavoring or fillers; no sport-specific banned-substance certification is listed on the label.",
     "labelVerified": "July 2026",
     "imageUrl": "images/products/xwerks-lift.png",
-    "imageBg": "227,229,228",
     "images": [
       "https://xwerks.com/cdn/shop/files/lift-2026.png",
       "https://xwerks.com/cdn/shop/files/X_Lift_2.jpg",
@@ -1158,7 +1149,6 @@ var PRODUCTS = [
     "blurb": "Single-ingredient monohydrate that is IGEN Non-GMO tested, but does not carry an NSF Certified for Sport or Informed Sport mark.",
     "labelVerified": "July 2026",
     "imageUrl": "images/products/onnit-creatine-monohydrate.png",
-    "imageBg": "252,252,254",
     "images": [
       "https://www.onnit.com/cdn/shop/files/creatine-both-size-pdp.png?v=1777080469&width=1024",
       "https://www.onnit.com/cdn/shop/files/creatine-90-gym-pdp.png?v=1765924233&width=1800",
@@ -1252,8 +1242,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=gnarly+nutrition+creatine&tag=YOURTAG-20",
     "blurb": "Carries both NSF Content Certified and NSF Certified for Sport marks, the latter screening for over 270 substances banned by pro and Olympic sport bodies.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/gnarly-nutrition-creatine.webp",
-    "imageBg": "229,229,229",
+    "imageUrl": "images/products/gnarly-nutrition-creatine.png",
     "images": [
       "https://gognarly.com/cdn/shop/files/GN-CRBG-UN_D2-WEB.webp",
       "https://gognarly.com/cdn/shop/files/GN-CRBG-UN_D3-WEB.webp",
@@ -1302,8 +1291,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=naked+nutrition+naked+creatine&tag=YOURTAG-20",
     "blurb": "Bulk single-ingredient monohydrate at one of the lower costs per serving in the category; not NSF Certified for Sport or Informed Sport tested.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/naked-nutrition-naked-creatine.jpg",
-    "imageBg": "233,233,233",
+    "imageUrl": "images/products/naked-nutrition-naked-creatine.png",
     "images": [
       "https://nakednutrition.com/cdn/shop/files/Creatine-1KG-Unflavored-MainImage.jpg?v=1766596249&width=1200",
       "https://nakednutrition.com/cdn/shop/files/creatine-monohydrate-powder-unflavored-2.2lb_95da58cf-9aeb-4c77-a4af-77c7c5972260.jpg?v=1783215302&width=1200"
@@ -1439,7 +1427,6 @@ var PRODUCTS = [
     "blurb": "pH-buffered Kre-Alkalyn creatine dosed at 3 g rather than the standard 5 g monohydrate serving; Swolverine states each batch is lab-tested but the label carries no NSF Certified for Sport or Informed Sport mark.",
     "labelVerified": "July 2026",
     "imageUrl": "images/products/swolverine-kre-alkalyn.png",
-    "imageBg": "255,255,255",
     "images": [
       "https://swolverine.com/cdn/shop/files/Swolverine-kre-alkalyn-10216071820-51597217530136.png?v=1773973190&width=800",
       "https://swolverine.com/cdn/shop/files/Swolverine-kre-alkalyn-10216071820-51597217235224.png?v=1773973191&width=800",
@@ -1729,8 +1716,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=nutricost+creatine+hcl&tag=YOURTAG-20",
     "blurb": "A budget-priced single-ingredient HCl powder dosed at 750 mg per serving — far below a typical 5 g monohydrate scoop, reflecting HCl's higher solubility per gram.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/nutricost-creatine-hcl.jpg",
-    "imageBg": "255,255,255",
+    "imageUrl": "images/products/nutricost-creatine-hcl.png",
     "images": [
       "https://nutricost.com/cdn/shop/files/NTC_CreatineHCI_300G_16OZ_Front_Square.jpg?v=1770060305",
       "https://nutricost.com/cdn/shop/files/NTC_CreatineHCI_300G_16OZ_SFP_Square.jpg?v=1770060305"
@@ -1842,8 +1828,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=ancient+nutrition+creatine+collagen+electrolytes&tag=YOURTAG-20",
     "blurb": "Creatine monohydrate is disclosed on its own line at 5 g, but the collagen and electrolyte ingredients are combined into a single 2.19 g blend total without an individual breakdown.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/ancient-nutrition-creatine-collagen-electrolytes.jpg",
-    "imageBg": "254,254,254",
+    "imageUrl": "images/products/ancient-nutrition-creatine-collagen-electrolytes.png",
     "images": [
       "https://www.professionalsupplementcenter.com/cdn/shop/files/creatine-collagen-electrolytes-ANN_main_1.jpg?v=1768932858&width=800",
       "https://www.professionalsupplementcenter.com/cdn/shop/files/creatine-collagen-electrolytes-ANN_Lemon_30_20Servings_main_1.jpg?v=1768932857&width=800"

@@ -377,12 +377,9 @@
     return '<article class="sc-tile" id="p-' + esc(p.id) + '"' + accent + ">" +
       '<a class="sc-tile-link" href="' + page + '" ' +
         'aria-label="Full label breakdown: ' + esc(p.brand + " " + p.name) + '">' +
-        // A photo shot on a solid sweep gets that sweep's own colour behind
-        // it, so the picture meets the card edge-to-edge instead of sitting on
-        // it as a pasted rectangle. Transparent renders keep the dark stage.
-        '<span class="sc-tile-art' + (p.imageBg ? " sc-art-plate" : "") + '"' +
-          (p.imageBg ? ' style="--sc-art-bg:rgb(' + esc(p.imageBg) + ')"' : "") +
-          ' aria-hidden="true">' +
+        // Every product image is a transparent cutout, so they all share the
+        // same dark stage — no per-product background to match.
+        '<span class="sc-tile-art" aria-hidden="true">' +
           // referrerpolicy: several brand CDNs refuse hotlinks that send a
           // referrer, and imageUrl is a retailer URL for products without a
           // locally stored render.
@@ -414,6 +411,8 @@
           'target="_blank" rel="sponsored nofollow noopener" ' +
           'aria-label="Check current price for ' + esc(p.brand + " " + p.name) +
           ' on Amazon (affiliate link)">Check price <span class="sc-ext" aria-hidden="true">&#8599;</span></a>' +
+        // Title carries the label the icon-only button hides visually.
+        "" +
         saveBtnHTML(p) +
       "</div>" +
     "</article>";
@@ -847,7 +846,11 @@
 
   function saveBtnHTML(p) {
     var saved = getSaved().indexOf(p.id) !== -1;
-    return '<button type="button" class="sc-save-btn" data-save-id="' + esc(p.id) + '" aria-pressed="' + saved + '">' +
+    var label = saved ? "Saved to compare" : "Save to compare";
+    // On tiles the text is hidden by CSS, so the button needs its own name.
+    return '<button type="button" class="sc-save-btn" data-save-id="' + esc(p.id) + '" ' +
+      'aria-pressed="' + saved + '" aria-label="' + esc(label + ": " + p.brand + " " + p.name) + '" ' +
+      'title="' + esc(label) + '">' +
       '<span class="sc-save-icon" aria-hidden="true"></span>' +
       '<span class="sc-save-text">' + (saved ? "Saved" : "Save to compare") + "</span>" +
     "</button>";

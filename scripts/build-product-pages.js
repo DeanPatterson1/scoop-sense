@@ -17,7 +17,7 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const OUT = path.join(ROOT, "products");
-const VERSION = "20260729b"; // keep in sync with the ?v= on the other pages
+const VERSION = "20260729d"; // keep in sync with the ?v= on the other pages
 
 // Set this to the real origin at domain time (see README "Sitemap & domain").
 // Absolute-URL metadata — canonical, og:url, BreadcrumbList — is emitted only
@@ -304,7 +304,7 @@ function mediaHTML(p) {
             ${slides.map((s, i) => `<button type="button" class="sc-gallery-thumb" data-src="${esc(s.src)}" data-alt="${esc(s.alt)}" aria-current="${i === 0 ? "true" : "false"}" aria-label="Show image ${i + 1} of ${slides.length}"><img src="${esc(s.src)}" alt="" loading="lazy" referrerpolicy="no-referrer"></button>`).join("\n            ")}
           </div>`
     : "";
-  return `<figure class="sc-pdp-media sc-pdp-media-photo${p.imageBg ? " sc-art-plate" : ""}"${p.imageBg ? ` style="--sc-art-bg:rgb(${esc(p.imageBg)})"` : ""}>
+  return `<figure class="sc-pdp-media sc-pdp-media-photo">
             <img id="sc-gallery-main" src="${esc(slides[0].src)}" alt="${esc(slides[0].alt)}" referrerpolicy="no-referrer">
             <button type="button" class="sc-zoom-btn" id="sc-zoom-btn" aria-label="Zoom image">&#10530;<span> Zoom</span></button>
           </figure>${thumbs}

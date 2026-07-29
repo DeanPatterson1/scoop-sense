@@ -87,7 +87,11 @@ A few rules that keep the site honest and legally clean:
 
 To change which products appear in the homepage "places to start," edit `FEATURED_IDS` (and the matching `START_META` labels in `js/app.js`). The database preview rows come from `PREVIEW_IDS` in `js/app.js`.
 
-**Product imagery.** Tiles show a neutral monogram placeholder until a product has an `imageUrl`. The lead image is stored locally in `images/products/<id>.<ext>` and the seller's own gallery URLs go in `images`, which feeds the product page's gallery and lightbox. `imageOpaque: true` marks a photo shot on a white sweep so the art area switches to the paper surface behind it — otherwise a white product shot reads as a white slab on the dark card.
+**Product imagery.** Tiles show a neutral monogram placeholder until a product has an `imageUrl`. The lead image is stored locally in `images/products/<id>.<ext>` and the seller's own gallery URLs go in `images`, which feeds the product page's gallery and lightbox.
+
+**Every lead image is a transparent cutout**, so all 187 cards sit on the same dark stage and the grid reads as one set. Retailer photography arrives on a white, orange, or navy studio sweep; that background is flood-filled away from the image edges inward before the file is stored. Filling inward matters — a global colour key would punch holes through white lettering and white lids inside the product. If you add a photo that still carries its background, cut it out before shipping it, or the card will read as a pasted rectangle among 186 cutouts.
+
+Two rules learned the hard way, worth keeping: a PNG can carry an alpha channel and still be entirely opaque, so never trust the file header to tell you whether a background is present — look at the pixels. And check what the image actually *is* before shipping it: brand CDNs serve supplement-facts panels, promotional banners with health claims, and hero art for a different product from the same URL patterns as real product shots. Several of each were caught only by looking at a contact sheet of every lead image at once.
 
 Add imagery by writing per-category JSON (`[{ "id": …, "images": […], "source": … }]`) and running `node scripts/integrate-images.js <json-dir>`, then regenerating the product pages. Every URL must be a real, checked image published by the brand or retailer — never invent or pattern-guess one, and never invent packaging.
 

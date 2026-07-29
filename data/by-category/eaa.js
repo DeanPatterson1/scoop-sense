@@ -327,8 +327,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=nutricost+eaa+powder&tag=YOURTAG-20",
     "blurb": "8 g of all nine EAAs at one of the lowest per-serving costs in the category; batch testing is by ISO-accredited labs rather than a sport-certification program.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/nutricost-eaa.jpg",
-    "imageBg": "255,255,255",
+    "imageUrl": "images/products/nutricost-eaa.png",
     "images": [
       "https://nutricost.com/cdn/shop/files/NTC_EAA_BlueRaspberry_30SERV_20OZ_Front_Square_1800x1800.jpg?v=1738964098",
       "https://nutricost.com/cdn/shop/files/NTC_EAA_POG_30SERV_20OZ_Front_Square_1800x1800.jpg?v=1770138766"
@@ -388,7 +387,6 @@ var PRODUCTS = [
     "blurb": "Longtime intra-workout staple with a fully dosed 7 g BCAA panel plus glutamine and citrulline malate, though it covers only three of the nine essential amino acids.",
     "labelVerified": "July 2026",
     "imageUrl": "images/products/xtend-original-bcaa.png",
-    "imageBg": "241,241,241",
     "images": [
       "https://cellucor.com/cdn/shop/files/XTEND_1144_Digital_Relabel_FlowThrough_Assets_PDPs_OnGreyBackground-XTEND-OG30-BRI.png?v=1771552623",
       "https://cellucor.com/cdn/shop/files/XTEND_1144_Digital_Relabel_FlowThrough_Assets_PDPs_OnGreyBackground-XTEND-OG30-FI-Label.png?v=1776889586"
@@ -442,8 +440,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=musclepharm+bcaa+3+1+2&tag=YOURTAG-20",
     "blurb": "Budget classic BCAA using an unconventional 3:1:2 ratio that weights valine over isoleucine; like all BCAA-only formulas it omits the six other essential aminos.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/musclepharm-bcaa-312.jpg",
-    "imageBg": "255,255,255",
+    "imageUrl": "images/products/musclepharm-bcaa-312.png",
     "images": [
       "https://musclepharm.com/cdn/shop/files/BCAA_Fruit_Punch.jpg?v=1754064987&width=1800",
       "https://musclepharm.com/cdn/shop/files/BCAA_Blue_Rasp.jpg?v=1754064987&width=1800"
@@ -603,12 +600,6 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=evlution+nutrition+bcaa+energy&tag=YOURTAG-20",
     "blurb": "A fully dosed 5 g BCAA (2.5 g leucine) stacked with 110 mg of natural caffeine and 500 mg each of beta-alanine and taurine, positioning it as an energizing BCAA rather than a stim-free recovery drink.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/evlution-nutrition-bcaa-energy.jpg",
-    "imageBg": "255,255,255",
-    "images": [
-      "https://www.evlnutrition.com/cdn/shop/files/BCAA_Energy_BR_SFP_-_2000x2000_a4f577cd-4773-45b9-83ee-b12ccedcafc7.jpg?v=1724270418",
-      "https://www.evlnutrition.com/cdn/shop/files/BCAA_Energy_30_Servings_Watermelon_SFP.jpg?v=1665690877"
-    ],
     "metrics": {
       "eaaG": null,
       "bcaaG": 5,
@@ -718,8 +709,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=applied+nutrition+bcaa+amino+hydrate&tag=YOURTAG-20",
     "blurb": "A 7.2 g BCAA hydration formula with electrolytes and citrulline malate, Informed Sport certified, though it covers only three of the nine essential amino acids.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/applied-nutrition-bcaa-amino-hydrate.webp",
-    "imageBg": "205,205,205",
+    "imageUrl": "images/products/applied-nutrition-bcaa-amino-hydrate.png",
     "images": [
       "https://appliednutrition.uk/cdn/shop/files/BCAA_Professional_450g_-_Icy_Blue_Raz_gifts.webp?v=1781657000",
       "https://appliednutrition.uk/cdn/shop/files/BCAA_Professional_450g_-_Fruit_Burst.webp?v=1781657000"
@@ -1010,8 +1000,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=allmax+aminocore&tag=YOURTAG-20",
     "blurb": "A leucine-dominant 8.18 g BCAA blend in a 9:6:5 ratio, fortified with B-vitamins, caffeine-free and built for repeat same-day dosing.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/allmax-aminocore.webp",
-    "imageBg": "254,254,254",
+    "imageUrl": "images/products/allmax-aminocore.png",
     "images": [
       "https://www.allmaxnutrition.com/cdn/shop/files/1.1-Aminocore-BCAA-FruitPunch.webp?v=1782154376&width=1400",
       "https://www.allmaxnutrition.com/cdn/shop/files/1.1-Aminocore-BCAA-watermelon.webp?v=1782154409&width=1400"
@@ -1066,8 +1055,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=nutricost+bcaa+powder&tag=YOURTAG-20",
     "blurb": "A straightforward 6 g BCAA in the standard 2:1:1 ratio at one of the lowest per-serving prices in the category.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/nutricost-bcaa-powder.jpg",
-    "imageBg": "255,255,255",
+    "imageUrl": "images/products/nutricost-bcaa-powder.png",
     "images": [
       "https://nutricost.com/cdn/shop/files/NTCP_BCAA_Watermelon_30SERV_20OZ_Front1_Square.jpg?v=1760719437",
       "https://nutricost.com/cdn/shop/files/NTCP_BCAA_Watermelon_30SERV_20OZ_SFP_Square.jpg?v=1760719437"
@@ -1338,12 +1326,6 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=transparent+labs+bcaa+glutamine&tag=YOURTAG-20",
     "blurb": "An Informed Choice-certified BCAA formula (not a full EAA spectrum) built around an 8 g 2:1:1 ratio plus a 5 g glutamine dose well above what most BCAA products include.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/transparent-labs-bcaa-glutamine.jpg",
-    "imageBg": "18,17,15",
-    "images": [
-      "https://www.transparentlabs.com/cdn/shop/files/BCAA-PDP-Hero.jpg?v=1781800579",
-      "https://www.transparentlabs.com/cdn/shop/files/BCAA-SFP-StrawLemonade.jpg?v=1781800579"
-    ],
     "metrics": {
       "eaaG": null,
       "bcaaG": 8,
@@ -1510,7 +1492,6 @@ var PRODUCTS = [
     "blurb": "Builds BCAAs into a 25 g Cluster Dextrin carbohydrate and electrolyte base rather than selling them as a standalone amino mix, at a premium per-tub price for a single flavor.",
     "labelVerified": "July 2026",
     "imageUrl": "images/products/xwerks-motion.png",
-    "imageBg": "227,227,225",
     "images": [
       "https://cdn.shopify.com/s/files/1/0666/3683/files/motion-2026_6b3eea36-d807-414b-ab23-443e039d0be4.png?v=1771608586",
       "https://cdn.shopify.com/s/files/1/0666/3683/files/motion.jpg?v=1771608586"
@@ -1733,8 +1714,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=bpi+sports+best+eaa&tag=YOURTAG-20",
     "blurb": "10 g of fully itemized EAAs per serving with a BCAA-heavy 7.2 g share, plus a small coconut water electrolyte addition.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/bpi-sports-best-eaa.webp",
-    "imageBg": "255,255,255",
+    "imageUrl": "images/products/bpi-sports-best-eaa.png",
     "images": [
       "https://cdn.shopify.com/s/files/1/0561/9761/1672/files/BESTEAA-30SERV-LEMONBERRY_fcc4da10-8a2c-4146-9da2-ecd2c6fa6f2a.webp?v=1730185363",
       "https://cdn.shopify.com/s/files/1/0561/9761/1672/files/BESTEAA-30SERV-SUPPFACTS.webp?v=1739305685"
@@ -1779,8 +1759,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=evlution+nutrition+bcaa5000&tag=YOURTAG-20",
     "blurb": "A bare-bones 5 g BCAA formula — the unflavored version lists no other ingredients at all — at one of the lowest per-serving costs in the category.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/evlution-nutrition-bcaa5000-powder.jpg",
-    "imageBg": "255,255,255",
+    "imageUrl": "images/products/evlution-nutrition-bcaa5000-powder.png",
     "images": [
       "https://cdn.shopify.com/s/files/1/0877/6064/files/BCAA500060SERV-UF_2.jpg?v=1765384748",
       "https://cdn.shopify.com/s/files/1/0877/6064/files/BCAA500060SERV-UF_3.jpg?v=1765384748"

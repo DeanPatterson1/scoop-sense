@@ -1602,8 +1602,18 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   justify-content: center;
   aspect-ratio: 4 / 3;
   margin: 0 -16px 14px;
+  /* A lit stage, not a flat panel. Every product image is a transparent
+     cutout now, so a black tub on a near-black card would vanish — the glow
+     puts light behind the product and falls off to the card colour at the
+     edges, which separates dark packaging without tinting it. */
   background:
-    radial-gradient(ellipse 65% 55% at 50% 45%, rgba(255, 255, 255, 0.035), transparent 70%),
+    radial-gradient(
+      ellipse 62% 58% at 50% 46%,
+      rgba(255, 255, 255, 0.15),
+      rgba(255, 255, 255, 0.07) 42%,
+      rgba(255, 255, 255, 0.02) 68%,
+      transparent 82%
+    ),
     var(--sc-bg);
   border-bottom: 1px solid var(--sc-border);
 }
@@ -1624,20 +1634,6 @@ th[aria-sort="descending"] .sc-sort-btn::after {
 .sc-tile:hover .sc-tile-art svg,
 .sc-tile:hover .sc-tile-art img {
   transform: translateY(-4px);
-}
-
-/* Retailer photos shot on a solid sweep carry their own background colour,
-   measured from the file and passed in as --sc-art-bg. Filling the art area
-   with it makes the photograph meet the card edges instead of sitting on the
-   dark stage as a pasted rectangle. Transparent renders keep the stage. */
-.sc-art-plate {
-  background: var(--sc-art-bg, var(--sc-paper)) !important;
-  border-bottom-color: rgba(0, 0, 0, 0.25);
-}
-
-.sc-art-plate img {
-  max-height: 100%;
-  max-width: 100%;
 }
 
 .sc-tile-top {
@@ -1753,37 +1749,65 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   white-space: nowrap;
 }
 
-/* Card action row. Deliberately quiet: two text-weight controls, no filled
-   button. The accent stays rare enough to mean something. */
+/* Card action row. The price link is the affiliate click — the one place the
+   site earns — so it is the filled control and takes the width. The shortlist
+   toggle sits beside it as a quiet icon square. */
 .sc-tile-ctas {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  align-items: stretch;
+  gap: 8px;
   padding: 10px 16px 14px;
   border-top: 1px solid var(--sc-border);
 }
 
 .sc-tile-price {
-  color: var(--sc-accent);
-  font-weight: 600;
-  font-size: 0.85rem;
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--sc-accent);
+  color: var(--sc-accent-ink);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
   text-decoration: none;
   white-space: nowrap;
-  border-bottom: 1px solid transparent;
-  padding: 4px 0;
+  padding: 10px 14px;
+  border-radius: var(--sc-radius-sm);
+  transition: background-color 0.15s ease, transform 0.12s ease;
 }
 
-.sc-tile-price:hover {
-  color: var(--sc-accent-down);
-  border-bottom-color: currentColor;
+.sc-tile-price:hover,
+.sc-tile-price:focus-visible {
+  background: var(--sc-accent-down);
+  transform: translateY(-1px);
 }
 
+.sc-tile-price .sc-ext {
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+/* Icon-only at tile scale: the label is carried by the aria-label and the
+   tooltip, so the button does not compete with the price control. */
 .sc-tile-ctas .sc-save-btn {
   width: auto;
-  padding: 6px 10px;
+  flex: 0 0 auto;
+  padding: 8px 12px;
   border-style: solid;
-  border-color: var(--sc-border);
+  border-color: var(--sc-border-strong);
+  border-radius: var(--sc-radius-sm);
+}
+
+.sc-tile-ctas .sc-save-btn .sc-save-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 /* --- Product page: identity, stats, buy box --- */
@@ -2045,8 +2069,15 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* Same lit stage as the tile art, a touch wider for the larger frame. */
   background:
-    radial-gradient(ellipse 70% 60% at 50% 45%, rgba(255, 255, 255, 0.04), transparent 70%),
+    radial-gradient(
+      ellipse 66% 62% at 50% 46%,
+      rgba(255, 255, 255, 0.16),
+      rgba(255, 255, 255, 0.07) 44%,
+      rgba(255, 255, 255, 0.02) 70%,
+      transparent 84%
+    ),
     var(--sc-surface);
   border: 1px solid var(--sc-border);
   border-radius: var(--sc-radius);
