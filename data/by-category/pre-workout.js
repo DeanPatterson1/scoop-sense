@@ -48,6 +48,49 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=legion+pulse+pre+workout&tag=YOURTAG-20",
     "blurb": "A fully disclosed formula that publishes every dose — and a label with two speeds. The famous 350 mg caffeine figure is the two-scoop maximum; Legion's own default serving is one scoop.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.6,
+        "count": 22585,
+        "source": {
+          "url": "https://legionathletics.com/products/pulse/",
+          "label": "Legion Athletics — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Legion Pulse earns trust for a fully-dosed, third-party-tested label and steady energy and focus, with flavor being the main lukewarm point.",
+        "points": [
+          {
+            "label": "Trusted, transparent dosing",
+            "tone": "positive",
+            "note": "Users value that the label is fully dosed and third-party tested, using it as a reliable base formula."
+          },
+          {
+            "label": "Noticeable energy and focus",
+            "tone": "positive",
+            "note": "Regular users report improved energy, focus, and recovery between sets."
+          },
+          {
+            "label": "Flavor",
+            "tone": "mixed",
+            "note": "Flavor reviews run lukewarm, described as tolerable but unremarkable."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.reddit.com/r/Supplements/comments/ag2i5j/legion_pulse/",
+            "label": "r/Supplements thread, 2019",
+            "quote": "Yeah, it's what I use as a base for my pre-workouts, it's solid and priced alright and I know everything will be tested and proper in it."
+          },
+          {
+            "url": "https://www.reddit.com/r/Supplements/comments/sj3uaf/legion_pulse_or_gorilla_mode/",
+            "label": "r/Supplements thread, 2022",
+            "quote": "Been using Legion Pulse for like 2 weeks 3-5 times /week. I got blue raspberry and the flavor is meh but tolerable. I get a little energy and I noticed my recovery time between sets has improved."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/legion-pulse.png",
     "images": [
       "https://legionathletics.com/wp-content/uploads/2025/09/Pulse-20S-STRW-BLAST-B-USA-1000x1000-Roman-Berezecky.png",
@@ -109,6 +152,54 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=transparent+labs+bulk+pre+workout&tag=YOURTAG-20",
     "blurb": "Citrulline, beta-alanine, and betaine all at studied doses with a fully disclosed label; caffeine stays moderate at 200 mg.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.7,
+        "count": 4986,
+        "source": {
+          "url": "https://www.transparentlabs.com/products/bulk-preworkout",
+          "label": "Transparent Labs — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Transparent Labs Bulk is consistently seen as offering strong value and a clean, transparent label compared to rival stimulant pre-workouts.",
+        "points": [
+          {
+            "label": "Transparent, well-dosed label",
+            "tone": "positive",
+            "note": "Users repeatedly point to Bulk's fully disclosed label as a standout compared to proprietary-blend competitors."
+          },
+          {
+            "label": "Strong value",
+            "tone": "positive",
+            "note": "More servings per container at a lower price than premium rivals makes it a frequent value pick."
+          },
+          {
+            "label": "Lower caffeine than some rivals",
+            "tone": "mixed",
+            "note": "A few users note its caffeine dose is lower than higher-stim competitors, which some read as gentler and others as less intense."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.reddit.com/r/Preworkoutsupplements/comments/11my3tr/is_c4_a_good_preworkout/",
+            "label": "r/Preworkoutsupplements thread, 2023",
+            "quote": "Transparent Labs Bulk has 200mg caffeine and a much MUCH better label."
+          },
+          {
+            "url": "https://www.reddit.com/r/Preworkoutsupplements/comments/1cu1ioi/kaged_prekaged_elite_vs_transparent_labs_bulk/",
+            "label": "r/Preworkoutsupplements thread, 2024",
+            "quote": "I've had Elite but never Bulk, that being said I'd go with Bulk. More servings for a lower price. Bulk still has a nice label and lower caffeine amount."
+          },
+          {
+            "url": "https://www.reddit.com/r/Preworkoutsupplements/comments/1cu1ioi/kaged_prekaged_elite_vs_transparent_labs_bulk/",
+            "label": "r/Preworkoutsupplements thread, 2024",
+            "quote": "Bulk Black is a better value. If I had to pay, I'd buy Black vs Elite."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/transparent-labs-bulk.png",
     "images": [
       "https://cdn.shopify.com/s/files/1/0866/7664/files/TL_Bulk_30S_BR_1_1_1defd9cb-a9d2-4603-9509-7b02cd578d47.png?v=1745871768",
@@ -163,6 +254,54 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=gorilla+mode+pre+workout&tag=YOURTAG-20",
     "blurb": "Reformulated in 2024 (\"Gorilla Mode 2.0\") into one of the heaviest fully disclosed formulas around — roughly 40 g of actives and 400 mg caffeine at the two-scoop maximum. The fine print matters: one scoop is a very different product.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.7,
+        "count": 6088,
+        "source": {
+          "url": "https://gorillamind.com/products/gorilla-mode",
+          "label": "Gorilla Mind — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Gorilla Mode has a reputation as a heavily dosed, strong stimulant pre-workout that some find rough on the stomach, while others find it effective but unremarkable to drink.",
+        "points": [
+          {
+            "label": "Strong stimulant / pump effect",
+            "tone": "positive",
+            "note": "Users report intense energy and pumps, strong enough that some avoid taking it before cardio."
+          },
+          {
+            "label": "Stomach discomfort",
+            "tone": "negative",
+            "note": "The large scoop size and heavy dosing lead several users to report stomach heaviness or GI upset."
+          },
+          {
+            "label": "Unremarkable experience",
+            "tone": "mixed",
+            "note": "Some describe the product as effective but not particularly exciting to drink."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.reddit.com/r/Supplements/comments/oaftkc/just_picked_up_some_gorilla_modeonly_sup_i_take/",
+            "label": "r/Supplements thread, 2021",
+            "quote": "Don't take it before running unless you want debilitating calf pumps."
+          },
+          {
+            "url": "https://www.reddit.com/r/Preworkoutsupplements/comments/1oprfst/stomach_issues_from_gorilla_mode/",
+            "label": "r/Preworkoutsupplements thread, 2025",
+            "quote": "It's probably due to the fact it's a heavy ass dose. Weighs heavy on my stomach too. GM gets the least use of any of my dailys"
+          },
+          {
+            "url": "https://www.reddit.com/r/Preworkoutsupplements/comments/1kbo0fa/gorilla_mode_review/",
+            "label": "r/Preworkoutsupplements thread, 2025",
+            "quote": "nothing really exciting about Gorilla Mode, like oh I can't wait until I take it again!"
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/gorilla-mode.png",
     "images": [
       "https://gorillamind.com/cdn/shop/files/GM_HERO_Mode_FruitPunch_working_020626_1_1.png?v=1782938669",
@@ -231,6 +370,44 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=c4+original+pre+workout&tag=YOURTAG-20",
     "blurb": "The gateway pre-workout grew up: the 2024 fifth-generation formula raised caffeine to 200 mg, roughly doubled the scoop, and dropped the proprietary blend entirely. Still cheap, still everywhere — now with every dose on the label.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.7,
+        "count": 56,
+        "source": {
+          "url": "https://cellucor.com/products/c4-original",
+          "label": "Cellucor — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Community sentiment on the classic C4 formula skews negative among experienced lifters, who call it underdosed and knock the flavor, while a few say it's a fine low-caffeine starting point.",
+        "points": [
+          {
+            "label": "Underdosed / outdated formula",
+            "tone": "negative",
+            "note": "Long-time users frequently call the classic C4 formula too weak or outdated compared to newer pre-workouts on the market."
+          },
+          {
+            "label": "Flavor complaints",
+            "tone": "negative",
+            "note": "Taste draws recurring criticism, with some describing certain batches as unpleasant."
+          },
+          {
+            "label": "Fine for beginners",
+            "tone": "mixed",
+            "note": "A few users note its lower caffeine dose makes it a reasonable starting point for people new to pre-workout or sensitive to stimulants."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.reddit.com/r/Preworkoutsupplements/comments/1n1dn8r/i_tried_c4_for_the_first_time_it_tastes_like_pee/",
+            "label": "r/Preworkoutsupplements thread, 2025",
+            "quote": "C4 is probably one of the worst pres you can take."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/c4-original.png",
     "images": [
       "https://cellucor.com/cdn/shop/files/C4AN_1002_Brand_C4YellowLabel_Transition_C4Original_CoreFlavors_BasicPDPs-OG-IBR-Hero-Grey.png?v=1773235672",
@@ -291,6 +468,44 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=redcon1+total+war+pre+workout&tag=YOURTAG-20",
     "blurb": "Two caffeine forms totaling 320 mg with beta-alanine at the standard studied dose; the formula leans on stimulants over pump ingredients.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.7,
+        "count": 241,
+        "source": {
+          "url": "https://www.iherb.com/pr/redcon1-total-war-pre-workout-blue-raspberry-15-77-oz-447-g/132937",
+          "label": "iHerb — Redcon1 Total War (Blue Raspberry) listing"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Total War draws a split reaction: some call it their favorite daily pre-workout for clean energy, while others find it only okay and use it mainly as a mild stim base.",
+        "points": [
+          {
+            "label": "Clean, reliable energy",
+            "tone": "positive",
+            "note": "Several long-time users say it agrees well with them and delivers consistent workouts."
+          },
+          {
+            "label": "Seen as mild by some",
+            "tone": "mixed",
+            "note": "Other users find it just okay for energy and wouldn't seek it out on its own, using it mainly as a base for a stronger homemade blend."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.reddit.com/r/Preworkoutsupplements/comments/1c990qc/redcon1_total_war_exposed_not_what_i_expected/",
+            "label": "r/Preworkoutsupplements thread, 2024",
+            "quote": "So weird man, I love Total War lol probably my favorite preworkout actually. Since it's healthy."
+          },
+          {
+            "url": "https://www.reddit.com/r/Preworkoutsupplements/comments/1c990qc/redcon1_total_war_exposed_not_what_i_expected/",
+            "label": "r/Preworkoutsupplements thread, 2024",
+            "quote": "It's not great but it'll get the job done from an energy standpoint. I will use it as the stim portion of my a homemade pre of pump, endurance and focus."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/total-war.png",
     "images": [
       "https://cdn.shopify.com/s/files/1/1304/0433/products/TW_BAJABOMB_30SERV_FLV-2023.png?v=1738267227",
@@ -380,6 +595,54 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=ghost+legend+pre+workout&tag=YOURTAG-20",
     "blurb": "Fully disclosed at 250 mg of caffeine; citrulline runs below the range most studies use.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.9,
+        "count": 20,
+        "source": {
+          "url": "https://www.iherb.com/pr/ghost-legend-pre-workout-orange-cream-23-3-oz-660-g/147691",
+          "label": "iHerb — Ghost Legend (Orange Cream) listing"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Ghost Legend is seen as a reliable, good-tasting daily pre-workout by fans, though niche enthusiast communities view it as a basic mass-market pick, and a few report GI discomfort from the pump formula.",
+        "points": [
+          {
+            "label": "Flavor and reliability",
+            "tone": "positive",
+            "note": "Fans call it a solid 'daily driver' with good flavoring among mainstream options."
+          },
+          {
+            "label": "Seen as basic/mass-market",
+            "tone": "negative",
+            "note": "Boutique pre-workout enthusiasts often steer newcomers toward smaller brands instead of big-retailer options like Ghost."
+          },
+          {
+            "label": "Occasional GI discomfort",
+            "tone": "mixed",
+            "note": "A few users report stomach issues tied to the pump-formula ingredients, though most describe the product as generally fine."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.reddit.com/r/Preworkoutsupplements/comments/1fbj7r8/mother_bucker_vs_ryse_godzilla_vs_gorilla_mode_vs/",
+            "label": "r/Preworkoutsupplements thread, 2024",
+            "quote": "Having used ghost legend all out edition I'd suggest ghost, nice flavouring, daily driver. Safe and solid option."
+          },
+          {
+            "url": "https://www.reddit.com/r/Preworkoutsupplements/comments/1ri10ay/ghost_legend_v4/",
+            "label": "r/Preworkoutsupplements thread, 2025",
+            "quote": "You can do better than stuff that's available at big retailers. Look at El Jefe Guerilla or Crack Daily to start with."
+          },
+          {
+            "url": "https://www.reddit.com/r/Preworkoutsupplements/comments/1l46rpe/ghost_legend_all_out_preworkout_weird_stomach/",
+            "label": "r/Preworkoutsupplements thread, 2025",
+            "quote": "Ghost pump formula is usually ok but ive experienced that with other things they sell."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/ghost-legend.png",
     "images": [
       "https://cdn.shopify.com/s/files/1/2060/6331/files/LegendxWelchs.webp?v=1761234119",
@@ -427,6 +690,49 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=alani+nu+pre+workout&tag=YOURTAG-20",
     "blurb": "Disclosed label at 200 mg of caffeine; citrulline reaches the studied range while beta-alanine and tyrosine sit below it.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.8,
+        "count": 257,
+        "source": {
+          "url": "https://alaninu.com/products/pre-workout",
+          "label": "Alani Nu — official product page (Cosmic Stardust flavor listing)"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "A viral quality-control complaint about a foreign object in a scoop has left a lasting negative impression of Alani Nu in the wider supplement community, and some regular users say the tingles and kick fade with continued use.",
+        "points": [
+          {
+            "label": "Viral QC complaint",
+            "tone": "negative",
+            "note": "A widely upvoted report of a foreign object found in a scoop drew sharp criticism of the brand's quality control from the broader supplement community."
+          },
+          {
+            "label": "Effects fade with regular use",
+            "tone": "mixed",
+            "note": "Some regular users say the tingles and kick they once liked become less noticeable as tolerance builds."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.reddit.com/r/Supplements/comments/zg70l3/nearly_just_died_choking_and_prying_this_out_of/",
+            "label": "r/Supplements thread, 2022",
+            "quote": "Alani Nu is arguably one of the worst suuplement brands on the market right now. Not surprised in the slightest they don't give a shit about QC"
+          },
+          {
+            "url": "https://www.reddit.com/r/Supplements/comments/zg70l3/nearly_just_died_choking_and_prying_this_out_of/",
+            "label": "r/Supplements thread, 2022",
+            "quote": "A slip-up like this makes me concerned for their quality control around the board. Yikes. Glad you're okay!"
+          },
+          {
+            "url": "https://www.reddit.com/r/Preworkoutsupplements/comments/16gz25v/pre_workout_for_everyday_use/",
+            "label": "r/Preworkoutsupplements thread, 2023",
+            "quote": "I like the tingles but the alani just isn't doing it for me anymore."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/alani-nu-pre-workout.png",
     "images": [
       "https://cdn.shopify.com/s/files/1/0035/4654/6274/files/Stretch_AN-Website-30serv-PWO-PDP-GXL-01_V2.png?v=1782416587",
@@ -479,6 +785,54 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=ryse+godzilla+pre+workout&tag=YOURTAG-20",
     "blurb": "The current label reaches 400 mg of caffeine at two scoops (350 mg anhydrous plus 50 mg extended-release) with 9 g of citrulline and beta-alanine at double the studied dose; older 388 mg panels still circulate.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.9,
+        "count": 3101,
+        "source": {
+          "url": "https://rysesupps.com/products/godzilla-pre-workout",
+          "label": "RYSE Supps — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "RYSE Godzilla is a favorite in the boutique pre-workout community for strong focus and tingles, with a bold flavor profile that not everyone loves and mixed rankings against rival stims.",
+        "points": [
+          {
+            "label": "Strong focus and tingles",
+            "tone": "positive",
+            "note": "Fans say the beta-alanine dosing gives noticeable focus and tingling, preferring it over some rival stims."
+          },
+          {
+            "label": "Bold, polarizing flavor",
+            "tone": "mixed",
+            "note": "The tart, salty flavor is described as strong and enjoyable by some, though it may not suit everyone and can need extra water to dilute."
+          },
+          {
+            "label": "Mixed vs. rival stim pres",
+            "tone": "mixed",
+            "note": "Some users rank it above alternatives like Gorilla Mode, while others in head-to-head comparisons still prefer the competition."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.reddit.com/r/Preworkoutsupplements/comments/tdh9ic/ryse_godzilla/",
+            "label": "r/Preworkoutsupplements thread, 2022",
+            "quote": "I've tried Bamf Black, Gorilla Mode, and Godzilla. I honestly prefer Godzilla over the other 2, Focus is way better and theres beta alanine in godzilla."
+          },
+          {
+            "url": "https://www.reddit.com/r/Preworkoutsupplements/comments/tdh9ic/ryse_godzilla/",
+            "label": "r/Preworkoutsupplements thread, 2022",
+            "quote": "the flavor on godzilla was pretty good a nice tart lime berry with a little saltiness to it i could see how some wouldn't like it"
+          },
+          {
+            "url": "https://www.reddit.com/r/Preworkoutsupplements/comments/1fbj7r8/mother_bucker_vs_ryse_godzilla_vs_gorilla_mode_vs/",
+            "label": "r/Preworkoutsupplements thread, 2024",
+            "quote": "Ive used mb godzilla & gm & by far gm is my choice of the 3"
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/ryse-godzilla.png",
     "images": [
       "https://m.media-amazon.com/images/I/718qUjKuwAL._AC_SL1500_.jpg",
@@ -545,6 +899,54 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=bucked+up+pre+workout&tag=YOURTAG-20",
     "blurb": "Disclosed label at 200 mg of caffeine; deer antler velvet is a brand signature with little human research behind it.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.9,
+        "count": 635,
+        "source": {
+          "url": "https://www.buckedup.com/shop/pre-workout-supplement",
+          "label": "Bucked Up — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Bucked Up's flavors get consistent praise, though several users warn of a harsh energy crash and rate the effects as merely average compared to other high-stim pres.",
+        "points": [
+          {
+            "label": "Well-liked flavors",
+            "tone": "positive",
+            "note": "Bucked Up's flavors are repeatedly named among the better-tasting options in the category."
+          },
+          {
+            "label": "Harsh crash reported",
+            "tone": "negative",
+            "note": "Some users say the comedown is harsh, similar to the brand's caffeinated energy drinks."
+          },
+          {
+            "label": "Average effects for some",
+            "tone": "mixed",
+            "note": "Other users keep several Bucked Up products in rotation but describe them as unremarkable rather than standout."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.reddit.com/r/Preworkoutsupplements/comments/12l29r1/pres_that_actually_taste_good/",
+            "label": "r/Preworkoutsupplements thread, 2023",
+            "quote": "Bucked up flavors always good"
+          },
+          {
+            "url": "https://www.reddit.com/r/Preworkoutsupplements/comments/1q79cd8/question_for_buckedup/",
+            "label": "r/Preworkoutsupplements thread, 2025",
+            "quote": "It tastes very similar to the energy drink but the crash will be harsh"
+          },
+          {
+            "url": "https://www.reddit.com/r/Preworkoutsupplements/comments/1o8raxe/do_the_bucked_up_formulas_such_as_woke_af_that/",
+            "label": "r/Preworkoutsupplements thread, 2025",
+            "quote": "Yup. It's all the same. But also, meh... I have a bunch of BU products. They're aight."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/bucked-up.png",
     "images": [
       "https://www.buckedup.com/cdn-cgi/image/width=1200,format=auto,quality=85/public/upload%2Fimg%2Fproducts%2F162-buckedup-pre-workout-rocket-pop-11oz.webp",
@@ -644,6 +1046,54 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=pre+kaged+pre+workout&tag=YOURTAG-20",
     "blurb": "Plant-sourced 274 mg of caffeine with citrulline in the studied range; creatine and beta-alanine sit below studied amounts.",
     "labelVerified": "July 2026",
+    "reviews": {
+      "seller": {
+        "rating": 4.8,
+        "count": 2554,
+        "source": {
+          "url": "https://kaged.com/products/pre-kaged",
+          "label": "Kaged — official product page"
+        },
+        "checked": "July 2026"
+      },
+      "community": {
+        "takeaway": "Pre-Kaged is respected for a fully-dosed, transparent label and strong pumps, though some feel the premium for patented ingredient forms isn't worth it versus cheaper alternatives.",
+        "points": [
+          {
+            "label": "Fully-dosed, transparent label",
+            "tone": "positive",
+            "note": "Users highlight clinically-dosed ingredients like L-Citrulline as a standout, calling the label 'stacked'."
+          },
+          {
+            "label": "Strong pumps",
+            "tone": "positive",
+            "note": "The high citrulline dose is credited with noticeably strong vascularity and pumps."
+          },
+          {
+            "label": "Pricier for patented ingredients",
+            "tone": "mixed",
+            "note": "Some feel the premium for trademarked ingredient forms isn't worth it compared to cheaper alternatives with similar profiles."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.reddit.com/r/Preworkoutsupplements/comments/13r2s6n/prekaged_elite_review_insane_pump/",
+            "label": "r/Preworkoutsupplements thread, 2023",
+            "quote": "the label is stacked. I mean seriously, come on, look at the L-Citrulline dosage for goodness sake."
+          },
+          {
+            "url": "https://www.reddit.com/r/Preworkoutsupplements/comments/13r2s6n/prekaged_elite_review_insane_pump/",
+            "label": "r/Preworkoutsupplements thread, 2023",
+            "quote": "the vascularity is from the 10g of citrulline, pretty much the maximum effective dosage."
+          },
+          {
+            "url": "https://www.reddit.com/r/Preworkoutsupplements/comments/1cu1ioi/kaged_prekaged_elite_vs_transparent_labs_bulk/",
+            "label": "r/Preworkoutsupplements thread, 2024",
+            "quote": "Kaged looks good and stacked, would still go with the other one. Good price and you are not paying for trademarked creatine and beta alanine."
+          }
+        ]
+      }
+    },
     "imageUrl": "images/products/kaged-pre-kaged.png",
     "images": [
       "https://www.kaged.com/cdn/shop/files/Preworkoutstrawberrylemonadefront_383553b6-4ffd-4f57-8253-9d5674e0ed96.png?v=1774411038&width=1600",
