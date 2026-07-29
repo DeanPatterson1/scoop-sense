@@ -484,6 +484,10 @@ var PRODUCTS = [
       "https://www.optimumnutrition.com/cdn/shop/files/on-1116316_Image_01_62f70313-b8a4-4c2c-ab3f-1049763310bd.png?v=1761914250&width=2000"
     ],
     "metrics": {
+      "calories": 120,
+      "fatG": 1,
+      "carbsG": 4,
+      "netWeightG": 1814,
       "proteinG": 24,
       "servingG": 34,
       "source": "casein",
@@ -597,6 +601,10 @@ var PRODUCTS = [
       "https://orgain.com/cdn/shop/files/851770003919-v8-Orgain-ProteinPowder-1.02lb-Label-Chocolate-20240311-Front-HIRES-web_1200px.webp"
     ],
     "metrics": {
+      "calories": 150,
+      "fatG": 4.5,
+      "carbsG": 15,
+      "netWeightG": 921,
       "proteinG": 21,
       "servingG": 46,
       "source": "plant blend",
@@ -716,6 +724,12 @@ var PRODUCTS = [
       "https://myvega.com/cdn/shop/files/Vega_Performance_Protein_Recovery_Vanilla_29oz.png?width=1200"
     ],
     "metrics": {
+      "calories": 170,
+      "fatG": 3,
+      "carbsG": 6,
+      "netWeightG": 828,
+      "leucineG": 2.4,
+      "certification": "Informed Choice",
       "proteinG": 30,
       "servingG": 44,
       "source": "plant blend",
@@ -828,6 +842,11 @@ var PRODUCTS = [
       "https://www.nowfoods.com/sites/default/files/2025-11/2172_v13.png"
     ],
     "metrics": {
+      "calories": 110,
+      "fatG": 0.5,
+      "carbsG": 1,
+      "netWeightG": 2268,
+      "leucineG": 2.7,
       "proteinG": 25,
       "servingG": 28,
       "source": "whey isolate",
@@ -936,6 +955,10 @@ var PRODUCTS = [
       "https://www.muscletech.com/cdn/shop/files/mt-nitro-tech-100-whey-gold-french-vanilla-2lb_5eb1c01a-5fe3-44fd-8754-a06f77818fae.png"
     ],
     "metrics": {
+      "calories": 120,
+      "fatG": 2,
+      "carbsG": 2,
+      "netWeightG": 2268,
       "proteinG": 24,
       "servingG": 33,
       "source": "whey blend",
@@ -1079,6 +1102,10 @@ var PRODUCTS = [
     "blurb": "Genuine uses a casein-dominant milk protein blend rather than whey-only, so it digests more slowly than most whey powders; the brand's own product page confirms NSF Certified for Sport status.",
     "labelVerified": "July 2026",
     "metrics": {
+      "calories": 310,
+      "fatG": 12,
+      "carbsG": 19,
+      "netWeightG": 2240,
       "proteinG": 32,
       "servingG": 70,
       "source": "milk protein blend",
@@ -1130,6 +1157,9 @@ var PRODUCTS = [
       "https://www.sixstarpro.com/cdn/shop/files/ss-100-whey-protein-plus-strawberry-smoothie.jpg?v=1759761758&width=1200"
     ],
     "metrics": {
+      "calories": 180,
+      "fatG": 3,
+      "carbsG": 8,
       "proteinG": 30,
       "servingG": 47,
       "source": "whey blend",
@@ -1351,6 +1381,10 @@ var PRODUCTS = [
       "https://www.optimumnutrition.com/cdn/shop/files/ONUS-gold-standard-isolate_Label_Chocolate-Bliss_3lb_44-servings.jpg?v=1761315069&width=1000"
     ],
     "metrics": {
+      "calories": 110,
+      "fatG": 0.5,
+      "carbsG": 1,
+      "netWeightG": 1361,
       "proteinG": 25,
       "servingG": 31,
       "source": "whey isolate",
@@ -1450,6 +1484,10 @@ var PRODUCTS = [
       "https://www.theisopurecompany.com/cdn/shop/files/US_ZeroCarb_4.2lb_Creamy_Vanilla_FOP.png?v=1783003070&width=2500"
     ],
     "metrics": {
+      "calories": 100,
+      "fatG": 0,
+      "carbsG": 0,
+      "netWeightG": 1225,
       "proteinG": 25,
       "servingG": 31,
       "source": "whey isolate",
@@ -1502,6 +1540,9 @@ var PRODUCTS = [
       "https://musclepharm.com/cdn/shop/files/MP-Combat-AMZ-StackedTiles-Chocolate-2lb-05_db461423-4bd3-4ee1-9b96-c4774f8cf1a6.jpg?v=1770923567&width=2000"
     ],
     "metrics": {
+      "calories": 130,
+      "fatG": 1.5,
+      "carbsG": 5,
       "proteinG": 25,
       "servingG": 37,
       "source": "whey/egg/milk protein blend",
@@ -1658,6 +1699,8 @@ var PRODUCTS = [
       "https://www.livemomentous.com/cdn/shop/files/Whey-Protein_25-Serv_Unflavored.png"
     ],
     "metrics": {
+      "calories": 90,
+      "certification": "NSF Certified for Sport",
       "proteinG": 20,
       "servingG": 26,
       "source": "whey isolate",
@@ -1704,6 +1747,9 @@ var PRODUCTS = [
     "blurb": "An unflavored, unsweetened 20-gram whey isolate scoop with just whey protein isolate and sunflower lecithin on the label, NSF Certified for Sport and used by over 350 professional and collegiate sports teams.",
     "labelVerified": "July 2026",
     "metrics": {
+      "calories": 85,
+      "carbsG": 1,
+      "certification": "NSF Certified for Sport",
       "proteinG": 20,
       "servingG": 22.3,
       "source": "whey isolate",
@@ -1766,6 +1812,12 @@ var PRODUCTS = [
       "https://d1vo8zfysxy97v.cloudfront.net/media/product/sp111__v7583bad18bef72094fa64af52a30940d1e5cf75f.jpg"
     ],
     "metrics": {
+      "calories": 100,
+      "fatG": 0.5,
+      "carbsG": 3,
+      "netWeightG": 837,
+      "leucineG": 2.2,
+      "certification": "NSF Certified for Sport",
       "proteinG": 21,
       "servingG": 28,
       "source": "whey isolate",
@@ -1941,6 +1993,11 @@ var PRODUCTS = [
       "https://www.bareperformancenutrition.com/cdn/shop/files/014_WHEY_RENDERS_Chocolate.jpg?v=1770223274&width=1200"
     ],
     "metrics": {
+      "calories": 130,
+      "fatG": 2,
+      "carbsG": 4,
+      "netWeightG": 933,
+      "certification": "NSF Certified for Sport",
       "proteinG": 25,
       "servingG": 34,
       "source": "whey concentrate + casein blend",
@@ -1988,6 +2045,10 @@ var PRODUCTS = [
       "https://jockofuel.com/cdn/shop/files/CHOC_NFP.jpg?v=1758807658&width=1946"
     ],
     "metrics": {
+      "calories": 120,
+      "fatG": 2.5,
+      "carbsG": 5,
+      "netWeightG": 907,
       "proteinG": 22,
       "servingG": 34,
       "source": "whey concentrate/isolate, casein, and egg white protein blend",
@@ -2036,6 +2097,9 @@ var PRODUCTS = [
       "https://1stphorm.com/cdn/shop/files/level-1-birthday-cake_1800x1800.png?v=1775830789"
     ],
     "metrics": {
+      "calories": 130,
+      "fatG": 2,
+      "carbsG": 2,
       "proteinG": 23,
       "servingG": 33,
       "source": "whey concentrate",
@@ -2088,6 +2152,10 @@ var PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/0645/6465/files/unflavored-whey-protein-powder-nutrition-facts-5LB.jpg?v=1782960921"
     ],
     "metrics": {
+      "calories": 120,
+      "fatG": 2,
+      "carbsG": 3,
+      "netWeightG": 2270,
       "proteinG": 25,
       "servingG": 30,
       "source": "whey protein concentrate",
@@ -2265,6 +2333,10 @@ var PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/3002/1936/files/USA-WarriorBlend4-750g-Van-Right-Opt_9c3e5ac5-3eb0-4856-9dca-459c87b05ad3.png"
     ],
     "metrics": {
+      "calories": 100,
+      "fatG": 2,
+      "carbsG": 2,
+      "netWeightG": 750,
       "proteinG": 17,
       "servingG": 25,
       "source": "plant blend (pea, hemp, goji)",
@@ -2322,6 +2394,10 @@ var PRODUCTS = [
       "https://web.archive.org/web/20240228050812im_/https://www.gardenoflife.com/media/catalog/product/6/5/658010116039-1_1.jpg"
     ],
     "metrics": {
+      "calories": 110,
+      "fatG": 2.5,
+      "carbsG": 2,
+      "netWeightG": 660,
       "proteinG": 22,
       "servingG": 33,
       "source": "plant blend (pea, sprouted brown rice + 12 sprouts)",
@@ -2433,6 +2509,10 @@ var PRODUCTS = [
       "https://nutiva.com/cdn/shop/files/PRO405_R_628x612_6de67de9-d5ec-4c12-a681-19cbc941ce03.webp?v=1774905922"
     ],
     "metrics": {
+      "calories": 110,
+      "fatG": 3,
+      "carbsG": 8,
+      "netWeightG": 454,
       "proteinG": 15,
       "servingG": 30,
       "source": "hemp seed protein",
@@ -2494,6 +2574,10 @@ var PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/0794/9991/9627/files/on-1117733_Image_01.png"
     ],
     "metrics": {
+      "calories": 150,
+      "fatG": 3.5,
+      "carbsG": 5,
+      "certification": "Informed Choice",
       "proteinG": 24,
       "servingG": 37,
       "source": "plant blend (pea, fava bean, brown rice)",
@@ -2545,6 +2629,10 @@ var PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/2538/3594/products/Truvani_Mockup_Chocolate-Protein_c272f832-b4b7-4349-871f-06de81c94395.png?v=1771428322"
     ],
     "metrics": {
+      "calories": 130,
+      "fatG": 3,
+      "carbsG": 5,
+      "netWeightG": 297,
       "proteinG": 20,
       "servingG": 29,
       "source": "plant blend (pea, pumpkin seed, chia)",
@@ -2606,6 +2694,10 @@ var PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/2590/5380/files/Vega_PS_berry_medium_US_1.png?v=1781636929"
     ],
     "metrics": {
+      "calories": 180,
+      "fatG": 3.5,
+      "carbsG": 13,
+      "netWeightG": 510,
       "proteinG": 25,
       "servingG": 46,
       "source": "pea protein + greens",
@@ -2662,6 +2754,10 @@ var PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/1214/5580/files/LEVELS_Whey_2lb_VanillaBean_front_c1161901-e5ed-44b6-a7f7-2f41402593f5.png?v=1774621888"
     ],
     "metrics": {
+      "calories": 130,
+      "fatG": 2.5,
+      "carbsG": 3,
+      "netWeightG": 672,
       "proteinG": 24,
       "servingG": 32,
       "source": "whey concentrate",

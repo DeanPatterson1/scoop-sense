@@ -96,6 +96,7 @@ var PRODUCTS = [
       "https://res.cloudinary.com/drinklmnt/image/upload/f_auto,q_auto/v1759900502/lmnt-citrus-salt-pump-satiety_upwzxr.webp"
     ],
     "metrics": {
+      "form": "stick pack",
       "sodiumMg": 1000,
       "potassiumMg": 200,
       "magnesiumMg": 60,
@@ -206,6 +207,9 @@ var PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/1338/1013/files/HMO_CC_VP_16ct_PDP.jpg?v=1762182365"
     ],
     "metrics": {
+      "calories": 45,
+      "servingMl": 473,
+      "form": "stick pack",
       "sodiumMg": 500,
       "potassiumMg": 380,
       "magnesiumMg": 0,
@@ -315,6 +319,9 @@ var PRODUCTS = [
       "https://nuunlife.com/cdn/shop/files/B018NZJ9YQ.PT04.png?v=1780507263&width=800"
     ],
     "metrics": {
+      "calories": 15,
+      "servingMl": 473,
+      "form": "tablet",
       "sodiumMg": 300,
       "potassiumMg": 150,
       "magnesiumMg": 25,
@@ -412,6 +419,8 @@ var PRODUCTS = [
       "https://dripdrop.com/cdn/shop/files/DripDrop_Pouch_Image_V2_Vizit_Watermelon_-_32ct.png?crop=center&height=1200&v=1763766377&width=1200"
     ],
     "metrics": {
+      "calories": 35,
+      "form": "stick pack",
       "sodiumMg": 330,
       "potassiumMg": 185,
       "magnesiumMg": 39,
@@ -472,6 +481,9 @@ var PRODUCTS = [
       "https://www.datocms-assets.com/101859/1776959958-gatorlyte_orange_pdp_lifestyle_desktop_3708x2780.png?auto=format&fit=max&w=3840"
     ],
     "metrics": {
+      "calories": 45,
+      "netWeightG": 88,
+      "form": "stick pack",
       "sodiumMg": 490,
       "potassiumMg": 350,
       "magnesiumMg": 105,
@@ -537,6 +549,8 @@ var PRODUCTS = [
       "https://www.transparentlabs.com/cdn/shop/files/peachmango40.jpg?v=1780945564&width=1946"
     ],
     "metrics": {
+      "form": "powder tub",
+      "certification": "Informed Choice",
       "sodiumMg": 500,
       "potassiumMg": 250,
       "magnesiumMg": 50,
@@ -645,6 +659,10 @@ var PRODUCTS = [
       "https://www.ultimareplenisher.com/cdn/shop/files/Original_Flavor_Stickpacks.jpg?v=1743096625&width=1600"
     ],
     "metrics": {
+      "calories": 0,
+      "netWeightG": 96,
+      "servingMl": 473,
+      "form": "powder tub",
       "sodiumMg": 55,
       "potassiumMg": 250,
       "magnesiumMg": 100,
@@ -703,6 +721,8 @@ var PRODUCTS = [
       "https://www.skratchlabs.com/cdn/shop/files/400mg_sodium_per_serving_variety_pack.jpg?v=1778354803&width=800"
     ],
     "metrics": {
+      "calories": 80,
+      "form": "powder tub",
       "sodiumMg": 400,
       "potassiumMg": 50,
       "magnesiumMg": 50,
@@ -761,6 +781,8 @@ var PRODUCTS = [
       "https://tailwindnutrition.com/cdn/shop/files/TW_End_Family_Naked_2000x2000_10286890-1c72-4953-a0ae-fcfd276d1da7_1500x.png?v=1779229565"
     ],
     "metrics": {
+      "calories": 100,
+      "form": "powder tub",
       "sodiumMg": 303,
       "potassiumMg": 88,
       "magnesiumMg": 14,
@@ -823,6 +845,8 @@ var PRODUCTS = [
       "https://living.redmond.com/cdn/shop/files/Re-Lyte_Hydration_60-servings_jar_Lemon_Lime_Front_-_AMZ.jpg?v=1784269649&width=1024"
     ],
     "metrics": {
+      "calories": 0,
+      "form": "powder tub",
       "sodiumMg": 810,
       "potassiumMg": 400,
       "magnesiumMg": 50,
@@ -874,6 +898,10 @@ var PRODUCTS = [
       "https://www.datocms-assets.com/101859/1691723618-10052000322801_gatorade_endurance_formula_orange_producttile_2680x3344.png?ar64=MTox&fit=crop&fp-z=1.4&auto=format&w=256"
     ],
     "metrics": {
+      "calories": 90,
+      "netWeightG": 907,
+      "servingMl": 355,
+      "form": "powder tub",
       "sodiumMg": 300,
       "potassiumMg": 140,
       "magnesiumMg": null,
@@ -933,6 +961,10 @@ var PRODUCTS = [
       "https://www.pedialyte.com/products/powder-packs/grape/_jcr_content/root/container/columncontrol/tab_item_no_1/columncontrol_copy_c/tab_item_no_0/image_copy.coreimg.jpeg/1691150365823/pedialyte-pdp-classic-powderpacks-grape-110x110.jpeg"
     ],
     "metrics": {
+      "calories": 30,
+      "netWeightG": 68,
+      "servingMl": 237,
+      "form": "stick pack",
       "sodiumMg": 260,
       "potassiumMg": 180,
       "magnesiumMg": null,
@@ -993,6 +1025,8 @@ var PRODUCTS = [
       "https://www.pedialyte.com/products/sport-powder-packs/lemon-lime/_jcr_content/root/container/columncontrol/tab_item_no_1/columncontrol_copy_c/tab_item_no_0/image_copy.coreimg.jpeg/1691150034895/pedialyte-pdp-sport-powderpacks-lemonlime-110x110.jpeg"
     ],
     "metrics": {
+      "calories": 40,
+      "form": "stick pack",
       "sodiumMg": 650,
       "potassiumMg": 600,
       "magnesiumMg": 55,
@@ -1048,6 +1082,8 @@ var PRODUCTS = [
       "https://www.datocms-assets.com/101859/1776281628-propel_powder_berry_sachet_producttile_2026_2680x3344.png?ar64=MTox&fit=crop&fp-z=1.4&auto=format&w=256"
     ],
     "metrics": {
+      "servingMl": 591,
+      "form": "stick pack",
       "sodiumMg": 260,
       "potassiumMg": 80,
       "magnesiumMg": null,
@@ -1103,6 +1139,9 @@ var PRODUCTS = [
     "blurb": "Carries the highest total electrolyte load in this lineup, led by 700 mg potassium and 510 mg sodium per stick, in a zero-sugar powder built around coconut water powder.",
     "labelVerified": "July 2026",
     "metrics": {
+      "calories": 15,
+      "netWeightG": 43,
+      "form": "stick pack",
       "sodiumMg": 510,
       "potassiumMg": 700,
       "magnesiumMg": 65,
@@ -1162,6 +1201,8 @@ var PRODUCTS = [
       "https://i-cf65.ch-static.com/content/dam/cf-consumer-healthcare/bp-emergenc/en_US/products/hydration-category.png?auto=format"
     ],
     "metrics": {
+      "calories": 30,
+      "form": "stick pack",
       "sodiumMg": 160,
       "potassiumMg": 400,
       "magnesiumMg": 120,
@@ -1273,6 +1314,8 @@ var PRODUCTS = [
       "https://vitalyte.com/cdn/shop/files/71TOF8t7MML._AC_SL1500.jpg"
     ],
     "metrics": {
+      "calories": 90,
+      "form": "powder tub",
       "sodiumMg": 135,
       "potassiumMg": 193,
       "magnesiumMg": 3,
@@ -1332,6 +1375,9 @@ var PRODUCTS = [
       "https://drinkprime.com/cdn/shop/files/PRIME_stick_16serve_gussted_US_OceanCherry_0000_1000x.png?v=1779132384"
     ],
     "metrics": {
+      "calories": 25,
+      "servingMl": 473,
+      "form": "stick pack",
       "sodiumMg": 40,
       "potassiumMg": 700,
       "magnesiumMg": 124,
@@ -1394,6 +1440,8 @@ var PRODUCTS = [
       "https://zipfizz.com/cdn/shop/files/Product_Color_BG_Orange_Soda_0e12ae1b-adb5-4a10-b30f-c73649e693cd.png?v=1765559704&width=1080"
     ],
     "metrics": {
+      "calories": 20,
+      "form": "stick pack",
       "sodiumMg": 70,
       "potassiumMg": 950,
       "magnesiumMg": 100,
@@ -1686,6 +1734,10 @@ var PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/1515/2714/products/nuun-hydration-nuun-endurance-14599688290367_1200x1200.jpg"
     ],
     "metrics": {
+      "calories": 60,
+      "servingMl": 473,
+      "form": "powder tub",
+      "certification": "Informed Sport",
       "sodiumMg": 380,
       "potassiumMg": 200,
       "magnesiumMg": 20,
@@ -1746,6 +1798,9 @@ var PRODUCTS = [
       "https://aletenutrition.com/cdn/shop/files/SaltStick-FastChews-Lemon-Lime-60ct-Packet_Hero.png?v=1778523638&width=1946"
     ],
     "metrics": {
+      "calories": 10,
+      "form": "chewable",
+      "certification": "Informed Choice",
       "sodiumMg": 100,
       "potassiumMg": 30,
       "magnesiumMg": 6,
@@ -1801,6 +1856,8 @@ var PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/0659/0182/2211/products/efs-fp-tray.png?v=1715723179"
     ],
     "metrics": {
+      "calories": 120,
+      "form": "powder tub",
       "sodiumMg": 300,
       "potassiumMg": 160,
       "magnesiumMg": 150,
@@ -1857,6 +1914,8 @@ var PRODUCTS = [
       "https://hammernutrition.com/cdn/shop/files/HCB32_25_204x.progressive.jpg?v=1747863941"
     ],
     "metrics": {
+      "calories": 110,
+      "form": "powder tub",
       "sodiumMg": 150,
       "potassiumMg": 35,
       "magnesiumMg": 31,
@@ -1968,6 +2027,8 @@ var PRODUCTS = [
       "https://amacx.com/cdn/shop/files/7aeec5b3e7b075e12cc1a69f7860aea10bc89db0_Hydro_tabs_lime_visma_b13b4e1b-3081-45cf-a66c-dbc59c1029db.jpg?v=1783693091&width=800"
     ],
     "metrics": {
+      "form": "tablet",
+      "certification": "Informed Sport",
       "sodiumMg": 205,
       "potassiumMg": 70,
       "magnesiumMg": 56,
@@ -2080,6 +2141,8 @@ var PRODUCTS = [
       "https://www.curehydration.com/cdn/shop/files/Cure-Pouch-Classic-Variety-Front.jpg"
     ],
     "metrics": {
+      "calories": 25,
+      "form": "stick pack",
       "sodiumMg": 240,
       "potassiumMg": 310,
       "magnesiumMg": null,
@@ -2141,6 +2204,7 @@ var PRODUCTS = [
       "https://www.drinkhydrant.com/cdn/shop/files/HYD_Bulk-Grapefruit_PDP_1080_1.png"
     ],
     "metrics": {
+      "form": "stick pack",
       "sodiumMg": 260,
       "potassiumMg": 200,
       "magnesiumMg": 30,
@@ -2203,6 +2267,9 @@ var PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/1110/3248/files/Hydration30servings-AMZ_HydrationSFPRR30srvLarge.jpg?v=1774385176"
     ],
     "metrics": {
+      "calories": 5,
+      "form": "powder tub",
+      "certification": "Informed Sport",
       "sodiumMg": 115,
       "potassiumMg": 107,
       "magnesiumMg": 15,
@@ -2264,6 +2331,9 @@ var PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/0793/7802/2695/files/JF-Hydrate_-Flavor-chart.jpg?v=1782148362"
     ],
     "metrics": {
+      "calories": 5,
+      "servingMl": 473,
+      "form": "stick pack",
       "sodiumMg": 500,
       "potassiumMg": 350,
       "magnesiumMg": 120,
@@ -2324,6 +2394,9 @@ var PRODUCTS = [
     "blurb": "A 3 mL drop dose (about 40 drops) rather than a mixed drink: lower sodium than most powders, but one of the few labels that discloses magnesium (40 mg) and zinc (2 mg) alongside sodium and potassium.",
     "labelVerified": "July 2026",
     "metrics": {
+      "calories": 0,
+      "servingMl": 946,
+      "form": "liquid concentrate",
       "sodiumMg": 125,
       "potassiumMg": 130,
       "magnesiumMg": 40,
@@ -2389,6 +2462,9 @@ var PRODUCTS = [
       "https://shop.drberg.com/cdn/shop/files/Electrolyte_Powder_Lemonade_50_serv_Supplement_Panel_V5_17.12.24-01.jpg"
     ],
     "metrics": {
+      "calories": 15,
+      "servingMl": 473,
+      "form": "powder tub",
       "sodiumMg": 40,
       "potassiumMg": 1000,
       "magnesiumMg": 120,
@@ -2445,6 +2521,7 @@ var PRODUCTS = [
     "blurb": "One of the higher-sodium sticks on the market at 320 mg, layered with a full B-vitamin, taurine, and choline stack that most electrolyte-only mixes leave out.",
     "labelVerified": "July 2026",
     "metrics": {
+      "form": "stick pack",
       "sodiumMg": 320,
       "potassiumMg": 173,
       "magnesiumMg": 74,
@@ -2506,6 +2583,7 @@ var PRODUCTS = [
       "https://www.ghostlifestyle.com/cdn/shop/files/GHOST_Hydration_IcedTeaLemonade_SFP.png?v=1778616848"
     ],
     "metrics": {
+      "form": "powder tub",
       "sodiumMg": 150,
       "potassiumMg": 375,
       "magnesiumMg": 83,

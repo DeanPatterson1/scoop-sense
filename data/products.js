@@ -4497,7 +4497,7 @@ const PRODUCTS = [
       "https://res.cloudinary.com/drinklmnt/image/upload/f_auto,q_auto/v1759900501/lmnt-citrus-salt-open-box-dark_uczoih.webp",
       "https://res.cloudinary.com/drinklmnt/image/upload/f_auto,q_auto/v1759900502/lmnt-citrus-salt-pump-satiety_upwzxr.webp"
     ],
-    "metrics": {
+    "metrics": { "form": "stick pack",
       "sodiumMg": 1000,
       "potassiumMg": 200,
       "magnesiumMg": 60,
@@ -4608,7 +4608,7 @@ const PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/1338/1013/files/Web_-_PDP_Images_-_Static_-_New_HM_Mango_-_Product_Only_-_Pouch_on_Beige_Background_-_2880x2880_8c6ae7c0-f5f9-4b2a-997a-37686529ac9e.png?v=1762182430",
       "https://cdn.shopify.com/s/files/1/1338/1013/files/HMO_CC_VP_16ct_PDP.jpg?v=1762182365"
     ],
-    "metrics": {
+    "metrics": { "calories": 45, "servingMl": 473, "form": "stick pack",
       "sodiumMg": 500,
       "potassiumMg": 380,
       "magnesiumMg": 0,
@@ -4718,7 +4718,7 @@ const PRODUCTS = [
       "https://nuunlife.com/cdn/shop/files/B018NZJ9YQ.PT02.jpg?v=1780507230&width=800",
       "https://nuunlife.com/cdn/shop/files/B018NZJ9YQ.PT04.png?v=1780507263&width=800"
     ],
-    "metrics": {
+    "metrics": { "calories": 15, "servingMl": 473, "form": "tablet",
       "sodiumMg": 300,
       "potassiumMg": 150,
       "magnesiumMg": 25,
@@ -4816,7 +4816,7 @@ const PRODUCTS = [
       "https://dripdrop.com/cdn/shop/files/Bold_Variety_-_32ct_-_Transparent.png?crop=center&height=1200&v=1763672888&width=1200",
       "https://dripdrop.com/cdn/shop/files/DripDrop_Pouch_Image_V2_Vizit_Watermelon_-_32ct.png?crop=center&height=1200&v=1763766377&width=1200"
     ],
-    "metrics": {
+    "metrics": { "calories": 35, "form": "stick pack",
       "sodiumMg": 330,
       "potassiumMg": 185,
       "magnesiumMg": 39,
@@ -4877,7 +4877,7 @@ const PRODUCTS = [
       "https://www.datocms-assets.com/101859/1776959992-gatorlyte_powder_orange_carton_pdpwhatyouget_desktop_2026_1812x2720.png?auto=format&fit=max&w=3840",
       "https://www.datocms-assets.com/101859/1776959958-gatorlyte_orange_pdp_lifestyle_desktop_3708x2780.png?auto=format&fit=max&w=3840"
     ],
-    "metrics": {
+    "metrics": { "calories": 45, "netWeightG": 88, "form": "stick pack",
       "sodiumMg": 490,
       "potassiumMg": 350,
       "magnesiumMg": 105,
@@ -4943,7 +4943,7 @@ const PRODUCTS = [
       "https://www.transparentlabs.com/cdn/shop/files/TL_Hydrate_40S_PM_1_3.png?v=1745607400&width=1946",
       "https://www.transparentlabs.com/cdn/shop/files/peachmango40.jpg?v=1780945564&width=1946"
     ],
-    "metrics": {
+    "metrics": { "form": "powder tub", "certification": "Informed Choice",
       "sodiumMg": 500,
       "potassiumMg": 250,
       "magnesiumMg": 50,
@@ -5052,7 +5052,7 @@ const PRODUCTS = [
       "https://www.ultimareplenisher.com/cdn/shop/files/Variety_Stickpacks.jpg?v=1743096987&width=1600",
       "https://www.ultimareplenisher.com/cdn/shop/files/Original_Flavor_Stickpacks.jpg?v=1743096625&width=1600"
     ],
-    "metrics": {
+    "metrics": { "calories": 0, "netWeightG": 96, "servingMl": 473, "form": "powder tub",
       "sodiumMg": 55,
       "potassiumMg": 250,
       "magnesiumMg": 100,
@@ -5111,7 +5111,7 @@ const PRODUCTS = [
       "https://www.skratchlabs.com/cdn/shop/files/WebsitePDPGalleryRefresh_SDM_LL_440g_01.jpg?v=1765569821&width=800",
       "https://www.skratchlabs.com/cdn/shop/files/400mg_sodium_per_serving_variety_pack.jpg?v=1778354803&width=800"
     ],
-    "metrics": {
+    "metrics": { "calories": 80, "form": "powder tub",
       "sodiumMg": 400,
       "potassiumMg": 50,
       "magnesiumMg": 50,
@@ -5170,7 +5170,7 @@ const PRODUCTS = [
       "https://tailwindnutrition.com/cdn/shop/files/TW_End_Family_Lemon_2000x2000_2f3edef0-6e55-43b7-b349-0ddad82064b7_1500x.png?v=1779229565",
       "https://tailwindnutrition.com/cdn/shop/files/TW_End_Family_Naked_2000x2000_10286890-1c72-4953-a0ae-fcfd276d1da7_1500x.png?v=1779229565"
     ],
-    "metrics": {
+    "metrics": { "calories": 100, "form": "powder tub",
       "sodiumMg": 303,
       "potassiumMg": 88,
       "magnesiumMg": 14,
@@ -5233,7 +5233,7 @@ const PRODUCTS = [
       "https://living.redmond.com/cdn/shop/files/Grape_For_web_Front_7af57f43-2abb-4a05-8fb0-b4dab9212cb9.jpg?v=1770922504&width=1024",
       "https://living.redmond.com/cdn/shop/files/Re-Lyte_Hydration_60-servings_jar_Lemon_Lime_Front_-_AMZ.jpg?v=1784269649&width=1024"
     ],
-    "metrics": {
+    "metrics": { "calories": 0, "form": "powder tub",
       "sodiumMg": 810,
       "potassiumMg": 400,
       "magnesiumMg": 50,
@@ -5724,7 +5724,7 @@ const PRODUCTS = [
       "https://www.optimumnutrition.com/cdn/shop/files/US_GS_Casein_4lb_Chocolate_FOP.png?v=1780494368&width=2500",
       "https://www.optimumnutrition.com/cdn/shop/files/on-1116316_Image_01_62f70313-b8a4-4c2c-ab3f-1049763310bd.png?v=1761914250&width=2000"
     ],
-    "metrics": {
+    "metrics": { "calories": 120, "fatG": 1, "carbsG": 4, "netWeightG": 1814,
       "proteinG": 24,
       "servingG": 34,
       "source": "casein",
@@ -5838,7 +5838,7 @@ const PRODUCTS = [
       "https://orgain.com/cdn/shop/files/851770003179-v13-Orgain-ProteinPowder-2.03lb-Chocolate-20240311-Front-HIRES-web_1200px.webp",
       "https://orgain.com/cdn/shop/files/851770003919-v8-Orgain-ProteinPowder-1.02lb-Label-Chocolate-20240311-Front-HIRES-web_1200px.webp"
     ],
-    "metrics": {
+    "metrics": { "calories": 150, "fatG": 4.5, "carbsG": 15, "netWeightG": 921,
       "proteinG": 21,
       "servingG": 46,
       "source": "plant blend",
@@ -5958,7 +5958,7 @@ const PRODUCTS = [
       "https://myvega.com/cdn/shop/files/Vega_Performance_Protein_Recovery_Chocolate_4lb_1.png?width=1200",
       "https://myvega.com/cdn/shop/files/Vega_Performance_Protein_Recovery_Vanilla_29oz.png?width=1200"
     ],
-    "metrics": {
+    "metrics": { "calories": 170, "fatG": 3, "carbsG": 6, "netWeightG": 828, "leucineG": 2.4, "certification": "Informed Choice",
       "proteinG": 30,
       "servingG": 44,
       "source": "plant blend",
@@ -6069,7 +6069,7 @@ const PRODUCTS = [
     "images": [
       "https://www.nowfoods.com/sites/default/files/2025-11/2172_v13.png"
     ],
-    "metrics": {
+    "metrics": { "calories": 110, "fatG": 0.5, "carbsG": 1, "netWeightG": 2268, "leucineG": 2.7,
       "proteinG": 25,
       "servingG": 28,
       "source": "whey isolate",
@@ -7770,7 +7770,7 @@ const PRODUCTS = [
       "https://www.datocms-assets.com/101859/1691723715-10052000322825_gatorade_endurance_formula_lemonlime_producttile_2680x3344.png?ar64=MTox&fit=crop&fp-z=1.4&auto=format&w=3840",
       "https://www.datocms-assets.com/101859/1691723618-10052000322801_gatorade_endurance_formula_orange_producttile_2680x3344.png?ar64=MTox&fit=crop&fp-z=1.4&auto=format&w=256"
     ],
-    "metrics": {
+    "metrics": { "calories": 90, "netWeightG": 907, "servingMl": 355, "form": "powder tub",
       "sodiumMg": 300,
       "potassiumMg": 140,
       "magnesiumMg": null,
@@ -7830,7 +7830,7 @@ const PRODUCTS = [
       "https://www.pedialyte.com/products/powder-packs/grape/_jcr_content/root/container/columncontrol/tab_item_no_1/image_copy_copy.coreimg.png/1756488181417/powder-packs-grape-317x319-v1.png",
       "https://www.pedialyte.com/products/powder-packs/grape/_jcr_content/root/container/columncontrol/tab_item_no_1/columncontrol_copy_c/tab_item_no_0/image_copy.coreimg.jpeg/1691150365823/pedialyte-pdp-classic-powderpacks-grape-110x110.jpeg"
     ],
-    "metrics": {
+    "metrics": { "calories": 30, "netWeightG": 68, "servingMl": 237, "form": "stick pack",
       "sodiumMg": 260,
       "potassiumMg": 180,
       "magnesiumMg": null,
@@ -7891,7 +7891,7 @@ const PRODUCTS = [
       "https://www.pedialyte.com/products/sport-powder-packs/lemon-lime/_jcr_content/root/container/columncontrol/tab_item_no_1/image_copy_copy_copy.coreimg.png/1756489770398/pedialyte-sport-powder-pack-lemon-lime-317-x-320.png",
       "https://www.pedialyte.com/products/sport-powder-packs/lemon-lime/_jcr_content/root/container/columncontrol/tab_item_no_1/columncontrol_copy_c/tab_item_no_0/image_copy.coreimg.jpeg/1691150034895/pedialyte-pdp-sport-powderpacks-lemonlime-110x110.jpeg"
     ],
-    "metrics": {
+    "metrics": { "calories": 40, "form": "stick pack",
       "sodiumMg": 650,
       "potassiumMg": 600,
       "magnesiumMg": 55,
@@ -7947,7 +7947,7 @@ const PRODUCTS = [
       "https://www.datocms-assets.com/101859/1776347345-propel_powder_berry_pdpwhatyouget_desktop_2026_1812x2720.png?auto=format&fit=max&w=3840",
       "https://www.datocms-assets.com/101859/1776281628-propel_powder_berry_sachet_producttile_2026_2680x3344.png?ar64=MTox&fit=crop&fp-z=1.4&auto=format&w=256"
     ],
-    "metrics": {
+    "metrics": { "servingMl": 591, "form": "stick pack",
       "sodiumMg": 260,
       "potassiumMg": 80,
       "magnesiumMg": null,
@@ -8003,7 +8003,7 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=bodyarmor+flash+iv+electrolyte+drink+mix+sticks&tag=YOURTAG-20",
     "blurb": "Carries the highest total electrolyte load in this lineup, led by 700 mg potassium and 510 mg sodium per stick, in a zero-sugar powder built around coconut water powder.",
     "labelVerified": "July 2026",
-    "metrics": {
+    "metrics": { "calories": 15, "netWeightG": 43, "form": "stick pack",
       "sodiumMg": 510,
       "potassiumMg": 700,
       "magnesiumMg": 65,
@@ -8063,7 +8063,7 @@ const PRODUCTS = [
     "images": [
       "https://i-cf65.ch-static.com/content/dam/cf-consumer-healthcare/bp-emergenc/en_US/products/hydration-category.png?auto=format"
     ],
-    "metrics": {
+    "metrics": { "calories": 30, "form": "stick pack",
       "sodiumMg": 160,
       "potassiumMg": 400,
       "magnesiumMg": 120,
@@ -8175,7 +8175,7 @@ const PRODUCTS = [
       "https://vitalyte.com/cdn/shop/files/webmain1.jpg",
       "https://vitalyte.com/cdn/shop/files/71TOF8t7MML._AC_SL1500.jpg"
     ],
-    "metrics": {
+    "metrics": { "calories": 90, "form": "powder tub",
       "sodiumMg": 135,
       "potassiumMg": 193,
       "magnesiumMg": 3,
@@ -8235,7 +8235,7 @@ const PRODUCTS = [
       "https://drinkprime.com/cdn/shop/files/PRIME_stick_16serve_gussted_US_BerryCitrus_0000_1000x.png?v=1779132448",
       "https://drinkprime.com/cdn/shop/files/PRIME_stick_16serve_gussted_US_OceanCherry_0000_1000x.png?v=1779132384"
     ],
-    "metrics": {
+    "metrics": { "calories": 25, "servingMl": 473, "form": "stick pack",
       "sodiumMg": 40,
       "potassiumMg": 700,
       "magnesiumMg": 124,
@@ -8298,7 +8298,7 @@ const PRODUCTS = [
       "https://zipfizz.com/cdn/shop/files/Zipfizz_Energy_Powder_-_Hover_State.png?v=1765559704&width=1080",
       "https://zipfizz.com/cdn/shop/files/Product_Color_BG_Orange_Soda_0e12ae1b-adb5-4a10-b30f-c73649e693cd.png?v=1765559704&width=1080"
     ],
-    "metrics": {
+    "metrics": { "calories": 20, "form": "stick pack",
       "sodiumMg": 70,
       "potassiumMg": 950,
       "magnesiumMg": 100,
@@ -8591,7 +8591,7 @@ const PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/1515/2714/products/nuun-hydration-citrus-mango-16-serving-canister-nuun-endurance-14599688126527.jpg",
       "https://cdn.shopify.com/s/files/1/1515/2714/products/nuun-hydration-nuun-endurance-14599688290367_1200x1200.jpg"
     ],
-    "metrics": {
+    "metrics": { "calories": 60, "servingMl": 473, "form": "powder tub", "certification": "Informed Sport",
       "sodiumMg": 380,
       "potassiumMg": 200,
       "magnesiumMg": 20,
@@ -8652,7 +8652,7 @@ const PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/0510/6660/1644/files/SS_FC_60ct_BottleRenders_LemonLime_0426.png?v=1778627260",
       "https://aletenutrition.com/cdn/shop/files/SaltStick-FastChews-Lemon-Lime-60ct-Packet_Hero.png?v=1778523638&width=1946"
     ],
-    "metrics": {
+    "metrics": { "calories": 10, "form": "chewable", "certification": "Informed Choice",
       "sodiumMg": 100,
       "potassiumMg": 30,
       "magnesiumMg": 6,
@@ -8708,7 +8708,7 @@ const PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/0659/0182/2211/files/shopify-efs-fp-24.jpg?v=1715723179",
       "https://cdn.shopify.com/s/files/1/0659/0182/2211/products/efs-fp-tray.png?v=1715723179"
     ],
-    "metrics": {
+    "metrics": { "calories": 120, "form": "powder tub",
       "sodiumMg": 300,
       "potassiumMg": 160,
       "magnesiumMg": 150,
@@ -8765,7 +8765,7 @@ const PRODUCTS = [
       "https://hammernutrition.com/cdn/shop/files/HCB70_25_1200x.progressive.jpg?v=1747863941",
       "https://hammernutrition.com/cdn/shop/files/HCB32_25_204x.progressive.jpg?v=1747863941"
     ],
-    "metrics": {
+    "metrics": { "calories": 110, "form": "powder tub",
       "sodiumMg": 150,
       "potassiumMg": 35,
       "magnesiumMg": 31,
@@ -8877,7 +8877,7 @@ const PRODUCTS = [
       "https://amacx.com/cdn/shop/files/6e2a9831a8c7820ffbd216fab9193f846fd826c0_Hydro_Tabs_Lime___3_pack_Amacx_73203849__1_cf33a78e-0aee-4f60-bc51-1114b81bb594.webp?v=1783693090&width=800",
       "https://amacx.com/cdn/shop/files/7aeec5b3e7b075e12cc1a69f7860aea10bc89db0_Hydro_tabs_lime_visma_b13b4e1b-3081-45cf-a66c-dbc59c1029db.jpg?v=1783693091&width=800"
     ],
-    "metrics": {
+    "metrics": { "form": "tablet", "certification": "Informed Sport",
       "sodiumMg": 205,
       "potassiumMg": 70,
       "magnesiumMg": 56,
@@ -8991,7 +8991,7 @@ const PRODUCTS = [
       "https://www.curehydration.com/cdn/shop/files/Cure-Pouch-Packet-Grapefruit_c9b23260-236c-40c2-b5af-1e3cee28edd0_1000x.jpg",
       "https://www.curehydration.com/cdn/shop/files/Cure-Pouch-Classic-Variety-Front.jpg"
     ],
-    "metrics": {
+    "metrics": { "calories": 25, "form": "stick pack",
       "sodiumMg": 240,
       "potassiumMg": 310,
       "magnesiumMg": null,
@@ -9053,7 +9053,7 @@ const PRODUCTS = [
       "https://www.drinkhydrant.com/cdn/shop/files/01-Hydration-Variety-Front-min.png",
       "https://www.drinkhydrant.com/cdn/shop/files/HYD_Bulk-Grapefruit_PDP_1080_1.png"
     ],
-    "metrics": {
+    "metrics": { "form": "stick pack",
       "sodiumMg": 260,
       "potassiumMg": 200,
       "magnesiumMg": 30,
@@ -9116,7 +9116,7 @@ const PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/1110/3248/files/HydrationRedRaspberryFront.png?v=1774385176",
       "https://cdn.shopify.com/s/files/1/1110/3248/files/Hydration30servings-AMZ_HydrationSFPRR30srvLarge.jpg?v=1774385176"
     ],
-    "metrics": {
+    "metrics": { "calories": 5, "form": "powder tub", "certification": "Informed Sport",
       "sodiumMg": 115,
       "potassiumMg": 107,
       "magnesiumMg": 15,
@@ -9178,7 +9178,7 @@ const PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/0793/7802/2695/files/STRAW_12_1.jpg?v=1782151900",
       "https://cdn.shopify.com/s/files/1/0793/7802/2695/files/JF-Hydrate_-Flavor-chart.jpg?v=1782148362"
     ],
-    "metrics": {
+    "metrics": { "calories": 5, "servingMl": 473, "form": "stick pack",
       "sodiumMg": 500,
       "potassiumMg": 350,
       "magnesiumMg": 120,
@@ -9239,7 +9239,7 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=lyteshow+electrolyte+concentrate&tag=YOURTAG-20",
     "blurb": "A 3 mL drop dose (about 40 drops) rather than a mixed drink: lower sodium than most powders, but one of the few labels that discloses magnesium (40 mg) and zinc (2 mg) alongside sodium and potassium.",
     "labelVerified": "July 2026",
-    "metrics": {
+    "metrics": { "calories": 0, "servingMl": 946, "form": "liquid concentrate",
       "sodiumMg": 125,
       "potassiumMg": 130,
       "magnesiumMg": 40,
@@ -9305,7 +9305,7 @@ const PRODUCTS = [
       "https://shop.drberg.com/cdn/shop/files/Electrolyte_Powder_Rasp_Lemon_50_2025_3D2_1000px.png",
       "https://shop.drberg.com/cdn/shop/files/Electrolyte_Powder_Lemonade_50_serv_Supplement_Panel_V5_17.12.24-01.jpg"
     ],
-    "metrics": {
+    "metrics": { "calories": 15, "servingMl": 473, "form": "powder tub",
       "sodiumMg": 40,
       "potassiumMg": 1000,
       "magnesiumMg": 120,
@@ -9362,7 +9362,7 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=ryse+hydration+sticks&tag=YOURTAG-20",
     "blurb": "One of the higher-sodium sticks on the market at 320 mg, layered with a full B-vitamin, taurine, and choline stack that most electrolyte-only mixes leave out.",
     "labelVerified": "July 2026",
-    "metrics": {
+    "metrics": { "form": "stick pack",
       "sodiumMg": 320,
       "potassiumMg": 173,
       "magnesiumMg": 74,
@@ -9424,7 +9424,7 @@ const PRODUCTS = [
       "https://www.ghostlifestyle.com/cdn/shop/files/HydrationIcedTeaLemonade.webp",
       "https://www.ghostlifestyle.com/cdn/shop/files/GHOST_Hydration_IcedTeaLemonade_SFP.png?v=1778616848"
     ],
-    "metrics": {
+    "metrics": { "form": "powder tub",
       "sodiumMg": 150,
       "potassiumMg": 375,
       "magnesiumMg": 83,
@@ -10796,7 +10796,7 @@ const PRODUCTS = [
       "https://www.muscletech.com/cdn/shop/files/MuscleTech-NitroTech-Whey-Gold-2000x2000-01a_new.jpg?v=1753903525&width=2000",
       "https://www.muscletech.com/cdn/shop/files/mt-nitro-tech-100-whey-gold-french-vanilla-2lb_5eb1c01a-5fe3-44fd-8754-a06f77818fae.png"
     ],
-    "metrics": {
+    "metrics": { "calories": 120, "fatG": 2, "carbsG": 2, "netWeightG": 2268,
       "proteinG": 24,
       "servingG": 33,
       "source": "whey blend",
@@ -10938,7 +10938,7 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=muscle+milk+genuine+protein+powder+chocolate&tag=YOURTAG-20",
     "blurb": "Genuine uses a casein-dominant milk protein blend rather than whey-only, so it digests more slowly than most whey powders; the brand's own product page confirms NSF Certified for Sport status.",
     "labelVerified": "July 2026",
-    "metrics": {
+    "metrics": { "calories": 310, "fatG": 12, "carbsG": 19, "netWeightG": 2240,
       "proteinG": 32,
       "servingG": 70,
       "source": "milk protein blend",
@@ -10990,7 +10990,7 @@ const PRODUCTS = [
       "https://www.sixstarpro.com/cdn/shop/files/ss-100-whey-protein-plus-vanilla-cream.jpg?v=1767821651&width=1200",
       "https://www.sixstarpro.com/cdn/shop/files/ss-100-whey-protein-plus-strawberry-smoothie.jpg?v=1759761758&width=1200"
     ],
-    "metrics": {
+    "metrics": { "calories": 180, "fatG": 3, "carbsG": 8,
       "proteinG": 30,
       "servingG": 47,
       "source": "whey blend",
@@ -11206,7 +11206,7 @@ const PRODUCTS = [
       "https://www.optimumnutrition.com/cdn/shop/files/on-1086341_Image_01.png?v=1755790964&width=1000",
       "https://www.optimumnutrition.com/cdn/shop/files/ONUS-gold-standard-isolate_Label_Chocolate-Bliss_3lb_44-servings.jpg?v=1761315069&width=1000"
     ],
-    "metrics": {
+    "metrics": { "calories": 110, "fatG": 0.5, "carbsG": 1, "netWeightG": 1361,
       "proteinG": 25,
       "servingG": 31,
       "source": "whey isolate",
@@ -11306,7 +11306,7 @@ const PRODUCTS = [
       "https://www.theisopurecompany.com/cdn/shop/files/US_ZeroCarb_2.7LB_CreamyVanilla_NFP.jpg",
       "https://www.theisopurecompany.com/cdn/shop/files/US_ZeroCarb_4.2lb_Creamy_Vanilla_FOP.png?v=1783003070&width=2500"
     ],
-    "metrics": {
+    "metrics": { "calories": 100, "fatG": 0, "carbsG": 0, "netWeightG": 1225,
       "proteinG": 25,
       "servingG": 31,
       "source": "whey isolate",
@@ -11359,7 +11359,7 @@ const PRODUCTS = [
       "https://musclepharm.com/cdn/shop/files/MP-Combat-AMZ-StackedTiles-Chocolate-02.jpg?v=1770923567&width=2000",
       "https://musclepharm.com/cdn/shop/files/MP-Combat-AMZ-StackedTiles-Chocolate-2lb-05_db461423-4bd3-4ee1-9b96-c4774f8cf1a6.jpg?v=1770923567&width=2000"
     ],
-    "metrics": {
+    "metrics": { "calories": 130, "fatG": 1.5, "carbsG": 5,
       "proteinG": 25,
       "servingG": 37,
       "source": "whey/egg/milk protein blend",
@@ -11517,7 +11517,7 @@ const PRODUCTS = [
       "https://www.livemomentous.com/cdn/shop/files/Whey_Protein_25_Vanilla-DTC-ProductHero.png",
       "https://www.livemomentous.com/cdn/shop/files/Whey-Protein_25-Serv_Unflavored.png"
     ],
-    "metrics": {
+    "metrics": { "calories": 90, "certification": "NSF Certified for Sport",
       "proteinG": 20,
       "servingG": 26,
       "source": "whey isolate",
@@ -11564,7 +11564,7 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=klean+athlete+klean+isolate&tag=YOURTAG-20",
     "blurb": "An unflavored, unsweetened 20-gram whey isolate scoop with just whey protein isolate and sunflower lecithin on the label, NSF Certified for Sport and used by over 350 professional and collegiate sports teams.",
     "labelVerified": "July 2026",
-    "metrics": {
+    "metrics": { "calories": 85, "carbsG": 1, "certification": "NSF Certified for Sport",
       "proteinG": 20,
       "servingG": 22.3,
       "source": "whey isolate",
@@ -11627,7 +11627,7 @@ const PRODUCTS = [
       "https://d1vo8zfysxy97v.cloudfront.net/media/product/sp111__vd8d76843226cf38cf557ca0a5d8135e2f7952d2a.jpg",
       "https://d1vo8zfysxy97v.cloudfront.net/media/product/sp111__v7583bad18bef72094fa64af52a30940d1e5cf75f.jpg"
     ],
-    "metrics": {
+    "metrics": { "calories": 100, "fatG": 0.5, "carbsG": 3, "netWeightG": 837, "leucineG": 2.2, "certification": "NSF Certified for Sport",
       "proteinG": 21,
       "servingG": 28,
       "source": "whey isolate",
@@ -11801,7 +11801,7 @@ const PRODUCTS = [
       "https://www.bareperformancenutrition.com/cdn/shop/files/Whey_Protein_VN_9_-_NFP.jpg?v=1782243926&width=1200",
       "https://www.bareperformancenutrition.com/cdn/shop/files/014_WHEY_RENDERS_Chocolate.jpg?v=1770223274&width=1200"
     ],
-    "metrics": {
+    "metrics": { "calories": 130, "fatG": 2, "carbsG": 4, "netWeightG": 933, "certification": "NSF Certified for Sport",
       "proteinG": 25,
       "servingG": 34,
       "source": "whey concentrate + casein blend",
@@ -11849,7 +11849,7 @@ const PRODUCTS = [
       "https://jockofuel.com/cdn/shop/files/CHOC_BACK.jpg?v=1758807658&width=1946",
       "https://jockofuel.com/cdn/shop/files/CHOC_NFP.jpg?v=1758807658&width=1946"
     ],
-    "metrics": {
+    "metrics": { "calories": 120, "fatG": 2.5, "carbsG": 5, "netWeightG": 907,
       "proteinG": 22,
       "servingG": 34,
       "source": "whey concentrate/isolate, casein, and egg white protein blend",
@@ -11898,7 +11898,7 @@ const PRODUCTS = [
       "https://1stphorm.com/cdn/shop/files/level-1-natural-vanilla-01_25_1800x1800.png?v=1773771589",
       "https://1stphorm.com/cdn/shop/files/level-1-birthday-cake_1800x1800.png?v=1775830789"
     ],
-    "metrics": {
+    "metrics": { "calories": 130, "fatG": 2, "carbsG": 2,
       "proteinG": 23,
       "servingG": 33,
       "source": "whey concentrate",
@@ -11951,7 +11951,7 @@ const PRODUCTS = [
       "https://nakednutrition.com/cdn/shop/files/grass-fed-unflavored-Whey-5LB.jpg",
       "https://cdn.shopify.com/s/files/1/0645/6465/files/unflavored-whey-protein-powder-nutrition-facts-5LB.jpg?v=1782960921"
     ],
-    "metrics": {
+    "metrics": { "calories": 120, "fatG": 2, "carbsG": 3, "netWeightG": 2270,
       "proteinG": 25,
       "servingG": 30,
       "source": "whey protein concentrate",
@@ -12128,7 +12128,7 @@ const PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/3002/1936/files/USA-WarriorBlend4-750g-Van-ThreeQuarter_6bb65617-cff6-43fd-af91-25e96363ef98.jpg",
       "https://cdn.shopify.com/s/files/1/3002/1936/files/USA-WarriorBlend4-750g-Van-Right-Opt_9c3e5ac5-3eb0-4856-9dca-459c87b05ad3.png"
     ],
-    "metrics": {
+    "metrics": { "calories": 100, "fatG": 2, "carbsG": 2, "netWeightG": 750,
       "proteinG": 17,
       "servingG": 25,
       "source": "plant blend (pea, hemp, goji)",
@@ -12186,7 +12186,7 @@ const PRODUCTS = [
     "images": [
       "https://web.archive.org/web/20240228050812im_/https://www.gardenoflife.com/media/catalog/product/6/5/658010116039-1_1.jpg"
     ],
-    "metrics": {
+    "metrics": { "calories": 110, "fatG": 2.5, "carbsG": 2, "netWeightG": 660,
       "proteinG": 22,
       "servingG": 33,
       "source": "plant blend (pea, sprouted brown rice + 12 sprouts)",
@@ -12299,7 +12299,7 @@ const PRODUCTS = [
       "https://nutiva.com/cdn/shop/files/PRO405_L_628x612_6640d795-fa79-401b-8c98-4dac18e24ce8.webp?v=1774905922",
       "https://nutiva.com/cdn/shop/files/PRO405_R_628x612_6de67de9-d5ec-4c12-a681-19cbc941ce03.webp?v=1774905922"
     ],
-    "metrics": {
+    "metrics": { "calories": 110, "fatG": 3, "carbsG": 8, "netWeightG": 454,
       "proteinG": 15,
       "servingG": 30,
       "source": "hemp seed protein",
@@ -12361,7 +12361,7 @@ const PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/0794/9991/9627/files/on-1117731_Image_01.png",
       "https://cdn.shopify.com/s/files/1/0794/9991/9627/files/on-1117733_Image_01.png"
     ],
-    "metrics": {
+    "metrics": { "calories": 150, "fatG": 3.5, "carbsG": 5, "certification": "Informed Choice",
       "proteinG": 24,
       "servingG": 37,
       "source": "plant blend (pea, fava bean, brown rice)",
@@ -12413,7 +12413,7 @@ const PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/2538/3594/products/Truvani_Mockup_Vanilla-Protein_2718435a-ef5e-4adb-93f0-fc59535387b5.png?v=1771428322",
       "https://cdn.shopify.com/s/files/1/2538/3594/products/Truvani_Mockup_Chocolate-Protein_c272f832-b4b7-4349-871f-06de81c94395.png?v=1771428322"
     ],
-    "metrics": {
+    "metrics": { "calories": 130, "fatG": 3, "carbsG": 5, "netWeightG": 297,
       "proteinG": 20,
       "servingG": 29,
       "source": "plant blend (pea, pumpkin seed, chia)",
@@ -12475,7 +12475,7 @@ const PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/2590/5380/files/Vega-Protein-Supergreens-Plant-Based-Protein-Powder-Chocolate-18ozUS-1.png?v=1781636929",
       "https://cdn.shopify.com/s/files/1/2590/5380/files/Vega_PS_berry_medium_US_1.png?v=1781636929"
     ],
-    "metrics": {
+    "metrics": { "calories": 180, "fatG": 3.5, "carbsG": 13, "netWeightG": 510,
       "proteinG": 25,
       "servingG": 46,
       "source": "pea protein + greens",
@@ -12532,7 +12532,7 @@ const PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/1214/5580/files/ECOMM_PRODUCT_RENDERS_01_1LB_BAG_DC_FRONT1.png?v=1783022895",
       "https://cdn.shopify.com/s/files/1/1214/5580/files/LEVELS_Whey_2lb_VanillaBean_front_c1161901-e5ed-44b6-a7f7-2f41402593f5.png?v=1774621888"
     ],
-    "metrics": {
+    "metrics": { "calories": 130, "fatG": 2.5, "carbsG": 3, "netWeightG": 672,
       "proteinG": 24,
       "servingG": 32,
       "source": "whey concentrate",
