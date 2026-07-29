@@ -4780,4 +4780,1419 @@ const PRODUCTS = [
       }
     ]
   },
+
+  /* ---- creatine (label-verified July 2026) ---- */
+
+  {
+    "id": "cellucor-cor-performance-creatine",
+    "name": "COR-Performance Creatine Monohydrate",
+    "brand": "Cellucor",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Budget Pick"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "Studied for supporting the body's ATP energy recycling during short, high-intensity efforts, and for supporting strength and power output when paired with resistance training."
+      }
+    ],
+    "cautions": [
+      "Draws water into muscle — drink more water",
+      "Loading phases are optional; 3–5 g daily reaches saturation in about 4 weeks",
+      "Talk to your doctor if you have kidney conditions"
+    ],
+    "servings": 72,
+    "priceRange": "$",
+    "flavorsNote": "Sold unflavored as a single-ingredient scoop, plus Blue Raspberry, Fruit Punch, and Watermelon flavored versions.",
+    "affiliateUrl": "https://www.amazon.com/s?k=cellucor+cor+performance+creatine&tag=YOURTAG-20",
+    "blurb": "A single-ingredient 5 g monohydrate scoop with no fillers in the unflavored version; the 72-serving tub is one of the larger counts among mass-market creatines.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/cellucor-cor-performance-creatine.jpg",
+    "imageOpaque": true,
+    "images": [
+      "https://cellucor.com/cdn/shop/files/CELL-Creatine-72serv-UNFLAVORED-hero.jpg?v=1777823684",
+      "https://cellucor.com/cdn/shop/files/CELL-Creatine-72serv-UNFLAVORED-nutritonal.jpg?v=1777823684",
+      "https://cellucor.com/cdn/shop/files/CELL_2358_UnflavoredCreatine_PDPs_WarmGrey_Claims.jpg?v=1777870273"
+    ],
+    "metrics": {
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://cellucor.com/products/creatine-monohydrate-powder",
+        "label": "Cellucor — official product page"
+      }
+    ]
+  },
+
+  {
+    "id": "on-creatine-2500-caps",
+    "name": "Creatine 2500 Capsules",
+    "brand": "Optimum Nutrition",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Beginner Friendly"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate (Creapure)",
+        "dose": "2.5 g",
+        "clinicalNote": "Creapure-brand creatine monohydrate studied for supporting ATP energy recycling and strength output during short, high-intensity training; capsules trade dose-per-serving for no-mixing convenience."
+      }
+    ],
+    "cautions": [
+      "Capsules use a gelatin shell — not suitable for vegetarians or vegans",
+      "Draws water into muscle — drink more water",
+      "Talk to your doctor if you have kidney conditions"
+    ],
+    "servings": 100,
+    "priceRange": "$$",
+    "flavorsNote": "Unflavored capsule format — nothing to mix or taste.",
+    "affiliateUrl": "https://www.amazon.com/s?k=optimum+nutrition+creatine+2500+caps&tag=YOURTAG-20",
+    "blurb": "Delivers 2.5 g of Creapure creatine monohydrate per two-capsule serving for people who'd rather swallow capsules than mix a scoop; matching the standard 5 g research dose takes four capsules.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/on-creatine-2500-caps.png",
+    "images": [
+      "https://www.optimumnutrition.com/cdn/shop/files/US_CREATINE_CAPS_50SV_FOP.png",
+      "https://www.optimumnutrition.com/cdn/shop/files/US_ON_CREATINE_200_CAPS.png",
+      "https://www.optimumnutrition.com/cdn/shop/files/US_Creatine_100caps_50srv_NFP.jpg"
+    ],
+    "metrics": {
+      "creatineG": 2.5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://www.optimumnutrition.com/en-us/products/creatine-monohydrate-micronized-capsules",
+        "label": "Optimum Nutrition — official product page"
+      }
+    ]
+  },
+
+  {
+    "id": "muscletech-platinum-100-creatine",
+    "name": "Platinum 100% Creatine",
+    "brand": "MuscleTech",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Micronized Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "HPLC-tested creatine monohydrate studied for supporting ATP regeneration and strength/power output during short, high-intensity training bouts."
+      }
+    ],
+    "cautions": [
+      "Draws water into muscle — drink more water",
+      "Loading phases are optional; 3–5 g daily reaches saturation in about 4 weeks",
+      "Talk to your doctor if you have kidney conditions"
+    ],
+    "servings": 90,
+    "priceRange": "$",
+    "flavorsNote": "Unflavored is the single-ingredient version; Grape and Red Berry flavors add sodium, citric acid, and stevia-based sweetening.",
+    "affiliateUrl": "https://www.amazon.com/s?k=muscletech+platinum+100+creatine&tag=YOURTAG-20",
+    "blurb": "90 servings of HPLC-tested monohydrate at 5 g per scoop in the unflavored version, with no other ingredients listed on the panel.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/muscletech-platinum-100-creatine.jpg",
+    "imageOpaque": true,
+    "images": [
+      "https://www.muscletech.com/cdn/shop/files/MuscleTech-100Creatine-Unflavored-2000x2000-01a-V2.jpg?v=1766074513&width=2000",
+      "https://www.muscletech.com/cdn/shop/files/MuscleTech-100Creatine-Unflavored-2000x2000-10_font.jpg?v=1766074513&width=2000",
+      "https://www.muscletech.com/cdn/shop/files/MuscleTech-100Creatine-Unflavored-2000x2000-02-V2_font.jpg?v=1766074513&width=2000"
+    ],
+    "metrics": {
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://www.muscletech.com/products/platinum-100-creatine",
+        "label": "MuscleTech — official product page"
+      }
+    ]
+  },
+
+  {
+    "id": "six-star-creatine-x3",
+    "name": "Creatine X3",
+    "brand": "Six Star",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Proprietary Blend"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate",
+        "dose": "3 g",
+        "clinicalNote": "Studied for supporting ATP energy recycling and strength/power output during short, high-intensity effort; this label's dose sits below the 5 g typically used in that research."
+      },
+      {
+        "name": "Amino Plus Blend (L-arginine, glycine, L-methionine, L-carnosine, alpha lipoic acid)",
+        "dose": "169 mg",
+        "clinicalNote": "A combined-weight blend of five amino-acid-related compounds; the label discloses the total but not how much of each ingredient it contains."
+      }
+    ],
+    "cautions": [
+      "Delivers 3 g of creatine per serving, below the 5 g dose used in most creatine research",
+      "The Amino Plus Blend's individual ingredient amounts are not disclosed on the label",
+      "Talk to your doctor if you have kidney conditions"
+    ],
+    "servings": 20,
+    "priceRange": "$",
+    "flavorsNote": "Sold as coated caplets — no mixing or flavor to manage.",
+    "affiliateUrl": "https://www.amazon.com/s?k=six+star+creatine+x3+caplets&tag=YOURTAG-20",
+    "blurb": "A caplet format dosing 3 g of creatine monohydrate per 3-caplet serving alongside a 169 mg proprietary amino blend whose individual ingredient amounts aren't broken out on the label.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/six-star-creatine-x3.jpg",
+    "imageOpaque": true,
+    "images": [
+      "https://www.sixstarpro.com/cdn/shop/files/ss-creatine-x3-pill-front.jpg",
+      "https://www.sixstarpro.com/cdn/shop/files/ss-creatine-x3-pill-right.jpg",
+      "https://www.sixstarpro.com/cdn/shop/files/ss-creatine-x3-pill-left.jpg"
+    ],
+    "metrics": {
+      "creatineG": 3,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://www.sixstarpro.com/products/creatine-x3-pill",
+        "label": "Six Star — official product page"
+      }
+    ]
+  },
+
+  {
+    "id": "bsn-creatine-dna",
+    "name": "Creatine DNA",
+    "brand": "BSN",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Micronized Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "Studied for supporting ATP energy recycling and strength/power output during short, high-intensity training when paired with resistance work."
+      }
+    ],
+    "cautions": [
+      "Draws water into muscle — drink more water",
+      "Loading phases are optional; 3–5 g daily reaches saturation in about 4 weeks",
+      "Talk to your doctor if you have kidney conditions"
+    ],
+    "servings": 60,
+    "priceRange": "$$",
+    "flavorsNote": "Unflavored powder with no listed sweeteners; mixes into water or a shake.",
+    "affiliateUrl": "https://www.amazon.com/s?k=bsn+creatine+dna&tag=YOURTAG-20",
+    "blurb": "A plain 5 g micronized monohydrate scoop with no other listed ingredients, sold in a 60-serving unflavored tub.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://www.amazon.com/BSN-Micronized-Monohydrate-Unflavored-Supply-60/dp/B00QEMY4T6",
+        "label": "Amazon listing"
+      },
+      {
+        "url": "https://www.netnutri.com/bsn-creatine-dna-unflavored-309g",
+        "label": "NetNutri listing"
+      }
+    ]
+  },
+
+  {
+    "id": "allmax-creatine-monohydrate",
+    "name": "Creatine Monohydrate",
+    "brand": "Allmax",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "CreaSyn Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "HPLC-verified 99.9%-purity creatine monohydrate studied for supporting ATP energy recycling and strength/power output during short, high-intensity effort."
+      }
+    ],
+    "cautions": [
+      "Draws water into muscle — drink more water",
+      "Loading phases are optional; 3–5 g daily reaches saturation in about 4 weeks",
+      "Talk to your doctor if you have kidney conditions"
+    ],
+    "servings": 200,
+    "priceRange": "$",
+    "flavorsNote": "Sold unflavored across 100 g, 400 g, and 1000 g sizes; a separately flavored version also exists.",
+    "affiliateUrl": "https://www.amazon.com/s?k=allmax+creatine+monohydrate&tag=YOURTAG-20",
+    "blurb": "5 g of CreaSyn creatine monohydrate per scoop, verified to 99.9% purity by HPLC testing; the 1000 g size runs 200 servings, among the largest counts in the category.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/allmax-creatine-monohydrate.webp",
+    "imageOpaque": true,
+    "images": [
+      "https://www.allmaxnutrition.com/cdn/shop/files/allmax-creatine-unflavored-400g_1.webp",
+      "https://www.allmaxnutrition.com/cdn/shop/files/allmax-creatine-unflavored-100g_1.webp",
+      "https://www.allmaxnutrition.com/cdn/shop/files/allmax-creatine-unflavored-1000g_1.webp"
+    ],
+    "metrics": {
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://www.allmaxnutrition.com/products/allmax-creatine-monohydrate-powder",
+        "label": "Allmax — official product page"
+      }
+    ]
+  },
+
+  {
+    "id": "force-factor-creatine-monohydrate",
+    "name": "Creatine Monohydrate",
+    "brand": "Force Factor",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Micronized Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "Studied for supporting ATP energy recycling and strength/power output during short, high-intensity training when paired with resistance work."
+      }
+    ],
+    "cautions": [
+      "Draws water into muscle — drink more water",
+      "Loading phases are optional; 3–5 g daily reaches saturation in about 4 weeks",
+      "Talk to your doctor if you have kidney conditions"
+    ],
+    "servings": 60,
+    "priceRange": "$$",
+    "flavorsNote": "Unflavored powder; the brand states no artificial colors, flavors, sweeteners, or preservatives.",
+    "affiliateUrl": "https://www.amazon.com/s?k=force+factor+creatine+monohydrate&tag=YOURTAG-20",
+    "blurb": "5 g of micronized monohydrate per scoop with no other ingredients listed on the panel; the brand states the tub is free of gelatin and added sugar.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/force-factor-creatine-monohydrate.png",
+    "images": [
+      "https://forcefactor.com/cdn/shop/files/Force_Factor_Essentials_Creatine_Monohydrate_Powder_5g_Tub_60sv_117x117.png?v=1736549266",
+      "https://cdn.shopify.com/s/files/1/0278/7776/9321/files/05_SFPwebsite_700x.jpg?v=1689865918"
+    ],
+    "metrics": {
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://forcefactor.com/products/creatine-monohydrate",
+        "label": "Force Factor — official product page"
+      }
+    ]
+  },
+
+  {
+    "id": "dymatize-creatine-micronized",
+    "name": "Creatine Micronized",
+    "brand": "Dymatize",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate (Creapure)",
+        "dose": "5 g",
+        "clinicalNote": "Creapure-brand creatine monohydrate studied for supporting ATP energy recycling and strength/power output during short, high-intensity training."
+      },
+      {
+        "name": "Micronized processing",
+        "dose": "5 g",
+        "clinicalNote": "Milled to roughly 180 microns to improve dispersion in liquid; the creatine itself is unchanged by the process."
+      }
+    ],
+    "cautions": [
+      "Draws water into muscle — drink more water",
+      "Loading phases are optional; 3–5 g daily reaches saturation in about 4 weeks",
+      "Talk to your doctor if you have kidney conditions"
+    ],
+    "servings": 60,
+    "priceRange": "$$",
+    "flavorsNote": "Sold unflavored; dissolves into water or a shake with no added sweeteners.",
+    "affiliateUrl": "https://www.amazon.com/s?k=dymatize+creatine+micronized&tag=YOURTAG-20",
+    "blurb": "5 g of Creapure-brand monohydrate micronized to roughly 180 microns for easier mixing, with no other ingredients listed on the panel.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/dymatize-creatine-micronized.jpg",
+    "imageOpaque": true,
+    "images": [
+      "https://dymatize.imgix.net/production/products/Hero_Product_Line_Page_Dymatize_Website_Desktop_ISO100_3840x2156_2025-10-16-204242_fcqd.jpg"
+    ],
+    "metrics": {
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://dymatize.com/products/creatine-monohydrate",
+        "label": "Dymatize — official product page"
+      }
+    ]
+  },
+
+  {
+    "id": "rule-one-r1-creatine",
+    "name": "R1 Creatine",
+    "brand": "Rule One",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Budget Pick"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Micronized Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "Studied for supporting ATP energy recycling and strength/power output during short, high-intensity training when paired with resistance work."
+      }
+    ],
+    "cautions": [
+      "Draws water into muscle — drink more water",
+      "Loading phases are optional; 3–5 g daily reaches saturation in about 4 weeks",
+      "Talk to your doctor if you have kidney conditions"
+    ],
+    "servings": 130,
+    "priceRange": "$",
+    "flavorsNote": "Unflavored is the plain version; Blue Raspberry and Fruit Punch flavored options are also sold.",
+    "affiliateUrl": "https://www.amazon.com/s?k=rule+one+r1+creatine+monohydrate&tag=YOURTAG-20",
+    "blurb": "5 g of micronized monohydrate per scoop with no fillers, sugars, or gums listed; the 650 g size runs 130 servings, a low cost per serving for the category.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/rule-one-r1-creatine.png",
+    "images": [
+      "https://www.ruleoneproteins.com/cdn/shop/files/Creatine_130s_Unflavored0001.png",
+      "https://www.ruleoneproteins.com/cdn/shop/files/Creatine_30s_Blue-Raspberry0001.png"
+    ],
+    "metrics": {
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://www.ruleoneproteins.com/products/r1-creatine",
+        "label": "Rule One — official product page"
+      }
+    ]
+  },
+
+  {
+    "id": "universal-nutrition-creatine",
+    "name": "Creatine Powder",
+    "brand": "Universal Nutrition",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Budget Pick"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate (Creapure)",
+        "dose": "5 g",
+        "clinicalNote": "Creapure-brand creatine monohydrate studied for supporting ATP energy recycling in muscle and nerve tissue during high-intensity effort."
+      }
+    ],
+    "cautions": [
+      "Draws water into muscle — drink more water",
+      "Loading phases are optional; 3–5 g daily reaches saturation in about 4 weeks",
+      "Talk to your doctor if you have kidney conditions"
+    ],
+    "servings": 100,
+    "priceRange": "$",
+    "flavorsNote": "Sold unflavored; a separate flavored version in Fruit Punch and Blue Raspberry also exists.",
+    "affiliateUrl": "https://www.amazon.com/s?k=universal+nutrition+creatine+powder&tag=YOURTAG-20",
+    "blurb": "A single-ingredient 5 g Creapure monohydrate teaspoon serving with no other listed ingredients; the 500 g tub holds 100 servings, confirmed directly against the manufacturer's label on file with the NIH's supplement label database.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://api.ods.od.nih.gov/dsld/s3/pdf/37648.pdf",
+        "label": "NIH Dietary Supplement Label Database — manufacturer label (500 g)"
+      },
+      {
+        "url": "https://www.kroger.com/p/universal-nutrition-creatine-powder/0003944204702",
+        "label": "Kroger listing"
+      }
+    ]
+  },
+
+  {
+    "id": "momentous-creatine-monohydrate",
+    "name": "Creatine Monohydrate",
+    "brand": "Momentous",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Third-Party Tested",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "One of the most-studied ergogenic ingredients; associated with supporting muscle strength, power output, and the body's ATP-based energy recycling during short, high-intensity effort."
+      }
+    ],
+    "cautions": [
+      "Draws water into muscle cells — increase daily water intake",
+      "Loading is optional; 3–5 g daily reaches muscle saturation in about 3–4 weeks",
+      "Talk to a doctor before use if you have a kidney condition"
+    ],
+    "servings": 90,
+    "priceRange": "$$",
+    "flavorsNote": "Sold unflavored in the 90-serving tub; Watermelon and Lemon flavored 60-serving versions are also offered.",
+    "affiliateUrl": "https://www.amazon.com/s?k=momentous+creatine+monohydrate&tag=YOURTAG-20",
+    "blurb": "Carries both NSF Certified for Sport and Informed Sport marks plus added screening for microplastics and PFAS, made in a pharmaceutical facility with tighter heavy-metal limits than the industry standard.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/momentous-creatine-monohydrate.png",
+    "images": [
+      "https://www.livemomentous.com/cdn/shop/files/f8715c729d402ed4a92537f004f161bd028c2e8d.png?v=1781125657&width=1440",
+      "https://www.livemomentous.com/cdn/shop/files/New_Creatine_60serv_Lemon_8f992091-37a9-4aa2-88e2-d6d0960b3ec5.png?v=1784225459&width=1440",
+      "https://www.livemomentous.com/cdn/shop/files/NewCreatine_60serv_Watermelon.png?v=1784225511&width=1440"
+    ],
+    "metrics": {
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://www.livemomentous.com/products/creatine-monohydrate",
+        "label": "Momentous — official product page"
+      },
+      {
+        "url": "https://www.amazon.com/Momentous-Creatine-Creapure-Performance-Monohydrate/dp/B085Z9P87K",
+        "label": "Amazon listing cross-check (90 servings, NSF Certified for Sport)"
+      }
+    ]
+  },
+
+  {
+    "id": "bpn-creatine-monohydrate",
+    "name": "Creatine Monohydrate",
+    "brand": "Bare Performance Nutrition (BPN)",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Third-Party Tested",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creapure Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "Creapure is a German-manufactured creatine monohydrate held to tight purity specs; monohydrate is widely studied for supporting muscle strength, power, and ATP regeneration during short, high-intensity work."
+      }
+    ],
+    "cautions": [
+      "Draws water into muscle cells — increase daily water intake",
+      "Talk to a doctor before use if you have a kidney condition"
+    ],
+    "servings": 60,
+    "priceRange": "$$$",
+    "flavorsNote": "Sold unflavored only, with no sweeteners or fillers.",
+    "affiliateUrl": "https://www.amazon.com/s?k=bpn+bare+performance+nutrition+creatine+monohydrate&tag=YOURTAG-20",
+    "blurb": "Single-ingredient Creapure monohydrate with NSF Certified for Sport testing on every batch, aimed at athletes who need label-accuracy assurance.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/bpn-creatine-monohydrate.jpg",
+    "imageOpaque": true,
+    "images": [
+      "https://www.bareperformancenutrition.com/cdn/shop/files/BPNCREA-5.jpg?v=1728563526&width=1200",
+      "https://www.bareperformancenutrition.com/cdn/shop/files/BPNCREA30SV-2.jpg?v=1749806840&width=1200"
+    ],
+    "metrics": {
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://www.bareperformancenutrition.com/products/creatine-monohydrate",
+        "label": "Bare Performance Nutrition — official product page"
+      }
+    ]
+  },
+
+  {
+    "id": "xwerks-lift",
+    "name": "Lift",
+    "brand": "Xwerks",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Micronized Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "Micronization shrinks particle size for easier mixing; monohydrate itself is widely studied for supporting muscle strength, power output, and high-intensity training capacity."
+      }
+    ],
+    "cautions": [
+      "Draws water into muscle cells — increase daily water intake",
+      "Talk to a doctor before use if you have a kidney condition"
+    ],
+    "servings": 80,
+    "priceRange": "$$$",
+    "flavorsNote": "Sold unflavored only, with zero calories, sugar, or added fillers.",
+    "affiliateUrl": "https://www.amazon.com/s?k=xwerks+lift+creatine+monohydrate&tag=YOURTAG-20",
+    "blurb": "Single-ingredient micronized monohydrate at the full 5 g clinical dose with no flavoring or fillers; no sport-specific banned-substance certification is listed on the label.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/xwerks-lift.png",
+    "imageOpaque": true,
+    "images": [
+      "https://xwerks.com/cdn/shop/files/lift-2026.png",
+      "https://xwerks.com/cdn/shop/files/X_Lift_2.jpg",
+      "https://xwerks.com/cdn/shop/files/X_Lift_3.jpg"
+    ],
+    "metrics": {
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://xwerks.com/products/xwerks-lift",
+        "label": "Xwerks — official product page"
+      }
+    ]
+  },
+
+  {
+    "id": "onnit-creatine-monohydrate",
+    "name": "Creatine Monohydrate",
+    "brand": "Onnit",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "Plain monohydrate with no added flavors or fillers; widely studied for supporting muscle strength, power output, and the body's ATP energy system during short, high-intensity effort."
+      }
+    ],
+    "cautions": [
+      "Draws water into muscle cells — increase daily water intake",
+      "Talk to a doctor before use if you have a kidney condition"
+    ],
+    "servings": 90,
+    "priceRange": "$$",
+    "flavorsNote": "Sold unflavored in 30-, 60-, and 90-serving tub sizes.",
+    "affiliateUrl": "https://www.amazon.com/s?k=onnit+creatine+monohydrate&tag=YOURTAG-20",
+    "blurb": "Single-ingredient monohydrate that is IGEN Non-GMO tested, but does not carry an NSF Certified for Sport or Informed Sport mark.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/onnit-creatine-monohydrate.png",
+    "images": [
+      "https://www.onnit.com/cdn/shop/files/creatine-both-size-pdp.png?v=1777080469&width=1024",
+      "https://www.onnit.com/cdn/shop/files/creatine-90-gym-pdp.png?v=1765924233&width=1800",
+      "https://www.onnit.com/cdn/shop/files/05-Hero-Creatine.png?v=1766002606&width=873"
+    ],
+    "metrics": {
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://www.onnit.com/products/creatine-unflavored-90-serving-tub",
+        "label": "Onnit — official product page"
+      }
+    ]
+  },
+
+  {
+    "id": "first-phorm-micronized-creatine",
+    "name": "Micronized Creatine Monohydrate",
+    "brand": "1st Phorm",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Third-Party Tested",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Micronized Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "Micronized for solubility; monohydrate is widely studied for supporting muscle strength, power output, and ATP regeneration during short, high-intensity training."
+      }
+    ],
+    "cautions": [
+      "Draws water into muscle cells — increase daily water intake",
+      "Talk to a doctor before use if you have a kidney condition"
+    ],
+    "servings": 100,
+    "priceRange": "$$",
+    "flavorsNote": "Sold unflavored, meant to be mixed into cold water or juice.",
+    "affiliateUrl": "https://www.amazon.com/s?k=1st+phorm+micronized+creatine&tag=YOURTAG-20",
+    "blurb": "NSF Certified for Sport micronized monohydrate with no other active ingredients, sold in bulk 100-serving tubs.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/first-phorm-micronized-creatine.png",
+    "images": [
+      "https://1stphorm.com/cdn/shop/files/creatine-100-serving.png?v=1762198442",
+      "https://1stphorm.com/cdn/shop/files/creatine-50-serving.png?v=1744913869",
+      "https://1stphorm.com/cdn/shop/files/Creatine-Lifestyle_1800x1800.jpg?v=1744913869"
+    ],
+    "metrics": {
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://1stphorm.com/products/micronized-creatine-monohydrate",
+        "label": "1st Phorm — official product page"
+      },
+      {
+        "url": "https://www.nsfsport.com/certified-products/listing-detail.php?id=1601206",
+        "label": "NSF Certified for Sport listing — 1st Phorm Micronized Creatine Monohydrate"
+      }
+    ]
+  },
+
+  {
+    "id": "gnarly-nutrition-creatine",
+    "name": "Creatine Monohydrate",
+    "brand": "Gnarly Nutrition",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Third-Party Tested",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creapure Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "Vegan-sourced Creapure monohydrate; widely studied for supporting muscle strength, power output, and recovery capacity around training."
+      }
+    ],
+    "cautions": [
+      "Draws water into muscle cells — increase daily water intake",
+      "Talk to a doctor before use if you have a kidney condition"
+    ],
+    "servings": 90,
+    "priceRange": "$$$",
+    "flavorsNote": "Sold unflavored only.",
+    "affiliateUrl": "https://www.amazon.com/s?k=gnarly+nutrition+creatine&tag=YOURTAG-20",
+    "blurb": "Carries both NSF Content Certified and NSF Certified for Sport marks, the latter screening for over 270 substances banned by pro and Olympic sport bodies.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/gnarly-nutrition-creatine.webp",
+    "imageOpaque": true,
+    "images": [
+      "https://gognarly.com/cdn/shop/files/GN-CRBG-UN_D2-WEB.webp",
+      "https://gognarly.com/cdn/shop/files/GN-CRBG-UN_D3-WEB.webp",
+      "https://gognarly.com/cdn/shop/files/Creatine_NFP.jpg"
+    ],
+    "metrics": {
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://gognarly.com/products/creatine-powder",
+        "label": "Gnarly Nutrition — official product page"
+      },
+      {
+        "url": "https://www.nsfsport.com/certified-products/listing-detail.php?id=1394351",
+        "label": "NSF Certified for Sport listing — Gnarly Creatine"
+      }
+    ]
+  },
+
+  {
+    "id": "naked-nutrition-naked-creatine",
+    "name": "Creatine Monohydrate Powder",
+    "brand": "Naked Nutrition",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Budget Pick",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "Single-ingredient monohydrate with no fillers; widely studied for supporting muscle strength, power output, and the body's ATP energy system during short, high-intensity effort."
+      }
+    ],
+    "cautions": [
+      "Draws water into muscle cells — increase daily water intake",
+      "Talk to a doctor before use if you have a kidney condition"
+    ],
+    "servings": 200,
+    "priceRange": "$",
+    "flavorsNote": "Sold unflavored; a naturally flavored Strawberry version is also offered.",
+    "affiliateUrl": "https://www.amazon.com/s?k=naked+nutrition+naked+creatine&tag=YOURTAG-20",
+    "blurb": "Bulk single-ingredient monohydrate at one of the lower costs per serving in the category; not NSF Certified for Sport or Informed Sport tested.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/naked-nutrition-naked-creatine.jpg",
+    "imageOpaque": true,
+    "images": [
+      "https://nakednutrition.com/cdn/shop/files/Creatine-1KG-Unflavored-MainImage.jpg?v=1766596249&width=1200",
+      "https://nakednutrition.com/cdn/shop/files/creatine-monohydrate-powder-unflavored-2.2lb_95da58cf-9aeb-4c77-a4af-77c7c5972260.jpg?v=1783215302&width=1200"
+    ],
+    "metrics": {
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://nakednutrition.com/products/creatine-monohydrate-powder",
+        "label": "Naked Nutrition — official product page"
+      }
+    ]
+  },
+
+  {
+    "id": "create-creatine-monohydrate-gummies",
+    "name": "Creatine Monohydrate Gummies",
+    "brand": "Create",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Third-Party Tested",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate",
+        "dose": "4.5 g (3 gummies)",
+        "clinicalNote": "Delivered in a pectin-based gummy rather than powder; creatine monohydrate is widely studied for supporting muscle strength and power output when taken consistently."
+      }
+    ],
+    "cautions": [
+      "Draws water into muscle cells — increase daily water intake",
+      "Each serving contains about 3 g of sugar from the gummy base",
+      "Talk to a doctor before use if you have a kidney condition"
+    ],
+    "servings": 30,
+    "priceRange": "$$",
+    "flavorsNote": "Available in Orange, Blue Raspberry, Watermelon, Sour Green Apple, Sour Peach, Sour Cherry, and a Variety Pack.",
+    "affiliateUrl": "https://www.amazon.com/s?k=create+creatine+monohydrate+gummies&tag=YOURTAG-20",
+    "blurb": "NSF Certified for Sport gummy delivering 4.5 g of creatine monohydrate per 3-gummy serving, slightly under the standard 5 g research dose, in a dairy-free pectin base.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/create-creatine-monohydrate-gummies.png",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/1515/2714/files/create_creatinegummie_varietypack_ea152171-10c6-47b8-9cd8-92c0c03e5988_80x80.png?v=1780938665",
+      "https://cdn.shopify.com/s/files/1/1515/2714/files/create_90-ct-orange-2_4480c993-7762-437b-bfa9-ad517fc9f2da_80x80.png?v=1777408323"
+    ],
+    "metrics": {
+      "creatineG": 4.5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://thefeed.com/products/create-creatine-monohydrate-gummies",
+        "label": "The Feed listing — Create Creatine Monohydrate Gummies (label detail)"
+      },
+      {
+        "url": "https://trycreate.co/products/core-latest-product",
+        "label": "Create — official product page"
+      }
+    ]
+  },
+
+  {
+    "id": "sports-research-creatine-monohydrate",
+    "name": "Creatine Monohydrate",
+    "brand": "Sports Research",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Third-Party Tested",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Micronized Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "Micronized for solubility; monohydrate is widely studied for supporting muscle strength, power output, and workout recovery capacity."
+      }
+    ],
+    "cautions": [
+      "Draws water into muscle cells — increase daily water intake",
+      "Talk to a doctor before use if you have a kidney condition"
+    ],
+    "servings": 100,
+    "priceRange": "$",
+    "flavorsNote": "Sold unflavored.",
+    "affiliateUrl": "https://www.amazon.com/s?k=sports+research+creatine+monohydrate&tag=YOURTAG-20",
+    "blurb": "Informed Sport-certified micronized monohydrate with no other active ingredients, sold in bulk 100-serving sizes.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://www.amazon.com/Sports-Research-Creatine-Monohydrate-Performance/dp/B0CCJZVJYG",
+        "label": "Amazon listing (Sports Research Creatine Monohydrate, 5 g, Informed Sport, 100 servings)"
+      },
+      {
+        "url": "https://www.vitacost.com/sports-research-creatine-monohydrate-informed-sport-certified",
+        "label": "Vitacost listing cross-check"
+      }
+    ]
+  },
+
+  {
+    "id": "swolverine-kre-alkalyn",
+    "name": "Kre-Alkalyn",
+    "brand": "Swolverine",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Kre-Alkalyn (pH-buffered creatine monohydrate)",
+        "dose": "3 g",
+        "clinicalNote": "A pH-buffered form of creatine monohydrate made with added sodium bicarbonate; formulated to be dosed lower than standard monohydrate while supporting the same muscle strength and power pathways."
+      }
+    ],
+    "cautions": [
+      "Dosed lower (3 g) than standard monohydrate — do not add extra loading doses without guidance",
+      "Talk to a doctor before use if you have a kidney condition"
+    ],
+    "servings": 30,
+    "priceRange": "$$$",
+    "flavorsNote": "Sold unflavored.",
+    "affiliateUrl": "https://www.amazon.com/s?k=swolverine+kre-alkalyn+creatine&tag=YOURTAG-20",
+    "blurb": "pH-buffered Kre-Alkalyn creatine dosed at 3 g rather than the standard 5 g monohydrate serving; Swolverine states each batch is lab-tested but the label carries no NSF Certified for Sport or Informed Sport mark.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/swolverine-kre-alkalyn.png",
+    "imageOpaque": true,
+    "images": [
+      "https://swolverine.com/cdn/shop/files/Swolverine-kre-alkalyn-10216071820-51597217530136.png?v=1773973190&width=800",
+      "https://swolverine.com/cdn/shop/files/Swolverine-kre-alkalyn-10216071820-51597217235224.png?v=1773973191&width=800",
+      "https://swolverine.com/cdn/shop/files/Swolverine-kre-alkalyn-10216071820-51597221134616.png?v=1773973193&width=800"
+    ],
+    "metrics": {
+      "creatineG": 3,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://swolverine.com/products/kre-alkalyn",
+        "label": "Swolverine — official product page"
+      },
+      {
+        "url": "https://www.walmart.com/ip/Kre-Alkalyn-Advanced-pH-Corrected-Creatine-Monohydrate-Unflavored-60-Servings/2169095498",
+        "label": "Walmart listing cross-check (3,000 mg Kre-Alkalyn per scoop)"
+      }
+    ]
+  },
+
+  {
+    "id": "nutrabio-creatine-monohydrate-powder",
+    "name": "Creatine Monohydrate Powder",
+    "brand": "NutraBio",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate (PharmaPure)",
+        "dose": "5 g",
+        "clinicalNote": "Creatine monohydrate is studied for its role in regenerating ATP during short, high-intensity efforts, supporting muscle strength and power output."
+      }
+    ],
+    "cautions": [
+      "Mix with 8-16 oz of fluid and drink promptly after mixing.",
+      "Creatine draws water into muscle tissue; maintain adequate daily hydration.",
+      "Speak with a physician before use if you have a kidney condition."
+    ],
+    "servings": 60,
+    "priceRange": "$$",
+    "flavorsNote": "Sold unflavored or in Paradise Punch, Blue Razz, and Lemon Burst; the unflavored version lists no added ingredients.",
+    "affiliateUrl": "https://www.amazon.com/s?k=nutrabio+creatine+monohydrate+powder&tag=YOURTAG-20",
+    "blurb": "Single-ingredient PharmaPure creatine monohydrate that the brand tests to at least 99.98% purity per batch, with nothing else on the unflavored label.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/nutrabio-creatine-monohydrate-powder.png",
+    "images": [
+      "https://nutrabio.com/cdn/shop/files/23014_56618be1-4104-4b84-b81f-38b3294c6e27.png",
+      "https://nutrabio.com/cdn/shop/files/third-party-tested_NB-web.png"
+    ],
+    "metrics": {
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://nutrabio.com/products/creatine-monohydrate-powder",
+        "label": "NutraBio — official product page"
+      }
+    ]
+  },
+
+  {
+    "id": "bucked-up-creatine-monohydrate",
+    "name": "Creatine Monohydrate",
+    "brand": "Bucked Up",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate (Micronized)",
+        "dose": "5 g",
+        "clinicalNote": "Micronized for a finer particle size intended to help the powder dissolve more readily; creatine monohydrate is the most-studied form for supporting muscle strength and power."
+      }
+    ],
+    "cautions": [
+      "Mix one scoop with 8-12 oz of water or a beverage of choice.",
+      "Not intended for use by anyone under 18 or by pregnant or nursing women.",
+      "Consult a physician before use if you have a pre-existing kidney condition."
+    ],
+    "servings": 50,
+    "priceRange": "$$",
+    "flavorsNote": "Sold unflavored only, formulated to mix into any drink without altering taste.",
+    "affiliateUrl": "https://www.amazon.com/s?k=bucked+up+creatine+monohydrate&tag=YOURTAG-20",
+    "blurb": "A single-ingredient 5 g micronized monohydrate scoop from a brand better known for stimulant pre-workouts; the label lists nothing beyond the creatine itself.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/bucked-up-creatine-monohydrate.jpg",
+    "imageOpaque": true,
+    "images": [
+      "https://cdn11.bigcommerce.com/s-hml7iwqa3w/images/stencil/original/image-manager/bucked-up-creatine.jpg?t=1692225109",
+      "https://www.strongsupplementshop.com/images/stencil/original/image-manager/creatine-monohydrate-suppfacts.jpg"
+    ],
+    "metrics": {
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://www.strongsupplementshop.com/creatine-monohydrate-by-bucked-up",
+        "label": "Strong Supplement Shop — retailer listing with Supplement Facts panel"
+      },
+      {
+        "url": "https://www.buckedup.com/creatine-monohydrate",
+        "label": "Bucked Up — official product page"
+      }
+    ]
+  },
+
+  {
+    "id": "alani-nu-creatine",
+    "name": "Creatine",
+    "brand": "Alani Nu",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "Creatine monohydrate is well studied for supporting muscle strength, power output, and training volume when paired with resistance exercise."
+      }
+    ],
+    "cautions": [
+      "Mix one scoop into 8-12 fl oz of water or a flavored beverage.",
+      "Creatine increases water retention in muscle tissue; drink enough fluids throughout the day.",
+      "Not intended for those under 18 or for pregnant or nursing women."
+    ],
+    "servings": 30,
+    "priceRange": "$$$",
+    "flavorsNote": "Unflavored, formulated with no added sugar or artificial colors so it can be mixed into any drink.",
+    "affiliateUrl": "https://www.amazon.com/s?k=alani+nu+creatine+unflavored&tag=YOURTAG-20",
+    "blurb": "A lifestyle-brand tub that keeps the label to one ingredient — 5 g of creatine monohydrate per scoop, nothing else.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/alani-nu-creatine.png",
+    "images": [
+      "https://www.alaninu.com/cdn/shop/files/Stretch_AN-Website-PDP-Creatine-01_V1.png?v=1782229016&width=2000",
+      "https://www.alaninu.com/cdn/shop/files/Stretch_AN-Website-PDP-Creatine-02_V1.png?v=1782229016&width=2000",
+      "https://www.alaninu.com/cdn/shop/files/Stretch_AN-Website-PDP-Creatine-Feature-Image_V1.jpg?v=1782229017"
+    ],
+    "metrics": {
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://www.alaninu.com/products/creatine",
+        "label": "Alani Nu — official product page"
+      }
+    ]
+  },
+
+  {
+    "id": "ghost-size",
+    "name": "Size V3",
+    "brand": "Ghost",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creapure Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "Creapure-branded creatine monohydrate is studied for supporting muscle strength, power, and lean mass when combined with resistance training."
+      },
+      {
+        "name": "Betaine (Full Yield)",
+        "dose": "2.5 g",
+        "clinicalNote": "Betaine anhydrous has been studied for supporting muscular endurance and power output during training."
+      },
+      {
+        "name": "PeakATP (ATP disodium)",
+        "dose": "400 mg",
+        "clinicalNote": "An adenosine triphosphate disodium ingredient studied for supporting muscular strength and power during resistance training."
+      },
+      {
+        "name": "Epicatechin",
+        "dose": "200 mg",
+        "clinicalNote": "A flavonoid compound included at a dose reflecting early-stage research on muscle signaling; not established as essential to creatine's core effects."
+      }
+    ],
+    "cautions": [
+      "Combines several active ingredients beyond creatine — review the full label if sensitive to betaine or plant-based extracts.",
+      "Mix one scoop with 8-10 oz of water or a beverage of choice; do not exceed 2 servings in 24 hours.",
+      "Not intended for those under 18 or for pregnant or nursing women."
+    ],
+    "servings": 30,
+    "priceRange": "$$$",
+    "flavorsNote": "Available in Natty (no artificial flavors or dyes), Cherry Limeade, and WARHEADS Sour Watermelon.",
+    "affiliateUrl": "https://www.amazon.com/s?k=ghost+size+creatine&tag=YOURTAG-20",
+    "blurb": "A fully disclosed multi-ingredient muscle-builder built around 5 g of Creapure creatine monohydrate plus betaine, PeakATP, and epicatechin — every dose is printed on the label rather than folded into a blend.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/ghost-size.webp",
+    "images": [
+      "https://www.ghostlifestyle.com/cdn/shop/files/Size_Natty.webp",
+      "https://www.ghostlifestyle.com/cdn/shop/files/GHOST_Size_V3_Natty_Back.png"
+    ],
+    "metrics": {
+      "creatineG": 5,
+      "form": "blend"
+    },
+    "sources": [
+      {
+        "url": "https://www.priceplow.com/ghost/size",
+        "label": "PricePlow — label database with Supplement Facts panel"
+      },
+      {
+        "url": "https://www.ghostlifestyle.com/products/ghost-size-v3-natty",
+        "label": "Ghost Lifestyle — official product page"
+      }
+    ]
+  },
+
+  {
+    "id": "kaged-creatine-monohydrate",
+    "name": "Creatine Monohydrate",
+    "brand": "Kaged",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Third-Party Tested"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate (Micronized)",
+        "dose": "5 g",
+        "clinicalNote": "Creatine monohydrate is one of the most-studied ingredients for supporting muscle strength, power, and training capacity."
+      }
+    ],
+    "cautions": [
+      "Mix one scoop into 8-10 oz of water, juice, or a beverage of choice.",
+      "Drink adequate water throughout the day while supplementing with creatine.",
+      "Consult a physician before use if you have a kidney condition."
+    ],
+    "servings": 100,
+    "priceRange": "$$",
+    "flavorsNote": "Sold unflavored; mixes into any beverage.",
+    "affiliateUrl": "https://www.amazon.com/s?k=kaged+creatine+monohydrate&tag=YOURTAG-20",
+    "blurb": "Every batch is verified by Informed Sport, giving this single-ingredient 5 g monohydrate scoop a label-backed third-party testing claim rather than just a marketing statement.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/kaged-creatine-monohydrate.png",
+    "images": [
+      "https://www.kaged.com/cdn/shop/files/CreatineMono-Front-UN.png",
+      "https://www.kaged.com/cdn/shop/files/CreatineMonohydrateAMZ_CreatineMonohydrateSFP.jpg"
+    ],
+    "metrics": {
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://www.kaged.com/products/creatine-monohydrate",
+        "label": "Kaged — official product page"
+      }
+    ]
+  },
+
+  {
+    "id": "nutricost-creatine-hcl",
+    "name": "Creatine HCl Powder",
+    "brand": "Nutricost",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Budget Pick"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine HCl (CON-CRET)",
+        "dose": "750 mg",
+        "clinicalNote": "Creatine hydrochloride is a more water-soluble salt form of creatine studied at lower gram doses than monohydrate for supporting muscle strength and power."
+      }
+    ],
+    "cautions": [
+      "Creatine HCl is dosed in milligrams, not grams — this is not a 1:1 swap for a 5 g monohydrate serving.",
+      "Mix one scoop with 6-10 oz of water.",
+      "Consult a physician before use if you have a kidney condition."
+    ],
+    "servings": 300,
+    "priceRange": "$",
+    "flavorsNote": "Sold unflavored.",
+    "affiliateUrl": "https://www.amazon.com/s?k=nutricost+creatine+hcl&tag=YOURTAG-20",
+    "blurb": "A budget-priced single-ingredient HCl powder dosed at 750 mg per serving — far below a typical 5 g monohydrate scoop, reflecting HCl's higher solubility per gram.",
+    "labelVerified": "July 2026",
+    "imageUrl": "https://nutricost.com/cdn/shop/files/NTC_CreatineHCI_300G_16OZ_Front_Square_50x.jpg?v=1770060305",
+    "images": [
+      "https://nutricost.com/cdn/shop/files/NTC_CreatineHCI_300G_16OZ_Front_Square_50x.jpg?v=1770060305",
+      "https://nutricost.com/cdn/shop/files/NTC_CreatineHCI_300G_16OZ_SFP_Square_50x.jpg?v=1770060305"
+    ],
+    "metrics": {
+      "creatineG": 0.75,
+      "form": "HCl"
+    },
+    "sources": [
+      {
+        "url": "https://nutricost.com/products/nutricost-creatine-hcl-powder",
+        "label": "Nutricost — official product page"
+      }
+    ]
+  },
+
+  {
+    "id": "ryse-loaded-creatine",
+    "name": "Loaded Creatine",
+    "brand": "RYSE",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate",
+        "dose": "4 g",
+        "clinicalNote": "The primary, most-studied form of creatine in the blend, supporting muscle strength and power output."
+      },
+      {
+        "name": "Creatine MagnaPower (Magnesium Creatine Chelate)",
+        "dose": "1.5 g",
+        "clinicalNote": "A patented magnesium-bound creatine form included alongside monohydrate and HCl in this three-form blend."
+      },
+      {
+        "name": "Creatine HCl",
+        "dose": "750 mg",
+        "clinicalNote": "A more soluble creatine salt form dosed in milligrams rather than grams."
+      },
+      {
+        "name": "Betaine Anhydrous",
+        "dose": "2.5 g",
+        "clinicalNote": "Betaine has been studied for supporting muscular endurance and power during training."
+      }
+    ],
+    "cautions": [
+      "Combines three creatine forms plus betaine and PeakATP — total active ingredient load is higher than a single-ingredient monohydrate scoop.",
+      "Mix one scoop with 10-12 oz of water or a beverage of choice; do not exceed one serving in 24 hours.",
+      "Consult a physician before use if you have a kidney condition."
+    ],
+    "servings": 30,
+    "priceRange": "$$$",
+    "flavorsNote": "Available unflavored and in flavors including Electric Lemonade and Baja Cooler, sweetened with sucralose and acesulfame potassium in flavored versions.",
+    "affiliateUrl": "https://www.amazon.com/s?k=ryse+loaded+creatine&tag=YOURTAG-20",
+    "blurb": "A fully disclosed three-form creatine blend — monohydrate, MagnaPower, and HCl — plus betaine and PeakATP, totaling roughly 6.25 g of labeled creatine per scoop.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/ryse-loaded-creatine.webp",
+    "images": [
+      "https://rysesupps.com/cdn/shop/files/u_1.webp",
+      "https://rysesupps.com/cdn/shop/files/nfp-loadedcre-unflav.png"
+    ],
+    "metrics": {
+      "creatineG": 6.25,
+      "form": "blend"
+    },
+    "sources": [
+      {
+        "url": "https://rysesupps.com/products/loaded-creatine",
+        "label": "RYSE — official product page"
+      },
+      {
+        "url": "https://www.stack3d.com/2023/08/ryse-loaded-creatine/",
+        "label": "Stack3d — label breakdown"
+      }
+    ]
+  },
+
+  {
+    "id": "ancient-nutrition-creatine-collagen-electrolytes",
+    "name": "Creatine + Collagen + Electrolytes (Lemon)",
+    "brand": "Ancient Nutrition",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Proprietary Blend"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "Creatine monohydrate is studied for supporting muscle strength and power output during resistance training."
+      },
+      {
+        "name": "Hydration & Collagen Blend (fermented eggshell membrane collagen, sodium, potassium)",
+        "dose": "2.19 g",
+        "clinicalNote": "A combined blend of fermented eggshell membrane collagen and electrolytes; individual ingredient amounts within the blend are not broken out on the label."
+      }
+    ],
+    "cautions": [
+      "Contains 450 mg of sodium and 280 mg of potassium per scoop from the electrolyte blend — a consideration for anyone monitoring sodium intake.",
+      "Contains egg; produced on equipment that also processes peanuts, tree nuts, milk, soy, and wheat.",
+      "Mix one scoop in 6-8 oz of liquid."
+    ],
+    "servings": 30,
+    "priceRange": "$$$",
+    "flavorsNote": "Lemon flavor, sweetened with stevia leaf extract and organic monk fruit extract; a plain Creatine + Collagen version without electrolytes is also sold.",
+    "affiliateUrl": "https://www.amazon.com/s?k=ancient+nutrition+creatine+collagen+electrolytes&tag=YOURTAG-20",
+    "blurb": "Creatine monohydrate is disclosed on its own line at 5 g, but the collagen and electrolyte ingredients are combined into a single 2.19 g blend total without an individual breakdown.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/ancient-nutrition-creatine-collagen-electrolytes.jpg",
+    "imageOpaque": true,
+    "images": [
+      "https://www.professionalsupplementcenter.com/cdn/shop/files/creatine-collagen-electrolytes-ANN_main_1.jpg?v=1768932858&width=800",
+      "https://www.professionalsupplementcenter.com/cdn/shop/files/creatine-collagen-electrolytes-ANN_Lemon_30_20Servings_main_1.jpg?v=1768932857&width=800"
+    ],
+    "metrics": {
+      "creatineG": 5,
+      "form": "blend"
+    },
+    "sources": [
+      {
+        "url": "https://www.professionalsupplementcenter.com/products/creatine-collagen-electrolytes-by-ancient-nutrition",
+        "label": "Professional Supplement Center — retailer listing with Supplement Facts panel"
+      },
+      {
+        "url": "https://ancientnutrition.com/products/creatine-collagen-electrolytes-powder-lemon",
+        "label": "Ancient Nutrition — official product page"
+      }
+    ]
+  },
+
+  {
+    "id": "optimum-nutrition-creatine-gummies",
+    "name": "Creatine Monohydrate Gummies",
+    "brand": "Optimum Nutrition",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Beginner Friendly"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "Creatine monohydrate is studied for supporting muscle strength, power, and training volume; this gummy format delivers the same compound as powder without mixing."
+      }
+    ],
+    "cautions": [
+      "Each serving (3 gummies) contains 2 g of sugar, unlike unsweetened powder formats.",
+      "Take 3 gummies daily as a single serving; do not exceed the recommended amount.",
+      "Not intended for those under 18 or for pregnant, nursing, or those trying to conceive."
+    ],
+    "servings": 25,
+    "priceRange": "$$$",
+    "flavorsNote": "Available in Pineapple, Blue Raspberry, and Mixed Berry, naturally flavored with no synthetic colors.",
+    "affiliateUrl": "https://www.amazon.com/s?k=optimum+nutrition+creatine+gummies&tag=YOURTAG-20",
+    "blurb": "A chewable alternative to scoop-and-mix creatine — 3 gummies deliver the same 5 g creatine monohydrate dose as a standard powder serving, at the cost of 2 g of added sugar.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/optimum-nutrition-creatine-gummies.png",
+    "images": [
+      "https://www.optimumnutrition.com/cdn/shop/files/ON_DTC_PDP_CreatineGum35srv_Pineapple_6079514_4000x4000_8b5d2b43-a73c-4a43-a36e-6ac60070cbce.png?v=1784577657&width=4000",
+      "https://www.optimumnutrition.com/cdn/shop/files/US_Creatine_Gummies_25srv_75ct_Mixed_Berry_NFP.jpg?v=1784747944&width=1000",
+      "https://www.optimumnutrition.com/cdn/shop/files/06_ON_CreatineGummies_Pineapple_B_4000x4000_35210b03-09df-4ba7-b314-7d14ef976156.png?v=1767736827&width=2000"
+    ],
+    "metrics": {
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://www.optimumnutrition.com/en-us/products/creatine-monohydrate-gummies",
+        "label": "Optimum Nutrition — official product page"
+      }
+    ]
+  },
 ];
