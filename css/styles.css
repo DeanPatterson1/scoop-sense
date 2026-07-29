@@ -1691,10 +1691,11 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   justify-content: center;
   aspect-ratio: 4 / 3;
   margin: 0 -16px 14px;
-  /* A lit stage, not a flat panel. Every product image is a transparent
-     cutout now, so a black tub on a near-black card would vanish — the glow
-     puts light behind the product and falls off to the card colour at the
-     edges, which separates dark packaging without tinting it. */
+  /* Photos are pre-fitted to this exact ratio and cover it, so the stage below
+     only ever shows through for the products that have no photograph and fall
+     back to the monogram tub. The glow is for them: it puts light behind the
+     artwork so it does not vanish into a near-black card. */
+  overflow: hidden;
   background:
     radial-gradient(
       ellipse 62% 58% at 50% 46%,
@@ -1707,11 +1708,21 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   border-bottom: 1px solid var(--sc-border);
 }
 
-/* max-height, not height: a percentage height against a flex-sized parent is
-   dropped, and the art area then grows to each photo's intrinsic size —
-   which is what pulled tiles in the same row out of alignment. */
-.sc-tile-art svg,
+/* The photo is the card's whole art area, edge to edge. It already carries
+   the brand's own backdrop and was fitted to 4:3 with the product at a common
+   scale, so cover crops nothing in practice and every tile in a row lines up. */
 .sc-tile-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* max-height, not height: a percentage height against a flex-sized parent is
+   dropped, and the art area then grows to the artwork's intrinsic size —
+   which is what pulled tiles in the same row out of alignment. */
+.sc-tile-art svg {
   max-height: 82%;
   height: auto;
   width: auto;
@@ -1720,8 +1731,13 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   transition: transform 0.25s ease;
 }
 
-.sc-tile:hover .sc-tile-art svg,
+/* A photo that fills its frame cannot lift without opening a gap under it, so
+   it grows in place instead; the floating monogram still lifts. */
 .sc-tile:hover .sc-tile-art img {
+  transform: scale(1.04);
+}
+
+.sc-tile:hover .sc-tile-art svg {
   transform: translateY(-4px);
 }
 

@@ -91,7 +91,7 @@ var PRODUCTS = [
         ]
       }
     },
-    "imageUrl": "images/products/legion-pulse.png",
+    "imageUrl": "images/products/legion-pulse.jpg",
     "images": [
       "https://legionathletics.com/wp-content/uploads/2025/09/Pulse-20S-STRW-BLAST-B-USA-1000x1000-Roman-Berezecky.png",
       "https://legionathletics.com/wp-content/uploads/2026/06/Pulse-Labdoor-2027-Combined-v2-Morgan-Walsh-scaled.png",
@@ -200,7 +200,7 @@ var PRODUCTS = [
         ]
       }
     },
-    "imageUrl": "images/products/transparent-labs-bulk.png",
+    "imageUrl": "images/products/transparent-labs-bulk.jpg",
     "images": [
       "https://cdn.shopify.com/s/files/1/0866/7664/files/TL_Bulk_30S_BR_1_1_1defd9cb-a9d2-4603-9509-7b02cd578d47.png?v=1745871768",
       "https://cdn.shopify.com/s/files/1/0866/7664/files/TL_Bulk_30S_SG_1_1_dad90210-bdfd-43fc-abba-40c5ed4dd32b.png?v=1761837660",
@@ -302,7 +302,7 @@ var PRODUCTS = [
         ]
       }
     },
-    "imageUrl": "images/products/gorilla-mode.png",
+    "imageUrl": "images/products/gorilla-mode.jpg",
     "images": [
       "https://gorillamind.com/cdn/shop/files/GM_HERO_Mode_FruitPunch_working_020626_1_1.png?v=1782938669",
       "https://gorillamind.com/cdn/shop/files/GM_THUMBS_Mode_IngBreakdown_1500x1500_94541f42-302d-417f-bdbf-24287ae0f4e7.jpg?v=1771872254",
@@ -408,7 +408,7 @@ var PRODUCTS = [
         ]
       }
     },
-    "imageUrl": "images/products/c4-original.png",
+    "imageUrl": "images/products/c4-original.jpg",
     "images": [
       "https://cellucor.com/cdn/shop/files/C4AN_1002_Brand_C4YellowLabel_Transition_C4Original_CoreFlavors_BasicPDPs-OG-IBR-Hero-Grey.png?v=1773235672",
       "https://cellucor.com/cdn/shop/files/C4AN_1002_Brand_C4YellowLabel_Transition_C4Original_CoreFlavors_BasicPDPs-OG-HWP-Hero-Grey.png?v=1773236184",
@@ -506,7 +506,7 @@ var PRODUCTS = [
         ]
       }
     },
-    "imageUrl": "images/products/total-war.png",
+    "imageUrl": "images/products/total-war.jpg",
     "images": [
       "https://cdn.shopify.com/s/files/1/1304/0433/products/TW_BAJABOMB_30SERV_FLV-2023.png?v=1738267227",
       "https://cdn.shopify.com/s/files/1/1304/0433/files/BAJABOMB.jpg?v=1770325008",
@@ -552,7 +552,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=optimum+nutrition+gold+standard+pre+workout&tag=YOURTAG-20",
     "blurb": "Moderate 175 mg of caffeine with pump ingredients well below studied ranges; a predictable label from an established brand.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/on-gold-standard-pre.png",
+    "imageUrl": "images/products/on-gold-standard-pre.jpg",
     "images": [
       "https://cdn.shopify.com/s/files/1/0794/9991/9627/files/on-1146471_Image_01.png?v=1755790955",
       "https://www.optimumnutrition.com/cdn/shop/files/ONUS-gold-standard-pre-workout-powder_Label_Blueberry-Lemonade_0-66lb_30-servings.jpg?v=1761316801&width=1000",
@@ -643,7 +643,7 @@ var PRODUCTS = [
         ]
       }
     },
-    "imageUrl": "images/products/ghost-legend.png",
+    "imageUrl": "images/products/ghost-legend.jpg",
     "images": [
       "https://cdn.shopify.com/s/files/1/2060/6331/files/LegendxWelchs.webp?v=1761234119",
       "https://cdn.shopify.com/s/files/1/2060/6331/files/LegendWelchsBack.webp?v=1761234119"
@@ -733,7 +733,7 @@ var PRODUCTS = [
         ]
       }
     },
-    "imageUrl": "images/products/alani-nu-pre-workout.png",
+    "imageUrl": "images/products/alani-nu-pre-workout.jpg",
     "images": [
       "https://cdn.shopify.com/s/files/1/0035/4654/6274/files/Stretch_AN-Website-30serv-PWO-PDP-GXL-01_V2.png?v=1782416587",
       "https://cdn.shopify.com/s/files/1/0035/4654/6274/files/Stretch_AN-Website-30serv-PWO-PDP-GXL-02_V2.png?v=1782416587",
@@ -833,7 +833,7 @@ var PRODUCTS = [
         ]
       }
     },
-    "imageUrl": "images/products/ryse-godzilla.png",
+    "imageUrl": "images/products/ryse-godzilla.jpg",
     "images": [
       "https://m.media-amazon.com/images/I/718qUjKuwAL._AC_SL1500_.jpg",
       "https://rysesupps.com/cdn/shop/files/sfp-godz-br.png?v=1708540057",
@@ -947,7 +947,7 @@ var PRODUCTS = [
         ]
       }
     },
-    "imageUrl": "images/products/bucked-up.png",
+    "imageUrl": "images/products/bucked-up.jpg",
     "images": [
       "https://www.buckedup.com/cdn-cgi/image/width=1200,format=auto,quality=85/public/upload%2Fimg%2Fproducts%2F162-buckedup-pre-workout-rocket-pop-11oz.webp",
       "https://www.buckedup.com/cdn-cgi/image/width=1200,format=auto,quality=85/public/upload%2Fimg%2Fproducts%2Foptions%2Fvalues%2F562-WHO-BU-Pre-BlueRaz-30srv-25-04-00-01.webp",
@@ -993,7 +993,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=beyond+raw+lit+pre+workout&tag=YOURTAG-20",
     "blurb": "Beta-alanine at the full studied dose and Nitrosigine at its studied 1.5 g; pump support comes from Nitrosigine rather than citrulline.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/beyond-raw-lit.png",
+    "imageUrl": "images/products/beyond-raw-lit.jpg",
     "images": [
       "https://www.gnc.com/dw/image/v2/BBLB_PRD/on/demandware.static/-/Sites-master-catalog-gnc/default/dw0644caf1/hi-res/759031_Beyond_Raw_LIT_V2_Passion_Orange_Guava_Tub_Front.jpg?sw=1500&sh=1500&sm=fit",
       "https://www.gnc.com/dw/image/v2/BBLB_PRD/on/demandware.static/-/Sites-master-catalog-gnc/default/dw70bbc89d/hi-res/759031_EBC_Thumbnails_02_TikTok_BeyondRaw_LIT_V2_POG_SupplementFacts.jpg?sw=1500&sh=1500&sm=fit",
@@ -1094,7 +1094,7 @@ var PRODUCTS = [
         ]
       }
     },
-    "imageUrl": "images/products/kaged-pre-kaged.png",
+    "imageUrl": "images/products/kaged-pre-kaged.jpg",
     "images": [
       "https://www.kaged.com/cdn/shop/files/Preworkoutstrawberrylemonadefront_383553b6-4ffd-4f57-8253-9d5674e0ed96.png?v=1774411038&width=1600",
       "https://www.kaged.com/cdn/shop/files/SFP-PRKS.jpg?v=1664839489&width=1600",
@@ -1147,7 +1147,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=pre+jym+pre+workout&tag=YOURTAG-20",
     "blurb": "Spreads many ingredients across one 300 mg-caffeine scoop; most individual doses land below their studied ranges.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/pre-jym.png",
+    "imageUrl": "images/products/pre-jym.jpg",
     "images": [
       "https://jymsupplementscience.com/cdn/shop/files/PRE30FF400_26395_040126_V1.1_Front.png?v=1783976390&width=2136",
       "https://jymsupplementscience.com/cdn/shop/files/Pre-JYM-SFP.svg?v=1783467722",
@@ -1194,7 +1194,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=legion+pulse+stim+free+pre+workout&tag=YOURTAG-20",
     "blurb": "The same citrulline and beta-alanine doses as Pulse with zero caffeine; suited to evening sessions.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/legion-pulse-stim-free.png",
+    "imageUrl": "images/products/legion-pulse-stim-free.jpg",
     "images": [
       "https://legionathletics.com/wp-content/uploads/2023/08/PulseSF-20S-Fruit-Punch-Transp.png",
       "https://legionathletics.com/wp-content/uploads/2019/08/product-ingredients-pulse-stim-free-fruit-punch-b.png",
@@ -1240,7 +1240,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=transparent+labs+stim+free+pre+workout&tag=YOURTAG-20",
     "blurb": "BULK's formula without the caffeine; citrulline, beta-alanine, and betaine stay at studied doses.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/transparent-labs-stim-free.png",
+    "imageUrl": "images/products/transparent-labs-stim-free.jpg",
     "images": [
       "https://www.transparentlabs.com/cdn/shop/files/TL_Stim-Free_30_SL_1_0.png?v=1745878684&width=1946",
       "https://www.transparentlabs.com/cdn/shop/files/Strawberry_Lemonade_SFP.png?v=1758632295&width=1946"
@@ -1286,7 +1286,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=gorilla+mode+nitric+pre+workout&tag=YOURTAG-20",
     "blurb": "Caffeine-free with 9 g of citrulline and 3 g of glycerol; doses assume the full two-scoop serving.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/gorilla-mode-nitric.png",
+    "imageUrl": "images/products/gorilla-mode-nitric.jpg",
     "images": [
       "https://gorillamind.com/cdn/shop/files/GM_HERO_Nitric_FruitPunch_working_020626_1_1.png?v=1782938971&width=1500",
       "https://gorillamind.com/cdn/shop/files/GM_THUMBS_NITRIC_KeyCallouts_1500x1500_719faea0-7d5e-4e16-ae64-785c22f74de6.jpg?v=1771872781&width=1500",
@@ -1339,7 +1339,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=Wrecked+Pre-Workout+Huge+Supplements&tag=YOURTAG-20",
     "blurb": "A 14-ingredient, 2-scoop-max formula stacking 375 mg of caffeine with citrulline, beta-alanine, and alpha-GPC at amounts inside commonly studied ranges - dosed and priced for experienced stimulant users, not beginners.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/wrecked-pre-workout.png",
+    "imageUrl": "images/products/wrecked-pre-workout.jpg",
     "images": [
       "https://hugesupplements.com/cdn/shop/files/WreckedBlueRazz_1800x1800.png",
       "https://hugesupplements.com/cdn/shop/files/Wrecked_Supplement_Facts_New_Formula_1800x1800.png",
@@ -1411,7 +1411,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=Woke+AF+Bucked+Up+Pre+Workout&tag=YOURTAG-20",
     "blurb": "A tri-stimulant, one-scoop-max formula (caffeine, dendrobium, synephrine) that fully discloses every dose on the label - the stimulant load makes it a poor fit for anyone without an established caffeine tolerance.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/woke-af.png",
+    "imageUrl": "images/products/woke-af.jpg",
     "images": [
       "https://www.buckedup.com/cdn-cgi/image/width=1200,format=auto,quality=85/public/upload%2Fimg%2Fproducts%2Foptions%2Fvalues%2F784-woke-af-pre-workout-rocket-pop-1.webp",
       "https://www.buckedup.com/cdn-cgi/image/width=1200,format=auto,quality=85/public/upload%2Fimg%2Fproducts%2Foptions%2Fvalues%2F784-1024110_WHO-WokeAF-RocketPop-30srv-SFP-Render-25_medium.08-00-noBG.webp",
@@ -1482,7 +1482,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=Mother+Bucker+Bucked+Up+Pre+Workout&tag=YOURTAG-20",
     "blurb": "A 400 mg-caffeine, double-dosed beta-alanine formula built for experienced stimulant users; the brand itself says it isn't newbie-friendly, and the added alpha-yohimbine raises the stimulant load further.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/mother-bucker.png",
+    "imageUrl": "images/products/mother-bucker.jpg",
     "images": [
       "https://www.buckedup.com/cdn-cgi/image/width=1200,format=auto,quality=85/public/upload%2Fimg%2Fproducts%2Foptions%2Fvalues%2F7968-buckedup-mother-bucker-pre-workout-rocket-pop-1.webp",
       "https://www.buckedup.com/cdn-cgi/image/width=1200,format=auto,quality=85/public/upload%2Fimg%2Fproducts%2Foptions%2Fvalues%2F7968-BU-MotherBucker-SFP-RocketPop-2023.06-03-1200px.webp",
@@ -1553,7 +1553,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=C4+Ultimate+Cellucor+Pre+Workout&tag=YOURTAG-20",
     "blurb": "Cellucor's flagship tri-stim formula pairs 300 mg caffeine with TeaCrine and Dynamine for a smoother energy curve, with beta-alanine at the commonly studied 3.2 g daily amount and a citrulline-arginine pump blend - priced like a premium product despite its mainstream retail availability.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/c4-ultimate.png",
+    "imageUrl": "images/products/c4-ultimate.jpg",
     "images": [
       "https://cellucor.com/cdn/shop/files/C4AN_1002_Brand_C4YellowLabel_Transition_C4Ultimate_CoreFlavors_BasicPDPs-Ultimate-FB-Hero-Grey.png",
       "https://cellucor.com/cdn/shop/files/C4_ultimate-nutrition-v3.png",
@@ -1625,7 +1625,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=BSN+N.O.-XPLODE+Pre+Workout&tag=YOURTAG-20",
     "blurb": "A legacy 2004-era stim pre-workout still built around a strong 275mg caffeine dose, but the label is stacked with five proprietary blends, so buyers get the caffeine and beta-alanine numbers as callouts without the creatine, pump, or focus ingredient breakdown.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/no-xplode.png",
+    "imageUrl": "images/products/no-xplode.jpg",
     "images": [
       "https://www.gobsn.com/cdn/shop/files/US_N.O.-Xplode_16srv_BlueRaz_6077633-Front-2000x1825-6c4b2d7.png?v=1762884026",
       "https://www.gobsn.com/cdn/shop/files/US_N.O.-Xplode_16srv_BlueRaz_6077633-NFP.png?v=1763132960&width=1000",
@@ -1697,7 +1697,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=MusclePharm+Assault+Pre+Workout&tag=YOURTAG-20",
     "blurb": "A fully-disclosed, no-blend budget pre-workout at roughly a dollar a serving or less, pairing a moderate-high 250mg caffeine dose with 3g creatine in an 11.5g scoop, though its beta-alanine and betaine doses sit toward the lower end of what's typically studied.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/musclepharm-assault.png",
+    "imageUrl": "images/products/musclepharm-assault.jpg",
     "images": [
       "https://musclepharm.com/cdn/shop/files/Assault_Fruit_Punch-hero.jpg?v=1770132738&width=1200",
       "https://musclepharm.com/cdn/shop/files/MP-Assault-AMZ-StackedTiles-FruitPunch-04-updated_e6ea778c-1383-47cf-bd58-952552b4c0f6.jpg?v=1770132738",
@@ -1764,7 +1764,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=CBUM+Thavage+Pre+Workout&tag=YOURTAG-20",
     "blurb": "Chris Bumstead's flagship pre-workout delivers a high 305mg caffeine dose at the full two-scoop serving alongside research-aligned doses of citrulline, beta-alanine, and Nitrosigine, with no proprietary blends, though the tub's 40 scoops only cover 20 full sessions.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/cbum-thavage.png",
+    "imageUrl": "images/products/cbum-thavage.jpg",
     "images": [
       "https://cdn.shopify.com/s/files/1/0932/3141/5614/files/thavage-dragon_fruit.webp?v=1767970668",
       "https://getrawnutrition.com/cdn/shop/files/Thav-DragonFruit-SFP.png?v=1745895577",
@@ -1839,7 +1839,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=Nutrex+Outlift+Clinical+Pre+Workout&tag=YOURTAG-20",
     "blurb": "One of the highest-caffeine mainstream pre-workouts at 380mg per 28g scoop, fully dosed and disclosed with 8g citrulline, 3.2g beta-alanine, and 3g creatine, but the stimulant load alone makes it a poor fit for anyone caffeine-sensitive.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/outlift-clinical.png",
+    "imageUrl": "images/products/outlift-clinical.jpg",
     "images": [
       "https://nutrex.com/cdn/shop/files/Outlift-Clinical-MV-FR_grande.png?v=1758820161",
       "https://cdn.shopify.com/s/files/1/0556/9750/6368/files/outlift-clinical-aplus-01.jpg",
@@ -1914,7 +1914,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=NutraBio+PRE+Pre+Workout&tag=YOURTAG-20",
     "blurb": "One of the few pre-workouts that discloses every ingredient at its exact dose rather than blends; the 2025 formula pairs 350 mg of caffeine with 10 g of citrulline, both at or above typical study doses.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/nutrabio-pre.png",
+    "imageUrl": "images/products/nutrabio-pre.jpg",
     "images": [
       "https://nutrabio.com/cdn/shop/files/22004_4182bee2-1e49-45d3-a194-19e5ce41cca0.png",
       "https://nutrabio.com/cdn/shop/files/22004_1.png",
@@ -1984,7 +1984,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=Axe+Sledge+Intake+Pre+Workout&tag=YOURTAG-20",
     "blurb": "Fully disclosed all-in-one formula dosed for both a 1-scoop and 2-scoop serving; at the full 2-scoop dose, caffeine (300 mg), citrulline (8 g), and beta-alanine (3.2 g) all land at or above typical research amounts.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/axe-sledge-intake.png",
+    "imageUrl": "images/products/axe-sledge-intake.jpg",
     "images": [
       "https://axeandsledge.com/cdn/shop/files/Intake_80af80da-6d54-43ff-a2d3-b4c07a866041.png",
       "https://axeandsledge.com/cdn/shop/files/Intake_SFP_Fruit_Kaboom_dcad3006-fd52-479d-ac4c-8aba8c618738_2048x2048.jpg",
@@ -2051,7 +2051,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=JNX+Sports+The+Curse+Pre+Workout&tag=YOURTAG-20",
     "blurb": "A long-running budget bestseller that still relies on two proprietary blends, so exact beta-alanine, creatine, and citrulline doses aren't disclosed; the 155 mg caffeine figure is directly confirmed on the label and sits at the low-moderate end for the category.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/jnx-the-curse.png",
+    "imageUrl": "images/products/jnx-the-curse.jpg",
     "images": [
       "https://www.jnxsports.com/cdn/shop/files/JNX_Sports_The_Curse_Pre-workout_Blue_Raspberry_50_Serve_Bottle_Front_9ca480ca-8ec6-43e3-8af4-5ba8cac0310f_1200x1200_crop_center.png?v=1773957723",
       "https://www.jnxsports.com/cdn/shop/files/The_Curse_Pre-Workout.jpg",
@@ -2121,7 +2121,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=Alpha+Lion+SuperHuman+Pre+Workout&tag=YOURTAG-20",
     "blurb": "A genuinely fully-disclosed label with a strong 4g citrulline and 3.2g beta-alanine dose. The three-part SXT caffeine system yields 311mg per scoop, but 275mg of that is plain caffeine anhydrous — only 50mg comes from the extended and delayed-release zumXR forms, so it is mostly one strong hit rather than a gentle sustained curve.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/superhuman-pre.png",
+    "imageUrl": "images/products/superhuman-pre.jpg",
     "images": [
       "https://www.alphalion.com/cdn/shop/files/sh-pre-hulk-juice-icon-bogo-offer.png",
       "https://www.alphalion.com/cdn/shop/files/SH-Pre_SupplementFacts_62a7395a-3a08-400c-8d15-cf7279af661c.png",
@@ -2187,7 +2187,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=ProSupps+Mr+Hyde+Signature+Pre+Workout&tag=YOURTAG-20",
     "blurb": "The V2 relaunch is a short, blend-free list — 3g citrulline, 2.5g creatine monohydrate, 2g beta-alanine, 1g betaine, 1g tyrosine and 200mg caffeine anhydrous in a 12.62g scoop. It is a cleaner and more moderate label than the older Nitrosigine/TeaCrine Mr. Hyde Signature that many retailers still list.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/mr-hyde-signature.png",
+    "imageUrl": "images/products/mr-hyde-signature.jpg",
     "images": [
       "https://prosupps.com/cdn/shop/files/Mr-Hyde-Signature-Variant-Blue-Razz_f895ed40-d6b2-41de-b098-c75500d06949.png",
       "https://prosupps.com/cdn/shop/files/mr-hyde-signature-30-serve-sfp.png",
@@ -2257,7 +2257,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=Evlution+Nutrition+ENGN+Shred+Pre+Workout&tag=YOURTAG-20",
     "blurb": "A budget-leaning fat-loss stack (L-carnitine, Capsimax, yohimbe) built on a 260mg proprietary caffeine-and-green-tea energizer blend, so the exact caffeine dose isn't independently confirmable from the label alone.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/engn-shred.png",
+    "imageUrl": "images/products/engn-shred.jpg",
     "images": [
       "https://m.media-amazon.com/images/I/61p2J5qpraL._AC_SL1500_.jpg",
       "https://www.evlnutrition.com/cdn/shop/files/ENGN-SHRED-30SERV-CL_1.jpg",
@@ -2329,7 +2329,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=Nutricost+Pre-X+Xtreme+Pre+Workout&tag=YOURTAG-20",
     "blurb": "A fully-disclosed, blend-free label with generous citrulline, taurine, and Nitrosigine doses plus a straightforward 300mg caffeine anhydrous kick, at one of the lowest costs per serving in this set.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/nutricost-pre-x-xtreme.png",
+    "imageUrl": "images/products/nutricost-pre-x-xtreme.jpg",
     "images": [
       "https://nutricost.com/cdn/shop/files/NTC_PRE-X_BlueRaspberry_30SERV_25OZ_Front_Square.jpg",
       "https://nutricost.com/cdn/shop/files/NTC_PRE-X_BlueRaspberry_30SERV_25OZ_SFP_Square.jpg"
@@ -2398,7 +2398,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=kaged+pre-kaged+stim-free+pre-workout&tag=YOURTAG-20",
     "blurb": "Nearly the same pump and endurance dosing as the caffeinated Pre-Kaged, just without caffeine; Informed-Sport certification stands out for tested athletes, though the 1.6 g beta-alanine dose runs lighter than what most endurance research uses.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/kaged-pre-kaged-stim-free.png",
+    "imageUrl": "images/products/kaged-pre-kaged-stim-free.jpg",
     "images": [
       "https://www.kaged.com/cdn/shop/files/PWSF-Front-FP_d974f24a-c87b-4a3a-87e6-278f3048886d.png?v=1774411180&width=1200",
       "https://www.kaged.com/cdn/shop/files/PW-SF-Supplements-CherryBomb.jpg?v=1774411180&width=1600",
@@ -2458,7 +2458,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=nutrabio+stim-free+pre+workout&tag=YOURTAG-20",
     "blurb": "A fully disclosed, no-proprietary-blend label built on a heavy 10 g citrulline dose and a full 3.2 g of beta-alanine, with no stimulants at all.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/nutrabio-pre-stim-free.png",
+    "imageUrl": "images/products/nutrabio-pre-stim-free.jpg",
     "images": [
       "https://nutrabio.com/cdn/shop/files/22008.png?v=1744637742&width=1200",
       "https://nutrabio.com/cdn/shop/files/22005.png?v=1744637742&width=1200"
@@ -2522,7 +2522,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=genius+pre+caffeine-free+pre-workout&tag=YOURTAG-20",
     "blurb": "One of the few caffeine-free pre-workouts built around theobromine and Alpha-GPC instead of a caffeine analog; the 6 g citrulline malate dose sits at the bottom of the typical research range, so pump support is more modest than fully-dosed competitors.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/genius-pre.png",
+    "imageUrl": "images/products/genius-pre.jpg",
     "images": [
       "https://thegeniusbrand.com/cdn/shop/files/genius-pre-grappe-limade_57fb6db0-3d74-4e21-9ac7-494db5c62a53.png?v=1767885503&width=1200",
       "https://thegeniusbrand.com/cdn/shop/files/genius-pre-blue-rasperry_f9492372-3e08-4aa3-9752-57ce4614490b.png?v=1767885503&width=1200",
@@ -2588,7 +2588,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=Bloom+Nutrition+High+Energy+Pre+Workout&tag=YOURTAG-20",
     "blurb": "Markets itself as a clean, women-founded pre-workout, but two proprietary blends mean 220mg is the only active-ingredient amount disclosed on the label — the citrulline, beta-alanine, and beet root amounts are folded into an undisclosed 4.68g blend.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/bloom-high-energy-preworkout.png",
+    "imageUrl": "images/products/bloom-high-energy-preworkout.jpg",
     "images": [
       "https://bloomnu.com/cdn/shop/files/HE_0004_30ct_HEPWO_SourPeachRing_Shopify_a9782b99-56ff-4b1b-a83b-998808a5262a.jpg",
       "https://bloomnu.com/cdn/shop/files/Web_SuppFacts_HEPWO_SourPeachRing.jpg",
@@ -2659,7 +2659,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=Naked+Energy+Pre+Workout+Naked+Nutrition&tag=YOURTAG-20",
     "blurb": "An NSF-certified, vegan pre-workout with a fully disclosed label — 200mg caffeine and 2g beta-alanine do most of the work, while the 1g each of creatine and arginine are token doses; note that every number is per 2-scoop serving.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/naked-energy-preworkout.png",
+    "imageUrl": "images/products/naked-energy-preworkout.jpg",
     "images": [
       "https://nakednutrition.com/cdn/shop/files/ENERGY-1_3LB-Unflavored-MainImage.png",
       "https://nakednutrition.com/cdn/shop/files/ENERGY-1_3LB-Unflavored-Graphic.jpg",
@@ -2734,7 +2734,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=Nutricost+Pre+Workout+Complex&tag=YOURTAG-20",
     "blurb": "A fully disclosed, no-proprietary-blend label at one of the lowest per-serving prices in the category — every dose from 4g citrulline to 200mg caffeine is printed in exact milligrams rather than hidden in a blend.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/nutricost-pre-a.png",
+    "imageUrl": "images/products/nutricost-pre-a.jpg",
     "images": [
       "https://nutricost.com/cdn/shop/files/NTC_PRE-APeachMango_60SERV_46OZ_Front_Square_1200x1200.jpg",
       "https://nutricost.com/cdn/shop/files/NTC_PRE-APeachMango_60SERV_46OZ_SFP_Square_1200x1200.jpg",
@@ -2804,7 +2804,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=Anabolic+Warfare+Pump+N+Grow&tag=YOURTAG-20",
     "blurb": "A caffeine-free pump specialist meant for stacking with a separate stimulant — the label fully discloses all six actives, led by 4g citrulline malate, 2g betaine, 1.5g beta-alanine, and 500mg Nitrosigine.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/pump-n-grow.png",
+    "imageUrl": "images/products/pump-n-grow.jpg",
     "images": [
       "https://cdn.shopify.com/s/files/1/0068/1925/0235/files/11.25x4.25_AWPUMPBBL_150.125.02_v1.2_Render.png",
       "https://cdn.shopify.com/s/files/1/0068/1925/0235/files/11.25x4.25_AWPUMPBBL_150.125.01_v1.2_SFP_7825a51b-371e-4ef0-b04d-23b5153e27b1.jpg",

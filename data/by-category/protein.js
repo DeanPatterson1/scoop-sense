@@ -89,7 +89,7 @@ var PRODUCTS = [
         ]
       }
     },
-    "imageUrl": "images/products/on-gold-standard-whey.png",
+    "imageUrl": "images/products/on-gold-standard-whey.jpg",
     "images": [
       "https://www.optimumnutrition.com/cdn/shop/files/GSW_DRC_2lb_FOP.png?v=1776170438&width=2500",
       "https://www.optimumnutrition.com/cdn/shop/files/GSW_DRC_5lb_FOP.png?v=1776173227&width=2500",
@@ -197,7 +197,7 @@ var PRODUCTS = [
         ]
       }
     },
-    "imageUrl": "images/products/dymatize-iso100.png",
+    "imageUrl": "images/products/dymatize-iso100.jpg",
     "images": [
       "https://dymatize.imgix.net/production/products/DYMA_ISO100_MCC_20srv.png",
       "https://dymatize.imgix.net/production/products/dym0001-8_ISO100_20s_PCThumbnail_540x678_GormetVanilla.jpg",
@@ -303,7 +303,7 @@ var PRODUCTS = [
         ]
       }
     },
-    "imageUrl": "images/products/transparent-labs-grass-fed-whey-isolate.png",
+    "imageUrl": "images/products/transparent-labs-grass-fed-whey-isolate.jpg",
     "images": [
       "https://www.transparentlabs.com/cdn/shop/files/01_chocolate.png?v=1778514112&width=1920",
       "https://www.transparentlabs.com/cdn/shop/files/01_vanilla.png?v=1778514138&width=1920",
@@ -413,7 +413,7 @@ var PRODUCTS = [
         ]
       }
     },
-    "imageUrl": "images/products/ascent-native-fuel-whey.png",
+    "imageUrl": "images/products/ascent-native-fuel-whey.jpg",
     "images": [
       "https://www.ascentprotein.com/cdn/shop/products/whey-van-2lb-main.png?v=1695075692&width=1200",
       "https://www.ascentprotein.com/cdn/shop/products/whey-van-4lb-main.png?v=1695075692&width=1200",
@@ -468,7 +468,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=optimum+nutrition+gold+standard+casein&tag=YOURTAG-20",
     "blurb": "The most widely available micellar casein: 24 g slow-digesting protein per 34 g scoop, thicker in water than whey by design, at a noticeably higher cost per serving.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/on-gold-standard-casein.png",
+    "imageUrl": "images/products/on-gold-standard-casein.jpg",
     "images": [
       "https://www.optimumnutrition.com/cdn/shop/files/Casein_Van_4lb_FOP.png?v=1776366533&width=2500",
       "https://www.optimumnutrition.com/cdn/shop/files/US_GS_Casein_4lb_Chocolate_FOP.png?v=1780494368&width=2500",
@@ -582,7 +582,7 @@ var PRODUCTS = [
         ]
       }
     },
-    "imageUrl": "images/products/orgain-organic-protein.webp",
+    "imageUrl": "images/products/orgain-organic-protein.jpg",
     "images": [
       "https://orgain.com/cdn/shop/files/851770003179-v13-Orgain-ProteinPowder-2.03lb-Chocolate-20240311-Front-HIRES-web_1200px.webp",
       "https://orgain.com/cdn/shop/files/851770003919-v8-Orgain-ProteinPowder-1.02lb-Label-Chocolate-20240311-Front-HIRES-web_1200px.webp"
@@ -700,7 +700,7 @@ var PRODUCTS = [
         ]
       }
     },
-    "imageUrl": "images/products/vega-sport-premium-protein.png",
+    "imageUrl": "images/products/vega-sport-premium-protein.jpg",
     "images": [
       "https://myvega.com/cdn/shop/files/Vega_Performance_Protein_Recovery_Vanilla_4lb_1.png?width=1200",
       "https://myvega.com/cdn/shop/files/Vega_Performance_Protein_Recovery_Chocolate_4lb_1.png?width=1200",
@@ -811,7 +811,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=now+sports+whey+protein+isolate+unflavored&tag=YOURTAG-20",
     "blurb": "A two-ingredient isolate — whey isolate plus sunflower lecithin — with 25 g protein in a 28 g scoop and 81 servings per 5 lb tub, ideal for smoothie mixers who don't want sweeteners.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/now-sports-whey-protein-isolate.png",
+    "imageUrl": "images/products/now-sports-whey-protein-isolate.jpg",
     "images": [
       "https://www.nowfoods.com/sites/default/files/2025-11/2172_v13.png"
     ],
@@ -861,7 +861,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=nutricost+whey+protein+concentrate&tag=YOURTAG-20",
     "blurb": "The lowest cost per serving on this list: 25 g protein per scoop across a 63-serving 5 lb bag, with independent lab testing claimed by the brand (not an NSF or Informed Sport certification).",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/nutricost-whey-protein-concentrate.png",
+    "imageUrl": "images/products/nutricost-whey-protein-concentrate.jpg",
     "images": [
       "https://nutricost.com/cdn/shop/files/NTC_WPC_Chocolate_2LB_2750CC_Front_Square_906cc793-3c2c-497a-ac90-c8265275b423.jpg?width=1200",
       "https://nutricost.com/cdn/shop/files/NTC_WPC_Vanilla_2LB_2750CC_Front_Square_b1e55d34-9c12-4401-9bcb-1f5c29ef1de9.jpg?width=1200",
@@ -915,7 +915,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=muscletech+nitro+tech+100+whey+gold&tag=YOURTAG-20",
     "blurb": "A 24 g whey concentrate/isolate/peptide blend at a 33 g scoop, more diluted per scoop than isolate-forward products but priced for the mass market.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/muscletech-nitro-tech-100-whey-gold.png",
+    "imageUrl": "images/products/muscletech-nitro-tech-100-whey-gold.jpg",
     "images": [
       "https://www.muscletech.com/cdn/shop/files/MuscleTech-NitroTech-Whey-Gold-2000x2000-01a_new.jpg?v=1753903525&width=2000",
       "https://www.muscletech.com/cdn/shop/files/mt-nitro-tech-100-whey-gold-french-vanilla-2lb_5eb1c01a-5fe3-44fd-8754-a06f77818fae.png"
@@ -1014,7 +1014,7 @@ var PRODUCTS = [
         ]
       }
     },
-    "imageUrl": "images/products/bsn-syntha-6.png",
+    "imageUrl": "images/products/bsn-syntha-6.jpg",
     "images": [
       "https://www.vitacost.com/cdn/shop/files/37_1c4bbfa9-94a0-48e4-8158-564ed42c2794.jpg?v=1781962149",
       "https://www.vitacost.com/cdn/shop/files/42_e08f82eb-7df6-4314-8ad5-b7a1e932ccdd.jpg?v=1781962149"
@@ -1105,7 +1105,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=six+star+100+whey+protein+plus&tag=YOURTAG-20",
     "blurb": "A budget-tier 30 g whey blend at a 47 g scoop, positioned as an affordable mass-market whey rather than a premium isolate.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/six-star-100-whey-protein-plus.png",
+    "imageUrl": "images/products/six-star-100-whey-protein-plus.jpg",
     "images": [
       "https://www.sixstarpro.com/cdn/shop/files/ss-100-whey-protein-plus-triple-chocolate.jpg?v=1775059022&width=1200",
       "https://www.sixstarpro.com/cdn/shop/files/ss-100-whey-protein-plus-vanilla-cream.jpg?v=1767821651&width=1200",
@@ -1153,7 +1153,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=body+fortress+super+advanced+whey+protein+chocolate&tag=YOURTAG-20",
     "blurb": "A big-box budget whey delivering 30 g protein per 45 g scoop from a disclosed concentrate/isolate blend, though the larger scoop size means more calories and carbs per serving than leaner isolate powders.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/body-fortress-super-advanced-whey-protein.png",
+    "imageUrl": "images/products/body-fortress-super-advanced-whey-protein.jpg",
     "images": [
       "https://www.bodyfortress.com/cdn/shop/files/bft-300007-super-advanced-whey-protein-powder-chocolate-1.78-lb.-tub_1_852f6d47-afbb-48fa-84e3-48746191c754.png?v=1717433074",
       "https://www.bodyfortress.com/cdn/shop/files/bft-300007-super-advanced-whey-protein-powder-chocolate-1.78-lb.-tub-4_d38bdee4-88a4-430c-8b5a-e2d596e9bc6a.png?v=1717699198",
@@ -1206,7 +1206,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=rule+one+r1+protein+whey+isolate&tag=YOURTAG-20",
     "blurb": "A fully disclosed isolate and hydrolysate blend with no whey concentrate filler, giving a leaner macro profile (2 g carbs, 0.5 g fat) than concentrate-based whey blends at the same 25 g protein dose.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/rule-one-r1-protein-whey-isolate.png",
+    "imageUrl": "images/products/rule-one-r1-protein-whey-isolate.jpg",
     "images": [
       "https://www.ruleoneproteins.com/cdn/shop/files/r1pwi_2lb_milk-chocolate-front.png?v=1778080655",
       "https://www.ruleoneproteins.com/cdn/shop/files/R1_Protein_Whey_Isolate_Milk_Chocolate_panel.png?v=3745698589022948823",
@@ -1262,7 +1262,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=dymatize+elite+100+whey+protein+rich+chocolate&tag=YOURTAG-20",
     "blurb": "Distinct from Dymatize's ISO100 isolate-only line, Elite 100% Whey is a concentrate/isolate/peptide blend that still hits 25 g protein per scoop but carries more fat, sodium, and cholesterol per serving than the isolate-based formula.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/dymatize-elite-100-whey.png",
+    "imageUrl": "images/products/dymatize-elite-100-whey.jpg",
     "images": [
       "https://dymatize.imgix.net/production/products/Elite_100_Whey_Rich_Chocolate_Hero_Product_Detail_Page_Dymatize_Website_Desktop_3840x2156.jpg",
       "https://dymatize.imgix.net/production/chips/ELITE_100_WHEY_RICH_CHOCOLATE_Flavor_Chip_Product_Detail_Page_144x120.jpg",
@@ -1317,7 +1317,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=optimum+nutrition+gold+standard+100+isolate&tag=YOURTAG-20",
     "blurb": "A minimal-carb, minimal-fat whey isolate (0.5 g fat, 1 g carb) delivering 25 g protein per 31 g scoop; no third-party banned-substance certification mark could be confirmed on the current label.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/on-gold-standard-isolate.png",
+    "imageUrl": "images/products/on-gold-standard-isolate.jpg",
     "images": [
       "https://www.optimumnutrition.com/cdn/shop/files/on-1086459_Image_01.png?v=1755790964&width=1000",
       "https://www.optimumnutrition.com/cdn/shop/files/on-1086341_Image_01.png?v=1755790964&width=1000",
@@ -1416,7 +1416,7 @@ var PRODUCTS = [
         ]
       }
     },
-    "imageUrl": "images/products/isopure-zero-carb.png",
+    "imageUrl": "images/products/isopure-zero-carb.jpg",
     "images": [
       "https://www.theisopurecompany.com/cdn/shop/files/US_ZeroCarb_2.7LB_CreamyVanilla_FOP.png?v=1783005063&width=2500",
       "https://www.theisopurecompany.com/cdn/shop/files/US_ZeroCarb_2.7LB_CreamyVanilla_NFP.jpg",
@@ -1468,7 +1468,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=musclepharm+combat+protein+powder+chocolate+milk&tag=YOURTAG-20",
     "blurb": "A five-source protein blend rather than pure whey, delivering 25 g protein per 37 g scoop with added glutamine; the brand's own product page confirms Informed Sport and Informed Protein certification.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/musclepharm-combat-protein.png",
+    "imageUrl": "images/products/musclepharm-combat-protein.jpg",
     "images": [
       "https://musclepharm.com/cdn/shop/files/4lb_Combat_Protein_chocolate.jpg?v=1770923567&width=1800",
       "https://musclepharm.com/cdn/shop/files/MP-Combat-AMZ-StackedTiles-Chocolate-02.jpg?v=1770923567&width=2000",
@@ -1568,7 +1568,7 @@ var PRODUCTS = [
         ]
       }
     },
-    "imageUrl": "images/products/legion-whey-plus.png",
+    "imageUrl": "images/products/legion-whey-plus.jpg",
     "images": [
       "https://legionathletics.com/wp-content/uploads/2026/03/whey-plus-30-servings-dutch-chocolate-image-1.png",
       "https://legionathletics.com/wp-content/uploads/2026/03/whey-plus-shared-half-image-02-sfp.png"
@@ -1624,7 +1624,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=momentous+whey+protein+isolate&tag=YOURTAG-20",
     "blurb": "A 20-gram grass-fed whey isolate serving with added ProHydrolase digestive enzymes; every batch is NSF Certified for Sport and third-party tested by Light Labs with published Certificates of Analysis.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/momentous-whey-protein-isolate.png",
+    "imageUrl": "images/products/momentous-whey-protein-isolate.jpg",
     "images": [
       "https://www.livemomentous.com/cdn/shop/files/Whey_Protein_25_Chocolate-DTC-ProductHero.png",
       "https://www.livemomentous.com/cdn/shop/files/Whey_Protein_25_Vanilla-DTC-ProductHero.png",
@@ -1732,7 +1732,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=thorne+whey+protein+isolate&tag=YOURTAG-20",
     "blurb": "An NSF Certified for Sport whey isolate with a short, fully disclosed ingredient list — 21 g of protein and 2.2 g of leucine per scoop, plus digestive enzymes and no artificial sweeteners.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/thorne-whey-protein-isolate.png",
+    "imageUrl": "images/products/thorne-whey-protein-isolate.jpg",
     "images": [
       "https://d1vo8zfysxy97v.cloudfront.net/media/product/sp111__v496b30d9bd6d9b49984937cf925408c168a0561f.png",
       "https://d1vo8zfysxy97v.cloudfront.net/media/product/sp111__vd8d76843226cf38cf557ca0a5d8135e2f7952d2a.jpg",
@@ -1846,7 +1846,7 @@ var PRODUCTS = [
         ]
       }
     },
-    "imageUrl": "images/products/ritual-essential-protein-daily-shake.png",
+    "imageUrl": "images/products/ritual-essential-protein-daily-shake.jpg",
     "images": [
       "https://ritual.com/cdn/shop/files/PDP-PD18-Bag_f125fdc4-6812-45b7-a56e-faf0bf89e3c2.jpg?v=1774026738&width=2000",
       "https://ritual.com/cdn/shop/files/PDP-PD18-Glass_3fe1a2ff-500c-4adf-a90e-fbbce10b10ae.jpg?v=1774026738&width=2000",
@@ -1904,7 +1904,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=bpn+whey+protein+bare+performance+nutrition&tag=YOURTAG-20",
     "blurb": "An NSF Certified for Sport whey concentrate and casein blend delivering 25 g of protein per 34 g scoop, with a short ingredient list and no artificial sweeteners.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/bpn-whey-protein.png",
+    "imageUrl": "images/products/bpn-whey-protein.jpg",
     "images": [
       "https://www.bareperformancenutrition.com/cdn/shop/files/WHEY_PROTEIN_Vanilla_Render_V01_BPNWPC-VN-9.png?v=1784150924&width=1200",
       "https://www.bareperformancenutrition.com/cdn/shop/files/Whey_Protein_VN_9_-_NFP.jpg?v=1782243926&width=1200",
@@ -1951,7 +1951,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=jocko+molk+protein+powder&tag=YOURTAG-20",
     "blurb": "Mölk lists its whey concentrate, whey isolate, casein, and egg white protein together as one named blend rather than disclosing individual gram amounts; the Chocolate Milkshake panel shows 22 g protein per 34 g scoop with 0 g added sugar and no caffeine.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/jocko-fuel-molk-protein-powder.png",
+    "imageUrl": "images/products/jocko-fuel-molk-protein-powder.jpg",
     "images": [
       "https://jockofuel.com/cdn/shop/files/CHOC_FRONT.jpg?v=1762361558&width=1946",
       "https://jockofuel.com/cdn/shop/files/CHOC_BACK.jpg?v=1758807658&width=1946",
@@ -1999,7 +1999,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=1st+phorm+level-1+protein&tag=YOURTAG-20",
     "blurb": "Level-1 uses whey protein concentrate as its only protein source, with 23 g protein per 33 g scoop on the Milk Chocolate label, and carries an Informed Choice Trusted mark shown directly on the product page.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/1st-phorm-level-1.png",
+    "imageUrl": "images/products/1st-phorm-level-1.jpg",
     "images": [
       "https://1stphorm.com/cdn/shop/files/level-1-milk-chocolate-04_25.png?v=1775830789",
       "https://1stphorm.com/cdn/shop/files/level-1-natural-vanilla-01_25_1800x1800.png?v=1773771589",
@@ -2051,7 +2051,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=naked+nutrition+naked+whey+unflavored&tag=YOURTAG-20",
     "blurb": "A one-ingredient grass-fed whey concentrate: the label reads just 'Whey Protein Concentrate' with 25 g protein per 30 g scoop and no added sweetener. Its NSF mark certifies content purity and contaminant testing, not the banned-substance screening of NSF Certified for Sport.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/naked-nutrition-naked-whey.png",
+    "imageUrl": "images/products/naked-nutrition-naked-whey.jpg",
     "images": [
       "https://cdn.shopify.com/s/files/1/0645/6465/files/unflavored-whey-protein-powder-isolate_ab4447ea-b8a1-4539-81f4-0b60b3a9f893.jpg?v=1782960931",
       "https://nakednutrition.com/cdn/shop/files/grass-fed-unflavored-Whey-5LB.jpg",
@@ -2108,7 +2108,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=ascent+micellar+casein+protein&tag=YOURTAG-20",
     "blurb": "A slow-digesting micellar casein isolate at 25 g protein per 36 g scoop, sweetened only with stevia, carrying an Informed Sport certification mark printed on the bag for banned-substance screening.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/ascent-micellar-casein.png",
+    "imageUrl": "images/products/ascent-micellar-casein.jpg",
     "images": [
       "https://www.ascentprotein.com/cdn/shop/files/ASCN_Chocolate_Casein_Bag_Top_Shadow_R_2000x2000_NEW.png?v=1769620950",
       "https://www.ascentprotein.com/cdn/shop/files/ASCE-256_MCC_2LB_NFP_F4_25Serving_2lb_Render_Chocolate.jpg?v=1749051028",
@@ -2167,7 +2167,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=kos+organic+plant+protein&tag=YOURTAG-20",
     "blurb": "20 g of protein from a five-source plant blend plus an added superfoods and digestive-enzyme layer — more ingredients than a bare-bones isolate, with the sub-blend amounts left undisclosed.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/kos-organic-plant-protein.png",
+    "imageUrl": "images/products/kos-organic-plant-protein.jpg",
     "images": [
       "https://cdn.shopify.com/s/files/1/2236/0863/files/VPP-VN28_d6894f73-94fa-43d1-91b6-24f5e4bfd8b6.png",
       "https://cdn.shopify.com/s/files/1/2236/0863/files/VPP-CH28_010e3fe3-9629-44dd-b5fe-d8cd56c96918.png",
@@ -2226,7 +2226,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=sunwarrior+warrior+blend+protein&tag=YOURTAG-20",
     "blurb": "17 g protein in a lean 25 g scoop from a fermented pea/hemp/goji blend, with 6 g of naturally occurring BCAAs called out on the label.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/sunwarrior-warrior-blend.png",
+    "imageUrl": "images/products/sunwarrior-warrior-blend.jpg",
     "images": [
       "https://cdn.shopify.com/s/files/1/3002/1936/files/USA-WarriorBlend4-750g-Van-ThreeQuarter_6bb65617-cff6-43fd-af91-25e96363ef98.jpg",
       "https://cdn.shopify.com/s/files/1/3002/1936/files/USA-WarriorBlend4-750g-Van-Right-Opt_9c3e5ac5-3eb0-4856-9dca-459c87b05ad3.png"
@@ -2284,7 +2284,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=garden+of+life+raw+organic+protein&tag=YOURTAG-20",
     "blurb": "22 g protein from a 14-sprout organic blend in a 33 g scoop — one of the leanest protein-to-scoop-weight ratios among the plant options — plus a quantified 250-million-CFU probiotic add-on.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/garden-of-life-raw-organic-protein.png",
+    "imageUrl": "images/products/garden-of-life-raw-organic-protein.jpg",
     "images": [
       "https://web.archive.org/web/20240228050812im_/https://www.gardenoflife.com/media/catalog/product/6/5/658010116039-1_1.jpg"
     ],
@@ -2341,7 +2341,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=aloha+organic+plant+based+protein&tag=YOURTAG-20",
     "blurb": "18 g protein from a four-source plant blend with 5 g fiber, sweetened partly with coconut sugar rather than the stevia-only approach most competitors use — worth noting if you track added sugar.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/aloha-organic-plant-based-protein.png",
+    "imageUrl": "images/products/aloha-organic-plant-based-protein.jpg",
     "images": [
       "https://aloha.com/cdn/shop/products/Vanilla-Powder_PDP_1.jpg?v=1743518385",
       "https://aloha.com/cdn/shop/files/Vanilla-Powder_PDP_3.jpg?v=1743518385",
@@ -2393,7 +2393,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=nutiva+organic+hemp+protein+powder&tag=YOURTAG-20",
     "blurb": "A true single-ingredient hemp protein — nothing else on the label — trading some protein density (15 g per scoop) for 6 g of naturally occurring fiber and no added sweeteners.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/nutiva-organic-hemp-protein.png",
+    "imageUrl": "images/products/nutiva-organic-hemp-protein.jpg",
     "images": [
       "https://nutiva.com/cdn/shop/files/PRO405_628x612_5b9648aa-d7c2-42af-82ce-ffc7cd557a17.webp?v=1774905922",
       "https://nutiva.com/cdn/shop/files/PRO405_L_628x612_6640d795-fa79-401b-8c98-4dac18e24ce8.webp?v=1774905922",
@@ -2454,7 +2454,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=optimum+nutrition+gold+standard+plant+protein&tag=YOURTAG-20",
     "blurb": "24 g protein in a 37 g scoop is the highest protein-to-scoop ratio of the plant blends here, from the most widely stocked brand in the category — the smallest tub size runs only 12 servings.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/on-gold-standard-plant-protein.png",
+    "imageUrl": "images/products/on-gold-standard-plant-protein.jpg",
     "images": [
       "https://cdn.shopify.com/s/files/1/0794/9991/9627/files/US_GS_Plant_12srv_Vanilla_6068152.png",
       "https://cdn.shopify.com/s/files/1/0794/9991/9627/files/on-1117731_Image_01.png",
@@ -2506,7 +2506,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=truvani+plant+based+protein+powder&tag=YOURTAG-20",
     "blurb": "A five-ingredient label — three plant proteins plus vanilla and monk fruit — that packs 20 g protein into a 29 g scoop, one of the leanest protein-to-scoop ratios in this batch.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/truvani-plant-based-protein.png",
+    "imageUrl": "images/products/truvani-plant-based-protein.jpg",
     "images": [
       "https://cdn.shopify.com/s/files/1/2538/3594/products/Truvani_Mockup_Vanilla-Protein_2718435a-ef5e-4adb-93f0-fc59535387b5.png?v=1771428322",
       "https://cdn.shopify.com/s/files/1/2538/3594/products/Truvani_Mockup_Chocolate-Protein_c272f832-b4b7-4349-871f-06de81c94395.png?v=1771428322"
@@ -2566,7 +2566,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=vega+protein+supergreens&tag=YOURTAG-20",
     "blurb": "25 g of single-source pea protein plus individually named greens (spinach, kale, alfalfa, broccoli) rather than an opaque 'greens blend' — the current formula replaced an older pea/rice/sacha inchi protein mix with pea protein alone.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/vega-protein-supergreens.png",
+    "imageUrl": "images/products/vega-protein-supergreens.jpg",
     "images": [
       "https://cdn.shopify.com/s/files/1/2590/5380/files/Vega-Protein-Supergreens-Plant-Based-Protein-Powder-Vanilla-18ozUS-1.png?v=1781636929",
       "https://cdn.shopify.com/s/files/1/2590/5380/files/Vega-Protein-Supergreens-Plant-Based-Protein-Powder-Chocolate-18ozUS-1.png?v=1781636929",
@@ -2622,7 +2622,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=levels+grass+fed+whey+protein&tag=YOURTAG-20",
     "blurb": "A plain six-ingredient label built around grass-fed whey concentrate — 24 g protein per 32 g scoop — with no proprietary blends or artificial sweeteners.",
     "labelVerified": "July 2026",
-    "imageUrl": "images/products/levels-grass-fed-whey.png",
+    "imageUrl": "images/products/levels-grass-fed-whey.jpg",
     "images": [
       "https://cdn.shopify.com/s/files/1/1214/5580/files/ECOMM_PRODUCT_RENDERS_01_1LB_BAG_VB_FRONT1.png?v=1783022895",
       "https://cdn.shopify.com/s/files/1/1214/5580/files/ECOMM_PRODUCT_RENDERS_01_1LB_BAG_DC_FRONT1.png?v=1783022895",
