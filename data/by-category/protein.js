@@ -581,5 +581,1569 @@ var PRODUCTS = [
         "label": "Open Food Facts label record (unflavored 33 g scoop)"
       }
     ]
+  },
+  {
+    "id": "muscletech-nitro-tech-100-whey-gold",
+    "name": "Nitro-Tech 100% Whey Gold",
+    "brand": "MuscleTech",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Whey Protein Blend (Concentrate, Isolate, Peptides)",
+        "dose": "24 g",
+        "clinicalNote": "Whey protein supplies essential amino acids that support normal muscle protein synthesis after exercise."
+      }
+    ],
+    "cautions": [
+      "Contains milk and soy ingredients.",
+      "Processed in a facility that also handles wheat, egg, tree nut, peanut, fish, and shellfish."
+    ],
+    "servings": 69,
+    "priceRange": "$",
+    "flavorsNote": "Double Rich Chocolate and French Vanilla Cream (plus several other flavors) are sweetened with sucralose and acesulfame potassium.",
+    "affiliateUrl": "https://www.amazon.com/s?k=muscletech+nitro+tech+100+whey+gold&tag=YOURTAG-20",
+    "blurb": "A 24 g whey concentrate/isolate/peptide blend at a 33 g scoop, more diluted per scoop than isolate-forward products but priced for the mass market.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/muscletech-nitro-tech-100-whey-gold.jpg",
+    "imageBg": "244,244,244",
+    "images": [
+      "https://www.muscletech.com/cdn/shop/files/MuscleTech-NitroTech-Whey-Gold-2000x2000-01a_new.jpg?v=1753903525&width=2000",
+      "https://www.muscletech.com/cdn/shop/files/mt-nitro-tech-100-whey-gold-french-vanilla-2lb_5eb1c01a-5fe3-44fd-8754-a06f77818fae.png"
+    ],
+    "metrics": {
+      "proteinG": 24,
+      "servingG": 33,
+      "source": "whey blend",
+      "sweetener": "sucralose and acesulfame potassium"
+    },
+    "sources": [
+      {
+        "url": "https://www.muscletech.com/products/nitro-tech-100-whey-gold",
+        "label": "MuscleTech — official product page (Supplement Facts panel)"
+      }
+    ]
+  },
+  {
+    "id": "bsn-syntha-6",
+    "name": "Syntha-6",
+    "brand": "BSN",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Protein Matrix (Whey Concentrate, Calcium Caseinate, Hydrolyzed Whey, Whey Isolate, Micellar Casein, Milk Protein Isolate)",
+        "dose": "22 g",
+        "clinicalNote": "Combines fast-digesting whey with slower-digesting casein and milk proteins studied for sustaining amino acid availability after a serving."
+      }
+    ],
+    "cautions": [
+      "Contains milk and soy ingredients (soy lecithin).",
+      "Contains a bioengineered food ingredient.",
+      "6 g of fiber per serving may cause digestive discomfort in sensitive individuals."
+    ],
+    "servings": 48,
+    "priceRange": "$$",
+    "flavorsNote": "Chocolate Milkshake is artificially flavored and sweetened with acesulfame potassium and sucralose.",
+    "affiliateUrl": "https://www.amazon.com/s?k=bsn+syntha-6+chocolate+milkshake&tag=YOURTAG-20",
+    "blurb": "A milkshake-style protein matrix blending whey and casein sources rather than a single pure protein; total protein and the full ingredient list are disclosed even though the six protein sources aren't broken out gram-by-gram.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/bsn-syntha-6.jpg",
+    "imageBg": "255,255,255",
+    "images": [
+      "https://www.vitacost.com/cdn/shop/files/37_1c4bbfa9-94a0-48e4-8158-564ed42c2794.jpg?v=1781962149",
+      "https://www.vitacost.com/cdn/shop/files/42_e08f82eb-7df6-4314-8ad5-b7a1e932ccdd.jpg?v=1781962149"
+    ],
+    "metrics": {
+      "proteinG": 22,
+      "servingG": 47,
+      "source": "whey/casein blend",
+      "sweetener": "acesulfame potassium and sucralose"
+    },
+    "sources": [
+      {
+        "url": "https://www.vitacost.com/products/bsn-syntha-6-ultra-premium-protein-matrix-chocolate-milkshake-5-lb-2-27-kg-24886",
+        "label": "Vitacost — retailer product page reproducing BSN Syntha-6 Supplement Facts panel"
+      }
+    ]
+  },
+  {
+    "id": "muscle-milk-genuine-protein-powder",
+    "name": "Genuine Protein Powder",
+    "brand": "Muscle Milk",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Third-Party Tested"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Milk Protein Blend (Calcium Sodium Caseinate, Milk Protein Isolate, Whey Isolate, Whey Hydrolysate, Whey Concentrate)",
+        "dose": "32 g",
+        "clinicalNote": "A mostly-casein milk protein blend studied for slower digestion than whey-only formulas, giving a steadier amino acid release over time."
+      }
+    ],
+    "cautions": [
+      "Contains milk and soy (soy lecithin).",
+      "Fortified with added vitamins and minerals (e.g., chromium, zinc) — factor this in if also taking a separate multivitamin."
+    ],
+    "servings": 32,
+    "priceRange": "$$",
+    "flavorsNote": "Chocolate, Vanilla Crème, and Strawberries 'n Crème are sweetened with sucralose and acesulfame potassium.",
+    "affiliateUrl": "https://www.amazon.com/s?k=muscle+milk+genuine+protein+powder+chocolate&tag=YOURTAG-20",
+    "blurb": "Genuine uses a casein-dominant milk protein blend rather than whey-only, so it digests more slowly than most whey powders; the brand's own product page confirms NSF Certified for Sport status.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "proteinG": 32,
+      "servingG": 70,
+      "source": "milk protein blend",
+      "sweetener": "sucralose and acesulfame potassium"
+    },
+    "sources": [
+      {
+        "url": "https://www.musclemilk.com/powders/genuine-protein/chocolate/4.94lb",
+        "label": "Muscle Milk — official product page (Supplement Facts and NSF Certified for Sport claim)"
+      },
+      {
+        "url": "https://www.priceplow.com/cytosport/muscle-milk-genuine-protein-powder",
+        "label": "PricePlow — Supplement Facts panel reproduction (4.94 lb Chocolate)"
+      }
+    ]
+  },
+  {
+    "id": "six-star-100-whey-protein-plus",
+    "name": "100% Whey Protein Plus",
+    "brand": "Six Star",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Budget Pick"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Whey Protein Plus Blend (Concentrate, Isolate, Hydrolyzed Whey)",
+        "dose": "30 g",
+        "clinicalNote": "A whey concentrate/isolate/hydrolysate blend providing a complete essential amino acid profile to support post-exercise muscle recovery."
+      }
+    ],
+    "cautions": [
+      "Contains milk and soy ingredients.",
+      "Processed in a facility that also handles wheat, egg, tree nut, peanut, sesame, fish, and shellfish."
+    ],
+    "servings": 40,
+    "priceRange": "$",
+    "flavorsNote": "Triple Chocolate and Vanilla Cream are sweetened with sucralose; Strawberry Smoothie adds a stevia-derived Rebaudioside A.",
+    "affiliateUrl": "https://www.amazon.com/s?k=six+star+100+whey+protein+plus&tag=YOURTAG-20",
+    "blurb": "A budget-tier 30 g whey blend at a 47 g scoop, positioned as an affordable mass-market whey rather than a premium isolate.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/six-star-100-whey-protein-plus.jpg",
+    "imageBg": "202,198,197",
+    "images": [
+      "https://www.sixstarpro.com/cdn/shop/files/ss-100-whey-protein-plus-triple-chocolate.jpg?v=1775059022&width=1200",
+      "https://www.sixstarpro.com/cdn/shop/files/ss-100-whey-protein-plus-vanilla-cream.jpg?v=1767821651&width=1200",
+      "https://www.sixstarpro.com/cdn/shop/files/ss-100-whey-protein-plus-strawberry-smoothie.jpg?v=1759761758&width=1200"
+    ],
+    "metrics": {
+      "proteinG": 30,
+      "servingG": 47,
+      "source": "whey blend",
+      "sweetener": "sucralose"
+    },
+    "sources": [
+      {
+        "url": "https://www.sixstarpro.com/products/100-whey-protein-plus",
+        "label": "Six Star — official product page (Supplement Facts panel)"
+      }
+    ]
+  },
+  {
+    "id": "body-fortress-super-advanced-whey-protein",
+    "name": "Super Advanced Whey Protein Powder",
+    "brand": "Body Fortress",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Budget Pick"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Super Whey Protein Blend (Concentrate, Isolate)",
+        "dose": "30 g protein",
+        "clinicalNote": "A whey concentrate and isolate blend supplying essential amino acids studied for supporting normal muscle protein synthesis after exercise."
+      }
+    ],
+    "cautions": [
+      "Contains milk and soy.",
+      "Made in a facility that also processes peanuts, tree nuts, egg, wheat, sesame, shellfish, and fish.",
+      "Sweetened with acesulfame potassium and sucralose, which some people find causes mild digestive upset."
+    ],
+    "servings": 18,
+    "priceRange": "$",
+    "flavorsNote": "Chocolate flavor verified here; also sold in Vanilla. Sweetened with acesulfame potassium and sucralose.",
+    "affiliateUrl": "https://www.amazon.com/s?k=body+fortress+super+advanced+whey+protein+chocolate&tag=YOURTAG-20",
+    "blurb": "A big-box budget whey delivering 30 g protein per 45 g scoop from a disclosed concentrate/isolate blend, though the larger scoop size means more calories and carbs per serving than leaner isolate powders.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/body-fortress-super-advanced-whey-protein.png",
+    "images": [
+      "https://www.bodyfortress.com/cdn/shop/files/bft-300007-super-advanced-whey-protein-powder-chocolate-1.78-lb.-tub_1_852f6d47-afbb-48fa-84e3-48746191c754.png?v=1717433074",
+      "https://www.bodyfortress.com/cdn/shop/files/bft-300007-super-advanced-whey-protein-powder-chocolate-1.78-lb.-tub-4_d38bdee4-88a4-430c-8b5a-e2d596e9bc6a.png?v=1717699198",
+      "https://www.bodyfortress.com/cdn/shop/files/bft-300007-super-advanced-whey-protein-powder-chocolate-1.78-lb.-tub-5_c81edd33-d3d7-4caa-81c2-0a53b925b7a2.png?v=1717699198",
+      "https://www.bodyfortress.com/cdn/shop/files/bft-300007-super-advanced-whey-protein-powder-chocolate-1.78-lb.-tub-6_af2ab8db-2944-4837-ac16-f2f78e5f6c48.png?v=1717699198"
+    ],
+    "metrics": {
+      "proteinG": 30,
+      "servingG": 45,
+      "source": "whey concentrate and isolate blend",
+      "sweetener": "acesulfame potassium and sucralose"
+    },
+    "sources": [
+      {
+        "url": "https://www.bodyfortress.com/products/100-whey-premium-protein-powder-chocolate",
+        "label": "Body Fortress — official product page (Super Advanced Whey Protein Powder, Chocolate)"
+      }
+    ]
+  },
+  {
+    "id": "rule-one-r1-protein-whey-isolate",
+    "name": "R1 Protein Whey Isolate",
+    "brand": "Rule One",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Whey Protein Isolate and Hydrolyzed Whey Protein Isolate Blend",
+        "dose": "25 g protein",
+        "clinicalNote": "A fast-digesting, low-lactose isolate blend with no whey concentrate, studied for supporting muscle protein synthesis after resistance training."
+      },
+      {
+        "name": "Naturally Occurring BCAAs",
+        "dose": "6 g+",
+        "clinicalNote": "Branched-chain amino acids present within the whey protein itself, studied for their role in triggering muscle protein synthesis."
+      }
+    ],
+    "cautions": [
+      "Contains milk and soy.",
+      "Sweetened with sucralose and acesulfame potassium, non-nutritive sweeteners some people find cause digestive upset.",
+      "Hydrolyzed whey protein can taste more bitter than standard isolate for some users."
+    ],
+    "servings": 29,
+    "priceRange": "$$",
+    "flavorsNote": "Milk Chocolate flavor verified; sweetened with sucralose and acesulfame potassium, with numerous other flavors available.",
+    "affiliateUrl": "https://www.amazon.com/s?k=rule+one+r1+protein+whey+isolate&tag=YOURTAG-20",
+    "blurb": "A fully disclosed isolate and hydrolysate blend with no whey concentrate filler, giving a leaner macro profile (2 g carbs, 0.5 g fat) than concentrate-based whey blends at the same 25 g protein dose.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/rule-one-r1-protein-whey-isolate.png",
+    "images": [
+      "https://www.ruleoneproteins.com/cdn/shop/files/r1pwi_2lb_milk-chocolate-front.png?v=1778080655",
+      "https://www.ruleoneproteins.com/cdn/shop/files/R1_Protein_Whey_Isolate_Milk_Chocolate_panel.png?v=3745698589022948823",
+      "https://www.ruleoneproteins.com/cdn/shop/files/r1pwi_3lb_milk-chocolate-front.png?v=1777912100"
+    ],
+    "metrics": {
+      "proteinG": 25,
+      "servingG": 32,
+      "source": "whey isolate and hydrolysate blend",
+      "sweetener": "sucralose and acesulfame potassium"
+    },
+    "sources": [
+      {
+        "url": "https://www.ruleoneproteins.com/products/r1-protein-whey-isolate",
+        "label": "Rule One Proteins — official product page (R1 Protein Whey Isolate)"
+      },
+      {
+        "url": "https://www.muscleandstrength.com/store/r1-protein.html",
+        "label": "Muscle & Strength — retailer listing with Supplement Facts panel"
+      }
+    ]
+  },
+  {
+    "id": "dymatize-elite-100-whey",
+    "name": "Elite 100% Whey Protein Powder",
+    "brand": "Dymatize",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Whey Protein Blend (Concentrate, Isolate, Whey Peptides)",
+        "dose": "25 g protein",
+        "clinicalNote": "A blended whey source combining fast-digesting fractions, providing a complete essential amino acid profile studied for post-exercise muscle protein synthesis support."
+      },
+      {
+        "name": "BCAAs (2:1:1 ratio, incl. 2.7 g leucine)",
+        "dose": "5.5 g",
+        "clinicalNote": "Naturally occurring branched-chain amino acids from the whey, including leucine, an amino acid studied for its role in triggering muscle protein synthesis."
+      }
+    ],
+    "cautions": [
+      "Contains milk and soy.",
+      "Label discloses a bioengineered food ingredient.",
+      "Sweetened with sucralose and acesulfame potassium."
+    ],
+    "servings": 25,
+    "priceRange": "$$",
+    "flavorsNote": "Rich Chocolate flavor verified; also sold in Gourmet Vanilla and Cookies & Cream, sweetened with sucralose and acesulfame potassium.",
+    "affiliateUrl": "https://www.amazon.com/s?k=dymatize+elite+100+whey+protein+rich+chocolate&tag=YOURTAG-20",
+    "blurb": "Distinct from Dymatize's ISO100 isolate-only line, Elite 100% Whey is a concentrate/isolate/peptide blend that still hits 25 g protein per scoop but carries more fat, sodium, and cholesterol per serving than the isolate-based formula.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/dymatize-elite-100-whey.jpg",
+    "imageBg": "0,25,42",
+    "images": [
+      "https://dymatize.imgix.net/production/products/Elite_100_Whey_Rich_Chocolate_Hero_Product_Detail_Page_Dymatize_Website_Desktop_3840x2156.jpg",
+      "https://dymatize.imgix.net/production/chips/ELITE_100_WHEY_RICH_CHOCOLATE_Flavor_Chip_Product_Detail_Page_144x120.jpg",
+      "https://dymatize.imgix.net/production/chips/ELITE_100_WHEY_GOURMET_VANILLA_Flavor_Chip_Product_Detail_Page_144x120.jpg"
+    ],
+    "metrics": {
+      "proteinG": 25,
+      "servingG": 36,
+      "source": "whey concentrate, isolate, and peptide blend",
+      "sweetener": "sucralose and acesulfame potassium"
+    },
+    "sources": [
+      {
+        "url": "https://dymatize.com/products/elite-100-whey-rich-chocolate",
+        "label": "Dymatize — official product page (Elite 100% Whey, Rich Chocolate)"
+      },
+      {
+        "url": "https://www.supplabel.com/product/dymatize-elite-100-whey-rich-chocolate",
+        "label": "SuppLabel (NIH DSLD data) — Supplement Facts panel"
+      }
+    ]
+  },
+  {
+    "id": "on-gold-standard-isolate",
+    "name": "Gold Standard 100% Isolate",
+    "brand": "Optimum Nutrition",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Whey Protein Isolate (plus Hydrolyzed Whey Protein Isolate)",
+        "dose": "25 g per scoop",
+        "clinicalNote": "Whey protein is a complete, fast-digesting protein studied for supporting normal muscle protein synthesis after exercise."
+      },
+      {
+        "name": "Branched-Chain Amino Acids (naturally occurring)",
+        "dose": "5.5 g per scoop",
+        "clinicalNote": "BCAAs occur naturally in whey and have been studied for their contribution to normal muscle recovery."
+      }
+    ],
+    "cautions": [
+      "Contains milk and soy (soy lecithin).",
+      "Sweetened with sucralose; the label does not disclose the exact amount."
+    ],
+    "servings": 44,
+    "priceRange": "$$",
+    "flavorsNote": "Sold in Chocolate Bliss and Rich Vanilla, both naturally and artificially flavored and sweetened with sucralose.",
+    "affiliateUrl": "https://www.amazon.com/s?k=optimum+nutrition+gold+standard+100+isolate&tag=YOURTAG-20",
+    "blurb": "A minimal-carb, minimal-fat whey isolate (0.5 g fat, 1 g carb) delivering 25 g protein per 31 g scoop; no third-party banned-substance certification mark could be confirmed on the current label.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/on-gold-standard-isolate.png",
+    "images": [
+      "https://www.optimumnutrition.com/cdn/shop/files/on-1086459_Image_01.png?v=1755790964&width=1000",
+      "https://www.optimumnutrition.com/cdn/shop/files/on-1086341_Image_01.png?v=1755790964&width=1000",
+      "https://www.optimumnutrition.com/cdn/shop/files/ONUS-gold-standard-isolate_Label_Chocolate-Bliss_3lb_44-servings.jpg?v=1761315069&width=1000"
+    ],
+    "metrics": {
+      "proteinG": 25,
+      "servingG": 31,
+      "source": "whey isolate",
+      "sweetener": "sucralose"
+    },
+    "sources": [
+      {
+        "url": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-isolate-whey-protein-powder",
+        "label": "Optimum Nutrition — official product page (Supplement Facts panel image)"
+      }
+    ]
+  },
+  {
+    "id": "isopure-zero-carb",
+    "name": "Zero Carb Whey Protein Isolate",
+    "brand": "Isopure",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Whey Protein Isolate",
+        "dose": "25 g per scoop",
+        "clinicalNote": "Ultra-filtered whey isolate is a fast-digesting, low-lactose protein source studied for supporting normal muscle protein synthesis."
+      },
+      {
+        "name": "Vitamin and Mineral Blend (22 nutrients)",
+        "dose": "included per scoop",
+        "clinicalNote": "Adds nutrients such as B12, zinc, and chromium that support normal energy metabolism."
+      }
+    ],
+    "cautions": [
+      "Contains milk and soy (soy lecithin).",
+      "Sweetened with sucralose."
+    ],
+    "servings": 40,
+    "priceRange": "$$",
+    "flavorsNote": "Creamy Vanilla is one of several Zero Carb flavors (also Dutch Chocolate, Banana Cream); all use sucralose as the sweetener with 0 g sugar and 0 g carbs per scoop.",
+    "affiliateUrl": "https://www.amazon.com/s?k=isopure+zero+carb+whey+protein+isolate&tag=YOURTAG-20",
+    "blurb": "A zero-carb, zero-sugar whey isolate fortified with 22 vitamins and minerals, delivering 25 g protein per 31 g scoop.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/isopure-zero-carb.png",
+    "images": [
+      "https://www.theisopurecompany.com/cdn/shop/files/US_ZeroCarb_2.7LB_CreamyVanilla_FOP.png?v=1783005063&width=2500",
+      "https://www.theisopurecompany.com/cdn/shop/files/US_ZeroCarb_2.7LB_CreamyVanilla_NFP.jpg",
+      "https://www.theisopurecompany.com/cdn/shop/files/US_ZeroCarb_4.2lb_Creamy_Vanilla_FOP.png?v=1783003070&width=2500"
+    ],
+    "metrics": {
+      "proteinG": 25,
+      "servingG": 31,
+      "source": "whey isolate",
+      "sweetener": "sucralose"
+    },
+    "sources": [
+      {
+        "url": "https://www.theisopurecompany.com/products/zero-low-carb-protein-powder",
+        "label": "Isopure — official product page (Supplement Facts panel image)"
+      }
+    ]
+  },
+  {
+    "id": "musclepharm-combat-protein",
+    "name": "Combat Protein Powder",
+    "brand": "MusclePharm",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Third-Party Tested"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "5-Protein Blend (Whey Concentrate, Milk Protein Concentrate, Whey Isolate, Whey Hydrolysate, Egg Albumin)",
+        "dose": "25 g per scoop",
+        "clinicalNote": "Mixes fast- and slow-digesting proteins studied for extending amino acid availability after a meal or workout."
+      },
+      {
+        "name": "L-Glutamine",
+        "dose": "5 g per scoop",
+        "clinicalNote": "An amino acid studied for its role in normal muscle recovery and gut function."
+      }
+    ],
+    "cautions": [
+      "Contains milk, egg, and soy (lecithin).",
+      "Made in a facility that also processes tree nuts, sesame, peanuts, fish, crustaceans, shellfish, and wheat."
+    ],
+    "servings": 77,
+    "priceRange": "$$",
+    "flavorsNote": "Chocolate Milk is one of five flavors (also Vanilla, Cookies 'N Cream, Horchata, Banana Cream); sweetened with sucralose and acesulfame potassium.",
+    "affiliateUrl": "https://www.amazon.com/s?k=musclepharm+combat+protein+powder+chocolate+milk&tag=YOURTAG-20",
+    "blurb": "A five-source protein blend rather than pure whey, delivering 25 g protein per 37 g scoop with added glutamine; the brand's own product page confirms Informed Sport and Informed Protein certification.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/musclepharm-combat-protein.jpg",
+    "imageBg": "255,255,255",
+    "images": [
+      "https://musclepharm.com/cdn/shop/files/4lb_Combat_Protein_chocolate.jpg?v=1770923567&width=1800",
+      "https://musclepharm.com/cdn/shop/files/MP-Combat-AMZ-StackedTiles-Chocolate-02.jpg?v=1770923567&width=2000",
+      "https://musclepharm.com/cdn/shop/files/MP-Combat-AMZ-StackedTiles-Chocolate-2lb-05_db461423-4bd3-4ee1-9b96-c4774f8cf1a6.jpg?v=1770923567&width=2000"
+    ],
+    "metrics": {
+      "proteinG": 25,
+      "servingG": 37,
+      "source": "whey/egg/milk protein blend",
+      "sweetener": "sucralose and acesulfame potassium"
+    },
+    "sources": [
+      {
+        "url": "https://musclepharm.com/products/combat-protein-powder-2",
+        "label": "MusclePharm — official product page (Supplement Facts label image, Informed Sport/Informed Protein claim)"
+      }
+    ]
+  },
+  {
+    "id": "legion-whey-plus",
+    "name": "Whey+ Grass-Fed Whey Protein Isolate",
+    "brand": "Legion",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Truly Grass Fed Whey Protein Isolate",
+        "dose": "22 g",
+        "clinicalNote": "Whey protein isolate supplies a full essential amino acid profile, including leucine, studied for its role in supporting muscle protein synthesis when combined with resistance training."
+      }
+    ],
+    "cautions": [
+      "Derived from milk; not appropriate for those with dairy allergies.",
+      "Naturally sweetened with stevia rather than added sugar or artificial sweeteners.",
+      "Intended to supplement a balanced diet, not replace whole-food protein sources."
+    ],
+    "servings": 30,
+    "priceRange": "$$$",
+    "flavorsNote": "Naturally sweetened and flavored with stevia across options like Dutch Chocolate, French Vanilla, and Unflavored, with no artificial sweeteners, dyes, or fillers.",
+    "affiliateUrl": "https://www.amazon.com/s?k=legion+whey+plus+protein&tag=YOURTAG-20",
+    "blurb": "Delivers 22 grams of grass-fed whey isolate per 25-gram scoop with a fully disclosed label and no proprietary blends; purity is verified through Labdoor lab testing rather than an NSF or Informed Sport sport-specific certification.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/legion-whey-plus.png",
+    "imageBg": "230,230,230",
+    "images": [
+      "https://legionathletics.com/wp-content/uploads/2026/03/whey-plus-30-servings-dutch-chocolate-image-1.png",
+      "https://legionathletics.com/wp-content/uploads/2026/03/whey-plus-shared-half-image-02-sfp.png"
+    ],
+    "metrics": {
+      "proteinG": 22,
+      "servingG": 25,
+      "source": "whey isolate",
+      "sweetener": "stevia"
+    },
+    "sources": [
+      {
+        "url": "https://legionathletics.com/products/supplements/whey-protein-powder/",
+        "label": "Legion Athletics — official product page"
+      },
+      {
+        "url": "https://www.amazon.com/Legion-Chocolate-Isolate-Protein-Powder/dp/B00R3ZLXZ6",
+        "label": "Amazon — retailer listing cross-check"
+      }
+    ]
+  },
+  {
+    "id": "momentous-whey-protein-isolate",
+    "name": "Whey Protein Isolate",
+    "brand": "Momentous",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Third-Party Tested",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Grass-Fed Whey Protein Isolate",
+        "dose": "20 g",
+        "clinicalNote": "A microfiltered, grass-fed whey isolate high in leucine, an amino acid studied for its role in stimulating muscle protein synthesis and supporting post-exercise recovery."
+      },
+      {
+        "name": "ProHydrolase",
+        "dose": "included per serving",
+        "clinicalNote": "A digestive enzyme studied for supporting protein breakdown and amino acid uptake, intended to ease digestion of the isolate."
+      }
+    ],
+    "cautions": [
+      "Derived from milk; contains dairy.",
+      "Not suitable for a vegan diet; isolate processing removes most but not all lactose.",
+      "Chocolate and Vanilla flavors use monk fruit extract and stevia as sweeteners."
+    ],
+    "servings": 25,
+    "priceRange": "$$$",
+    "flavorsNote": "Chocolate and Vanilla are naturally sweetened with monk fruit extract and stevia, Strawberry uses the plant-based sweetener Reb M, and the Unflavored option contains no added sweetener.",
+    "affiliateUrl": "https://www.amazon.com/s?k=momentous+whey+protein+isolate&tag=YOURTAG-20",
+    "blurb": "A 20-gram grass-fed whey isolate serving with added ProHydrolase digestive enzymes; every batch is NSF Certified for Sport and third-party tested by Light Labs with published Certificates of Analysis.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/momentous-whey-protein-isolate.png",
+    "images": [
+      "https://www.livemomentous.com/cdn/shop/files/Whey_Protein_25_Chocolate-DTC-ProductHero.png",
+      "https://www.livemomentous.com/cdn/shop/files/Whey_Protein_25_Vanilla-DTC-ProductHero.png",
+      "https://www.livemomentous.com/cdn/shop/files/Whey-Protein_25-Serv_Unflavored.png"
+    ],
+    "metrics": {
+      "proteinG": 20,
+      "servingG": 26,
+      "source": "whey isolate",
+      "sweetener": "monk fruit extract and stevia (flavor-dependent)"
+    },
+    "sources": [
+      {
+        "url": "https://www.livemomentous.com/products/essential-whey-protein",
+        "label": "Momentous — official product page"
+      },
+      {
+        "url": "https://www.amazon.com/s?k=Momentous+Whey+Protein+Isolate+NSF",
+        "label": "Amazon — retailer listing cross-check"
+      }
+    ]
+  },
+  {
+    "id": "klean-athlete-klean-isolate",
+    "name": "Klean Isolate",
+    "brand": "Klean Athlete",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Third-Party Tested",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Whey Protein Isolate",
+        "dose": "20 g",
+        "clinicalNote": "An unflavored, unsweetened whey isolate providing essential and branched-chain amino acids studied for their role in muscle protein synthesis and repair."
+      }
+    ],
+    "cautions": [
+      "Derived from milk; contains dairy.",
+      "Unflavored version has no added sweetener; flavored versions (vanilla, chocolate, strawberry) are naturally flavored.",
+      "Intended to supplement daily protein intake, not to replace meals."
+    ],
+    "servings": 20,
+    "priceRange": "$$$",
+    "flavorsNote": "The unflavored version is unsweetened with only two ingredients on the label; vanilla, chocolate, and strawberry variants are also available with no artificial sweeteners or flavors.",
+    "affiliateUrl": "https://www.amazon.com/s?k=klean+athlete+klean+isolate&tag=YOURTAG-20",
+    "blurb": "An unflavored, unsweetened 20-gram whey isolate scoop with just whey protein isolate and sunflower lecithin on the label, NSF Certified for Sport and used by over 350 professional and collegiate sports teams.",
+    "labelVerified": "July 2026",
+    "metrics": {
+      "proteinG": 20,
+      "servingG": 22.3,
+      "source": "whey isolate",
+      "sweetener": "none (unsweetened)"
+    },
+    "sources": [
+      {
+        "url": "https://www.kleanathlete.com/klean-isolate-pouch-us.html",
+        "label": "Klean Athlete — official product page"
+      },
+      {
+        "url": "https://www.kleanathlete.com/catalog/category/view/id/347/",
+        "label": "Klean Athlete — supplements category page (NSF Certified for Sport statement)"
+      }
+    ]
+  },
+  {
+    "id": "thorne-whey-protein-isolate",
+    "name": "Whey Protein Isolate",
+    "brand": "Thorne",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Third-Party Tested"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Whey Protein Isolate",
+        "dose": "25 g (providing 21 g protein)",
+        "clinicalNote": "Complete, fast-digesting dairy protein studied for its role in supporting muscle protein synthesis after resistance training."
+      },
+      {
+        "name": "Bromelain and Papain Blend",
+        "dose": "30 mg",
+        "clinicalNote": "Plant-derived digestive enzymes included to support breakdown of the protein content."
+      },
+      {
+        "name": "Calcium",
+        "dose": "94 mg",
+        "clinicalNote": "Mineral involved in normal muscle contraction and bone maintenance."
+      }
+    ],
+    "cautions": [
+      "Contains milk (whey protein isolate); not suitable for a dairy allergy",
+      "Sweetened with stevia (Rebaudioside A) plus a small amount of cane sugar (3 g sugar per serving)",
+      "Supplements food intake and does not replace whole-food protein sources"
+    ],
+    "servings": 30,
+    "priceRange": "$$$",
+    "flavorsNote": "Available in Vanilla and Chocolate, both naturally sweetened with stevia rather than artificial sweeteners.",
+    "affiliateUrl": "https://www.amazon.com/s?k=thorne+whey+protein+isolate&tag=YOURTAG-20",
+    "blurb": "An NSF Certified for Sport whey isolate with a short, fully disclosed ingredient list — 21 g of protein and 2.2 g of leucine per scoop, plus digestive enzymes and no artificial sweeteners.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/thorne-whey-protein-isolate.png",
+    "images": [
+      "https://d1vo8zfysxy97v.cloudfront.net/media/product/sp111__v496b30d9bd6d9b49984937cf925408c168a0561f.png",
+      "https://d1vo8zfysxy97v.cloudfront.net/media/product/sp111__vd8d76843226cf38cf557ca0a5d8135e2f7952d2a.jpg",
+      "https://d1vo8zfysxy97v.cloudfront.net/media/product/sp111__v7583bad18bef72094fa64af52a30940d1e5cf75f.jpg"
+    ],
+    "metrics": {
+      "proteinG": 21,
+      "servingG": 28,
+      "source": "whey isolate",
+      "sweetener": "stevia"
+    },
+    "sources": [
+      {
+        "url": "https://www.thorne.com/products/dp/whey-protein-isolate-vanilla",
+        "label": "Thorne — official product page (Ingredient Amounts panel)"
+      },
+      {
+        "url": "https://findyourhealthyplace.com/products/thorne-research-whey-protein-isolate-29-5oz-vanilla",
+        "label": "Retailer listing confirming 29.5 oz / 30-serving container, used to derive the ~28 g scoop weight not printed on Thorne's own page"
+      }
+    ]
+  },
+  {
+    "id": "ritual-essential-protein-daily-shake",
+    "name": "Essential Protein Daily Shake",
+    "brand": "Ritual",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Organic Pea Protein",
+        "dose": "20 g protein (31 g scoop)",
+        "clinicalNote": "Plant-based complete protein studied for supporting muscle protein synthesis in a manner comparable to dairy protein sources."
+      },
+      {
+        "name": "Choline (as VitaCholine choline bitartrate)",
+        "dose": "150 mg",
+        "clinicalNote": "Essential nutrient involved in normal cell-membrane structure and cognitive function."
+      },
+      {
+        "name": "L-Methionine",
+        "dose": "400 mg",
+        "clinicalNote": "Essential amino acid added to round out the plant protein's amino acid profile."
+      }
+    ],
+    "cautions": [
+      "Made from peas; not appropriate for a legume/pea allergy",
+      "Naturally sweetened with monk fruit extract and a small amount of Reb-M steviol glycoside",
+      "Intended to supplement the diet, not replace whole-food protein sources"
+    ],
+    "servings": 15,
+    "priceRange": "$$$",
+    "flavorsNote": "Sold in a single Vanilla flavor, sweetened with monk fruit extract and Reb-M steviol glycoside rather than sugar or artificial sweeteners.",
+    "affiliateUrl": "https://www.amazon.com/s?k=ritual+essential+protein+daily+shake&tag=YOURTAG-20",
+    "blurb": "A fully disclosed plant-based pea protein shake with 20 g of protein per 31 g scoop and added choline plus L-methionine; its third-party testing covers heavy metals and microbes rather than an NSF Certified for Sport or Informed Sport banned-substance mark.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/ritual-essential-protein-daily-shake.jpg",
+    "imageBg": "3,53,103",
+    "images": [
+      "https://ritual.com/cdn/shop/files/PDP-PD18-Bag_f125fdc4-6812-45b7-a56e-faf0bf89e3c2.jpg?v=1774026738&width=2000",
+      "https://ritual.com/cdn/shop/files/PDP-PD18-Glass_3fe1a2ff-500c-4adf-a90e-fbbce10b10ae.jpg?v=1774026738&width=2000",
+      "https://ritual.com/cdn/shop/files/PDP-PD18-Model-1_a8585738-c0e0-4097-a116-d316f3e2d803.jpg?v=1774026738&width=2000"
+    ],
+    "metrics": {
+      "proteinG": 20,
+      "servingG": 31,
+      "source": "pea protein",
+      "sweetener": "monk fruit + Reb-M steviol glycoside"
+    },
+    "sources": [
+      {
+        "url": "https://ritual.com/collections/performance-recovery/products/essential-protein-daily-shake-18",
+        "label": "Ritual — official product page (Supplement Facts panel dialog)"
+      }
+    ]
+  },
+  {
+    "id": "bpn-whey-protein",
+    "name": "Whey Protein",
+    "brand": "BPN",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Third-Party Tested"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Whey Protein Concentrate + Micellar Casein blend",
+        "dose": "25 g protein (34.1 g scoop)",
+        "clinicalNote": "Pairs a fast-digesting dairy protein with a slow-digesting one, studied for supporting muscle protein synthesis and post-exercise recovery."
+      },
+      {
+        "name": "Calcium",
+        "dose": "160 mg",
+        "clinicalNote": "Mineral involved in normal muscle contraction and bone maintenance."
+      },
+      {
+        "name": "Potassium",
+        "dose": "160 mg",
+        "clinicalNote": "Electrolyte involved in normal fluid balance and muscle function."
+      }
+    ],
+    "cautions": [
+      "Contains milk and soy",
+      "Naturally sweetened with steviol glycosides (Reb-M) and monk fruit extract",
+      "Supplements the diet and does not replace whole-food protein sources"
+    ],
+    "servings": 27,
+    "priceRange": "$$",
+    "flavorsNote": "Offered in eight-plus flavors including Vanilla, Fudge Chocolate, and Cinnamon Roll, all naturally sweetened with stevia (Reb-M) and monk fruit rather than sugar.",
+    "affiliateUrl": "https://www.amazon.com/s?k=bpn+whey+protein+bare+performance+nutrition&tag=YOURTAG-20",
+    "blurb": "An NSF Certified for Sport whey concentrate and casein blend delivering 25 g of protein per 34 g scoop, with a short ingredient list and no artificial sweeteners.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/bpn-whey-protein.png",
+    "imageBg": "229,229,229",
+    "images": [
+      "https://www.bareperformancenutrition.com/cdn/shop/files/WHEY_PROTEIN_Vanilla_Render_V01_BPNWPC-VN-9.png?v=1784150924&width=1200",
+      "https://www.bareperformancenutrition.com/cdn/shop/files/Whey_Protein_VN_9_-_NFP.jpg?v=1782243926&width=1200",
+      "https://www.bareperformancenutrition.com/cdn/shop/files/014_WHEY_RENDERS_Chocolate.jpg?v=1770223274&width=1200"
+    ],
+    "metrics": {
+      "proteinG": 25,
+      "servingG": 34,
+      "source": "whey concentrate + casein blend",
+      "sweetener": "stevia (Reb-M) + monk fruit"
+    },
+    "sources": [
+      {
+        "url": "https://www.bareperformancenutrition.com/products/whey-protein-powder",
+        "label": "BPN — official product page (Nutrition Facts panel image, Vanilla)"
+      }
+    ]
+  },
+  {
+    "id": "jocko-fuel-molk-protein-powder",
+    "name": "Mölk Protein Powder",
+    "brand": "Jocko Fuel",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Proprietary Blend"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Mölk Protein Blend (Whey Concentrate, Whey Isolate, Micellar Casein, Egg White Protein)",
+        "dose": "22 g",
+        "clinicalNote": "A mix of fast- and slow-digesting proteins studied for their role in supporting daily protein intake and muscle protein synthesis."
+      }
+    ],
+    "cautions": [
+      "Contains milk and egg.",
+      "Produced in a facility that also processes soy, fish, shellfish, peanuts, tree nuts, and wheat.",
+      "Sweetened with allulose, monk fruit extract, and Reb-M rather than added sugar."
+    ],
+    "servings": 26,
+    "priceRange": "$$$",
+    "flavorsNote": "Nine flavors including Chocolate Milkshake, Vanilla Milkshake, and Fruity Cereal, all sweetened with a blend of allulose, monk fruit extract, and Reb-M instead of sugar.",
+    "affiliateUrl": "https://www.amazon.com/s?k=jocko+molk+protein+powder&tag=YOURTAG-20",
+    "blurb": "Mölk lists its whey concentrate, whey isolate, casein, and egg white protein together as one named blend rather than disclosing individual gram amounts; the Chocolate Milkshake panel shows 22 g protein per 34 g scoop with 0 g added sugar and no caffeine.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/jocko-fuel-molk-protein-powder.jpg",
+    "imageBg": "245,244,242",
+    "images": [
+      "https://jockofuel.com/cdn/shop/files/CHOC_FRONT.jpg?v=1762361558&width=1946",
+      "https://jockofuel.com/cdn/shop/files/CHOC_BACK.jpg?v=1758807658&width=1946",
+      "https://jockofuel.com/cdn/shop/files/CHOC_NFP.jpg?v=1758807658&width=1946"
+    ],
+    "metrics": {
+      "proteinG": 22,
+      "servingG": 34,
+      "source": "whey concentrate/isolate, casein, and egg white protein blend",
+      "sweetener": "allulose, monk fruit extract, Reb-M"
+    },
+    "sources": [
+      {
+        "url": "https://jockofuel.com/products/jocko-protein-powder",
+        "label": "Jocko Fuel — official product page (Nutrition Facts panel, Chocolate Milkshake)"
+      }
+    ]
+  },
+  {
+    "id": "1st-phorm-level-1",
+    "name": "Level-1",
+    "brand": "1st Phorm",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Third-Party Tested"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Whey Protein Concentrate",
+        "dose": "23 g",
+        "clinicalNote": "A well-studied dairy protein source used to support daily protein intake and muscle protein synthesis."
+      }
+    ],
+    "cautions": [
+      "Contains milk.",
+      "Manufactured in a facility that also processes egg, fish, shellfish, tree nut, peanut, wheat, soy, and sesame.",
+      "Sweetened with sucralose."
+    ],
+    "servings": 30,
+    "priceRange": "$$$",
+    "flavorsNote": "Milk Chocolate is one of many flavors offered; sweetened with sucralose rather than sugar.",
+    "affiliateUrl": "https://www.amazon.com/s?k=1st+phorm+level-1+protein&tag=YOURTAG-20",
+    "blurb": "Level-1 uses whey protein concentrate as its only protein source, with 23 g protein per 33 g scoop on the Milk Chocolate label, and carries an Informed Choice Trusted mark shown directly on the product page.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/1st-phorm-level-1.png",
+    "images": [
+      "https://1stphorm.com/cdn/shop/files/level-1-milk-chocolate-04_25.png?v=1775830789",
+      "https://1stphorm.com/cdn/shop/files/level-1-natural-vanilla-01_25_1800x1800.png?v=1773771589",
+      "https://1stphorm.com/cdn/shop/files/level-1-birthday-cake_1800x1800.png?v=1775830789"
+    ],
+    "metrics": {
+      "proteinG": 23,
+      "servingG": 33,
+      "source": "whey concentrate",
+      "sweetener": "sucralose"
+    },
+    "sources": [
+      {
+        "url": "https://1stphorm.com/products/level-1",
+        "label": "1st Phorm — official product page (Nutrition Facts panel, Milk Chocolate)"
+      }
+    ]
+  },
+  {
+    "id": "naked-nutrition-naked-whey",
+    "name": "Naked Whey (Unflavored)",
+    "brand": "Naked Nutrition",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Grass-Fed Whey Protein Concentrate",
+        "dose": "25 g",
+        "clinicalNote": "Whey protein supplies a complete amino acid profile studied for its role in supporting post-exercise muscle protein synthesis."
+      },
+      {
+        "name": "Naturally occurring BCAAs",
+        "dose": "5.9 g",
+        "clinicalNote": "Branched-chain amino acids occur naturally in whey and are studied for their involvement in muscle protein synthesis."
+      }
+    ],
+    "cautions": [
+      "Contains milk; not suitable for those with a dairy allergy or lactose intolerance.",
+      "Unflavored and unsweetened, so taste and texture differ from flavored whey powders.",
+      "Meant to supplement dietary protein intake, not replace whole-food protein sources."
+    ],
+    "servings": 76,
+    "priceRange": "$$",
+    "flavorsNote": "Sold unflavored only in this listing; no sugar, stevia, or artificial sweetener is added, so the neutral milk taste is meant to blend into shakes, coffee, or baking.",
+    "affiliateUrl": "https://www.amazon.com/s?k=naked+nutrition+naked+whey+unflavored&tag=YOURTAG-20",
+    "blurb": "A one-ingredient grass-fed whey concentrate: the label reads just 'Whey Protein Concentrate' with 25 g protein per 30 g scoop and no added sweetener. Its NSF mark certifies content purity and contaminant testing, not the banned-substance screening of NSF Certified for Sport.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/naked-nutrition-naked-whey.jpg",
+    "imageBg": "255,255,255",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0645/6465/files/unflavored-whey-protein-powder-isolate_ab4447ea-b8a1-4539-81f4-0b60b3a9f893.jpg?v=1782960931",
+      "https://nakednutrition.com/cdn/shop/files/grass-fed-unflavored-Whey-5LB.jpg",
+      "https://cdn.shopify.com/s/files/1/0645/6465/files/unflavored-whey-protein-powder-nutrition-facts-5LB.jpg?v=1782960921"
+    ],
+    "metrics": {
+      "proteinG": 25,
+      "servingG": 30,
+      "source": "whey protein concentrate",
+      "sweetener": "none (unflavored/unsweetened)"
+    },
+    "sources": [
+      {
+        "url": "https://nakednutrition.com/products/grass-fed-whey-protein-powder",
+        "label": "Naked Nutrition — official product page"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0645/6465/files/unflavored-whey-protein-powder-nutrition-facts-5LB.jpg?v=1782960921",
+        "label": "Naked Nutrition — Nutrition Facts panel image"
+      }
+    ]
+  },
+  {
+    "id": "ascent-micellar-casein",
+    "name": "Micellar Casein (Chocolate)",
+    "brand": "Ascent",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Third-Party Tested"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Micellar Casein Isolate",
+        "dose": "25 g",
+        "clinicalNote": "Casein is a slow-digesting milk protein studied for prolonged amino-acid release, often used before extended periods without food such as overnight."
+      },
+      {
+        "name": "Stevia Leaf Extract",
+        "dose": "n/a",
+        "clinicalNote": "A plant-derived non-nutritive sweetener used in place of sugar or artificial sweeteners."
+      }
+    ],
+    "cautions": [
+      "Contains milk; not suitable for those with a dairy allergy or lactose intolerance.",
+      "Contains a gum blend (guar, acacia, xanthan) for texture, which affects mixability preference for some users.",
+      "Meant to supplement dietary protein intake, not replace whole-food protein sources."
+    ],
+    "servings": 25,
+    "priceRange": "$$$",
+    "flavorsNote": "Chocolate is naturally flavored and sweetened only with stevia leaf extract; Vanilla Bean and Chocolate Peanut Butter are also offered in the line.",
+    "affiliateUrl": "https://www.amazon.com/s?k=ascent+micellar+casein+protein&tag=YOURTAG-20",
+    "blurb": "A slow-digesting micellar casein isolate at 25 g protein per 36 g scoop, sweetened only with stevia, carrying an Informed Sport certification mark printed on the bag for banned-substance screening.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/ascent-micellar-casein.png",
+    "images": [
+      "https://www.ascentprotein.com/cdn/shop/files/ASCN_Chocolate_Casein_Bag_Top_Shadow_R_2000x2000_NEW.png?v=1769620950",
+      "https://www.ascentprotein.com/cdn/shop/files/ASCE-256_MCC_2LB_NFP_F4_25Serving_2lb_Render_Chocolate.jpg?v=1749051028",
+      "https://www.ascentprotein.com/cdn/shop/files/casein_chocolate_on_black.jpg?v=1749051028"
+    ],
+    "metrics": {
+      "proteinG": 25,
+      "servingG": 36,
+      "source": "micellar casein isolate",
+      "sweetener": "stevia"
+    },
+    "sources": [
+      {
+        "url": "https://ascentprotein.com/products/chocolate-micellar-casein",
+        "label": "Ascent — official product page"
+      },
+      {
+        "url": "https://www.ascentprotein.com/cdn/shop/files/ASCE-256_MCC_2LB_NFP_F4_25Serving_2lb_Render_Chocolate.jpg?v=1749051028",
+        "label": "Ascent — Nutrition Facts panel image"
+      }
+    ]
+  },
+  {
+    "id": "kos-organic-plant-protein",
+    "name": "Organic Plant Protein",
+    "brand": "KOS",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "KOS Organic Protein Blend (pea, flax seed, quinoa, pumpkin seed, chia seed)",
+        "dose": "20 g",
+        "clinicalNote": "A five-source plant protein blend combined to round out the essential amino-acid profile; pea protein is the most studied of the five for supporting muscle protein synthesis."
+      },
+      {
+        "name": "KOS Organic Superfoods Blend (coconut milk, inulin, acacia gum, fruit and vegetable powders)",
+        "dose": "amount not stated on label",
+        "clinicalNote": "A fiber- and fruit/vegetable-powder blend layered onto the protein base; inulin is a prebiotic fiber."
+      },
+      {
+        "name": "Digestive Enzyme Blend (amylase, lactase, protease, lipase, cellulase)",
+        "dose": "amount not stated on label",
+        "clinicalNote": "Added enzymes intended to support normal digestion of the protein and fiber sources."
+      }
+    ],
+    "cautions": [
+      "Uses named 'blends' rather than individually dosed ingredients — total protein is disclosed, sub-amounts are not",
+      "Carries a California Prop 65 warning for lead exposure, common among plant proteins that concentrate trace minerals from soil",
+      "Protein powders supplement food, not replace it"
+    ],
+    "servings": 28,
+    "priceRange": "$$",
+    "flavorsNote": "Figures verified against Vanilla (37 g two-scoop serving, 28-serving tub); sweetened with coconut sugar, organic stevia leaf extract, and organic monk fruit extract.",
+    "affiliateUrl": "https://www.amazon.com/s?k=kos+organic+plant+protein&tag=YOURTAG-20",
+    "blurb": "20 g of protein from a five-source plant blend plus an added superfoods and digestive-enzyme layer — more ingredients than a bare-bones isolate, with the sub-blend amounts left undisclosed.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/kos-organic-plant-protein.png",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/2236/0863/files/VPP-VN28_d6894f73-94fa-43d1-91b6-24f5e4bfd8b6.png",
+      "https://cdn.shopify.com/s/files/1/2236/0863/files/VPP-CH28_010e3fe3-9629-44dd-b5fe-d8cd56c96918.png",
+      "https://cdn.shopify.com/s/files/1/2236/0863/files/1VAN28-Listing-Claims.png"
+    ],
+    "metrics": {
+      "proteinG": 20,
+      "servingG": 37,
+      "source": "plant blend (pea, flax, quinoa, pumpkin seed, chia)",
+      "sweetener": "coconut sugar + stevia + monk fruit"
+    },
+    "sources": [
+      {
+        "url": "https://kos.com/products/kos-organic-plant-protein-vanilla-28-servings",
+        "label": "KOS product page (Vanilla, 28 servings)"
+      },
+      {
+        "url": "https://www.iherb.com/pr/kos-organic-superfood-plant-protein-powder-vanilla-1-6-lb-741-g/160813",
+        "label": "iHerb listing (full Supplement Facts panel)"
+      }
+    ]
+  },
+  {
+    "id": "sunwarrior-warrior-blend",
+    "name": "Warrior Blend",
+    "brand": "Sunwarrior",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Protein Blend (organic fermented pea protein, organic hemp seed protein, organic goji berry)",
+        "dose": "17 g",
+        "clinicalNote": "A fermented pea, hemp, and goji combination; the label discloses total protein but not the split between the three sources."
+      },
+      {
+        "name": "Naturally occurring BCAAs",
+        "dose": "6 g",
+        "clinicalNote": "Branched-chain amino acids supplied by the protein sources themselves, called out separately on the panel."
+      },
+      {
+        "name": "Organic MCT oil (from coconut)",
+        "dose": "amount not stated on label",
+        "clinicalNote": "Added fat source used for mouthfeel; contributes to the panel's fat content."
+      }
+    ],
+    "cautions": [
+      "Labeled as a protein blend — total protein is disclosed, the pea/hemp/goji split is not",
+      "Made in a facility that also processes peanuts and tree nuts, per the label's allergen statement",
+      "Protein powders supplement food, not replace it"
+    ],
+    "servings": 30,
+    "priceRange": "$$",
+    "flavorsNote": "Figures verified against Vanilla (25 g single-scoop serving, 750 g/30-serving tub); sweetened with organic stevia leaf extract only, no added sugar.",
+    "affiliateUrl": "https://www.amazon.com/s?k=sunwarrior+warrior+blend+protein&tag=YOURTAG-20",
+    "blurb": "17 g protein in a lean 25 g scoop from a fermented pea/hemp/goji blend, with 6 g of naturally occurring BCAAs called out on the label.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/sunwarrior-warrior-blend.jpg",
+    "imageBg": "255,255,255",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/3002/1936/files/USA-WarriorBlend4-750g-Van-ThreeQuarter_6bb65617-cff6-43fd-af91-25e96363ef98.jpg",
+      "https://cdn.shopify.com/s/files/1/3002/1936/files/USA-WarriorBlend4-750g-Van-Right-Opt_9c3e5ac5-3eb0-4856-9dca-459c87b05ad3.png"
+    ],
+    "metrics": {
+      "proteinG": 17,
+      "servingG": 25,
+      "source": "plant blend (pea, hemp, goji)",
+      "sweetener": "stevia"
+    },
+    "sources": [
+      {
+        "url": "https://sunwarrior.com/products/organic-warrior-blend-vegan-protein-powder",
+        "label": "Sunwarrior product page (Vanilla)"
+      },
+      {
+        "url": "https://www.iherb.com/pr/sunwarrior-warrior-blend-protein-vanilla-1-65-lb-750-g/76188",
+        "label": "iHerb listing (full Supplement Facts panel)"
+      }
+    ]
+  },
+  {
+    "id": "garden-of-life-raw-organic-protein",
+    "name": "Raw Organic Protein",
+    "brand": "Garden of Life",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Raw Organic Protein Blend (organic pea protein, organic sprouted brown rice protein + 12 other organic sprouts)",
+        "dose": "22 g",
+        "clinicalNote": "A 14-sprout plant protein blend; pea and rice proteins are the primary sources studied for supporting muscle protein synthesis."
+      },
+      {
+        "name": "Bacillus subtilis DE111 (probiotic)",
+        "dose": "250 million CFU at expiration",
+        "clinicalNote": "A heat-stable probiotic strain with a quantified count on the label, included alongside the protein blend."
+      },
+      {
+        "name": "Raw Enzyme Blend",
+        "dose": "amount not stated on label",
+        "clinicalNote": "Digestive enzymes added to support normal breakdown of the protein and fiber sources."
+      }
+    ],
+    "cautions": [
+      "Contains sesame — a labeled allergen",
+      "Made in a facility that also processes egg, milk, soy, wheat, fish, and tree nuts",
+      "Protein powders supplement food, not replace it"
+    ],
+    "servings": 20,
+    "priceRange": "$$$",
+    "flavorsNote": "Figures verified against Vanilla (33 g single-scoop serving, 660 g/about-20-serving tub); sweetened with organic erythritol and organic stevia leaf extract, 0 g sugar.",
+    "affiliateUrl": "https://www.amazon.com/s?k=garden+of+life+raw+organic+protein&tag=YOURTAG-20",
+    "blurb": "22 g protein from a 14-sprout organic blend in a 33 g scoop — one of the leanest protein-to-scoop-weight ratios among the plant options — plus a quantified 250-million-CFU probiotic add-on.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/garden-of-life-raw-organic-protein.jpg",
+    "imageBg": "255,255,255",
+    "images": [
+      "https://web.archive.org/web/20240228050812im_/https://www.gardenoflife.com/media/catalog/product/6/5/658010116039-1_1.jpg"
+    ],
+    "metrics": {
+      "proteinG": 22,
+      "servingG": 33,
+      "source": "plant blend (pea, sprouted brown rice + 12 sprouts)",
+      "sweetener": "erythritol + stevia"
+    },
+    "sources": [
+      {
+        "url": "https://www.vitacost.com/products/garden-of-life-raw-organic-protein-vanilla-1-lb-7-28-oz-660-g-44135",
+        "label": "Vitacost listing (Nutrition Facts table and back-label photo)"
+      },
+      {
+        "url": "https://web.archive.org/web/20240228050812/https://www.gardenoflife.com/products/raw-organic-protein-powder-vanilla",
+        "label": "Garden of Life product page (archived)"
+      }
+    ]
+  },
+  {
+    "id": "aloha-organic-plant-based-protein",
+    "name": "Organic Plant Based Protein",
+    "brand": "Aloha",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Protein Blend (pea protein, brown rice protein, hemp seed protein, pumpkin seed protein)",
+        "dose": "18 g",
+        "clinicalNote": "A four-source legume/seed/grain blend combined to round out the essential amino-acid profile."
+      },
+      {
+        "name": "Coconut sugar",
+        "dose": "4 g added sugar",
+        "clinicalNote": "The label's stated added-sugar source, used alongside monk fruit extract for sweetness."
+      },
+      {
+        "name": "Blue agave inulin",
+        "dose": "contributes to 5 g dietary fiber",
+        "clinicalNote": "A prebiotic fiber that also thickens the shake."
+      }
+    ],
+    "cautions": [
+      "Contains coconut — a labeled allergen",
+      "4 g of the panel's sugar is added coconut sugar, more than most stevia/monk-fruit-only competitors",
+      "Protein powders supplement food, not replace it"
+    ],
+    "servings": 15,
+    "priceRange": "$$$",
+    "flavorsNote": "Figures verified against Vanilla (35 g two-scoop serving, 15-serving tub); sweetened with coconut sugar plus monk fruit extract.",
+    "affiliateUrl": "https://www.amazon.com/s?k=aloha+organic+plant+based+protein&tag=YOURTAG-20",
+    "blurb": "18 g protein from a four-source plant blend with 5 g fiber, sweetened partly with coconut sugar rather than the stevia-only approach most competitors use — worth noting if you track added sugar.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/aloha-organic-plant-based-protein.jpg",
+    "imageBg": "237,232,234",
+    "images": [
+      "https://aloha.com/cdn/shop/products/Vanilla-Powder_PDP_1.jpg?v=1743518385",
+      "https://aloha.com/cdn/shop/files/Vanilla-Powder_PDP_3.jpg?v=1743518385",
+      "https://aloha.com/cdn/shop/files/VanillaPowder_Collections_Color_e4743847-423c-42f0-ba28-0725d929ab15.jpg?v=1743582541"
+    ],
+    "metrics": {
+      "proteinG": 18,
+      "servingG": 35,
+      "source": "plant blend (pea, brown rice, hemp seed, pumpkin seed)",
+      "sweetener": "coconut sugar + monk fruit"
+    },
+    "sources": [
+      {
+        "url": "https://aloha.com/products/vanilla-protein-powder",
+        "label": "Aloha product page (Vanilla, Nutrition Facts panel)"
+      }
+    ]
+  },
+  {
+    "id": "nutiva-organic-hemp-protein",
+    "name": "Organic Hemp Protein Powder, Peak Protein",
+    "brand": "Nutiva",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Organic Hemp Seed Protein",
+        "dose": "15 g",
+        "clinicalNote": "The sole ingredient on the label; hemp protein supplies a full amino-acid profile including branched-chain aminos."
+      },
+      {
+        "name": "Dietary fiber (naturally occurring in hemp seed)",
+        "dose": "6 g",
+        "clinicalNote": "Fiber content comes from the hemp seed itself rather than an added ingredient."
+      }
+    ],
+    "cautions": [
+      "May contain wheat and soy from shared facility equipment, per the label's cross-contact statement",
+      "Lower protein density than isolate-based powders — the 30 g scoop delivers 15 g protein alongside 6 g fiber and 3 g fat",
+      "Protein powders supplement food, not replace it"
+    ],
+    "servings": 15,
+    "priceRange": "$$",
+    "flavorsNote": "Unflavored, unsweetened powder; figures verified against the Peak Protein formula (30 g scoop, 16 oz/15-serving bag) — Nutiva also sells a lower-protein, higher-fiber 'Fiber Plus' formula under the same product name.",
+    "affiliateUrl": "https://www.amazon.com/s?k=nutiva+organic+hemp+protein+powder&tag=YOURTAG-20",
+    "blurb": "A true single-ingredient hemp protein — nothing else on the label — trading some protein density (15 g per scoop) for 6 g of naturally occurring fiber and no added sweeteners.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/nutiva-organic-hemp-protein.webp",
+    "imageBg": "255,255,255",
+    "images": [
+      "https://nutiva.com/cdn/shop/files/PRO405_628x612_5b9648aa-d7c2-42af-82ce-ffc7cd557a17.webp?v=1774905922",
+      "https://nutiva.com/cdn/shop/files/PRO405_L_628x612_6640d795-fa79-401b-8c98-4dac18e24ce8.webp?v=1774905922",
+      "https://nutiva.com/cdn/shop/files/PRO405_R_628x612_6de67de9-d5ec-4c12-a681-19cbc941ce03.webp?v=1774905922"
+    ],
+    "metrics": {
+      "proteinG": 15,
+      "servingG": 30,
+      "source": "hemp seed protein",
+      "sweetener": "unsweetened"
+    },
+    "sources": [
+      {
+        "url": "https://www.nutiva.com/products/organic-hemp-protein-powder",
+        "label": "Nutiva product page (Peak Protein / Fiber Plus variants, ingredient list)"
+      },
+      {
+        "url": "https://cdn.accentuate.io/8723931856956/2967597023292/Nutiva_Amazon_16ozHempPeakPro_NutritionFacts_3-v1702335983392.jpg",
+        "label": "Amazon listing label photo (Peak Protein Supplement Facts panel)"
+      }
+    ]
+  },
+  {
+    "id": "on-gold-standard-plant-protein",
+    "name": "Gold Standard 100% Plant Protein",
+    "brand": "Optimum Nutrition",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Beginner Friendly"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Plant Protein Blend (pea protein, fava bean protein isolate, brown rice protein concentrate)",
+        "dose": "24 g",
+        "clinicalNote": "A three-source legume/grain blend; pea and rice proteins are the most studied of the three for supporting muscle protein synthesis."
+      },
+      {
+        "name": "Oil Creamer (coconut/sunflower oil, pea protein, sunflower lecithin)",
+        "dose": "amount not stated on label",
+        "clinicalNote": "Added for mouthfeel; contributes to the panel's fat content."
+      },
+      {
+        "name": "Gum Blend (xanthan gum, guar gum, gum acacia)",
+        "dose": "amount not stated on label",
+        "clinicalNote": "Texture and thickening agents, standard in plant-protein shakes."
+      }
+    ],
+    "cautions": [
+      "Uses named blends (protein, oil creamer, gum) — total protein is disclosed, individual sub-amounts are not",
+      "Sweetened with stevia leaf extract (Reb A and Reb M) — check the label if you're sensitive to stevia's aftertaste",
+      "Protein powders supplement food, not replace it"
+    ],
+    "servings": 12,
+    "priceRange": "$$",
+    "flavorsNote": "Figures verified against Creamy Vanilla (37 g scoop, 0.98 lb/12-serving tub); sweetened with stevia leaf extract, no artificial sweeteners.",
+    "affiliateUrl": "https://www.amazon.com/s?k=optimum+nutrition+gold+standard+plant+protein&tag=YOURTAG-20",
+    "blurb": "24 g protein in a 37 g scoop is the highest protein-to-scoop ratio of the plant blends here, from the most widely stocked brand in the category — the smallest tub size runs only 12 servings.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/on-gold-standard-plant-protein.png",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0794/9991/9627/files/US_GS_Plant_12srv_Vanilla_6068152.png",
+      "https://cdn.shopify.com/s/files/1/0794/9991/9627/files/on-1117731_Image_01.png",
+      "https://cdn.shopify.com/s/files/1/0794/9991/9627/files/on-1117733_Image_01.png"
+    ],
+    "metrics": {
+      "proteinG": 24,
+      "servingG": 37,
+      "source": "plant blend (pea, fava bean, brown rice)",
+      "sweetener": "stevia"
+    },
+    "sources": [
+      {
+        "url": "https://www.optimumnutrition.com/en-us/products/gold-standard-100-plant-based-protein-powder",
+        "label": "Optimum Nutrition product page (label image, Creamy Vanilla)"
+      }
+    ]
+  },
+  {
+    "id": "truvani-plant-based-protein",
+    "name": "Plant Based Protein Powder",
+    "brand": "Truvani",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Plant protein blend (organic pea protein, organic pumpkin seed protein, organic chia seed protein)",
+        "dose": "20 g",
+        "clinicalNote": "A three-source plant blend; the entire ingredient list is just five items, with no artificial additives."
+      },
+      {
+        "name": "Organic monk fruit extract",
+        "dose": "amount not stated on label",
+        "clinicalNote": "The sole sweetener used — no stevia, sugar, or sugar alcohols."
+      }
+    ],
+    "cautions": [
+      "Made in a facility that also processes milk, egg, fish, shellfish, tree nuts, peanuts, wheat, sesame, and soy",
+      "Scoop weight varies by flavor (29 g Vanilla vs. 33.5 g Chocolate) even though protein stays about the same",
+      "Protein powders supplement food, not replace it"
+    ],
+    "servings": 10,
+    "priceRange": "$$$",
+    "flavorsNote": "Figures verified against Vanilla (29 g single-scoop serving, 10-serving bag); sweetened with organic monk fruit extract only, no stevia or sugar.",
+    "affiliateUrl": "https://www.amazon.com/s?k=truvani+plant+based+protein+powder&tag=YOURTAG-20",
+    "blurb": "A five-ingredient label — three plant proteins plus vanilla and monk fruit — that packs 20 g protein into a 29 g scoop, one of the leanest protein-to-scoop ratios in this batch.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/truvani-plant-based-protein.png",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/2538/3594/products/Truvani_Mockup_Vanilla-Protein_2718435a-ef5e-4adb-93f0-fc59535387b5.png?v=1771428322",
+      "https://cdn.shopify.com/s/files/1/2538/3594/products/Truvani_Mockup_Chocolate-Protein_c272f832-b4b7-4349-871f-06de81c94395.png?v=1771428322"
+    ],
+    "metrics": {
+      "proteinG": 20,
+      "servingG": 29,
+      "source": "plant blend (pea, pumpkin seed, chia)",
+      "sweetener": "monk fruit"
+    },
+    "sources": [
+      {
+        "url": "https://shop.truvani.com/pages/plant-based-protein/vanilla",
+        "label": "Truvani product page (Vanilla)"
+      },
+      {
+        "url": "https://www.target.com/p/truvani-organic-plant-based-vegan-protein-powder-vanilla-10-47oz-10-servings/-/A-93128197",
+        "label": "Target listing (Nutrition Facts panel, 10-serving bag)"
+      }
+    ]
+  },
+  {
+    "id": "vega-protein-supergreens",
+    "name": "Protein + Supergreens",
+    "brand": "Vega",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Pea protein",
+        "dose": "25 g",
+        "clinicalNote": "A single-source legume protein; pea protein is studied for supporting muscle protein synthesis after resistance training."
+      },
+      {
+        "name": "Greens (spinach powder, organic kale powder, organic alfalfa grass powder, broccoli powder)",
+        "dose": "amount not stated on label",
+        "clinicalNote": "Individually named vegetable powders added on top of the protein base — listed by name rather than folded into an unnamed 'greens blend.'"
+      },
+      {
+        "name": "Dietary fiber",
+        "dose": "4 g",
+        "clinicalNote": "Labeled fiber content per serving."
+      }
+    ],
+    "cautions": [
+      "Made in a facility that also processes milk, soy, peanuts, egg, tree nuts, and sesame",
+      "46 g scoop is large — mixes best in 10-12 oz of liquid",
+      "Protein powders supplement food, not replace it"
+    ],
+    "servings": 11,
+    "priceRange": "$$$",
+    "flavorsNote": "Figures verified against Creamy Vanilla (46 g single-scoop serving, about 510 g/11-serving tub); sweetened with stevia leaf extract, 0 g added sugar.",
+    "affiliateUrl": "https://www.amazon.com/s?k=vega+protein+supergreens&tag=YOURTAG-20",
+    "blurb": "25 g of single-source pea protein plus individually named greens (spinach, kale, alfalfa, broccoli) rather than an opaque 'greens blend' — the current formula replaced an older pea/rice/sacha inchi protein mix with pea protein alone.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/vega-protein-supergreens.png",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/2590/5380/files/Vega-Protein-Supergreens-Plant-Based-Protein-Powder-Vanilla-18ozUS-1.png?v=1781636929",
+      "https://cdn.shopify.com/s/files/1/2590/5380/files/Vega-Protein-Supergreens-Plant-Based-Protein-Powder-Chocolate-18ozUS-1.png?v=1781636929",
+      "https://cdn.shopify.com/s/files/1/2590/5380/files/Vega_PS_berry_medium_US_1.png?v=1781636929"
+    ],
+    "metrics": {
+      "proteinG": 25,
+      "servingG": 46,
+      "source": "pea protein + greens",
+      "sweetener": "stevia"
+    },
+    "sources": [
+      {
+        "url": "https://myvega.com/products/vega%C2%AE-protein-supergreens",
+        "label": "Vega product page (Protein + Supergreens)"
+      },
+      {
+        "url": "https://www.target.com/p/vega-premium-protein-supergreens-creamy-vanilla-1-lb-2-oz-510-g/-/A-1006103453",
+        "label": "Target listing (Nutrition Facts panel)"
+      }
+    ]
+  },
+  {
+    "id": "levels-grass-fed-whey",
+    "name": "Grass Fed Whey Protein Powder",
+    "brand": "Levels",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Grass-fed whey protein concentrate",
+        "dose": "24 g",
+        "clinicalNote": "A single-source concentrate from grass-fed dairy herds; whey protein is well studied for supporting muscle protein synthesis after training."
+      },
+      {
+        "name": "Sunflower lecithin",
+        "dose": "amount not stated on label",
+        "clinicalNote": "Added only for mixability."
+      }
+    ],
+    "cautions": [
+      "Contains milk — not suitable for dairy allergy",
+      "Whey concentrate (not isolate) carries more lactose than an isolate — a consideration if you're lactose-sensitive",
+      "Protein powders supplement food, not replace it"
+    ],
+    "servings": 21,
+    "priceRange": "$$",
+    "flavorsNote": "Figures verified against Vanilla Bean (32 g single-scoop serving, 23.7 oz/21-serving bag); sweetened with stevia leaf extract plus monk fruit extract.",
+    "affiliateUrl": "https://www.amazon.com/s?k=levels+grass+fed+whey+protein&tag=YOURTAG-20",
+    "blurb": "A plain six-ingredient label built around grass-fed whey concentrate — 24 g protein per 32 g scoop — with no proprietary blends or artificial sweeteners.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/levels-grass-fed-whey.png",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/1214/5580/files/ECOMM_PRODUCT_RENDERS_01_1LB_BAG_VB_FRONT1.png?v=1783022895",
+      "https://cdn.shopify.com/s/files/1/1214/5580/files/ECOMM_PRODUCT_RENDERS_01_1LB_BAG_DC_FRONT1.png?v=1783022895",
+      "https://cdn.shopify.com/s/files/1/1214/5580/files/LEVELS_Whey_2lb_VanillaBean_front_c1161901-e5ed-44b6-a7f7-2f41402593f5.png?v=1774621888"
+    ],
+    "metrics": {
+      "proteinG": 24,
+      "servingG": 32,
+      "source": "whey concentrate",
+      "sweetener": "stevia + monk fruit"
+    },
+    "sources": [
+      {
+        "url": "https://levelsprotein.com/products/grass-fed-whey-protein",
+        "label": "Levels product page"
+      },
+      {
+        "url": "https://www.target.com/p/levels-grass-fed-whey-protein-powder-vanilla-23-7oz/-/A-92988645",
+        "label": "Target listing (Nutrition Facts panel)"
+      }
+    ]
   }
 ];
