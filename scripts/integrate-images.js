@@ -2,7 +2,7 @@
 //
 // Takes the researched image JSON (one file per category), downloads each
 // product's lead image into images/products/, and writes the imageUrl,
-// imageOpaque, and images fields into that product's entry in
+// imageBg, and images fields into that product's entry in
 // data/products.js. Run with the directory holding the JSON files:
 //
 //   node scripts/integrate-images.js <json-dir> [--dry]
@@ -16,8 +16,10 @@
 //   - Only URLs the researcher actually verified belong in the JSON. This
 //     script re-checks that each one downloads and is a real image, and drops
 //     the ones that do not; it never invents or repairs a URL.
-//   - imageOpaque is derived from the downloaded file's alpha channel, never
-//     guessed — it decides whether the art sits on the dark stage or on paper.
+//   - imageBg is only a first guess here, taken from the file's alpha
+//     channel. A PNG can carry an alpha channel and still be entirely opaque,
+//     so re-measure the corner pixels in a browser and correct imageBg to the
+//     real colour before shipping (see README, "Product imagery").
 //   - Products that already carry an imageUrl are left alone, so the script is
 //     safe to re-run.
 //
@@ -157,7 +159,7 @@ for (const e of entries) {
         const size = download(url, dest);
         local = `images/products/${e.id}.${extOf(url)}`;
         opaque = !hasAlpha(dest);
-        note = `${Math.round(size / 1024)} KB, ${opaque ? "opaque (paper plate)" : "transparent"}`;
+        note = `${Math.round(size / 1024)} KB, ${opaque ? "opaque — verify imageBg" : "transparent"}`;
         break;
       } catch (err) {
         note = "lead image failed: " + err.message;
@@ -172,7 +174,7 @@ for (const e of entries) {
 
   const block =
     `\n${pad}${key("imageUrl")}: ${JSON.stringify(imageUrl)},` +
-    (opaque ? `\n${pad}${key("imageOpaque")}: true,` : "") +
+    (opaque ? `\n${pad}${key("imageBg")}: "255,255,255",` : "") +
     `\n${pad}${key("images")}: [\n` +
     urls.map((u) => `${pad}  ${JSON.stringify(u)}`).join(",\n") +
     `\n${pad}],`;

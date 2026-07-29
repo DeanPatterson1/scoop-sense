@@ -222,6 +222,7 @@ var PRODUCTS = [
     "blurb": "Informed Sport certification is verified on the brand page, and the formula skips artificial sweeteners — a clean pick for tested athletes at a mid-premium price.",
     "labelVerified": "July 2026",
     "imageUrl": "images/products/ascent-native-fuel-whey.png",
+    "imageBg": "7,6,5",
     "images": [
       "https://www.ascentprotein.com/cdn/shop/products/whey-van-2lb-main.png?v=1695075692&width=1200",
       "https://www.ascentprotein.com/cdn/shop/products/whey-van-4lb-main.png?v=1695075692&width=1200",
@@ -554,7 +555,7 @@ var PRODUCTS = [
     "blurb": "The lowest cost per serving on this list: 25 g protein per scoop across a 63-serving 5 lb bag, with independent lab testing claimed by the brand (not an NSF or Informed Sport certification).",
     "labelVerified": "July 2026",
     "imageUrl": "images/products/nutricost-whey-protein-concentrate.jpg",
-    "imageOpaque": true,
+    "imageBg": "255,255,255",
     "images": [
       "https://nutricost.com/cdn/shop/files/NTC_WPC_Chocolate_2LB_2750CC_Front_Square_906cc793-3c2c-497a-ac90-c8265275b423.jpg?width=1200",
       "https://nutricost.com/cdn/shop/files/NTC_WPC_Vanilla_2LB_2750CC_Front_Square_b1e55d34-9c12-4401-9bcb-1f5c29ef1de9.jpg?width=1200",

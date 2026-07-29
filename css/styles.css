@@ -1618,12 +1618,18 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   transform: translateY(-4px);
 }
 
-/* Retailer photos shot on a white sweep get the paper surface behind them,
-   so they read as a printed product plate rather than a white rectangle
-   floating on the dark card. Transparent renders keep the dark stage. */
+/* Retailer photos shot on a solid sweep carry their own background colour,
+   measured from the file and passed in as --sc-art-bg. Filling the art area
+   with it makes the photograph meet the card edges instead of sitting on the
+   dark stage as a pasted rectangle. Transparent renders keep the stage. */
 .sc-art-plate {
-  background: var(--sc-paper) !important;
-  border-bottom-color: var(--sc-paper-line);
+  background: var(--sc-art-bg, var(--sc-paper)) !important;
+  border-bottom-color: rgba(0, 0, 0, 0.25);
+}
+
+.sc-art-plate img {
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .sc-tile-top {

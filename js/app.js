@@ -377,9 +377,12 @@
     return '<article class="sc-tile" id="p-' + esc(p.id) + '"' + accent + ">" +
       '<a class="sc-tile-link" href="' + page + '" ' +
         'aria-label="Full label breakdown: ' + esc(p.brand + " " + p.name) + '">' +
-        // A photo shot on white needs a light plate behind it, or it reads as
-        // a white slab pasted on the dark card. Transparent renders don't.
-        '<span class="sc-tile-art' + (p.imageOpaque ? " sc-art-plate" : "") + '" aria-hidden="true">' +
+        // A photo shot on a solid sweep gets that sweep's own colour behind
+        // it, so the picture meets the card edge-to-edge instead of sitting on
+        // it as a pasted rectangle. Transparent renders keep the dark stage.
+        '<span class="sc-tile-art' + (p.imageBg ? " sc-art-plate" : "") + '"' +
+          (p.imageBg ? ' style="--sc-art-bg:rgb(' + esc(p.imageBg) + ')"' : "") +
+          ' aria-hidden="true">' +
           // referrerpolicy: several brand CDNs refuse hotlinks that send a
           // referrer, and imageUrl is a retailer URL for products without a
           // locally stored render.

@@ -328,7 +328,7 @@ var PRODUCTS = [
     "blurb": "8 g of all nine EAAs at one of the lowest per-serving costs in the category; batch testing is by ISO-accredited labs rather than a sport-certification program.",
     "labelVerified": "July 2026",
     "imageUrl": "images/products/nutricost-eaa.jpg",
-    "imageOpaque": true,
+    "imageBg": "255,255,255",
     "images": [
       "https://nutricost.com/cdn/shop/files/NTC_EAA_BlueRaspberry_30SERV_20OZ_Front_Square_1800x1800.jpg?v=1738964098",
       "https://nutricost.com/cdn/shop/files/NTC_EAA_POG_30SERV_20OZ_Front_Square_1800x1800.jpg?v=1770138766"
@@ -388,7 +388,7 @@ var PRODUCTS = [
     "blurb": "Longtime intra-workout staple with a fully dosed 7 g BCAA panel plus glutamine and citrulline malate, though it covers only three of the nine essential amino acids.",
     "labelVerified": "July 2026",
     "imageUrl": "images/products/xtend-original-bcaa.png",
-    "imageOpaque": true,
+    "imageBg": "241,241,241",
     "images": [
       "https://cellucor.com/cdn/shop/files/XTEND_1144_Digital_Relabel_FlowThrough_Assets_PDPs_OnGreyBackground-XTEND-OG30-BRI.png?v=1771552623",
       "https://cellucor.com/cdn/shop/files/XTEND_1144_Digital_Relabel_FlowThrough_Assets_PDPs_OnGreyBackground-XTEND-OG30-FI-Label.png?v=1776889586"
@@ -443,7 +443,7 @@ var PRODUCTS = [
     "blurb": "Budget classic BCAA using an unconventional 3:1:2 ratio that weights valine over isoleucine; like all BCAA-only formulas it omits the six other essential aminos.",
     "labelVerified": "July 2026",
     "imageUrl": "images/products/musclepharm-bcaa-312.jpg",
-    "imageOpaque": true,
+    "imageBg": "255,255,255",
     "images": [
       "https://musclepharm.com/cdn/shop/files/BCAA_Fruit_Punch.jpg?v=1754064987&width=1800",
       "https://musclepharm.com/cdn/shop/files/BCAA_Blue_Rasp.jpg?v=1754064987&width=1800"
@@ -508,6 +508,1292 @@ var PRODUCTS = [
       {
         "url": "https://www.muscleandstrength.com/store/amino-energy.html",
         "label": "Muscle & Strength label listing"
+      }
+    ]
+  },
+  {
+    "id": "bsn-amino-x",
+    "name": "Amino X",
+    "brand": "BSN",
+    "category": "eaa",
+    "stimFree": true,
+    "badges": [
+      "Proprietary Blend"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Micronized BCAA/amino blend",
+        "dose": "10 g",
+        "clinicalNote": "Combines the branched-chain aminos with L-alanine, taurine, and citrulline in one blend; the label doesn't break out how much is BCAA versus the other three aminos."
+      },
+      {
+        "name": "Vitamin D3",
+        "dose": "12.5 mcg (63% DV)",
+        "clinicalNote": "A fat-soluble vitamin involved in normal muscle function, added on top of the amino blend."
+      }
+    ],
+    "cautions": [
+      "The 10 g blend total is not broken into individual BCAA vs. other amino amounts",
+      "Amino drinks supplement protein intake, not replace it"
+    ],
+    "servings": 30,
+    "priceRange": "$$",
+    "flavorsNote": "Wide fruit-flavor lineup (Blue Raspberry, Fruit Punch, Watermelon and more), zero sugar and caffeine-free.",
+    "affiliateUrl": "https://www.amazon.com/s?k=bsn+amino+x&tag=YOURTAG-20",
+    "blurb": "A long-running caffeine-free amino powder built around a 10 g blend of BCAAs plus alanine, taurine, and citrulline, though the individual amino split isn't disclosed on the label.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/bsn-amino-x.png",
+    "images": [
+      "https://www.gobsn.com/cdn/shop/files/bsn-1047896_Image_01.png?v=1761233898&width=800",
+      "https://www.gobsn.com/cdn/shop/files/AMINOx_30sv_BlueRaz.jpg?v=1762989781&width=1000"
+    ],
+    "metrics": {
+      "eaaG": null,
+      "bcaaG": null,
+      "leucineG": null
+    },
+    "sources": [
+      {
+        "url": "https://www.target.com/p/bsn-amino-x-muscle-recovery-endurance-powder-with-bcaas-10-grams-of-amino-acids-keto-friendly-caffeine-free-flavor-blue-raspberry-30-servings/-/A-1006339768",
+        "label": "Target listing with Supplement Facts panel"
+      },
+      {
+        "url": "https://www.gobsn.com/products/amino-x-bcaa",
+        "label": "BSN — official product page"
+      }
+    ]
+  },
+  {
+    "id": "evlution-nutrition-bcaa-energy",
+    "name": "BCAA Energy",
+    "brand": "Evlution Nutrition",
+    "category": "eaa",
+    "stimFree": false,
+    "badges": [
+      "Low Stim",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 110,
+    "keyIngredients": [
+      {
+        "name": "BCAA 2:1:1 blend",
+        "dose": "5 g",
+        "clinicalNote": "Branched-chain aminos studied for supporting muscle recovery, with 2.5 g of that total as leucine."
+      },
+      {
+        "name": "Caffeine (green coffee and green tea extract)",
+        "dose": "110 mg",
+        "clinicalNote": "A natural-source caffeine dose studied for supporting alertness during training."
+      },
+      {
+        "name": "Beta-alanine",
+        "dose": "500 mg",
+        "clinicalNote": "An amino acid studied for supporting muscular endurance; can cause a temporary tingling sensation."
+      }
+    ],
+    "cautions": [
+      "110 mg caffeine per two-scoop serving counts toward daily caffeine intake",
+      "Beta-alanine tingling is a normal, harmless reaction some people notice",
+      "Amino drinks supplement protein intake, not replace it"
+    ],
+    "servings": 30,
+    "priceRange": "$$",
+    "flavorsNote": "Wide flavor range including Blue Raz, Fruit Punch, Watermelon, and Rocket Pop, sweetened with sucralose.",
+    "affiliateUrl": "https://www.amazon.com/s?k=evlution+nutrition+bcaa+energy&tag=YOURTAG-20",
+    "blurb": "A fully dosed 5 g BCAA (2.5 g leucine) stacked with 110 mg of natural caffeine and 500 mg each of beta-alanine and taurine, positioning it as an energizing BCAA rather than a stim-free recovery drink.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/evlution-nutrition-bcaa-energy.jpg",
+    "imageBg": "255,255,255",
+    "images": [
+      "https://www.evlnutrition.com/cdn/shop/files/BCAA_Energy_BR_SFP_-_2000x2000_a4f577cd-4773-45b9-83ee-b12ccedcafc7.jpg?v=1724270418",
+      "https://www.evlnutrition.com/cdn/shop/files/BCAA_Energy_30_Servings_Watermelon_SFP.jpg?v=1665690877"
+    ],
+    "metrics": {
+      "eaaG": null,
+      "bcaaG": 5,
+      "leucineG": 2.5
+    },
+    "sources": [
+      {
+        "url": "https://evlnutrition.com/products/bcaa-energy",
+        "label": "Evlution Nutrition — official product page"
+      },
+      {
+        "url": "https://www.priceplow.com/evlution-nutrition/bcaa-energy",
+        "label": "PricePlow ingredient breakdown"
+      }
+    ]
+  },
+  {
+    "id": "kaged-bcaa-211",
+    "name": "BCAA 2:1:1",
+    "brand": "Kaged",
+    "category": "eaa",
+    "stimFree": true,
+    "badges": [
+      "Third-Party Tested",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "L-Leucine (fermented)",
+        "dose": "2.5 g",
+        "clinicalNote": "The BCAA most studied for triggering muscle protein synthesis after training."
+      },
+      {
+        "name": "L-Isoleucine (fermented)",
+        "dose": "1.25 g",
+        "clinicalNote": "Works alongside leucine and valine in the branched-chain trio."
+      },
+      {
+        "name": "L-Valine (fermented)",
+        "dose": "1.25 g",
+        "clinicalNote": "Completes the 2:1:1 BCAA ratio used in most recovery research."
+      }
+    ],
+    "cautions": [
+      "BCAA-only formula; the other six essential amino acids are not included",
+      "Amino drinks supplement protein intake, not replace it"
+    ],
+    "servings": 72,
+    "priceRange": "$$",
+    "flavorsNote": "Unflavored, plant-fermented BCAAs with no added colors, meant for mixing into other drinks.",
+    "affiliateUrl": "https://www.amazon.com/s?k=kaged+bcaa+2+1+1&tag=YOURTAG-20",
+    "blurb": "Plant-fermented 5 g BCAA in the standard 2:1:1 ratio, Informed Sport tested, sold unflavored for stacking into any drink.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/kaged-bcaa-211.png",
+    "images": [
+      "https://www.kaged.com/cdn/shop/files/BCAAAFRONT_ac1a0751-087f-4bab-8697-c92f6ea75a7b.png",
+      "https://www.kaged.com/cdn/shop/files/BCAA_BCAASFP.jpg"
+    ],
+    "metrics": {
+      "eaaG": null,
+      "bcaaG": 5,
+      "leucineG": 2.5
+    },
+    "sources": [
+      {
+        "url": "https://kaged.com/products/bcaa-2-1-1",
+        "label": "Kaged — official product page"
+      }
+    ]
+  },
+  {
+    "id": "applied-nutrition-bcaa-amino-hydrate",
+    "name": "BCAA Amino Hydrate",
+    "brand": "Applied Nutrition",
+    "category": "eaa",
+    "stimFree": true,
+    "badges": [
+      "Third-Party Tested",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "L-Leucine",
+        "dose": "3.6 g",
+        "clinicalNote": "The essential amino acid most studied for triggering muscle protein synthesis after training."
+      },
+      {
+        "name": "BCAA 2:1:1 blend (total)",
+        "dose": "7.2 g",
+        "clinicalNote": "The full branched-chain trio, combined here for supporting recovery and reducing training soreness."
+      },
+      {
+        "name": "Electrolyte, L-glutamine and citrulline malate blend",
+        "dose": "included, not individually itemized",
+        "clinicalNote": "Sodium, potassium, and calcium for hydration alongside glutamine and citrulline for blood flow support."
+      }
+    ],
+    "cautions": [
+      "BCAA-only formula; the other six essential amino acids are not included",
+      "Amino drinks supplement protein intake, not replace it"
+    ],
+    "servings": 32,
+    "priceRange": "$$",
+    "flavorsNote": "Seven flavors including Icy Blue Raz, Fruit Burst, and Green Apple; zero sugar and zero calories.",
+    "affiliateUrl": "https://www.amazon.com/s?k=applied+nutrition+bcaa+amino+hydrate&tag=YOURTAG-20",
+    "blurb": "A 7.2 g BCAA hydration formula with electrolytes and citrulline malate, Informed Sport certified, though it covers only three of the nine essential amino acids.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/applied-nutrition-bcaa-amino-hydrate.webp",
+    "imageBg": "205,205,205",
+    "images": [
+      "https://appliednutrition.uk/cdn/shop/files/BCAA_Professional_450g_-_Icy_Blue_Raz_gifts.webp?v=1781657000",
+      "https://appliednutrition.uk/cdn/shop/files/BCAA_Professional_450g_-_Fruit_Burst.webp?v=1781657000"
+    ],
+    "metrics": {
+      "eaaG": null,
+      "bcaaG": 7.2,
+      "leucineG": 3.6
+    },
+    "sources": [
+      {
+        "url": "https://appliednutrition.uk/products/bcaa-amino-hydrate",
+        "label": "Applied Nutrition — official product page"
+      }
+    ]
+  },
+  {
+    "id": "optimum-nutrition-amino-energy-electrolytes",
+    "name": "Amino Energy + Electrolytes",
+    "brand": "Optimum Nutrition",
+    "category": "eaa",
+    "stimFree": false,
+    "badges": [
+      "Low Stim",
+      "Proprietary Blend"
+    ],
+    "caffeineMg": 100,
+    "keyIngredients": [
+      {
+        "name": "Amino blend",
+        "dose": "5 g",
+        "clinicalNote": "Proprietary mix including taurine, glutamine, arginine, leucine, beta-alanine, and citrulline; individual amounts aren't broken out."
+      },
+      {
+        "name": "Caffeine (green tea and green coffee extract)",
+        "dose": "100 mg",
+        "clinicalNote": "Natural-source caffeine studied for supporting alertness during training."
+      },
+      {
+        "name": "Electrolyte blend (sodium chloride, potassium chloride, magnesium oxide)",
+        "dose": "440 mg",
+        "clinicalNote": "Minerals lost through sweat, added to support hydration."
+      }
+    ],
+    "cautions": [
+      "Amino doses sit inside a proprietary blend, so individual amounts are not disclosed",
+      "100 mg caffeine per stick pack counts toward daily caffeine intake",
+      "Amino drinks supplement protein intake, not replace it"
+    ],
+    "servings": 7,
+    "priceRange": "$$$",
+    "flavorsNote": "Strawberry Burst and Tangerine Wave stick packs, sugar-free and aspartame-free.",
+    "affiliateUrl": "https://www.amazon.com/s?k=optimum+nutrition+amino+energy+electrolytes&tag=YOURTAG-20",
+    "blurb": "A stick-pack twist on ON's Amino Energy line, adding a 440 mg electrolyte blend to the same 100 mg caffeine and 5 g proprietary amino base in a lower-serving travel format.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/optimum-nutrition-amino-energy-electrolytes.png",
+    "images": [
+      "https://www.optimumnutrition.com/cdn/shop/files/on-1146760_Image_01.png?v=1755796114&width=2000",
+      "https://www.optimumnutrition.com/cdn/shop/files/ONUS-amino-energy-electrolytes_Label_Strawberry-Burst_7-servings.png?v=1761393263&width=1000"
+    ],
+    "metrics": {
+      "eaaG": null,
+      "bcaaG": null,
+      "leucineG": null
+    },
+    "sources": [
+      {
+        "url": "https://www.optimumnutrition.com/en-us/products/amino-energy-electrolytes-hydration-pre-workout-powder",
+        "label": "Optimum Nutrition — official product page"
+      }
+    ]
+  },
+  {
+    "id": "nutrabio-alpha-eaa",
+    "name": "Alpha EAA",
+    "brand": "NutraBio",
+    "category": "eaa",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "L-Leucine",
+        "dose": "3 g",
+        "clinicalNote": "The essential amino acid most studied for triggering muscle protein synthesis after training."
+      },
+      {
+        "name": "Full EAA spectrum",
+        "dose": "8.2 g total",
+        "clinicalNote": "All nine essential amino acids individually dosed, including 850 mg each of lysine and threonine."
+      },
+      {
+        "name": "Taurine",
+        "dose": "1.2 g",
+        "clinicalNote": "Studied for supporting hydration and exercise performance."
+      },
+      {
+        "name": "KSM-66 Ashwagandha",
+        "dose": "300 mg",
+        "clinicalNote": "An adaptogen studied for supporting the body's response to physical training stress."
+      }
+    ],
+    "cautions": [
+      "Also contains Alpha-GPC, choline, and huperzine A as a cognitive-support add-on, beyond a typical amino formula",
+      "Amino drinks supplement protein intake, not replace it"
+    ],
+    "servings": 30,
+    "priceRange": "$$$",
+    "flavorsNote": "Multiple flavors; caffeine-free.",
+    "affiliateUrl": "https://www.amazon.com/s?k=nutrabio+alpha+eaa&tag=YOURTAG-20",
+    "blurb": "A fully itemized 8.2 g EAA panel (3 g leucine) layered with taurine, ashwagandha, and choline-based nootropics, from a brand that publishes every dose with no proprietary blends.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/nutrabio-alpha-eaa.png",
+    "images": [
+      "https://nutrabio.com/cdn/shop/files/26910_94a43607-317a-40d1-98e6-2a33fb90dc3e.png?v=1724448916&width=1946",
+      "https://nutrabio.com/cdn/shop/products/26900.png?v=1707331471&width=1946"
+    ],
+    "metrics": {
+      "eaaG": 8.2,
+      "bcaaG": 6,
+      "leucineG": 3
+    },
+    "sources": [
+      {
+        "url": "https://nutrabio.com/products/alpha-eaa",
+        "label": "NutraBio — official product page"
+      },
+      {
+        "url": "https://www.priceplow.com/nutrabio/alpha-eaa",
+        "label": "PricePlow full ingredient panel"
+      }
+    ]
+  },
+  {
+    "id": "alani-nu-bcaa",
+    "name": "BCAA",
+    "brand": "Alani Nu",
+    "category": "eaa",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "BCAA 2:1:1 blend",
+        "dose": "5 g",
+        "clinicalNote": "Branched-chain aminos studied for supporting muscle recovery, with 2.5 g of that total as leucine."
+      },
+      {
+        "name": "L-Glutamine",
+        "dose": "500 mg",
+        "clinicalNote": "The most abundant free amino acid in muscle tissue, commonly added to recovery formulas."
+      },
+      {
+        "name": "Electrolytes (sodium, potassium)",
+        "dose": "84 mg combined",
+        "clinicalNote": "Minerals lost through sweat, added to support hydration."
+      }
+    ],
+    "cautions": [
+      "BCAA-only formula; the other six essential amino acids are not included",
+      "Amino drinks supplement protein intake, not replace it"
+    ],
+    "servings": 30,
+    "priceRange": "$$$",
+    "flavorsNote": "Candy-inspired flavors like Sour Peach Rings and Hawaiian Shaved Ice, sweetened with sucralose.",
+    "affiliateUrl": "https://www.amazon.com/s?k=alani+nu+bcaa&tag=YOURTAG-20",
+    "blurb": "A fully dosed 5 g BCAA in the standard 2:1:1 ratio plus glutamine and a light electrolyte add, positioned as a caffeine-free, flavor-forward BCAA.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/alani-nu-bcaa.png",
+    "images": [
+      "https://www.alaninu.com/cdn/shop/files/Stretch_AN-Website-PDP-BCAA-SPR-01_V1.png?v=1782507258&width=2000",
+      "https://www.alaninu.com/cdn/shop/files/Stretch_AN-Website-PDP-BCAA-SPR-02_V1.png?v=1782507258&width=2000"
+    ],
+    "metrics": {
+      "eaaG": null,
+      "bcaaG": 5,
+      "leucineG": 2.5
+    },
+    "sources": [
+      {
+        "url": "https://www.alaninu.com/products/bcaa-sour-peach-rings",
+        "label": "Alani Nu — official product page"
+      }
+    ]
+  },
+  {
+    "id": "muscletech-amino-build",
+    "name": "Amino Build",
+    "brand": "MuscleTech",
+    "category": "eaa",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "L-Leucine",
+        "dose": "4 g",
+        "clinicalNote": "Dosed at the level used in university research tied to strength gains after training."
+      },
+      {
+        "name": "L-Isoleucine and L-Valine",
+        "dose": "3 g combined",
+        "clinicalNote": "The other two branched-chain aminos, rounding out a leucine-heavy 7 g BCAA total."
+      },
+      {
+        "name": "Betaine anhydrous",
+        "dose": "2.5 g",
+        "clinicalNote": "Studied for supporting power output and lean mass gains during resistance training."
+      },
+      {
+        "name": "Taurine",
+        "dose": "1 g",
+        "clinicalNote": "An amino acid studied for supporting hydration and exercise performance."
+      }
+    ],
+    "cautions": [
+      "Leucine-heavy 7 g BCAA blend skews away from the standard 2:1:1 ratio",
+      "Amino drinks supplement protein intake, not replace it"
+    ],
+    "servings": 40,
+    "priceRange": "$$",
+    "flavorsNote": "Tropical Twist and Strawberry Watermelon flavors, caffeine-free.",
+    "affiliateUrl": "https://www.amazon.com/s?k=muscletech+amino+build&tag=YOURTAG-20",
+    "blurb": "A leucine-forward 7 g BCAA (4 g leucine) stacked with 2.5 g betaine and 1 g taurine, priced as an everyday recovery option rather than a full nine-amino EAA product.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/muscletech-amino-build.png",
+    "images": [
+      "https://www.muscletech.com/cdn/shop/files/mt-amino-build-tropical-twist.png?v=1742823143",
+      "https://www.muscletech.com/cdn/shop/files/mt-amino-build-strawberry-watermelon.png?v=1742823147"
+    ],
+    "metrics": {
+      "eaaG": null,
+      "bcaaG": 7,
+      "leucineG": 4
+    },
+    "sources": [
+      {
+        "url": "https://www.muscletech.com/products/amino-build",
+        "label": "MuscleTech — official product page"
+      }
+    ]
+  },
+  {
+    "id": "allmax-aminocore",
+    "name": "Aminocore",
+    "brand": "ALLMAX",
+    "category": "eaa",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "L-Leucine",
+        "dose": "3.68 g",
+        "clinicalNote": "The BCAA most studied for triggering muscle protein synthesis, dosed here at 45% of the blend."
+      },
+      {
+        "name": "L-Valine",
+        "dose": "2.45 g",
+        "clinicalNote": "One of the two remaining BCAAs, dosed at 30% of the blend."
+      },
+      {
+        "name": "L-Isoleucine",
+        "dose": "2.05 g",
+        "clinicalNote": "Completes the leucine-heavy 9:6:5 BCAA ratio at 25% of the blend."
+      },
+      {
+        "name": "B-vitamin complex (B6, B12, folate, niacin)",
+        "dose": "included per serving",
+        "clinicalNote": "Cofactors involved in normal amino acid metabolism."
+      }
+    ],
+    "cautions": [
+      "BCAA-only formula; the other six essential amino acids are not included",
+      "Amino drinks supplement protein intake, not replace it"
+    ],
+    "servings": 30,
+    "priceRange": "$$",
+    "flavorsNote": "Eight flavor options including Fruit Punch, Watermelon, and Sweet Tea, formulated with InstaClear solubility technology.",
+    "affiliateUrl": "https://www.amazon.com/s?k=allmax+aminocore&tag=YOURTAG-20",
+    "blurb": "A leucine-dominant 8.18 g BCAA blend in a 9:6:5 ratio, fortified with B-vitamins, caffeine-free and built for repeat same-day dosing.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/allmax-aminocore.webp",
+    "imageBg": "254,254,254",
+    "images": [
+      "https://www.allmaxnutrition.com/cdn/shop/files/1.1-Aminocore-BCAA-FruitPunch.webp?v=1782154376&width=1400",
+      "https://www.allmaxnutrition.com/cdn/shop/files/1.1-Aminocore-BCAA-watermelon.webp?v=1782154409&width=1400"
+    ],
+    "metrics": {
+      "eaaG": null,
+      "bcaaG": 8.18,
+      "leucineG": 3.68
+    },
+    "sources": [
+      {
+        "url": "https://allmaxnutrition.com/products/aminocore",
+        "label": "ALLMAX — official product page"
+      }
+    ]
+  },
+  {
+    "id": "nutricost-bcaa-powder",
+    "name": "BCAA Powder",
+    "brand": "Nutricost",
+    "category": "eaa",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Budget Pick"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "L-Leucine",
+        "dose": "3 g",
+        "clinicalNote": "The essential amino acid most studied for triggering muscle protein synthesis after training."
+      },
+      {
+        "name": "L-Isoleucine",
+        "dose": "1.5 g",
+        "clinicalNote": "Works alongside leucine and valine in the branched-chain trio."
+      },
+      {
+        "name": "L-Valine",
+        "dose": "1.5 g",
+        "clinicalNote": "Completes the standard 2:1:1 BCAA ratio used in most recovery research."
+      }
+    ],
+    "cautions": [
+      "BCAA-only formula; the other six essential amino acids are not included",
+      "Amino drinks supplement protein intake, not replace it"
+    ],
+    "servings": 30,
+    "priceRange": "$",
+    "flavorsNote": "Eleven flavor options plus unflavored, in container sizes from 30 to 150 servings.",
+    "affiliateUrl": "https://www.amazon.com/s?k=nutricost+bcaa+powder&tag=YOURTAG-20",
+    "blurb": "A straightforward 6 g BCAA in the standard 2:1:1 ratio at one of the lowest per-serving prices in the category.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/nutricost-bcaa-powder.jpg",
+    "imageBg": "255,255,255",
+    "images": [
+      "https://nutricost.com/cdn/shop/files/NTCP_BCAA_Watermelon_30SERV_20OZ_Front1_Square.jpg?v=1760719437",
+      "https://nutricost.com/cdn/shop/files/NTCP_BCAA_Watermelon_30SERV_20OZ_SFP_Square.jpg?v=1760719437"
+    ],
+    "metrics": {
+      "eaaG": null,
+      "bcaaG": 6,
+      "leucineG": 3
+    },
+    "sources": [
+      {
+        "url": "https://nutricost.com/products/nutricost-bcaa-powder",
+        "label": "Nutricost — official product page"
+      },
+      {
+        "url": "https://www.priceplow.com/nutricost/bcaa",
+        "label": "PricePlow ingredient breakdown"
+      }
+    ]
+  },
+  {
+    "id": "nutrabio-base-aminos",
+    "name": "Base Aminos",
+    "brand": "NutraBio",
+    "category": "eaa",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "EAA-BCAA Recovery Matrix",
+        "dose": "10 g (incl. 6 g fermented BCAAs 2:1:1)",
+        "clinicalNote": "A fully dosed, full-spectrum essential amino acid blend intended to support muscle recovery during and after training."
+      },
+      {
+        "name": "Electrolyte Hydration Matrix",
+        "dose": "2.8 g (sodium citrate, potassium citrate, magnesium malate, sodium chloride)",
+        "clinicalNote": "Replenishes electrolytes lost through sweat to support normal hydration status during exercise."
+      },
+      {
+        "name": "AstraGin",
+        "dose": "50 mg",
+        "clinicalNote": "An astragalus/notoginseng root extract studied for supporting nutrient absorption."
+      }
+    ],
+    "cautions": [
+      "Provides 250 mg sodium and 125 mg potassium per serving; account for this if monitoring electrolyte intake.",
+      "Contains coconut-derived flavor components (tree nut note on label)."
+    ],
+    "servings": 30,
+    "priceRange": "$$",
+    "flavorsNote": "Sold in flavors such as Blackberry Lemonade and Grape Berry Crush, naturally and artificially flavored.",
+    "affiliateUrl": "https://www.amazon.com/s?k=nutrabio+base+aminos&tag=YOURTAG-20",
+    "blurb": "Combines a fully dosed 10 g EAA-BCAA matrix with a separate electrolyte blend on one panel, positioning it as a recovery-plus-hydration hybrid rather than a plain amino powder.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/nutrabio-base-aminos.png",
+    "images": [
+      "https://nutrabio.com/cdn/shop/files/80015_BottleRender.png?v=1771857958",
+      "https://nutrabio.com/cdn/shop/files/80015_SupplementFactsPanel.png?v=1771857958"
+    ],
+    "metrics": {
+      "eaaG": 10,
+      "bcaaG": 6,
+      "leucineG": 3
+    },
+    "sources": [
+      {
+        "url": "https://nutrabio.com/products/base-aminos",
+        "label": "NutraBio — Base Aminos product page"
+      }
+    ]
+  },
+  {
+    "id": "1st-phorm-eaa",
+    "name": "Essential Amino Acids",
+    "brand": "1st Phorm",
+    "category": "eaa",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Third-Party Tested"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "BCAA Complex 2:1:1",
+        "dose": "3 g (1,500 mg leucine, 750 mg isoleucine, 750 mg valine)",
+        "clinicalNote": "A leucine-forward branched-chain ratio commonly used around training to support muscle protein synthesis."
+      },
+      {
+        "name": "EAA Complex",
+        "dose": "3.5 g (lysine, threonine, phenylalanine, histidine, methionine, tryptophan)",
+        "clinicalNote": "Rounds out all nine essential amino acids the body cannot produce on its own."
+      }
+    ],
+    "cautions": [
+      "Processed on equipment that also handles milk, egg, fish, shellfish, tree nuts, peanuts, wheat, soy, and sesame.",
+      "May contain trace amounts of milk, egg, soy, or wheat."
+    ],
+    "servings": 60,
+    "priceRange": "$$",
+    "flavorsNote": "Offered in Berry Blast, Blueberry Lemonade, Sour Green Apple, and Tropical Mango.",
+    "affiliateUrl": "https://www.amazon.com/s?k=1st+phorm+essential+amino+acids&tag=YOURTAG-20",
+    "blurb": "An NSF Certified for Sport EAA powder with a 60-serving count that spreads the amino dose thinner per scoop (6.5 g total) than most single-scoop EAA products.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/1st-phorm-eaa.png",
+    "images": [
+      "https://1stphorm.com/cdn/shop/files/eaa-tropical-mango.png?v=1764626022",
+      "https://cdn.shopify.com/s/files/1/0072/7754/3493/files/eaa-berry-blast-SFP-04_25-allergy.png?v=1746047760"
+    ],
+    "metrics": {
+      "eaaG": 6.5,
+      "bcaaG": 3,
+      "leucineG": 1.5
+    },
+    "sources": [
+      {
+        "url": "https://1stphorm.com/products/essential-amino-acids",
+        "label": "1st Phorm — Essential Amino Acids product page"
+      }
+    ]
+  },
+  {
+    "id": "ghost-intra",
+    "name": "Intra",
+    "brand": "Ghost",
+    "category": "eaa",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "GHOST EAA (incl. GHOST BCAA 2:1:1)",
+        "dose": "10 g total EAA / 6 g BCAA",
+        "clinicalNote": "A fully itemized nine-amino profile with a leucine-forward BCAA ratio to support muscle recovery around training."
+      },
+      {
+        "name": "KSM-66 Ashwagandha",
+        "dose": "600 mg",
+        "clinicalNote": "A standardized ashwagandha extract studied for supporting the body's normal stress response."
+      },
+      {
+        "name": "Cognizin Citicoline",
+        "dose": "250 mg",
+        "clinicalNote": "A choline compound studied for supporting normal cognitive function."
+      },
+      {
+        "name": "Electrolyte blend (sodium, potassium, chloride, calcium, magnesium)",
+        "dose": "See panel",
+        "clinicalNote": "Supports fluid and electrolyte balance during exercise."
+      }
+    ],
+    "cautions": [
+      "Contains 600 mg ashwagandha; consult a healthcare provider if pregnant, nursing, or taking thyroid medication.",
+      "Sweetened with sucralose and acesulfame potassium; colored with beet root powder and beta carotene."
+    ],
+    "servings": 20,
+    "priceRange": "$$",
+    "flavorsNote": "Available in Orange Squeeze, Welch's Grape, Blue Raspberry, and Lemon Lime.",
+    "affiliateUrl": "https://www.amazon.com/s?k=ghost+intra+eaa&tag=YOURTAG-20",
+    "blurb": "A 10 g EAA formula that pairs the full amino profile with a dosed focus-and-hydration stack (ashwagandha, citicoline, electrolytes) rather than filler ingredients.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/ghost-intra.webp",
+    "images": [
+      "https://www.ghostlifestyle.com/cdn/shop/files/IntraOrangeSqueeze_grande.webp?v=1715709631",
+      "https://www.ghostlifestyle.com/cdn/shop/files/GHOST_Intra_OrangeSqueeze_SFP.png?v=1715710016"
+    ],
+    "metrics": {
+      "eaaG": 10,
+      "bcaaG": 6,
+      "leucineG": 3
+    },
+    "sources": [
+      {
+        "url": "https://www.ghostlifestyle.com/products/ghost-intra-orange-squeeze",
+        "label": "Ghost — Intra Orange Squeeze product page"
+      }
+    ]
+  },
+  {
+    "id": "redcon1-grunt-eaas",
+    "name": "Grunt EAAs",
+    "brand": "Redcon1",
+    "category": "eaa",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Essential amino acid blend",
+        "dose": "6.9 g (incl. 6 g BCAAs at 2:1:1)",
+        "clinicalNote": "Supplies all nine essential amino acids with a leucine-forward 2:1:1 BCAA ratio to support muscle recovery around training."
+      }
+    ],
+    "cautions": [
+      "Sweetened with sucralose; contains disodium phosphate.",
+      "Discontinue use and consult a healthcare provider if any adverse reaction occurs."
+    ],
+    "servings": 30,
+    "priceRange": "$$",
+    "flavorsNote": "Sold in flavors such as Rocket Bomb and Tiger's Blood, naturally and artificially flavored.",
+    "affiliateUrl": "https://www.amazon.com/s?k=redcon1+grunt+eaa&tag=YOURTAG-20",
+    "blurb": "Redcon1's current EAA powder (the line that replaced the discontinued Breach BCAA); a straightforward nine-amino label with no nootropic or hydration add-ons.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/redcon1-grunt-eaas.png",
+    "images": [
+      "https://redcon1.com/cdn/shop/files/FRONT_TIGERS-BLOOD_FLVRS.png?v=1715181859",
+      "https://redcon1.com/cdn/shop/files/SUPP-FACTS_GRUNT_ROCKET-BOMB.png?v=1715181859"
+    ],
+    "metrics": {
+      "eaaG": 6.9,
+      "bcaaG": 6,
+      "leucineG": 3
+    },
+    "sources": [
+      {
+        "url": "https://redcon1.com/products/grunt-eaas",
+        "label": "Redcon1 — Grunt EAAs product page"
+      }
+    ]
+  },
+  {
+    "id": "transparent-labs-bcaa-glutamine",
+    "name": "BCAA Glutamine",
+    "brand": "Transparent Labs",
+    "category": "eaa",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Third-Party Tested"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Fermented Vegan BCAA 2:1:1",
+        "dose": "8 g (4 g leucine, 2 g isoleucine, 2 g valine)",
+        "clinicalNote": "A high-dose, leucine-forward branched-chain amino ratio to support muscle protein synthesis around training."
+      },
+      {
+        "name": "L-Glutamine",
+        "dose": "5 g",
+        "clinicalNote": "A conditionally essential amino acid studied for its role in exercise recovery."
+      },
+      {
+        "name": "Coconut water powder",
+        "dose": "1 g",
+        "clinicalNote": "Included to support hydration and electrolyte replenishment."
+      },
+      {
+        "name": "Vitamin C",
+        "dose": "1,500 mg",
+        "clinicalNote": "An antioxidant vitamin included at a high per-serving dose."
+      }
+    ],
+    "cautions": [
+      "Delivers 1,500 mg vitamin C per serving (1,667% DV) — a high dose relative to a standard multivitamin.",
+      "Contains coconut (tree nut) derived ingredients."
+    ],
+    "servings": 30,
+    "priceRange": "$$",
+    "flavorsNote": "Naturally sweetened with stevia; flavors include Strawberry Lemonade.",
+    "affiliateUrl": "https://www.amazon.com/s?k=transparent+labs+bcaa+glutamine&tag=YOURTAG-20",
+    "blurb": "An Informed Choice-certified BCAA formula (not a full EAA spectrum) built around an 8 g 2:1:1 ratio plus a 5 g glutamine dose well above what most BCAA products include.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/transparent-labs-bcaa-glutamine.jpg",
+    "imageBg": "18,17,15",
+    "images": [
+      "https://www.transparentlabs.com/cdn/shop/files/BCAA-PDP-Hero.jpg?v=1781800579",
+      "https://www.transparentlabs.com/cdn/shop/files/BCAA-SFP-StrawLemonade.jpg?v=1781800579"
+    ],
+    "metrics": {
+      "eaaG": null,
+      "bcaaG": 8,
+      "leucineG": 4
+    },
+    "sources": [
+      {
+        "url": "https://www.transparentlabs.com/products/bcaa-powder",
+        "label": "Transparent Labs — BCAA Glutamine product page"
+      }
+    ]
+  },
+  {
+    "id": "kaged-in-kaged",
+    "name": "Intra-Workout (In-Kaged)",
+    "brand": "Kaged",
+    "category": "eaa",
+    "stimFree": false,
+    "badges": [
+      "Fully Disclosed Label",
+      "Third-Party Tested",
+      "Low Stim"
+    ],
+    "caffeineMg": 124,
+    "keyIngredients": [
+      {
+        "name": "Muscle Fuel Matrix 2:1:1 (fermented BCAAs)",
+        "dose": "5 g (2.5 g leucine, 1.25 g isoleucine, 1.25 g valine)",
+        "clinicalNote": "A leucine-forward branched-chain amino ratio to support muscle protein synthesis during training."
+      },
+      {
+        "name": "L-Citrulline (AminaTure)",
+        "dose": "3 g",
+        "clinicalNote": "An amino acid studied for supporting blood flow during exercise."
+      },
+      {
+        "name": "Caffeine (as PurCaf, from organic green coffee bean)",
+        "dose": "124 mg",
+        "clinicalNote": "A natural caffeine source providing a moderate energy lift during training."
+      },
+      {
+        "name": "Beta-Alanine (CarnoSyn)",
+        "dose": "1.6 g",
+        "clinicalNote": "An amino acid studied for supporting muscular endurance during higher-rep training."
+      }
+    ],
+    "cautions": [
+      "Contains 124 mg caffeine per serving from organic green coffee bean; not appropriate for those avoiding stimulants or sensitive to caffeine.",
+      "Beta-alanine may cause a temporary tingling sensation (paresthesia).",
+      "Contains coconut (tree nut) derived ingredients."
+    ],
+    "servings": 20,
+    "priceRange": "$$",
+    "flavorsNote": "Available in flavors such as Cherry Lemonade, naturally flavored.",
+    "affiliateUrl": "https://www.amazon.com/s?k=kaged+in+kaged+intra+workout&tag=YOURTAG-20",
+    "blurb": "A caffeinated intra-workout BCAA powder (not a full EAA spectrum) that also carries dosed citrulline and beta-alanine; Informed Sport tested every batch.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/kaged-in-kaged.png",
+    "images": [
+      "https://www.kaged.com/cdn/shop/files/IW-Front-CL.png?v=1774385694",
+      "https://www.kaged.com/cdn/shop/files/Intra-WorkoutAMZ_IWSFPFP.jpg?v=1774385694"
+    ],
+    "metrics": {
+      "eaaG": null,
+      "bcaaG": 5,
+      "leucineG": 2.5
+    },
+    "sources": [
+      {
+        "url": "https://www.kaged.com/products/in-kaged",
+        "label": "Kaged — Intra-Workout (In-Kaged) product page"
+      }
+    ]
+  },
+  {
+    "id": "ryse-bcaa-eaa",
+    "name": "BCAA + EAA",
+    "brand": "Ryse",
+    "category": "eaa",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "BCAA Blend",
+        "dose": "5 g (2.5 g leucine, 1.25 g isoleucine, 1.25 g valine)",
+        "clinicalNote": "A leucine-forward branched-chain ratio to support muscle protein synthesis around training."
+      },
+      {
+        "name": "EAA Blend",
+        "dose": "3 g (lysine, phenylalanine, threonine, tryptophan, histidine, methionine)",
+        "clinicalNote": "Rounds out the remaining essential amino acids alongside the BCAA blend."
+      },
+      {
+        "name": "Organic coconut water powder (CocOganic)",
+        "dose": "250 mg",
+        "clinicalNote": "Included to support hydration during exercise."
+      }
+    ],
+    "cautions": [
+      "Contains coconut-derived ingredients (organic coconut water powder).",
+      "Sweetened with sucralose."
+    ],
+    "servings": 30,
+    "priceRange": "$$",
+    "flavorsNote": "Sold in flavors including Cherry Lime and Strawberry Pineapple.",
+    "affiliateUrl": "https://www.amazon.com/s?k=ryse+bcaa+eaa&tag=YOURTAG-20",
+    "blurb": "Splits its 8 g total amino dose into a labeled 5 g BCAA blend plus a separate 3 g EAA blend, giving an itemized breakdown of all nine essential aminos.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/ryse-bcaa-eaa.png",
+    "images": [
+      "https://rysesupps.com/cdn/shop/files/ryse-web-prod-bcaa-1000x1000-cl-front_2d43687f-d3d0-486f-b715-a19e4ce4c58c.png?v=1652999215",
+      "https://rysesupps.com/cdn/shop/files/nfp-bcaa-cherry.jpg?v=1666311640"
+    ],
+    "metrics": {
+      "eaaG": 8,
+      "bcaaG": 5,
+      "leucineG": 2.5
+    },
+    "sources": [
+      {
+        "url": "https://rysesupps.com/products/bcaa-eaa",
+        "label": "Ryse Supplements — BCAA + EAA product page"
+      }
+    ]
+  },
+  {
+    "id": "xwerks-motion",
+    "name": "Motion",
+    "brand": "Xwerks",
+    "category": "eaa",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "BCAA 2:1:1 blend",
+        "dose": "3 g",
+        "clinicalNote": "Branched-chain aminos layered into a carbohydrate base, studied for supporting muscle recovery during longer training sessions."
+      },
+      {
+        "name": "Cluster Dextrin (Highly Branched Cyclic Dextrin)",
+        "dose": "25 g carbohydrate",
+        "clinicalNote": "A fast-clearing carb source studied for sustaining blood glucose and training endurance without the gut discomfort of simple sugars."
+      },
+      {
+        "name": "Electrolyte blend (calcium, magnesium, sodium)",
+        "dose": "149 mg combined",
+        "clinicalNote": "Supports fluid balance alongside the carbohydrate and amino content during sweat loss."
+      }
+    ],
+    "cautions": [
+      "BCAA-only formula covers three of the nine essential amino acids, not the full set",
+      "Contains 110 calories and 25 g of carbohydrate per serving, unlike zero-calorie amino mixes"
+    ],
+    "servings": 30,
+    "priceRange": "$$$",
+    "flavorsNote": "Raspberry Lemonade is the only flavor offered, sweetened with sucralose.",
+    "affiliateUrl": "https://www.amazon.com/s?k=xwerks+motion+bcaa&tag=YOURTAG-20",
+    "blurb": "Builds BCAAs into a 25 g Cluster Dextrin carbohydrate and electrolyte base rather than selling them as a standalone amino mix, at a premium per-tub price for a single flavor.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/xwerks-motion.png",
+    "imageBg": "227,227,225",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0666/3683/files/motion-2026_6b3eea36-d807-414b-ab23-443e039d0be4.png?v=1771608586",
+      "https://cdn.shopify.com/s/files/1/0666/3683/files/motion.jpg?v=1771608586"
+    ],
+    "metrics": {
+      "eaaG": null,
+      "bcaaG": 3,
+      "leucineG": 1.5
+    },
+    "sources": [
+      {
+        "url": "https://xwerks.com/products/motion",
+        "label": "Xwerks product page"
+      }
+    ]
+  },
+  {
+    "id": "primeval-labs-eaa-max",
+    "name": "EAA Max",
+    "brand": "Primeval Labs",
+    "category": "eaa",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Branched Chain Amino Acids",
+        "dose": "5 g",
+        "clinicalNote": "2.5 g leucine plus isoleucine and valine, the trio most studied for stimulating muscle protein synthesis."
+      },
+      {
+        "name": "Essential Amino Acids (lysine, threonine, phenylalanine, tryptophan, histidine, methionine)",
+        "dose": "820 mg",
+        "clinicalNote": "Rounds out the full nine-EAA profile alongside the BCAAs, supporting whole-body protein balance."
+      },
+      {
+        "name": "Cluster Dextrin (Highly Branched Cyclic Dextrin) + D-Ribose",
+        "dose": "2.5 g combined",
+        "clinicalNote": "A small fast-digesting carbohydrate pairing studied for supporting training energy delivery."
+      }
+    ],
+    "cautions": [
+      "Contains tree nuts (coconut)",
+      "Amino drinks supplement protein intake, not replace it"
+    ],
+    "servings": 30,
+    "priceRange": "$$",
+    "flavorsNote": "Ten flavors including Cherry Lemonade, Gummy Bear, and Tropical Lemonade, sweetened with sucralose.",
+    "affiliateUrl": "https://www.amazon.com/s?k=primeval+labs+eaa+max&tag=YOURTAG-20",
+    "blurb": "Fully itemized 5.82 g EAA panel — 5 g BCAA plus 820 mg of the other six essentials — with a small Cluster Dextrin and D-Ribose energy addition.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/primeval-labs-eaa-max.png",
+    "images": [
+      "https://primevallabs.com/cdn/shop/files/EAA_MAX_Jamaica_Front_698045f8-7a69-4838-9f9c-57b32c6502de.png?v=1760047745",
+      "https://cdn.shopify.com/s/files/1/0082/8021/1553/files/EAAMAXSUPPLEMENTFACTSPANELS.png"
+    ],
+    "metrics": {
+      "eaaG": 5.82,
+      "bcaaG": 5,
+      "leucineG": 2.5
+    },
+    "sources": [
+      {
+        "url": "https://primevallabs.com/products/eaa-max-essential-amino-acids",
+        "label": "Primeval Labs product page"
+      }
+    ]
+  },
+  {
+    "id": "steel-supplements-bcaa-eaa",
+    "name": "BCAA+EAA",
+    "brand": "Steel Supplements",
+    "category": "eaa",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Leucine, Isoleucine, Valine (BCAAs)",
+        "dose": "5 g",
+        "clinicalNote": "2.5 g leucine plus a 1:1 isoleucine-valine split, the branched-chain trio studied for muscle recovery."
+      },
+      {
+        "name": "Six additional essential amino acids",
+        "dose": "1.8 g",
+        "clinicalNote": "Lysine, threonine, methionine, phenylalanine, tryptophan, and histidine dosed evenly to complete the nine-EAA set."
+      },
+      {
+        "name": "B-vitamin and biotin blend",
+        "dose": "includes 300 mcg biotin (1000% DV)",
+        "clinicalNote": "High-dose B-vitamins commonly paired with amino formulas to support normal energy metabolism."
+      }
+    ],
+    "cautions": [
+      "Biotin is dosed at 1000% of the Daily Value, which can interfere with certain lab tests",
+      "Amino drinks supplement protein intake, not replace it"
+    ],
+    "servings": 30,
+    "priceRange": "$$$",
+    "flavorsNote": "Fruit Punch, Watermelon, Kiwi Strawberry, and Bohemian Bliss, sweetened with sucralose and acesulfame potassium.",
+    "affiliateUrl": "https://www.amazon.com/s?k=steel+supplements+bcaa+eaa&tag=YOURTAG-20",
+    "blurb": "6.8 g of fully dosed EAAs per serving — 5 g BCAA plus 1.8 g of the other six — layered with a high-dose B-vitamin and biotin stack.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/steel-supplements-bcaa-eaa.png",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/1876/4703/files/bcaas-eaas-fruit-punch-35512473911365.png?v=1731968338",
+      "https://cdn.shopify.com/s/files/1/1876/4703/files/bcaas-eaas-35182429536325.png?v=1726234981"
+    ],
+    "metrics": {
+      "eaaG": 6.8,
+      "bcaaG": 5,
+      "leucineG": 2.5
+    },
+    "sources": [
+      {
+        "url": "https://steelsupplements.com/products/bcaas-eaas",
+        "label": "Steel Supplements product page"
+      }
+    ]
+  },
+  {
+    "id": "genius-energized-bcaa",
+    "name": "Energized BCAA",
+    "brand": "Genius",
+    "category": "eaa",
+    "stimFree": false,
+    "badges": [
+      "Low Stim",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 100,
+    "keyIngredients": [
+      {
+        "name": "Vegan BCAAs (Leucine, Isoleucine, Valine)",
+        "dose": "5 g",
+        "clinicalNote": "Fermented, instantized branched-chain aminos in a 2:1:1 ratio studied for supporting muscle recovery."
+      },
+      {
+        "name": "L-Glutamine",
+        "dose": "3 g",
+        "clinicalNote": "The most abundant free amino acid in muscle tissue, commonly added to recovery formulas."
+      },
+      {
+        "name": "Citicoline (as Cognizin) + Rhodiola rosea extract",
+        "dose": "250 mg + 200 mg",
+        "clinicalNote": "Studied for supporting mental focus and reducing perceived fatigue during exercise."
+      },
+      {
+        "name": "Caffeine (from Coffea arabica bean extract)",
+        "dose": "100 mg",
+        "clinicalNote": "A moderate dose studied for supporting alertness and perceived energy during training."
+      }
+    ],
+    "cautions": [
+      "Contains 100 mg caffeine per serving; avoid stacking with other stimulant products",
+      "BCAA-only amino profile does not cover the full nine essential amino acids",
+      "Manufactured in a facility that also processes milk, soy, wheat, egg, peanuts, tree nuts, fish, and shellfish"
+    ],
+    "servings": 21,
+    "priceRange": "$$",
+    "flavorsNote": "Grape Limeade and Power Orange, naturally flavored and sweetened.",
+    "affiliateUrl": "https://www.amazon.com/s?k=genius+energized+bcaa&tag=YOURTAG-20",
+    "blurb": "A caffeinated hybrid rather than a plain BCAA: 5 g of BCAAs plus glutamine, citrulline malate, taurine, and a 100 mg caffeine and nootropic stack in every scoop.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/genius-energized-bcaa.png",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0519/6280/6450/files/genius-bcaa-grappe-limeade_699dc4c4-984b-4871-84a0-100a9dea758a.png?v=1767885560",
+      "https://cdn.shopify.com/s/files/1/0519/6280/6450/files/genius-bcaa-back.png?v=1767885560"
+    ],
+    "metrics": {
+      "eaaG": null,
+      "bcaaG": 5,
+      "leucineG": 2.5
+    },
+    "sources": [
+      {
+        "url": "https://thegeniusbrand.com/products/genius-bcaa",
+        "label": "The Genius Brand product page"
+      }
+    ]
+  },
+  {
+    "id": "bpi-sports-best-eaa",
+    "name": "Best EAA",
+    "brand": "BPI Sports",
+    "category": "eaa",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "BCAAs (Leucine, Isoleucine, Valine)",
+        "dose": "7.2 g",
+        "clinicalNote": "3.6 g leucine plus isoleucine and valine, an unusually branched-chain-heavy share of the total amino dose."
+      },
+      {
+        "name": "Six additional essential amino acids",
+        "dose": "2.8 g",
+        "clinicalNote": "Lysine, threonine, phenylalanine, methionine, histidine, and tryptophan completing the nine-EAA profile."
+      },
+      {
+        "name": "Coconut water powder",
+        "dose": "200 mg",
+        "clinicalNote": "A natural electrolyte source added to support hydration during training."
+      }
+    ],
+    "cautions": [
+      "Contains tree nuts (coconut)",
+      "Amino drinks supplement protein intake, not replace it"
+    ],
+    "servings": 30,
+    "priceRange": "$$",
+    "flavorsNote": "Lemon Berry and Sour Power, naturally and artificially flavored with no artificial colors.",
+    "affiliateUrl": "https://www.amazon.com/s?k=bpi+sports+best+eaa&tag=YOURTAG-20",
+    "blurb": "10 g of fully itemized EAAs per serving with a BCAA-heavy 7.2 g share, plus a small coconut water electrolyte addition.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/bpi-sports-best-eaa.webp",
+    "imageBg": "255,255,255",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0561/9761/1672/files/BESTEAA-30SERV-LEMONBERRY_fcc4da10-8a2c-4146-9da2-ecd2c6fa6f2a.webp?v=1730185363",
+      "https://cdn.shopify.com/s/files/1/0561/9761/1672/files/BESTEAA-30SERV-SUPPFACTS.webp?v=1739305685"
+    ],
+    "metrics": {
+      "eaaG": 10,
+      "bcaaG": 7.2,
+      "leucineG": 3.6
+    },
+    "sources": [
+      {
+        "url": "https://bpisports.com/products/best-eaa",
+        "label": "BPI Sports product page"
+      }
+    ]
+  },
+  {
+    "id": "evlution-nutrition-bcaa5000-powder",
+    "name": "BCAA5000 Powder",
+    "brand": "Evlution Nutrition",
+    "category": "eaa",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Budget Pick"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "BCAA 2:1:1 blend (Leucine, Valine, Isoleucine)",
+        "dose": "5 g",
+        "clinicalNote": "2.5 g leucine in the standard 2:1:1 ratio, studied for supporting muscle recovery and lean mass maintenance."
+      }
+    ],
+    "cautions": [
+      "BCAA-only formula covers three of the nine essential amino acids, not the full set",
+      "Amino drinks supplement protein intake, not replace it"
+    ],
+    "servings": 60,
+    "priceRange": "$",
+    "flavorsNote": "Verified on the Unflavored version, which lists no other ingredients; Cherry Limeade and Blue Raz flavored versions are sold in 30-serving tubs.",
+    "affiliateUrl": "https://www.amazon.com/s?k=evlution+nutrition+bcaa5000&tag=YOURTAG-20",
+    "blurb": "A bare-bones 5 g BCAA formula — the unflavored version lists no other ingredients at all — at one of the lowest per-serving costs in the category.",
+    "labelVerified": "July 2026",
+    "imageUrl": "images/products/evlution-nutrition-bcaa5000-powder.jpg",
+    "imageBg": "255,255,255",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0877/6064/files/BCAA500060SERV-UF_2.jpg?v=1765384748",
+      "https://cdn.shopify.com/s/files/1/0877/6064/files/BCAA500060SERV-UF_3.jpg?v=1765384748"
+    ],
+    "metrics": {
+      "eaaG": null,
+      "bcaaG": 5,
+      "leucineG": 2.5
+    },
+    "sources": [
+      {
+        "url": "https://www.evlnutrition.com/products/bcaa5000-powder",
+        "label": "Evlution Nutrition product page"
       }
     ]
   }
