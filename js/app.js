@@ -1023,10 +1023,47 @@
     panel.hidden = false;
   }
 
+  /* Homepage figures used to be typed into index.html by hand, so every data
+   * change silently aged them. They are counted from PRODUCTS now: any
+   * element carrying data-stat gets filled, and each category card's count
+   * comes from the catalog. */
+  function renderHomeStats() {
+    if (typeof PRODUCTS === "undefined") return;
+
+    var pre = PRODUCTS.filter(function (p) { return categoryOf(p) === "pre-workout"; });
+    var caf = pre.map(function (p) { return p.caffeineMg; });
+    var stats = {
+      total: PRODUCTS.length,
+      categories: Object.keys(CATEGORY_CONFIG).length,
+      disclosed: PRODUCTS.filter(isDisclosed).length + " of " + PRODUCTS.length,
+      blends: PRODUCTS.filter(hasBlend).length + " of " + PRODUCTS.length,
+      tested: PRODUCTS.filter(function (p) {
+        return p.badges.indexOf("Third-Party Tested") !== -1;
+      }).length + " of " + PRODUCTS.length,
+      cafRange: caf.length ? Math.min.apply(null, caf) + "–" + Math.max.apply(null, caf) + " mg" : "—",
+      preCount: pre.length,
+      totalLabels: PRODUCTS.length + " supplement labels on file"
+    };
+
+    var nodes = document.querySelectorAll("[data-stat]");
+    for (var i = 0; i < nodes.length; i++) {
+      var key = nodes[i].getAttribute("data-stat");
+      if (stats[key] !== undefined) nodes[i].textContent = stats[key];
+    }
+
+    var cards = document.querySelectorAll("[data-cat-count]");
+    for (var j = 0; j < cards.length; j++) {
+      var slug = cards[j].getAttribute("data-cat-count");
+      var n = PRODUCTS.filter(function (p) { return categoryOf(p) === slug; }).length;
+      cards[j].textContent = n + (n === 1 ? " label" : " labels");
+    }
+  }
+
   function init() {
     syncSaveUI(); // nav counter + save toggles work on every page
     syncStickyOffsets();
     renderIntroPanel();
+    renderHomeStats();
 
     if (typeof PRODUCTS === "undefined") {
       initReveal(); // product pages: motion only, no data renderers

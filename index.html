@@ -58,13 +58,13 @@
         </div>
         <aside class="sc-heropanel" aria-label="Database at a glance">
           <p class="sc-heropanel-title">Scoop Sense Facts</p>
-          <p class="sc-heropanel-sub">78 supplement labels on file</p>
+          <p class="sc-heropanel-sub" data-stat="totalLabels">78 supplement labels on file</p>
           <div class="sc-heropanel-bar"></div>
           <dl>
-            <div><dt>Categories tracked</dt><dd>5</dd></div>
-            <div><dt>Caffeine range, pre-workouts</dt><dd>0–400 mg</dd></div>
-            <div><dt>Fully disclosed labels</dt><dd>49 of 78</dd></div>
-            <div><dt>Proprietary blends flagged</dt><dd>6 of 78</dd></div>
+            <div><dt>Categories tracked</dt><dd data-stat="categories">5</dd></div>
+            <div><dt>Caffeine range, pre-workouts</dt><dd data-stat="cafRange">0–400 mg</dd></div>
+            <div><dt>Fully disclosed labels</dt><dd data-stat="disclosed">49 of 78</dd></div>
+            <div><dt>Proprietary blends flagged</dt><dd data-stat="blends">6 of 78</dd></div>
             <div><dt>Labels last checked</dt><dd>July 2026</dd></div>
           </dl>
           <p class="sc-heropanel-note">Every figure comes from the manufacturer's panel — never the marketing page.</p>
@@ -83,27 +83,27 @@
       <div class="sc-cats">
         <a class="sc-cat-card" href="hub.html#cat-pre-workout">
           <span class="sc-cat-card-name">Pre-workout</span>
-          <span class="sc-cat-card-count">38 labels</span>
+          <span class="sc-cat-card-count" data-cat-count="pre-workout">38 labels</span>
           <span class="sc-cat-card-what">Caffeine, citrulline, and beta-alanine doses lined up against studied amounts.</span>
         </a>
         <a class="sc-cat-card" href="creatine.html">
           <span class="sc-cat-card-name">Creatine</span>
-          <span class="sc-cat-card-count">10 labels</span>
+          <span class="sc-cat-card-count" data-cat-count="creatine">10 labels</span>
           <span class="sc-cat-card-what">Creatine per serving and form — monohydrate, HCl, or blend.</span>
         </a>
         <a class="sc-cat-card" href="protein.html">
           <span class="sc-cat-card-name">Protein</span>
-          <span class="sc-cat-card-count">10 labels</span>
+          <span class="sc-cat-card-count" data-cat-count="protein">10 labels</span>
           <span class="sc-cat-card-what">Protein per serving, protein-per-scoop percentage, source, and sweetener.</span>
         </a>
         <a class="sc-cat-card" href="eaa.html">
           <span class="sc-cat-card-name">EAA / BCAA</span>
-          <span class="sc-cat-card-count">10 labels</span>
+          <span class="sc-cat-card-count" data-cat-count="eaa">10 labels</span>
           <span class="sc-cat-card-what">Full-EAA vs BCAA-only, leucine dose, and caffeinated formulas flagged.</span>
         </a>
         <a class="sc-cat-card" href="electrolytes.html">
           <span class="sc-cat-card-name">Electrolytes</span>
-          <span class="sc-cat-card-count">10 labels</span>
+          <span class="sc-cat-card-count" data-cat-count="electrolytes">10 labels</span>
           <span class="sc-cat-card-what">Sodium, potassium, magnesium, and how much sugar comes with them.</span>
         </a>
       </div>
@@ -115,7 +115,7 @@
     <div class="sc-container">
       <div class="sc-section-head">
         <h2>The pre-workout shelf at a glance</h2>
-        <a class="sc-action-link" href="compare.html">Compare all 38 pre-workouts</a>
+        <a class="sc-action-link" href="compare.html">Compare all <span data-stat="preCount">38</span> pre-workouts</a>
       </div>
       <div class="sc-table-scroll">
         <table class="sc-table" aria-label="Preview of the product database">
