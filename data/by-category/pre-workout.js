@@ -433,7 +433,7 @@ var PRODUCTS = [
   {
     "id": "total-war",
     "name": "Total War",
-    "brand": "RedCon1",
+    "brand": "Redcon1",
     "category": "pre-workout",
     "accentColor": "#E05252",
     "stimFree": false,
@@ -743,7 +743,7 @@ var PRODUCTS = [
   {
     "id": "ryse-godzilla",
     "name": "Godzilla",
-    "brand": "RYSE Supplements",
+    "brand": "RYSE",
     "category": "pre-workout",
     "accentColor": "#7B8AD9",
     "stimFree": false,
@@ -2362,7 +2362,8 @@ var PRODUCTS = [
     "stimFree": true,
     "badges": [
       "Stim-Free",
-      "Fully Disclosed Label"
+      "Fully Disclosed Label",
+      "Third-Party Tested"
     ],
     "caffeineMg": 0,
     "keyIngredients": [

@@ -1052,7 +1052,7 @@ var PRODUCTS = [
   {
     "id": "allmax-creatine-monohydrate",
     "name": "Creatine Monohydrate",
-    "brand": "Allmax",
+    "brand": "ALLMAX",
     "category": "creatine",
     "stimFree": true,
     "badges": [
@@ -1372,7 +1372,7 @@ var PRODUCTS = [
   {
     "id": "bpn-creatine-monohydrate",
     "name": "Creatine Monohydrate",
-    "brand": "Bare Performance Nutrition (BPN)",
+    "brand": "BPN",
     "category": "creatine",
     "stimFree": true,
     "badges": [

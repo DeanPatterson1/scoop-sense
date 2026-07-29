@@ -17,7 +17,7 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const OUT = path.join(ROOT, "products");
-const VERSION = "20260729l"; // keep in sync with the ?v= on the other pages
+const VERSION = "20260729m"; // keep in sync with the ?v= on the other pages
 
 // Set this to the real origin at domain time (see README "Sitemap & domain").
 // Absolute-URL metadata — canonical, og:url, BreadcrumbList — is emitted only
@@ -49,6 +49,12 @@ function cfgOf(p) {
 function categoryPageOf(p) {
   const cat = categoryOf(p);
   return cat === "pre-workout" ? "hub.html#cat-pre-workout" : cfgOf(p).page;
+}
+
+// "Compare" in the nav used to land every reader on the pre-workout table,
+// whatever they were reading. Each category's table lives on its own page.
+function compareHref(p) {
+  return categoryOf(p) === "pre-workout" ? "compare.html" : cfgOf(p).page + "#compare";
 }
 
 const COUNT = PRODUCTS.length;
@@ -92,15 +98,23 @@ function betaAlanineOf(p) {
   return ing ? ing.dose : null;
 }
 
-// Ingredient-name heuristic only for pre-workout labels — mirrors js/app.js.
+/* Three states, mirroring js/app.js — see the long note there.
+ * proprietary: a pooled total standing in for the doses of distinct actives.
+ * partial:     a protein blend whose total is the protein figure and whose
+ *              source ratio is what is actually hidden.
+ * none:        nothing pooled. */
+function blendState(p) {
+  if (p.badges.indexOf("Proprietary Blend") !== -1) return "proprietary";
+  if (!findIngredient(p, /blend/i)) return "none";
+  return categoryOf(p) === "pre-workout" ? "proprietary" : "partial";
+}
+
 function hasBlend(p) {
-  if (p.badges.indexOf("Proprietary Blend") !== -1) return true;
-  if (categoryOf(p) !== "pre-workout") return false;
-  return !!findIngredient(p, /blend/i);
+  return blendState(p) !== "none";
 }
 
 function isDisclosed(p) {
-  return p.badges.indexOf("Fully Disclosed Label") !== -1;
+  return p.badges.indexOf("Fully Disclosed Label") !== -1 && blendState(p) === "none";
 }
 
 function monogramOf(p) {
@@ -117,6 +131,7 @@ const STIM_TIPS = {
 };
 const DISCLOSED_TIP = "Every active ingredient and its dosage is individually listed on the label. No proprietary blends.";
 const BLEND_TIP = "One or more combined blend totals hide the individual ingredient amounts inside.";
+const PARTIAL_TIP = "The blend's total is on the label, but not the ratio between the sources inside it — so the total is known and the split is not.";
 
 // Mirrors showsStimTag in js/app.js: pre-workouts always carry a stim tag,
 // every other category only when actually caffeinated.
@@ -133,7 +148,9 @@ function tagsHTML(p) {
     if (b === "none") cls += " sc-tag-calm";
     tags.push(`<span class="${cls}" title="${esc(STIM_TIPS[b])}">${esc(stimLabelOf(p))}</span>`);
   }
-  if (hasBlend(p)) tags.push(`<span class="sc-tag sc-tag-caution" title="${esc(BLEND_TIP)}">Proprietary blend</span>`);
+  const blend = blendState(p);
+  if (blend === "proprietary") tags.push(`<span class="sc-tag sc-tag-caution" title="${esc(BLEND_TIP)}">Proprietary blend</span>`);
+  else if (blend === "partial") tags.push(`<span class="sc-tag" title="${esc(PARTIAL_TIP)}">Blend ratio undisclosed</span>`);
   else if (isDisclosed(p)) tags.push(`<span class="sc-tag" title="${esc(DISCLOSED_TIP)}">Label fully disclosed</span>`);
   if (p.badges.indexOf("Third-Party Tested") !== -1) tags.push(`<span class="sc-tag sc-tag-calm" title="Certified by an independent banned-substance testing program (NSF Certified for Sport, Informed Sport, or Informed Choice), per the label or brand page.">Third-party tested</span>`);
   if (p.badges.indexOf("Beginner Friendly") !== -1) tags.push(`<span class="sc-tag" title="A reasonable first tub: moderate or no caffeine, a fully disclosed label, and nothing on the panel that surprises a new user.">Beginner friendly</span>`);
@@ -163,7 +180,10 @@ function metricOf(p, key) {
 function factOf(p, key) {
   if (key === "caffeineMg") return p.caffeineMg === 0 ? "0 mg" : esc(p.caffeineMg) + " mg";
   if (key === "servings") return esc(p.servings);
-  if (key === "blend") return hasBlend(p) ? "Yes" : "No";
+  if (key === "blend") {
+    const s = blendState(p);
+    return s === "proprietary" ? "Yes" : s === "partial" ? "Ratio only" : "No";
+  }
   if (key === "stim") return esc(stimLabelOf(p));
   if (key === "price") return priceWordHTML(p);
   if (key === "protPct") {
@@ -189,11 +209,34 @@ function factOf(p, key) {
 
 // "$" | "$$" | "$$$" -> plain-English cost-per-serving tier, with the basis
 // for the judgment exposed as a tooltip.
+// Mirrors js/app.js — the tiers are a hand-assigned within-category judgement,
+// not a computed third of the database, which is what this used to claim.
+const PRICE_BASIS = " Judged against the other products in the same category when the label was checked. We rank the tier rather than print a dollar figure, because prices move faster than we can re-check them — so use it to sort, not to budget.";
 const PRICE_TIPS = {
-  Budget: "Estimated cost per full serving sits in the lowest third of this database. We rank the tier rather than print a dollar figure, because prices move faster than we can check them.",
-  "Mid-range": "Estimated cost per full serving sits in the middle third of this database. We rank the tier rather than print a dollar figure, because prices move faster than we can check them.",
-  Premium: "Estimated cost per full serving sits in the highest third of this database. We rank the tier rather than print a dollar figure, because prices move faster than we can check them."
+  Budget: "Among the cheaper options per full serving." + PRICE_BASIS,
+  "Mid-range": "Around the middle of the category on cost per full serving." + PRICE_BASIS,
+  Premium: "Among the more expensive options per full serving." + PRICE_BASIS
 };
+
+/* The one figure worth seeing on a sibling card, per category.
+ *
+ * Every card used to print caffeine. On the 39 electrolytes — 38 of which are
+ * caffeine-free — that meant the only data slot on the only comparison widget
+ * on the page was spent saying "0 mg" thirty-eight times. */
+function relatedMetaOf(p) {
+  const cat = categoryOf(p);
+  const g = (key, unit, word) => {
+    const v = metricOf(p, key);
+    return v === null || v === undefined ? null : `${v} ${unit} ${word}`;
+  };
+  let s = null;
+  if (cat === "creatine") s = g("creatineG", "g", "creatine");
+  else if (cat === "protein") s = g("proteinG", "g", "protein");
+  else if (cat === "eaa") s = g("eaaG", "g", "EAAs") || g("bcaaG", "g", "BCAAs");
+  else if (cat === "electrolytes") s = g("sodiumMg", "mg", "sodium");
+  if (s) return esc(s);
+  return p.caffeineMg === 0 ? "Stim-free · 0 mg" : `${esc(p.caffeineMg)} mg caffeine`;
+}
 
 function priceWordOf(p) {
   return p.priceRange === "$" ? "Budget" : p.priceRange === "$$" ? "Mid-range" : "Premium";
@@ -241,15 +284,22 @@ function whoForHTML(p) {
     else parts.push("A BCAA-only formula — three of the nine essential amino acids, which suits taste-driven intra-workout sipping more than protein replacement.");
     if (p.caffeineMg > 0) parts.push("The added caffeine makes it double as a light pre-workout — count it toward your daily total.");
   } else if (cat === "electrolytes") {
+    // A single cut at 500 mg called a 40 mg serving "moderate". Three bands,
+    // and the low-carb line only where the product is actually low-carb —
+    // it was being attached to an 11 g sugar mix.
     const na = metricOf(p, "sodiumMg") || 0;
     const sugar = metricOf(p, "sugarG") || 0;
-    if (na >= 500) parts.push("Heavy sweaters and low-carb dieters — this is a sodium-forward mix.");
-    else parts.push("Lighter sessions and everyday training — the sodium load is moderate.");
+    if (na >= 700) parts.push("Heavy sweaters and long or hot sessions — this is a sodium-forward mix.");
+    else if (na >= 250) parts.push("Everyday training and moderate sweat losses — a middling sodium load.");
+    else parts.push("Flavour and light top-ups rather than replacing a real sweat loss — the sodium here is well under the amount hydration research works with.");
+    if (na >= 700 && sugar <= 1) parts.push("The lack of sugar also suits low-carb and keto diets, where sodium needs run higher.");
     if (sugar >= 7) parts.push("The sugar is part of the design, aiding fluid uptake the way oral rehydration research uses glucose — skip it if you want zero sugar.");
   }
 
   if (p.badges.indexOf("Budget Pick") !== -1) parts.push("A reasonable pick when cost per serving matters.");
-  if (p.badges.indexOf("Beginner Friendly") !== -1) parts.push("Doses are mild enough to suit a first tub.");
+  // Not "doses are mild": the badge is about an unsurprising label, and it
+  // was claiming mildness for Dymatize All9, the joint-highest EAA dose here.
+  if (p.badges.indexOf("Beginner Friendly") !== -1) parts.push("A sensible first tub — nothing on the panel that catches a new user out.");
   if (hasBlend(p)) parts.push("Skip it if you want every individual dose disclosed on the label.");
   return parts.map((s) => esc(s)).join(" ");
 }
@@ -376,20 +426,31 @@ const METRIC_FACT_ROWS = {
 // still pairs "Caffeine" with "200 mg" instead of reading two loose values.
 function factsRowsHTML(p) {
   const rows = [];
-  const row = (label, value) =>
-    `<tr><th scope="row">${label}</th><td class="sc-num">${value}</td></tr>`;
+  // Several electrolyte labels list sodium and potassium as key ingredients
+  // as well as metrics, which printed each of them twice — it read as a data
+  // error and undercut the figures beside it.
+  const printed = new Set();
+  const row = (label, value) => {
+    const k = String(label).trim().toLowerCase();
+    if (printed.has(k)) return;
+    printed.add(k);
+    rows.push(`<tr><th scope="row">${label}</th><td class="sc-num">${value}</td></tr>`);
+  };
+
   for (const [label, key] of METRIC_FACT_ROWS[categoryOf(p)] || []) {
     const v = factOf(p, key);
-    if (v !== DASH) rows.push(row(esc(label), v));
+    if (v !== DASH) row(esc(label), v);
   }
   if (categoryOf(p) === "pre-workout" || p.caffeineMg > 0) {
-    rows.push(row("Caffeine", p.caffeineMg === 0 ? "0 mg" : esc(p.caffeineMg) + " mg"));
+    row("Caffeine", p.caffeineMg === 0 ? "0 mg" : esc(p.caffeineMg) + " mg");
   }
   for (const ing of p.keyIngredients) {
     if (/caffeine/i.test(ing.name)) continue;
-    rows.push(row(esc(ing.name), esc(ing.dose)));
+    row(esc(ing.name), esc(ing.dose));
   }
-  rows.push(row("Proprietary blend", hasBlend(p) ? "Yes" : "No"));
+  const blend = blendState(p);
+  row("Proprietary blend", blend === "proprietary" ? "Yes"
+    : blend === "partial" ? "Total only — source ratio undisclosed" : "No");
   return rows.join("\n              ");
 }
 
@@ -478,8 +539,32 @@ function doseComparisonHTML(p) {
           note: "The 3–5 g studied range is monohydrate research. This label uses another form, which has no separately established studied dose — the amounts are not interchangeable."
         });
       }
+
+      // The sodium range is per litre of fluid. A per-serving figure only
+      // becomes comparable once the label says what to mix it into, so it is
+      // converted where the volume is known and left unplaced where it is
+      // not. Marking a 500 mg stick against a per-litre band understated
+      // every concentrated mix on the site.
+      let value = v;
+      if (key === "sodiumMg") {
+        const ml = metricOf(p, "servingMl");
+        if (ml) {
+          value = Math.round(v / (ml / 1000));
+          entry = Object.assign({}, entry, {
+            label: "Sodium per litre",
+            scaleTo: 2000,
+            note: `${v} mg per serving mixed into ${ml} ml is about ${value} mg per litre. ` + entry.note
+          });
+        } else {
+          entry = Object.assign({}, entry, {
+            low: null, high: null,
+            note: "The studied range is 300–700 mg of sodium per litre of fluid, and this label does not state the volume to mix a serving into — so its concentration, which is what the range measures, cannot be worked out from the panel. Check the mixing instructions on the pack."
+          });
+        }
+      }
+
       seen.add(entry.label);
-      rows.push(doseRowHTML(entry, v));
+      rows.push(doseRowHTML(entry, value));
     }
   }
 
@@ -609,11 +694,22 @@ function faqFor(p) {
   if (cat === "creatine") {
     const g = metricOf(p, "creatineG");
     const form = metricOf(p, "form");
+    // The saturation figure is 3-5 g/day of monohydrate from the research —
+    // it is not this label's number. Interpolating the label's own dose into
+    // that sentence claimed a 0.75 g HCl serving saturates muscle, which no
+    // research shows and which contradicted the analysis higher up the page.
     if (g) {
-      faqs.push({
-        q: `Do I need a loading phase with ${name}?`,
-        a: `Loading is optional. Research shows a steady ${g} g daily serving of creatine reaches muscle saturation in about three to four weeks; a loading week of around 20 g per day just gets there faster. ${form === "monohydrate" ? "This label is creatine monohydrate, the form used in most of that research." : ""}`
-      });
+      const monohydrate = form === "monohydrate";
+      const atStudiedDose = monohydrate && g >= 3;
+      let a;
+      if (atStudiedDose) {
+        a = `Loading is optional. Research shows a steady 3–5 g of creatine monohydrate daily reaches muscle saturation in about three to four weeks; a loading week of around 20 g per day just gets there faster. This label's ${g} g serving sits in that studied range.`;
+      } else if (monohydrate) {
+        a = `Loading is optional, but note the serving size first. The saturation research uses 3–5 g of creatine monohydrate daily and this label serves ${g} g, so reaching the studied intake means taking more than one serving.`;
+      } else {
+        a = `The loading question does not transfer to this form. Saturation timelines come from research on 3–5 g of creatine monohydrate daily; ${form ? `${form} ` : "this form "}has no established studied dose of its own, so there is no figure to load toward. Treat the label's ${g} g as the brand's recommendation rather than a researched one.`;
+      }
+      faqs.push({ q: `Do I need a loading phase with ${name}?`, a });
     }
   } else if (cat === "protein") {
     const pg = metricOf(p, "proteinG"), sg = metricOf(p, "servingG");
@@ -775,7 +871,7 @@ function pageHTML(p) {
     <a class="sc-logo" href="../index.html">Scoop Sense<span>.</span></a>
     <nav class="sc-nav" aria-label="Main navigation">
       <a href="../hub.html" class="sc-active">Products</a>
-      <a href="../compare.html">Compare</a>
+      <a href="../${compareHref(p)}">Compare</a>
       <a href="../saved.html">Saved <span class="sc-saved-count"></span></a>
       <a href="../index.html#methodology">Methodology</a>
       <a href="../disclaimer.html">Health &amp; Safety</a>
@@ -919,7 +1015,7 @@ ${reviewsHTML(p)}
             ${related.map((r) => `<a class="sc-related-card" href="${esc(r.id)}.html">
               <span class="sc-tile-brand">${esc(r.brand)}</span>
               <span class="sc-tile-name">${esc(r.name)}</span>
-              <span class="sc-related-meta">${r.caffeineMg === 0 ? "Stim-free · 0 mg" : esc(r.caffeineMg) + " mg caffeine"} · ${esc(r.priceRange)}</span>
+              <span class="sc-related-meta">${relatedMetaOf(r)} · ${esc(priceWordOf(r))}</span>
             </a>`).join("\n            ")}
           </div>
           <p class="sc-related-more"><a href="../${esc(categoryPageOf(p))}">All ${esc(cfgOf(p).plural)} on file</a></p>
@@ -945,7 +1041,7 @@ ${reviewsHTML(p)}
           <li><a href="../protein.html">Protein</a></li>
           <li><a href="../eaa.html">EAA / BCAA</a></li>
           <li><a href="../electrolytes.html">Electrolytes</a></li>
-          <li><a href="../compare.html">Compare pre-workouts</a></li>
+          <li><a href="../${compareHref(p)}">Compare ${esc(cfgOf(p).plural)}</a></li>
           <li><a href="../index.html#methodology">How we evaluate labels</a></li>
         </ul>
       </nav>

@@ -1213,6 +1213,7 @@ var PRODUCTS = [
     "blurb": "An unflavored, WHO-formula oral rehydration powder with higher sodium and potassium per liter than typical sports drinks; each packet is designed to be sipped across a day rather than taken as one serving.",
     "labelVerified": "July 2026",
     "metrics": {
+      "servingMl": 1000,
       "sodiumMg": 1725,
       "potassiumMg": 782,
       "magnesiumMg": null,
@@ -1454,6 +1455,7 @@ var PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/0334/2368/7725/products/2-1500_SachetFront.jpg?v=1668599009&width=1000"
     ],
     "metrics": {
+      "servingMl": 473,
       "sodiumMg": 750,
       "potassiumMg": 125,
       "magnesiumMg": 12,
@@ -1510,6 +1512,7 @@ var PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/0334/2368/7725/products/2-TabletInBottle.jpg?v=1765279380&width=1000"
     ],
     "metrics": {
+      "servingMl": 473,
       "sodiumMg": 500,
       "potassiumMg": 130,
       "magnesiumMg": 10,
@@ -1567,6 +1570,7 @@ var PRODUCTS = [
       "https://www.scienceinsport.com/media/wysiwyg/Phoenix_-_HYDRO_Tablets_-_Block_3.jpg"
     ],
     "metrics": {
+      "servingMl": 500,
       "sodiumMg": 350,
       "potassiumMg": 300,
       "magnesiumMg": 56,
@@ -1620,6 +1624,7 @@ var PRODUCTS = [
       "https://guenergy.com/cdn/shop/files/tubes_2.png?v=1697580425"
     ],
     "metrics": {
+      "servingMl": 473,
       "sodiumMg": 320,
       "potassiumMg": 55,
       "magnesiumMg": null,
@@ -1902,6 +1907,7 @@ var PRODUCTS = [
       "https://maurten.imgix.net/branding/Screenshot-2025-03-14-at-16.39.51.png?auto=compress%2Cformat&fit=max&q=80&w=1000&s=165f3bb0f1c61dc593dae9d44fba39ea"
     ],
     "metrics": {
+      "servingMl": 500,
       "sodiumMg": 245,
       "potassiumMg": null,
       "magnesiumMg": null,
@@ -2454,7 +2460,7 @@ var PRODUCTS = [
   {
     "id": "ghost-hydration",
     "name": "Hydration",
-    "brand": "GHOST",
+    "brand": "Ghost",
     "category": "electrolytes",
     "stimFree": true,
     "badges": [

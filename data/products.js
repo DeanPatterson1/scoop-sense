@@ -520,7 +520,7 @@ const PRODUCTS = [
   {
     id: "total-war",
     name: "Total War",
-    brand: "RedCon1",
+    brand: "Redcon1",
     category: "pre-workout",
     accentColor: "#E05252",
     stimFree: false,
@@ -830,7 +830,7 @@ const PRODUCTS = [
   {
     id: "ryse-godzilla",
     name: "Godzilla",
-    brand: "RYSE Supplements",
+    brand: "RYSE",
     category: "pre-workout",
     accentColor: "#7B8AD9",
     stimFree: false,
@@ -2450,7 +2450,7 @@ const PRODUCTS = [
     badges: [
       "Stim-Free",
       "Fully Disclosed Label"
-    ],
+    , "Third-Party Tested"],
     caffeineMg: 0,
     keyIngredients: [
       {
@@ -6384,7 +6384,7 @@ const PRODUCTS = [
   {
     "id": "allmax-creatine-monohydrate",
     "name": "Creatine Monohydrate",
-    "brand": "Allmax",
+    "brand": "ALLMAX",
     "category": "creatine",
     "stimFree": true,
     "badges": [
@@ -6710,7 +6710,7 @@ const PRODUCTS = [
   {
     "id": "bpn-creatine-monohydrate",
     "name": "Creatine Monohydrate",
-    "brand": "Bare Performance Nutrition (BPN)",
+    "brand": "BPN",
     "category": "creatine",
     "stimFree": true,
     "badges": [
@@ -8115,7 +8115,7 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=trioral+oral+rehydration+salts&tag=YOURTAG-20",
     "blurb": "An unflavored, WHO-formula oral rehydration powder with higher sodium and potassium per liter than typical sports drinks; each packet is designed to be sipped across a day rather than taken as one serving.",
     "labelVerified": "July 2026",
-    "metrics": {
+    "metrics": { "servingMl": 1000,
       "sodiumMg": 1725,
       "potassiumMg": 782,
       "magnesiumMg": null,
@@ -8360,7 +8360,7 @@ const PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/0334/2368/7725/products/PH-1500-Packets-1.png?v=1668599009&width=1000",
       "https://cdn.shopify.com/s/files/1/0334/2368/7725/products/2-1500_SachetFront.jpg?v=1668599009&width=1000"
     ],
-    "metrics": {
+    "metrics": { "servingMl": 473,
       "sodiumMg": 750,
       "potassiumMg": 125,
       "magnesiumMg": 12,
@@ -8417,7 +8417,7 @@ const PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/0334/2368/7725/files/singleOpen_IM_2026_4477deac-8566-4ea1-bef4-ac6663fb7be8.webp?v=1765279380&width=1000",
       "https://cdn.shopify.com/s/files/1/0334/2368/7725/products/2-TabletInBottle.jpg?v=1765279380&width=1000"
     ],
-    "metrics": {
+    "metrics": { "servingMl": 473,
       "sodiumMg": 500,
       "potassiumMg": 130,
       "magnesiumMg": 10,
@@ -8475,7 +8475,7 @@ const PRODUCTS = [
       "https://www.scienceinsport.com/media/wysiwyg/Phoenix_-_HYDRO_Tablets_-_Block_2.jpg",
       "https://www.scienceinsport.com/media/wysiwyg/Phoenix_-_HYDRO_Tablets_-_Block_3.jpg"
     ],
-    "metrics": {
+    "metrics": { "servingMl": 500,
       "sodiumMg": 350,
       "potassiumMg": 300,
       "magnesiumMg": 56,
@@ -8529,7 +8529,7 @@ const PRODUCTS = [
       "https://guenergy.com/cdn/shop/files/tubes_3.png?v=1697580425",
       "https://guenergy.com/cdn/shop/files/tubes_2.png?v=1697580425"
     ],
-    "metrics": {
+    "metrics": { "servingMl": 473,
       "sodiumMg": 320,
       "potassiumMg": 55,
       "magnesiumMg": null,
@@ -8816,7 +8816,7 @@ const PRODUCTS = [
       "https://maurten.imgix.net/photos/Products/Entry-Card-Maurten-Drink-Mix-320-1.png?auto=compress%2Cformat&fit=max&q=80&w=120&s=f3d7495dec7fea87fba326ce887c16ac",
       "https://maurten.imgix.net/branding/Screenshot-2025-03-14-at-16.39.51.png?auto=compress%2Cformat&fit=max&q=80&w=1000&s=165f3bb0f1c61dc593dae9d44fba39ea"
     ],
-    "metrics": {
+    "metrics": { "servingMl": 500,
       "sodiumMg": 245,
       "potassiumMg": null,
       "magnesiumMg": null,
@@ -9379,7 +9379,7 @@ const PRODUCTS = [
   {
     "id": "ghost-hydration",
     "name": "Hydration",
-    "brand": "GHOST",
+    "brand": "Ghost",
     "category": "electrolytes",
     "stimFree": true,
     "badges": [
@@ -10381,7 +10381,7 @@ const PRODUCTS = [
   {
     "id": "ryse-bcaa-eaa",
     "name": "BCAA + EAA",
-    "brand": "Ryse",
+    "brand": "RYSE",
     "category": "eaa",
     "stimFree": true,
     "badges": [
@@ -10602,7 +10602,7 @@ const PRODUCTS = [
   {
     "id": "genius-energized-bcaa",
     "name": "Energized BCAA",
-    "brand": "Genius",
+    "brand": "The Genius Brand",
     "category": "eaa",
     "stimFree": false,
     "badges": [

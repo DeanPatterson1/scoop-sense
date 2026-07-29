@@ -38,9 +38,30 @@
     bucket: "all",
     dir: "",
     price: "all",
+    label: "all",
     target: undefined,
     tolerance: 0
   };
+
+  /* Quality-of-label filters. Every one of these already exists as a badge or
+   * is derivable from the ingredient list, and none of them could be filtered
+   * on — a drug-tested athlete had to eyeball a badge across the whole grid,
+   * which is the one filter that decides whether a product is usable at all. */
+  var LABEL_FILTERS = [
+    { value: "all", label: "Any label", test: function () { return true; } },
+    { value: "tested", label: "Third-party tested",
+      test: function (p) { return p.badges.indexOf("Third-Party Tested") !== -1; } },
+    { value: "disclosed", label: "Fully disclosed", test: isDisclosed },
+    { value: "noblend", label: "No blends at all",
+      test: function (p) { return blendState(p) === "none"; } }
+  ];
+
+  function labelFilterOf(value) {
+    for (var i = 0; i < LABEL_FILTERS.length; i++) {
+      if (LABEL_FILTERS[i].value === value) return LABEL_FILTERS[i];
+    }
+    return LABEL_FILTERS[0];
+  }
 
   // Figures on offer for whatever category is in scope; see rebuildAxes().
   var AXES = [];
@@ -117,26 +138,72 @@
     return ing ? ing.dose : null;
   }
 
-  // The ingredient-name heuristic only applies to pre-workout labels, where
-  // "blend" always means a dose-hiding proprietary blend. Elsewhere ("whey
-  // protein blend" with a disclosed total) the badge is the source of truth.
+  /* A blend's total is not a dose of anything named inside it.
+   *
+   * Bloom's "Performance Blend (L-Citrulline Malate, L-Citrulline, Beta
+   * Alanine, Beet Root Extract)" is 4.68 g, and an ingredient-name match
+   * finds citrulline in it — so the figure was being ranked against labels
+   * that disclose 8 g of actual citrulline. That compares a sum to one of its
+   * parts. The cell still shows "4.68 g blend", which is the honest reading;
+   * it just cannot be ordered against a real dose.
+   *
+   * The qualifier in the dose string is the signal, not the ingredient name:
+   * "Amino9 EAA blend — 6.7 g" is a pooled name whose total *is* the figure
+   * the EAA column wants, and it carries no qualifier. */
+  function isPooledDose(ing) {
+    return /blend|proprietary|not individually/i.test(ing.dose || "");
+  }
+
+  /* Blends hide different things in different categories, and calling them
+   * all one thing gets a label wrong either way.
+   *
+   *   proprietary  A combined total standing in for the doses of distinct
+   *                actives — how much citrulline, how much caffeine. The
+   *                dose itself is unknown.
+   *   partial      "Whey protein blend (concentrate, isolate, hydrolysate)"
+   *                at 25 g. The total is disclosed and is the protein
+   *                figure; what is hidden is the ratio between the sources,
+   *                which decides quality, not dose.
+   *
+   * Treating the second as fully disclosed is how eleven protein blends came
+   * to carry a "Label fully disclosed" chip. Treating it as proprietary
+   * would be the opposite error — a dose-hiding warning on a disclosed total.
+   */
+  function blendState(p) {
+    if (p.badges.indexOf("Proprietary Blend") !== -1) return "proprietary";
+    if (!findIngredient(p, /blend/i)) return "none";
+    return categoryOf(p) === "pre-workout" ? "proprietary" : "partial";
+  }
+
   function hasBlend(p) {
-    if (p.badges.indexOf("Proprietary Blend") !== -1) return true;
-    if (categoryOf(p) !== "pre-workout") return false;
-    return !!findIngredient(p, /blend/i);
+    return blendState(p) !== "none";
   }
 
+  // A label is only fully disclosed if nothing on it is pooled. The badge is
+  // hand-set in the data and cannot see the ingredient list.
   function isDisclosed(p) {
-    return p.badges.indexOf("Fully Disclosed Label") !== -1;
+    return p.badges.indexOf("Fully Disclosed Label") !== -1 &&
+      blendState(p) === "none";
   }
 
+  /* The box says "product, brand, or ingredient", and on the category pages
+   * it says source too — but it only ever read name, brand and ingredient
+   * names. So "sucralose" matched one product while fifteen are sweetened
+   * with it, and "stevia" matched two of seventeen. A shopper avoiding a
+   * sweetener was being told the wrong answer silently, which is worse than
+   * no search at all. The metric text fields and the flavour note carry
+   * exactly those words, so they belong in the haystack. */
   function matchesSearch(p, term) {
     if (!term) return true;
-    var haystack = [p.name, p.brand]
-      .concat(p.keyIngredients.map(function (ing) { return ing.name; }))
-      .join(" ")
-      .toLowerCase();
-    return haystack.indexOf(term) !== -1;
+    var bits = [p.name, p.brand, p.flavorsNote || ""];
+    if (p.metrics) {
+      for (var k in p.metrics) {
+        if (typeof p.metrics[k] === "string") bits.push(p.metrics[k]);
+      }
+    }
+    for (var i = 0; i < p.keyIngredients.length; i++) bits.push(p.keyIngredients[i].name);
+    for (var j = 0; j < (p.badges || []).length; j++) bits.push(p.badges[j]);
+    return bits.join(" ").toLowerCase().indexOf(term) !== -1;
   }
 
   function byName(a, b) {
@@ -158,6 +225,7 @@
       if (state.category !== "all" && categoryOf(p) !== state.category) return false;
       if (state.brand !== "all" && p.brand !== state.brand) return false;
       if (state.price !== "all" && priceWordOf(p) !== state.price) return false;
+      if (state.label !== "all" && !labelFilterOf(state.label).test(p)) return false;
       if (!axis) return true;
 
       var v = factSortValue(p, axis.key);
@@ -227,15 +295,23 @@
   }
 
   function blendHTML(p) {
-    return hasBlend(p) ? "Yes" : '<span class="sc-dim">No</span>';
+    var s = blendState(p);
+    if (s === "proprietary") return "Yes";
+    if (s === "partial") return '<span title="' + esc(PARTIAL_TIP) + '">Ratio only</span>';
+    return '<span class="sc-dim">No</span>';
   }
 
   // "$" | "$$" | "$$$" -> plain-English cost-per-serving tier, with the basis
   // for the judgment exposed as a tooltip.
+  /* The old wording claimed each tier was a computed third of the database.
+   * It is not — the tiers are assigned by hand against the other products in
+   * the same category, and the split is nowhere near even (electrolytes run
+   * 10/24/5). Saying "the lowest third" made it sound like arithmetic. */
+  var PRICE_BASIS = " Judged against the other products in the same category when the label was checked. We rank the tier rather than print a dollar figure, because prices move faster than we can re-check them — so use it to sort, not to budget.";
   var PRICE_TIPS = {
-    Budget: "Estimated cost per full serving sits in the lowest third of this database. We rank the tier rather than print a dollar figure, because prices move faster than we can check them.",
-    "Mid-range": "Estimated cost per full serving sits in the middle third of this database. We rank the tier rather than print a dollar figure, because prices move faster than we can check them.",
-    Premium: "Estimated cost per full serving sits in the highest third of this database. We rank the tier rather than print a dollar figure, because prices move faster than we can check them."
+    Budget: "Among the cheaper options per full serving." + PRICE_BASIS,
+    "Mid-range": "Around the middle of the category on cost per full serving." + PRICE_BASIS,
+    Premium: "Among the more expensive options per full serving." + PRICE_BASIS
   };
 
   function priceWordOf(p) {
@@ -300,7 +376,8 @@
     }
     if (key.indexOf("ing:") === 0) {
       var ing = findIngredient(p, new RegExp(key.slice(4), "i"));
-      return ing ? (parseDoseMg(ing.dose) || -1) : -1;
+      if (!ing || isPooledDose(ing)) return -1;
+      return parseDoseMg(ing.dose) || -1;
     }
     if (key.indexOf("m:") === 0) {
       var v = metricOf(p, key.split(":")[1]);
@@ -498,7 +575,16 @@
 
       // Same figures in the units the reader sees, for cutting ranges.
       axis.dvals = values.map(function (v) { return v * axis.scale; });
-      axis.buckets = bucketsFor(axis);
+
+      // Offer a band only if something is in it, and say how many. The
+      // caffeine bands are hand-written, so "Under 150 mg" was on the menu
+      // for a catalogue whose lowest caffeinated pre-workout is 155 mg —
+      // picking it emptied the grid and the filter never said why.
+      axis.buckets = bucketsFor(axis).map(function (b) {
+        var n = 0;
+        for (var k = 0; k < values.length; k++) if (b.test(values[k])) n++;
+        return { label: b.label + " (" + n + ")", test: b.test, count: n };
+      }).filter(function (b) { return b.count > 0; });
       return axis;
     });
   }
@@ -569,6 +655,7 @@
   };
   var DISCLOSED_TIP = "Every active ingredient and its dosage is individually listed on the label. No proprietary blends.";
   var BLEND_TIP = "One or more combined blend totals hide the individual ingredient amounts inside.";
+  var PARTIAL_TIP = "The blend's total is on the label, but not the ratio between the sources inside it — so the total is known and the split is not.";
   var TESTED_TIP = "Certified by an independent banned-substance testing program (NSF Certified for Sport, Informed Sport, or Informed Choice), per the label or brand page.";
   var BEGINNER_TIP = "A reasonable first tub: moderate or no caffeine, a fully disclosed label, and nothing on the panel that surprises a new user.";
   var BUDGET_TIP = "Cost per full serving sits in the lowest third of this database while the label still discloses its doses.";
@@ -590,8 +677,11 @@
       if (bucket === "none") stimClass += " sc-tag-calm";
       tags.push('<span class="' + stimClass + '" title="' + esc(STIM_TIPS[bucket]) + '">' + esc(stimLabelOf(p)) + "</span>");
     }
-    if (hasBlend(p)) {
+    var blend = blendState(p);
+    if (blend === "proprietary") {
       tags.push('<span class="sc-tag sc-tag-caution" title="' + esc(BLEND_TIP) + '">Proprietary blend</span>');
+    } else if (blend === "partial") {
+      tags.push('<span class="sc-tag" title="' + esc(PARTIAL_TIP) + '">Blend ratio undisclosed</span>');
     } else if (isDisclosed(p)) {
       tags.push('<span class="sc-tag" title="' + esc(DISCLOSED_TIP) + '">Label fully disclosed</span>');
     }
@@ -817,6 +907,15 @@
         return { value: t, label: t };
       })), state.price);
 
+    // Counts, so "Third-party tested" never looks like an empty promise.
+    var pool = scopePool();
+    var labelOptions = optionsHTML(LABEL_FILTERS.map(function (f) {
+      if (f.value === "all") return { value: f.value, label: f.label };
+      var n = 0;
+      for (var i = 0; i < pool.length; i++) if (f.test(pool[i])) n++;
+      return { value: f.value, label: f.label + " (" + n + ")" };
+    }), state.label);
+
     panel.innerHTML =
       '<div class="sc-tabs" role="tablist" aria-label="Filter mode">' +
         tabHTML("simple", "Simple") + tabHTML("advanced", "Advanced") +
@@ -829,6 +928,7 @@
           fieldHTML("Amount", "sc-range", selectHTML("sc-range", "")) +
           fieldHTML("Sort", "sc-dir", selectHTML("sc-dir", optionsHTML(DIRECTIONS, state.dir))) +
           fieldHTML("Price", "sc-price", selectHTML("sc-price", priceOptions)) +
+          fieldHTML("Label", "sc-label", selectHTML("sc-label", labelOptions)) +
         "</div>" +
         '<p class="sc-fnote" id="sc-note-simple"></p>' +
       "</div>" +
@@ -847,6 +947,7 @@
           fieldHTML("Match within", "sc-tolerance",
             selectHTML("sc-tolerance", optionsHTML(TOLERANCES, state.tolerance))) +
           fieldHTML("Price", "sc-price-adv", selectHTML("sc-price-adv", priceOptions)) +
+          fieldHTML("Label", "sc-label-adv", selectHTML("sc-label-adv", labelOptions)) +
         "</div>" +
         '<p class="sc-fnote" id="sc-note-advanced"></p>' +
       "</div>";
@@ -916,6 +1017,7 @@
     if (state.bucket !== "all") n++;
     if (state.dir) n++;
     if (state.price !== "all") n++;
+    if (state.label !== "all") n++;
     if (state.target !== undefined) n++;
     badge.textContent = n ? String(n) : "";
   }
@@ -1012,6 +1114,9 @@
         } else if (el.id === "sc-price" || el.id === "sc-price-adv") {
           state.price = el.value;
           mirror(el.id === "sc-price" ? "sc-price-adv" : "sc-price", el.value);
+        } else if (el.id === "sc-label" || el.id === "sc-label-adv") {
+          state.label = el.value;
+          mirror(el.id === "sc-label" ? "sc-label-adv" : "sc-label", el.value);
         } else if (el.id === "sc-tolerance") {
           state.tolerance = parseFloat(el.value) || 0;
         } else {
@@ -1066,6 +1171,7 @@
       state.bucket = "all";
       state.dir = "";
       state.price = "all";
+      state.label = "all";
       state.target = undefined;
       state.tolerance = 0;
       if (search) search.value = "";
@@ -1130,6 +1236,9 @@
     if (got.q) state.search = got.q;
     if (got.mode === "advanced") state.mode = "advanced";
     if (PRICE_TIERS.indexOf(got.price) !== -1) state.price = got.price;
+    if (got.label && got.label !== "all" && labelFilterOf(got.label).value === got.label) {
+      state.label = got.label;
+    }
 
     // Brand and figure are both cut from the category, so they can only be
     // checked once that is settled above.
@@ -1166,6 +1275,7 @@
     if (state.bucket !== "all") bits.push("range=" + state.bucket);
     if (state.dir) bits.push("sort=" + state.dir);
     if (state.price !== "all") bits.push("price=" + encHash(state.price));
+    if (state.label !== "all") bits.push("label=" + state.label);
     if (state.target !== undefined) bits.push("near=" + state.target);
     if (state.tolerance) bits.push("within=" + state.tolerance);
 

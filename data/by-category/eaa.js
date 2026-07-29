@@ -1569,7 +1569,7 @@ var PRODUCTS = [
   {
     "id": "ryse-bcaa-eaa",
     "name": "BCAA + EAA",
-    "brand": "Ryse",
+    "brand": "RYSE",
     "category": "eaa",
     "stimFree": true,
     "badges": [
@@ -1785,7 +1785,7 @@ var PRODUCTS = [
   {
     "id": "genius-energized-bcaa",
     "name": "Energized BCAA",
-    "brand": "Genius",
+    "brand": "The Genius Brand",
     "category": "eaa",
     "stimFree": false,
     "badges": [
