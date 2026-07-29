@@ -567,7 +567,7 @@ function reviewsHTML(p) {
     <div class="sc-container">
       <div class="sc-section-head">
         <h2 class="sc-pdp-h2">What other people say</h2>
-        <a class="sc-action-link" href="../disclosure.html">Why we don't rate products</a>
+        <a class="sc-action-link" href="../disclosure.html#reviews-policy">Why we don't rate products</a>
       </div>
       <p class="sc-dose-intro">Two different things, side by side: the rating the seller publishes on its own store, and what independent users write in public threads. Scoop Sense writes neither and collects no reviews of its own. Neither is evidence that a product works — they describe what people experienced and expected, not what the research shows.</p>
       <div class="sc-reviews-grid">
