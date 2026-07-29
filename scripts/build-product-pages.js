@@ -17,7 +17,7 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const OUT = path.join(ROOT, "products");
-const VERSION = "20260729m"; // keep in sync with the ?v= on the other pages
+const VERSION = "20260729n"; // keep in sync with the ?v= on the other pages
 
 // Set this to the real origin at domain time (see README "Sitemap & domain").
 // Absolute-URL metadata — canonical, og:url, BreadcrumbList — is emitted only
@@ -417,7 +417,7 @@ const GALLERY_SCRIPT = `<script>
 // comes from the category's compare columns (minus derived/duplicate cells).
 const METRIC_FACT_ROWS = {
   creatine: [["Creatine per serving", "m:creatineG:g"], ["Form", "m:form"]],
-  protein: [["Protein per serving", "m:proteinG:g"], ["Serving size", "m:servingG:g"], ["Protein per scoop", "protPct"], ["Source", "m:source"], ["Sweetener", "m:sweetener"]],
+  protein: [["Protein per serving", "m:proteinG:g"], ["Serving size", "m:servingG:g"], ["Protein per scoop", "protPct"], ["Calories", "m:calories"], ["Total carbohydrate", "m:carbsG:g"], ["Total fat", "m:fatG:g"], ["Source", "m:source"], ["Sweetener", "m:sweetener"]],
   eaa: [["Total EAAs", "m:eaaG:g"], ["BCAAs", "m:bcaaG:g"], ["Leucine", "m:leucineG:g"]],
   electrolytes: [["Sodium", "m:sodiumMg:mg"], ["Potassium", "m:potassiumMg:mg"], ["Magnesium", "m:magnesiumMg:mg"], ["Sugar", "m:sugarG:g"]]
 };
@@ -437,9 +437,18 @@ function factsRowsHTML(p) {
     rows.push(`<tr><th scope="row">${label}</th><td class="sc-num">${value}</td></tr>`);
   };
 
+  /* Calories, total carbohydrate and total fat are mandatory lines on a US
+   * Supplement Facts panel, so they are on the back of every tub here. When
+   * one is missing from this table it means we have not transcribed it yet —
+   * not that the label withheld it — and the row says so rather than quietly
+   * disappearing, which read as though the figure did not exist. */
+  const PANEL_MANDATORY = new Set(["Calories", "Total carbohydrate", "Total fat"]);
+  const NOT_RECORDED = '<span class="sc-dim" title="This line is required on a Supplement Facts panel, so it is printed on the tub — we have not transcribed it into the database yet.">Not recorded</span>';
+
   for (const [label, key] of METRIC_FACT_ROWS[categoryOf(p)] || []) {
     const v = factOf(p, key);
     if (v !== DASH) row(esc(label), v);
+    else if (PANEL_MANDATORY.has(label)) row(esc(label), NOT_RECORDED);
   }
   if (categoryOf(p) === "pre-workout" || p.caffeineMg > 0) {
     row("Caffeine", p.caffeineMg === 0 ? "0 mg" : esc(p.caffeineMg) + " mg");

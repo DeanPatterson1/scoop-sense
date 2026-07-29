@@ -5342,7 +5342,7 @@ const PRODUCTS = [
       "https://www.optimumnutrition.com/cdn/shop/files/US_GSW_5LB_DELSTRAW_FOP.png?v=1784666447&width=2500",
       "https://www.optimumnutrition.com/cdn/shop/files/US_GSW_5LB_BANANA_Main_Image.png?v=1777475395&width=2500"
     ],
-    "metrics": {
+    "metrics": { "calories": 120, "fatG": 1.5, "carbsG": 3,
       "proteinG": 24,
       "servingG": 31,
       "source": "whey blend",
@@ -5451,7 +5451,7 @@ const PRODUCTS = [
       "https://dymatize.imgix.net/production/products/dym0001-8_ISO100_20s_PCThumbnail_540x678_GormetChocolate.jpg",
       "https://dymatize.imgix.net/production/products/iso_salted_thumb.png"
     ],
-    "metrics": {
+    "metrics": { "calories": 120, "fatG": 1, "carbsG": 2,
       "proteinG": 25,
       "servingG": 32,
       "source": "whey isolate",
@@ -5668,7 +5668,7 @@ const PRODUCTS = [
       "https://www.ascentprotein.com/cdn/shop/products/whey-van-4lb-main.png?v=1695075692&width=1200",
       "https://www.ascentprotein.com/cdn/shop/products/whey-cpb-2lb-main.png?v=1693322324&width=1200"
     ],
-    "metrics": {
+    "metrics": { "calories": 120, "fatG": 1, "carbsG": 4,
       "proteinG": 25,
       "servingG": 33,
       "source": "whey blend",
@@ -6014,7 +6014,7 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=garden+of+life+sport+grass+fed+whey&tag=YOURTAG-20",
     "blurb": "Grass-fed Irish whey with both NSF Certified for Sport and Informed Choice listed on the brand's Sport line — the trade-off is a small tub and premium per-serving cost.",
     "labelVerified": "July 2026",
-    "metrics": {
+    "metrics": { "calories": 125, "fatG": 1, "carbsG": 6,
       "proteinG": 24,
       "servingG": 34.5,
       "source": "whey isolate blend",
@@ -6122,7 +6122,7 @@ const PRODUCTS = [
       "https://nutricost.com/cdn/shop/files/NTC_WPC_Vanilla_2LB_2750CC_Front_Square_b1e55d34-9c12-4401-9bcb-1f5c29ef1de9.jpg?width=1200",
       "https://nutricost.com/cdn/shop/files/NTC_WPC_Unflavored_2LB_2750CC_Front_Square.jpg?width=1200"
     ],
-    "metrics": {
+    "metrics": { "calories": 130, "fatG": 2, "carbsG": 3,
       "proteinG": 25,
       "servingG": 36,
       "source": "whey concentrate",
@@ -10896,7 +10896,7 @@ const PRODUCTS = [
       "https://www.vitacost.com/cdn/shop/files/37_1c4bbfa9-94a0-48e4-8158-564ed42c2794.jpg?v=1781962149",
       "https://www.vitacost.com/cdn/shop/files/42_e08f82eb-7df6-4314-8ad5-b7a1e932ccdd.jpg?v=1781962149"
     ],
-    "metrics": {
+    "metrics": { "calories": 190, "fatG": 5, "carbsG": 14,
       "proteinG": 22,
       "servingG": 47,
       "source": "whey/casein blend",
@@ -11040,7 +11040,7 @@ const PRODUCTS = [
       "https://www.bodyfortress.com/cdn/shop/files/bft-300007-super-advanced-whey-protein-powder-chocolate-1.78-lb.-tub-5_c81edd33-d3d7-4caa-81c2-0a53b925b7a2.png?v=1717699198",
       "https://www.bodyfortress.com/cdn/shop/files/bft-300007-super-advanced-whey-protein-powder-chocolate-1.78-lb.-tub-6_af2ab8db-2944-4837-ac16-f2f78e5f6c48.png?v=1717699198"
     ],
-    "metrics": {
+    "metrics": { "calories": 180, "fatG": 4, "carbsG": 7,
       "proteinG": 30,
       "servingG": 45,
       "source": "whey concentrate and isolate blend",
@@ -11093,7 +11093,7 @@ const PRODUCTS = [
       "https://www.ruleoneproteins.com/cdn/shop/files/R1_Protein_Whey_Isolate_Milk_Chocolate_panel.png?v=3745698589022948823",
       "https://www.ruleoneproteins.com/cdn/shop/files/r1pwi_3lb_milk-chocolate-front.png?v=1777912100"
     ],
-    "metrics": {
+    "metrics": { "calories": 110, "fatG": 0.5, "carbsG": 2,
       "proteinG": 25,
       "servingG": 32,
       "source": "whey isolate and hydrolysate blend",
@@ -11150,7 +11150,7 @@ const PRODUCTS = [
       "https://dymatize.imgix.net/production/chips/ELITE_100_WHEY_RICH_CHOCOLATE_Flavor_Chip_Product_Detail_Page_144x120.jpg",
       "https://dymatize.imgix.net/production/chips/ELITE_100_WHEY_GOURMET_VANILLA_Flavor_Chip_Product_Detail_Page_144x120.jpg"
     ],
-    "metrics": {
+    "metrics": { "calories": 140, "fatG": 3, "carbsG": 3,
       "proteinG": 25,
       "servingG": 36,
       "source": "whey concentrate, isolate, and peptide blend",
@@ -11742,7 +11742,7 @@ const PRODUCTS = [
       "https://ritual.com/cdn/shop/files/PDP-PD18-Glass_3fe1a2ff-500c-4adf-a90e-fbbce10b10ae.jpg?v=1774026738&width=2000",
       "https://ritual.com/cdn/shop/files/PDP-PD18-Model-1_a8585738-c0e0-4097-a116-d316f3e2d803.jpg?v=1774026738&width=2000"
     ],
-    "metrics": {
+    "metrics": { "calories": 120, "fatG": 3, "carbsG": 3,
       "proteinG": 20,
       "servingG": 31,
       "source": "pea protein",
@@ -12009,7 +12009,7 @@ const PRODUCTS = [
       "https://www.ascentprotein.com/cdn/shop/files/ASCE-256_MCC_2LB_NFP_F4_25Serving_2lb_Render_Chocolate.jpg?v=1749051028",
       "https://www.ascentprotein.com/cdn/shop/files/casein_chocolate_on_black.jpg?v=1749051028"
     ],
-    "metrics": {
+    "metrics": { "calories": 120, "fatG": 1, "carbsG": 4,
       "proteinG": 25,
       "servingG": 36,
       "source": "micellar casein isolate",

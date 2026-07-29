@@ -79,6 +79,11 @@ var CATEGORY_CONFIG = {
     compareCols: [
       { label: "Protein", key: "m:proteinG:g", sortable: true, num: true },
       { label: "Protein %", key: "protPct", sortable: true, num: true },
+      // Protein % says how much of the scoop is not protein; these say what
+      // that remainder actually is, which is the whole question when cutting.
+      { label: "Calories", key: "m:calories", sortable: true, num: true },
+      { label: "Carbs", key: "m:carbsG:g", sortable: true, num: true },
+      { label: "Fat", key: "m:fatG:g", sortable: true, num: true },
       { label: "Source", key: "m:source" },
       { label: "Sweetener", key: "m:sweetener" },
       { label: "Servings", key: "servings", sortable: true, num: true },
