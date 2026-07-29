@@ -36,6 +36,26 @@
 //   accentColor    string  OPTIONAL — hex color used as a subtle accent on the
 //                  product tile and detail view. Stylized brand-family color,
 //                  NOT official brand artwork. Omit for a neutral fallback.
+//   reviews        object OPTIONAL — what other people say, in two clearly
+//                  separated halves. Scoop Sense writes neither of them and
+//                  collects no reviews of its own; both are reported, sourced,
+//                  and dated. Populated by scripts/integrate-reviews.js.
+//                    seller    { rating, count, source: {url,label}, checked }
+//                              The figure printed on the SELLER'S OWN page,
+//                              copied exactly. Never an Amazon rating — the
+//                              Associates terms do not permit displaying their
+//                              ratings data, and we link to Amazon as an
+//                              affiliate. null when the seller shows none.
+//                    community { takeaway, points[], sources[] }
+//                              Independent discussion — Reddit and forums, not
+//                              brand testimonials or affiliate-review blogs.
+//                              points: 2–4 { label, tone, note }, tone one of
+//                              "positive" | "mixed" | "negative".
+//                              sources: 1–4 { url, label, quote? }; quotes are
+//                              verbatim, 200 characters max, and must appear in
+//                              the linked thread. null when no genuine
+//                              discussion exists — padding it would be inventing
+//                              reviews, which this site does not do.
 //   imageBg        string  OPTIONAL — "R,G,B" of the lead image's own
 //                  background, present only when that image is a photo shot on
 //                  a solid sweep rather than a transparent render. The tile and

@@ -2721,6 +2721,179 @@ th[aria-sort="descending"] .sc-sort-btn::after {
 }
 
 /* --------------------------------------------------------------------------
+   13c. What other people say (product pages)
+
+   Two signals that must never blur together: the seller's own moderated
+   rating, and independent discussion. The seller half sits on paper — the
+   same material this site uses for "figures somebody else published" — and
+   the community half sits on the dark shell as editorial. Neither is styled
+   to look like a Scoop Sense verdict, because it isn't one.
+   -------------------------------------------------------------------------- */
+
+.sc-reviews-grid {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .sc-reviews-grid {
+    grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+    gap: 48px;
+  }
+}
+
+.sc-reviews-seller {
+  background: var(--sc-paper);
+  color: var(--sc-paper-ink);
+  border-top: 6px solid var(--sc-paper-ink);
+  padding: 14px 16px 12px;
+}
+
+.sc-reviews-seller .sc-facts-title {
+  border-bottom: 1px solid var(--sc-paper-ink);
+  padding-bottom: 6px;
+}
+
+.sc-seller-score {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 12px 0 2px;
+}
+
+.sc-seller-stars {
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
+  color: var(--sc-paper-amber);
+}
+
+.sc-seller-num {
+  font-family: var(--sc-font-display);
+  font-size: 1.7rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.sc-seller-outof {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--sc-paper-muted);
+}
+
+.sc-seller-count {
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--sc-paper-muted);
+  margin: 0 0 10px;
+}
+
+.sc-seller-note {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--sc-paper-muted);
+  margin: 0;
+  padding-top: 10px;
+  border-top: 3px solid var(--sc-paper-ink);
+}
+
+.sc-reviews-empty .sc-seller-note {
+  border-top: 0;
+  padding-top: 12px;
+}
+
+.sc-community-take {
+  font-size: 1.02rem;
+  line-height: 1.6;
+  max-width: 68ch;
+  margin: 0 0 20px;
+}
+
+.sc-community-points {
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.sc-community-points li {
+  border-left: 2px solid var(--sc-border-strong);
+  padding-left: 14px;
+  font-size: 0.95rem;
+  color: var(--sc-muted);
+  max-width: 68ch;
+}
+
+.sc-community-points strong {
+  color: var(--sc-ink);
+}
+
+/* Tone is a word, never colour alone — the same rule the stim tags follow. */
+.sc-tone {
+  display: inline-block;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  padding: 1px 7px;
+  margin-right: 8px;
+  border: 1px solid;
+  border-radius: 2px;
+  vertical-align: 1px;
+}
+
+.sc-tone-positive {
+  color: var(--sc-calm);
+  border-color: var(--sc-calm-line);
+  background: var(--sc-calm-dim);
+}
+
+.sc-tone-mixed {
+  color: var(--sc-muted);
+  border-color: var(--sc-border-strong);
+}
+
+.sc-tone-negative {
+  color: var(--sc-amber);
+  border-color: var(--sc-amber-line);
+  background: var(--sc-amber-dim);
+}
+
+.sc-community-srclabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--sc-muted);
+  margin: 0 0 10px;
+  padding-top: 16px;
+  border-top: 1px solid var(--sc-border);
+}
+
+.sc-community-sources {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.sc-community-sources blockquote {
+  margin: 0 0 4px;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--sc-ink);
+  max-width: 66ch;
+}
+
+.sc-community-sources a {
+  font-size: 0.85rem;
+  color: var(--sc-info);
+}
+
+/* --------------------------------------------------------------------------
    14. Tags
    -------------------------------------------------------------------------- */
 

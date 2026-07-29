@@ -17,7 +17,7 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const OUT = path.join(ROOT, "products");
-const VERSION = "20260729d"; // keep in sync with the ?v= on the other pages
+const VERSION = "20260729e"; // keep in sync with the ?v= on the other pages
 
 // Set this to the real origin at domain time (see README "Sitemap & domain").
 // Absolute-URL metadata — canonical, og:url, BreadcrumbList — is emitted only
@@ -506,6 +506,78 @@ function doseComparisonHTML(p) {
   </section>`;
 }
 
+/* ---- what other people say ---------------------------------------------- */
+
+// Two signals, kept visibly apart: the number on the seller's own page, and
+// what independent users report in public threads. Scoop Sense writes neither
+// and collects no reviews of its own — every figure and quote is sourced,
+// dated, and linked back. A product with nothing verifiable renders nothing.
+function reviewsHTML(p) {
+  const r = p.reviews;
+  if (!r || (!r.seller && !r.community)) return "";
+
+  const stars = (rating) => {
+    const full = Math.round(rating * 2) / 2;
+    let out = "";
+    for (let i = 1; i <= 5; i++) {
+      out += i <= full ? "★" : (i - 0.5 === full ? "◐" : "☆");
+    }
+    return out;
+  };
+
+  const sellerBlock = r.seller
+    ? `<div class="sc-reviews-seller">
+            <p class="sc-facts-title">On the seller's page</p>
+            <p class="sc-seller-score"><span class="sc-seller-stars" aria-hidden="true">${stars(r.seller.rating)}</span>
+              <span class="sc-seller-num">${esc(r.seller.rating)}<span class="sc-seller-outof"> / 5</span></span></p>
+            <p class="sc-seller-count">${esc(Number(r.seller.count).toLocaleString("en-US"))} ratings</p>
+            <p class="sc-seller-note">The brand's own storefront, read ${esc(r.seller.checked)}. A seller's rating is collected and moderated by the seller — treat it as a marketing figure, not an independent one.</p>
+            <p class="sc-facts-source"><a href="${esc(r.seller.source.url)}" target="_blank" rel="noopener">${esc(r.seller.source.label)}</a> <span class="sc-ext" aria-hidden="true">&#8599;</span></p>
+          </div>`
+    : `<div class="sc-reviews-seller sc-reviews-empty">
+            <p class="sc-facts-title">On the seller's page</p>
+            <p class="sc-seller-note">This seller publishes no rating we could read.</p>
+          </div>`;
+
+  const communityBlock = r.community
+    ? `<div>
+            <h3 class="sc-details-heading">What people actually report</h3>
+            <p class="sc-community-take">${esc(r.community.takeaway)}</p>
+            <ul class="sc-community-points">
+              ${r.community.points.map((pt) => `<li>
+                <span class="sc-tone sc-tone-${esc(pt.tone)}">${esc(pt.tone)}</span>
+                <strong>${esc(pt.label)}.</strong> ${esc(pt.note)}
+              </li>`).join("\n              ")}
+            </ul>
+            <p class="sc-community-srclabel">Read the threads yourself</p>
+            <ul class="sc-community-sources">
+              ${r.community.sources.map((s) => `<li>
+                ${s.quote ? `<blockquote>&ldquo;${esc(s.quote)}&rdquo;</blockquote>` : ""}
+                <a href="${esc(s.url)}" target="_blank" rel="noopener nofollow">${esc(s.label)}</a> <span class="sc-ext" aria-hidden="true">&#8599;</span>
+              </li>`).join("\n              ")}
+            </ul>
+          </div>`
+    : `<div>
+            <h3 class="sc-details-heading">What people actually report</h3>
+            <p class="sc-community-take">We could not find enough genuine independent discussion of this product to summarise. Rather than pad this out, we have left it empty.</p>
+          </div>`;
+
+  return `
+  <section class="sc-section" id="reviews">
+    <div class="sc-container">
+      <div class="sc-section-head">
+        <h2 class="sc-pdp-h2">What other people say</h2>
+        <a class="sc-action-link" href="../disclosure.html">Why we don't rate products</a>
+      </div>
+      <p class="sc-dose-intro">Two different things, side by side: the rating the seller publishes on its own store, and what independent users write in public threads. Scoop Sense writes neither and collects no reviews of its own. Neither is evidence that a product works — they describe what people experienced and expected, not what the research shows.</p>
+      <div class="sc-reviews-grid">
+        ${sellerBlock}
+        ${communityBlock}
+      </div>
+    </div>
+  </section>`;
+}
+
 /* ---- generated, data-derived FAQ (no invented claims) ------------------- */
 
 // Display name; avoids "Bucked Up Bucked Up" when brand === product name.
@@ -827,6 +899,7 @@ function pageHTML(p) {
   </section>
 
 ${doseComparisonHTML(p)}
+${reviewsHTML(p)}
 
   <section class="sc-section">
     <div class="sc-container">
