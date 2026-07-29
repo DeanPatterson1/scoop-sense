@@ -3176,60 +3176,6 @@ const PRODUCTS = [
     ]
   },
 
-  {
-    "id": "ghost-amino-v2",
-    "name": "Amino",
-    "brand": "Ghost",
-    "category": "eaa",
-    "stimFree": true,
-    "badges": [
-      "Fully Disclosed Label"
-    ],
-    "caffeineMg": 0,
-    "keyIngredients": [
-      {
-        "name": "BCAA 4:1:1 (leucine-forward)",
-        "dose": "4.5 g",
-        "clinicalNote": "Delivers 3 g leucine, the amino most tied to muscle protein synthesis signaling in research."
-      },
-      {
-        "name": "Additional EAAs",
-        "dose": "5.5 g",
-        "clinicalNote": "The six non-BCAA essential amino acids, completing the full spectrum needed for protein balance."
-      },
-      {
-        "name": "Taurine",
-        "dose": "2 g",
-        "clinicalNote": "Studied for supporting hydration and endurance during training."
-      },
-      {
-        "name": "Raw coconut water powder",
-        "dose": "1 g",
-        "clinicalNote": "Natural potassium source supporting fluid balance, paired with Aquamin marine minerals."
-      }
-    ],
-    "cautions": [
-      "Full label doses are per two-scoop serving; one scoop delivers half",
-      "Amino drinks supplement protein intake, not replace it"
-    ],
-    "servings": 40,
-    "priceRange": "$$",
-    "flavorsNote": "Licensed and fruit flavors such as Welch's Grape, Mango, and Blue Raspberry, sweetened with sucralose.",
-    "affiliateUrl": "https://www.amazon.com/s?k=ghost+amino+v2&tag=YOURTAG-20",
-    "blurb": "Full 10 g EAA dose with a 4:1:1 leucine-heavy BCAA core, but that dose takes two scoops, so the 40-scoop tub works out to 20 full servings.",
-    "labelVerified": "July 2026",
-    "metrics": {
-      "eaaG": 10,
-      "bcaaG": 4.5,
-      "leucineG": 3
-    },
-    "sources": [
-      {
-        "url": "https://www.gymsupplements.co.uk/products/ghost-amino-v2-404g",
-        "label": "Retailer listing with full supplement facts"
-      }
-    ]
-  },
 
   {
     "id": "dymatize-all9-amino",
