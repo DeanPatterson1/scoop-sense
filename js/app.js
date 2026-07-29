@@ -674,6 +674,10 @@
     var empty = document.getElementById("sc-empty");
     var results = applyFilters();
 
+    // Every path that changes a filter ends here, so this is the one place
+    // the address bar has to be kept honest.
+    writeHashState();
+
     list.innerHTML = results.map(tileHTML).join("");
 
     if (count) {
@@ -691,19 +695,28 @@
     if (revealObserver) initReveal();
   }
 
+  /* The brand list is cut from whatever category is in scope, and recut when
+   * that changes. Left unscoped the hub offers all 90-odd brands on a
+   * category that holds a dozen, and picking one of the other 78 empties the
+   * grid with nothing on screen explaining why. */
   function populateBrands(select) {
+    var pool = scopePool();
     var brands = [];
-    for (var i = 0; i < PRODUCTS.length; i++) {
-      if (PAGE_CATEGORY && categoryOf(PRODUCTS[i]) !== PAGE_CATEGORY) continue;
-      if (brands.indexOf(PRODUCTS[i].brand) === -1) brands.push(PRODUCTS[i].brand);
+    for (var i = 0; i < pool.length; i++) {
+      if (brands.indexOf(pool[i].brand) === -1) brands.push(pool[i].brand);
     }
     brands.sort(function (a, b) { return a.localeCompare(b); });
+
+    // A brand that survives the category switch keeps its selection; one that
+    // does not falls back to all rather than filtering on something unlisted.
+    if (state.brand !== "all" && brands.indexOf(state.brand) === -1) state.brand = "all";
+
+    var html = '<option value="all">All brands</option>';
     for (var j = 0; j < brands.length; j++) {
-      var option = document.createElement("option");
-      option.value = brands[j];
-      option.textContent = brands[j];
-      select.appendChild(option);
+      html += '<option value="' + esc(brands[j]) + '">' + esc(brands[j]) + "</option>";
     }
+    select.innerHTML = html;
+    select.value = state.brand;
   }
 
   function populateCategories(select) {
@@ -927,7 +940,12 @@
     var filtersBtn = document.getElementById("sc-filters-btn");
     var filtersPanel = document.getElementById("sc-filters");
 
+    // A shared link is read once, before any control is built, so everything
+    // below renders already wearing the state it asked for.
+    readHashState();
+
     if (search) {
+      search.value = state.search;
       search.addEventListener("input", function () {
         state.search = search.value;
         renderHub();
@@ -936,12 +954,7 @@
 
     if (category) {
       populateCategories(category);
-      // Deep link: hub.html#cat-<slug> preselects a category.
-      var mcat = /^#cat-([a-z-]+)$/.exec(location.hash);
-      if (mcat && !PAGE_CATEGORY && CATEGORY_CONFIG[mcat[1]]) {
-        state.category = mcat[1];
-        category.value = mcat[1];
-      }
+      category.value = state.category;
       category.addEventListener("change", function () {
         state.category = category.value;
         // Different category, different figures: a figure set against the old
@@ -951,6 +964,8 @@
         state.dir = "";
         state.target = undefined;
         rebuildAxes();
+        // Brands are per-category too — see populateBrands.
+        if (brand) populateBrands(brand);
         renderFilterPanel();
         refreshFilterCount();
         renderHub();
@@ -967,6 +982,7 @@
 
     rebuildAxes();
     renderFilterPanel();
+    refreshFilterCount();
 
     if (filtersPanel) {
       filtersPanel.addEventListener("change", function (event) {
@@ -1054,7 +1070,7 @@
       state.tolerance = 0;
       if (search) search.value = "";
       if (category) category.value = "all";
-      if (brand) brand.value = "all";
+      if (brand) populateBrands(brand);
       rebuildAxes();
       renderFilterPanel();
       refreshFilterCount();
@@ -1080,11 +1096,91 @@
     }
   }
 
+  /* ---------------------------------------------------------------------
+   * URL state
+   *
+   * A narrowed view is the thing worth sending someone — "creatine, high to
+   * low, budget" is an answer, hub.html is not. Both the toolbar and the
+   * filter panel write themselves into the hash, and a link written before
+   * any of this (hub.html#cat-creatine) still reads back as its category.
+   * ------------------------------------------------------------------- */
+
+  // ":" is legal in a fragment and the axis keys are full of it (m:creatineG:g).
+  // Leaving it raw is the difference between a readable link and a wall of %3A.
+  function encHash(value) {
+    return encodeURIComponent(value).replace(/%3A/g, ":");
+  }
+
+  /* Reads a shared link back into `state`. Everything is checked against what
+   * this page actually offers — a hash is a stranger's typing, and a figure
+   * from a creatine link means nothing on the protein page. */
+  function readHashState() {
+    var raw = location.hash.replace(/^#/, "");
+    if (!raw) return;
+
+    var got = {};
+    raw.split("&").forEach(function (part) {
+      var legacy = /^cat-([a-z-]+)$/.exec(part);
+      if (legacy) { got.cat = legacy[1]; return; }
+      var at = part.indexOf("=");
+      if (at > 0) got[part.slice(0, at)] = decodeURIComponent(part.slice(at + 1));
+    });
+
+    if (!PAGE_CATEGORY && got.cat && CATEGORY_CONFIG[got.cat]) state.category = got.cat;
+    if (got.q) state.search = got.q;
+    if (got.mode === "advanced") state.mode = "advanced";
+    if (PRICE_TIERS.indexOf(got.price) !== -1) state.price = got.price;
+
+    // Brand and figure are both cut from the category, so they can only be
+    // checked once that is settled above.
+    if (got.brand && scopePool().some(function (p) { return p.brand === got.brand; })) {
+      state.brand = got.brand;
+    }
+
+    rebuildAxes();
+    var axis = got.fig ? axisByKey(got.fig) : null;
+    if (!axis) return; // no figure asked for, or one this category does not carry
+    state.figure = axis.key;
+
+    var i = parseInt(got.range, 10);
+    if (i >= 0 && i < axis.buckets.length) state.bucket = String(i);
+    if (got.sort === "desc" || got.sort === "asc") state.dir = got.sort;
+
+    var near = parseFloat(got.near);
+    if (isFinite(near) && near >= 0) state.target = near;
+
+    var within = parseFloat(got.within);
+    if (TOLERANCES.some(function (t) { return t.value === within; })) state.tolerance = within;
+  }
+
+  /* Mirrors `state` back out. replaceState rather than assigning location.hash:
+   * changing a filter is not a navigation, and writing thirty of them into
+   * history turns the back button into an undo log nobody asked for. */
+  function writeHashState() {
+    var bits = [];
+    if (!PAGE_CATEGORY && state.category !== "all") bits.push("cat-" + state.category);
+    if (state.search) bits.push("q=" + encHash(state.search));
+    if (state.brand !== "all") bits.push("brand=" + encHash(state.brand));
+    if (state.mode !== "simple") bits.push("mode=" + state.mode);
+    if (state.figure) bits.push("fig=" + encHash(state.figure));
+    if (state.bucket !== "all") bits.push("range=" + state.bucket);
+    if (state.dir) bits.push("sort=" + state.dir);
+    if (state.price !== "all") bits.push("price=" + encHash(state.price));
+    if (state.target !== undefined) bits.push("near=" + state.target);
+    if (state.tolerance) bits.push("within=" + state.tolerance);
+
+    var hash = bits.length ? "#" + bits.join("&") : "";
+    if (hash === location.hash) return;
+    history.replaceState(null, "", location.pathname + location.search + hash);
+  }
+
   // Legacy deep links (hub.html#p-<id>) now live at products/<id>.html.
+  // Reports whether it is navigating away, so the caller can stop.
   function redirectLegacyHash() {
     var m = /^#p-([a-z0-9-]+)$/.exec(location.hash);
-    if (!m || !byId(m[1])) return;
+    if (!m || !byId(m[1])) return false;
     location.replace("products/" + m[1] + ".html");
+    return true;
   }
 
   /* ---------------------------------------------------------------------
@@ -1571,10 +1667,12 @@
     var compare = document.getElementById("sc-compare-body");
 
     if (hub) {
+      // First, before the filter reads or rewrites the hash: a #p-<id> link
+      // is a navigation, not filter state, and the rewrite would eat it.
+      if (redirectLegacyHash()) return;
       wireFilters();
       renderHub();
       injectCatalogLD();
-      redirectLegacyHash();
     }
 
     if (preview) renderPreview();

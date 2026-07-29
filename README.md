@@ -47,13 +47,25 @@ Both tabs start with the same question — **which figure do you care about?** �
 | 3 | Sort — high to low, low to high | Match within — how far out to allow |
 | 4 | Price — Budget / Mid-range / Premium | Price — Budget / Mid-range / Premium |
 
-Picking a figure means "show me labels that actually list it", so choosing Creatine on the all-products hub narrows 187 products to the 39 that disclose a creatine dose. The figure and the price tier are shared state: set either on one tab and the other follows. Search, category, and brand sit in the toolbar above and apply throughout.
+Picking a figure means "show me labels that actually list it", so choosing Creatine on the all-products hub narrows 187 products to the 39 that disclose a creatine dose. The figure and the price tier are shared state: set either on one tab and the other follows. Search, category, and brand sit in the toolbar above and apply throughout. The brand list is cut from the category in scope and recut when that changes, so a category holding a dozen brands never offers the other ninety.
 
 Advanced orders results by distance from the amount you typed, closest first. "Match within" turns that ranking into a hard cut-off — sodium closest to 500 mg within 10% leaves six products.
 
 The figure list is read from each category's own `compareCols` entries marked `sortable` and `num`, so a category's filters and its compare table can never disagree about which figures matter, and a new category needs no extra configuration. A category page lists its own figures flat. The all-products hub lists everything, grouped by the supplement each figure belongs to, with figures that appear in more than one category lifted into a shared "Any supplement" group so caffeine is not filed under Pre-workout.
 
 Each figure works out its own ranges from the labels actually on file: cuts at the one-third and two-thirds points of the real values, rounded to a step derived from the spread. Caffeine is the exception and keeps hand-written ranges, because "under 150 mg" already means something to a reader in a way a computed cut does not. Milligram figures that run into four digits are shown in grams, matching the label they came from.
+
+### The URL carries the filter
+
+A narrowed view is the thing worth sending someone, so the whole filter writes itself into the address bar:
+
+```
+hub.html#cat-creatine&fig=m:creatineG:g&sort=desc&price=Budget
+```
+
+The keys are `cat` (as the older bare `cat-<slug>` token, which is what existing links use), `q` for search, `brand`, `mode` when it is Advanced, `fig` for the chosen figure, `range` for its amount band, `sort`, `price`, and `near` / `within` for the Advanced target and tolerance. Only what is actually set appears; clearing every filter clears the fragment.
+
+Opening such a link restores the panel, both tabs, and the result order. Every value is checked against what that page really offers first — a figure from a creatine link means nothing on the protein page and is dropped rather than filtering on something absent. Writes go through `history.replaceState`, because changing a filter is not a navigation and thirty of them would turn the back button into an undo log.
 
 ---
 
