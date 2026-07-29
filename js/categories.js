@@ -11,15 +11,10 @@
  *   page       string   canonical browse page for the category
  *   stimBadges boolean  true  -> tiles always show a stim tag (pre-workout)
  *                                or show one only when caffeinated (others);
- *                                also gates the caffeine filter + stim-free
- *                                toggle on the category's landing page
+ *                                also puts the caffeine range in the
+ *                                category's "at a glance" panel
  *   tileFacts  array    three {label, key} fact rows on the product tile
  *   compareCols array   compare-table columns: {label, key, sortable, num}
- *   sortOptions array   OPTIONAL — extra grid sorts offered on the category's
- *                       landing page, appended after "name (A–Z)".
- *                       {label, value}; value is "caffeine-asc" | "caffeine-desc"
- *                       | "f:<asc|desc>:<fact key>" (any key from the grammar
- *                       below, resolved through factSortValue)
  *
  * Key grammar (resolved by factOf()/factSortValue() in js/app.js):
  *   "caffeineMg" | "servings"      product number fields
@@ -50,12 +45,6 @@ var CATEGORY_CONFIG = {
       { label: "Stim tier", key: "stim" },
       { label: "Servings", key: "servings", sortable: true, num: true },
       { label: "Price", key: "price" }
-    ],
-    sortOptions: [
-      { label: "caffeine, high to low", value: "caffeine-desc" },
-      { label: "caffeine, low to high", value: "caffeine-asc" },
-      { label: "citrulline, high to low", value: "f:desc:ing:citrulline" },
-      { label: "servings, high to low", value: "f:desc:servings" }
     ]
   },
 
@@ -74,10 +63,6 @@ var CATEGORY_CONFIG = {
       { label: "Blend", key: "blend" },
       { label: "Servings", key: "servings", sortable: true, num: true },
       { label: "Price", key: "price" }
-    ],
-    sortOptions: [
-      { label: "creatine per serving, high to low", value: "f:desc:m:creatineG" },
-      { label: "servings, high to low", value: "f:desc:servings" }
     ]
   },
 
@@ -98,11 +83,6 @@ var CATEGORY_CONFIG = {
       { label: "Sweetener", key: "m:sweetener" },
       { label: "Servings", key: "servings", sortable: true, num: true },
       { label: "Price", key: "price" }
-    ],
-    sortOptions: [
-      { label: "protein per serving, high to low", value: "f:desc:m:proteinG" },
-      { label: "protein per scoop, high to low", value: "f:desc:protPct" },
-      { label: "servings, high to low", value: "f:desc:servings" }
     ]
   },
 
@@ -123,11 +103,6 @@ var CATEGORY_CONFIG = {
       { label: "Caffeine", key: "caffeineMg", sortable: true, num: true },
       { label: "Servings", key: "servings", sortable: true, num: true },
       { label: "Price", key: "price" }
-    ],
-    sortOptions: [
-      { label: "total EAAs, high to low", value: "f:desc:m:eaaG" },
-      { label: "leucine, high to low", value: "f:desc:m:leucineG" },
-      { label: "servings, high to low", value: "f:desc:servings" }
     ]
   },
 
@@ -148,11 +123,6 @@ var CATEGORY_CONFIG = {
       { label: "Sugar", key: "m:sugarG:g", sortable: true, num: true },
       { label: "Servings", key: "servings", sortable: true, num: true },
       { label: "Price", key: "price" }
-    ],
-    sortOptions: [
-      { label: "sodium, high to low", value: "f:desc:m:sodiumMg" },
-      { label: "sodium, low to high", value: "f:asc:m:sodiumMg" },
-      { label: "sugar, low to high", value: "f:asc:m:sugarG" }
     ]
   }
 };

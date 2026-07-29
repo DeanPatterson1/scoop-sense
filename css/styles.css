@@ -1340,7 +1340,10 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   color: var(--sc-muted);
 }
 
-/* Sticky, compact toolbar. */
+/* Sticky, compact toolbar.
+   An open filter panel can be taller than a phone viewport, and a pinned
+   element taller than the viewport can never be scrolled to its bottom — so
+   the bar gives up stickiness for as long as the panel is open. */
 .sc-toolbar {
   position: sticky;
   top: 0;
@@ -1351,6 +1354,10 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   border-top: 1px solid var(--sc-border);
   border-bottom: 1px solid var(--sc-border);
   padding: 12px 0;
+}
+
+.sc-toolbar.sc-open {
+  position: static;
 }
 
 .sc-toolbar-row {
@@ -1385,25 +1392,6 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   min-width: 0;
 }
 
-.sc-check {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.92rem;
-  font-weight: 600;
-  color: var(--sc-ink);
-  cursor: pointer;
-  min-height: 40px;
-  padding: 0 4px;
-}
-
-.sc-check input {
-  width: 16px;
-  height: 16px;
-  accent-color: var(--sc-accent);
-  cursor: pointer;
-}
-
 .sc-clear-btn {
   font-family: var(--sc-font-body);
   font-size: 0.88rem;
@@ -1423,7 +1411,10 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   color: var(--sc-ink);
 }
 
-/* Mobile: filters live in a drawer under the search row. */
+/* The toolbar row stays one line at every width: search, the two lists that
+   scope the whole page, and the way into the filter panel. Everything that
+   works on figures lives in the panel below, closed until asked for, so the
+   sticky bar can never grow tall enough to eat the grid. */
 .sc-filters-btn {
   display: inline-flex;
   align-items: center;
@@ -1454,39 +1445,137 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   transform: rotate(-135deg) translateY(-2px);
 }
 
-.sc-toolbar-filters {
-  display: none;
-  flex-basis: 100%;
-  flex-wrap: wrap;
+/* A shut panel must not hide the fact that it is doing something. */
+.sc-filters-count {
+  display: inline-flex;
   align-items: center;
-  gap: 8px 12px;
-  padding-top: 4px;
+  justify-content: center;
+  min-width: 19px;
+  height: 19px;
+  padding: 0 5px;
+  border-radius: 10px;
+  background: var(--sc-accent);
+  color: var(--sc-accent-ink);
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
 }
 
-.sc-toolbar-filters.sc-open {
-  display: flex;
+.sc-filters-count:empty {
+  display: none;
+}
+
+.sc-toolbar-filters {
+  flex-basis: 100%;
+  margin-top: 10px;
+  padding-top: 12px;
+  border-top: 1px solid var(--sc-border);
   animation: sc-fade 0.25s ease-out;
 }
 
-.sc-toolbar-filters .sc-select {
-  flex: 1 1 150px;
+.sc-toolbar-filters[hidden] {
+  display: none;
 }
 
-@media (min-width: 880px) {
-  .sc-filters-btn {
-    display: none;
-  }
+/* Simple / Advanced — two ways into one filter, not two filters. */
+.sc-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid var(--sc-border);
+}
 
-  .sc-toolbar-filters {
-    display: flex;
-    flex-basis: auto;
-    flex: 1 1 auto;
-    padding-top: 0;
-  }
+.sc-tab {
+  font-family: var(--sc-font-body);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--sc-muted);
+  background: none;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  padding: 6px 14px;
+  min-height: 38px;
+  cursor: pointer;
+}
 
-  .sc-toolbar-filters .sc-select {
-    flex: 0 1 auto;
-  }
+.sc-tab:hover {
+  color: var(--sc-ink);
+}
+
+.sc-tab[aria-selected="true"] {
+  color: var(--sc-ink);
+  border-bottom-color: var(--sc-accent);
+}
+
+/* One labelled control per step: figure, amount, sort, price. One line on a
+   desktop, stacking down as the room runs out. */
+.sc-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+}
+
+.sc-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1 1 190px;
+  min-width: 0;
+}
+
+/* The figure is the question the other three answer, so it gets the room. */
+.sc-field:first-child {
+  flex: 1.4 1 240px;
+}
+
+.sc-field-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sc-muted);
+}
+
+.sc-field .sc-select,
+.sc-field .sc-numwrap {
+  width: 100%;
+  min-width: 0;
+}
+
+.sc-field .sc-select:disabled,
+.sc-field .sc-numinput:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.sc-numwrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.sc-numinput {
+  width: 100%;
+  min-width: 0;
+  padding-right: 38px;
+  font-variant-numeric: tabular-nums;
+}
+
+.sc-numunit {
+  position: absolute;
+  right: 11px;
+  font-size: 0.82rem;
+  color: var(--sc-muted);
+  pointer-events: none;
+}
+
+.sc-fnote {
+  margin-top: 12px;
+  max-width: 78ch;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--sc-muted);
 }
 
 .sc-count {

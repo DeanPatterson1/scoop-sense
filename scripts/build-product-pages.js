@@ -17,7 +17,7 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const OUT = path.join(ROOT, "products");
-const VERSION = "20260729g"; // keep in sync with the ?v= on the other pages
+const VERSION = "20260729i"; // keep in sync with the ?v= on the other pages
 
 // Set this to the real origin at domain time (see README "Sitemap & domain").
 // Absolute-URL metadata — canonical, og:url, BreadcrumbList — is emitted only

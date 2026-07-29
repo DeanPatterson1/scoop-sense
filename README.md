@@ -13,13 +13,13 @@ Built with vanilla HTML, CSS, and JavaScript. No frameworks, no build step. The 
 | File | What it does |
 | --- | --- |
 | `index.html` | Homepage. Left-aligned editorial hero with credibility row, a six-row database preview table, the methodology section (`#methodology`) with an annotated real label (C4 Original) and a labelled dose scale, three "places to start" picks, and a compact safety callout. |
-| `hub.html` | The all-products database. Sticky compact toolbar (search, category filter, caffeine filter, brand filter, sort, stim-free toggle, clear all — collapsing into a Filters drawer on mobile), category chip row, result count, and an image-forward tile grid. Tiles link to static product pages. Deep links: `hub.html#cat-<slug>` preselects a category; legacy `#p-<id>` links redirect to the product page. |
-| `creatine.html` `protein.html` `eaa.html` `electrolytes.html` | Category landing pages. Each declares `<body data-category="...">`, which locks the grid and the embedded compare table (at `#compare`) to that category with category-specific columns from `js/categories.js`. Each also carries the cross-category chip row and a sort control whose options come from that category's `sortOptions`. |
+| `hub.html` | The all-products database. Sticky one-line toolbar (search, category, brand, "Filters & sort", clear all) over a collapsible filter panel, category chip row, result count, and an image-forward tile grid. Tiles link to static product pages. Deep links: `hub.html#cat-<slug>` preselects a category; legacy `#p-<id>` links redirect to the product page. |
+| `creatine.html` `protein.html` `eaa.html` `electrolytes.html` | Category landing pages. Each declares `<body data-category="...">`, which locks the grid and the embedded compare table (at `#compare`) to that category with category-specific columns from `js/categories.js`. Each also carries the cross-category chip row, and the filter panel builds itself from that category's own figures. |
 | `compare.html` | Pre-workout compare table (locked via `data-category="pre-workout"`): caffeine, citrulline, beta-alanine, blend status, stim tier, servings, price tier. Column headers sort; other categories compare on their own pages. |
 | `disclosure.html` | About page: what the site is, plus the FTC affiliate disclosure — how the site makes money and what commissions never buy. |
 | `disclaimer.html` | Health & safety page: FDA disclaimer box, not-medical-advice statement, general caffeine guidance, individual tolerance, medication/medical conditions, pregnancy and nursing, and the verify-current-label note. |
 | `css/styles.css` | The whole design system in one stylesheet: design tokens, typography, facts-panel tables, product rows, toolbar/drawer, tags, chips, category cards, footer, responsive rules. All classes use the `sc-` prefix. |
-| `js/categories.js` | The category registry: `CATEGORY_CONFIG` maps each category slug to its label, landing page, tile facts, compare columns, optional grid `sortOptions`, and whether caffeine filters apply. Adding a category starts here. |
+| `js/categories.js` | The category registry: `CATEGORY_CONFIG` maps each category slug to its label, landing page, tile facts, compare columns, and whether it carries stim badges. Adding a category starts here. The sortable numeric compare columns double as the category's filter axes, so a new category gets its filter panel for free. |
 | `js/doses.js` | `STUDIED_DOSES` — the amounts commonly used in published research, per ingredient and per category metric. Build-time only: `scripts/build-product-pages.js` reads it to draw the "This label against the research" bars. Ingredients with no settled research amount carry `low: null` and render as a note with no bar. Never invent a range to fill a gap. |
 | `js/app.js` | One IIFE. Reads the globals `PRODUCTS`, `FEATURED_IDS`, and `CATEGORY_CONFIG`. Renders grids, compare tables, homepage preview + picks, and the saved page from config; handles filtering, sorting, and hash deep links. |
 | `data/products.js` | **The single source of truth.** Every product object across all categories, plus the schema documented in a header comment. `FEATURED_IDS` picks the three "places to start" on the homepage. |
@@ -31,6 +31,29 @@ Built with vanilla HTML, CSS, and JavaScript. No frameworks, no build step. The 
 | `README.md` | This file. |
 
 Script order matters: every page that renders products loads its data file first, `js/categories.js` second, and `js/app.js` last. The data file is `data/products.js` on the homepage, hub, and saved list — all three need the whole catalog — and `data/by-category/<slug>.js` on the four category pages and `compare.html`, which each render one category. `disclosure.html` and `disclaimer.html` load only `js/app.js`, which is enough to keep the nav's saved counter accurate; it no-ops when `PRODUCTS` is undefined. `js/doses.js` is **not** loaded in the browser — it is a build-time reference table.
+
+---
+
+## How the filter works
+
+Every browse page ships an empty `<div id="sc-filters" hidden>`; `js/app.js` builds the panel inside it at load. There is no filter markup to maintain per page.
+
+Both tabs start with the same question — **which figure do you care about?** — and differ only in what they do with the answer:
+
+| | Simple | Advanced |
+| --- | --- | --- |
+| 1 | Filter by — the figure | Filter by — the figure |
+| 2 | Amount — a range of it | Closest to — an amount of it |
+| 3 | Sort — high to low, low to high | Match within — how far out to allow |
+| 4 | Price — Budget / Mid-range / Premium | Price — Budget / Mid-range / Premium |
+
+Picking a figure means "show me labels that actually list it", so choosing Creatine on the all-products hub narrows 187 products to the 39 that disclose a creatine dose. The figure and the price tier are shared state: set either on one tab and the other follows. Search, category, and brand sit in the toolbar above and apply throughout.
+
+Advanced orders results by distance from the amount you typed, closest first. "Match within" turns that ranking into a hard cut-off — sodium closest to 500 mg within 10% leaves six products.
+
+The figure list is read from each category's own `compareCols` entries marked `sortable` and `num`, so a category's filters and its compare table can never disagree about which figures matter, and a new category needs no extra configuration. A category page lists its own figures flat. The all-products hub lists everything, grouped by the supplement each figure belongs to, with figures that appear in more than one category lifted into a shared "Any supplement" group so caffeine is not filed under Pre-workout.
+
+Each figure works out its own ranges from the labels actually on file: cuts at the one-third and two-thirds points of the real values, rounded to a step derived from the spread. Caffeine is the exception and keeps hand-written ranges, because "under 150 mg" already means something to a reader in a way a computed cut does not. Milligram figures that run into four digits are shown in grams, matching the label they came from.
 
 ---
 
@@ -131,5 +154,5 @@ Setting a real `SITE_ORIGIN` also switches on the metadata that needs absolute U
 - Load all five pages and confirm the FDA statement renders in the footer of each one.
 - Click every affiliate link and confirm it opens the right product search in a new tab, with your real tracking tag in the URL.
 - Confirm the disclosure line is visible on the hub before any product row.
-- Resize to a phone width and check the header nav, the filter drawer, the tile grid, the detail dialog, and the compare table's horizontal scroll all reflow cleanly.
+- Resize to a phone width and check the header nav, the filter panel, the tile grid, the detail dialog, and the compare table's horizontal scroll all reflow cleanly.
 - Set a reminder to re-check label figures on a schedule — quarterly is reasonable.

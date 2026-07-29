@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20260729g">
+  <link rel="stylesheet" href="css/styles.css?v=20260729i">
 </head>
 <body data-category="creatine">
 
@@ -64,17 +64,14 @@
     <div class="sc-container">
       <div class="sc-toolbar-row">
         <input class="sc-input" type="search" id="sc-search" placeholder="Search product, brand, or form" aria-label="Search products">
-        <button type="button" class="sc-filters-btn" id="sc-filters-btn" aria-expanded="false" aria-controls="sc-filters">Filters</button>
-        <div class="sc-toolbar-filters" id="sc-filters">
-          <select class="sc-select" id="sc-brand" aria-label="Brand">
-            <option value="all">All brands</option>
-          </select>
-          <select class="sc-select" id="sc-sort" aria-label="Sort products">
-            <option value="name">Sort: name (A–Z)</option>
-          </select>
-          <button type="button" class="sc-clear-btn" id="sc-clear">Clear all</button>
-        </div>
+        <select class="sc-select" id="sc-brand" aria-label="Brand">
+          <option value="all">All brands</option>
+        </select>
+        <button type="button" class="sc-filters-btn" id="sc-filters-btn" aria-expanded="false" aria-controls="sc-filters">Filters &amp; sort<span class="sc-filters-count" id="sc-filters-count"></span></button>
+        <button type="button" class="sc-clear-btn" id="sc-clear">Clear all</button>
       </div>
+      <!-- Built by js/app.js from the category's own figures. -->
+      <div class="sc-toolbar-filters" id="sc-filters" hidden></div>
       <p class="sc-eval-link"><a href="index.html#methodology">How we evaluate products</a><span class="sc-eval-extra"> — every figure comes from the manufacturer's supplement facts panel, compared against doses used in published research. Labels verified July 2026.</span></p>
     </div>
   </section>
@@ -148,8 +145,8 @@
   </div>
 </footer>
 
-<script src="data/by-category/creatine.js?v=20260729g"></script>
-<script src="js/categories.js?v=20260729g"></script>
-<script src="js/app.js?v=20260729g"></script>
+<script src="data/by-category/creatine.js?v=20260729i"></script>
+<script src="js/categories.js?v=20260729i"></script>
+<script src="js/app.js?v=20260729i"></script>
 </body>
 </html>

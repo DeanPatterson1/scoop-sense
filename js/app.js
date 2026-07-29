@@ -19,14 +19,32 @@
   // the dataset (grid AND compare rows) is then locked to that category.
   var PAGE_CATEGORY = document.body.getAttribute("data-category") || null;
 
+  /* Filter state. The Simple and Advanced tabs are two ways to work ONE
+   * chosen figure, not two filters: both start by picking the figure, and
+   * the figure, the price tier, and the scoping controls carry across.
+   *   figure    axis key the reader picked ("" = browse everything)
+   *   bucket    index into that figure's ranges ("all" = off)
+   *   dir       "" | "desc" | "asc" — sort on the chosen figure
+   *   price     "all" | "Budget" | "Mid-range" | "Premium"
+   *   target    the amount typed on the Advanced tab, in display units
+   *   tolerance 0 = rank by closeness only; otherwise a hard +/- fraction
+   */
   var state = {
     search: "",
     category: PAGE_CATEGORY || "all",
-    caffeine: "all",
     brand: "all",
-    stimFreeOnly: false,
-    sort: "name"
+    mode: "simple",
+    figure: "",
+    bucket: "all",
+    dir: "",
+    price: "all",
+    target: undefined,
+    tolerance: 0
   };
+
+  // Figures on offer for whatever category is in scope; see rebuildAxes().
+  var AXES = [];
+  var FIGURE_GROUPS = [];
 
   // Products predate the category field; missing means pre-workout.
   function categoryOf(p) {
@@ -121,42 +139,60 @@
     return haystack.indexOf(term) !== -1;
   }
 
+  function byName(a, b) {
+    return a.name.localeCompare(b.name) || a.brand.localeCompare(b.brand);
+  }
+
+  // Is the grid currently ordered by distance from a typed amount?
+  function isRanked() {
+    return state.mode === "advanced" && !!state.figure && state.target !== undefined;
+  }
+
   function applyFilters() {
     var term = state.search.trim().toLowerCase();
+    var axis = state.figure ? axisByKey(state.figure) : null;
+    var ranked = isRanked() && axis;
 
     var results = PRODUCTS.filter(function (p) {
       if (!matchesSearch(p, term)) return false;
       if (state.category !== "all" && categoryOf(p) !== state.category) return false;
-      if (state.caffeine !== "all" && bucketOf(p) !== state.caffeine) return false;
       if (state.brand !== "all" && p.brand !== state.brand) return false;
-      if (state.stimFreeOnly && p.stimFree !== true) return false;
+      if (state.price !== "all" && priceWordOf(p) !== state.price) return false;
+      if (!axis) return true;
+
+      var v = factSortValue(p, axis.key);
+      // Picking a figure means "show me labels that actually list it" — a
+      // creatine search should not return every protein powder on file.
+      if (v === -1) return false;
+
+      if (state.bucket !== "all") {
+        var range = axis.buckets[Number(state.bucket)];
+        if (!range || !range.test(v)) return false;
+      }
+      // A tolerance turns the typed amount from a ranking into a cut-off.
+      if (ranked && state.tolerance > 0 && !withinTolerance(p, axis, state.target)) {
+        return false;
+      }
       return true;
     });
 
-    function byName(a, b) {
-      return a.name.localeCompare(b.name) || a.brand.localeCompare(b.brand);
-    }
-
-    // "f:<asc|desc>:<fact key>" — the key itself may contain colons
-    // ("m:creatineG"), so only the first two segments are the directive.
-    var factSort = /^f:(asc|desc):(.+)$/.exec(state.sort);
-
-    results.sort(function (a, b) {
-      if (state.sort === "caffeine-asc") return a.caffeineMg - b.caffeineMg;
-      if (state.sort === "caffeine-desc") return b.caffeineMg - a.caffeineMg;
-      if (factSort) {
-        var av = factSortValue(a, factSort[2]);
-        var bv = factSortValue(b, factSort[2]);
-        // factSortValue uses -1 for "label doesn't disclose it"; those sort
-        // last in both directions rather than pretending to be a low figure.
-        if (av === -1 && bv === -1) return byName(a, b);
-        if (av === -1) return 1;
-        if (bv === -1) return -1;
-        if (av !== bv) return factSort[1] === "asc" ? av - bv : bv - av;
+    if (ranked) {
+      var aim = state.target / axis.scale;
+      results.sort(function (a, b) {
+        var da = Math.abs(factSortValue(a, axis.key) - aim);
+        var db = Math.abs(factSortValue(b, axis.key) - aim);
+        return da !== db ? da - db : byName(a, b);
+      });
+    } else if (axis && state.dir) {
+      results.sort(function (a, b) {
+        var av = factSortValue(a, axis.key);
+        var bv = factSortValue(b, axis.key);
+        if (av !== bv) return state.dir === "asc" ? av - bv : bv - av;
         return byName(a, b);
-      }
-      return byName(a, b);
-    });
+      });
+    } else {
+      results.sort(byName);
+    }
 
     return results;
   }
@@ -273,6 +309,217 @@
     return 0;
   }
 
+  /* ---------------------------------------------------------------------
+   * Filter figures
+   *
+   * The filter starts with one question: which figure do you care about?
+   * Creatine grams, caffeine, protein, beta-alanine, sodium. The answers come
+   * from each category's own sortable numeric compare columns, so a category's
+   * filters and its compare table can never disagree about which figures
+   * matter, and a new category needs no extra configuration.
+   *
+   * An axis is one of those figures with everything the panel needs to work
+   * it: the unit it reads in, the spread across the labels on file, and the
+   * ranges cut from them.
+   * ------------------------------------------------------------------- */
+
+  // Products the page is allowed to show: a category page never leaves its
+  // slice, and the hub narrows once a category is picked.
+  function scopePool() {
+    var cat = PAGE_CATEGORY || state.category;
+    if (cat === "all") return PRODUCTS;
+    return PRODUCTS.filter(function (p) { return categoryOf(p) === cat; });
+  }
+
+  // Unit factSortValue already reports the figure in.
+  function rawUnitOf(key) {
+    if (key === "caffeineMg") return "mg";
+    if (key === "protPct") return "%";
+    if (key.indexOf("ing:") === 0) return "mg"; // parseDoseMg normalises to mg
+    if (key.indexOf("m:") === 0) {
+      var parts = key.split(":");
+      return parts.length > 2 ? parts[2] : "";
+    }
+    return "";
+  }
+
+  function axisDefsFor(cat) {
+    var cfg = CATEGORY_CONFIG[cat];
+    if (!cfg) return [];
+    return cfg.compareCols
+      .filter(function (c) { return c.sortable && c.num; })
+      .map(function (c) { return { key: c.key, label: c.label }; });
+  }
+
+  /* The figure list, grouped the way a reader thinks about it.
+   *
+   * A category page offers that category's figures flat. The all-products hub
+   * offers everything, grouped by the supplement the figure belongs to —
+   * "Creatine" under Creatine, "Sodium" under Electrolytes — with the figures
+   * that turn up in more than one category lifted into a shared group at the
+   * top so caffeine is not filed under Pre-workout. */
+  function buildFigureGroups() {
+    var cat = PAGE_CATEGORY || state.category;
+    if (cat !== "all") return [{ label: null, defs: axisDefsFor(cat) }];
+
+    var slugs = Object.keys(CATEGORY_CONFIG);
+    var seenIn = {};
+    slugs.forEach(function (slug) {
+      axisDefsFor(slug).forEach(function (d) {
+        seenIn[d.key] = (seenIn[d.key] || 0) + 1;
+      });
+    });
+
+    var shared = [];
+    var groups = [];
+    var claimed = {};
+
+    slugs.forEach(function (slug) {
+      var mine = [];
+      axisDefsFor(slug).forEach(function (d) {
+        if (claimed[d.key]) return;
+        claimed[d.key] = true;
+        if (seenIn[d.key] > 1) shared.push(d);
+        else mine.push(d);
+      });
+      if (mine.length) groups.push({ label: CATEGORY_CONFIG[slug].label, defs: mine });
+    });
+
+    if (shared.length) groups.unshift({ label: "Any supplement", defs: shared });
+    return groups;
+  }
+
+  // Caffeine's ranges carry meaning a reader already has (two cups of coffee),
+  // so they stay hand-written. Every other axis splits its own observed range.
+  var CAFFEINE_BUCKETS = [
+    { label: "Stim-free (0 mg)", test: function (v) { return v === 0; } },
+    { label: "Under 150 mg", test: function (v) { return v > 0 && v < 150; } },
+    { label: "150–249 mg", test: function (v) { return v >= 150 && v < 250; } },
+    { label: "250 mg and up", test: function (v) { return v >= 250; } }
+  ];
+
+  var PRICE_TIERS = ["Budget", "Mid-range", "Premium"];
+
+  // A step a label would actually print: 1, 2, or 5 times a power of ten.
+  function niceRound(v) {
+    if (!isFinite(v) || v <= 0) return 0;
+    var mag = Math.pow(10, Math.floor(Math.log(v) / Math.LN10));
+    var n = v / mag;
+    return (n < 1.5 ? 1 : n < 3.5 ? 2 : n < 7.5 ? 5 : 10) * mag;
+  }
+
+  function roundTo(v, step) {
+    return Math.round((Math.round(v / step) * step) * 1e6) / 1e6;
+  }
+
+  function fmt(n) {
+    return String(Math.round(n * 100) / 100);
+  }
+
+  // values must be sorted ascending.
+  function quantile(values, q) {
+    return values[Math.min(values.length - 1, Math.floor(q * values.length))];
+  }
+
+  /* Three ranges cut where the labels actually sit, not at even thirds of the
+   * span: a third of the way along the citrulline axis is nowhere near a
+   * third of the citrulline products.
+   *
+   * The cuts round to a step derived from the SPREAD rather than from each
+   * cut's own magnitude — rounding 3.9 and 7.0 by magnitude lands both on 5
+   * and the axis silently loses its ranges. Where the spread is too tight for
+   * three, two are offered; where it is tight for two, the axis is sort-only. */
+  function bucketsFor(axis) {
+    if (axis.key === "caffeineMg") return CAFFEINE_BUCKETS;
+
+    var values = axis.dvals;
+    if (values.length < 3) return [];
+    var lo = values[0];
+    var hi = values[values.length - 1];
+    if (!(hi > lo)) return [];
+
+    var step = niceRound((hi - lo) / 6) || (hi - lo) / 6;
+    var cut1 = roundTo(quantile(values, 1 / 3), step);
+    var cut2 = roundTo(quantile(values, 2 / 3), step);
+    if (cut1 <= lo) cut1 = roundTo(lo + step, step);
+    if (cut2 <= cut1) cut2 = roundTo(cut1 + step, step);
+
+    // "70%" reads right; "70 %" does not.
+    var unit = !axis.unit ? "" : axis.unit === "%" ? "%" : " " + axis.unit;
+    function under(cut) {
+      var raw = cut / axis.scale;
+      return { label: "Under " + fmt(cut) + unit, test: function (v) { return v < raw; } };
+    }
+    function from(cut) {
+      var raw = cut / axis.scale;
+      return { label: fmt(cut) + unit + " and up", test: function (v) { return v >= raw; } };
+    }
+
+    if (cut1 <= lo || cut1 >= hi) return [];
+    if (cut2 >= hi) return [under(cut1), from(cut1)];
+
+    var raw1 = cut1 / axis.scale;
+    var raw2 = cut2 / axis.scale;
+    return [
+      under(cut1),
+      { label: fmt(cut1) + "–" + fmt(cut2) + unit,
+        test: function (v) { return v >= raw1 && v < raw2; } },
+      from(cut2)
+    ];
+  }
+
+  function rebuildAxes() {
+    var pool = scopePool();
+    FIGURE_GROUPS = buildFigureGroups();
+
+    var defs = [];
+    FIGURE_GROUPS.forEach(function (g) { defs = defs.concat(g.defs); });
+
+    AXES = defs.map(function (def) {
+      var axis = { key: def.key, label: def.label, unit: rawUnitOf(def.key), scale: 1 };
+
+      if (def.key === "protPct") axis.scale = 100; // stored as a fraction
+
+      var values = [];
+      for (var i = 0; i < pool.length; i++) {
+        var v = factSortValue(pool[i], def.key);
+        if (typeof v === "number" && v >= 0) values.push(v);
+      }
+      values.sort(function (a, b) { return a - b; });
+      axis.min = values.length ? values[0] : 0;
+      axis.max = values.length ? values[values.length - 1] : 0;
+
+      // Milligram figures that run into four digits (citrulline, EAAs) are
+      // read as grams on the label they came from — show them the same way.
+      if (axis.unit === "mg" && axis.max >= 2000) {
+        axis.unit = "g";
+        axis.scale = 0.001;
+      }
+
+      // Same figures in the units the reader sees, for cutting ranges.
+      axis.dvals = values.map(function (v) { return v * axis.scale; });
+      axis.buckets = bucketsFor(axis);
+      return axis;
+    });
+  }
+
+  function axisByKey(key) {
+    for (var i = 0; i < AXES.length; i++) {
+      if (AXES[i].key === key) return AXES[i];
+    }
+    return null;
+  }
+
+  function withinTolerance(p, axis, target) {
+    var v = factSortValue(p, axis.key);
+    if (v === -1) return false;
+    var raw = target / axis.scale;
+    // A target of zero has no percentage around it, so a stim-free search
+    // falls back to the same fraction of the axis's own spread.
+    var allowed = state.tolerance * (raw || (axis.max - axis.min) || 1);
+    return Math.abs(v - raw) <= allowed;
+  }
+
   function productLinkCell(p) {
     return '<a href="products/' + esc(p.id) + '.html">' +
       '<span class="sc-cell-brand">' + esc(p.brand) + "</span>" +
@@ -329,8 +576,7 @@
   // Stim tag rule: pre-workout tiles always carry one; every other category
   // shows one only when the formula is actually caffeinated — a "Stim-Free"
   // chip on a protein shelf is noise, but caffeine anywhere deserves a flag.
-  // (The config stimBadges flag gates the caffeine FILTERS on landing pages,
-  // not this tag.)
+  // (The config stimBadges flag drives the "at a glance" panel, not this tag.)
   function showsStimTag(p) {
     return categoryOf(p) === "pre-workout" || p.caffeineMg > 0;
   }
@@ -431,10 +677,11 @@
     list.innerHTML = results.map(tileHTML).join("");
 
     if (count) {
-      var pool = PAGE_CATEGORY
-        ? PRODUCTS.filter(function (p) { return categoryOf(p) === PAGE_CATEGORY; }).length
-        : PRODUCTS.length;
-      count.textContent = "Showing " + results.length + " of " + pool + " products";
+      // "of" counts what the page is currently scoped to, not the whole
+      // catalog — "2 of 187" is a lie once a category is picked.
+      var pool = scopePool().length;
+      count.textContent = "Showing " + results.length + " of " + pool + " products" +
+        (isRanked() ? " — closest first" : "");
     }
     if (empty) {
       empty.hidden = results.length !== 0;
@@ -477,33 +724,205 @@
     }
   }
 
-  // A category page sorts on the figures that category is actually chosen on
-  // (creatine grams, protein per scoop, sodium) — those come from its
-  // sortOptions entry. The all-products hub keeps the markup it ships with.
-  function populateSorts(select) {
-    if (!PAGE_CATEGORY) return;
-    var opts = (CATEGORY_CONFIG[PAGE_CATEGORY] || {}).sortOptions;
-    if (!opts || !opts.length) return;
-    select.innerHTML = "";
-    var base = document.createElement("option");
-    base.value = "name";
-    base.textContent = "Sort: name (A–Z)";
-    select.appendChild(base);
-    for (var i = 0; i < opts.length; i++) {
-      var option = document.createElement("option");
-      option.value = opts[i].value;
-      option.textContent = "Sort: " + opts[i].label;
-      select.appendChild(option);
+  /* ---------------------------------------------------------------------
+   * Filter panel
+   *
+   * Built here rather than written into each page's markup, so the five
+   * browse pages ship an empty container and every category gets the same
+   * controls over its own figures.
+   *
+   * Both tabs start with the same question — which figure? — and differ only
+   * in what they do with the answer. Simple narrows it to a range and sorts
+   * on it. Advanced takes an amount and orders by nearness to it.
+   *
+   * The markup is built once per figure list (a category switch rebuilds it).
+   * Everything after that updates in place: replacing the panel mid-keystroke
+   * would take the caret out of the input and the focus off the select.
+   * ------------------------------------------------------------------- */
+
+  var TOLERANCES = [
+    { value: 0, label: "Any distance — just rank them" },
+    { value: 0.1, label: "Within 10%" },
+    { value: 0.25, label: "Within 25%" },
+    { value: 0.5, label: "Within 50%" }
+  ];
+
+  var DIRECTIONS = [
+    { value: "", label: "Name (A–Z)" },
+    { value: "desc", label: "High to low" },
+    { value: "asc", label: "Low to high" }
+  ];
+
+  function optionsHTML(items, selected) {
+    return items.map(function (it) {
+      return '<option value="' + esc(it.value) + '"' +
+        (String(it.value) === String(selected) ? " selected" : "") + ">" +
+        esc(it.label) + "</option>";
+    }).join("");
+  }
+
+  // The figure list, with the hub's optgroups intact.
+  function figureOptionsHTML() {
+    var html = '<option value="">Everything on file</option>';
+    FIGURE_GROUPS.forEach(function (group) {
+      var opts = group.defs.map(function (d) {
+        return '<option value="' + esc(d.key) + '"' +
+          (d.key === state.figure ? " selected" : "") + ">" + esc(d.label) + "</option>";
+      }).join("");
+      html += group.label
+        ? '<optgroup label="' + esc(group.label) + '">' + opts + "</optgroup>"
+        : opts;
+    });
+    return html;
+  }
+
+  function fieldHTML(label, id, controlHTML) {
+    return '<div class="sc-field">' +
+      '<label class="sc-field-label" for="' + id + '">' + esc(label) + "</label>" +
+      controlHTML +
+    "</div>";
+  }
+
+  function selectHTML(id, inner) {
+    return '<select class="sc-select" id="' + id + '">' + inner + "</select>";
+  }
+
+  function tabHTML(mode, label) {
+    var on = state.mode === mode;
+    return '<button type="button" class="sc-tab" role="tab" id="sc-tab-' + mode + '" ' +
+      'data-mode="' + mode + '" aria-selected="' + on + '" ' +
+      'aria-controls="sc-panel-' + mode + '" tabindex="' + (on ? "0" : "-1") + '">' +
+      esc(label) + "</button>";
+  }
+
+  function renderFilterPanel() {
+    var panel = document.getElementById("sc-filters");
+    if (!panel) return;
+
+    var priceOptions = optionsHTML(
+      [{ value: "all", label: "Any price" }].concat(PRICE_TIERS.map(function (t) {
+        return { value: t, label: t };
+      })), state.price);
+
+    panel.innerHTML =
+      '<div class="sc-tabs" role="tablist" aria-label="Filter mode">' +
+        tabHTML("simple", "Simple") + tabHTML("advanced", "Advanced") +
+      "</div>" +
+
+      '<div class="sc-fpanel" id="sc-panel-simple" role="tabpanel" ' +
+        'aria-labelledby="sc-tab-simple"' + (state.mode === "simple" ? "" : " hidden") + ">" +
+        '<div class="sc-fields">' +
+          fieldHTML("Filter by", "sc-figure", selectHTML("sc-figure", figureOptionsHTML())) +
+          fieldHTML("Amount", "sc-range", selectHTML("sc-range", "")) +
+          fieldHTML("Sort", "sc-dir", selectHTML("sc-dir", optionsHTML(DIRECTIONS, state.dir))) +
+          fieldHTML("Price", "sc-price", selectHTML("sc-price", priceOptions)) +
+        "</div>" +
+        '<p class="sc-fnote" id="sc-note-simple"></p>' +
+      "</div>" +
+
+      '<div class="sc-fpanel" id="sc-panel-advanced" role="tabpanel" ' +
+        'aria-labelledby="sc-tab-advanced"' + (state.mode === "advanced" ? "" : " hidden") + ">" +
+        '<div class="sc-fields">' +
+          fieldHTML("Filter by", "sc-figure-adv", selectHTML("sc-figure-adv", figureOptionsHTML())) +
+          fieldHTML("Closest to", "sc-target",
+            '<span class="sc-numwrap">' +
+              '<input class="sc-input sc-numinput" type="number" inputmode="decimal" ' +
+                'min="0" step="any" id="sc-target" value="' +
+                (state.target === undefined ? "" : esc(state.target)) + '">' +
+              '<span class="sc-numunit" id="sc-target-unit" aria-hidden="true"></span>' +
+            "</span>") +
+          fieldHTML("Match within", "sc-tolerance",
+            selectHTML("sc-tolerance", optionsHTML(TOLERANCES, state.tolerance))) +
+          fieldHTML("Price", "sc-price-adv", selectHTML("sc-price-adv", priceOptions)) +
+        "</div>" +
+        '<p class="sc-fnote" id="sc-note-advanced"></p>' +
+      "</div>";
+
+    syncFigureUI();
+  }
+
+  /* Everything downstream of the chosen figure: its ranges, its unit, the
+   * span worth aiming at, and whether the controls that need a figure are
+   * live at all. Rewrites those controls only, never the panel. */
+  function syncFigureUI() {
+    var axis = state.figure ? axisByKey(state.figure) : null;
+    var range = document.getElementById("sc-range");
+    var dir = document.getElementById("sc-dir");
+    var target = document.getElementById("sc-target");
+    var unit = document.getElementById("sc-target-unit");
+    var tol = document.getElementById("sc-tolerance");
+    if (!range) return;
+
+    var ranges = [{ value: "all", label: "Any amount" }];
+    if (axis) {
+      axis.buckets.forEach(function (b, i) { ranges.push({ value: i, label: b.label }); });
+    }
+    range.innerHTML = optionsHTML(ranges, state.bucket);
+    range.disabled = !axis || !axis.buckets.length;
+    dir.disabled = !axis;
+    target.disabled = !axis;
+    tol.disabled = !axis;
+
+    if (axis) {
+      var lo = fmt(axis.min * axis.scale);
+      var hi = fmt(axis.max * axis.scale);
+      target.placeholder = lo + "–" + hi;
+      target.setAttribute("aria-label",
+        "Amount of " + axis.label + (axis.unit ? " in " + axis.unit : "") +
+        " to get closest to, between " + lo + " and " + hi);
+      unit.textContent = axis.unit;
+    } else {
+      target.placeholder = "—";
+      target.setAttribute("aria-label", "Pick a figure first");
+      unit.textContent = "";
+    }
+
+    var simple = document.getElementById("sc-note-simple");
+    var advanced = document.getElementById("sc-note-advanced");
+    if (axis) {
+      simple.textContent = "Showing only labels that list " + axis.label.toLowerCase() +
+        ". Narrow it to an amount, sort high to low or low to high, and set a price tier — " +
+        "they all apply together.";
+      advanced.textContent = "Type the " + axis.label.toLowerCase() +
+        " you are after and the grid reorders by how close each label sits to it, " +
+        "closest first. “Match within” drops anything further out than that.";
+    } else {
+      simple.textContent = "Start by picking the figure you care about — creatine, caffeine, " +
+        "protein, beta-alanine, sodium. Everything else here then works on that figure.";
+      advanced.textContent = "Pick a figure first, then type the amount you are after and " +
+        "the grid reorders by how close each label sits to it.";
+    }
+  }
+
+  // A collapsed panel must not hide the fact that it is doing something.
+  function refreshFilterCount() {
+    var badge = document.getElementById("sc-filters-count");
+    if (!badge) return;
+    var n = 0;
+    if (state.figure) n++;
+    if (state.bucket !== "all") n++;
+    if (state.dir) n++;
+    if (state.price !== "all") n++;
+    if (state.target !== undefined) n++;
+    badge.textContent = n ? String(n) : "";
+  }
+
+  function setMode(mode) {
+    state.mode = mode;
+    var tabs = document.querySelectorAll("[data-mode]");
+    for (var i = 0; i < tabs.length; i++) {
+      var on = tabs[i].getAttribute("data-mode") === mode;
+      tabs[i].setAttribute("aria-selected", on ? "true" : "false");
+      tabs[i].setAttribute("tabindex", on ? "0" : "-1");
+      var pane = document.getElementById("sc-panel-" + tabs[i].getAttribute("data-mode"));
+      if (pane) pane.hidden = !on;
     }
   }
 
   function wireFilters() {
     var search = document.getElementById("sc-search");
     var category = document.getElementById("sc-category");
-    var caffeine = document.getElementById("sc-caffeine");
     var brand = document.getElementById("sc-brand");
-    var stimFree = document.getElementById("sc-stimfree");
-    var sort = document.getElementById("sc-sort");
     var clear = document.getElementById("sc-clear");
     var filtersBtn = document.getElementById("sc-filters-btn");
     var filtersPanel = document.getElementById("sc-filters");
@@ -525,13 +944,15 @@
       }
       category.addEventListener("change", function () {
         state.category = category.value;
-        renderHub();
-      });
-    }
-
-    if (caffeine) {
-      caffeine.addEventListener("change", function () {
-        state.caffeine = caffeine.value;
+        // Different category, different figures: a figure set against the old
+        // list would silently filter on something no longer on offer.
+        state.figure = "";
+        state.bucket = "all";
+        state.dir = "";
+        state.target = undefined;
+        rebuildAxes();
+        renderFilterPanel();
+        refreshFilterCount();
         renderHub();
       });
     }
@@ -544,17 +965,79 @@
       });
     }
 
-    if (stimFree) {
-      stimFree.addEventListener("change", function () {
-        state.stimFreeOnly = stimFree.checked;
+    rebuildAxes();
+    renderFilterPanel();
+
+    if (filtersPanel) {
+      filtersPanel.addEventListener("change", function (event) {
+        var el = event.target;
+
+        // The two tabs each carry their own copy of the shared controls, so
+        // whichever one the reader touched, the other has to follow.
+        function mirror(id, value) {
+          var twin = document.getElementById(id);
+          if (twin) twin.value = value;
+        }
+
+        if (el.id === "sc-figure" || el.id === "sc-figure-adv") {
+          state.figure = el.value;
+          // The old range index and the old amount meant something on the old
+          // figure; carrying them over would filter on a number nobody typed.
+          state.bucket = "all";
+          state.target = undefined;
+          var typed = document.getElementById("sc-target");
+          if (typed) typed.value = "";
+          mirror(el.id === "sc-figure" ? "sc-figure-adv" : "sc-figure", el.value);
+          syncFigureUI();
+        } else if (el.id === "sc-range") {
+          state.bucket = el.value;
+        } else if (el.id === "sc-dir") {
+          state.dir = el.value;
+        } else if (el.id === "sc-price" || el.id === "sc-price-adv") {
+          state.price = el.value;
+          mirror(el.id === "sc-price" ? "sc-price-adv" : "sc-price", el.value);
+        } else if (el.id === "sc-tolerance") {
+          state.tolerance = parseFloat(el.value) || 0;
+        } else {
+          return;
+        }
+
+        refreshFilterCount();
         renderHub();
       });
-    }
 
-    if (sort) {
-      populateSorts(sort);
-      sort.addEventListener("change", function () {
-        state.sort = sort.value;
+      filtersPanel.addEventListener("input", function (event) {
+        if (event.target.id !== "sc-target") return;
+        var raw = event.target.value.trim();
+        var n = parseFloat(raw);
+        state.target = raw === "" || !isFinite(n) ? undefined : n;
+        refreshFilterCount();
+        renderHub();
+      });
+
+      // A tablist takes arrow keys, not Tab: the inactive tab carries
+      // tabindex="-1", so without this it cannot be reached by keyboard.
+      filtersPanel.addEventListener("keydown", function (event) {
+        if (!event.target.closest || !event.target.closest("[data-mode]")) return;
+        var order = ["simple", "advanced"];
+        var at = order.indexOf(state.mode);
+        var next = null;
+        if (event.key === "ArrowRight" || event.key === "ArrowDown") next = order[(at + 1) % 2];
+        else if (event.key === "ArrowLeft" || event.key === "ArrowUp") next = order[(at + 1) % 2];
+        else if (event.key === "Home") next = order[0];
+        else if (event.key === "End") next = order[1];
+        if (!next) return;
+        event.preventDefault();
+        setMode(next);
+        document.getElementById("sc-tab-" + next).focus();
+      });
+
+      filtersPanel.addEventListener("click", function (event) {
+        var tab = event.target.closest("[data-mode]");
+        if (!tab) return;
+        setMode(tab.getAttribute("data-mode"));
+        // Simple sorts; Advanced ranks by nearness. Switching tabs switches
+        // which of the two is in charge, so the grid has to be redrawn.
         renderHub();
       });
     }
@@ -562,16 +1045,19 @@
     function clearAll() {
       state.search = "";
       state.category = PAGE_CATEGORY || "all";
-      state.caffeine = "all";
       state.brand = "all";
-      state.stimFreeOnly = false;
-      state.sort = "name";
+      state.figure = "";
+      state.bucket = "all";
+      state.dir = "";
+      state.price = "all";
+      state.target = undefined;
+      state.tolerance = 0;
       if (search) search.value = "";
       if (category) category.value = "all";
-      if (caffeine) caffeine.value = "all";
       if (brand) brand.value = "all";
-      if (stimFree) stimFree.checked = false;
-      if (sort) sort.value = "name";
+      rebuildAxes();
+      renderFilterPanel();
+      refreshFilterCount();
       renderHub();
       if (search) search.focus();
     }
@@ -585,8 +1071,11 @@
 
     if (filtersBtn && filtersPanel) {
       filtersBtn.addEventListener("click", function () {
-        var open = filtersPanel.classList.toggle("sc-open");
-        filtersBtn.setAttribute("aria-expanded", open ? "true" : "false");
+        filtersPanel.hidden = !filtersPanel.hidden;
+        filtersBtn.setAttribute("aria-expanded", filtersPanel.hidden ? "false" : "true");
+        // See the sc-toolbar.sc-open note in the stylesheet.
+        var bar = filtersBtn.closest(".sc-toolbar");
+        if (bar) bar.classList.toggle("sc-open", !filtersPanel.hidden);
       });
     }
   }
