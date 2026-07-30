@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://scoop-sense.com/sitemap.xml
+Sitemap: https://thescoopsense.com/sitemap.xml

@@ -29,7 +29,7 @@ const VERSION = "20260730a"; // keep in sync with the ?v= on the other pages
 // Absolute-URL metadata — canonical, og:url, BreadcrumbList — is emitted only
 // once it is real: a canonical pointing at a placeholder host is worse than
 // none at all.
-const SITE_ORIGIN = "https://scoop-sense.com";
+const SITE_ORIGIN = "https://thescoopsense.com";
 const HAS_ORIGIN = !/YOUR-DOMAIN/.test(SITE_ORIGIN);
 
 /* ---- load data ---------------------------------------------------------- */
