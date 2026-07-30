@@ -2814,6 +2814,16 @@ button.sc-chip {
   white-space: nowrap;
 }
 
+/* "undisclosed" where a figure would sit. It is not a number, so it does not
+   take the numeral's weight — the row carries no bar either, and the pair
+   reads as an absence rather than a result. `.sc-dim` alone is scoped to
+   tables and tiles, so this row needs its own rule. */
+.sc-dose-amount.sc-dim {
+  font-weight: 500;
+  font-style: italic;
+  color: var(--sc-muted);
+}
+
 .sc-dose-verdict {
   display: inline-block;
   font-size: 0.78rem;

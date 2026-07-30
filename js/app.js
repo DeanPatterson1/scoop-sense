@@ -137,11 +137,14 @@
     return "High stim";
   }
 
-  // "8 g" -> 8000, "350 mg" -> 350, unparseable -> null.
+  // "8 g" -> 8000, "350 mg" -> 350, "3,000 mg" -> 3000, unparseable -> null.
+  // The comma matters: a comma-blind [\d.]+ matched the "000" in "3,000 mg"
+  // and read it as 0 mg, and would have read "1,500 mg" as 500.
   function parseDoseMg(dose) {
-    var m = /([\d.]+)\s*(mg|g)\b/i.exec(dose || "");
+    var m = /([\d.,]+)\s*(mg|g)\b/i.exec(dose || "");
     if (!m) return null;
-    var n = parseFloat(m[1]);
+    var n = parseFloat(m[1].replace(/,/g, ""));
+    if (!isFinite(n)) return null;
     return m[2].toLowerCase() === "g" ? n * 1000 : n;
   }
 

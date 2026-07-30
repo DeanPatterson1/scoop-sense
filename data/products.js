@@ -11168,6 +11168,7 @@ const PRODUCTS = [
     "metrics": { "calories": 140, "fatG": 3, "carbsG": 3,
       "proteinG": 25,
       "servingG": 36,
+      "leucineG": 2.7,
       "source": "whey concentrate, isolate, and peptide blend",
       "sweetener": "sucralose and acesulfame potassium"
     },

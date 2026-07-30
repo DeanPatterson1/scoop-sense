@@ -23,7 +23,7 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const OUT = path.join(ROOT, "products");
-const VERSION = "20260730a"; // keep in sync with the ?v= on the other pages
+const VERSION = "20260730b"; // keep in sync with the ?v= on the other pages
 
 // Set this to the real origin at domain time (see README "Sitemap & domain").
 // Absolute-URL metadata — canonical, og:url, BreadcrumbList — is emitted only
@@ -509,10 +509,15 @@ const DOSES = new Function(
   fs.readFileSync(path.join(ROOT, "js", "doses.js"), "utf8") + "\nreturn STUDIED_DOSES;"
 )();
 
+// Thousands separators are part of how a label prints a dose. Reading "3,000
+// mg" with a comma-blind [\d.]+ matched the "000" and charted the ingredient
+// at 0 mg, and "1,500 mg" would have charted as 500 — wrong by a factor of
+// three with nothing on the page to show it.
 function parseDoseMg(dose) {
-  const m = /([\d.]+)\s*(mg|g)\b/i.exec(dose || "");
+  const m = /([\d.,]+)\s*(mg|g)\b/i.exec(dose || "");
   if (!m) return null;
-  const n = parseFloat(m[1]);
+  const n = parseFloat(m[1].replace(/,/g, ""));
+  if (!isFinite(n)) return null;
   return m[2].toLowerCase() === "g" ? n * 1000 : n;
 }
 
@@ -522,6 +527,70 @@ function toUnit(mg, unit) {
 
 function fmtAmount(n, unit) {
   return (Math.round(n * 100) / 100) + " " + unit;
+}
+
+/* A studied-dose bar only means anything when the figure in `dose` is that one
+ * ingredient's amount. Plenty of labels here put a single weight against a
+ * group instead — Bloom's "Performance Blend (L-Citrulline Malate,
+ * L-Citrulline, Beta Alanine, Beet Root Extract)" at 4.68 g — and matching a
+ * studied range against the ingredient *name* charted the sum as one of its
+ * parts, then awarded "At or above the studied amount" to a figure the panel
+ * never states. That is precisely the error this site exists to point out on
+ * other people's labels, and it contradicted the clinicalNote printed on the
+ * same row.
+ *
+ * Sourcing prose is not a group. "Caffeine (as PurCaf, from organic green
+ * coffee bean)" carries a comma inside its parenthetical and is a fully
+ * disclosed 124 mg, so a bare comma test would suppress a real figure. */
+const GROUP_NOUN = /\bblend\b|\bmatrix\b|\bcomplex\b|\bproprietary\b|\bBCAAs?\b|\bEAAs?\b|amino acid|full[- ]spectrum/i;
+
+function isPooledIngredient(ing) {
+  if (/not individually/i.test(ing.dose || "")) return true;
+  if (GROUP_NOUN.test(ing.name || "")) return true;
+  const m = /\(([^)]*)\)/.exec(ing.name || "");
+  if (!m) return false;
+
+  const parts = m[1].split(",").map((s) => s.trim()).filter(Boolean);
+  if (parts.length > 1 && !parts.some((s) => /^(as|from|incl)\b/i.test(s))) return true;
+
+  /* "Velox (L-Citrulline + L-Arginine)" puts two different studied ingredients
+   * under one 2.4 g weight and never says "blend". Two *forms of the same*
+   * active is not a group — "Caffeine (Anhydrous + Di-Caffeine Malate)" is
+   * still all caffeine, and its total is genuinely that ingredient's dose — so
+   * the test is whether the parenthetical names more than one distinct entry. */
+  const labels = new Set();
+  for (const part of m[1].split(/[+,]/)) {
+    const hit = DOSES.ingredients.find((e) => new RegExp(e.match, "i").test(part));
+    if (hit) labels.add(hit.label);
+  }
+  return labels.size > 1;
+}
+
+/* "Published research" with nothing to open is an assertion, not a source.
+ * Where doses.js carries a verified citation, the reader gets the paper and
+ * the sentence the range came from. Entries without one say nothing here
+ * rather than borrowing another row's authority. */
+function citeHTML(entry) {
+  return entry.cite
+    ? `<p class="sc-dose-cite">Source: <a href="${esc(entry.cite.url)}" target="_blank" rel="noopener">${esc(entry.cite.label)}</a> — “${esc(entry.cite.quote)}”</p>`
+    : "";
+}
+
+/* The row for an ingredient whose amount the label pools into a group total.
+ * No bar and no verdict, because there is no amount to place — but the studied
+ * range is still stated in words, so the reader learns both what the research
+ * says and that this label gives them no way to check against it. */
+function pooledDoseRowHTML(entry, ing) {
+  const range = entry.low === null || entry.high === null
+    ? ""
+    : ` Studied amounts run ${fmtAmount(entry.low, entry.unit)} to ${fmtAmount(entry.high, entry.unit)}.`;
+  const note = `This label does not state ${entry.label.toLowerCase()} on its own — it sits inside “${ing.name}”, disclosed only as a combined ${ing.dose}. A combined total is not a dose of anything named inside it, so there is nothing here to compare against the research.${range}`;
+
+  return `<li class="sc-dose-row">
+        <p class="sc-dose-head"><span class="sc-dose-name">${esc(entry.label)}</span><span class="sc-dose-amount sc-dim">undisclosed</span></p>
+        <p class="sc-dose-note">${esc(note)}</p>
+        ${citeHTML(entry)}
+      </li>`;
 }
 
 // One comparison row: the labeled amount, the studied band drawn behind it,
@@ -549,13 +618,7 @@ function doseRowHTML(entry, amount) {
         </div>
         <p class="sc-dose-scale"><span>0</span><span>studied range ${fmtAmount(entry.low, entry.unit)}${entry.low === entry.high ? "" : "–" + fmtAmount(entry.high, entry.unit)}</span><span>${fmtAmount(scale, entry.unit)}</span></p>`;
 
-  /* "Published research" with nothing to open is an assertion, not a source.
-   * Where doses.js carries a verified citation, the reader gets the paper and
-   * the sentence the range came from. Entries without one say nothing here
-   * rather than borrowing another row's authority. */
-  const cite = entry.cite
-    ? `<p class="sc-dose-cite">Source: <a href="${esc(entry.cite.url)}" target="_blank" rel="noopener">${esc(entry.cite.label)}</a> — “${esc(entry.cite.quote)}”</p>`
-    : "";
+  const cite = citeHTML(entry);
 
   return `<li class="sc-dose-row">
         <p class="sc-dose-head"><span class="sc-dose-name">${esc(entry.label)}</span><span class="sc-dose-amount">${amount === null ? "not disclosed" : esc(fmtAmount(amount, entry.unit))}</span></p>
@@ -571,7 +634,33 @@ function doseComparisonHTML(p) {
   const rows = [];
   const seen = new Set();
 
+  /* Labels this product discloses as a real metric of its own. Those are the
+   * metrics loop's business below, and must not be declared "undisclosed" from
+   * inside a group total — Dymatize Elite's "BCAAs (2:1:1 ratio, incl. 2.7 g
+   * leucine)" pools the trio but states the leucine. */
+  const metricLabels = new Set();
+  if (p.metrics) {
+    for (const key of Object.keys(DOSES.metrics)) {
+      if (metricOf(p, key) !== null) metricLabels.add(DOSES.metrics[key].label);
+    }
+  }
+
   for (const ing of p.keyIngredients) {
+    if (isPooledIngredient(ing)) {
+      /* A row for every studied ingredient named inside the total, not just
+       * the first one matched. Bloom's blend names citrulline and beta-alanine;
+       * matching only the first meant the other silently vanished from the
+       * page while the first was charted at the blend's whole weight. */
+      for (const e of DOSES.ingredients) {
+        // Caffeine is transcribed as its own figure and gets its own row
+        // below. Never mark it undisclosed on the strength of a blend name.
+        if (e.label === "Caffeine" || seen.has(e.label) || metricLabels.has(e.label)) continue;
+        if (!new RegExp(e.match, "i").test(ing.name)) continue;
+        seen.add(e.label);
+        rows.push(pooledDoseRowHTML(e, ing));
+      }
+      continue;
+    }
     const entry = DOSES.ingredients.find((e) => new RegExp(e.match, "i").test(ing.name));
     if (!entry || seen.has(entry.label)) continue;
     seen.add(entry.label);
