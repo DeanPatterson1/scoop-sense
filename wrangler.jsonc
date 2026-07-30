@@ -1,15 +1,21 @@
 {
-  // Static-assets-only Worker: there is no server-side code, so there is no
-  // `main` entry script. Cloudflare serves the repository's files directly.
+  // Scoop Sense is plain HTML, CSS and JS with no build step, which is why the
+  // dashboard's "Build command" is empty.
   //
-  // The site is plain HTML, CSS and JS with no build step, which is why the
-  // dashboard's "Build command" field is left empty. `directory` is the
-  // repository root, and .assetsignore decides what inside it is public —
-  // without that file the build scripts, the internal handoff notes and the
-  // peer review would all be readable at the domain.
+  // `main` is not here to run logic — see worker.js. Cloudflare refuses to
+  // attach a custom domain to an assets-only Worker ("Triggers cannot be added
+  // to a Worker that only has static assets"), so the project needs an entry
+  // script to hold the thescoopsense.com trigger. Requests that match a file
+  // are served from the asset store without invoking it.
+  //
+  // `directory` is the repository root, and .assetsignore decides what inside
+  // it is public — without that file the build scripts, the session handoff
+  // notes and the peer review would all be readable at the domain.
   "name": "scoop-sense",
   "compatibility_date": "2026-07-30",
+  "main": "worker.js",
   "assets": {
-    "directory": "."
+    "directory": ".",
+    "binding": "ASSETS"
   }
 }
