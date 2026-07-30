@@ -20,7 +20,14 @@
 // re-verification, is reasonable.
 //
 // By default only /dp/ links are checked. --all also reports which products
-// are still on a search URL.
+// are still on a search URL. --slice A:B checks that index range of the
+// direct-link list, so a long run can be split across shell timeouts.
+//
+// Results print AS THEY ARE FOUND. The first version buffered everything for
+// a summary at the end, and a shell timeout killed a nine-minute run with the
+// whole report still in memory — the run had happened and the answer was
+// lost. Progressive output means a killed run still leaves everything it
+// checked on disk.
 
 "use strict";
 
@@ -77,14 +84,24 @@ async function titleOf(url) {
 }
 
 (async () => {
-  const direct = PRODUCTS.filter((p) => /\/dp\//.test(p.affiliateUrl || ""));
+  let direct = PRODUCTS.filter((p) => /\/dp\//.test(p.affiliateUrl || ""));
   const search = PRODUCTS.filter((p) => /\/s\?k=/.test(p.affiliateUrl || ""));
+
+  const sliceArg = /^(\d+):(\d+)$/.exec(process.argv[process.argv.indexOf("--slice") + 1] || "");
+  if (process.argv.includes("--slice") && sliceArg) {
+    direct = direct.slice(Number(sliceArg[1]), Number(sliceArg[2]));
+  }
 
   console.log(`${direct.length} direct links to check, ${search.length} still on search URLs.\n`);
 
   const problems = [];
   const review = [];
   let ok = 0;
+
+  const flagProblem = (id, asin, why) => {
+    problems.push([id, asin, why]);
+    console.log(`  PROBLEM ${id} (${asin}): ${why}`);
+  };
 
   // Sequential and paced on purpose. Amazon throttles a burst, and a throttled
   // response would read as a broken link and send someone chasing a link that
@@ -99,13 +116,13 @@ async function titleOf(url) {
     try {
       r = await titleOf(p.affiliateUrl);
     } catch (e) {
-      problems.push([p.id, asin, "fetch failed: " + e.message]);
+      flagProblem(p.id, asin, "fetch failed: " + e.message);
       continue;
     }
 
-    if (r.captcha) { problems.push([p.id, asin, "blocked by Amazon bot check — recheck by hand"]); continue; }
-    if (r.status !== 200) { problems.push([p.id, asin, `HTTP ${r.status}`]); continue; }
-    if (!r.title || /^Amazon\.com$/i.test(r.title)) { problems.push([p.id, asin, "no product title — listing may be gone"]); continue; }
+    if (r.captcha) { flagProblem(p.id, asin, "blocked by Amazon bot check — recheck by hand"); continue; }
+    if (r.status !== 200) { flagProblem(p.id, asin, `HTTP ${r.status}`); continue; }
+    if (!r.title || /^Amazon\.com$/i.test(r.title)) { flagProblem(p.id, asin, "no product title — listing may be gone"); continue; }
 
     const t = r.title.toLowerCase();
     const brandHit = tokens(p.brand).some((w) => t.includes(w));
@@ -120,19 +137,20 @@ async function titleOf(url) {
       review.push([p.id, asin, `titled by product line, not "${p.brand}": ${r.title.slice(0, 80)}`]);
       ok++;
     } else if (!brandHit) {
-      problems.push([p.id, asin, `title does not mention ${p.brand}: ${r.title.slice(0, 90)}`]);
+      flagProblem(p.id, asin, `title does not mention ${p.brand}: ${r.title.slice(0, 90)}`);
     } else if (nameWords.length && nameHits === 0) {
-      problems.push([p.id, asin, `title matches the brand but not "${p.name}": ${r.title.slice(0, 90)}`]);
+      flagProblem(p.id, asin, `title matches the brand but not "${p.name}": ${r.title.slice(0, 90)}`);
     } else {
       ok++;
     }
   }
 
-  console.log(`${ok} link(s) resolve to a listing naming the right brand and product.`);
-  if (problems.length) {
-    console.log(`\n${problems.length} need a look:`);
-    for (const [id, asin, why] of problems) console.log(`  ${id} (${asin}): ${why}`);
+  console.log(`\n${ok} link(s) resolve to a listing naming the right brand and product.`);
+  if (review.length) {
+    console.log(`${review.length} fine but titled by product line, worth a glance:`);
+    for (const [id, asin, why] of review) console.log(`  ${id} (${asin}): ${why}`);
   }
+  if (problems.length) console.log(`${problems.length} PROBLEM line(s) above need a look.`);
 
   if (ALL && search.length) {
     console.log(`\nStill on an Amazon search URL:`);
