@@ -151,9 +151,9 @@ Three rules are non-negotiable and enforced by `scripts/integrate-reviews.js`. *
 
 ## Sitemap & domain
 
-`scripts/build-product-pages.js` writes `sitemap.xml` with a placeholder origin. When the site has a real domain: set `SITE_ORIGIN` at the top of that script, re-run it, and activate the `Sitemap:` line in `robots.txt`. Until then search engines simply ignore the placeholder file.
+The site is deployed at `https://thescoopsense.com`, which is the `SITE_ORIGIN` set at the top of `scripts/build-product-pages.js`. A real origin there switches on the metadata that needs absolute URLs — `<link rel="canonical">`, `og:url`, `sitemap.xml`, and the `BreadcrumbList` structured data mirroring each product page's breadcrumb trail. They stay suppressed while the origin is a placeholder, because a canonical pointing at a fake host is worse than no canonical at all. `robots.txt` carries the matching `Sitemap:` line.
 
-Setting a real `SITE_ORIGIN` also switches on the metadata that needs absolute URLs — `<link rel="canonical">`, `og:url`, and the `BreadcrumbList` structured data mirroring each product page's breadcrumb trail. They are deliberately suppressed while the origin is a placeholder, because a canonical pointing at a fake host is worse than no canonical at all.
+Those absolute URLs are **extensionless**, and `publicUrl()` in the build script is what makes them so. Cloudflare's asset server strips the suffix and redirects — `/creatine.html` answers `Location: /creatine`, `/index.html` answers `Location: /` — so a canonical naming the `.html` form points at a redirect, and Google resolves the redirect's target as canonical instead of honouring the tag. The `href`s between pages deliberately keep `.html`: they resolve either way through that redirect, and the site still has to open from the local filesystem and from `scripts/serve.py`, where the extensionless paths do not exist.
 
 ---
 

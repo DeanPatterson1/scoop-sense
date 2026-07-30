@@ -1293,9 +1293,8 @@ console.log(`Wrote ${Object.keys(CATEGORY_CONFIG).length} category data slices i
 
 /* ---- sitemap ------------------------------------------------------------- */
 
-// Set to the real production origin (no trailing slash) once the site has a
-// domain, then activate the Sitemap line in robots.txt. Until then the file
-// is generated with a placeholder and is harmless to ship.
+// saved.html is absent on purpose: it renders whatever the reader has saved
+// locally, so there is nothing there for a crawler to index.
 const ROOT_PAGES = [
   "index.html", "hub.html", "creatine.html", "protein.html", "eaa.html",
   "electrolytes.html", "compare.html", "disclosure.html", "disclaimer.html"
