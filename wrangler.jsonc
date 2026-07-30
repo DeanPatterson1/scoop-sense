@@ -1,0 +1,15 @@
+{
+  // Static-assets-only Worker: there is no server-side code, so there is no
+  // `main` entry script. Cloudflare serves the repository's files directly.
+  //
+  // The site is plain HTML, CSS and JS with no build step, which is why the
+  // dashboard's "Build command" field is left empty. `directory` is the
+  // repository root, and .assetsignore decides what inside it is public —
+  // without that file the build scripts, the internal handoff notes and the
+  // peer review would all be readable at the domain.
+  "name": "scoop-sense",
+  "compatibility_date": "2026-07-30",
+  "assets": {
+    "directory": "."
+  }
+}

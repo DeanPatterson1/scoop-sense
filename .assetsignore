@@ -1,0 +1,25 @@
+# What is in the repository but must NOT be readable at the domain.
+#
+# A root-directory deploy publishes every file it can see. These are kept in
+# git deliberately and are still internal: the build tooling, the session
+# handoff notes, the simulated-traffic peer review that documents the site's
+# own defects, and a spec carrying local filesystem paths.
+#
+# gitignore syntax. Anything not listed here IS public, so add to this file
+# before adding a new non-public directory to the repository.
+
+.git
+.gitignore
+.assetsignore
+wrangler.jsonc
+
+# Internal notes and tooling
+docs
+scripts
+.handoffs
+.superpowers
+README.md
+
+# Development leftovers
+home.png
+*.log
