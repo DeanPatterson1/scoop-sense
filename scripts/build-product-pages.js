@@ -23,7 +23,7 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const OUT = path.join(ROOT, "products");
-const VERSION = "20260730b"; // keep in sync with the ?v= on the other pages
+const VERSION = "20260730c"; // keep in sync with the ?v= on the other pages
 
 // Set this to the real origin at domain time (see README "Sitemap & domain").
 // Absolute-URL metadata — canonical, og:url, BreadcrumbList — is emitted only
@@ -178,6 +178,17 @@ function tagsHTML(p) {
   // line, not a badge, and only ever on protein.
   if (isDairyFreeSource(p)) tags.push(`<span class="sc-tag sc-tag-calm" title="The protein source named on the panel carries no whey, casein, or milk. This reads the source line only — check the label's own allergen statement before buying.">Dairy-free source</span>`);
   return tags.join("");
+}
+
+/* Mirrors retailerOf in js/app.js. Derived from the link rather than stored,
+ * so swapping one product to a brand-direct URL relabels its prose instead of
+ * leaving the page naming Amazon. The optional `retailer` field overrides it
+ * for a third-party seller that is neither Amazon nor the brand. */
+function retailerOf(p) {
+  if (p.retailer) return p.retailer;
+  const m = /^https?:\/\/([^\/]+)/.exec(p.affiliateUrl || "");
+  if (!m) return p.brand;
+  return /(^|\.)amazon\./i.test(m[1]) ? "Amazon" : p.brand;
 }
 
 /* Whey, casein and milk are dairy; plants and hemp are not. A source line that
@@ -1052,12 +1063,19 @@ function pageHTML(p) {
           <div class="sc-buybox">
             <p class="sc-buybox-tier">Price tier: <strong>${priceWordHTML(p)}</strong> <span>· relative cost per full serving across this database</span></p>
             <p class="sc-buybox-why">We don't list dollar prices — they change daily and go stale. Check the live price instead:</p>
-            <a class="sc-btn sc-btn-primary sc-btn-lg" href="${esc(p.affiliateUrl)}" target="_blank" rel="sponsored nofollow noopener">View current price <span class="sc-ext" aria-hidden="true">&#8599;</span></a>
+            <a class="sc-btn sc-btn-primary sc-btn-lg" href="${esc(p.affiliateUrl)}" target="_blank" rel="sponsored nofollow noopener">View current price at ${esc(retailerOf(p))} <span class="sc-ext" aria-hidden="true">&#8599;</span></a>
             ${categoryOf(p) === "pre-workout"
               ? `<a class="sc-btn sc-btn-secondary" href="../compare.html">Compare all ${preWorkouts.length} pre-workouts</a>`
               : `<a class="sc-btn sc-btn-secondary" href="../${esc(cfgOf(p).page)}#compare">Compare all ${esc(cfgOf(p).plural)}</a>`}
             <button type="button" class="sc-btn sc-btn-secondary sc-save-btn-pdp" data-save-id="${esc(p.id)}" aria-pressed="false"><span class="sc-save-icon" aria-hidden="true"></span> <span class="sc-save-text">Save to compare</span></button>
-            <p class="sc-buybox-reviews">Scoop Sense doesn't collect user reviews and won't invent them. <a href="${esc(p.affiliateUrl)}" target="_blank" rel="sponsored nofollow noopener">Read customer reviews on Amazon <span class="sc-ext" aria-hidden="true">&#8599;</span></a></p>
+            <p class="sc-buybox-reviews">Scoop Sense doesn't collect user reviews and won't invent them. <a href="${esc(p.affiliateUrl)}" target="_blank" rel="sponsored nofollow noopener">${
+              /* Only Amazon is promised to carry reviews, because only there do
+                 we know they exist. A brand store may have none, and the link
+                 label must not claim otherwise. */
+              retailerOf(p) === "Amazon"
+                ? "Read customer reviews on Amazon"
+                : `See the ${esc(retailerOf(p))} listing`
+            } <span class="sc-ext" aria-hidden="true">&#8599;</span></a></p>
             <p class="sc-detail-note">Affiliate links — Scoop Sense may earn a commission at no additional cost to you.</p>
           </div>
 

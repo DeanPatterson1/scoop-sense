@@ -27,8 +27,16 @@
 //   priceRange     string  "$" | "$$" | "$$$"  (rough cost per serving tier;
 //                  we never display dollar prices — they go stale)
 //   flavorsNote    string  one sentence about flavors/sweetener
-//   affiliateUrl   string  Amazon search URL, format:
+//   affiliateUrl   string  the outbound product link. Amazon search URLs use
 //                  https://www.amazon.com/s?k=<words+joined+by+plus>&tag=YOURTAG-20
+//                  A brand-direct or network link (Impact, Awin, CJ, Rakuten)
+//                  goes in the same field — the retailer named in the page's
+//                  prose is derived from the link's host, so nothing else
+//                  needs editing when one is swapped.
+//   retailer       string  OPTIONAL. Only needed when the destination is
+//                  neither Amazon nor the brand's own store — a third-party
+//                  seller like iHerb. Without it the retailer is read from
+//                  the link: Amazon by host, otherwise the brand.
 //   blurb          string  one concise editorial takeaway — specific, factual,
 //                  no marketing language
 //   labelVerified  string  month + year the label figures were last checked,

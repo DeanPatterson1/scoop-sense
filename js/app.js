@@ -168,6 +168,25 @@
     return ing ? ing.dose : null;
   }
 
+  /* Which storefront an affiliate link actually goes to.
+   *
+   * Every link on the site is Amazon today, but the retailer's name was
+   * hardcoded into prose in two templates, so pointing a single product at a
+   * brand's own store would have left the page naming the wrong destination —
+   * on a site whose value is not making statements like that.
+   *
+   * Derived from the link so a swapped URL relabels itself: Amazon by host,
+   * otherwise the brand, because a brand-direct link placed through a network
+   * (Impact, Awin) resolves through a tracking host that is not the brand's
+   * own domain. The optional `retailer` field overrides both, for a
+   * third-party seller that is neither Amazon nor the brand. */
+  function retailerOf(p) {
+    if (p.retailer) return p.retailer;
+    var m = /^https?:\/\/([^\/]+)/.exec(p.affiliateUrl || "");
+    if (!m) return p.brand;
+    return /(^|\.)amazon\./i.test(m[1]) ? "Amazon" : p.brand;
+  }
+
   /* A blend's total is not a dose of anything named inside it.
    *
    * Bloom's "Performance Blend (L-Citrulline Malate, L-Citrulline, Beta
@@ -792,7 +811,7 @@
         '<a class="sc-tile-price" href="' + esc(p.affiliateUrl) + '" ' +
           'target="_blank" rel="sponsored nofollow noopener" ' +
           'aria-label="Check current price for ' + esc(p.brand + " " + p.name) +
-          ' on Amazon (affiliate link)">Check price <span class="sc-ext" aria-hidden="true">&#8599;</span></a>' +
+          ' at ' + esc(retailerOf(p)) + ' (affiliate link)">Check price <span class="sc-ext" aria-hidden="true">&#8599;</span></a>' +
         // Title carries the label the icon-only button hides visually.
         "" +
         saveBtnHTML(p) +
@@ -1881,7 +1900,7 @@
       "<tr><th scope=\"row\">Links</th>" + products.map(function (p) {
         return '<td class="sc-saved-links">' +
           '<a class="sc-btn sc-btn-primary" href="products/' + esc(p.id) + '.html">Full breakdown</a>' +
-          '<a class="sc-btn sc-btn-secondary" href="' + esc(p.affiliateUrl) + '" target="_blank" rel="sponsored nofollow noopener">View current price <span class="sc-ext" aria-hidden="true">&#8599;</span></a>' +
+          '<a class="sc-btn sc-btn-secondary" href="' + esc(p.affiliateUrl) + '" target="_blank" rel="sponsored nofollow noopener">View current price at ' + esc(retailerOf(p)) + ' <span class="sc-ext" aria-hidden="true">&#8599;</span></a>' +
         "</td>";
       }).join("") + "</tr>"
     ]);
