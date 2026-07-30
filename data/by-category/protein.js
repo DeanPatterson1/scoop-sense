@@ -1583,7 +1583,7 @@ var PRODUCTS = [
     "servings": 30,
     "priceRange": "$$$",
     "flavorsNote": "Naturally sweetened and flavored with stevia across options like Dutch Chocolate, French Vanilla, and Unflavored, with no artificial sweeteners, dyes, or fillers.",
-    "affiliateUrl": "https://www.amazon.com/s?k=legion+whey+plus+protein&tag=thescoopsense-20",
+    "affiliateUrl": "https://www.amazon.com/dp/B00R3ZLXZ6?tag=thescoopsense-20",
     "blurb": "Delivers 22 grams of grass-fed whey isolate per 25-gram scoop with a fully disclosed label and no proprietary blends; purity is verified through Labdoor lab testing rather than an NSF or Informed Sport sport-specific certification.",
     "labelVerified": "July 2026",
     "reviews": {
