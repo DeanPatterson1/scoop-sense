@@ -1291,6 +1291,87 @@ for (const slug of Object.keys(CATEGORY_CONFIG)) {
 }
 console.log(`Wrote ${Object.keys(CATEGORY_CONFIG).length} category data slices in data/by-category/`);
 
+/* ---- static catalog markup ----------------------------------------------- */
+
+/* The hub, the five category pages and the compare table used to arrive empty
+ * and fill themselves in from js/app.js. That is fine for a reader with
+ * JavaScript and useless to everyone else: a crawler fetching creatine.html got
+ * the heading, the filters, and then "No products match the current filters."
+ * Worse, it meant nothing on the site statically linked to the 187 product
+ * pages — they existed, they were in the sitemap, and no page pointed at them.
+ *
+ * So the same renderers now run here at build time and their output is written
+ * into the files. js/app.js still owns the markup; this only asks it for the
+ * strings. On load the browser re-renders as it always did, and because the
+ * tile count matches what it draws first, nothing moves.
+ */
+
+function loadRenderer() {
+  const read = (...p) => fs.readFileSync(path.join(ROOT, ...p), "utf8");
+  // app.js reads globals the browser sets up by loading these first, and it
+  // touches document.body the moment it is evaluated.
+  const doc = {
+    body: { getAttribute: () => null },
+    addEventListener() {},
+    getElementById: () => null,
+    querySelector: () => null,
+    querySelectorAll: () => []
+  };
+  const mod = { exports: {} };
+  const build = new Function(
+    "module", "document", "window",
+    [read("data", "products.js"), read("js", "categories.js"),
+     read("js", "doses.js"), read("js", "app.js"), "return module.exports;"].join("\n")
+  );
+  return build(mod, doc, {});
+}
+
+// Markers make the injection idempotent. Without them a rebuild would either
+// append a second copy of the catalog or need a regex to find the container's
+// matching close tag, which is not something to attempt on markup that nests.
+function fill(html, openTag, name, content) {
+  const between = new RegExp(`(<!--sc:${name}-->)[\\s\\S]*?(<!--/sc:${name}-->)`);
+  if (between.test(html)) return html.replace(between, `$1${content}$2`);
+  const at = html.indexOf(openTag);
+  if (at === -1) throw new Error(`${name}: could not find ${openTag}`);
+  const cut = at + openTag.length;
+  return html.slice(0, cut) + `<!--sc:${name}-->${content}<!--/sc:${name}-->` + html.slice(cut);
+}
+
+const staticMarkup = loadRenderer();
+const GRID = '<div class="sc-products" id="sc-products">';
+const TBODY = '<tbody id="sc-compare-body">';
+const THEAD = "<thead>";
+
+const PAGES = [
+  { file: "index.html", category: null, parts: ["preview", "starts"] },
+  { file: "hub.html", category: null, parts: ["tiles"] },
+  { file: "creatine.html", category: "creatine", parts: ["tiles", "compare"] },
+  { file: "protein.html", category: "protein", parts: ["tiles", "compare"] },
+  { file: "eaa.html", category: "eaa", parts: ["tiles", "compare"] },
+  { file: "electrolytes.html", category: "electrolytes", parts: ["tiles", "compare"] },
+  { file: "compare.html", category: "pre-workout", parts: ["compare"] }
+];
+
+let staticPages = 0;
+for (const page of PAGES) {
+  const m = staticMarkup(page.category);
+  const file = path.join(ROOT, page.file);
+  let html = fs.readFileSync(file, "utf8");
+
+  if (page.parts.includes("tiles")) html = fill(html, GRID, "tiles", m.tiles);
+  if (page.parts.includes("compare")) {
+    html = fill(html, THEAD, "comparehead", m.compareHead);
+    html = fill(html, TBODY, "comparerows", m.compareRows);
+  }
+  if (page.parts.includes("preview")) html = fill(html, '<tbody id="sc-preview-body">', "preview", m.preview);
+  if (page.parts.includes("starts")) html = fill(html, '<div class="sc-starts" id="sc-starts">', "starts", m.starts);
+
+  fs.writeFileSync(file, html, "utf8");
+  staticPages++;
+}
+console.log(`Wrote catalog markup into ${staticPages} pages`);
+
 /* ---- sitemap ------------------------------------------------------------- */
 
 // saved.html is absent on purpose: it renders whatever the reader has saved

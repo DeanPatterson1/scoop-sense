@@ -1526,9 +1526,12 @@
     "</tr>";
   }
 
+  function previewRowsHTML() {
+    return PREVIEW_IDS.map(byId).filter(Boolean).map(previewRowHTML).join("");
+  }
+
   function renderPreview() {
-    var body = document.getElementById("sc-preview-body");
-    body.innerHTML = PREVIEW_IDS.map(byId).filter(Boolean).map(previewRowHTML).join("");
+    document.getElementById("sc-preview-body").innerHTML = previewRowsHTML();
   }
 
   // Editorial framing for the FEATURED_IDS picks; stats come from the data.
@@ -1547,9 +1550,8 @@
     }
   };
 
-  function renderStarts() {
-    var target = document.getElementById("sc-starts");
-    target.innerHTML = FEATURED_IDS.map(function (id) {
+  function startsHTML() {
+    return FEATURED_IDS.map(function (id) {
       var p = byId(id);
       var meta = START_META[id];
       if (!p || !meta) return "";
@@ -1561,6 +1563,10 @@
         '<a class="sc-action-link" href="products/' + esc(p.id) + '.html">Label breakdown</a>' +
       "</div>";
     }).join("");
+  }
+
+  function renderStarts() {
+    document.getElementById("sc-starts").innerHTML = startsHTML();
   }
 
   /* ---------------------------------------------------------------------
@@ -1576,8 +1582,7 @@
     return CATEGORY_CONFIG[PAGE_CATEGORY] || CATEGORY_CONFIG["pre-workout"];
   }
 
-  function buildCompareHead() {
-    var head = document.querySelector("#sc-compare thead");
+  function compareHeadHTML() {
     var cols = compareCfg().compareCols;
     var cells = ['<th scope="col" data-sortkey="name">' +
       '<button type="button" class="sc-sort-btn">Product</button></th>'];
@@ -1590,7 +1595,11 @@
           : esc(c.label)) +
       "</th>");
     }
-    head.innerHTML = "<tr>" + cells.join("") + "</tr>";
+    return "<tr>" + cells.join("") + "</tr>";
+  }
+
+  function buildCompareHead() {
+    document.querySelector("#sc-compare thead").innerHTML = compareHeadHTML();
   }
 
   function compareRowHTML(p) {
@@ -1603,9 +1612,8 @@
     return "<tr>" + cells.join("") + "</tr>";
   }
 
-  function renderCompare() {
-    var body = document.getElementById("sc-compare-body");
-    var rows = PRODUCTS.filter(function (p) {
+  function compareRowsHTML() {
+    return PRODUCTS.filter(function (p) {
       return !PAGE_CATEGORY || categoryOf(p) === PAGE_CATEGORY;
     }).sort(function (a, b) {
       var va = factSortValue(a, compareState.key);
@@ -1613,8 +1621,12 @@
       if (va < vb) return -1 * compareState.dir;
       if (va > vb) return 1 * compareState.dir;
       return 0;
-    });
-    body.innerHTML = rows.map(compareRowHTML).join("");
+    }).map(compareRowHTML).join("");
+  }
+
+  function renderCompare() {
+    var body = document.getElementById("sc-compare-body");
+    body.innerHTML = compareRowsHTML();
 
     syncCompareSort();
 
@@ -2068,6 +2080,36 @@
     // Last: the anchor the browser tried to reach before any of these
     // renderers had put anything on the page. See jumpToAnchor.
     jumpToAnchor();
+  }
+
+  /* Node hook — scripts/build-product-pages.js evaluates this file to write the
+   * same markup into the static HTML, so a crawler, a social scraper, or anyone
+   * without JavaScript sees the catalog instead of "No products match the
+   * current filters."
+   *
+   * It exports the real renderers rather than letting the build script keep its
+   * own copy. A second copy would drift from this one silently, and the only
+   * symptom would be a page that changes shape the moment it hydrates.
+   *
+   * Tiles are capped at the same PAGE_SIZE the browser draws first, so nothing
+   * moves on hydration. Every product still gets a static inbound link: the
+   * compare table below the grid is written in full and its first cell links
+   * each product's page.
+   */
+  if (typeof module === "object" && module.exports) {
+    module.exports = function staticMarkup(category) {
+      PAGE_CATEGORY = category || null;
+      state.category = PAGE_CATEGORY || "all";
+      compareState = { key: "name", dir: 1 };
+      return {
+        tiles: applyFilters().slice(0, PAGE_SIZE).map(tileHTML).join(""),
+        compareHead: compareHeadHTML(),
+        compareRows: compareRowsHTML(),
+        preview: previewRowsHTML(),
+        starts: startsHTML()
+      };
+    };
+    return;
   }
 
   document.addEventListener("DOMContentLoaded", init);
