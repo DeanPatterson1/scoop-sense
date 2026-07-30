@@ -49,7 +49,9 @@ function tokens(s) {
   return (s.toLowerCase().match(/[a-z0-9]+/g) || []).filter((w) => w.length > 2 && !STOP.has(w));
 }
 
-async function titleOf(url) {
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+async function fetchOnce(url) {
   const res = await fetch(url, {
     headers: { "User-Agent": UA, "Accept-Language": "en-US,en;q=0.9" },
     redirect: "follow"
@@ -62,6 +64,18 @@ async function titleOf(url) {
   return { status: res.status, title, captcha: /api-services-support@amazon\.com|Robot Check/i.test(html) };
 }
 
+// Amazon starts serving its bot check after roughly a minute of steady
+// requests. Left unhandled that reads as "25 broken links" and sends someone
+// chasing links that were never broken, so a blocked response is treated as
+// "ask again later", not as a verdict.
+async function titleOf(url) {
+  for (let attempt = 0; ; attempt++) {
+    const r = await fetchOnce(url);
+    if (!r.captcha || attempt === 2) return r;
+    await sleep(20000 * (attempt + 1));
+  }
+}
+
 (async () => {
   const direct = PRODUCTS.filter((p) => /\/dp\//.test(p.affiliateUrl || ""));
   const search = PRODUCTS.filter((p) => /\/s\?k=/.test(p.affiliateUrl || ""));
@@ -72,9 +86,14 @@ async function titleOf(url) {
   const review = [];
   let ok = 0;
 
-  // Sequential on purpose. Amazon throttles a burst, and a throttled response
-  // would read as a broken link and send someone chasing a link that is fine.
+  // Sequential and paced on purpose. Amazon throttles a burst, and a throttled
+  // response would read as a broken link and send someone chasing a link that
+  // is fine. The whole catalog takes a few minutes; that is the price of the
+  // answer being trustworthy.
+  let first = true;
   for (const p of direct) {
+    if (!first) await sleep(1500);
+    first = false;
     const asin = /\/dp\/([A-Z0-9]{10})/.exec(p.affiliateUrl)[1];
     let r;
     try {
