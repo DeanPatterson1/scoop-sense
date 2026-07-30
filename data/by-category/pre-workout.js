@@ -1144,7 +1144,7 @@ var PRODUCTS = [
     "servings": 20,
     "priceRange": "$$$",
     "flavorsNote": "Straightforward fruit flavors; artificially sweetened.",
-    "affiliateUrl": "https://www.amazon.com/dp/B08ZT2ZRF2?tag=thescoopsense-20",
+    "affiliateUrl": "https://www.amazon.com/dp/B077P89FZJ?tag=thescoopsense-20",
     "blurb": "Spreads many ingredients across one 300 mg-caffeine scoop; most individual doses land below their studied ranges.",
     "labelVerified": "July 2026",
     "imageUrl": "images/products/pre-jym.jpg",
