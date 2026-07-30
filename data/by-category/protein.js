@@ -38,7 +38,7 @@ var PRODUCTS = [
     "servings": 73,
     "priceRange": "$$",
     "flavorsNote": "15+ flavors; figures verified against the Banana Cream panel (31 g scoop) on the 5 lb tub — serving size shifts a gram or two by flavor, and the Double Rich Chocolate ingredient list shows sucralose plus acesulfame potassium.",
-    "affiliateUrl": "https://www.amazon.com/s?k=optimum+nutrition+gold+standard+whey&tag=thescoopsense-20",
+    "affiliateUrl": "https://www.amazon.com/dp/B000QSTBNS?tag=thescoopsense-20",
     "blurb": "The long-running benchmark whey blend: isolate listed first, 24 g protein in a 31 g scoop, and a 73-serving 5 lb tub that keeps per-serving cost in the middle of the pack.",
     "labelVerified": "July 2026",
     "reviews": {
@@ -149,7 +149,7 @@ var PRODUCTS = [
     "servings": 42,
     "priceRange": "$$",
     "flavorsNote": "Figures verified against Gourmet Chocolate (32 g scoop, 3 lb tub); wide flavor range, all sweetened with sucralose and steviol glycosides.",
-    "affiliateUrl": "https://www.amazon.com/s?k=dymatize+iso100+hydrolyzed+whey+isolate&tag=thescoopsense-20",
+    "affiliateUrl": "https://www.amazon.com/dp/B006OC432E?tag=thescoopsense-20",
     "blurb": "A hydrolyzed whey isolate that hits 25 g protein in a 32 g scoop with about 1 g of carbs — one of the leanest macro profiles in the category, priced accordingly.",
     "labelVerified": "July 2026",
     "reviews": {
@@ -258,7 +258,7 @@ var PRODUCTS = [
     "servings": 30,
     "priceRange": "$$$",
     "flavorsNote": "Figures verified against the Unflavored tub (28 g protein per 32 g scoop, 30 servings); flavored versions use stevia and run a 34-36 g scoop depending on flavor.",
-    "affiliateUrl": "https://www.amazon.com/s?k=transparent+labs+grass+fed+whey+protein+isolate&tag=thescoopsense-20",
+    "affiliateUrl": "https://www.amazon.com/dp/B0CQ32D39X?tag=thescoopsense-20",
     "blurb": "Short ingredient list, Informed Choice and Informed Protein certifications on the brand page, and published third-party test results — you pay a premium for the paperwork.",
     "labelVerified": "July 2026",
     "reviews": {
@@ -368,7 +368,7 @@ var PRODUCTS = [
     "servings": 27,
     "priceRange": "$$$",
     "flavorsNote": "Figures verified against Chocolate (33 g scoop, 2 lb bag); sweetened with stevia leaf extract and real cocoa — no artificial sweeteners. Sold as Native Fuel Whey until Ascent retired that name; the current pouch reads 100% Whey, and retailer listings still carry the old one.",
-    "affiliateUrl": "https://www.amazon.com/s?k=ascent+native+fuel+whey+protein&tag=thescoopsense-20",
+    "affiliateUrl": "https://www.amazon.com/dp/B01N9V32X2?tag=thescoopsense-20",
     "blurb": "Informed Sport certification is verified on the brand page, and the formula skips artificial sweeteners — a clean pick for tested athletes at a mid-premium price.",
     "labelVerified": "July 2026",
     "reviews": {

@@ -599,7 +599,7 @@ var PRODUCTS = [
     "servings": 30,
     "priceRange": "$$",
     "flavorsNote": "Long flavor list spanning fruit and coffee-shop options, sweetened with sucralose.",
-    "affiliateUrl": "https://www.amazon.com/s?k=optimum+nutrition+amino+energy&tag=thescoopsense-20",
+    "affiliateUrl": "https://www.amazon.com/dp/B003X5LM1U?tag=thescoopsense-20",
     "blurb": "The one caffeinated pick here: 100 mg caffeine with a 5 g proprietary amino blend, making it closer to a light energy drink than a fully dosed EAA product.",
     "labelVerified": "July 2026",
     "reviews": {

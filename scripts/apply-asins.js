@@ -83,7 +83,12 @@ for (const e of entries) {
   // matters — a plausible ASIN for somebody else's product.
   const title = (e.listingTitle || "").toLowerCase();
   if (!title) { errors.push(`${where}: listingTitle is required — it is the evidence the ASIN was checked`); continue; }
-  const brandWord = p.brand.toLowerCase().split(/[\s-]+/).filter((w) => w.length > 2)[0];
+  // `brandAlias` is the deliberate escape hatch for a listing sold under a
+  // sub-brand the parent's name never appears in — Gatorade's rehydration line
+  // is titled "Gatorlyte" and nothing else. Writing it into the entry keeps the
+  // exception explicit and reviewable, instead of quietly relaxing the rule for
+  // every product at once.
+  const brandWord = (e.brandAlias || p.brand).toLowerCase().split(/[\s-]+/).filter((w) => w.length > 2)[0];
   if (brandWord && !title.includes(brandWord)) {
     // Plenty of brands list under a line or shorthand name instead of the
     // company's: Cellucor's listings say "C4", Evlution Nutrition's say "EVL".
