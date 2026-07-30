@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css?v=20260729o">
+  <link rel="stylesheet" href="../css/styles.css?v=20260730a">
 </head>
 <body>
 
@@ -126,7 +126,12 @@
               <li>2g beta-alanine commonly causes a tingling (paresthesia) sensation.</li>
               <li>Label instructs users not to exceed one scoop in any 24-hour period and not to consume more than 400mg of caffeine from all sources in 24 hours.</li>
             </ul>
-            <p class="sc-cautions-more"><a href="../disclaimer.html">Full health &amp; safety notes</a></p>
+            <!-- Standing, and deliberately here rather than only on the safety
+                 page: a reader checking a 400 mg label for a teenager was
+                 given the number and left to find the age line three clicks
+                 away. Kept out of p.cautions — that list is what this label
+                 produces, this sentence is true of every product on file. -->
+            <p class="sc-cautions-more">Formulated for healthy adults — not intended for anyone under 18. Performance studies use roughly 3–6 mg of caffeine per kg of body weight, which puts 300 mg at the studied amount for a 50–100 kg adult. <a href="../disclaimer.html">Full health &amp; safety notes</a></p>
           </div>
         </div>
 
@@ -181,7 +186,8 @@
           <span class="sc-dose-mark" style="left:40.0%"></span>
         </div>
         <p class="sc-dose-scale"><span>0</span><span>studied range 6 g–8 g</span><span>10 g</span></p>
-        <p class="sc-dose-note">Studies use about 6 g of pure L-citrulline, or 8 g of citrulline malate — which is roughly 6 g of citrulline once the malate is subtracted.</p>
+        <p class="sc-dose-note">Studies use about 6 g of pure L-citrulline, or 8 g of citrulline malate — which is about 5.3 g of citrulline at the usual 2:1 ratio, and closer to 4 g if the label is 1:1.</p>
+        <p class="sc-dose-cite">Source: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8571142/" target="_blank" rel="noopener">Gough et al., European Journal of Applied Physiology 2021</a> — “The most commonly employed dose of CM is a single acute 8 g dose”</p>
       </li>
         <li class="sc-dose-row">
         <p class="sc-dose-head"><span class="sc-dose-name">Beta-alanine</span><span class="sc-dose-amount">2 g</span></p>
@@ -192,6 +198,7 @@
         </div>
         <p class="sc-dose-scale"><span>0</span><span>studied range 3.2 g–6.4 g</span><span>7 g</span></p>
         <p class="sc-dose-note">Studied as a daily loading protocol of 3.2–6.4 g taken for four weeks or longer. A single serving below that range still counts toward the daily total, but one scoop is not a studied dose on its own.</p>
+        <p class="sc-dose-cite">Source: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7456894/" target="_blank" rel="noopener">Rezende et al., Frontiers in Physiology 2020</a> — “It seems that substantial amounts of BA are required to increase MCarn, with most studies using doses of ~3.2–6.4 g·day−1, for periods ranging from 4 to 24 weeks.”</p>
       </li>
         <li class="sc-dose-row">
         <p class="sc-dose-head"><span class="sc-dose-name">Nitrosigine</span><span class="sc-dose-amount">1.5 g</span></p>
@@ -202,16 +209,18 @@
         </div>
         <p class="sc-dose-scale"><span>0</span><span>studied range 1.5 g</span><span>2 g</span></p>
         <p class="sc-dose-note">The manufacturer's own published work uses 1.5 g, and formulas that include it generally match that amount.</p>
+        <p class="sc-dose-cite">Source: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5133120/" target="_blank" rel="noopener">Kalman et al., Nutrients 2016</a> — “The active treatment contained 1500 mg of ASI (arginine, silicon, inositol and potassium)”</p>
       </li>
         <li class="sc-dose-row">
         <p class="sc-dose-head"><span class="sc-dose-name">Taurine</span><span class="sc-dose-amount">2 g</span></p>
         <span class="sc-dose-verdict sc-dose-at">At or above the studied amount</span>
-        <div class="sc-dose-bar" role="img" aria-label="Taurine: this label has 2 g; studied amounts run 1 g to 2 g">
-          <span class="sc-dose-band" style="left:33.3%;width:33.3%"></span>
-          <span class="sc-dose-mark" style="left:66.7%"></span>
+        <div class="sc-dose-bar" role="img" aria-label="Taurine: this label has 2 g; studied amounts run 1 g to 6 g">
+          <span class="sc-dose-band" style="left:14.3%;width:71.4%"></span>
+          <span class="sc-dose-mark" style="left:28.6%"></span>
         </div>
-        <p class="sc-dose-scale"><span>0</span><span>studied range 1 g–2 g</span><span>3 g</span></p>
-        <p class="sc-dose-note">Studied at 1–2 g before exercise, with mixed results across trials.</p>
+        <p class="sc-dose-scale"><span>0</span><span>studied range 1 g–6 g</span><span>7 g</span></p>
+        <p class="sc-dose-note">Trials run from 1 g to 6 g a day, given as single doses or for up to two weeks, with mixed results across studies.</p>
+        <p class="sc-dose-cite">Source: <a href="https://pubmed.ncbi.nlm.nih.gov/29546641/" target="_blank" rel="noopener">Waldron et al., Sports Medicine 2018</a> — “The doses of taurine ranged from 1 to 6 g/day and were provided in single doses and for up to 2 weeks among a range of subjects.”</p>
       </li>
         <li class="sc-dose-row">
         <p class="sc-dose-head"><span class="sc-dose-name">Caffeine</span><span class="sc-dose-amount">300 mg</span></p>
@@ -222,6 +231,7 @@
         </div>
         <p class="sc-dose-scale"><span>0</span><span>studied range 200 mg–400 mg</span><span>450 mg</span></p>
         <p class="sc-dose-note">Performance studies most often use 3–6 mg per kg of body weight, which works out to roughly 200–400 mg for most adults. The FDA cites 400 mg a day as an amount not generally associated with negative effects in healthy adults.</p>
+        <p class="sc-dose-cite">Source: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7777221/" target="_blank" rel="noopener">Guest et al., Journal of the International Society of Sports Nutrition 2021</a> — “Caffeine has consistently been shown to improve exercise performance when consumed in doses of 3–6 mg/kg body mass.”</p>
       </li>
       </ul>
       
@@ -421,6 +431,6 @@
   });
 })();
 </script>
-<script src="../js/app.js?v=20260729o"></script>
+<script src="../js/app.js?v=20260730a"></script>
 </body>
 </html>

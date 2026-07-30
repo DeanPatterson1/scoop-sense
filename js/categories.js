@@ -73,7 +73,9 @@ var CATEGORY_CONFIG = {
     stimBadges: false,
     tileFacts: [
       { label: "Protein", key: "m:proteinG:g" },
-      { label: "Per scoop", key: "protPct" },
+      // "Per scoop 88%" read as a percentage of nothing to a first-time buyer.
+      // Name what the figure is a share of.
+      { label: "Protein by weight", key: "protPct" },
       { label: "Source", key: "m:source" }
     ],
     compareCols: [

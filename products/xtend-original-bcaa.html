@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css?v=20260729o">
+  <link rel="stylesheet" href="../css/styles.css?v=20260730a">
 </head>
 <body>
 
@@ -126,7 +126,12 @@
               <li>BCAA-only formulas lack six of the nine essential amino acids</li>
               <li>Amino drinks supplement protein intake, not replace it</li>
             </ul>
-            <p class="sc-cautions-more"><a href="../disclaimer.html">Full health &amp; safety notes</a></p>
+            <!-- Standing, and deliberately here rather than only on the safety
+                 page: a reader checking a 400 mg label for a teenager was
+                 given the number and left to find the age line three clicks
+                 away. Kept out of p.cautions — that list is what this label
+                 produces, this sentence is true of every product on file. -->
+            <p class="sc-cautions-more">Formulated for healthy adults — not intended for anyone under 18. <a href="../disclaimer.html">Full health &amp; safety notes</a></p>
           </div>
         </div>
 
@@ -176,12 +181,13 @@
         <li class="sc-dose-row">
         <p class="sc-dose-head"><span class="sc-dose-name">Leucine</span><span class="sc-dose-amount">3.5 g</span></p>
         <span class="sc-dose-verdict sc-dose-at">At or above the studied amount</span>
-        <div class="sc-dose-bar" role="img" aria-label="Leucine: this label has 3.5 g; studied amounts run 2.5 g to 3 g">
-          <span class="sc-dose-band" style="left:62.5%;width:12.5%"></span>
+        <div class="sc-dose-bar" role="img" aria-label="Leucine: this label has 3.5 g; studied amounts run 0.7 g to 3 g">
+          <span class="sc-dose-band" style="left:17.5%;width:57.5%"></span>
           <span class="sc-dose-mark" style="left:87.5%"></span>
         </div>
-        <p class="sc-dose-scale"><span>0</span><span>studied range 2.5 g–3 g</span><span>4 g</span></p>
-        <p class="sc-dose-note">Muscle-protein-synthesis research clusters on 2.5–3 g of leucine per serving as the amount that reliably triggers the response.</p>
+        <p class="sc-dose-scale"><span>0</span><span>studied range 0.7 g–3 g</span><span>4 g</span></p>
+        <p class="sc-dose-note">The ISSN position stand puts an acute protein dose at 700–3000 mg of leucine, and about 1–3 g per meal as the amount needed to stimulate protein translation.</p>
+        <p class="sc-dose-cite">Source: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5477153/" target="_blank" rel="noopener">Jäger et al., Journal of the International Society of Sports Nutrition 2017</a> — “Acute protein doses should strive to contain 700–3000 mg of leucine and/or a higher relative leucine content”</p>
       </li>
       </ul>
       <p class="sc-dose-blendnote">One or more amounts on this label sit inside a proprietary blend, so the individual doses behind the blend total cannot be compared at all.</p>
@@ -409,6 +415,6 @@
   });
 })();
 </script>
-<script src="../js/app.js?v=20260729o"></script>
+<script src="../js/app.js?v=20260730a"></script>
 </body>
 </html>

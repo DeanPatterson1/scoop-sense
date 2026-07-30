@@ -7,8 +7,14 @@
 //
 // Honesty rules baked in (do not remove):
 //   - No dollar prices, no cart, no fabricated reviews or star ratings.
-//   - Product artwork is a generic stylized tub (brand color + monogram),
-//     captioned as illustrative — never real packaging.
+//   - Product artwork is the brand's own photograph where one is on file,
+//     captioned as retailer-supplied with a "packaging may vary, verify the
+//     panel" note; products without a photograph fall back to a generic
+//     stylized tub (brand colour + monogram). Never a mock-up of a real
+//     label, and never artwork implying a figure the panel does not state.
+//   - Every studied range drawn on a page comes from js/doses.js and carries
+//     its own citation where one has been verified. A bar must never
+//     contradict the source quoted beneath it.
 
 "use strict";
 
@@ -17,7 +23,7 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const OUT = path.join(ROOT, "products");
-const VERSION = "20260729o"; // keep in sync with the ?v= on the other pages
+const VERSION = "20260730a"; // keep in sync with the ?v= on the other pages
 
 // Set this to the real origin at domain time (see README "Sitemap & domain").
 // Absolute-URL metadata — canonical, og:url, BreadcrumbList — is emitted only
@@ -76,6 +82,19 @@ function bucketOf(p) {
   if (p.caffeineMg < 150) return "low";
   if (p.caffeineMg < 250) return "moderate";
   return "high";
+}
+
+/* Turns the caffeine figure into the comparison a reader actually wants to
+ * make: performance studies dose caffeine per kilogram, so the same 400 mg is
+ * a studied amount for one body and well past it for another. Stated as the
+ * body weight the label's own dose corresponds to — no recommendation, and no
+ * arithmetic left to the reader. Only worth saying from 200 mg up; below that
+ * the implied range is lighter than any adult and reads as noise. */
+function ageCaffeineNote(p) {
+  if (!p.caffeineMg || p.caffeineMg < 200) return "";
+  const heavy = Math.round(p.caffeineMg / 3);
+  const light = Math.round(p.caffeineMg / 6);
+  return ` Performance studies use roughly 3–6 mg of caffeine per kg of body weight, which puts ${p.caffeineMg} mg at the studied amount for a ${light}–${heavy} kg adult.`;
 }
 
 function stimLabelOf(p) {
@@ -155,7 +174,20 @@ function tagsHTML(p) {
   if (p.badges.indexOf("Third-Party Tested") !== -1) tags.push(`<span class="sc-tag sc-tag-calm" title="Certified by an independent banned-substance testing program (NSF Certified for Sport, Informed Sport, or Informed Choice), per the label or brand page.">Third-party tested</span>`);
   if (p.badges.indexOf("Beginner Friendly") !== -1) tags.push(`<span class="sc-tag" title="A reasonable first tub: moderate or no caffeine, a fully disclosed label, and nothing on the panel that surprises a new user.">Beginner friendly</span>`);
   if (p.badges.indexOf("Budget Pick") !== -1) tags.push(`<span class="sc-tag" title="Cost per full serving sits in the lowest third of this database while the label still discloses its doses.">Budget pick</span>`);
+  // Mirrors isDairyFreeSource in js/app.js — derived from the panel's source
+  // line, not a badge, and only ever on protein.
+  if (isDairyFreeSource(p)) tags.push(`<span class="sc-tag sc-tag-calm" title="The protein source named on the panel carries no whey, casein, or milk. This reads the source line only — check the label's own allergen statement before buying.">Dairy-free source</span>`);
   return tags.join("");
+}
+
+/* Whey, casein and milk are dairy; plants and hemp are not. A source line that
+ * names nothing stays out — "unstated" is not "safe", and this is the one
+ * figure a lactose-intolerant reader cannot afford a guess on. */
+function isDairyFreeSource(p) {
+  if (categoryOf(p) !== "protein") return false;
+  const src = (p.metrics && p.metrics.source) || "";
+  if (!src) return false;
+  return !/whey|casein|milk|lactose/i.test(src);
 }
 
 /* Config fact-key resolver — mirrors factOf in js/app.js. */
@@ -336,7 +368,11 @@ function slidesOf(p) {
   if (local && fs.existsSync(path.join(ROOT, local))) {
     slides.push({ src: `../${local}`, alt: `${name} — product image` });
   }
-  for (const u of p.images) {
+  // `images` is optional: a product can carry a locally stored lead shot and no
+  // retailer gallery at all. Reading it unguarded turned that into a crash, and
+  // gating the media column on it showed such a product its photograph on the
+  // grid tile and the monogram tub on its own page.
+  for (const u of p.images || []) {
     if (local && u === p.imageUrl) continue; // don't show the same shot twice
     slides.push({ src: u, alt: `${name} — retailer photo` });
   }
@@ -344,7 +380,7 @@ function slidesOf(p) {
 }
 
 function mediaHTML(p) {
-  if (!p.images || !p.images.length) {
+  if (!slidesOf(p).length) {
     return `<figure class="sc-pdp-media">${tubSVG(p)}</figure>
           <p class="sc-pdp-caption">Illustrative artwork — not the actual packaging. Always check the real label on the tub you buy.</p>`;
   }
@@ -513,11 +549,20 @@ function doseRowHTML(entry, amount) {
         </div>
         <p class="sc-dose-scale"><span>0</span><span>studied range ${fmtAmount(entry.low, entry.unit)}${entry.low === entry.high ? "" : "–" + fmtAmount(entry.high, entry.unit)}</span><span>${fmtAmount(scale, entry.unit)}</span></p>`;
 
+  /* "Published research" with nothing to open is an assertion, not a source.
+   * Where doses.js carries a verified citation, the reader gets the paper and
+   * the sentence the range came from. Entries without one say nothing here
+   * rather than borrowing another row's authority. */
+  const cite = entry.cite
+    ? `<p class="sc-dose-cite">Source: <a href="${esc(entry.cite.url)}" target="_blank" rel="noopener">${esc(entry.cite.label)}</a> — “${esc(entry.cite.quote)}”</p>`
+    : "";
+
   return `<li class="sc-dose-row">
         <p class="sc-dose-head"><span class="sc-dose-name">${esc(entry.label)}</span><span class="sc-dose-amount">${amount === null ? "not disclosed" : esc(fmtAmount(amount, entry.unit))}</span></p>
         ${verdict}
         ${bar}
         <p class="sc-dose-note">${esc(entry.note)}</p>
+        ${cite}
       </li>`;
 }
 
@@ -960,7 +1005,12 @@ function pageHTML(p) {
             <ul>
               ${p.cautions.map((c) => `<li>${esc(c)}</li>`).join("\n              ")}
             </ul>
-            <p class="sc-cautions-more"><a href="../disclaimer.html">Full health &amp; safety notes</a></p>
+            <!-- Standing, and deliberately here rather than only on the safety
+                 page: a reader checking a 400 mg label for a teenager was
+                 given the number and left to find the age line three clicks
+                 away. Kept out of p.cautions — that list is what this label
+                 produces, this sentence is true of every product on file. -->
+            <p class="sc-cautions-more">Formulated for healthy adults — not intended for anyone under 18.${ageCaffeineNote(p)} <a href="../disclaimer.html">Full health &amp; safety notes</a></p>
           </div>
         </div>
 

@@ -335,7 +335,7 @@ var PRODUCTS = [
   },
   {
     "id": "ascent-native-fuel-whey",
-    "name": "Native Fuel Whey",
+    "name": "Whey Protein",
     "brand": "Ascent",
     "category": "protein",
     "stimFree": true,
@@ -367,7 +367,7 @@ var PRODUCTS = [
     ],
     "servings": 27,
     "priceRange": "$$$",
-    "flavorsNote": "Figures verified against Chocolate (33 g scoop, 2 lb bag); sweetened with stevia leaf extract and real cocoa — no artificial sweeteners.",
+    "flavorsNote": "Figures verified against Chocolate (33 g scoop, 2 lb bag); sweetened with stevia leaf extract and real cocoa — no artificial sweeteners. Sold as Native Fuel Whey until Ascent retired that name; the current pouch reads 100% Whey, and retailer listings still carry the old one.",
     "affiliateUrl": "https://www.amazon.com/s?k=ascent+native+fuel+whey+protein&tag=YOURTAG-20",
     "blurb": "Informed Sport certification is verified on the brand page, and the formula skips artificial sweeteners — a clean pick for tested athletes at a mid-premium price.",
     "labelVerified": "July 2026",

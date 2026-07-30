@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css?v=20260729o">
+  <link rel="stylesheet" href="../css/styles.css?v=20260730a">
 </head>
 <body>
 
@@ -126,7 +126,12 @@
               <li>500 mg sodium per serving counts toward daily sodium</li>
               <li>Talk to your doctor before use if you are pregnant, nursing, or take medication</li>
             </ul>
-            <p class="sc-cautions-more"><a href="../disclaimer.html">Full health &amp; safety notes</a></p>
+            <!-- Standing, and deliberately here rather than only on the safety
+                 page: a reader checking a 400 mg label for a teenager was
+                 given the number and left to find the age line three clicks
+                 away. Kept out of p.cautions — that list is what this label
+                 produces, this sentence is true of every product on file. -->
+            <p class="sc-cautions-more">Formulated for healthy adults — not intended for anyone under 18. <a href="../disclaimer.html">Full health &amp; safety notes</a></p>
           </div>
         </div>
 
@@ -176,18 +181,20 @@
         <li class="sc-dose-row">
         <p class="sc-dose-head"><span class="sc-dose-name">Taurine</span><span class="sc-dose-amount">1 g</span></p>
         <span class="sc-dose-verdict sc-dose-at">At or above the studied amount</span>
-        <div class="sc-dose-bar" role="img" aria-label="Taurine: this label has 1 g; studied amounts run 1 g to 2 g">
-          <span class="sc-dose-band" style="left:33.3%;width:33.3%"></span>
-          <span class="sc-dose-mark" style="left:33.3%"></span>
+        <div class="sc-dose-bar" role="img" aria-label="Taurine: this label has 1 g; studied amounts run 1 g to 6 g">
+          <span class="sc-dose-band" style="left:14.3%;width:71.4%"></span>
+          <span class="sc-dose-mark" style="left:14.3%"></span>
         </div>
-        <p class="sc-dose-scale"><span>0</span><span>studied range 1 g–2 g</span><span>3 g</span></p>
-        <p class="sc-dose-note">Studied at 1–2 g before exercise, with mixed results across trials.</p>
+        <p class="sc-dose-scale"><span>0</span><span>studied range 1 g–6 g</span><span>7 g</span></p>
+        <p class="sc-dose-note">Trials run from 1 g to 6 g a day, given as single doses or for up to two weeks, with mixed results across studies.</p>
+        <p class="sc-dose-cite">Source: <a href="https://pubmed.ncbi.nlm.nih.gov/29546641/" target="_blank" rel="noopener">Waldron et al., Sports Medicine 2018</a> — “The doses of taurine ranged from 1 to 6 g/day and were provided in single doses and for up to 2 weeks among a range of subjects.”</p>
       </li>
         <li class="sc-dose-row">
         <p class="sc-dose-head"><span class="sc-dose-name">Sodium</span><span class="sc-dose-amount">500 mg</span></p>
         
         
         <p class="sc-dose-note">The studied range is 300–700 mg of sodium per litre of fluid, and this label does not state the volume to mix a serving into — so its concentration, which is what the range measures, cannot be worked out from the panel. Check the mixing instructions on the pack.</p>
+        <p class="sc-dose-cite">Source: <a href="https://www.germanjournalsportsmedicine.com/fileadmin/content/archiv2020/Heft_7-8-9/DtschZSportmed_Position_Stand_Mosler_Fluid_Replacement_in_Sports_2020-7-8-9.pdf" target="_blank" rel="noopener">Mosler et al., German Journal of Sports Medicine 2020 (DGE position)</a> — “the optimal sports drink should contain 400-1100 mg / l sodium in addition to carbohydrates (4-8%)”</p>
       </li>
       </ul>
       
@@ -363,6 +370,6 @@
   });
 })();
 </script>
-<script src="../js/app.js?v=20260729o"></script>
+<script src="../js/app.js?v=20260730a"></script>
 </body>
 </html>

@@ -92,6 +92,9 @@ var PRODUCTS = [
       "https://www.transparentlabs.com/cdn/shop/files/TL_INTRA_30_SL_1_2.png?v=1746463908"
     ],
     "metrics": {
+      "form": "powder tub",
+      "ratio": "2:1:1",
+      "certification": "Informed Choice",
       "eaaG": 6.7,
       "bcaaG": null,
       "leucineG": null
@@ -146,6 +149,9 @@ var PRODUCTS = [
       "https://www.livemomentous.com/cdn/shop/files/Vital-Aminos_HERO.png?v=1778100483"
     ],
     "metrics": {
+      "netWeightG": 345,
+      "form": "powder tub",
+      "certification": "NSF Certified for Sport",
       "eaaG": 5.6,
       "bcaaG": 3.75,
       "leucineG": 2.5
@@ -201,6 +207,9 @@ var PRODUCTS = [
       "https://d1vo8zfysxy97v.cloudfront.net/media/product/sp641__v53f677a27e0fa152e77753edb45149613e71b6e2.jpg"
     ],
     "metrics": {
+      "netWeightG": 231,
+      "form": "powder tub",
+      "certification": "NSF Certified for Sport",
       "eaaG": 3.8,
       "bcaaG": 2.5,
       "leucineG": 1.25
@@ -259,6 +268,8 @@ var PRODUCTS = [
       "https://dymatize-nutrition.myshopify.com/cdn/shop/products/all9amino_fruit_fusion_rush.png?v=1585311972"
     ],
     "metrics": {
+      "netWeightG": 450,
+      "form": "powder tub",
       "eaaG": 10,
       "bcaaG": 7.2,
       "leucineG": null
@@ -320,6 +331,9 @@ var PRODUCTS = [
       "https://www.jackedfactory.com/cdn/shop/files/JF_D2C_EAA_20_01.png?v=1774449809&width=4000"
     ],
     "metrics": {
+      "netWeightG": 290,
+      "form": "powder tub",
+      "aminoSource": "fermented",
       "eaaG": 6.7,
       "bcaaG": null,
       "leucineG": null
@@ -373,6 +387,8 @@ var PRODUCTS = [
       "https://nutricost.com/cdn/shop/files/NTC_EAA_POG_30SERV_20OZ_Front_Square_1800x1800.jpg?v=1770138766"
     ],
     "metrics": {
+      "form": "powder tub",
+      "ratio": "2:1:1",
       "eaaG": 8,
       "bcaaG": null,
       "leucineG": null
@@ -480,6 +496,10 @@ var PRODUCTS = [
       "https://cellucor.com/cdn/shop/files/XTEND_1144_Digital_Relabel_FlowThrough_Assets_PDPs_OnGreyBackground-XTEND-OG30-FI-Label.png?v=1776889586"
     ],
     "metrics": {
+      "netWeightG": 420,
+      "form": "powder tub",
+      "ratio": "2:1:1",
+      "certification": "Informed Choice",
       "eaaG": null,
       "bcaaG": 7,
       "leucineG": 3.5
@@ -534,6 +554,9 @@ var PRODUCTS = [
       "https://musclepharm.com/cdn/shop/files/BCAA_Blue_Rasp.jpg?v=1754064987&width=1800"
     ],
     "metrics": {
+      "netWeightG": 215,
+      "form": "powder tub",
+      "ratio": "3:1:2",
       "eaaG": null,
       "bcaaG": 6,
       "leucineG": 3
@@ -633,6 +656,8 @@ var PRODUCTS = [
       "https://www.optimumnutrition.com/cdn/shop/files/on-1122232_Image_01.png?v=1761656281&width=2000"
     ],
     "metrics": {
+      "netWeightG": 270,
+      "form": "powder tub",
       "eaaG": null,
       "bcaaG": null,
       "leucineG": null
@@ -682,6 +707,8 @@ var PRODUCTS = [
       "https://www.gobsn.com/cdn/shop/files/AMINOx_30sv_BlueRaz.jpg?v=1762989781&width=1000"
     ],
     "metrics": {
+      "netWeightG": 435,
+      "form": "powder tub",
       "eaaG": null,
       "bcaaG": null,
       "leucineG": null
@@ -737,6 +764,8 @@ var PRODUCTS = [
     "blurb": "A fully dosed 5 g BCAA (2.5 g leucine) stacked with 110 mg of natural caffeine and 500 mg each of beta-alanine and taurine, positioning it as an energizing BCAA rather than a stim-free recovery drink.",
     "labelVerified": "July 2026",
     "metrics": {
+      "netWeightG": 291,
+      "form": "powder tub",
       "eaaG": null,
       "bcaaG": 5,
       "leucineG": 2.5
@@ -796,6 +825,10 @@ var PRODUCTS = [
       "https://www.kaged.com/cdn/shop/files/BCAA_BCAASFP.jpg"
     ],
     "metrics": {
+      "netWeightG": 400,
+      "form": "powder tub",
+      "ratio": "2:1:1",
+      "aminoSource": "fermented",
       "eaaG": null,
       "bcaaG": 5,
       "leucineG": 2.5
@@ -851,6 +884,10 @@ var PRODUCTS = [
       "https://appliednutrition.uk/cdn/shop/files/BCAA_Professional_450g_-_Fruit_Burst.webp?v=1781657000"
     ],
     "metrics": {
+      "netWeightG": 450,
+      "form": "powder tub",
+      "ratio": "2:1:1",
+      "certification": "Informed Sport",
       "eaaG": null,
       "bcaaG": 7.2,
       "leucineG": 3.6
@@ -966,6 +1003,10 @@ var PRODUCTS = [
       "https://nutrabio.com/cdn/shop/products/26900.png?v=1707331471&width=1946"
     ],
     "metrics": {
+      "netWeightG": 395,
+      "form": "powder tub",
+      "ratio": "2:1:1",
+      "aminoSource": "fermented",
       "eaaG": 8.2,
       "bcaaG": 6,
       "leucineG": 3
@@ -1024,6 +1065,9 @@ var PRODUCTS = [
       "https://www.alaninu.com/cdn/shop/files/Stretch_AN-Website-PDP-BCAA-SPR-02_V1.png?v=1782507258&width=2000"
     ],
     "metrics": {
+      "netWeightG": 243,
+      "form": "powder tub",
+      "ratio": "2:1:1",
       "eaaG": null,
       "bcaaG": 5,
       "leucineG": 2.5
@@ -1083,6 +1127,8 @@ var PRODUCTS = [
       "https://www.muscletech.com/cdn/shop/files/mt-amino-build-strawberry-watermelon.png?v=1742823147"
     ],
     "metrics": {
+      "netWeightG": 614,
+      "form": "powder tub",
       "eaaG": null,
       "bcaaG": 7,
       "leucineG": 4
@@ -1142,6 +1188,10 @@ var PRODUCTS = [
       "https://www.allmaxnutrition.com/cdn/shop/files/1.1-Aminocore-BCAA-watermelon.webp?v=1782154409&width=1400"
     ],
     "metrics": {
+      "netWeightG": 315,
+      "form": "powder tub",
+      "ratio": "9:6:5",
+      "certification": "Informed Choice",
       "eaaG": null,
       "bcaaG": 8.18,
       "leucineG": 3.68
@@ -1197,6 +1247,9 @@ var PRODUCTS = [
       "https://nutricost.com/cdn/shop/files/NTCP_BCAA_Watermelon_30SERV_20OZ_SFP_Square.jpg?v=1760719437"
     ],
     "metrics": {
+      "netWeightG": 300,
+      "form": "powder tub",
+      "ratio": "2:1:1",
       "eaaG": null,
       "bcaaG": 6,
       "leucineG": 3
@@ -1255,6 +1308,8 @@ var PRODUCTS = [
       "https://nutrabio.com/cdn/shop/files/80015_SupplementFactsPanel.png?v=1771857958"
     ],
     "metrics": {
+      "form": "powder tub",
+      "ratio": "2:1:1",
       "eaaG": 10,
       "bcaaG": 6,
       "leucineG": 3
@@ -1305,6 +1360,9 @@ var PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/0072/7754/3493/files/eaa-berry-blast-SFP-04_25-allergy.png?v=1746047760"
     ],
     "metrics": {
+      "netWeightG": 644,
+      "form": "powder tub",
+      "ratio": "2:1:1",
       "eaaG": 6.5,
       "bcaaG": 3,
       "leucineG": 1.5
@@ -1394,6 +1452,8 @@ var PRODUCTS = [
       "https://www.ghostlifestyle.com/cdn/shop/files/GHOST_Intra_OrangeSqueeze_SFP.png?v=1715710016"
     ],
     "metrics": {
+      "netWeightG": 430,
+      "form": "powder tub",
       "eaaG": 10,
       "bcaaG": 6,
       "leucineG": 3
@@ -1438,6 +1498,8 @@ var PRODUCTS = [
       "https://redcon1.com/cdn/shop/files/SUPP-FACTS_GRUNT_ROCKET-BOMB.png?v=1715181859"
     ],
     "metrics": {
+      "netWeightG": 285,
+      "form": "powder tub",
       "eaaG": 6.9,
       "bcaaG": 6,
       "leucineG": 3
@@ -1493,6 +1555,10 @@ var PRODUCTS = [
     "blurb": "An Informed Choice-certified BCAA formula (not a full EAA spectrum) built around an 8 g 2:1:1 ratio plus a 5 g glutamine dose well above what most BCAA products include.",
     "labelVerified": "July 2026",
     "metrics": {
+      "form": "powder tub",
+      "ratio": "2:1:1",
+      "aminoSource": "plant-fermented",
+      "certification": "Informed Choice",
       "eaaG": null,
       "bcaaG": 8,
       "leucineG": 4
@@ -1555,6 +1621,11 @@ var PRODUCTS = [
       "https://www.kaged.com/cdn/shop/files/Intra-WorkoutAMZ_IWSFPFP.jpg?v=1774385694"
     ],
     "metrics": {
+      "netWeightG": 339,
+      "form": "powder tub",
+      "ratio": "2:1:1",
+      "aminoSource": "fermented",
+      "certification": "Informed Sport",
       "eaaG": null,
       "bcaaG": 5,
       "leucineG": 2.5
@@ -1609,6 +1680,7 @@ var PRODUCTS = [
       "https://rysesupps.com/cdn/shop/files/nfp-bcaa-cherry.jpg?v=1666311640"
     ],
     "metrics": {
+      "form": "powder tub",
       "eaaG": 8,
       "bcaaG": 5,
       "leucineG": 2.5
@@ -1663,6 +1735,8 @@ var PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/0666/3683/files/motion.jpg?v=1771608586"
     ],
     "metrics": {
+      "form": "powder tub",
+      "ratio": "2:1:1",
       "eaaG": null,
       "bcaaG": 3,
       "leucineG": 1.5
@@ -1717,6 +1791,8 @@ var PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/0082/8021/1553/files/EAAMAXSUPPLEMENTFACTSPANELS.png"
     ],
     "metrics": {
+      "form": "powder tub",
+      "ratio": "2:1:1",
       "eaaG": 5.82,
       "bcaaG": 5,
       "leucineG": 2.5
@@ -1771,6 +1847,8 @@ var PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/1876/4703/files/bcaas-eaas-35182429536325.png?v=1726234981"
     ],
     "metrics": {
+      "form": "powder tub",
+      "ratio": "2:1:1",
       "eaaG": 6.8,
       "bcaaG": 5,
       "leucineG": 2.5
@@ -1832,6 +1910,10 @@ var PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/0519/6280/6450/files/genius-bcaa-back.png?v=1767885560"
     ],
     "metrics": {
+      "netWeightG": 286,
+      "form": "powder tub",
+      "ratio": "2:1:1",
+      "aminoSource": "plant-fermented",
       "eaaG": null,
       "bcaaG": 5,
       "leucineG": 2.5
@@ -1886,6 +1968,8 @@ var PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/0561/9761/1672/files/BESTEAA-30SERV-SUPPFACTS.webp?v=1739305685"
     ],
     "metrics": {
+      "form": "powder tub",
+      "ratio": "2:1:1",
       "eaaG": 10,
       "bcaaG": 7.2,
       "leucineG": 3.6
@@ -1931,6 +2015,7 @@ var PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/0877/6064/files/BCAA500060SERV-UF_3.jpg?v=1765384748"
     ],
     "metrics": {
+      "form": "powder tub",
       "eaaG": null,
       "bcaaG": 5,
       "leucineG": 2.5

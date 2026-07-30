@@ -372,44 +372,24 @@ main > .sc-section-deep + .sc-section {
   color: var(--sc-accent);
 }
 
-/* Six links wrapped to two rows on a phone and ate ~130px of the fold before
-   any content. One scrolling row instead, with a fade telling the reader it
-   continues. Desktop keeps the plain inline row. */
+/* Six links measure 541px and cannot share one 390px row. Scrolling that row
+   instead left "Health & Safety" and "About" off the screen behind a 20px
+   fade phone readers took for a hard cut, and a swipe nobody knows about is
+   not navigation. Two wrapped rows cost ~40px of the fold and put every link
+   where it can be tapped. */
 .sc-nav {
   display: flex;
+  flex-wrap: wrap;
   gap: 4px 20px;
   align-items: center;
   max-width: 100%;
-  overflow-x: auto;
-  scrollbar-width: none;
-  -webkit-overflow-scrolling: touch;
-  padding-right: 12px;
-  -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 20px), transparent);
-  mask-image: linear-gradient(to right, #000 calc(100% - 20px), transparent);
-}
-
-.sc-nav::-webkit-scrollbar {
-  display: none;
-}
-
-.sc-nav a {
-  white-space: nowrap;
-}
-
-@media (min-width: 860px) {
-  .sc-nav {
-    flex-wrap: wrap;
-    overflow-x: visible;
-    padding-right: 0;
-    -webkit-mask-image: none;
-    mask-image: none;
-  }
 }
 
 .sc-nav a {
   position: relative;
   color: var(--sc-muted);
   text-decoration: none;
+  white-space: nowrap;
   font-size: 0.95rem;
   font-weight: 600;
   padding: 4px 0;
@@ -681,34 +661,51 @@ main > .sc-section-deep + .sc-section {
 
 /* Narrow screens scroll the table sideways. Wide screens must not: an
    overflow container becomes the scroll parent, and a sticky <thead> inside
-   one has nothing to stick to. The edge fade tells a phone reader that
-   columns continue past the right edge. */
+   one has nothing to stick to. */
 .sc-table-scroll {
   position: relative;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
 
-.sc-table-scroll::after {
-  content: "";
-  position: sticky;
-  right: 0;
-  top: 0;
-  float: right;
-  width: 28px;
-  height: 100%;
-  margin-left: -28px;
-  background: linear-gradient(to right, rgba(15, 17, 20, 0), var(--sc-bg));
-  pointer-events: none;
-}
-
 @media (min-width: 1100px) {
   .sc-table-scroll {
     overflow-x: visible;
   }
+}
+
+/* The right edge has to say the columns continue: a fade over the cut-off
+   column and a chevron, both pinned to the visible edge. A fade alone was not
+   a hint anyone read — a column cut mid-cell against a near-black page just
+   looks like the end of the table — and it never drew at all, because a
+   floated strip resolves `height: 100%` against this auto-height box as 0.
+   Flex gives the strip a height to stretch to, and the stacking order lifts it
+   over the sticky head, which paints on top of it otherwise. The chevron is a
+   background image because a url() cannot carry var(--sc-muted).
+
+   Phones only: CSS cannot ask whether a box really scrolls, and while every
+   table here overflows a phone, most of them fit by 600px — where the same
+   mark would promise columns that are not there. */
+@media (max-width: 559px) {
+  .sc-table-scroll {
+    display: flex;
+  }
 
   .sc-table-scroll::after {
-    display: none;
+    content: "";
+    position: sticky;
+    right: 0;
+    z-index: 4;
+    flex: none;
+    align-self: stretch;
+    width: 40px;
+    margin-left: -40px;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 16 16'%3E%3Cpath d='M5.5 2.5l5.5 5.5-5.5 5.5' fill='none' stroke='%239AA3AD' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"),
+      linear-gradient(to right, rgba(15, 17, 20, 0), var(--sc-bg) 78%);
+    background-position: right 9px top 12px, 0 0;
+    background-repeat: no-repeat;
+    pointer-events: none;
   }
 }
 
@@ -741,6 +738,19 @@ main > .sc-section-deep + .sc-section {
   padding-right: 0;
 }
 
+/* Except in a phone's scrolling table, where the edge strip parks over this
+   column once the reader reaches the far right — without a gutter it would sit
+   on the figures. Only the scrolling tables: the facts panels on product pages
+   use the same table with no strip over it, and would just lose 40px of
+   measure. The table cannot carry the padding itself — border-collapse
+   ignores padding on the table box. */
+@media (max-width: 559px) {
+  .sc-table-scroll .sc-table th:last-child,
+  .sc-table-scroll .sc-table td:last-child {
+    padding-right: 40px;
+  }
+}
+
 /* The head sticks: a 38-row comparison table whose column meanings scroll
    away is unreadable past the first screen. The offset clears the sticky
    toolbar where one exists; pages without a toolbar set it to 0. */
@@ -757,6 +767,16 @@ main > .sc-section-deep + .sc-section {
   color: var(--sc-muted);
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+/* Whatever the browser scrolls to itself — an anchor, a tabbed link, a
+   find-in-page hit — otherwise lands under the stuck head. At 200% text that
+   head is 60px tall and swallows a row's whole figure line, leaving a product
+   name with no caffeine or citrulline under it. Rows reserve the head's
+   height: its 20px of padding plus its own line. */
+.sc-table tbody tr,
+.sc-table tbody a {
+  scroll-margin-top: calc(var(--sc-table-head-top, 0px) + 1.2rem + 24px);
 }
 
 .sc-table .sc-num {
@@ -1284,6 +1304,22 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   border-color: var(--sc-accent-down);
 }
 
+/* Quick label filters, drawn by js/app.js above the result count. Same chip
+   shape as the category row, but these are buttons that toggle a filter rather
+   than links that navigate — the label filters were reachable only inside a
+   panel that starts collapsed, which is a filter nobody found. */
+.sc-quick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0 0;
+}
+
+button.sc-chip {
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
 /* Homepage category cards — five doors into the database. */
 .sc-cats {
   display: grid;
@@ -1348,9 +1384,10 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   position: sticky;
   top: 0;
   z-index: 30;
-  background: rgba(15, 17, 20, 0.96);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  /* Opaque, not a 96% wash: the "Check price" buttons on the cards passing
+     behind the bar ghosted through it. A backdrop blur under a solid fill
+     shows nothing, so it went with the transparency. */
+  background: var(--sc-bg);
   border-top: 1px solid var(--sc-border);
   border-bottom: 1px solid var(--sc-border);
   padding: 12px 0;
@@ -1387,9 +1424,14 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   cursor: pointer;
 }
 
+/* A 200px basis is a pixel width the text does not scale with: at 200% text
+   the two lists and the filters button squeezed the field to 236px and the
+   placeholder read "Search produ". Sizing it in ch ties the field to the words
+   it has to hold, so the rest of the row wraps instead of shrinking it. Capped
+   at 100% so the field itself never overflows the row. */
 .sc-toolbar .sc-input {
-  flex: 1 1 200px;
-  min-width: 0;
+  flex: 1 1 32ch;
+  min-width: min(100%, 32ch);
 }
 
 .sc-clear-btn {
@@ -1583,6 +1625,27 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   color: var(--sc-muted);
   margin: 16px 0;
   font-variant-numeric: tabular-nums;
+}
+
+/* "Show more" under the grid. The unnarrowed hub is 187 tiles, which is 48
+   desktop screens of scrolling, so the grid draws a helping at a time. */
+.sc-more-row {
+  display: flex;
+  justify-content: center;
+  margin: 28px 0 8px;
+}
+
+/* Sort controls above a compare table. The table sorts from its own column
+   headings, which is unreachable on a phone once the rows are in view. */
+.sc-csort-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 0 0 16px;
+}
+
+.sc-csort-row .sc-field {
+  min-width: 12rem;
 }
 
 .sc-empty {
@@ -2356,13 +2419,16 @@ th[aria-sort="descending"] .sc-sort-btn::after {
 /* Retailer photo gallery (replaces the stylized tub when images exist).
    Paper backdrop so white listing photos blend instead of glaring on the
    dark shell; the first slide is our transparent local render. */
+/* White, not paper: every lead photograph is a 4:3 shot on a white ground, and
+   `contain` letterboxes it into this square frame. Against the paper tone the
+   bars drew a visible white box inside a warm border; on white the photo and
+   its frame are one surface. The monogram-tub fallback lives on .sc-pdp-media
+   and keeps the paper stage. */
 .sc-pdp-media-photo {
   aspect-ratio: 1 / 1;
   overflow: hidden;
   position: relative;
-  background:
-    radial-gradient(ellipse 70% 60% at 50% 45%, rgba(255, 255, 255, 0.5), transparent 75%),
-    #E7E2D8;
+  background: #FFFFFF;
 }
 
 .sc-pdp-media-photo img {
@@ -2814,6 +2880,25 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   color: var(--sc-muted);
   max-width: 60ch;
   margin: 10px 0 0;
+}
+
+/* The paper the range came from, quoted and openable. Smaller and quieter than
+   the note above it: it is provenance, not the point. */
+.sc-dose-cite {
+  font-size: 0.8rem;
+  color: var(--sc-muted);
+  max-width: 60ch;
+  margin: 6px 0 0;
+}
+
+.sc-dose-cite a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.sc-dose-cite a:hover,
+.sc-dose-cite a:focus-visible {
+  color: var(--sc-accent);
 }
 
 .sc-dose-blendnote {

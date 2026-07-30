@@ -43,6 +43,23 @@
     tolerance: 0
   };
 
+  // Back to an unfiltered page. Used by "Clear all" and by a fresh hash
+  // arriving on the page already open, which has to forget the old view
+  // before it reads the new one. Leaves `mode` alone: which tab a reader
+  // works in is a preference, not a filter.
+  function resetFilterState() {
+    state.search = "";
+    state.category = PAGE_CATEGORY || "all";
+    state.brand = "all";
+    state.figure = "";
+    state.bucket = "all";
+    state.dir = "";
+    state.price = "all";
+    state.label = "all";
+    state.target = undefined;
+    state.tolerance = 0;
+  }
+
   /* Quality-of-label filters. Every one of these already exists as a badge or
    * is derivable from the ingredient list, and none of them could be filtered
    * on — a drug-tested athlete had to eyeball a badge across the whole grid,
@@ -53,7 +70,11 @@
       test: function (p) { return p.badges.indexOf("Third-Party Tested") !== -1; } },
     { value: "disclosed", label: "Fully disclosed", test: isDisclosed },
     { value: "noblend", label: "No blends at all",
-      test: function (p) { return blendState(p) === "none"; } }
+      test: function (p) { return blendState(p) === "none"; } },
+    // `only`: offered where that category is in scope, and nowhere else. A
+    // dairy question on a creatine shelf is noise.
+    { value: "dairyfree", label: "Dairy-free protein source", only: "protein",
+      test: isDairyFreeSource }
   ];
 
   function labelFilterOf(value) {
@@ -61,6 +82,12 @@
       if (LABEL_FILTERS[i].value === value) return LABEL_FILTERS[i];
     }
     return LABEL_FILTERS[0];
+  }
+
+  // Whether a label filter has anything to say about what is currently listed.
+  function labelFilterApplies(f, pool) {
+    if (!f.only) return true;
+    return pool.some(function (p) { return categoryOf(p) === f.only; });
   }
 
   // Figures on offer for whatever category is in scope; see rebuildAxes().
@@ -659,6 +686,19 @@
   var TESTED_TIP = "Certified by an independent banned-substance testing program (NSF Certified for Sport, Informed Sport, or Informed Choice), per the label or brand page.";
   var BEGINNER_TIP = "A reasonable first tub: moderate or no caffeine, a fully disclosed label, and nothing on the panel that surprises a new user.";
   var BUDGET_TIP = "Cost per full serving sits in the lowest third of this database while the label still discloses its doses.";
+  var DAIRYFREE_TIP = "The protein source named on the panel carries no whey, casein, or milk. This reads the source line only — check the label's own allergen statement before buying.";
+
+  /* Protein only, and read straight off the panel's source line rather than
+   * inferred from the name: whey, casein and milk are dairy, plants and hemp
+   * are not. A product whose source line says nothing stays out — "unstated"
+   * is not the same as "safe", and this is the one figure on a protein label
+   * a lactose-intolerant reader cannot afford a guess on. */
+  function isDairyFreeSource(p) {
+    if (categoryOf(p) !== "protein") return false;
+    var src = (p.metrics && p.metrics.source) || "";
+    if (!src) return false;
+    return !/whey|casein|milk|lactose/i.test(src);
+  }
 
   // Stim tag rule: pre-workout tiles always carry one; every other category
   // shows one only when the formula is actually caffeinated — a "Stim-Free"
@@ -687,6 +727,9 @@
     }
     if (p.badges.indexOf("Third-Party Tested") !== -1) {
       tags.push('<span class="sc-tag sc-tag-calm" title="' + esc(TESTED_TIP) + '">Third-party tested</span>');
+    }
+    if (isDairyFreeSource(p)) {
+      tags.push('<span class="sc-tag sc-tag-calm" title="' + esc(DAIRYFREE_TIP) + '">Dairy-free source</span>');
     }
     if (p.badges.indexOf("Beginner Friendly") !== -1) {
       tags.push('<span class="sc-tag" title="' + esc(BEGINNER_TIP) + '">Beginner friendly</span>');
@@ -758,7 +801,84 @@
    * Hub
    * ------------------------------------------------------------------- */
 
-  function renderHub() {
+  /* The unnarrowed hub is 187 tiles — 48 desktop screens, 146 on a phone.
+   * A reader who has not filtered yet is looking for a way in, not a way
+   * through, so draw a readable first helping and let them ask for more. */
+  var PAGE_SIZE = 24;
+  var shown = PAGE_SIZE;
+
+  /* Built here rather than in each page's markup, like the filter panel: the
+   * five browse pages ship no HTML for it. */
+  function showMoreRow(list) {
+    var row = document.getElementById("sc-more-row");
+    if (row) return row;
+
+    row = document.createElement("div");
+    row.className = "sc-more-row";
+    row.id = "sc-more-row";
+
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.id = "sc-more";
+    btn.className = "sc-btn sc-btn-secondary";
+    btn.addEventListener("click", function () {
+      shown += PAGE_SIZE;
+      // keepShown: this is the one render that must not go back to page one.
+      renderHub(true);
+      // The button moves down as tiles appear above it; put focus back on it
+      // so a keyboard reader is not dropped at the top of a longer grid.
+      var again = document.getElementById("sc-more");
+      if (again && !again.hidden) again.focus();
+    });
+
+    row.appendChild(btn);
+    list.parentNode.insertBefore(row, list.nextSibling);
+    return row;
+  }
+
+  /* The label filters were reachable only inside a panel that starts
+   * collapsed, so the one filter that decides whether a product is usable at
+   * all — independently tested, dairy-free — was invisible to anyone who did
+   * not go hunting. Same state as the panel's Label select, one tap, above the
+   * grid. Zero-count filters are left out rather than offered as dead ends. */
+  function renderQuickFilters() {
+    var count = document.getElementById("sc-count");
+    if (!count) return;
+
+    var row = document.getElementById("sc-quick");
+    if (!row) {
+      row = document.createElement("nav");
+      row.id = "sc-quick";
+      row.className = "sc-quick";
+      row.setAttribute("aria-label", "Quick label filters");
+      row.addEventListener("click", function (event) {
+        var chip = event.target.closest("[data-label]");
+        if (!chip) return;
+        var value = chip.getAttribute("data-label");
+        // Tapping the chip that is already on is how you turn it off.
+        state.label = state.label === value ? "all" : value;
+        renderFilterPanel();
+        refreshFilterCount();
+        renderHub(); // redraws these chips too, so nothing is done here
+      });
+      count.parentNode.insertBefore(row, count);
+    }
+
+    var pool = scopePool();
+    row.innerHTML = LABEL_FILTERS.filter(function (f) {
+      return f.value !== "all" && labelFilterApplies(f, pool);
+    }).map(function (f) {
+      var n = 0;
+      for (var i = 0; i < pool.length; i++) if (f.test(pool[i])) n++;
+      if (!n) return "";
+      var on = state.label === f.value;
+      return '<button type="button" class="sc-chip' + (on ? " sc-chip-active" : "") +
+        '" data-label="' + esc(f.value) + '" aria-pressed="' + on + '">' +
+        esc(f.label) + " (" + n + ")</button>";
+    }).join("");
+  }
+
+  function renderHub(keepShown) {
     var list = document.getElementById("sc-products");
     var count = document.getElementById("sc-count");
     var empty = document.getElementById("sc-empty");
@@ -768,18 +888,36 @@
     // the address bar has to be kept honest.
     writeHashState();
 
-    list.innerHTML = results.map(tileHTML).join("");
+    // A new filter is a new question: answer it from the top.
+    if (!keepShown) shown = PAGE_SIZE;
+
+    var page = results.slice(0, shown);
+    list.innerHTML = page.map(tileHTML).join("");
+
+    var left = results.length - page.length;
+    var moreBtn = showMoreRow(list).querySelector("button");
+    moreBtn.hidden = left <= 0;
+    document.getElementById("sc-more-row").hidden = left <= 0;
+    if (left > 0) {
+      moreBtn.textContent = "Show " + Math.min(PAGE_SIZE, left) + " more · " +
+        left + " still to see";
+    }
 
     if (count) {
-      // "of" counts what the page is currently scoped to, not the whole
-      // catalog — "2 of 187" is a lie once a category is picked.
+      // First number is always what is on screen, second the set it was drawn
+      // from — the matches while tiles are still held back, otherwise what the
+      // page is scoped to. "2 of 187" is a lie once a category is picked, and
+      // "187 of 187" is a lie while only 24 tiles are drawn.
       var pool = scopePool().length;
-      count.textContent = "Showing " + results.length + " of " + pool + " products" +
+      count.textContent = "Showing " + page.length + " of " +
+        (left > 0 ? results.length : pool) + " products" +
         (isRanked() ? " — closest first" : "");
     }
     if (empty) {
       empty.hidden = results.length !== 0;
     }
+
+    renderQuickFilters();
 
     // Fresh tiles from a filter change reveal as they enter the viewport.
     if (revealObserver) initReveal();
@@ -909,7 +1047,16 @@
 
     // Counts, so "Third-party tested" never looks like an empty promise.
     var pool = scopePool();
-    var labelOptions = optionsHTML(LABEL_FILTERS.map(function (f) {
+
+    // A label filter the new category cannot answer would empty the grid with
+    // nothing on screen explaining why — same rule as populateBrands.
+    if (state.label !== "all" && !labelFilterApplies(labelFilterOf(state.label), pool)) {
+      state.label = "all";
+    }
+
+    var labelOptions = optionsHTML(LABEL_FILTERS.filter(function (f) {
+      return labelFilterApplies(f, pool);
+    }).map(function (f) {
       if (f.value === "all") return { value: f.value, label: f.label };
       var n = 0;
       for (var i = 0; i < pool.length; i++) if (f.test(pool[i])) n++;
@@ -1164,16 +1311,7 @@
     }
 
     function clearAll() {
-      state.search = "";
-      state.category = PAGE_CATEGORY || "all";
-      state.brand = "all";
-      state.figure = "";
-      state.bucket = "all";
-      state.dir = "";
-      state.price = "all";
-      state.label = "all";
-      state.target = undefined;
-      state.tolerance = 0;
+      resetFilterState();
       if (search) search.value = "";
       if (category) category.value = "all";
       if (brand) populateBrands(brand);
@@ -1185,6 +1323,29 @@
     }
 
     if (clear) clear.addEventListener("click", clearAll);
+
+    /* The category chips are links, and four of the five point at a category
+     * page — a real navigation, a fresh load, and readHashState() above runs
+     * again. Pre-workout is the exception: it has no landing page of its own,
+     * so its chip points at this page's own hash (hub.html#cat-pre-workout).
+     * Same document, no reload, nothing re-reads the hash — the one chip that
+     * looked broken while the other four worked. Filter writes use
+     * replaceState, so they never fire this. */
+    window.addEventListener("hashchange", function () {
+      // The category pages carry their own in-page "Compare" link. That is a
+      // jump, not a filter change — clearing the filters underneath it would
+      // throw away the view the reader built before they clicked.
+      if (isPlainAnchor(location.hash)) { jumpToAnchor(true); return; }
+      resetFilterState();
+      readHashState();
+      if (search) search.value = state.search;
+      if (category) category.value = state.category;
+      if (brand) populateBrands(brand);
+      rebuildAxes();
+      renderFilterPanel();
+      refreshFilterCount();
+      renderHub();
+    });
 
     // The dead end needs its own way out — the toolbar's "Clear all" can be
     // scrolled well off screen by the time a reader hits an empty result.
@@ -1236,7 +1397,8 @@
     if (got.q) state.search = got.q;
     if (got.mode === "advanced") state.mode = "advanced";
     if (PRICE_TIERS.indexOf(got.price) !== -1) state.price = got.price;
-    if (got.label && got.label !== "all" && labelFilterOf(got.label).value === got.label) {
+    if (got.label && got.label !== "all" && labelFilterOf(got.label).value === got.label &&
+        labelFilterApplies(labelFilterOf(got.label), scopePool())) {
       state.label = got.label;
     }
 
@@ -1265,6 +1427,28 @@
   /* Mirrors `state` back out. replaceState rather than assigning location.hash:
    * changing a filter is not a navigation, and writing thirty of them into
    * history turns the back button into an undo log nobody asked for. */
+  /* "#compare" names an element to jump to; "#cat-creatine" and
+   * "#fig=m:proteinG:g&sort=desc" are filter state. Telling them apart keeps
+   * each from overwriting the other. */
+  function isPlainAnchor(hash) {
+    var raw = (hash || "").replace(/^#/, "");
+    if (!raw || raw.indexOf("=") !== -1 || /^cat-/.test(raw) || /^p-/.test(raw)) return false;
+    return !!document.getElementById(raw);
+  }
+
+  /* The browser jumps to #compare during parse, while the section it points at
+   * holds an empty <tbody> and the grid above it is an empty <div>. Both fill
+   * in afterwards, pushing the table thousands of pixels down from wherever
+   * the jump landed — so "Compare all protein powders" put the reader back at
+   * the top of the grid they were trying to leave. Nothing retried it. Do the
+   * jump again once the rows exist. */
+  function jumpToAnchor(force) {
+    if (!isPlainAnchor(location.hash)) return;
+    // Don't yank the page out from under someone who has scrolled themselves.
+    if (!force && window.scrollY > 4) return;
+    document.getElementById(location.hash.replace(/^#/, "")).scrollIntoView();
+  }
+
   function writeHashState() {
     var bits = [];
     if (!PAGE_CATEGORY && state.category !== "all") bits.push("cat-" + state.category);
@@ -1280,6 +1464,9 @@
     if (state.tolerance) bits.push("within=" + state.tolerance);
 
     var hash = bits.length ? "#" + bits.join("&") : "";
+    // Nothing to write and the reader followed an anchor here: leave it be,
+    // or the first render strips #compare out from under them.
+    if (!bits.length && isPlainAnchor(location.hash)) return;
     if (hash === location.hash) return;
     history.replaceState(null, "", location.pathname + location.search + hash);
   }
@@ -1407,6 +1594,8 @@
     });
     body.innerHTML = rows.map(compareRowHTML).join("");
 
+    syncCompareSort();
+
     var headers = document.querySelectorAll("#sc-compare th[data-sortkey]");
     for (var i = 0; i < headers.length; i++) {
       var key = headers[i].getAttribute("data-sortkey");
@@ -1419,9 +1608,61 @@
     }
   }
 
+  /* The table sorts from its column headings, which is fine with a mouse on a
+   * wide screen. On a phone the headings are off the top of the screen by the
+   * time the rows are in reach, so "click a column heading to sort" was an
+   * instruction with nothing on screen to follow it with. Same sort, offered
+   * where the table starts. */
+  function buildCompareSort() {
+    var table = document.getElementById("sc-compare");
+    var scroll = table && table.closest(".sc-table-scroll");
+    if (!scroll || document.getElementById("sc-csort")) return;
+
+    var cfg = CATEGORY_CONFIG[PAGE_CATEGORY || "pre-workout"] || CATEGORY_CONFIG["pre-workout"];
+    var cols = [{ value: "name", label: "Product name" }].concat(
+      (cfg.compareCols || []).filter(function (c) { return c.sortable; })
+        .map(function (c) { return { value: c.key, label: c.label }; })
+    );
+
+    var row = document.createElement("div");
+    row.className = "sc-csort-row";
+    row.id = "sc-csort-row";
+    row.innerHTML =
+      fieldHTML("Sort by", "sc-csort", selectHTML("sc-csort", optionsHTML(cols, compareState.key))) +
+      fieldHTML("Order", "sc-cdir", selectHTML("sc-cdir", ""));
+    scroll.parentNode.insertBefore(row, scroll);
+
+    row.addEventListener("change", function (event) {
+      if (event.target.id === "sc-csort") {
+        compareState.key = event.target.value;
+        // Match the heading click: figures read high-to-low first, names A–Z.
+        compareState.dir = compareState.key === "name" ? 1 : -1;
+      }
+      else if (event.target.id === "sc-cdir") compareState.dir = parseInt(event.target.value, 10);
+      else return;
+      renderCompare();
+    });
+  }
+
+  /* Keeps the two selects showing what the table is actually doing, including
+   * after a heading click, and words the order the way the chosen column reads
+   * — names run A–Z, figures run high to low. */
+  function syncCompareSort() {
+    var key = document.getElementById("sc-csort");
+    var dir = document.getElementById("sc-cdir");
+    if (!key || !dir) return;
+    key.value = compareState.key;
+    var byName = compareState.key === "name";
+    dir.innerHTML = optionsHTML([
+      { value: "-1", label: byName ? "Z–A" : "High to low" },
+      { value: "1", label: byName ? "A–Z" : "Low to high" }
+    ], String(compareState.dir));
+  }
+
   function wireCompare() {
     var head = document.querySelector("#sc-compare thead");
     buildCompareHead();
+    buildCompareSort();
     head.addEventListener("click", function (event) {
       var btn = event.target.closest(".sc-sort-btn");
       if (!btn) return;
@@ -1499,7 +1740,14 @@
             revealObserver.unobserve(entries[i].target);
           }
         }
-      }, { rootMargin: "0px 0px -14% 0px", threshold: 0.15 });
+        // threshold counts a fraction of the ELEMENT, so a tall one has to
+        // clear a bar that grows with it: a 5,000px compare table would need
+        // 750px on screen at 0.15, more than a phone viewport minus the
+        // rootMargin ever offers. It then never intersects, never gets .sc-in,
+        // and stays at opacity 0 — the table is simply gone. Reveal on the
+        // first pixel instead; the rootMargin still holds it until the element
+        // is properly in view.
+      }, { rootMargin: "0px 0px -14% 0px", threshold: 0 });
     }
 
     var els = document.querySelectorAll(REVEAL_TARGETS);
@@ -1794,6 +2042,10 @@
     }
 
     initReveal();
+
+    // Last: the anchor the browser tried to reach before any of these
+    // renderers had put anything on the page. See jumpToAnchor.
+    jumpToAnchor();
   }
 
   document.addEventListener("DOMContentLoaded", init);

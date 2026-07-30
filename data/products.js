@@ -3011,7 +3011,7 @@ const PRODUCTS = [
       "https://www.optimumnutrition.com/cdn/shop/files/on-1153060_Image_01.png?v=1769135392&width=2048",
       "https://www.optimumnutrition.com/cdn/shop/files/US_CREATINE_240SV_UNFLAV_FOP.png?v=1784673185"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 300,
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -3110,7 +3110,7 @@ const PRODUCTS = [
       "https://d1vo8zfysxy97v.cloudfront.net/media/product/sf903__vb5ca0e34dbdc8dc4000b29c8ba0bb48387eb2496.jpg",
       "https://d1vo8zfysxy97v.cloudfront.net/media/product/sf903__v67f933512454449d24c5c855f503305e97e11c01.jpg"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 450, "certification": "NSF Certified for Sport",
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -3214,7 +3214,7 @@ const PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/0222/4128/0074/files/NTC_CreatineMonohydrate_Unflavored_500G_SFP_SQUARE_72b4208e-51d7-42f8-8147-d2502f9c3035.jpg?v=1760650358",
       "https://cdn.shopify.com/s/files/1/0222/4128/0074/products/nutricost-creatine-monohydrate-powder-601968.jpg?v=1760650358"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 500,
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -3327,7 +3327,7 @@ const PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/0866/7664/files/TL_CreatineHMB_30S_U_1_2.png?v=1745537479",
       "https://cdn.shopify.com/s/files/1/0866/7664/files/TL-227_CreatineHMB_60S_SL_1_5_FRONT.png?v=1781272810"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 285, "certification": "Informed Choice",
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -3378,7 +3378,7 @@ const PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/1110/3248/files/CREATINEHCLNORMALFRONT.png?v=1774384752",
       "https://cdn.shopify.com/s/files/1/1110/3248/files/CREATINEHCLFRUITPUNCHFRONT.png?v=1774384752"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 56, "certification": "Informed Sport",
       "creatineG": 0.75,
       "form": "HCl"
     },
@@ -3522,7 +3522,8 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=klean+athlete+klean+creatine&tag=YOURTAG-20",
     "blurb": "Single-ingredient 5 g monohydrate carrying NSF Certified for Sport certification, priced at a premium for the tested-athlete market.",
     "labelVerified": "July 2026",
-    "metrics": {
+    "imageUrl": "images/products/klean-athlete-klean-creatine.jpg",
+    "metrics": { "netWeightG": 315, "certification": "NSF Certified for Sport",
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -3573,7 +3574,7 @@ const PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/2704/4962/files/creatine-mono-product-01.jpg?v=1768315321",
       "https://cdn.shopify.com/s/files/1/2704/4962/files/JF_Creatine_200_Front.png?v=1770125863"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 425, "certification": "Informed Choice",
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -3682,7 +3683,7 @@ const PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/1214/7132/files/celltech-fruitpunch-3lb_682798d8-2c20-4c66-8883-92ec542a9751.jpg?v=1754063797",
       "https://cdn.shopify.com/s/files/1/1214/7132/files/celltech-fruitpunch-6lb_887f541a-63a0-47c6-99e4-944098a18181.jpg?v=1753299062"
     ],
-    "metrics": {
+    "metrics": { "calories": 150, "netWeightG": 1400,
       "creatineG": 5,
       "form": "blend"
     },
@@ -3734,7 +3735,7 @@ const PRODUCTS = [
       "https://www.nowfoods.com/sites/default/files/2023-10/2030_nowproductlabels.png",
       "https://www.nowfoods.com/sites/default/files/2023-10/2030_nowproductlabels2.png"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 1000, "certification": "Informed Sport",
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -3840,7 +3841,7 @@ const PRODUCTS = [
       "https://www.transparentlabs.com/cdn/shop/files/TL_INTRA_30_BR_1_2.png?v=1746463908",
       "https://www.transparentlabs.com/cdn/shop/files/TL_INTRA_30_SL_1_2.png?v=1746463908"
     ],
-    "metrics": {
+    "metrics": { "form": "powder tub", "ratio": "2:1:1", "certification": "Informed Choice",
       "eaaG": 6.7,
       "bcaaG": null,
       "leucineG": null
@@ -3895,7 +3896,7 @@ const PRODUCTS = [
     "images": [
       "https://www.livemomentous.com/cdn/shop/files/Vital-Aminos_HERO.png?v=1778100483"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 345, "form": "powder tub", "certification": "NSF Certified for Sport",
       "eaaG": 5.6,
       "bcaaG": 3.75,
       "leucineG": 2.5
@@ -3951,7 +3952,7 @@ const PRODUCTS = [
       "https://d1vo8zfysxy97v.cloudfront.net/media/product/sp641__v5d864686891ec733704f50f55b51dbb6f3c911a5.png",
       "https://d1vo8zfysxy97v.cloudfront.net/media/product/sp641__v53f677a27e0fa152e77753edb45149613e71b6e2.jpg"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 231, "form": "powder tub", "certification": "NSF Certified for Sport",
       "eaaG": 3.8,
       "bcaaG": 2.5,
       "leucineG": 1.25
@@ -4011,7 +4012,7 @@ const PRODUCTS = [
       "https://dymatize-nutrition.myshopify.com/cdn/shop/products/all9amino_juicy_watermelon.png?v=1585311958",
       "https://dymatize-nutrition.myshopify.com/cdn/shop/products/all9amino_fruit_fusion_rush.png?v=1585311972"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 450, "form": "powder tub",
       "eaaG": 10,
       "bcaaG": 7.2,
       "leucineG": null
@@ -4073,7 +4074,7 @@ const PRODUCTS = [
       "https://www.jackedfactory.com/cdn/shop/files/eaa-surge-20-pineapple-front_0bad065a-f89e-40ac-81dc-05f732d48bb0.png?v=1755280613&width=1200",
       "https://www.jackedfactory.com/cdn/shop/files/JF_D2C_EAA_20_01.png?v=1774449809&width=4000"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 290, "form": "powder tub", "aminoSource": "fermented",
       "eaaG": 6.7,
       "bcaaG": null,
       "leucineG": null
@@ -4127,7 +4128,7 @@ const PRODUCTS = [
       "https://nutricost.com/cdn/shop/files/NTC_EAA_BlueRaspberry_30SERV_20OZ_Front_Square_1800x1800.jpg?v=1738964098",
       "https://nutricost.com/cdn/shop/files/NTC_EAA_POG_30SERV_20OZ_Front_Square_1800x1800.jpg?v=1770138766"
     ],
-    "metrics": {
+    "metrics": { "form": "powder tub", "ratio": "2:1:1",
       "eaaG": 8,
       "bcaaG": null,
       "leucineG": null
@@ -4235,7 +4236,7 @@ const PRODUCTS = [
       "https://cellucor.com/cdn/shop/files/XTEND_1144_Digital_Relabel_FlowThrough_Assets_PDPs_OnGreyBackground-XTEND-OG30-BRI.png?v=1771552623",
       "https://cellucor.com/cdn/shop/files/XTEND_1144_Digital_Relabel_FlowThrough_Assets_PDPs_OnGreyBackground-XTEND-OG30-FI-Label.png?v=1776889586"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 420, "form": "powder tub", "ratio": "2:1:1", "certification": "Informed Choice",
       "eaaG": null,
       "bcaaG": 7,
       "leucineG": 3.5
@@ -4290,7 +4291,7 @@ const PRODUCTS = [
       "https://musclepharm.com/cdn/shop/files/BCAA_Fruit_Punch.jpg?v=1754064987&width=1800",
       "https://musclepharm.com/cdn/shop/files/BCAA_Blue_Rasp.jpg?v=1754064987&width=1800"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 215, "form": "powder tub", "ratio": "3:1:2",
       "eaaG": null,
       "bcaaG": 6,
       "leucineG": 3
@@ -4390,7 +4391,7 @@ const PRODUCTS = [
       "https://www.optimumnutrition.com/cdn/shop/files/on-1122241_Image_01.png?v=1761656281&width=2000",
       "https://www.optimumnutrition.com/cdn/shop/files/on-1122232_Image_01.png?v=1761656281&width=2000"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 270, "form": "powder tub",
       "eaaG": null,
       "bcaaG": null,
       "leucineG": null
@@ -5578,7 +5579,7 @@ const PRODUCTS = [
 
   {
     "id": "ascent-native-fuel-whey",
-    "name": "Native Fuel Whey",
+    "name": "Whey Protein",
     "brand": "Ascent",
     "category": "protein",
     "stimFree": true,
@@ -5610,7 +5611,7 @@ const PRODUCTS = [
     ],
     "servings": 27,
     "priceRange": "$$$",
-    "flavorsNote": "Figures verified against Chocolate (33 g scoop, 2 lb bag); sweetened with stevia leaf extract and real cocoa — no artificial sweeteners.",
+    "flavorsNote": "Figures verified against Chocolate (33 g scoop, 2 lb bag); sweetened with stevia leaf extract and real cocoa — no artificial sweeteners. Sold as Native Fuel Whey until Ascent retired that name; the current pouch reads 100% Whey, and retailer listings still carry the old one.",
     "affiliateUrl": "https://www.amazon.com/s?k=ascent+native+fuel+whey+protein&tag=YOURTAG-20",
     "blurb": "Informed Sport certification is verified on the brand page, and the formula skips artificial sweeteners — a clean pick for tested athletes at a mid-premium price.",
     "labelVerified": "July 2026",
@@ -6014,6 +6015,7 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=garden+of+life+sport+grass+fed+whey&tag=YOURTAG-20",
     "blurb": "Grass-fed Irish whey with both NSF Certified for Sport and Informed Choice listed on the brand's Sport line — the trade-off is a small tub and premium per-serving cost.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/garden-of-life-sport-grass-fed-whey.jpg",
     "metrics": { "calories": 125, "fatG": 1, "carbsG": 6,
       "proteinG": 24,
       "servingG": 34.5,
@@ -6181,7 +6183,7 @@ const PRODUCTS = [
       "https://cellucor.com/cdn/shop/files/CELL-Creatine-72serv-UNFLAVORED-nutritonal.jpg?v=1777823684",
       "https://cellucor.com/cdn/shop/files/CELL_2358_UnflavoredCreatine_PDPs_WarmGrey_Claims.jpg?v=1777870273"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 360,
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -6274,7 +6276,7 @@ const PRODUCTS = [
       "https://www.muscletech.com/cdn/shop/files/MuscleTech-100Creatine-Unflavored-2000x2000-10_font.jpg?v=1766074513&width=2000",
       "https://www.muscletech.com/cdn/shop/files/MuscleTech-100Creatine-Unflavored-2000x2000-02-V2_font.jpg?v=1766074513&width=2000"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 400,
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -6365,7 +6367,8 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=bsn+creatine+dna&tag=YOURTAG-20",
     "blurb": "A plain 5 g micronized monohydrate scoop with no other listed ingredients, sold in a 60-serving unflavored tub.",
     "labelVerified": "July 2026",
-    "metrics": {
+    "imageUrl": "images/products/bsn-creatine-dna.jpg",
+    "metrics": { "netWeightG": 309,
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -6415,7 +6418,7 @@ const PRODUCTS = [
       "https://www.allmaxnutrition.com/cdn/shop/files/allmax-creatine-unflavored-100g_1.webp",
       "https://www.allmaxnutrition.com/cdn/shop/files/allmax-creatine-unflavored-1000g_1.webp"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 1000, "creapure": false,
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -6460,7 +6463,7 @@ const PRODUCTS = [
       "https://forcefactor.com/cdn/shop/files/Force_Factor_Essentials_Creatine_Monohydrate_Powder_5g_Tub_60sv_117x117.png?v=1736549266",
       "https://cdn.shopify.com/s/files/1/0278/7776/9321/files/05_SFPwebsite_700x.jpg?v=1689865918"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 300,
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -6505,7 +6508,8 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=dymatize+creatine+micronized&tag=YOURTAG-20",
     "blurb": "5 g of Creapure-brand monohydrate micronized to roughly 180 microns for easier mixing, with no other ingredients listed on the panel.",
     "labelVerified": "July 2026",
-    "metrics": {
+    "imageUrl": "images/products/dymatize-creatine-micronized.jpg",
+    "metrics": { "netWeightG": 300, "creapure": true,
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -6592,7 +6596,8 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=universal+nutrition+creatine+powder&tag=YOURTAG-20",
     "blurb": "A single-ingredient 5 g Creapure monohydrate teaspoon serving with no other listed ingredients; the 500 g tub holds 100 servings, confirmed directly against the manufacturer's label on file with the NIH's supplement label database.",
     "labelVerified": "July 2026",
-    "metrics": {
+    "imageUrl": "images/products/universal-nutrition-creatine.jpg",
+    "metrics": { "netWeightG": 500,
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -6691,7 +6696,7 @@ const PRODUCTS = [
       "https://www.livemomentous.com/cdn/shop/files/New_Creatine_60serv_Lemon_8f992091-37a9-4aa2-88e2-d6d0960b3ec5.png?v=1784225459&width=1440",
       "https://www.livemomentous.com/cdn/shop/files/NewCreatine_60serv_Watermelon.png?v=1784225511&width=1440"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 450, "creapure": false, "certification": "NSF Certified for Sport",
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -6740,7 +6745,7 @@ const PRODUCTS = [
       "https://www.bareperformancenutrition.com/cdn/shop/files/BPNCREA-5.jpg?v=1728563526&width=1200",
       "https://www.bareperformancenutrition.com/cdn/shop/files/BPNCREA30SV-2.jpg?v=1749806840&width=1200"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 300, "creapure": true, "certification": "NSF Certified for Sport",
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -6785,7 +6790,7 @@ const PRODUCTS = [
       "https://xwerks.com/cdn/shop/files/X_Lift_2.jpg",
       "https://xwerks.com/cdn/shop/files/X_Lift_3.jpg"
     ],
-    "metrics": {
+    "metrics": { "calories": 0,
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -6876,7 +6881,7 @@ const PRODUCTS = [
       "https://1stphorm.com/cdn/shop/files/creatine-50-serving.png?v=1744913869",
       "https://1stphorm.com/cdn/shop/files/Creatine-Lifestyle_1800x1800.jpg?v=1744913869"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 500, "certification": "NSF Certified for Sport",
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -6926,7 +6931,7 @@ const PRODUCTS = [
       "https://gognarly.com/cdn/shop/files/GN-CRBG-UN_D3-WEB.webp",
       "https://gognarly.com/cdn/shop/files/Creatine_NFP.jpg"
     ],
-    "metrics": {
+    "metrics": { "creapure": true, "certification": "NSF Certified for Sport",
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -6975,7 +6980,7 @@ const PRODUCTS = [
       "https://nakednutrition.com/cdn/shop/files/Creatine-1KG-Unflavored-MainImage.jpg?v=1766596249&width=1200",
       "https://nakednutrition.com/cdn/shop/files/creatine-monohydrate-powder-unflavored-2.2lb_95da58cf-9aeb-4c77-a4af-77c7c5972260.jpg?v=1783215302&width=1200"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 1000,
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -7069,7 +7074,7 @@ const PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/1515/2714/files/create_creatinegummie_varietypack_ea152171-10c6-47b8-9cd8-92c0c03e5988_80x80.png?v=1780938665",
       "https://cdn.shopify.com/s/files/1/1515/2714/files/create_90-ct-orange-2_4480c993-7762-437b-bfa9-ad517fc9f2da_80x80.png?v=1777408323"
     ],
-    "metrics": {
+    "metrics": { "calories": 30, "creapure": true, "certification": "NSF Certified for Sport",
       "creatineG": 4.5,
       "form": "monohydrate"
     },
@@ -7113,7 +7118,8 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=sports+research+creatine+monohydrate&tag=YOURTAG-20",
     "blurb": "Informed Sport-certified micronized monohydrate with no other active ingredients, sold in bulk 100-serving sizes.",
     "labelVerified": "July 2026",
-    "metrics": {
+    "imageUrl": "images/products/sports-research-creatine-monohydrate.jpg",
+    "metrics": { "certification": "Informed Sport",
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -7162,7 +7168,7 @@ const PRODUCTS = [
       "https://swolverine.com/cdn/shop/files/Swolverine-kre-alkalyn-10216071820-51597217235224.png?v=1773973191&width=800",
       "https://swolverine.com/cdn/shop/files/Swolverine-kre-alkalyn-10216071820-51597221134616.png?v=1773973193&width=800"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 300,
       "creatineG": 3,
       "form": "monohydrate"
     },
@@ -7211,7 +7217,7 @@ const PRODUCTS = [
       "https://nutrabio.com/cdn/shop/files/23014_56618be1-4104-4b84-b81f-38b3294c6e27.png",
       "https://nutrabio.com/cdn/shop/files/third-party-tested_NB-web.png"
     ],
-    "metrics": {
+    "metrics": { "creapure": false,
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -7299,7 +7305,8 @@ const PRODUCTS = [
         ]
       }
     },
-    "metrics": {
+    "imageUrl": "images/products/bucked-up-creatine-monohydrate.jpg",
+    "metrics": { "netWeightG": 250,
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -7409,7 +7416,7 @@ const PRODUCTS = [
       "https://www.ghostlifestyle.com/cdn/shop/files/Size_Natty.webp",
       "https://www.ghostlifestyle.com/cdn/shop/files/GHOST_Size_V3_Natty_Back.png"
     ],
-    "metrics": {
+    "metrics": { "calories": 5, "netWeightG": 375, "creapure": true,
       "creatineG": 5,
       "form": "blend"
     },
@@ -7507,7 +7514,7 @@ const PRODUCTS = [
       "https://www.kaged.com/cdn/shop/files/CreatineMono-Front-UN.png",
       "https://www.kaged.com/cdn/shop/files/CreatineMonohydrateAMZ_CreatineMonohydrateSFP.jpg"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 500, "certification": "Informed Sport",
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -7667,7 +7674,7 @@ const PRODUCTS = [
       "https://www.professionalsupplementcenter.com/cdn/shop/files/creatine-collagen-electrolytes-ANN_main_1.jpg?v=1768932858&width=800",
       "https://www.professionalsupplementcenter.com/cdn/shop/files/creatine-collagen-electrolytes-ANN_Lemon_30_20Servings_main_1.jpg?v=1768932857&width=800"
     ],
-    "metrics": {
+    "metrics": { "calories": 5,
       "creatineG": 5,
       "form": "blend"
     },
@@ -8003,6 +8010,7 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=bodyarmor+flash+iv+electrolyte+drink+mix+sticks&tag=YOURTAG-20",
     "blurb": "Carries the highest total electrolyte load in this lineup, led by 700 mg potassium and 510 mg sodium per stick, in a zero-sugar powder built around coconut water powder.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/bodyarmor-flash-iv-electrolyte-sticks.jpg",
     "metrics": { "calories": 15, "netWeightG": 43, "form": "stick pack",
       "sodiumMg": 510,
       "potassiumMg": 700,
@@ -8115,6 +8123,7 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=trioral+oral+rehydration+salts&tag=YOURTAG-20",
     "blurb": "An unflavored, WHO-formula oral rehydration powder with higher sodium and potassium per liter than typical sports drinks; each packet is designed to be sipped across a day rather than taken as one serving.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/trioral-oral-rehydration-salts.jpg",
     "metrics": { "servingMl": 1000,
       "sodiumMg": 1725,
       "potassiumMg": 782,
@@ -8934,6 +8943,7 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=key+nutrients+electrolyte+recovery+plus&tag=YOURTAG-20",
     "blurb": "Vitamin-heavy formula: a light 110 mg sodium dose sits alongside 20 total vitamins and minerals, including 25% DV magnesium, on a fully itemized zero-calorie label.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/key-nutrients-electrolyte-recovery-plus.jpg",
     "metrics": {
       "sodiumMg": 110,
       "potassiumMg": 250,
@@ -9239,6 +9249,7 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=lyteshow+electrolyte+concentrate&tag=YOURTAG-20",
     "blurb": "A 3 mL drop dose (about 40 drops) rather than a mixed drink: lower sodium than most powders, but one of the few labels that discloses magnesium (40 mg) and zinc (2 mg) alongside sodium and potassium.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/lyteshow-electrolyte-concentrate.jpg",
     "metrics": { "calories": 0, "servingMl": 946, "form": "liquid concentrate",
       "sodiumMg": 125,
       "potassiumMg": 130,
@@ -9362,6 +9373,7 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=ryse+hydration+sticks&tag=YOURTAG-20",
     "blurb": "One of the higher-sodium sticks on the market at 320 mg, layered with a full B-vitamin, taurine, and choline stack that most electrolyte-only mixes leave out.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/ryse-hydration-sticks.jpg",
     "metrics": { "form": "stick pack",
       "sodiumMg": 320,
       "potassiumMg": 173,
@@ -9477,7 +9489,7 @@ const PRODUCTS = [
       "https://www.gobsn.com/cdn/shop/files/bsn-1047896_Image_01.png?v=1761233898&width=800",
       "https://www.gobsn.com/cdn/shop/files/AMINOx_30sv_BlueRaz.jpg?v=1762989781&width=1000"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 435, "form": "powder tub",
       "eaaG": null,
       "bcaaG": null,
       "leucineG": null
@@ -9533,7 +9545,8 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=evlution+nutrition+bcaa+energy&tag=YOURTAG-20",
     "blurb": "A fully dosed 5 g BCAA (2.5 g leucine) stacked with 110 mg of natural caffeine and 500 mg each of beta-alanine and taurine, positioning it as an energizing BCAA rather than a stim-free recovery drink.",
     "labelVerified": "July 2026",
-    "metrics": {
+    "imageUrl": "images/products/evlution-nutrition-bcaa-energy.jpg",
+    "metrics": { "netWeightG": 291, "form": "powder tub",
       "eaaG": null,
       "bcaaG": 5,
       "leucineG": 2.5
@@ -9593,7 +9606,7 @@ const PRODUCTS = [
       "https://www.kaged.com/cdn/shop/files/BCAAAFRONT_ac1a0751-087f-4bab-8697-c92f6ea75a7b.png",
       "https://www.kaged.com/cdn/shop/files/BCAA_BCAASFP.jpg"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 400, "form": "powder tub", "ratio": "2:1:1", "aminoSource": "fermented",
       "eaaG": null,
       "bcaaG": 5,
       "leucineG": 2.5
@@ -9649,7 +9662,7 @@ const PRODUCTS = [
       "https://appliednutrition.uk/cdn/shop/files/BCAA_Professional_450g_-_Icy_Blue_Raz_gifts.webp?v=1781657000",
       "https://appliednutrition.uk/cdn/shop/files/BCAA_Professional_450g_-_Fruit_Burst.webp?v=1781657000"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 450, "form": "powder tub", "ratio": "2:1:1", "certification": "Informed Sport",
       "eaaG": null,
       "bcaaG": 7.2,
       "leucineG": 3.6
@@ -9766,7 +9779,7 @@ const PRODUCTS = [
       "https://nutrabio.com/cdn/shop/files/26910_94a43607-317a-40d1-98e6-2a33fb90dc3e.png?v=1724448916&width=1946",
       "https://nutrabio.com/cdn/shop/products/26900.png?v=1707331471&width=1946"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 395, "form": "powder tub", "ratio": "2:1:1", "aminoSource": "fermented",
       "eaaG": 8.2,
       "bcaaG": 6,
       "leucineG": 3
@@ -9825,7 +9838,7 @@ const PRODUCTS = [
       "https://www.alaninu.com/cdn/shop/files/Stretch_AN-Website-PDP-BCAA-SPR-01_V1.png?v=1782507258&width=2000",
       "https://www.alaninu.com/cdn/shop/files/Stretch_AN-Website-PDP-BCAA-SPR-02_V1.png?v=1782507258&width=2000"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 243, "form": "powder tub", "ratio": "2:1:1",
       "eaaG": null,
       "bcaaG": 5,
       "leucineG": 2.5
@@ -9885,7 +9898,7 @@ const PRODUCTS = [
       "https://www.muscletech.com/cdn/shop/files/mt-amino-build-tropical-twist.png?v=1742823143",
       "https://www.muscletech.com/cdn/shop/files/mt-amino-build-strawberry-watermelon.png?v=1742823147"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 614, "form": "powder tub",
       "eaaG": null,
       "bcaaG": 7,
       "leucineG": 4
@@ -9945,7 +9958,7 @@ const PRODUCTS = [
       "https://www.allmaxnutrition.com/cdn/shop/files/1.1-Aminocore-BCAA-FruitPunch.webp?v=1782154376&width=1400",
       "https://www.allmaxnutrition.com/cdn/shop/files/1.1-Aminocore-BCAA-watermelon.webp?v=1782154409&width=1400"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 315, "form": "powder tub", "ratio": "9:6:5", "certification": "Informed Choice",
       "eaaG": null,
       "bcaaG": 8.18,
       "leucineG": 3.68
@@ -10001,7 +10014,7 @@ const PRODUCTS = [
       "https://nutricost.com/cdn/shop/files/NTCP_BCAA_Watermelon_30SERV_20OZ_Front1_Square.jpg?v=1760719437",
       "https://nutricost.com/cdn/shop/files/NTCP_BCAA_Watermelon_30SERV_20OZ_SFP_Square.jpg?v=1760719437"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 300, "form": "powder tub", "ratio": "2:1:1",
       "eaaG": null,
       "bcaaG": 6,
       "leucineG": 3
@@ -10060,7 +10073,7 @@ const PRODUCTS = [
       "https://nutrabio.com/cdn/shop/files/80015_BottleRender.png?v=1771857958",
       "https://nutrabio.com/cdn/shop/files/80015_SupplementFactsPanel.png?v=1771857958"
     ],
-    "metrics": {
+    "metrics": { "form": "powder tub", "ratio": "2:1:1",
       "eaaG": 10,
       "bcaaG": 6,
       "leucineG": 3
@@ -10111,7 +10124,7 @@ const PRODUCTS = [
       "https://1stphorm.com/cdn/shop/files/eaa-tropical-mango.png?v=1764626022",
       "https://cdn.shopify.com/s/files/1/0072/7754/3493/files/eaa-berry-blast-SFP-04_25-allergy.png?v=1746047760"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 644, "form": "powder tub", "ratio": "2:1:1",
       "eaaG": 6.5,
       "bcaaG": 3,
       "leucineG": 1.5
@@ -10201,7 +10214,7 @@ const PRODUCTS = [
       "https://www.ghostlifestyle.com/cdn/shop/files/IntraOrangeSqueeze_grande.webp?v=1715709631",
       "https://www.ghostlifestyle.com/cdn/shop/files/GHOST_Intra_OrangeSqueeze_SFP.png?v=1715710016"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 430, "form": "powder tub",
       "eaaG": 10,
       "bcaaG": 6,
       "leucineG": 3
@@ -10246,7 +10259,7 @@ const PRODUCTS = [
       "https://redcon1.com/cdn/shop/files/FRONT_TIGERS-BLOOD_FLVRS.png?v=1715181859",
       "https://redcon1.com/cdn/shop/files/SUPP-FACTS_GRUNT_ROCKET-BOMB.png?v=1715181859"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 285, "form": "powder tub",
       "eaaG": 6.9,
       "bcaaG": 6,
       "leucineG": 3
@@ -10302,7 +10315,8 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=transparent+labs+bcaa+glutamine&tag=YOURTAG-20",
     "blurb": "An Informed Choice-certified BCAA formula (not a full EAA spectrum) built around an 8 g 2:1:1 ratio plus a 5 g glutamine dose well above what most BCAA products include.",
     "labelVerified": "July 2026",
-    "metrics": {
+    "imageUrl": "images/products/transparent-labs-bcaa-glutamine.jpg",
+    "metrics": { "form": "powder tub", "ratio": "2:1:1", "aminoSource": "plant-fermented", "certification": "Informed Choice",
       "eaaG": null,
       "bcaaG": 8,
       "leucineG": 4
@@ -10365,7 +10379,7 @@ const PRODUCTS = [
       "https://www.kaged.com/cdn/shop/files/IW-Front-CL.png?v=1774385694",
       "https://www.kaged.com/cdn/shop/files/Intra-WorkoutAMZ_IWSFPFP.jpg?v=1774385694"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 339, "form": "powder tub", "ratio": "2:1:1", "aminoSource": "fermented", "certification": "Informed Sport",
       "eaaG": null,
       "bcaaG": 5,
       "leucineG": 2.5
@@ -10420,7 +10434,7 @@ const PRODUCTS = [
       "https://rysesupps.com/cdn/shop/files/ryse-web-prod-bcaa-1000x1000-cl-front_2d43687f-d3d0-486f-b715-a19e4ce4c58c.png?v=1652999215",
       "https://rysesupps.com/cdn/shop/files/nfp-bcaa-cherry.jpg?v=1666311640"
     ],
-    "metrics": {
+    "metrics": { "form": "powder tub",
       "eaaG": 8,
       "bcaaG": 5,
       "leucineG": 2.5
@@ -10476,7 +10490,7 @@ const PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/0666/3683/files/motion-2026_6b3eea36-d807-414b-ab23-443e039d0be4.png?v=1771608586",
       "https://cdn.shopify.com/s/files/1/0666/3683/files/motion.jpg?v=1771608586"
     ],
-    "metrics": {
+    "metrics": { "form": "powder tub", "ratio": "2:1:1",
       "eaaG": null,
       "bcaaG": 3,
       "leucineG": 1.5
@@ -10531,7 +10545,7 @@ const PRODUCTS = [
       "https://primevallabs.com/cdn/shop/files/EAA_MAX_Jamaica_Front_698045f8-7a69-4838-9f9c-57b32c6502de.png?v=1760047745",
       "https://cdn.shopify.com/s/files/1/0082/8021/1553/files/EAAMAXSUPPLEMENTFACTSPANELS.png"
     ],
-    "metrics": {
+    "metrics": { "form": "powder tub", "ratio": "2:1:1",
       "eaaG": 5.82,
       "bcaaG": 5,
       "leucineG": 2.5
@@ -10586,7 +10600,7 @@ const PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/1876/4703/files/bcaas-eaas-fruit-punch-35512473911365.png?v=1731968338",
       "https://cdn.shopify.com/s/files/1/1876/4703/files/bcaas-eaas-35182429536325.png?v=1726234981"
     ],
-    "metrics": {
+    "metrics": { "form": "powder tub", "ratio": "2:1:1",
       "eaaG": 6.8,
       "bcaaG": 5,
       "leucineG": 2.5
@@ -10648,7 +10662,7 @@ const PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/0519/6280/6450/files/genius-bcaa-grappe-limeade_699dc4c4-984b-4871-84a0-100a9dea758a.png?v=1767885560",
       "https://cdn.shopify.com/s/files/1/0519/6280/6450/files/genius-bcaa-back.png?v=1767885560"
     ],
-    "metrics": {
+    "metrics": { "netWeightG": 286, "form": "powder tub", "ratio": "2:1:1", "aminoSource": "plant-fermented",
       "eaaG": null,
       "bcaaG": 5,
       "leucineG": 2.5
@@ -10703,7 +10717,7 @@ const PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/0561/9761/1672/files/BESTEAA-30SERV-LEMONBERRY_fcc4da10-8a2c-4146-9da2-ecd2c6fa6f2a.webp?v=1730185363",
       "https://cdn.shopify.com/s/files/1/0561/9761/1672/files/BESTEAA-30SERV-SUPPFACTS.webp?v=1739305685"
     ],
-    "metrics": {
+    "metrics": { "form": "powder tub", "ratio": "2:1:1",
       "eaaG": 10,
       "bcaaG": 7.2,
       "leucineG": 3.6
@@ -10749,7 +10763,7 @@ const PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/0877/6064/files/BCAA500060SERV-UF_2.jpg?v=1765384748",
       "https://cdn.shopify.com/s/files/1/0877/6064/files/BCAA500060SERV-UF_3.jpg?v=1765384748"
     ],
-    "metrics": {
+    "metrics": { "form": "powder tub",
       "eaaG": null,
       "bcaaG": 5,
       "leucineG": 2.5
@@ -10938,6 +10952,7 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=muscle+milk+genuine+protein+powder+chocolate&tag=YOURTAG-20",
     "blurb": "Genuine uses a casein-dominant milk protein blend rather than whey-only, so it digests more slowly than most whey powders; the brand's own product page confirms NSF Certified for Sport status.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/muscle-milk-genuine-protein-powder.jpg",
     "metrics": { "calories": 310, "fatG": 12, "carbsG": 19, "netWeightG": 2240,
       "proteinG": 32,
       "servingG": 70,
@@ -11564,6 +11579,7 @@ const PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=klean+athlete+klean+isolate&tag=YOURTAG-20",
     "blurb": "An unflavored, unsweetened 20-gram whey isolate scoop with just whey protein isolate and sunflower lecithin on the label, NSF Certified for Sport and used by over 350 professional and collegiate sports teams.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/klean-athlete-klean-isolate.jpg",
     "metrics": { "calories": 85, "carbsG": 1, "certification": "NSF Certified for Sport",
       "proteinG": 20,
       "servingG": 22.3,

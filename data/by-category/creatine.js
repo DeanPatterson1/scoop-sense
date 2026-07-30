@@ -91,6 +91,7 @@ var PRODUCTS = [
       "https://www.optimumnutrition.com/cdn/shop/files/US_CREATINE_240SV_UNFLAV_FOP.png?v=1784673185"
     ],
     "metrics": {
+      "netWeightG": 300,
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -189,6 +190,8 @@ var PRODUCTS = [
       "https://d1vo8zfysxy97v.cloudfront.net/media/product/sf903__v67f933512454449d24c5c855f503305e97e11c01.jpg"
     ],
     "metrics": {
+      "netWeightG": 450,
+      "certification": "NSF Certified for Sport",
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -292,6 +295,7 @@ var PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/0222/4128/0074/products/nutricost-creatine-monohydrate-powder-601968.jpg?v=1760650358"
     ],
     "metrics": {
+      "netWeightG": 500,
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -404,6 +408,8 @@ var PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/0866/7664/files/TL-227_CreatineHMB_60S_SL_1_5_FRONT.png?v=1781272810"
     ],
     "metrics": {
+      "netWeightG": 285,
+      "certification": "Informed Choice",
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -454,6 +460,8 @@ var PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/1110/3248/files/CREATINEHCLFRUITPUNCHFRONT.png?v=1774384752"
     ],
     "metrics": {
+      "netWeightG": 56,
+      "certification": "Informed Sport",
       "creatineG": 0.75,
       "form": "HCl"
     },
@@ -596,6 +604,8 @@ var PRODUCTS = [
     "blurb": "Single-ingredient 5 g monohydrate carrying NSF Certified for Sport certification, priced at a premium for the tested-athlete market.",
     "labelVerified": "July 2026",
     "metrics": {
+      "netWeightG": 315,
+      "certification": "NSF Certified for Sport",
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -646,6 +656,8 @@ var PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/2704/4962/files/JF_Creatine_200_Front.png?v=1770125863"
     ],
     "metrics": {
+      "netWeightG": 425,
+      "certification": "Informed Choice",
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -754,6 +766,8 @@ var PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/1214/7132/files/celltech-fruitpunch-6lb_887f541a-63a0-47c6-99e4-944098a18181.jpg?v=1753299062"
     ],
     "metrics": {
+      "calories": 150,
+      "netWeightG": 1400,
       "creatineG": 5,
       "form": "blend"
     },
@@ -805,6 +819,8 @@ var PRODUCTS = [
       "https://www.nowfoods.com/sites/default/files/2023-10/2030_nowproductlabels2.png"
     ],
     "metrics": {
+      "netWeightG": 1000,
+      "certification": "Informed Sport",
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -855,6 +871,7 @@ var PRODUCTS = [
       "https://cellucor.com/cdn/shop/files/CELL_2358_UnflavoredCreatine_PDPs_WarmGrey_Claims.jpg?v=1777870273"
     ],
     "metrics": {
+      "netWeightG": 360,
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -946,6 +963,7 @@ var PRODUCTS = [
       "https://www.muscletech.com/cdn/shop/files/MuscleTech-100Creatine-Unflavored-2000x2000-02-V2_font.jpg?v=1766074513&width=2000"
     ],
     "metrics": {
+      "netWeightG": 400,
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -1035,6 +1053,7 @@ var PRODUCTS = [
     "blurb": "A plain 5 g micronized monohydrate scoop with no other listed ingredients, sold in a 60-serving unflavored tub.",
     "labelVerified": "July 2026",
     "metrics": {
+      "netWeightG": 309,
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -1084,6 +1103,8 @@ var PRODUCTS = [
       "https://www.allmaxnutrition.com/cdn/shop/files/allmax-creatine-unflavored-1000g_1.webp"
     ],
     "metrics": {
+      "netWeightG": 1000,
+      "creapure": false,
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -1128,6 +1149,7 @@ var PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/0278/7776/9321/files/05_SFPwebsite_700x.jpg?v=1689865918"
     ],
     "metrics": {
+      "netWeightG": 300,
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -1172,6 +1194,8 @@ var PRODUCTS = [
     "blurb": "5 g of Creapure-brand monohydrate micronized to roughly 180 microns for easier mixing, with no other ingredients listed on the panel.",
     "labelVerified": "July 2026",
     "metrics": {
+      "netWeightG": 300,
+      "creapure": true,
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -1257,6 +1281,7 @@ var PRODUCTS = [
     "blurb": "A single-ingredient 5 g Creapure monohydrate teaspoon serving with no other listed ingredients; the 500 g tub holds 100 servings, confirmed directly against the manufacturer's label on file with the NIH's supplement label database.",
     "labelVerified": "July 2026",
     "metrics": {
+      "netWeightG": 500,
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -1355,6 +1380,9 @@ var PRODUCTS = [
       "https://www.livemomentous.com/cdn/shop/files/NewCreatine_60serv_Watermelon.png?v=1784225511&width=1440"
     ],
     "metrics": {
+      "netWeightG": 450,
+      "creapure": false,
+      "certification": "NSF Certified for Sport",
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -1403,6 +1431,9 @@ var PRODUCTS = [
       "https://www.bareperformancenutrition.com/cdn/shop/files/BPNCREA30SV-2.jpg?v=1749806840&width=1200"
     ],
     "metrics": {
+      "netWeightG": 300,
+      "creapure": true,
+      "certification": "NSF Certified for Sport",
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -1447,6 +1478,7 @@ var PRODUCTS = [
       "https://xwerks.com/cdn/shop/files/X_Lift_3.jpg"
     ],
     "metrics": {
+      "calories": 0,
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -1536,6 +1568,8 @@ var PRODUCTS = [
       "https://1stphorm.com/cdn/shop/files/Creatine-Lifestyle_1800x1800.jpg?v=1744913869"
     ],
     "metrics": {
+      "netWeightG": 500,
+      "certification": "NSF Certified for Sport",
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -1585,6 +1619,8 @@ var PRODUCTS = [
       "https://gognarly.com/cdn/shop/files/Creatine_NFP.jpg"
     ],
     "metrics": {
+      "creapure": true,
+      "certification": "NSF Certified for Sport",
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -1633,6 +1669,7 @@ var PRODUCTS = [
       "https://nakednutrition.com/cdn/shop/files/creatine-monohydrate-powder-unflavored-2.2lb_95da58cf-9aeb-4c77-a4af-77c7c5972260.jpg?v=1783215302&width=1200"
     ],
     "metrics": {
+      "netWeightG": 1000,
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -1726,6 +1763,9 @@ var PRODUCTS = [
       "https://cdn.shopify.com/s/files/1/1515/2714/files/create_90-ct-orange-2_4480c993-7762-437b-bfa9-ad517fc9f2da_80x80.png?v=1777408323"
     ],
     "metrics": {
+      "calories": 30,
+      "creapure": true,
+      "certification": "NSF Certified for Sport",
       "creatineG": 4.5,
       "form": "monohydrate"
     },
@@ -1769,6 +1809,7 @@ var PRODUCTS = [
     "blurb": "Informed Sport-certified micronized monohydrate with no other active ingredients, sold in bulk 100-serving sizes.",
     "labelVerified": "July 2026",
     "metrics": {
+      "certification": "Informed Sport",
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -1817,6 +1858,7 @@ var PRODUCTS = [
       "https://swolverine.com/cdn/shop/files/Swolverine-kre-alkalyn-10216071820-51597221134616.png?v=1773973193&width=800"
     ],
     "metrics": {
+      "netWeightG": 300,
       "creatineG": 3,
       "form": "monohydrate"
     },
@@ -1865,6 +1907,7 @@ var PRODUCTS = [
       "https://nutrabio.com/cdn/shop/files/third-party-tested_NB-web.png"
     ],
     "metrics": {
+      "creapure": false,
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -1952,6 +1995,7 @@ var PRODUCTS = [
       }
     },
     "metrics": {
+      "netWeightG": 250,
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -2060,6 +2104,9 @@ var PRODUCTS = [
       "https://www.ghostlifestyle.com/cdn/shop/files/GHOST_Size_V3_Natty_Back.png"
     ],
     "metrics": {
+      "calories": 5,
+      "netWeightG": 375,
+      "creapure": true,
       "creatineG": 5,
       "form": "blend"
     },
@@ -2157,6 +2204,8 @@ var PRODUCTS = [
       "https://www.kaged.com/cdn/shop/files/CreatineMonohydrateAMZ_CreatineMonohydrateSFP.jpg"
     ],
     "metrics": {
+      "netWeightG": 500,
+      "certification": "Informed Sport",
       "creatineG": 5,
       "form": "monohydrate"
     },
@@ -2314,6 +2363,7 @@ var PRODUCTS = [
       "https://www.professionalsupplementcenter.com/cdn/shop/files/creatine-collagen-electrolytes-ANN_Lemon_30_20Servings_main_1.jpg?v=1768932857&width=800"
     ],
     "metrics": {
+      "calories": 5,
       "creatineG": 5,
       "form": "blend"
     },

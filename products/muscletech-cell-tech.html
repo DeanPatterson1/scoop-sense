@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css?v=20260729o">
+  <link rel="stylesheet" href="../css/styles.css?v=20260730a">
 </head>
 <body>
 
@@ -127,7 +127,12 @@
               <li>Draws water into muscle — drink more water</li>
               <li>Talk to your doctor if you have kidney conditions</li>
             </ul>
-            <p class="sc-cautions-more"><a href="../disclaimer.html">Full health &amp; safety notes</a></p>
+            <!-- Standing, and deliberately here rather than only on the safety
+                 page: a reader checking a 400 mg label for a teenager was
+                 given the number and left to find the age line three clicks
+                 away. Kept out of p.cautions — that list is what this label
+                 produces, this sentence is true of every product on file. -->
+            <p class="sc-cautions-more">Formulated for healthy adults — not intended for anyone under 18. <a href="../disclaimer.html">Full health &amp; safety notes</a></p>
           </div>
         </div>
 
@@ -183,16 +188,18 @@
         </div>
         <p class="sc-dose-scale"><span>0</span><span>studied range 3 g–5 g</span><span>6 g</span></p>
         <p class="sc-dose-note">Maintenance dosing in the research is 3–5 g a day of monohydrate, every day, not only on training days.</p>
+        <p class="sc-dose-cite">Source: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5469049/" target="_blank" rel="noopener">Kreider et al., Journal of the International Society of Sports Nutrition 2017</a> — “Once muscle creatine stores are fully saturated, creatine stores can generally be maintained by ingesting 3–5 g/day”</p>
       </li>
         <li class="sc-dose-row">
         <p class="sc-dose-head"><span class="sc-dose-name">Taurine</span><span class="sc-dose-amount">1 g</span></p>
         <span class="sc-dose-verdict sc-dose-at">At or above the studied amount</span>
-        <div class="sc-dose-bar" role="img" aria-label="Taurine: this label has 1 g; studied amounts run 1 g to 2 g">
-          <span class="sc-dose-band" style="left:33.3%;width:33.3%"></span>
-          <span class="sc-dose-mark" style="left:33.3%"></span>
+        <div class="sc-dose-bar" role="img" aria-label="Taurine: this label has 1 g; studied amounts run 1 g to 6 g">
+          <span class="sc-dose-band" style="left:14.3%;width:71.4%"></span>
+          <span class="sc-dose-mark" style="left:14.3%"></span>
         </div>
-        <p class="sc-dose-scale"><span>0</span><span>studied range 1 g–2 g</span><span>3 g</span></p>
-        <p class="sc-dose-note">Studied at 1–2 g before exercise, with mixed results across trials.</p>
+        <p class="sc-dose-scale"><span>0</span><span>studied range 1 g–6 g</span><span>7 g</span></p>
+        <p class="sc-dose-note">Trials run from 1 g to 6 g a day, given as single doses or for up to two weeks, with mixed results across studies.</p>
+        <p class="sc-dose-cite">Source: <a href="https://pubmed.ncbi.nlm.nih.gov/29546641/" target="_blank" rel="noopener">Waldron et al., Sports Medicine 2018</a> — “The doses of taurine ranged from 1 to 6 g/day and were provided in single doses and for up to 2 weeks among a range of subjects.”</p>
       </li>
       </ul>
       <p class="sc-dose-blendnote">One or more amounts on this label sit inside a proprietary blend, so the individual doses behind the blend total cannot be compared at all.</p>
@@ -433,6 +440,6 @@
   });
 })();
 </script>
-<script src="../js/app.js?v=20260729o"></script>
+<script src="../js/app.js?v=20260730a"></script>
 </body>
 </html>
