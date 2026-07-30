@@ -23,7 +23,7 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const OUT = path.join(ROOT, "products");
-const VERSION = "20260730e"; // keep in sync with the ?v= on the other pages
+const VERSION = "20260730f"; // keep in sync with the ?v= on the other pages
 
 // Set this to the real origin at domain time (see README "Sitemap & domain").
 // Absolute-URL metadata — canonical, og:url, BreadcrumbList — is emitted only
@@ -1407,6 +1407,7 @@ console.log(`Wrote sitemap.xml (${urls.length} URLs)`);
  * its own filter, and a figure this file guessed at would be the same class of
  * mistake. */
 const heroStats = {
+  total: String(PRODUCTS.length),
   totalLabels: `${PRODUCTS.length} supplement labels on file`,
   categories: String(Object.keys(CATEGORY_CONFIG).length),
   disclosed: `${PRODUCTS.filter(isDisclosed).length} of ${PRODUCTS.length}`,
@@ -1422,6 +1423,21 @@ for (const [key, value] of Object.entries(heroStats)) {
     new RegExp(`(data-stat="${key}">)([^<]*)`),
     (_, open, was) => {
       if (was !== value) stale.push(`${key}: "${was}" -> "${value}"`);
+      return open + value;
+    }
+  );
+}
+
+// The label panel's shelf rows carry per-category counts under the same
+// no-hand-maintenance rule: js/app.js recounts them at runtime, and this
+// keeps the static fallback a crawler reads from drifting.
+for (const slug of Object.keys(CATEGORY_CONFIG)) {
+  const n = PRODUCTS.filter((p) => categoryOf(p) === slug).length;
+  const value = `${n} ${n === 1 ? "label" : "labels"}`;
+  indexHTML = indexHTML.replace(
+    new RegExp(`(data-cat-count="${slug}">)([^<]*)`),
+    (_, open, was) => {
+      if (was !== value) stale.push(`${slug}: "${was}" -> "${value}"`);
       return open + value;
     }
   );

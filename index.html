@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20260730e">
+  <link rel="stylesheet" href="css/styles.css?v=20260730f">
 </head>
 <body>
 
@@ -42,86 +42,49 @@
     <div class="sc-container">
       <div class="sc-hero-grid">
         <div>
-          <p class="sc-eyebrow">Independent supplement label database</p>
-          <h1>Read the label.<br><span class="sc-hl">Skip the hype.</span></h1>
-          <p class="sc-lead">Search 187 pre-workouts, proteins, creatines, amino formulas, and electrolyte mixes. Caffeine, studied ingredient doses, serving sizes, label transparency, and the cautions that matter.</p>
+          <h1>Read the label.</h1>
+          <p class="sc-lead">Scoop Sense copies what's printed on the Supplement Facts panels of 187 pre-workouts, proteins, creatines, amino formulas, and electrolyte mixes — then lines each dose up against the amounts used in published research.</p>
+          <p class="sc-hero-plain">No scores. No sponsored rankings. Just the label, read closely. <a href="#methodology">How every entry is built</a></p>
+        </div>
+
+        <!-- The whole front door is one printed label: search, the five
+             shelves, the database's own figures, and the honesty footnote,
+             set in the thick-and-thin rule grammar of a real supplement
+             facts panel. -->
+        <aside class="sc-heropanel" aria-label="Search and browse the database">
+          <p class="sc-heropanel-title">Scoop Sense Facts</p>
+          <p class="sc-heropanel-sub">Serving size: <span data-stat="totalLabels">187 supplement labels on file</span>&dagger;</p>
+          <div class="sc-heropanel-bar"></div>
 
           <!-- GET to hub.html, not a hash: a form cannot write a fragment
                without JavaScript, and js/app.js reads ?q= on arrival and folds
                it into the hash state the rest of the filters use. With scripts
                off the reader still lands on the hub with all 187 rows on it. -->
-          <form class="sc-herosearch" action="hub.html" method="get" role="search">
+          <form class="sc-labelsearch" action="hub.html" method="get" role="search">
             <label class="sc-vh" for="sc-hero-q">Search products and brands</label>
-            <input class="sc-input sc-herosearch-input" type="search" id="sc-hero-q" name="q"
-                   placeholder="Search a product or brand — C4, Gorilla Mode, Optimum Nutrition">
-            <button class="sc-btn sc-btn-primary" type="submit">Search</button>
+            <input class="sc-input sc-labelsearch-input" type="search" id="sc-hero-q" name="q"
+                   placeholder="Look up a product or brand">
+            <button class="sc-labelsearch-btn" type="submit">Search</button>
           </form>
 
-          <nav class="sc-heroquick" aria-label="Jump to a category">
-            <a href="hub.html#cat-pre-workout">Pre-workout</a>
-            <a href="protein.html">Protein</a>
-            <a href="creatine.html">Creatine</a>
-            <a href="eaa.html">Amino</a>
-            <a href="electrolytes.html">Electrolytes</a>
-            <a href="compare.html">Compare side by side</a>
+          <div class="sc-labelcols" aria-hidden="true"><span>Shelf</span><span>On file</span></div>
+          <nav class="sc-labelrows" aria-label="Browse by category">
+            <a class="sc-labelrow" href="hub.html#cat-pre-workout"><b>Pre-workout</b><span data-cat-count="pre-workout">38 labels</span></a>
+            <a class="sc-labelrow" href="protein.html"><b>Protein</b><span data-cat-count="protein">39 labels</span></a>
+            <a class="sc-labelrow" href="creatine.html"><b>Creatine</b><span data-cat-count="creatine">39 labels</span></a>
+            <a class="sc-labelrow" href="eaa.html"><b>EAA / BCAA</b><span data-cat-count="eaa">32 labels</span></a>
+            <a class="sc-labelrow" href="electrolytes.html"><b>Electrolytes</b><span data-cat-count="electrolytes">39 labels</span></a>
+            <a class="sc-labelrow sc-labelrow-all" href="hub.html"><b>The whole shelf</b><span><span data-stat="total">187</span> labels</span></a>
           </nav>
-          <ul class="sc-cred">
-            <li>Data taken from manufacturer labels</li>
-            <li>No paid product placement</li>
-            <li>Affiliate-supported</li>
-            <li>Labels checked regularly</li>
-          </ul>
-        </div>
-        <aside class="sc-heropanel" aria-label="Database at a glance">
-          <p class="sc-heropanel-title">Scoop Sense Facts</p>
-          <p class="sc-heropanel-sub" data-stat="totalLabels">187 supplement labels on file</p>
-          <div class="sc-heropanel-bar"></div>
+
           <dl>
-            <div><dt>Categories tracked</dt><dd data-stat="categories">5</dd></div>
-            <div><dt>Caffeine range, pre-workouts</dt><dd data-stat="cafRange">0–400 mg</dd></div>
             <div><dt>Fully disclosed labels</dt><dd data-stat="disclosed">125 of 187</dd></div>
             <div><dt>Proprietary blends flagged</dt><dd data-stat="blends">45 of 187</dd></div>
+            <div><dt>Caffeine range, pre-workouts</dt><dd data-stat="cafRange">0–400 mg</dd></div>
             <div><dt>Labels last checked</dt><dd>July 2026</dd></div>
           </dl>
-          <p class="sc-heropanel-note">Every figure comes from the manufacturer's panel — never the marketing page.</p>
+          <p class="sc-heropanel-note">&dagger; Transcribed from the manufacturer's panel, never the marketing page. We read labels — we do not laboratory-test the tub. No paid placement; affiliate-supported.</p>
         </aside>
-      </div>
-    </div>
-  </section>
-
-  <!-- Categories -->
-  <section class="sc-section" id="categories">
-    <div class="sc-container">
-      <div class="sc-section-head">
-        <h2>Browse by category</h2>
-        <a class="sc-action-link" href="hub.html">All products</a>
-      </div>
-      <div class="sc-cats">
-        <a class="sc-cat-card" href="hub.html#cat-pre-workout">
-          <span class="sc-cat-card-name">Pre-workout</span>
-          <span class="sc-cat-card-count" data-cat-count="pre-workout">38 labels</span>
-          <span class="sc-cat-card-what">Caffeine, citrulline, and beta-alanine doses lined up against studied amounts.</span>
-        </a>
-        <a class="sc-cat-card" href="creatine.html">
-          <span class="sc-cat-card-name">Creatine</span>
-          <span class="sc-cat-card-count" data-cat-count="creatine">39 labels</span>
-          <span class="sc-cat-card-what">Creatine per serving and form — monohydrate, HCl, or blend.</span>
-        </a>
-        <a class="sc-cat-card" href="protein.html">
-          <span class="sc-cat-card-name">Protein</span>
-          <span class="sc-cat-card-count" data-cat-count="protein">39 labels</span>
-          <span class="sc-cat-card-what">Protein per serving, protein-per-scoop percentage, source, and sweetener.</span>
-        </a>
-        <a class="sc-cat-card" href="eaa.html">
-          <span class="sc-cat-card-name">EAA / BCAA</span>
-          <span class="sc-cat-card-count" data-cat-count="eaa">32 labels</span>
-          <span class="sc-cat-card-what">Full-EAA vs BCAA-only, leucine dose, and caffeinated formulas flagged.</span>
-        </a>
-        <a class="sc-cat-card" href="electrolytes.html">
-          <span class="sc-cat-card-name">Electrolytes</span>
-          <span class="sc-cat-card-count" data-cat-count="electrolytes">39 labels</span>
-          <span class="sc-cat-card-what">Sodium, potassium, magnesium, and how much sugar comes with them.</span>
-        </a>
       </div>
     </div>
   </section>
@@ -294,15 +257,6 @@
     </div>
   </section>
 
-  <!-- Closing CTA -->
-  <section class="sc-cta-band">
-    <div class="sc-container">
-      <h2>Find <span>your</span> formula.</h2>
-      <p>Five categories of labels logged and compared — filter by category, caffeine, or brand, then read the breakdown before you buy.</p>
-      <a class="sc-btn sc-btn-primary" href="hub.html">Browse the database</a>
-    </div>
-  </section>
-
 </main>
 
 <footer class="sc-footer">
@@ -388,8 +342,8 @@
   ]
 }
 </script>
-<script src="data/products.js?v=20260730e"></script>
-<script src="js/categories.js?v=20260730e"></script>
-<script src="js/app.js?v=20260730e"></script>
+<script src="data/products.js?v=20260730f"></script>
+<script src="js/categories.js?v=20260730f"></script>
+<script src="js/app.js?v=20260730f"></script>
 </body>
 </html>

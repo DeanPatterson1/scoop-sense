@@ -535,17 +535,6 @@ main > .sc-section-deep + .sc-section {
   }
 }
 
-/* The volt glow lives on a pseudo-element so it can breathe — a very
-   slow ambient pulse, never a flash. */
-.sc-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 90% 70% at 85% -10%, rgba(110, 147, 184, 0.09), transparent 60%);
-  animation: sc-glow 9s ease-in-out infinite alternate;
-  pointer-events: none;
-}
-
 .sc-hero > .sc-container {
   position: relative;
 }
@@ -565,27 +554,38 @@ main > .sc-section-deep + .sc-section {
 
 @media (min-width: 920px) {
   .sc-hero-grid {
-    grid-template-columns: minmax(0, 7fr) minmax(300px, 4fr);
+    grid-template-columns: minmax(0, 7fr) minmax(320px, 4fr);
     gap: 64px;
+    /* The panel is the tall element; the statement floats level with it
+       instead of pinning to the top and leaving a dark hole beneath. */
+    align-items: center;
   }
 }
 
-/* Uppercase condensed display — the one loud typographic moment. */
+/* Sentence-case condensed display. The loud typographic moment belongs to
+   the facts panel now; the headline states the thesis and steps back. */
 .sc-hero h1 {
-  margin-bottom: 16px;
-  font-size: clamp(2.6rem, 6.5vw, 4.4rem);
+  margin-bottom: 20px;
+  font-size: clamp(2.6rem, 6vw, 4rem);
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.015em;
-  line-height: 0.98;
-}
-
-.sc-hero h1 .sc-hl {
-  color: var(--sc-accent);
+  text-transform: none;
+  letter-spacing: 0.002em;
+  line-height: 1;
 }
 
 .sc-hero .sc-lead {
-  margin-bottom: 32px;
+  margin-bottom: 20px;
+  max-width: 34em;
+}
+
+.sc-hero-plain {
+  font-size: 0.95rem;
+  color: var(--sc-muted);
+  margin: 0;
+}
+
+.sc-hero-plain a {
+  color: var(--sc-info);
 }
 
 /* Hero facts panel — a Scoop Sense Facts label, set in the iconic
@@ -599,12 +599,15 @@ main > .sc-section-deep + .sc-section {
   border: 1px solid rgba(23, 20, 15, 0.9);
 }
 
+/* Set like the real artifact's title: the heaviest, most condensed thing on
+   the panel. */
 .sc-heropanel-title {
-  font-weight: 800;
-  font-size: 1.5rem;
-  line-height: 1.1;
+  font-family: var(--sc-font-display);
+  font-weight: 700;
+  font-size: 2.1rem;
+  line-height: 1;
   text-transform: uppercase;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.005em;
   margin: 0 0 2px;
 }
 
@@ -655,78 +658,109 @@ main > .sc-section-deep + .sc-section {
   margin: 8px 0 0;
 }
 
-.sc-hero-actions {
+/* Search, set into the label. White field, heavy ink border, black button —
+   the panel's own palette. The steel-blue accent stays out of the paper. */
+.sc-labelsearch {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 12px 16px;
-  margin-bottom: 40px;
+  gap: 6px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--sc-paper-line);
 }
 
-/* Hero search. The homepage used to open with two buttons and ask the reader
-   to go somewhere before they could do anything; this lets them start where
-   they landed. Sized up deliberately — it is the first control on the site and
-   should read as the point of the page, not as a utility in the corner. */
-.sc-herosearch {
+/* Doubled selector: .sc-input's own rule sits later in the file and ties on
+   specificity, which painted this field dark on the paper panel. */
+.sc-labelsearch .sc-labelsearch-input {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 44px;
+  background: #FFFFFF;
+  color: var(--sc-paper-ink);
+  border: 2px solid var(--sc-paper-ink);
+  border-radius: 2px;
+  font-size: 0.95rem;
+}
+
+.sc-labelsearch .sc-labelsearch-input::placeholder {
+  color: var(--sc-paper-muted);
+}
+
+.sc-labelsearch-btn {
+  font-family: var(--sc-font-body);
+  font-weight: 700;
+  font-size: 0.9rem;
+  min-height: 44px;
+  padding: 0 18px;
+  background: var(--sc-paper-ink);
+  color: var(--sc-paper);
+  border: 2px solid var(--sc-paper-ink);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.sc-labelsearch-btn:hover {
+  background: #000;
+}
+
+/* The % Daily Value column-header row, repurposed. */
+.sc-labelcols {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 0 0 20px;
+  justify-content: space-between;
+  padding: 6px 0 4px;
+  border-bottom: 4px solid var(--sc-paper-ink);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--sc-paper-muted);
 }
 
-.sc-herosearch-input {
-  flex: 1 1 320px;
-  min-height: 48px;
-  font-size: 1rem;
+/* Category rows as label rows: bold name left, count right, hairlines
+   between, the thick closing rule after — navigation wearing the panel's
+   own grammar. */
+.sc-labelrows {
+  display: block;
+  border-bottom: 8px solid var(--sc-paper-ink);
 }
 
-.sc-herosearch .sc-btn {
-  min-height: 48px;
-}
-
-/* Category shortcuts under the search box: the five categories plus the
-   compare table, for a reader who would rather browse than type. */
-.sc-heroquick {
+.sc-labelrow {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 32px;
-}
-
-.sc-heroquick a {
-  font-size: 0.84rem;
-  letter-spacing: 0.02em;
-  color: var(--sc-muted);
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 9px 2px;
+  border-bottom: 1px solid var(--sc-paper-line);
   text-decoration: none;
-  padding: 6px 12px;
-  border: 1px solid var(--sc-border-strong);
-  border-radius: 999px;
-  transition: color 0.15s ease, border-color 0.15s ease;
+  color: var(--sc-paper-ink);
+  font-size: 0.95rem;
 }
 
-.sc-heroquick a:hover,
-.sc-heroquick a:focus-visible {
-  color: var(--sc-ink);
-  border-color: var(--sc-accent);
+.sc-labelrow:last-child {
+  border-bottom: 0;
 }
 
-/* Credibility row — quiet, hairline-separated facts. */
-.sc-cred {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 40px;
-  margin: 0;
-  padding: 16px 0 0;
-  list-style: none;
-  border-top: 1px solid var(--sc-border);
+.sc-labelrow b {
+  font-weight: 700;
 }
 
-.sc-cred li {
-  margin: 0;
-  font-size: 0.88rem;
-  color: var(--sc-muted);
-  padding-left: 12px;
-  border-left: 2px solid var(--sc-border-strong);
+.sc-labelrow span {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  color: var(--sc-paper-muted);
+}
+
+.sc-labelrow:hover,
+.sc-labelrow:focus-visible {
+  background: rgba(23, 20, 15, 0.05);
+}
+
+.sc-labelrow:hover b {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.sc-labelrow-all b {
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
 /* --------------------------------------------------------------------------
@@ -1393,62 +1427,6 @@ th[aria-sort="descending"] .sc-sort-btn::after {
 button.sc-chip {
   cursor: pointer;
   font-size: 0.85rem;
-}
-
-/* Homepage category cards — five doors into the database. */
-.sc-cats {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
-}
-
-@media (min-width: 640px) {
-  .sc-cats { grid-template-columns: repeat(2, 1fr); }
-}
-
-/* Three across, not five: at five the description column was ~26 characters
-   wide, below any readable measure. Two rows of wider cards read faster. */
-@media (min-width: 1024px) {
-  .sc-cats { grid-template-columns: repeat(3, 1fr); gap: 16px; }
-}
-
-.sc-cat-card {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  background: var(--sc-surface);
-  border: 1px solid var(--sc-border);
-  border-radius: var(--sc-radius);
-  padding: 18px 16px;
-  text-decoration: none;
-  transition: border-color 120ms ease, background 120ms ease, transform 120ms ease;
-}
-
-.sc-cat-card:hover,
-.sc-cat-card:focus-visible {
-  background: var(--sc-surface-2);
-  border-color: var(--sc-border-strong);
-  transform: translateY(-2px);
-}
-
-.sc-cat-card-name {
-  font-family: var(--sc-font-display);
-  font-size: 1.25rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--sc-ink);
-}
-
-.sc-cat-card-count {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--sc-accent);
-}
-
-.sc-cat-card-what {
-  font-size: 0.88rem;
-  color: var(--sc-muted);
 }
 
 /* Sticky, compact toolbar.
@@ -3251,40 +3229,6 @@ button.sc-chip {
 }
 
 /* --------------------------------------------------------------------------
-   15b. CTA band — one loud closing moment before the footer.
-   -------------------------------------------------------------------------- */
-
-.sc-cta-band {
-  background: var(--sc-bg-deep);
-  border-top: 1px solid var(--sc-border);
-  padding: 64px 0;
-  text-align: center;
-}
-
-@media (min-width: 768px) {
-  .sc-cta-band {
-    padding: 88px 0;
-  }
-}
-
-.sc-cta-band h2 {
-  font-size: clamp(2rem, 4.5vw, 3rem);
-  text-transform: uppercase;
-  letter-spacing: 0.015em;
-  margin-bottom: 8px;
-}
-
-.sc-cta-band h2 span {
-  color: var(--sc-accent);
-}
-
-.sc-cta-band p {
-  color: var(--sc-muted);
-  max-width: 52ch;
-  margin: 0 auto 24px;
-}
-
-/* --------------------------------------------------------------------------
    15c. Motion — one subtle system: rise-in on load (hero), rise-in on
    scroll (JS adds .sc-reveal, then .sc-in when visible), small hovers.
    The global prefers-reduced-motion rule zeroes all of it.
@@ -3331,41 +3275,36 @@ button.sc-chip {
   }
 }
 
-/* Ambient volt glow behind the hero — slow breathing, never a flash. */
-@keyframes sc-glow {
-  from {
-    opacity: 0.45;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 /* Hero page-load sequence (CSS-only, works without JS). */
-.sc-hero .sc-eyebrow { animation: sc-rise 0.5s ease-out backwards; }
-.sc-hero h1 { animation: sc-rise 0.5s ease-out 0.08s backwards; }
-.sc-hero .sc-lead { animation: sc-rise 0.5s ease-out 0.16s backwards; }
-.sc-hero-actions,
-.sc-herosearch { animation: sc-rise 0.5s ease-out 0.24s backwards; }
-.sc-heroquick { animation: sc-rise 0.5s ease-out 0.28s backwards; }
-.sc-hero .sc-cred { animation: sc-rise 0.5s ease-out 0.36s backwards; }
-.sc-heropanel { animation: sc-rise 0.55s ease-out 0.28s backwards; }
+.sc-hero h1 { animation: sc-rise 0.5s ease-out backwards; }
+.sc-hero .sc-lead { animation: sc-rise 0.5s ease-out 0.08s backwards; }
+.sc-hero-plain { animation: sc-rise 0.5s ease-out 0.16s backwards; }
+.sc-heropanel { animation: sc-rise 0.55s ease-out 0.2s backwards; }
 
-/* Inside the hero facts panel: the thick rule draws, then rows tick in
-   one by one — a label printing itself. */
+/* Inside the facts panel: the thick rule draws, then the shelf rows and the
+   figures tick in — a label printing itself. The one orchestrated moment on
+   the page; everything else holds still. */
 .sc-heropanel-bar {
   transform-origin: left;
-  animation: sc-grow 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) 0.5s backwards;
+  animation: sc-grow 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) 0.4s backwards;
 }
 
+.sc-labelsearch { animation: sc-fade 0.4s ease-out 0.5s backwards; }
+
+.sc-labelrow { animation: sc-fade 0.35s ease-out backwards; }
+.sc-labelrow:nth-child(1) { animation-delay: 0.58s; }
+.sc-labelrow:nth-child(2) { animation-delay: 0.63s; }
+.sc-labelrow:nth-child(3) { animation-delay: 0.68s; }
+.sc-labelrow:nth-child(4) { animation-delay: 0.73s; }
+.sc-labelrow:nth-child(5) { animation-delay: 0.78s; }
+.sc-labelrow:nth-child(6) { animation-delay: 0.83s; }
+
 .sc-heropanel dl > div { animation: sc-fade 0.4s ease-out backwards; }
-.sc-heropanel dl > div:nth-child(1) { animation-delay: 0.6s; }
-.sc-heropanel dl > div:nth-child(2) { animation-delay: 0.66s; }
-.sc-heropanel dl > div:nth-child(3) { animation-delay: 0.72s; }
-.sc-heropanel dl > div:nth-child(4) { animation-delay: 0.78s; }
-.sc-heropanel dl > div:nth-child(5) { animation-delay: 0.84s; }
-.sc-heropanel dl > div:nth-child(6) { animation-delay: 0.9s; }
-.sc-heropanel-note { animation: sc-fade 0.4s ease-out 0.98s backwards; }
+.sc-heropanel dl > div:nth-child(1) { animation-delay: 0.88s; }
+.sc-heropanel dl > div:nth-child(2) { animation-delay: 0.93s; }
+.sc-heropanel dl > div:nth-child(3) { animation-delay: 0.98s; }
+.sc-heropanel dl > div:nth-child(4) { animation-delay: 1.03s; }
+.sc-heropanel-note { animation: sc-fade 0.4s ease-out 1.1s backwards; }
 
 /* Hub + compare intro load sequence (CSS-only, static markup). */
 .sc-hub-intro .sc-eyebrow { animation: sc-rise 0.5s ease-out backwards; }
