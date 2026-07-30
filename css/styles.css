@@ -635,6 +635,53 @@ main > .sc-section-deep + .sc-section {
   margin-bottom: 40px;
 }
 
+/* Hero search. The homepage used to open with two buttons and ask the reader
+   to go somewhere before they could do anything; this lets them start where
+   they landed. Sized up deliberately — it is the first control on the site and
+   should read as the point of the page, not as a utility in the corner. */
+.sc-herosearch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 20px;
+}
+
+.sc-herosearch-input {
+  flex: 1 1 320px;
+  min-height: 48px;
+  font-size: 1rem;
+}
+
+.sc-herosearch .sc-btn {
+  min-height: 48px;
+}
+
+/* Category shortcuts under the search box: the five categories plus the
+   compare table, for a reader who would rather browse than type. */
+.sc-heroquick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.sc-heroquick a {
+  font-size: 0.84rem;
+  letter-spacing: 0.02em;
+  color: var(--sc-muted);
+  text-decoration: none;
+  padding: 6px 12px;
+  border: 1px solid var(--sc-border-strong);
+  border-radius: 999px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.sc-heroquick a:hover,
+.sc-heroquick a:focus-visible {
+  color: var(--sc-ink);
+  border-color: var(--sc-accent);
+}
+
 /* Credibility row — quiet, hairline-separated facts. */
 .sc-cred {
   display: flex;
@@ -3270,8 +3317,10 @@ button.sc-chip {
 .sc-hero .sc-eyebrow { animation: sc-rise 0.5s ease-out backwards; }
 .sc-hero h1 { animation: sc-rise 0.5s ease-out 0.08s backwards; }
 .sc-hero .sc-lead { animation: sc-rise 0.5s ease-out 0.16s backwards; }
-.sc-hero-actions { animation: sc-rise 0.5s ease-out 0.24s backwards; }
-.sc-hero .sc-cred { animation: sc-rise 0.5s ease-out 0.32s backwards; }
+.sc-hero-actions,
+.sc-herosearch { animation: sc-rise 0.5s ease-out 0.24s backwards; }
+.sc-heroquick { animation: sc-rise 0.5s ease-out 0.28s backwards; }
+.sc-hero .sc-cred { animation: sc-rise 0.5s ease-out 0.36s backwards; }
 .sc-heropanel { animation: sc-rise 0.55s ease-out 0.28s backwards; }
 
 /* Inside the hero facts panel: the thick rule draws, then rows tick in

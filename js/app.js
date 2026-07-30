@@ -1403,7 +1403,18 @@
   /* Reads a shared link back into `state`. Everything is checked against what
    * this page actually offers — a hash is a stranger's typing, and a figure
    * from a creatine link means nothing on the protein page. */
+  /* The homepage hero search is a plain <form method="get">, because a form
+   * cannot write a fragment and the search has to work for someone who just
+   * pressed Enter. It arrives as ?q=... — read it once, then let
+   * writeHashState turn it into the #q= the rest of the filters share, so the
+   * address bar does not end up carrying two different filter languages. */
+  function readQueryState() {
+    var q = /[?&]q=([^&]*)/.exec(location.search);
+    if (q) state.search = decodeURIComponent(q[1].replace(/\+/g, " "));
+  }
+
   function readHashState() {
+    readQueryState();
     var raw = location.hash.replace(/^#/, "");
     if (!raw) return;
 
@@ -1489,8 +1500,13 @@
     // Nothing to write and the reader followed an anchor here: leave it be,
     // or the first render strips #compare out from under them.
     if (!bits.length && isPlainAnchor(location.hash)) return;
-    if (hash === location.hash) return;
-    history.replaceState(null, "", location.pathname + location.search + hash);
+
+    // ?q= is the homepage form's doing and has already been folded into the
+    // hash by readQueryState. Dropping it stops the address bar carrying the
+    // same search twice, in two different notations, for the rest of the visit.
+    var search = location.search.replace(/([?&])q=[^&]*&?/, "$1").replace(/[?&]$/, "");
+    if (hash === location.hash && search === location.search) return;
+    history.replaceState(null, "", location.pathname + search + hash);
   }
 
   // Legacy deep links (hub.html#p-<id>) now live at products/<id>.html.

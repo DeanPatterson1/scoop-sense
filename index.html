@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20260730c">
+  <link rel="stylesheet" href="css/styles.css?v=20260730d">
 </head>
 <body>
 
@@ -44,11 +44,27 @@
         <div>
           <p class="sc-eyebrow">Independent supplement label database</p>
           <h1>Read the label.<br><span class="sc-hl">Skip the hype.</span></h1>
-          <p class="sc-lead">Compare caffeine, clinically studied ingredient doses, serving sizes, label transparency, and important cautions across popular formulas.</p>
-          <div class="sc-hero-actions">
-            <a class="sc-btn sc-btn-primary" href="hub.html">Browse the database</a>
-            <a class="sc-btn sc-btn-secondary" href="#methodology">How we evaluate labels</a>
-          </div>
+          <p class="sc-lead">Search 187 pre-workouts, proteins, creatines, amino formulas, and electrolyte mixes. Caffeine, studied ingredient doses, serving sizes, label transparency, and the cautions that matter.</p>
+
+          <!-- GET to hub.html, not a hash: a form cannot write a fragment
+               without JavaScript, and js/app.js reads ?q= on arrival and folds
+               it into the hash state the rest of the filters use. With scripts
+               off the reader still lands on the hub with all 187 rows on it. -->
+          <form class="sc-herosearch" action="hub.html" method="get" role="search">
+            <label class="sc-vh" for="sc-hero-q">Search products and brands</label>
+            <input class="sc-input sc-herosearch-input" type="search" id="sc-hero-q" name="q"
+                   placeholder="Search a product or brand — C4, Gorilla Mode, Optimum Nutrition">
+            <button class="sc-btn sc-btn-primary" type="submit">Search</button>
+          </form>
+
+          <nav class="sc-heroquick" aria-label="Jump to a category">
+            <a href="hub.html#cat-pre-workout">Pre-workout</a>
+            <a href="protein.html">Protein</a>
+            <a href="creatine.html">Creatine</a>
+            <a href="eaa.html">Amino</a>
+            <a href="electrolytes.html">Electrolytes</a>
+            <a href="compare.html">Compare side by side</a>
+          </nav>
           <ul class="sc-cred">
             <li>Data taken from manufacturer labels</li>
             <li>No paid product placement</li>
@@ -372,8 +388,8 @@
   ]
 }
 </script>
-<script src="data/products.js?v=20260730c"></script>
-<script src="js/categories.js?v=20260730c"></script>
-<script src="js/app.js?v=20260730c"></script>
+<script src="data/products.js?v=20260730d"></script>
+<script src="js/categories.js?v=20260730d"></script>
+<script src="js/app.js?v=20260730d"></script>
 </body>
 </html>
