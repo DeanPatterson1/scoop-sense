@@ -1294,3 +1294,44 @@ ${urls.map((u) => `  <url><loc>${u}</loc></url>`).join("\n")}
 `;
 fs.writeFileSync(path.join(ROOT, "sitemap.xml"), sitemap);
 console.log(`Wrote sitemap.xml (${urls.length} URLs)`);
+
+/* ---- homepage hero figures ---------------------------------------------- */
+
+/* js/app.js writes the hero panel's figures at runtime from PRODUCTS, and
+ * index.html carries hardcoded fallbacks for the moment before the script
+ * runs — which is also what a crawler or a link-preview scraper that does not
+ * execute JavaScript reads.
+ *
+ * Those fallbacks were maintained by hand and went stale: the homepage of a
+ * 187-product database advertised "78 supplement labels on file", because the
+ * number was last touched when there were two categories. Deriving them from
+ * the same source as the runtime values is the only way they cannot drift
+ * again. cafRange is deliberately left alone — app.js builds that array with
+ * its own filter, and a figure this file guessed at would be the same class of
+ * mistake. */
+const heroStats = {
+  totalLabels: `${PRODUCTS.length} supplement labels on file`,
+  categories: String(Object.keys(CATEGORY_CONFIG).length),
+  disclosed: `${PRODUCTS.filter(isDisclosed).length} of ${PRODUCTS.length}`,
+  blends: `${PRODUCTS.filter(hasBlend).length} of ${PRODUCTS.length}`,
+  preCount: String(PRODUCTS.filter((p) => categoryOf(p) === "pre-workout").length)
+};
+
+const indexPath = path.join(ROOT, "index.html");
+let indexHTML = fs.readFileSync(indexPath, "utf8");
+const stale = [];
+for (const [key, value] of Object.entries(heroStats)) {
+  indexHTML = indexHTML.replace(
+    new RegExp(`(data-stat="${key}">)([^<]*)`),
+    (_, open, was) => {
+      if (was !== value) stale.push(`${key}: "${was}" -> "${value}"`);
+      return open + value;
+    }
+  );
+}
+fs.writeFileSync(indexPath, indexHTML);
+console.log(
+  stale.length
+    ? `Updated ${stale.length} stale hero figure(s) in index.html\n  ${stale.join("\n  ")}`
+    : "Hero figures in index.html already current"
+);
