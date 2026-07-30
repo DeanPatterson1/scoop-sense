@@ -101,13 +101,11 @@ Either host works because the site is static files only.
 
 ---
 
-## Make the affiliate links real
+## The affiliate links
 
-1. Join Amazon Associates at `affiliate-program.amazon.com`.
-2. Get your tracking ID. It looks like `yourname-20`.
-3. Open `data/products.js` and find-and-replace every occurrence of the placeholder `YOURTAG-20` with your real tracking ID. Every `affiliateUrl` in the file uses that placeholder, so one find-and-replace covers the whole site.
+The Amazon Associates tracking ID is **`thescoopsense-20`**, and every `affiliateUrl` in `data/products.js` already carries it. The category files and product pages are generated from that one file, so a tag change is a single find-and-replace there followed by `node scripts/build-product-pages.js` — never edit `products/*.html` or `data/by-category/*.js` by hand. `scripts/integrate-research.js` rejects any new product whose `affiliateUrl` does not carry the tag.
 
-Two things worth knowing before you apply. Amazon requires roughly three qualifying sales within 180 days of signing up to keep your account approved, so apply when you are ready to send real traffic. Amazon also expects your affiliate disclosure to be live and visible when they review the site — `disclosure.html` and the on-page disclosure lines already satisfy that, but make sure the site is actually deployed first.
+One deadline worth tracking: Amazon requires roughly three qualifying sales within 180 days of signing up, or the account is closed and has to be reapplied for. Their review also expects the affiliate disclosure to be live and visible, which `disclosure.html` and the on-page disclosure lines satisfy on the deployed site.
 
 **Upgrade path.** Amazon pays low single digits on supplements and revises its own fee schedule, so read the current one rather than trusting a number here. Brand-direct programs — run in-house or through Impact, Awin (which absorbed ShareASale), CJ Affiliate or Rakuten Advertising — commonly pay several times that on the same product, and their cookie windows run 30 to 90 days against Amazon's 24 hours. As you are accepted into individual brand programs, swap that brand's `affiliateUrl` for its program link. Nothing else needs editing: the retailer named in the page's prose is derived from the link's host by `retailerOf`, mirrored in `js/app.js` and `scripts/build-product-pages.js`. Set the optional `retailer` field only when the destination is neither Amazon nor the brand's own store.
 
@@ -131,7 +129,7 @@ A few rules that keep the site honest and legally clean:
 - Write the `blurb` as one concise editorial takeaway — specific and factual, no marketing language. It renders on the row face.
 - Write `cautions` as short, factual statements. One to three per product.
 - Use the `priceRange` tiers (`$`, `$$`, `$$$`). Never put a dollar amount anywhere on the site; prices go stale within days.
-- Keep `affiliateUrl` in the standard form: `https://www.amazon.com/s?k=<product+words>&tag=YOURTAG-20`.
+- Keep `affiliateUrl` in the standard form: `https://www.amazon.com/s?k=<product+words>&tag=thescoopsense-20`.
 
 To change which products appear in the homepage "places to start," edit `FEATURED_IDS` (and the matching `START_META` labels in `js/app.js`). The database preview rows come from `PREVIEW_IDS` in `js/app.js`.
 

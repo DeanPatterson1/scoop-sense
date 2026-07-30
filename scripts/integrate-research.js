@@ -77,7 +77,7 @@ for (const cat of Object.keys(METRIC_KEYS)) {
       errors.push(`${tag}: cautions count out of range`);
     if (!Array.isArray(p.sources) || p.sources.length < 1) errors.push(`${tag}: sources empty`);
 
-    if (typeof p.affiliateUrl !== "string" || !p.affiliateUrl.startsWith("https://www.amazon.com/s?k=") || !p.affiliateUrl.includes("tag=YOURTAG-20"))
+    if (typeof p.affiliateUrl !== "string" || !p.affiliateUrl.startsWith("https://www.amazon.com/s?k=") || !p.affiliateUrl.includes("tag=thescoopsense-20"))
       errors.push(`${tag}: affiliateUrl not in standard search form`);
 
     if (!p.metrics || typeof p.metrics !== "object") errors.push(`${tag}: metrics missing`);
