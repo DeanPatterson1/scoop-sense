@@ -32,6 +32,23 @@ const VERSION = "20260730c"; // keep in sync with the ?v= on the other pages
 const SITE_ORIGIN = "https://thescoopsense.com";
 const HAS_ORIGIN = !/YOUR-DOMAIN/.test(SITE_ORIGIN);
 
+// The absolute URL a repo file is actually reachable at. Cloudflare's asset
+// server strips the extension and 307s to the bare path — `/creatine.html`
+// answers `Location: /creatine`, and `/index.html` answers `Location: /`. So
+// every absolute URL the site declares about itself has to be the extensionless
+// form, or canonical, og:url, the breadcrumb trail and the sitemap all point at
+// a redirect and Google resolves the target as canonical instead of the tag.
+// The `href`s between pages keep the `.html` suffix: they work either way, and
+// the site still has to open from the local filesystem and `serve.py`.
+// A fragment is split off first: the pre-workout breadcrumb points at
+// `hub.html#cat-pre-workout`, and a suffix rule anchored to end-of-string would
+// leave that one URL on the redirecting form.
+function publicUrl(file) {
+  const [pathPart, hash = ""] = file.split("#");
+  const bare = pathPart.replace(/(^|\/)index\.html$/, "$1").replace(/\.html$/, "");
+  return `${SITE_ORIGIN}/${bare}${hash ? `#${hash}` : ""}`;
+}
+
 /* ---- load data ---------------------------------------------------------- */
 
 const dataSrc = fs.readFileSync(path.join(ROOT, "data", "products.js"), "utf8");
@@ -945,7 +962,7 @@ function pageHTML(p) {
   const faqs = faqFor(p);
   const related = relatedFor(p);
   const accent = p.accentColor ? ` style="--sc-p-accent:${esc(p.accentColor)}"` : "";
-  const pageUrl = `${SITE_ORIGIN}/products/${p.id}.html`;
+  const pageUrl = publicUrl(`products/${p.id}.html`);
 
   const canonicalTags = HAS_ORIGIN
     ? `\n  <meta property="og:url" content="${esc(pageUrl)}">\n  <link rel="canonical" href="${esc(pageUrl)}">`
@@ -957,8 +974,8 @@ function pageHTML(p) {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "All supplements", item: `${SITE_ORIGIN}/hub.html` },
-          { "@type": "ListItem", position: 2, name: cfgOf(p).label, item: `${SITE_ORIGIN}/${categoryPageOf(p)}` },
+          { "@type": "ListItem", position: 1, name: "All supplements", item: publicUrl("hub.html") },
+          { "@type": "ListItem", position: 2, name: cfgOf(p).label, item: publicUrl(categoryPageOf(p)) },
           { "@type": "ListItem", position: 3, name: fullNameOf(p), item: pageUrl }
         ]
       }
@@ -1284,8 +1301,8 @@ const ROOT_PAGES = [
   "electrolytes.html", "compare.html", "disclosure.html", "disclaimer.html"
 ];
 
-const urls = ROOT_PAGES.map((f) => `${SITE_ORIGIN}/${f}`)
-  .concat(PRODUCTS.map((p) => `${SITE_ORIGIN}/products/${p.id}.html`));
+const urls = ROOT_PAGES.map(publicUrl)
+  .concat(PRODUCTS.map((p) => publicUrl(`products/${p.id}.html`)));
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
