@@ -53,6 +53,7 @@ if (!Array.isArray(entries)) { console.error("expected an array"); process.exit(
 /* ---- validate ------------------------------------------------------------ */
 
 const errors = [];
+const warnings = [];
 const seen = new Map();
 
 // Every ASIN in the catalog, including ones applied by an earlier run, so a
@@ -84,8 +85,24 @@ for (const e of entries) {
   if (!title) { errors.push(`${where}: listingTitle is required — it is the evidence the ASIN was checked`); continue; }
   const brandWord = p.brand.toLowerCase().split(/[\s-]+/).filter((w) => w.length > 2)[0];
   if (brandWord && !title.includes(brandWord)) {
-    errors.push(`${where}: listing title does not mention "${p.brand}" — ${e.listingTitle}`);
+    // Plenty of brands list under a line or shorthand name instead of the
+    // company's: Cellucor's listings say "C4", Evlution Nutrition's say "EVL".
+    // The full product name appearing is enough to say this is the right tub,
+    // so it warns rather than blocks — and check-affiliate-links.js reads the
+    // live title back afterwards, which is the check that would catch a real
+    // mismatch anyway.
+    const nameWords = p.name.toLowerCase().match(/[a-z0-9]{3,}/g) || [];
+    if (nameWords.length && nameWords.every((w) => title.includes(w))) {
+      warnings.push(`${where}: titled "${e.listingTitle.slice(0, 60)}" — product name matches, brand "${p.brand}" absent`);
+    } else {
+      errors.push(`${where}: listing title does not mention "${p.brand}" — ${e.listingTitle}`);
+    }
   }
+}
+
+if (warnings.length) {
+  console.log(`${warnings.length} worth a glance:`);
+  warnings.forEach((m) => console.log("  " + m));
 }
 
 if (errors.length) {

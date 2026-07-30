@@ -2579,7 +2579,7 @@ var PRODUCTS = [
     "servings": 40,
     "priceRange": "$$",
     "flavorsNote": "Iced Tea Lemonade among a wide flavor lineup; sweetened with rebaudioside M, zero sugar.",
-    "affiliateUrl": "https://www.amazon.com/s?k=ghost+hydration+electrolyte+powder&tag=thescoopsense-20",
+    "affiliateUrl": "https://www.amazon.com/dp/B0BGBJ9D77?tag=thescoopsense-20",
     "blurb": "Potassium-heavy scoop (375 mg) built around citrate-bound minerals, plus 1,500 mg taurine and a Senactiv botanical blend layered on top of the base electrolytes.",
     "labelVerified": "July 2026",
     "imageUrl": "images/products/ghost-hydration.jpg",
