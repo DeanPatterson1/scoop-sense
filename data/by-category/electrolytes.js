@@ -1138,6 +1138,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=bodyarmor+flash+iv+electrolyte+drink+mix+sticks&tag=YOURTAG-20",
     "blurb": "Carries the highest total electrolyte load in this lineup, led by 700 mg potassium and 510 mg sodium per stick, in a zero-sugar powder built around coconut water powder.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/bodyarmor-flash-iv-electrolyte-sticks.jpg",
     "metrics": {
       "calories": 15,
       "netWeightG": 43,
@@ -1253,6 +1254,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=trioral+oral+rehydration+salts&tag=YOURTAG-20",
     "blurb": "An unflavored, WHO-formula oral rehydration powder with higher sodium and potassium per liter than typical sports drinks; each packet is designed to be sipped across a day rather than taken as one serving.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/trioral-oral-rehydration-salts.jpg",
     "metrics": {
       "servingMl": 1000,
       "sodiumMg": 1725,
@@ -2084,6 +2086,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=key+nutrients+electrolyte+recovery+plus&tag=YOURTAG-20",
     "blurb": "Vitamin-heavy formula: a light 110 mg sodium dose sits alongside 20 total vitamins and minerals, including 25% DV magnesium, on a fully itemized zero-calorie label.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/key-nutrients-electrolyte-recovery-plus.jpg",
     "metrics": {
       "sodiumMg": 110,
       "potassiumMg": 250,
@@ -2393,6 +2396,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=lyteshow+electrolyte+concentrate&tag=YOURTAG-20",
     "blurb": "A 3 mL drop dose (about 40 drops) rather than a mixed drink: lower sodium than most powders, but one of the few labels that discloses magnesium (40 mg) and zinc (2 mg) alongside sodium and potassium.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/lyteshow-electrolyte-concentrate.jpg",
     "metrics": {
       "calories": 0,
       "servingMl": 946,
@@ -2520,6 +2524,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=ryse+hydration+sticks&tag=YOURTAG-20",
     "blurb": "One of the higher-sodium sticks on the market at 320 mg, layered with a full B-vitamin, taurine, and choline stack that most electrolyte-only mixes leave out.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/ryse-hydration-sticks.jpg",
     "metrics": {
       "form": "stick pack",
       "sodiumMg": 320,

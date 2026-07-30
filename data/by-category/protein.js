@@ -784,6 +784,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=garden+of+life+sport+grass+fed+whey&tag=YOURTAG-20",
     "blurb": "Grass-fed Irish whey with both NSF Certified for Sport and Informed Choice listed on the brand's Sport line — the trade-off is a small tub and premium per-serving cost.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/garden-of-life-sport-grass-fed-whey.jpg",
     "metrics": {
       "calories": 125,
       "fatG": 1,
@@ -1101,6 +1102,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=muscle+milk+genuine+protein+powder+chocolate&tag=YOURTAG-20",
     "blurb": "Genuine uses a casein-dominant milk protein blend rather than whey-only, so it digests more slowly than most whey powders; the brand's own product page confirms NSF Certified for Sport status.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/muscle-milk-genuine-protein-powder.jpg",
     "metrics": {
       "calories": 310,
       "fatG": 12,
@@ -1746,6 +1748,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=klean+athlete+klean+isolate&tag=YOURTAG-20",
     "blurb": "An unflavored, unsweetened 20-gram whey isolate scoop with just whey protein isolate and sunflower lecithin on the label, NSF Certified for Sport and used by over 350 professional and collegiate sports teams.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/klean-athlete-klean-isolate.jpg",
     "metrics": {
       "calories": 85,
       "carbsG": 1,

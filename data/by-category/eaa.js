@@ -763,6 +763,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=evlution+nutrition+bcaa+energy&tag=YOURTAG-20",
     "blurb": "A fully dosed 5 g BCAA (2.5 g leucine) stacked with 110 mg of natural caffeine and 500 mg each of beta-alanine and taurine, positioning it as an energizing BCAA rather than a stim-free recovery drink.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/evlution-nutrition-bcaa-energy.jpg",
     "metrics": {
       "netWeightG": 291,
       "form": "powder tub",
@@ -1554,6 +1555,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=transparent+labs+bcaa+glutamine&tag=YOURTAG-20",
     "blurb": "An Informed Choice-certified BCAA formula (not a full EAA spectrum) built around an 8 g 2:1:1 ratio plus a 5 g glutamine dose well above what most BCAA products include.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/transparent-labs-bcaa-glutamine.jpg",
     "metrics": {
       "form": "powder tub",
       "ratio": "2:1:1",

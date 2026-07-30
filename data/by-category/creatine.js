@@ -603,6 +603,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=klean+athlete+klean+creatine&tag=YOURTAG-20",
     "blurb": "Single-ingredient 5 g monohydrate carrying NSF Certified for Sport certification, priced at a premium for the tested-athlete market.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/klean-athlete-klean-creatine.jpg",
     "metrics": {
       "netWeightG": 315,
       "certification": "NSF Certified for Sport",
@@ -1052,6 +1053,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=bsn+creatine+dna&tag=YOURTAG-20",
     "blurb": "A plain 5 g micronized monohydrate scoop with no other listed ingredients, sold in a 60-serving unflavored tub.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/bsn-creatine-dna.jpg",
     "metrics": {
       "netWeightG": 309,
       "creatineG": 5,
@@ -1193,6 +1195,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=dymatize+creatine+micronized&tag=YOURTAG-20",
     "blurb": "5 g of Creapure-brand monohydrate micronized to roughly 180 microns for easier mixing, with no other ingredients listed on the panel.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/dymatize-creatine-micronized.jpg",
     "metrics": {
       "netWeightG": 300,
       "creapure": true,
@@ -1280,6 +1283,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=universal+nutrition+creatine+powder&tag=YOURTAG-20",
     "blurb": "A single-ingredient 5 g Creapure monohydrate teaspoon serving with no other listed ingredients; the 500 g tub holds 100 servings, confirmed directly against the manufacturer's label on file with the NIH's supplement label database.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/universal-nutrition-creatine.jpg",
     "metrics": {
       "netWeightG": 500,
       "creatineG": 5,
@@ -1808,6 +1812,7 @@ var PRODUCTS = [
     "affiliateUrl": "https://www.amazon.com/s?k=sports+research+creatine+monohydrate&tag=YOURTAG-20",
     "blurb": "Informed Sport-certified micronized monohydrate with no other active ingredients, sold in bulk 100-serving sizes.",
     "labelVerified": "July 2026",
+    "imageUrl": "images/products/sports-research-creatine-monohydrate.jpg",
     "metrics": {
       "certification": "Informed Sport",
       "creatineG": 5,
@@ -1994,6 +1999,7 @@ var PRODUCTS = [
         ]
       }
     },
+    "imageUrl": "images/products/bucked-up-creatine-monohydrate.jpg",
     "metrics": {
       "netWeightG": 250,
       "creatineG": 5,
