@@ -1562,7 +1562,7 @@ var PRODUCTS = [
     "servings": 100,
     "priceRange": "$$",
     "flavorsNote": "Sold unflavored, meant to be mixed into cold water or juice.",
-    "affiliateUrl": "https://www.amazon.com/s?k=1st+phorm+micronized+creatine&tag=thescoopsense-20",
+    "affiliateUrl": "https://1stphorm.com/products/micronized-creatine-monohydrate",
     "blurb": "NSF Certified for Sport micronized monohydrate with no other active ingredients, sold in bulk 100-serving tubs.",
     "labelVerified": "July 2026",
     "imageUrl": "images/products/first-phorm-micronized-creatine.jpg",

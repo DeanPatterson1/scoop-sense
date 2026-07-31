@@ -2091,7 +2091,7 @@ var PRODUCTS = [
     "servings": 30,
     "priceRange": "$$$",
     "flavorsNote": "Milk Chocolate is one of many flavors offered; sweetened with sucralose rather than sugar.",
-    "affiliateUrl": "https://www.amazon.com/s?k=1st+phorm+level-1+protein&tag=thescoopsense-20",
+    "affiliateUrl": "https://1stphorm.com/products/level-1",
     "blurb": "Level-1 uses whey protein concentrate as its only protein source, with 23 g protein per 33 g scoop on the Milk Chocolate label, and carries an Informed Choice Trusted mark shown directly on the product page.",
     "labelVerified": "July 2026",
     "imageUrl": "images/products/1st-phorm-level-1.jpg",

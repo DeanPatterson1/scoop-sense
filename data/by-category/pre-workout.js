@@ -1479,7 +1479,7 @@ var PRODUCTS = [
     "servings": 20,
     "priceRange": "$$$",
     "flavorsNote": "Flavors include Gym-Junkie Juice, Miami Musclehead, Mango Mystery, Rocket Pop, Strawberry Super Sets, and Tart Candy, sucralose-sweetened.",
-    "affiliateUrl": "https://www.amazon.com/s?k=Mother+Bucker+Bucked+Up+Pre+Workout&tag=thescoopsense-20",
+    "affiliateUrl": "https://www.buckedup.com/mother-bucker-pre-workout",
     "blurb": "A 400 mg-caffeine, double-dosed beta-alanine formula built for experienced stimulant users; the brand itself says it isn't newbie-friendly, and the added alpha-yohimbine raises the stimulant load further.",
     "labelVerified": "July 2026",
     "imageUrl": "images/products/mother-bucker.jpg",
