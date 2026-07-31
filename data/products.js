@@ -3979,65 +3979,6 @@ const PRODUCTS = [
 
 
   {
-    "id": "dymatize-all9-amino",
-    "name": "All9 Amino",
-    "brand": "Dymatize",
-    "category": "eaa",
-    "stimFree": true,
-    "badges": [
-      "Beginner Friendly"
-    ],
-    "caffeineMg": 0,
-    "keyIngredients": [
-      {
-        "name": "Full-spectrum EAAs",
-        "dose": "10 g",
-        "clinicalNote": "All nine essential amino acids, supporting muscle protein synthesis and whole-body protein balance."
-      },
-      {
-        "name": "BCAAs (leucine, isoleucine, valine)",
-        "dose": "7.2 g",
-        "clinicalNote": "An unusually large branched-chain share of the total, the trio most studied for muscle recovery."
-      },
-      {
-        "name": "Coconut water fruit powder",
-        "dose": "200 mg",
-        "clinicalNote": "Small hydration-support addition alongside B vitamins and vitamin C."
-      }
-    ],
-    "cautions": [
-      "Individual amino doses beyond the two blend totals are not itemized on the web listings",
-      "Amino drinks supplement protein intake, not replace it"
-    ],
-    "servings": 30,
-    "priceRange": "$$",
-    "flavorsNote": "Flavors include Juicy Watermelon and Jolly Green Apple, sweetened with sucralose, acesulfame potassium, and stevia.",
-    "affiliateUrl": "https://www.amazon.com/dp/B07CKG4W2X?tag=thescoopsense-20",
-    "blurb": "10 g of all nine EAAs with a BCAA-heavy 7.2 g share per serving; one retailer lists it as discontinued, though the brand storefront still sells five flavors.",
-    "labelVerified": "July 2026",
-    "imageUrl": "images/products/dymatize-all9-amino.jpg",
-    "images": [
-      "https://dymatize-nutrition.myshopify.com/cdn/shop/products/all9amino_juicy_watermelon.png?v=1585311958",
-      "https://dymatize-nutrition.myshopify.com/cdn/shop/products/all9amino_fruit_fusion_rush.png?v=1585311972"
-    ],
-    "metrics": { "netWeightG": 450, "form": "powder tub",
-      "eaaG": 10,
-      "bcaaG": 7.2,
-      "leucineG": null
-    },
-    "sources": [
-      {
-        "url": "https://dymatize-nutrition.myshopify.com/products/all-9-amino",
-        "label": "Dymatize brand storefront"
-      },
-      {
-        "url": "https://www.allstarhealth.com/f/dymatize_nutrition-all_9_amino.htm",
-        "label": "AllStarHealth listing"
-      }
-    ]
-  },
-
-  {
     "id": "jacked-factory-eaa-surge",
     "name": "EAA Surge",
     "brand": "Jacked Factory",
@@ -5867,7 +5808,7 @@ const PRODUCTS = [
 
   {
     "id": "vega-sport-premium-protein",
-    "name": "Sport Premium Protein",
+    "name": "Protein + Recovery",
     "brand": "Vega",
     "category": "protein",
     "stimFree": true,
@@ -5901,7 +5842,7 @@ const PRODUCTS = [
     "priceRange": "$$$",
     "flavorsNote": "Figures verified against Chocolate (44 g scoop, 19-serving tub); stevia-sweetened, and newest packaging carries the 'Protein + Recovery' name on the same formula.",
     "affiliateUrl": "https://www.amazon.com/dp/B07VRDXN28?tag=thescoopsense-20",
-    "blurb": "The highest per-serving protein of the plant picks at 30 g, with NSF Certified for Sport verification on the brand page — the vegan option for drug-tested athletes.",
+    "blurb": "The highest per-serving protein of the plant picks at 30 g, with NSF Certified for Sport verification on the brand page — the vegan option for drug-tested athletes. Sold until recently as Vega Sport Premium Protein — same NSF-certified formula family.",
     "labelVerified": "July 2026",
     "reviews": {
       "seller": {

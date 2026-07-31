@@ -43,7 +43,7 @@
       <div class="sc-hero-grid">
         <div>
           <h1>Read the label.</h1>
-          <p class="sc-lead">Scoop Sense copies what's printed on the Supplement Facts panels of 187 pre-workouts, proteins, creatines, amino formulas, and electrolyte mixes — then lines each dose up against the amounts used in published research.</p>
+          <p class="sc-lead">Scoop Sense copies what's printed on the Supplement Facts panels of <span data-stat="total">186</span> pre-workouts, proteins, creatines, amino formulas, and electrolyte mixes — then lines each dose up against the amounts used in published research.</p>
           <p class="sc-hero-plain">No scores. No sponsored rankings. Just the label, read closely. <a href="#methodology">How every entry is built</a></p>
         </div>
 
@@ -53,13 +53,13 @@
              facts panel. -->
         <aside class="sc-heropanel" aria-label="Search and browse the database">
           <p class="sc-heropanel-title">Scoop Sense Facts</p>
-          <p class="sc-heropanel-sub">Serving size: <span data-stat="totalLabels">187 supplement labels on file</span>&dagger;</p>
+          <p class="sc-heropanel-sub">Serving size: <span data-stat="totalLabels">186 supplement labels on file</span>&dagger;</p>
           <div class="sc-heropanel-bar"></div>
 
           <!-- GET to hub.html, not a hash: a form cannot write a fragment
                without JavaScript, and js/app.js reads ?q= on arrival and folds
                it into the hash state the rest of the filters use. With scripts
-               off the reader still lands on the hub with all 187 rows on it. -->
+               off the reader still lands on the hub with the whole catalog on it. -->
           <form class="sc-labelsearch" action="hub.html" method="get" role="search">
             <label class="sc-vh" for="sc-hero-q">Search products and brands</label>
             <input class="sc-input sc-labelsearch-input" type="search" id="sc-hero-q" name="q"
@@ -72,14 +72,14 @@
             <a class="sc-labelrow" href="hub.html#cat-pre-workout"><b>Pre-workout</b><span data-cat-count="pre-workout">38 labels</span></a>
             <a class="sc-labelrow" href="protein.html"><b>Protein</b><span data-cat-count="protein">39 labels</span></a>
             <a class="sc-labelrow" href="creatine.html"><b>Creatine</b><span data-cat-count="creatine">39 labels</span></a>
-            <a class="sc-labelrow" href="eaa.html"><b>EAA / BCAA</b><span data-cat-count="eaa">32 labels</span></a>
+            <a class="sc-labelrow" href="eaa.html"><b>EAA / BCAA</b><span data-cat-count="eaa">31 labels</span></a>
             <a class="sc-labelrow" href="electrolytes.html"><b>Electrolytes</b><span data-cat-count="electrolytes">39 labels</span></a>
-            <a class="sc-labelrow sc-labelrow-all" href="hub.html"><b>The whole shelf</b><span><span data-stat="total">187</span> labels</span></a>
+            <a class="sc-labelrow sc-labelrow-all" href="hub.html"><b>The whole shelf</b><span><span data-stat="total">186</span> labels</span></a>
           </nav>
 
           <dl>
-            <div><dt>Fully disclosed labels</dt><dd data-stat="disclosed">125 of 187</dd></div>
-            <div><dt>Proprietary blends flagged</dt><dd data-stat="blends">45 of 187</dd></div>
+            <div><dt>Fully disclosed labels</dt><dd data-stat="disclosed">125 of 186</dd></div>
+            <div><dt>Proprietary blends flagged</dt><dd data-stat="blends">45 of 186</dd></div>
             <div><dt>Caffeine range, pre-workouts</dt><dd data-stat="cafRange">0–400 mg</dd></div>
             <div><dt>Labels last checked</dt><dd>July 2026</dd></div>
           </dl>

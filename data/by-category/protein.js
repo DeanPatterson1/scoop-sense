@@ -623,7 +623,7 @@ var PRODUCTS = [
   },
   {
     "id": "vega-sport-premium-protein",
-    "name": "Sport Premium Protein",
+    "name": "Protein + Recovery",
     "brand": "Vega",
     "category": "protein",
     "stimFree": true,
@@ -657,7 +657,7 @@ var PRODUCTS = [
     "priceRange": "$$$",
     "flavorsNote": "Figures verified against Chocolate (44 g scoop, 19-serving tub); stevia-sweetened, and newest packaging carries the 'Protein + Recovery' name on the same formula.",
     "affiliateUrl": "https://www.amazon.com/dp/B07VRDXN28?tag=thescoopsense-20",
-    "blurb": "The highest per-serving protein of the plant picks at 30 g, with NSF Certified for Sport verification on the brand page — the vegan option for drug-tested athletes.",
+    "blurb": "The highest per-serving protein of the plant picks at 30 g, with NSF Certified for Sport verification on the brand page — the vegan option for drug-tested athletes. Sold until recently as Vega Sport Premium Protein — same NSF-certified formula family.",
     "labelVerified": "July 2026",
     "reviews": {
       "seller": {
