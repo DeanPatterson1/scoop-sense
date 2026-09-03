@@ -2965,5 +2965,296 @@ var PRODUCTS = [
         "label": "RYSE Supps — Loaded Protein product page (Vanilla Ice Cream and JIF Peanut Butter Marshmallow Nutrition Facts panels, per-flavor ingredient lists)"
       }
     ]
+  },
+  {
+    "id": "animal-whey",
+    "name": "Whey Isolate",
+    "brand": "Animal",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Whey protein blend (cross flow micro filtered whey protein isolate, ultra filtrated whey protein concentrate)",
+        "dose": "25 g",
+        "clinicalNote": "Isolate is listed ahead of concentrate, but the label prints no split between the two; the 25 g total sits inside the 20-40 g per-serving range used in muscle protein synthesis research."
+      },
+      {
+        "name": "Digestive enzyme blend (papain, bromelain)",
+        "dose": "amount not stated on label",
+        "clinicalNote": "Both are plant proteases, and both sit at the end of the ingredient list, but the label prints no weight or activity unit for either, so the amount cannot be compared to research doses."
+      },
+      {
+        "name": "Acesulfame potassium and sucralose",
+        "dose": "amount not stated on label",
+        "clinicalNote": "The two high-intensity sweeteners in the ingredient list; the Vanilla panel separately declares 2 g of total sugars, of which 1 g is listed as added sugar."
+      }
+    ],
+    "cautions": [
+      "Contains milk and soy; the Cookies & Cream panel also declares wheat, which comes from the cookie bits in that one flavor",
+      "Sweetened with acesulfame potassium and sucralose",
+      "Protein powders supplement food intake, not replace it"
+    ],
+    "servings": 27,
+    "priceRange": "$$$",
+    "flavorsNote": "Eight flavors - Vanilla, Chocolate, Chocolate Chip, Brownie Batter, Cookies & Cream, Frosted Cinnamon Bun, Strawberry and Banana Split - all sweetened with acesulfame potassium and sucralose; figures are anchored to the Vanilla 2 lb bag (33 g scoop, 27 servings, 120 calories, net wt 907 g), while Chocolate runs a 34 g scoop at 125 calories and Cookies & Cream a 32 g scoop at 28 servings.",
+    "affiliateUrl": "https://www.amazon.com/dp/B00XOXP8G6?tag=thescoopsense-20",
+    "blurb": "The bag reads Isolate Loaded Whey Protein while the brand sells it as Animal Whey, and the ingredient list backs the name only partway: it is a blend that lists whey isolate ahead of whey concentrate without printing the split, holding 25 g of protein in a 33 g Vanilla scoop with a papain-and-bromelain enzyme blend at the tail of the list.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/animal-whey.jpg",
+    "imageBg": "255,255,255",
+    "images": [
+      "https://www.animalpak.com/cdn/shop/files/01_Iso_Whey_Carousel_2lb_Vanilla_2000x2000_6a8feb95-df09-43c7-9fce-6af9a24de30e.webp?v=1776945899",
+      "https://www.animalpak.com/cdn/shop/files/05_Iso_Whey_Carousel_2lb_Vanilla_2000x2000_ab8b6029-8f7f-4499-b291-056ef6f5f208.webp?v=1776946573",
+      "https://www.animalpak.com/cdn/shop/files/01_Iso_Whey_Carousel_2lb_Chocolate_2000x2000_93446eb2-1664-4531-affa-ce8b8ac33de3.webp?v=1776945846"
+    ],
+    "metrics": {
+      "calories": 120,
+      "fatG": 1,
+      "carbsG": 3,
+      "sugarsG": 2,
+      "netWeightG": 907,
+      "proteinG": 25,
+      "servingG": 33,
+      "source": "whey isolate and concentrate blend",
+      "sweetener": "sucralose + acesulfame K"
+    },
+    "sources": [
+      {
+        "url": "https://www.animalpak.com/products/animal-whey-iso-protein-supplement",
+        "label": "Animal - Animal Whey / Iso Whey Protein Blend product page (per-flavor Nutrition Facts panels, sizes, flavor list)"
+      },
+      {
+        "url": "https://www.animalpak.com/cdn/shop/files/05_Iso_Whey_Carousel_2lb_Vanilla_2000x2000_ab8b6029-8f7f-4499-b291-056ef6f5f208.webp?v=1776946573",
+        "label": "Vanilla 2 lb Nutrition Facts panel and full ingredient list (27 servings, 33 g scoop, 25 g protein)"
+      },
+      {
+        "url": "https://www.animalpak.com/cdn/shop/files/05_Iso_Whey_Carousel_2lb_Cookies_2000x2000_0241b82f-f426-4e6a-93bd-cd7a63142802.webp?v=1776946477",
+        "label": "Cookies & Cream 2 lb panel (32 g scoop, 28 servings, wheat allergen from cookie bits)"
+      }
+    ]
+  },
+  {
+    "id": "on-platinum-hydrowhey",
+    "name": "Platinum Hydrowhey",
+    "brand": "Optimum Nutrition",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Hydrolyzed whey protein isolate",
+        "dose": "30 g protein",
+        "clinicalNote": "Hydrolyzing pre-cleaves the whey into shorter fragments before it is packed, and 30 g per scoop sits in the upper half of the 20-40 g per-serving range used in muscle protein synthesis research."
+      },
+      {
+        "name": "Added micronized BCAAs (L-leucine, L-isoleucine, L-valine)",
+        "dose": "added portion not stated on label",
+        "clinicalNote": "The panel's 8.8 g BCAA figure covers naturally occurring plus added and is counted inside the 30 g of protein, so how much sits on top of the whey is not disclosed."
+      },
+      {
+        "name": "Creamer (sunflower oil, maltodextrin, modified food starch, dipotassium phosphate, tricalcium phosphate, tocopherols)",
+        "dose": "amount not stated on label",
+        "clinicalNote": "A non-protein creamer sits below the amino acids in the ingredient list; the tub claims 100 percent of the protein comes from hydrolyzed whey isolate, which covers the protein only, and the panel still shows 3 g of carbohydrate per scoop."
+      },
+      {
+        "name": "Sucralose and acesulfame potassium",
+        "dose": "amount not stated on label",
+        "clinicalNote": "The two high-intensity sweeteners in the ingredient list; the panel shows 1 g of total sugars and calls added sugars not a significant source."
+      }
+    ],
+    "cautions": [
+      "Contains milk and soy",
+      "Sweetened with sucralose and acesulfame potassium; all three flavors are artificially flavored",
+      "The Banned Substance Tested mark on the tub is Optimum Nutrition's own; the brand's support page names Gold Standard 100% Whey and Gold Standard 100% Isolate - not Platinum Hydrowhey - as its Informed Choice certified powders"
+    ],
+    "servings": 20,
+    "priceRange": "$$$",
+    "flavorsNote": "Three flavors only - Velocity Vanilla, Turbo Chocolate and Supercharged Strawberry, all artificially flavored and sweetened with sucralose and acesulfame potassium; figures are anchored to the Velocity Vanilla 1.76 lb tub (40 g scoop, 20 servings, 800 g, 140 calories), while Turbo Chocolate runs a 41 g scoop for the same 30 g of protein, and the 40-serving tub is offered in vanilla and chocolate only.",
+    "affiliateUrl": "https://www.amazon.com/dp/B002QZORGK?tag=thescoopsense-20",
+    "blurb": "The one Optimum Nutrition powder built on hydrolyzed whey isolate instead of whole whey, and the biggest scoop in the line - 30 g of protein, 15.5 g of essential amino acids and 8.8 g of BCAAs in 40 g, against Gold Standard 100% Whey's 24 g in 31 g - though its banned-substance mark is the brand's own rather than the Informed Choice certification Optimum Nutrition names for Gold Standard whey and isolate.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/on-platinum-hydrowhey.jpg",
+    "images": [
+      "https://www.optimumnutrition.com/cdn/shop/files/US_PLATHYDROWHEY_20SRV_VAN_6069617.png?v=1776736201",
+      "https://www.optimumnutrition.com/cdn/shop/files/ONUS-platinum-hydrowhey-powder_Label_Velocity-Vanilla_1-76lb_20-servings.jpg?v=1761301786",
+      "https://www.optimumnutrition.com/cdn/shop/files/US_PLAT_HYDROWHEY_40SRV_CHOC_6069613.png?v=1776736201"
+    ],
+    "metrics": {
+      "calories": 140,
+      "fatG": 1,
+      "carbsG": 3,
+      "sugarsG": 1,
+      "netWeightG": 800,
+      "proteinG": 30,
+      "servingG": 40,
+      "source": "hydrolyzed whey protein isolate",
+      "sweetener": "sucralose + acesulfame K"
+    },
+    "sources": [
+      {
+        "url": "https://www.optimumnutrition.com/en-us/products/platinum-hydrowhey-hydrolyzed-whey-protein-powder",
+        "label": "Optimum Nutrition - Platinum Hydrowhey product page (flavors, sizes, per-variant label images)"
+      },
+      {
+        "url": "https://www.optimumnutrition.com/cdn/shop/files/ONUS-platinum-hydrowhey-powder_Label_Velocity-Vanilla_1-76lb_20-servings.jpg?v=1761301786",
+        "label": "Velocity Vanilla 1.76 lb label (40 g scoop, 20 servings, Nutrition Facts and full ingredient list)"
+      },
+      {
+        "url": "https://www.optimumnutrition.com/cdn/shop/files/ONUS-platinum-hydrowhey-powder_Label_Turbo-Chocolate_1-81lb_20-servings.jpg?v=1761301780",
+        "label": "Turbo Chocolate 1.81 lb label (41 g scoop comparison)"
+      },
+      {
+        "url": "https://support.optimumnutrition.com/en/support/solutions/articles/80000803058-are-your-products-informed-choice-certified-",
+        "label": "Optimum Nutrition support article listing which products are Informed Choice certified (Platinum Hydrowhey is not on it)"
+      }
+    ]
+  },
+  {
+    "id": "pescience-select-protein",
+    "name": "Select Protein",
+    "brand": "PEScience",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Select Protein Blend (milk protein isolate [casein protein and whey protein], whey protein concentrate 80%, leucine peptides)",
+        "dose": "24 g",
+        "clinicalNote": "Milk protein isolate is listed first, and milk protein is naturally about 80 percent casein, so this is a slow-plus-fast dairy blend rather than straight whey; the 24 g total sits inside the 20-40 g per-serving range used in muscle protein synthesis research."
+      },
+      {
+        "name": "Leucine peptides",
+        "dose": "amount not stated on label",
+        "clinicalNote": "Leucine is the amino acid most studied for triggering muscle protein synthesis, but the label prints no weight for the added peptides, so the added portion cannot be compared to research doses."
+      },
+      {
+        "name": "Sucralose and acesulfame potassium",
+        "dose": "amount not stated on label",
+        "clinicalNote": "The two high-intensity sweeteners on every flavored panel; the Unflavored version is the one ingredient list that carries neither, and it also drops the leucine peptides."
+      }
+    ],
+    "cautions": [
+      "Contains milk and soy (lecithin); the Chocolate Peanut Butter Cup and Peanut Butter Cookie panels also declare peanut",
+      "Sweetened with sucralose and acesulfame potassium on all flavored versions",
+      "The brand states its finished products are third-party tested for purity and potency, but no NSF Certified for Sport or Informed Sport / Informed Choice mark appears on the label"
+    ],
+    "servings": 27,
+    "priceRange": "$$$",
+    "flavorsNote": "Around a dozen flavors - Frosted Sugar Cookie, Gourmet Vanilla, Chocolate Truffle, Cake Pop, Snickerdoodle, Cookies N Cream, Peanut Butter Cookie, Chocolate Peanut Butter Cup, Frosted Chocolate Cupcake, Strawberry Cheesecake, Island Cookie and an Unflavored version - sold in 5, 15, 27 and 55-serving sizes and sweetened with sucralose and acesulfame potassium; figures are anchored to the Frosted Sugar Cookie 27-serving tub (32 g scoop, 30.5 oz / 864 g, 110 calories), and the scoop runs 29.5 g for Unflavored up to 33.5 g for Cookies N Cream, with protein landing at 23 or 24 g depending on flavor.",
+    "affiliateUrl": "https://www.amazon.com/dp/B01789VSQA?tag=thescoopsense-20",
+    "blurb": "Milk protein isolate is the first ingredient rather than whey concentrate, which makes this a casein-led dairy blend on the label instead of the whey-first blend most tubs in this band carry; protein lands at 24 g in a 32 g Frosted Sugar Cookie scoop, and no gram split is printed between the three named sources.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/pescience-select-protein.jpg",
+    "imageBg": "255,255,255",
+    "images": [
+      "https://www.pescience.com/cdn/shop/files/select-protein-powder-protein-pescience-652167.jpg?v=1784264164",
+      "https://www.pescience.com/cdn/shop/files/select-protein-powder-protein-pescience-392989.jpg?v=1784263866"
+    ],
+    "metrics": {
+      "calories": 110,
+      "fatG": 1,
+      "carbsG": 2,
+      "sugarsG": 1,
+      "netWeightG": 864,
+      "proteinG": 24,
+      "servingG": 32,
+      "source": "whey and casein dairy blend - milk protein isolate (casein and whey) plus whey protein concentrate 80%",
+      "sweetener": "sucralose + acesulfame K"
+    },
+    "sources": [
+      {
+        "url": "https://www.pescience.com/products/select-protein",
+        "label": "PEScience - Select Protein product page (per-flavor Nutrition Facts tables and full ingredient lists, sizes, third-party testing statement)"
+      },
+      {
+        "url": "https://www.pescience.com/cdn/shop/files/select-protein-powder-protein-pescience-652167.jpg?v=1784264164",
+        "label": "Frosted Sugar Cookie front-of-tub (27 servings, 24 g protein, 5 g BCAAs, net wt 30.5 oz / 864 g)"
+      }
+    ]
+  },
+  {
+    "id": "premier-protein-powder",
+    "name": "100% Whey Protein Powder",
+    "brand": "Premier Protein",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Beginner Friendly"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Whey protein blend (whey protein isolate, whey protein concentrate)",
+        "dose": "30 g",
+        "clinicalNote": "Isolate is listed first and the tub states 100% of the protein comes from whey; 30 g per serving sits at the upper end of the 20-40 g per-serving range used in muscle protein synthesis research."
+      },
+      {
+        "name": "Sucralose and acesulfame potassium",
+        "dose": "amount not stated on label",
+        "clinicalNote": "The two high-intensity sweeteners carrying the flavor; the panel shows 1 g total sugars and 0 g added sugars, so sweetness comes from these rather than from sugar."
+      },
+      {
+        "name": "Soluble corn fiber",
+        "dose": "amount not stated on label",
+        "clinicalNote": "Listed inside the \"2% or less\" group, and the panel still prints 0 g dietary fiber, so the amount is too small to compare with published fiber intakes."
+      }
+    ],
+    "cautions": [
+      "Contains milk — not suitable for a dairy allergy",
+      "Sweetened with acesulfame potassium and sucralose; no stevia or monk fruit option in this line",
+      "The Café Latte flavor lists caffeine anhydrous and the brand states 95 mg per serving — the other flavors list none"
+    ],
+    "servings": 17,
+    "priceRange": "$$",
+    "flavorsNote": "Six flavors in the classic powder line — Vanilla Milkshake, Chocolate Milkshake, Café Latte, Strawberry Milkshake, Chocolate Peanut Butter and Salted Caramel Truffle — plus a separate Protein Plus Fiber powder in Chocolate and Vanilla; sold as a 17-serving tub and a 29-serving one, and the figures here are the 17-serving Vanilla Milkshake panel; all sweetened with acesulfame potassium and sucralose, with no added sugar on the panel.",
+    "affiliateUrl": "https://www.amazon.com/dp/B06ZZ3PJQD?tag=thescoopsense-20",
+    "blurb": "A two-scoop 39 g serving that puts 30 g of protein on the panel — more per serving than most whey blends — from an isolate-first whey blend with 1 g total sugars and 0 g added sugars; scoop weight shifts by flavor (41 g for Chocolate Milkshake, 40 g for Café Latte) while the protein figure stays at 30 g.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/premier-protein-powder.jpg",
+    "imageBg": "255,255,255",
+    "images": [
+      "https://pprotein.imgix.net/production/a/product/PDPCarousel_2_VanillaMilkshakeProteinPowder.png?ar=899%3A899&auto=format%2Ccompress&fit=crop&ixlib=php-3.1.0&s=3fba982e3c5fe0fa67013915713299e6",
+      "https://pprotein.imgix.net/production/a/general/Vanilla_Powder_Promo_1800x1800.webp?ar=899%3A899&auto=format%2Ccompress&fit=crop&ixlib=php-3.1.0&s=96026f342d2147433ec42e1b5948ba92",
+      "https://pprotein.imgix.net/production/a/product/Thumbnail_Chocolate_Powder_432x432.png?ar=216%3A216&auto=format%2Ccompress&fit=crop&ixlib=php-3.1.0&s=8d3bfb46cd9def8a2cc05df8a9513604"
+    ],
+    "metrics": {
+      "calories": 150,
+      "fatG": 2,
+      "carbsG": 3,
+      "sugarG": 1,
+      "proteinG": 30,
+      "servingG": 39,
+      "source": "whey isolate and concentrate blend",
+      "sweetener": "sucralose + acesulfame K"
+    },
+    "sources": [
+      {
+        "url": "https://www.premierprotein.com/products/vanilla-milkshake-protein-powder",
+        "label": "Premier Protein — Vanilla Milkshake Protein Powder page (Nutrition Facts for both the 17- and 29-serving tubs: 2 Scoops (39g), 150 calories, 30 g protein, 1 g total sugars, 0 g added sugars; full ingredient list; CONTAINS: MILK)"
+      },
+      {
+        "url": "https://www.premierprotein.com/products/chocolate-milkshake-protein-powder",
+        "label": "Premier Protein — Chocolate Milkshake Protein Powder page (2 Scoops (41g), same 30 g protein; ingredient list adds cocoa processed with alkali)"
+      },
+      {
+        "url": "https://www.premierprotein.com/products/cafe-latte-protein-powder",
+        "label": "Premier Protein — Café Latte Protein Powder page (2 Scoops (40g); ingredient list includes CAFFEINE ANHYDROUS, brand states 95 mg caffeine per serving)"
+      },
+      {
+        "url": "https://www.target.com/p/premier-protein-100-whey-protein-powder-vanilla-40-2oz-29-servings/-/A-94635475",
+        "label": "Target listing — 29-serving tub, 40.2 oz (non-Amazon retailer, used for size and per-serving cost tier)"
+      }
+    ]
   }
 ];

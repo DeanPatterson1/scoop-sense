@@ -2676,5 +2676,161 @@ var PRODUCTS = [
         "label": "Front-of-tub artwork: 120 servings, net wt. 16.7 oz (468 g), zero sugar, sweetened with stevia"
       }
     ]
+  },
+  {
+    "id": "gatorade-zero-powder",
+    "name": "Zero Sugar Thirst Quencher Powder",
+    "brand": "Gatorade",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Beginner Friendly"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Sodium (from sodium citrate and salt)",
+        "dose": "270 mg",
+        "clinicalNote": "Sodium is the electrolyte lost in the largest amount in sweat; 270 mg in 20 fl oz is in the range sports-drink research uses for ordinary training sessions rather than the higher amounts studied for long, hot, heavy-sweat efforts."
+      },
+      {
+        "name": "Potassium (from monopotassium phosphate)",
+        "dose": "80 mg",
+        "clinicalNote": "A small potassium contribution that works alongside sodium in normal fluid balance; sweat carries far less potassium than sodium, so sports drinks typically dose it lightly."
+      },
+      {
+        "name": "Phosphorus",
+        "dose": "50 mg",
+        "clinicalNote": "Comes along with the monopotassium phosphate used as the potassium source, and is listed on PepsiCo's own product-facts page at 4 percent of a day's Daily Value."
+      }
+    ],
+    "cautions": [
+      "One stick is directed into 20 fl oz of water; mixing it into a smaller bottle makes a noticeably saltier drink",
+      "270 mg sodium per stick adds up if you are watching sodium intake",
+      "Sweetened with sucralose and acesulfame potassium"
+    ],
+    "servings": 8,
+    "priceRange": "$$",
+    "flavorsNote": "Seven flavors listed by Gatorade, Orange, Glacier Freeze, Glacier Cherry, Fruit Punch, Grape, Lemon Lime and Strawberry Ice, sweetened with sucralose and acesulfame potassium with no added colors or artificial flavors; the panel figures here are from the Glacier Freeze 8-stick box, 8 sticks of 0.12 oz (3.5 g), net wt. 0.96 oz (28 g).",
+    "affiliateUrl": "https://www.amazon.com/dp/B0GSC3M1PQ?tag=thescoopsense-20",
+    "blurb": "The pack was rebuilt in 2026 from ten 2.5 to 2.9 g sticks to eight 3.5 g sticks, and the bigger stick carries 270 mg sodium and 80 mg potassium into 20 fl oz for 5 calories and zero sugar, off an ingredient list of nine items with no added colors.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/gatorade-zero-powder.jpg",
+    "images": [
+      "https://www.datocms-assets.com/101859/1776191514-gatorade_gzero-powder_glacierfreeze_pdpwhatyouget_desktop_2026_1812x2720.png",
+      "https://www.datocms-assets.com/101859/1776191299-gatorade_gzero-powder_glacierfreeze_sachet_producttile_2026_2680x3344.png",
+      "https://www.datocms-assets.com/101859/1776189788-gatorade_gzero-powder_fruitpunch_sachet_producttile_2026_2680x3344.png"
+    ],
+    "metrics": {
+      "netWeightG": 28,
+      "form": "stick pack",
+      "servingG": 3.5,
+      "calories": 5,
+      "sodiumMg": 270,
+      "potassiumMg": 80,
+      "magnesiumMg": 0,
+      "sugarG": 0
+    },
+    "sources": [
+      {
+        "url": "https://www.gatorade.com/powders/gatorade-zero/glacier-freeze-single-serve-sticks",
+        "label": "Gatorade official product page: 270 mg sodium and 80 mg potassium per serving, zero sugar, 1 stick into 20 fl oz, and the pack change from ten 2.5 to 2.9 g sticks to eight 3.5 g sticks"
+      },
+      {
+        "url": "https://giantfood.com/groceries/product/gatorade-zero-sugar-glacier-freeze-thirst-quencher-powder-sticks-8-ct-0-96-oz-box/403027",
+        "label": "Giant Food listing for the 8-count 0.96 oz box, carrying the full Nutrition Facts panel (5 calories, 0 g total carbohydrate, 0 g total sugars, 270 mg sodium, 80 mg potassium) and the complete ingredient statement"
+      },
+      {
+        "url": "https://www.pepsicoproductfacts.com/Home/Product?gtin=00052000066173",
+        "label": "PepsiCo product facts entry: serving size 1 stick (3.5 g), 8 per container, caffeine 0 mg, phosphorus 50 mg"
+      },
+      {
+        "url": "https://www.datocms-assets.com/101859/1776191514-gatorade_gzero-powder_glacierfreeze_pdpwhatyouget_desktop_2026_1812x2720.png",
+        "label": "Current front-of-box artwork: ZERO SUGAR THIRST QUENCHER POWDER, 8 sticks, 8 - 0.12 oz (3.5 g) sticks / net wt. 0.96 oz (28 g), no added colors or artificial flavors"
+      }
+    ]
+  },
+  {
+    "id": "micro-ingredients-electrolytes",
+    "name": "Sport Electrolytes Powder",
+    "brand": "Micro Ingredients",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Sodium (sodium chloride)",
+        "dose": "500 mg",
+        "clinicalNote": "Sodium is the electrolyte lost in the greatest quantity in sweat, and 500 mg per serving sits in the range sports-drink research uses for replacing a hard training session's losses."
+      },
+      {
+        "name": "Potassium (potassium citrate)",
+        "dose": "400 mg",
+        "clinicalNote": "About 9 percent of a day's Daily Value; potassium works alongside sodium in normal fluid balance and muscle function, and sweat carries far less of it than sodium."
+      },
+      {
+        "name": "Magnesium (magnesium citrate)",
+        "dose": "100 mg",
+        "clinicalNote": "24 percent of a day's Daily Value, and at the upper end of what hydration mixes usually carry; magnesium plays a role in normal muscle and nerve function."
+      },
+      {
+        "name": "beta-alanine",
+        "dose": "500 mg",
+        "clinicalNote": "Well under the roughly 3.2 to 6.4 g per day used in beta-alanine research, where the effect comes from muscle carnosine built up over weeks of daily dosing rather than from any single serving."
+      }
+    ],
+    "cautions": [
+      "Beta-alanine can cause the harmless skin tingling some people feel from it, even at this well-below-research amount",
+      "A serving is two scoops, about 10 g, so a single scoop delivers half of every number on the panel",
+      "Micro Ingredients sells several similarly named electrolyte powders with very different mineral profiles, and its Electrolytes Hydration Drink Mix bag runs 10 mg sodium and 1,000 mg potassium against this one's 500 mg and 400 mg, so check which bag you are buying"
+    ],
+    "servings": 90,
+    "priceRange": "$$",
+    "flavorsNote": "Four flavors in the 2 lb bag, Watermelon Lime, Berry Punch, Passionfruit & Citrus and Piña Colada, sweetened with stevia leaf extract rather than sucralose; serving counts vary a little by flavor, 90 for Watermelon Lime and Berry Punch against 95 for Passionfruit & Citrus, and the panel figures here are the Watermelon Lime bag's.",
+    "affiliateUrl": "https://www.amazon.com/dp/B0FGKXX19D?tag=thescoopsense-20",
+    "blurb": "Built like a sports drink rather than a salt stick: a two-scoop 10 g serving carrying 500 mg sodium, 400 mg potassium, 770 mg chloride and 100 mg magnesium, then 3 g of inulin fiber, a heavy B-vitamin load and 500 mg each of L-glutamine and beta-alanine, every one of them printed with its own number.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/micro-ingredients-electrolytes.jpg",
+    "images": [
+      "https://www.microingredients.com/cdn/shop/files/Product-Shopify_8dbc523b-2376-4b69-9d5f-c452d453ed1e.png?v=1772557985",
+      "https://www.microingredients.com/cdn/shop/files/SportElectrolytesPowderWatermelonLimeFlavor2lb_2_9ee1a6ae-4242-4e3d-87cd-1cc14a4196e6.jpg?v=1772557985",
+      "https://www.microingredients.com/cdn/shop/files/SportElectrolytesPowderWatermelonLimeFlavor2lb_3_38a20f88-5cc5-499c-a8ad-4cbded50a16a.jpg?v=1772557985"
+    ],
+    "metrics": {
+      "netWeightG": 907,
+      "form": "powder bag",
+      "servingG": 10,
+      "calories": 5,
+      "sodiumMg": 500,
+      "potassiumMg": 400,
+      "magnesiumMg": 100,
+      "calciumMg": 50,
+      "chlorideMg": 770,
+      "zincMg": 5,
+      "fiberG": 3,
+      "sugarG": 0
+    },
+    "sources": [
+      {
+        "url": "https://www.microingredients.com/products/micro-ingredients-sport-electrolytes-powder-watermelon-lime-flavor-2lb",
+        "label": "Micro Ingredients official product page for the Watermelon Lime 2 lb bag: 907 g, 90 servings, sugar free"
+      },
+      {
+        "url": "https://www.microingredients.com/cdn/shop/files/SportElectrolytesPowderWatermelonLimeFlavor2lb_2_9ee1a6ae-4242-4e3d-87cd-1cc14a4196e6.jpg?v=1772557985",
+        "label": "Watermelon Lime Nutrition Facts panel: 90 servings, 2 scoops (10 g), 5 calories, sodium 500 mg, total carbohydrate 3 g with 3 g dietary fiber, 0 g total sugars, calcium 50 mg, potassium 400 mg, vitamin C 62 mg, thiamin 1.93 mg, B6 5 mg, B12 5.79 mcg, pantothenic acid 9.63 mg, magnesium 100 mg, zinc 5 mg, chloride 770 mg, L-glutamine 500 mg, beta-alanine 500 mg, with the full ingredient list"
+      },
+      {
+        "url": "https://www.microingredients.com/cdn/shop/files/SportElectrolytesPowderBerryPunchFlavor2lb_2.jpg?v=1772558063",
+        "label": "Berry Punch Nutrition Facts panel confirming identical amounts on the same two-scoop 10 g serving, with only the flavoring ingredient differing"
+      },
+      {
+        "url": "https://www.microingredients.com/cdn/shop/files/Product-Shopify_8dbc523b-2376-4b69-9d5f-c452d453ed1e.png?v=1772557985",
+        "label": "Front-of-bag artwork: SPORT ELECTROLYTES POWDER, Watermelon Lime, 500 mg sodium / 400 mg potassium / 100 mg magnesium / 500 mg L-glutamine / 500 mg beta-alanine, zero sugar, 2 lb (907 g)"
+      }
+    ]
   }
 ];

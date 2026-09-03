@@ -2038,5 +2038,160 @@ var PRODUCTS = [
         "label": "Current front-of-tub artwork confirming 10 g EAA per 2 servings, 40 servings, net wt. 328 g (11.6 oz)"
       }
     ]
+  },
+  {
+    "id": "animal-juiced-aminos",
+    "name": "Juiced Aminos",
+    "brand": "Animal",
+    "category": "eaa",
+    "stimFree": true,
+    "badges": [],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Anabolic BCAA & EAA Matrix (incl. Instant BCAA Blend)",
+        "dose": "5.9 g",
+        "clinicalNote": "All nine essential amino acids are present, but the total sits under the roughly 10 to 15 g used in most free-form EAA research, and the branched-chain trio is pooled so the leucine share is never printed."
+      },
+      {
+        "name": "Betaine Anhydrous",
+        "dose": "1.25 g",
+        "clinicalNote": "Half the 2.5 g daily amount used in most betaine performance research; the label's own two-servings-a-day direction is what reaches 2.5 g."
+      },
+      {
+        "name": "L-Taurine",
+        "dose": "1.25 g",
+        "clinicalNote": "Inside the roughly 1 to 3 g single doses used in most taurine exercise studies."
+      },
+      {
+        "name": "L-Glutamine",
+        "dose": "1 g",
+        "clinicalNote": "Well under the 5 g and larger daily amounts used in most glutamine research, so it reads as a supporting inclusion rather than a studied dose."
+      }
+    ],
+    "cautions": [
+      "The branched-chain aminos are pooled into one 5 g Instant BCAA Blend, so the leucine share is not printed — the 2:1:1 ratio appears only on the front of the tub",
+      "The label directs at least two servings a day, which takes the 30-serving tub to about 15 days at its own dosing",
+      "Sweetened with sucralose and acesulfame potassium; the colorant is flavor-specific — beet root powder on the Fruit Punch and Strawberry Limeade panels, turmeric root powder on Orange Juiced"
+    ],
+    "servings": 30,
+    "priceRange": "$$",
+    "flavorsNote": "Four flavors — Grape Juiced, Orange Juiced, Fruit Punch and Strawberry Limeade — naturally and artificially flavored and sweetened with sucralose plus acesulfame potassium; the scoop weight shifts a little by flavor (12.5 g Fruit Punch, 12.6 g Strawberry Limeade, 12.8 g Orange Juiced) and the 390 g net weight is the Grape tub's.",
+    "affiliateUrl": "https://www.amazon.com/dp/B00YN446CW?tag=thescoopsense-20",
+    "blurb": "A pooled 5 g BCAA blend does almost all the amino work here: the other six essentials come to 900 mg between them, and the leucine share is the one number the panel withholds. Betaine and taurine at 1.25 g each are real doses, while the hydration half of the billing is 100 mg of sodium and 10 mg of magnesium.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/animal-juiced-aminos.jpg",
+    "imageBg": "255,255,255",
+    "images": [
+      "https://www.animalpak.com/cdn/shop/files/JuicedAminos_30Serv_Grape_1200x1200_ac7a0b11-2bce-4470-be65-abe6778696a8.jpg?v=1761932309",
+      "https://www.animalpak.com/cdn/shop/files/JuicedAminos30Strawberry_G1723-G-38041-suppfacts.jpg?v=1711559738",
+      "https://www.animalpak.com/cdn/shop/files/JuicedAminos_30Serv_FruitPunch_1200x1200_1.jpg?v=1762191246",
+      "https://www.animalpak.com/cdn/shop/files/JuicedAminos_30Serv_StrawberryLimeade_1200x1200_1.jpg?v=1762191246"
+    ],
+    "metrics": {
+      "netWeightG": 390,
+      "form": "powder tub",
+      "sodiumMg": 100,
+      "magnesiumMg": 10,
+      "eaaG": 5.9,
+      "bcaaG": 5,
+      "leucineG": null
+    },
+    "sources": [
+      {
+        "url": "https://www.animalpak.com/products/animal-juiced-aminos-bcaa-powder-supplement",
+        "label": "Animal (Universal Nutrition) — official product page: four flavors, 30 servings, caffeine-free, front-of-tub art reading Net Wt. 13.7 oz (390 g)"
+      },
+      {
+        "url": "https://www.animalpak.com/cdn/shop/files/JuicedAminos30Strawberry_G1723-G-38041-suppfacts.jpg?v=1711559738",
+        "label": "Animal — Supplement Facts panel, Strawberry Limeade: 1 rounded scoop (12.6 g), 30 servings, Instant BCAA Blend 5000 mg, Lysine 500 mg, Phenylalanine 125 mg, DL-Methionine 125 mg, Arginine HCl 100 mg, Threonine 75 mg, Histidine 50 mg, Tryptophan 25 mg, Taurine 1250 mg, Betaine Anhydrous 1250 mg, Glutamine 1000 mg, sodium 100 mg, magnesium 10 mg"
+      },
+      {
+        "url": "https://www.animalpak.com/cdn/shop/files/JuicedAminos_FruitPunch_SuppFacts.png?v=1681310988",
+        "label": "Animal — Supplement Facts panel, Fruit Punch: same doses at a 12.5 g scoop; \"consume at least 2 servings per day\" direction; beet root powder (color)"
+      },
+      {
+        "url": "https://www.animalpak.com/cdn/shop/files/JuicedAminos_Orange_SuppFacts.png?v=1681310946",
+        "label": "Animal — Supplement Facts panel, Orange: same doses at a 12.8 g scoop, but turmeric root powder (color) in place of beet root"
+      }
+    ]
+  },
+  {
+    "id": "evl-eaa",
+    "name": "EAA7000",
+    "brand": "Evlution Nutrition",
+    "category": "eaa",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "leucine",
+        "dose": "2,500 mg",
+        "clinicalNote": "Lands inside the roughly 2.5 to 3 g of leucine commonly used in studies of muscle protein synthesis, and it is the single largest line on the panel."
+      },
+      {
+        "name": "L-Lysine HCL",
+        "dose": "1,000 mg",
+        "clinicalNote": "The biggest of the non-branched-chain aminos on this label; lysine is an essential amino acid the body cannot make on its own."
+      },
+      {
+        "name": "L-Threonine",
+        "dose": "650 mg",
+        "clinicalNote": "A modest amount by free-form EAA standards, where whole-blend research doses usually run 10 to 15 g across all nine aminos."
+      },
+      {
+        "name": "L-Tryptophan",
+        "dose": "10 mg",
+        "clinicalNote": "A token amount, and L-methionine matches it at 10 mg, so two of the nine essential aminos sit at roughly a two-hundred-fiftieth of the leucine dose."
+      }
+    ],
+    "cautions": [
+      "Methionine and tryptophan are 10 mg each, so the nine-amino coverage is nominal at the bottom of the list",
+      "Sweetened with sucralose and acesulfame potassium, and both flavors are colored with FD&C Red 40",
+      "Figures here come from the Pink Lemonade tub (10.3 g scoop, 309 g); the Watermelon Splash scoop is 9.4 g"
+    ],
+    "servings": 30,
+    "priceRange": "$$",
+    "flavorsNote": "Two flavors listed on EVL's own page, Pink Lemonade and Watermelon Splash, both sugar-free and sweetened with sucralose plus acesulfame potassium and colored with FD&C Red 40; scoop weight differs by flavor, 10.3 g for Pink Lemonade against 9.4 g for Watermelon Splash.",
+    "affiliateUrl": "https://www.amazon.com/dp/B0CK56NWLQ?tag=thescoopsense-20",
+    "blurb": "Every one of the nine essential aminos gets its own number, but 5 g of the 7 g total is the 2:1:1 BCAA matrix and methionine and tryptophan are 10 mg apiece, so the panel reads closer to a BCAA product with EAA framing than to a full-spectrum EAA.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/evl-eaa.jpg",
+    "imageBg": "255,255,255",
+    "images": [
+      "https://www.evlnutrition.com/cdn/shop/files/EAA7000-30SERV-PL_1_f178f536-8ff5-4200-aa65-6091d9b19e4a.jpg?v=1759238328",
+      "https://www.evlnutrition.com/cdn/shop/files/EAA7000-30SERV-PL_3_6893a4c0-2b08-4d05-a1ce-e20ffc717df1.jpg?v=1759238328",
+      "https://www.evlnutrition.com/cdn/shop/files/EAA7000-30SERV-WM_1_8906abb9-d031-4efc-aabf-b787d9948399.jpg?v=1763567237"
+    ],
+    "metrics": {
+      "netWeightG": 309,
+      "form": "powder tub",
+      "servingG": 10.3,
+      "sodiumMg": 85,
+      "eaaG": 7,
+      "bcaaG": 5,
+      "leucineG": 2.5
+    },
+    "sources": [
+      {
+        "url": "https://www.evlnutrition.com/products/eaa7000-powder",
+        "label": "EVLUTION NUTRITION official product page (30 servings, Pink Lemonade and Watermelon Splash variants, current label artwork)"
+      },
+      {
+        "url": "https://www.evlnutrition.com/cdn/shop/files/EAA7000-30SERV-PL_3_6893a4c0-2b08-4d05-a1ce-e20ffc717df1.jpg?v=1759238328",
+        "label": "Pink Lemonade tub Supplement Facts panel: 1 scoop (10.3 g), 30 servings, net content 10.9 oz (309 g), total carbohydrates <1 g, sodium 85 mg, leucine 2,500 mg, isoleucine 1,250 mg, valine 1,250 mg, lysine HCL 1,000 mg, threonine 650 mg, phenylalanine 250 mg, histidine HCL monohydrate 80 mg, methionine 10 mg, tryptophan 10 mg, plus the full other-ingredients list"
+      },
+      {
+        "url": "https://www.evlnutrition.com/cdn/shop/files/SFP-EAA7000-30SERV-WM_4.jpg?v=1759238666",
+        "label": "Watermelon Splash Supplement Facts panel: same amino doses on a 9.4 g scoop, confirming the amounts are per scoop and the scoop weight is flavor-specific"
+      },
+      {
+        "url": "https://www.evlnutrition.com/cdn/shop/files/EAA7000-30SERV-PL_1_f178f536-8ff5-4200-aa65-6091d9b19e4a.jpg?v=1759238328",
+        "label": "Front-of-tub artwork: 7 g EAAs, 5 g BCAAs, 2.5 g leucine, 30 servings, no caffeine claim"
+      }
+    ]
   }
 ];

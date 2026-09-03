@@ -2619,5 +2619,260 @@ var PRODUCTS = [
         "label": "SuppCo listing — serving size 5 g, 200 servings per container"
       }
     ]
+  },
+  {
+    "id": "force-factor-creatine-gummies",
+    "name": "Creatine Monohydrate Gummies",
+    "brand": "Force Factor",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Third-Party Tested",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate",
+        "dose": "5 g (5 gummies)",
+        "clinicalNote": "Five gummies together carry the same 5 g daily amount used in most published creatine research; a single gummy is 1 g, so a fifth of a serving."
+      },
+      {
+        "name": "AstraGin (Panax notoginseng and Astragalus membranaceus extracts)",
+        "dose": "25 mg",
+        "clinicalNote": "A patented botanical pairing sold as an absorption aid at the supplier's usual 25 mg use level; the published human data behind it is thin next to the decades of research on the creatine itself."
+      }
+    ],
+    "cautions": [
+      "A serving is five gummies, not one — the bottle's 150 gummies work out to 30 servings",
+      "Each serving carries 45 calories and 6 g of total sugars, 5 g of them added sugars, on a maltitol and cane-sugar base",
+      "Draws water into muscle — drink more water"
+    ],
+    "servings": 30,
+    "priceRange": "$$",
+    "flavorsNote": "Six options — Assorted Fruit (grape, orange, watermelon and lemon-lime in one bottle), Mixed Berry, Blue Raspberry, Watermelon, Fruit Burst and Orange Splash — all pectin-based rather than gelatin and free of artificial sweeteners; the Assorted Fruit panel checked here builds its base from maltitol, tapioca syrup and cane sugar and takes its color from fruit and vegetable juice.",
+    "affiliateUrl": "https://www.amazon.com/dp/B0FWTMKBSK?tag=thescoopsense-20",
+    "blurb": "One of the few creatine gummies that prints the full 5 g on the panel and carries an NSF Certified for Sport listing to back the number, but the dose takes five gummies and brings 45 calories and 6 g of sugar with it.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/force-factor-creatine-gummies.jpg",
+    "imageBg": "255,255,255",
+    "images": [
+      "https://forcefactor.com/cdn/shop/files/FF_MLP_Assorted_Flavors.jpg?v=1772480682",
+      "https://forcefactor.com/cdn/shop/files/04_9b1fbfec-fffe-4d9f-bf5d-fc970f36f576.png?v=1772480682",
+      "https://forcefactor.com/cdn/shop/files/02_b299ec56-548d-4cfe-baac-33c479eda7e3.png?v=1772480682"
+    ],
+    "metrics": {
+      "gummiesPerServing": 5,
+      "gummiesPerContainer": 150,
+      "calories": 45,
+      "sugarG": 6,
+      "addedSugarG": 5,
+      "sodiumMg": 5,
+      "certification": "NSF Certified for Sport",
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://forcefactor.com/products/creatine-gummies",
+        "label": "Force Factor — official product page (\"Enjoy 5 gummies daily\", 30 servings per bottle, NSF Certified for Sport, six flavors)"
+      },
+      {
+        "url": "https://forcefactor.com/cdn/shop/files/04_9b1fbfec-fffe-4d9f-bf5d-fc970f36f576.png?v=1772480682",
+        "label": "Force Factor — Supplement Facts panel: Serving Size 5 Gummies, 30 servings, 45 cal, 12 g total carb, 6 g total sugars incl. 5 g added sugars, 5 mg sodium, Creatine Monohydrate 5 g, AstraGin 25 mg; other ingredients maltitol, tapioca syrup, cane sugar, water, pectin"
+      },
+      {
+        "url": "https://www.nsfsport.com/certified-products/listing-detail.php?id=1779616",
+        "label": "NSF Certified for Sport listing — Force Factor Creatine Monohydrate Gummies, Fruit Burst Flavors (serving size 5 gummies, 45 cal, 12 g carb, 6 g sugar)"
+      },
+      {
+        "url": "https://www.nsfsport.com/certified-products/search-results.php?keyword=Force+Factor",
+        "label": "NSF Certified for Sport directory — all six Force Factor Creatine Monohydrate Gummies listings (Blue Raspberry, Mixed Berry, Orange, Watermelon, Assorted Flavors, Fruit Burst)"
+      }
+    ]
+  },
+  {
+    "id": "jocko-fuel-creatine",
+    "name": "Jocko Creatine",
+    "brand": "Jocko Fuel",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "The single line on the panel, and it sits squarely in the 3-5 g daily maintenance range used in most published creatine research for supporting strength and power output alongside training."
+      }
+    ],
+    "cautions": [
+      "Draws water into muscle — drink more water",
+      "Label caution: check with a healthcare professional first, and not for use if pregnant, nursing or under 18",
+      "The brand states the product is third-party tested, but it is not listed in the NSF Certified for Sport database and Jocko Fuel is not on the Informed Sport certified-brand roster"
+    ],
+    "servings": 90,
+    "priceRange": "$$",
+    "flavorsNote": "Unflavored only, in two formats — a 454 g tub of 90 scoops and a 150 g bag of 30 single-dose stick packs — with no sweetener or flavor on either panel.",
+    "affiliateUrl": "https://www.amazon.com/dp/B0BT23VBLJ?tag=thescoopsense-20",
+    "blurb": "One line on the panel — Creatine Monohydrate 5 g — with \"Other Ingredients: None\" under it, in a 454 g tub of 90 servings or a 30-count box of pre-measured stick packs that carry the identical 5 g panel. The stick packs cost roughly twice as much per serving as the tub for the same powder.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/jocko-fuel-creatine.jpg",
+    "imageBg": "255,255,255",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0793/7802/2695/files/Creatine-MainPDP-1432x1432.jpg?v=1736163085",
+      "https://cdn.shopify.com/s/files/1/0793/7802/2695/files/Creatine-SFP-1280x1280.png?v=1736163085",
+      "https://cdn.shopify.com/s/files/1/0793/7802/2695/files/FRONT_72ea7847-a4ab-4982-bfad-18bf2a6bd22b.jpg?v=1762440104"
+    ],
+    "metrics": {
+      "netWeightG": 454,
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://jockofuel.com/products/jocko-creatine",
+        "label": "Jocko Fuel — official product page (variants: 30 Servings Stick Packs, 90 Servings Tub; directions: mix one serving (5 g) with 8 oz of liquid once daily)"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0793/7802/2695/files/Creatine-SFP-1280x1280.png?v=1736163085",
+        "label": "Jocko Fuel — Supplement Facts artwork, tub: Serving Size 1 Scoop (5g), Servings Per Container approx. 90, Creatine Monohydrate 5 g, Other Ingredients: None"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0793/7802/2695/files/CREATINE_BAG_BACK.jpg?v=1736163085",
+        "label": "Jocko Fuel — stick-pack bag back: Serving Size 1 Stick Pack (5g), 30 servings, Creatine Monohydrate 5 g, Other Ingredients: None, label caution text"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0793/7802/2695/files/Creatine-MainPDP-1432x1432.jpg?v=1736163085",
+        "label": "Jocko Fuel — front-of-tub photo: Jocko Creatine, 5 g per serving, 90 servings, Net Wt. 16 oz (454 g), Unflavored; no sport-certification mark printed"
+      }
+    ]
+  },
+  {
+    "id": "pescience-trucreatine",
+    "name": "TruCreatine",
+    "brand": "PEScience",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate (Creapure)",
+        "dose": "5 g",
+        "clinicalNote": "The 5 g daily amount used in most published creatine research, in the German-made Creapure grade of monohydrate; the brand's own guide states no loading phase is needed."
+      }
+    ],
+    "cautions": [
+      "The store still lists this as TruCreatine+, but the current tub prints TruCreatine and the panel's Other Ingredients line reads \"none\" — the plus no longer stands for an added ingredient",
+      "The \"third-party tested\" seal is the brand's own lab-testing claim, not an NSF Certified for Sport or Informed Sport certification",
+      "Draws water into muscle — drink more water"
+    ],
+    "servings": 90,
+    "priceRange": "$$",
+    "flavorsNote": "Unflavored only and with nothing in the tub but creatine, so it mixes into water or any flavored drink; sold in a 90-serving 450 g tub and a 30-serving 150 g tub.",
+    "affiliateUrl": "https://www.amazon.com/dp/B0BFFYHWLK?tag=thescoopsense-20",
+    "blurb": "A one-line supplement panel: 5 g of Creapure creatine monohydrate per 5 g scoop, with an Other Ingredients line that reads \"none\" and a tub that no longer prints the plus the store listing still carries.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/pescience-trucreatine.jpg",
+    "imageBg": "255,255,255",
+    "images": [
+      "https://pescience.com/cdn/shop/files/trucreatine-powder-supplement-pescience-883642.jpg?v=1763056128",
+      "https://pescience.com/cdn/shop/files/trucreatine-powder-supplement-pescience-592169.jpg?v=1763056094",
+      "https://pescience.com/cdn/shop/files/trucreatine-powder-supplement-pescience-582891.jpg?v=1765465177"
+    ],
+    "metrics": {
+      "netWeightG": 450,
+      "servingG": 5,
+      "creapure": true,
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://pescience.com/products/trucreatine",
+        "label": "PEScience — official product page (listed as TruCreatine+ Powder, 30- and 90-serving sizes, Creapure, unflavored)"
+      },
+      {
+        "url": "https://pescience.com/cdn/shop/files/trucreatine-powder-supplement-pescience-592169.jpg?v=1763056094",
+        "label": "PEScience — Supplement Facts panel, 450 g tub: Serving Size 1 Scoop (5 g), 90 servings, Creapure Creatine Monohydrate 5 g, Other Ingredients: none"
+      },
+      {
+        "url": "https://pescience.com/cdn/shop/files/trucreatine-powder-supplement-pescience-429712.jpg?v=1765465177",
+        "label": "PEScience — Supplement Facts panel, 150 g tub: Serving Size 1 Scoop (5 g), 30 servings, same single-ingredient panel"
+      },
+      {
+        "url": "https://pescience.com/blogs/articles/a-complete-guide-to-trucreatine",
+        "label": "PEScience — A Complete Guide to TruCreatine+: ingredient breakdown lists creatine monohydrate 5,000 mg only, \"No Additives\", no loading phase"
+      }
+    ]
+  },
+  {
+    "id": "ryse-creatine-monohydrate",
+    "name": "Creatine Monohydrate",
+    "brand": "RYSE",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Beginner Friendly"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "Matches the 3-5 g daily maintenance dose used in most published creatine trials for supporting strength, power and lean mass alongside resistance training."
+      },
+      {
+        "name": "Sucralose and acesulfame potassium (flavored version only)",
+        "dose": "amount not stated on label",
+        "clinicalNote": "The unflavored panel prints \"Other Ingredients: None\"; the Popsicle Firecracker version instead carries malic acid, citric acid, natural and artificial flavor, silica, sucralose, acesulfame potassium, salt and potassium chloride, none of them weighted on the panel."
+      }
+    ],
+    "cautions": [
+      "Draws water into muscle — drink more water",
+      "California Prop 65 warning is printed on the tub",
+      "Label warns it is intended only for healthy adults over 18 and not for use if pregnant or nursing"
+    ],
+    "servings": 60,
+    "priceRange": "$$",
+    "flavorsNote": "Unflavored in 60- and 100-serving tubs with nothing on the panel but creatine, plus a licensed Popsicle Firecracker version at 45 servings whose scoop grows to 7.6 g to carry malic and citric acid, flavor, silica, sucralose, acesulfame potassium, salt and potassium chloride.",
+    "affiliateUrl": "https://www.amazon.com/dp/B0FQQFTGVS?tag=thescoopsense-20",
+    "blurb": "The Element Series single-ingredient tub: 5 g of monohydrate per roughly 1-scoop serving with \"Other Ingredients: None\" on the panel, 300 g / 60 servings, and no sport-certification mark on the label. The flavored Popsicle Firecracker version holds the same 5 g of creatine but adds 20 mg of sodium and a sweetener system inside a 7.6 g scoop.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/ryse-creatine-monohydrate.jpg",
+    "images": [
+      "https://rysesupps.com/cdn/shop/files/btl_creatine_1_noshadow.png",
+      "https://rysesupps.com/cdn/shop/files/btl_creatine_3.png",
+      "https://rysesupps.com/cdn/shop/files/btl_creatine_2.png"
+    ],
+    "metrics": {
+      "netWeightG": 300,
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://rysesupps.com/products/creatine-monohydrate",
+        "label": "RYSE — official product page (variants: Popsicle Firecracker 45 servings, Unflavored 60 servings, Unflavored 100 servings)"
+      },
+      {
+        "url": "https://rysesupps.com/cdn/shop/files/btl_creatine_3.png",
+        "label": "RYSE — Supplement Facts artwork, unflavored tub: Serving Size Approximately 1 Scoop (5g), Servings Per Container 60, Creatine Monohydrate 5 g, Other Ingredients: None, Made in the USA, California Prop 65 warning"
+      },
+      {
+        "url": "https://rysesupps.com/cdn/shop/files/btl_creatine_1_noshadow.png",
+        "label": "RYSE — front-of-tub artwork: RYSE [ELEMENT SERIES] Creatine Monohydrate, 60 servings, Dietary Supplement // 300 grams / 10.6 oz; no NSF or Informed Sport mark printed"
+      },
+      {
+        "url": "https://rysesupps.com/cdn/shop/files/btl_fc_3_noshadow.png",
+        "label": "RYSE — Supplement Facts artwork, Popsicle Firecracker: Serving Size Approximately (7.6g), 45 servings, Sodium 20 mg, Creatine Monohydrate 5 g, plus the flavored Other Ingredients list"
+      }
+    ]
   }
 ];
