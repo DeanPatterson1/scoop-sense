@@ -23,7 +23,7 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const OUT = path.join(ROOT, "products");
-const VERSION = "20260903c"; // the build rewrites every root page's ?v= to match (see the end of this file)
+const VERSION = "20260903d"; // the build rewrites every root page's ?v= to match (see the end of this file)
 
 // Set this to the real origin at domain time (see README "Sitemap & domain").
 // Absolute-URL metadata — canonical, og:url, BreadcrumbList — is emitted only
@@ -1313,7 +1313,7 @@ ${reviewsHTML(p)}
       </nav>
       <div class="sc-footer-legal">
         <p class="sc-footer-head">Disclosure</p>
-        <p>Some product links are affiliate links. Scoop Sense may earn a commission at no additional cost to you.</p>
+        <p>Some product links are affiliate links. Scoop Sense may earn a commission at no additional cost to you. As an Amazon Associate we earn from qualifying purchases.</p>
         <p>These statements have not been evaluated by the Food and Drug Administration. These products are not intended to diagnose, treat, cure, or prevent any disease.</p>
       </div>
     </div>
@@ -1331,9 +1331,17 @@ ${reviewsHTML(p)}
      and the retailer link beside it: the same order of priority the page
      itself keeps, held where a thumb can reach it. -->
 <div class="sc-pdp-bar">
-  <p class="sc-pdp-bar-tier"><span>Price tier</span><strong>${esc(priceWordOf(p))}</strong></p>
-  <a class="sc-pdp-bar-read" href="${breakdownHref}">Label breakdown</a>
-  <a class="sc-pdp-bar-buy" href="${esc(p.affiliateUrl)}" target="_blank" rel="sponsored nofollow noopener">${esc(retailerOf(p))} <span class="sc-ext" aria-hidden="true">&#8599;</span></a>
+  <!-- The bar's own disclosure. The page's affiliate note lives inside
+       .sc-buybox, and this bar hides itself for exactly as long as .sc-buybox
+       is on screen — so by construction the bar's retailer link was only ever
+       visible while that note was scrolled away. An affiliate link needs its
+       disclosure where the link is, not a screen and a half above it. -->
+  <p class="sc-pdp-bar-note">${esc(retailerOf(p))} link is an affiliate link — we may earn a commission.</p>
+  <div class="sc-pdp-bar-row">
+    <p class="sc-pdp-bar-tier"><span>Price tier</span><strong>${esc(priceWordOf(p))}</strong></p>
+    <a class="sc-pdp-bar-read" href="${breakdownHref}">Label breakdown</a>
+    <a class="sc-pdp-bar-buy" href="${esc(p.affiliateUrl)}" target="_blank" rel="sponsored nofollow noopener">${esc(retailerOf(p))} <span class="sc-ext" aria-hidden="true">&#8599;</span></a>
+  </div>
 </div>
 
 <script type="application/ld+json">
