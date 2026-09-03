@@ -111,7 +111,13 @@ async function titleOf(url) {
   for (const p of direct) {
     if (!first) await sleep(1500);
     first = false;
-    const asin = /\/dp\/([A-Z0-9]{10})/.exec(p.affiliateUrl)[1];
+    const asinMatch = /\/dp\/([A-Z0-9]{10})/.exec(p.affiliateUrl);
+    if (!asinMatch) {
+      review.push([p.id, "?", "no 10-character ASIN in the /dp/ URL — check the link by hand"]);
+      console.log(`  REVIEW ${p.id}: no 10-character ASIN in the /dp/ URL`);
+      continue;
+    }
+    const asin = asinMatch[1];
     let r;
     try {
       r = await titleOf(p.affiliateUrl);
@@ -164,4 +170,4 @@ async function titleOf(url) {
   }
 
   process.exit(problems.length ? 1 : 0);
-})();
+})().catch((e) => { console.error(e); process.exit(1); });

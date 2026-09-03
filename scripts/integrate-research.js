@@ -58,9 +58,9 @@ for (const cat of Object.keys(METRIC_KEYS)) {
     const tag = `${cat}/${p && p.id}`;
     if (!p || typeof p !== "object") { errors.push(`${tag}: not an object`); continue; }
 
+    if (existingIds.has(p.id)) { console.log(`skip (already in database): ${tag}`); continue; }
     for (const f of REQUIRED) if (p[f] === undefined) errors.push(`${tag}: missing field ${f}`);
     if (p.category !== cat) errors.push(`${tag}: category "${p.category}" != file ${cat}`);
-    if (existingIds.has(p.id)) { console.log(`skip (already in database): ${tag}`); continue; }
     if (all.some((x) => x.id === p.id)) errors.push(`${tag}: duplicate id in research set`);
 
     if (typeof p.caffeineMg !== "number") errors.push(`${tag}: caffeineMg not a number`);
