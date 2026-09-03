@@ -23,7 +23,7 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const OUT = path.join(ROOT, "products");
-const VERSION = "20260903a"; // the build rewrites every root page's ?v= to match (see the end of this file)
+const VERSION = "20260903b"; // the build rewrites every root page's ?v= to match (see the end of this file)
 
 // Set this to the real origin at domain time (see README "Sitemap & domain").
 // Absolute-URL metadata — canonical, og:url, BreadcrumbList — is emitted only
@@ -1003,6 +1003,12 @@ function pageHTML(p) {
   const faqs = faqFor(p);
   const related = relatedFor(p);
   const accent = p.accentColor ? ` style="--sc-p-accent:${esc(p.accentColor)}"` : "";
+
+  /* The studied-dose section returns "" for a product with nothing to chart,
+     so the phone bar cannot link to it blind. The label panel is the fallback
+     because it is the one section every product page has. */
+  const doseSection = doseComparisonHTML(p);
+  const breakdownHref = doseSection ? "#studied-doses" : "#label-data";
   const pageUrl = publicUrl(`products/${p.id}.html`);
 
   const canonicalTags = HAS_ORIGIN
@@ -1074,7 +1080,7 @@ function pageHTML(p) {
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css?v=${VERSION}">
 </head>
-<body>
+<body class="sc-pdp-page">
 
 <a class="sc-skip" href="#main">Skip to content</a>
 
@@ -1149,7 +1155,7 @@ function pageHTML(p) {
     </div>
   </section>
 
-  <section class="sc-section">
+  <section class="sc-section" id="label-data">
     <div class="sc-container">
       <div class="sc-pdp-cols">
         <div class="sc-facts">
@@ -1218,7 +1224,7 @@ function pageHTML(p) {
     </div>
   </section>
 
-${doseComparisonHTML(p)}
+${doseSection}
 ${reviewsHTML(p)}
 
   <section class="sc-section">
@@ -1289,6 +1295,18 @@ ${reviewsHTML(p)}
     </div>
   </div>
 </footer>
+
+<!-- Phone-only action bar. The page's job is the label breakdown and the
+     breakdown is 3.6 screens down, while the affiliate link sat 1.8 screens
+     down with nothing to bring it back — a reader who wanted either had to go
+     hunting. The bar carries both, with the breakdown as the filled control
+     and the retailer link beside it: the same order of priority the page
+     itself keeps, held where a thumb can reach it. -->
+<div class="sc-pdp-bar">
+  <p class="sc-pdp-bar-tier"><span>Price tier</span><strong>${esc(priceWordOf(p))}</strong></p>
+  <a class="sc-pdp-bar-read" href="${breakdownHref}">Label breakdown</a>
+  <a class="sc-pdp-bar-buy" href="${esc(p.affiliateUrl)}" target="_blank" rel="sponsored nofollow noopener">${esc(retailerOf(p))} <span class="sc-ext" aria-hidden="true">&#8599;</span></a>
+</div>
 
 <script type="application/ld+json">
 ${JSON.stringify(productLD, null, 2)}

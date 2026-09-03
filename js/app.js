@@ -909,6 +909,7 @@
     // Every path that changes a filter ends here, so this is the one place
     // the address bar has to be kept honest.
     writeHashState();
+    syncClearBtn();
 
     // A new filter is a new question: answer it from the top.
     if (!keepShown) shown = PAGE_SIZE;
@@ -1174,6 +1175,26 @@
       advanced.textContent = "Pick a figure first, then type the amount you are after and " +
         "the grid reorders by how close each label sits to it.";
     }
+  }
+
+  /* "Clear all" is a control for undoing something, and on a phone it was
+     taking a row of the sticky toolbar to offer to undo nothing. It earns its
+     place once any filter is actually set — including search, category and
+     brand, which the panel badge does not count. renderHub() is the one place
+     every filter change passes through, so the state is read from there. */
+  function syncClearBtn() {
+    var clear = document.getElementById("sc-clear");
+    if (!clear) return;
+    var active = !!state.search ||
+      state.category !== (PAGE_CATEGORY || "all") ||
+      state.brand !== "all" ||
+      !!state.figure ||
+      state.bucket !== "all" ||
+      !!state.dir ||
+      state.price !== "all" ||
+      state.label !== "all" ||
+      state.target !== undefined;
+    clear.classList.toggle("sc-clear-idle", !active);
   }
 
   // A collapsed panel must not hide the fact that it is doing something.
@@ -2068,11 +2089,50 @@
     }
   }
 
+  /* The phone action bar stays down while either the product header or the
+     buy box is on screen.
+
+     The buy box, because the bar carries the same two links and two "check
+     the price" controls in one viewport is the pattern this site is trying not
+     to be. The header, because the bar is pinned to the bottom of the very
+     screen the product's name has to fit on: a two-line name cleared the bar
+     by two pixels, which is not clearance, it is a coincidence. With the bar
+     down until the reader scrolls past the name, the fold is the whole
+     viewport again and the bar arrives when its links are the only way back
+     to either destination.
+
+     Without IntersectionObserver the bar simply stays put — a duplicate
+     control is a smaller failure than a control that never appears. */
+  function initPdpBar() {
+    var bar = document.querySelector(".sc-pdp-bar");
+    if (!bar || !("IntersectionObserver" in window)) return;
+
+    var marks = [];
+    var header = document.querySelector(".sc-pdp-title");
+    var box = document.querySelector(".sc-buybox");
+    if (header) marks.push(header);
+    if (box) marks.push(box);
+    if (!marks.length) return;
+
+    var onScreen = [];
+    var io = new IntersectionObserver(function (entries) {
+      for (var i = 0; i < entries.length; i++) {
+        onScreen[marks.indexOf(entries[i].target)] = entries[i].isIntersecting;
+      }
+      var any = false;
+      for (var j = 0; j < onScreen.length; j++) if (onScreen[j]) any = true;
+      bar.classList.toggle("sc-pdp-bar-off", any);
+    }, { rootMargin: "0px 0px -72px 0px" });
+
+    for (var k = 0; k < marks.length; k++) io.observe(marks[k]);
+  }
+
   function init() {
     syncSaveUI(); // nav counter + save toggles work on every page
     syncStickyOffsets();
     renderIntroPanel();
     renderHomeStats();
+    initPdpBar();
 
     if (typeof PRODUCTS === "undefined") {
       initReveal(); // product pages: motion only, no data renderers

@@ -225,7 +225,7 @@ summary:focus-visible {
 }
 
 .sc-section {
-  padding: 40px 0;
+  padding: 56px 0;
 }
 
 main > .sc-section + .sc-section {
@@ -263,10 +263,24 @@ main > .sc-section-deep + .sc-section {
   margin: 0 0 16px;
 }
 
+/* The lead is the site's standard opening paragraph, and on a phone it is
+   also the site's longest unbroken block of text. At 1.125rem/1.65 across a
+   358px column it ran seven lines before the reader reached anything they
+   could act on. Setting it a step smaller and a little tighter here buys back
+   most of a screen on every page that opens with one; the desktop size is
+   restored where the measure is wide enough to carry it. */
 .sc-lead {
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
+  line-height: 1.55;
   color: var(--sc-muted);
   max-width: 62ch;
+}
+
+@media (min-width: 640px) {
+  .sc-lead {
+    font-size: 1.125rem;
+    line-height: 1.65;
+  }
 }
 
 .sc-skip {
@@ -307,7 +321,7 @@ main > .sc-section-deep + .sc-section {
   align-items: baseline;
   justify-content: space-between;
   gap: 8px 24px;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 .sc-section-head h2 {
@@ -491,7 +505,7 @@ main > .sc-section-deep + .sc-section {
    photo survives as texture, not as an image competing with the words. */
 .sc-hero {
   position: relative;
-  padding: 48px 0 40px;
+  padding: 56px 0 48px;
   border-bottom: 1px solid var(--sc-border);
   background-color: var(--sc-bg);
   background-image:
@@ -782,6 +796,30 @@ main > .sc-section-deep + .sc-section {
 @media (max-width: 559px) {
   .sc-table-scroll {
     display: flex;
+  }
+
+  /* Making the box a flex container also made the table a flex item, and a
+     flex item shrinks to its min-content width. The figure columns are
+     `nowrap` and would not give, so the entire squeeze landed on the product
+     column: "Legion Pulse Stim-Free" set one word per line beside figures it
+     no longer lined up with. The table keeps its own width and the column
+     gets a floor wide enough for a two-line name, so the table overflows the
+     way the edge chevron already promises it does. */
+  .sc-table-scroll > .sc-table {
+    flex: 0 0 auto;
+  }
+
+  .sc-table-scroll .sc-table th:first-child,
+  .sc-table-scroll .sc-table td:first-child {
+    min-width: 10.5rem;
+  }
+
+  /* Brand sits above name in the product cell, so that cell's first baseline
+     is the 0.75rem brand line — baseline-aligning 0.95rem figures to it hung
+     them above the name they belong to. */
+  .sc-table-scroll .sc-table tbody td,
+  .sc-table-scroll .sc-table tbody th {
+    vertical-align: middle;
   }
 
   .sc-table-scroll::after {
@@ -1418,6 +1456,39 @@ th[aria-sort="descending"] .sc-sort-btn::after {
   margin: 18px 0 0;
 }
 
+/* These chips carry a label and a count — "Dairy-free protein source (11)" is
+   231px — so on a 343px column no two of them share a row and all four stack.
+   Four pill buttons down the left edge is 184px of the fold spent looking like
+   the list the page is already accused of being.
+   One row that scrolls instead. It bleeds to the screen edges so the next chip
+   is visibly cut by the right edge rather than hidden behind it: the clipped
+   pill is the affordance, which is the same reason the tables get a chevron.
+   Unlike the six nav links, nothing here is only reachable by swiping — every
+   one of these filters also lives in the panel behind "Filters & sort". */
+@media (max-width: 559px) {
+  .sc-quick {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    /* Cancel the container's gutter, then re-apply it as padding so the first
+       chip still lines up with the text above it. The vertical padding is for
+       the focus ring, which an overflow box would otherwise clip. */
+    margin: 18px -16px 0;
+    padding: 4px 16px;
+    scrollbar-width: none;
+  }
+
+  .sc-quick::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sc-quick .sc-chip {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+}
+
 button.sc-chip {
   cursor: pointer;
   font-size: 0.85rem;
@@ -1479,6 +1550,51 @@ button.sc-chip {
 .sc-toolbar .sc-input {
   flex: 1 1 32ch;
   min-width: min(100%, 32ch);
+}
+
+/* On a phone that 32ch basis took the whole first row, the two lists sized
+   themselves to their longest brand name and took the second, and the filter
+   button and the reset took a third: 206px of permanently pinned chrome, a
+   quarter of the viewport, with the first product a full screen down.
+
+   Two rows instead — the field beside the way into the panel, then the two
+   lists. The source order is field, list, list, button, reset, which is the
+   reading order a screen reader should get and the wrong order to wrap in, so
+   the row is reordered here rather than in the markup.
+
+   The lists keep a 9rem floor: shrinking them to share a row is what turned
+   "All categories" into a bare chevron with no label at all. */
+@media (max-width: 559px) {
+  .sc-toolbar-row .sc-input {
+    order: 1;
+    flex: 1 1 8ch;
+    min-width: min(100%, 8ch);
+  }
+
+  .sc-toolbar-row .sc-filters-btn {
+    order: 2;
+    flex: 0 0 auto;
+  }
+
+  /* `flex-basis: auto` on a select is its widest option — the brand list is
+     as wide as the longest brand name on file — so the two of them asked for
+     more than the row had and each took a line of its own. Basis 0 makes them
+     share the row; the 9rem floor is what stops the sharing from crushing
+     them into bare chevrons with no label. */
+  .sc-toolbar-row .sc-select {
+    order: 3;
+    flex: 1 1 0;
+    min-width: 9rem;
+  }
+
+  .sc-toolbar-row .sc-clear-btn {
+    order: 4;
+  }
+
+  /* js/app.js marks the reset idle while there is nothing set to reset. */
+  .sc-clear-idle {
+    display: none;
+  }
 }
 
 .sc-clear-btn {
@@ -1742,10 +1858,16 @@ button.sc-chip {
    13. Product grid (data-forward cards) + detail dialog
    -------------------------------------------------------------------------- */
 
+/* A card is --sc-surface on --sc-bg, four points of lightness apart, so the
+   gap is doing most of the work of saying where one product ends and the next
+   begins. At 12px on a single phone column it was not doing it: the cards ran
+   together into one strip and the page read as a list rather than a set of
+   things. Wider viewports put cards side by side, where the column edges
+   already separate them and a smaller gutter is right. */
 .sc-products {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 12px;
+  gap: 20px;
 }
 
 @media (min-width: 560px) {
@@ -2269,6 +2391,10 @@ button.sc-chip {
   }
 }
 
+.sc-pdp-media-col {
+  min-width: 0;
+}
+
 .sc-pdp-media {
   margin: 0;
   display: flex;
@@ -2301,6 +2427,98 @@ button.sc-chip {
   margin: 10px 0 0;
 }
 
+/* Phone action bar (product pages only, markup emitted by
+   scripts/build-product-pages.js). The breakdown is the filled control and the
+   retailer link is the quiet one beside it — the page keeps the affiliate link
+   secondary to the label, and a bar that inverted that on the one surface a
+   reader never scrolls away from would be the site arguing with itself.
+   Hidden above 560px, where the buy box is already beside the product. */
+.sc-pdp-bar {
+  display: none;
+}
+
+@media (max-width: 559px) {
+  .sc-pdp-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 40;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    /* Opaque for the same reason the toolbar is: cards and paper panels pass
+       behind it and ghost through anything translucent. */
+    background: var(--sc-bg-deep);
+    border-top: 1px solid var(--sc-border-strong);
+    padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+    transition: transform 0.2s ease;
+  }
+
+  /* js/app.js sets this while the buy box itself is on screen. */
+  .sc-pdp-bar-off {
+    transform: translateY(110%);
+    pointer-events: none;
+  }
+
+  /* The site prints a word, never a dollar figure — prices move faster than
+     the labels get re-checked — so the tier is what the bar can honestly
+     carry where a shop would put a price. */
+  .sc-pdp-bar-tier {
+    flex: 0 0 auto;
+    margin: 0;
+    line-height: 1.15;
+  }
+
+  .sc-pdp-bar-tier span {
+    display: block;
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--sc-muted);
+  }
+
+  .sc-pdp-bar-tier strong {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--sc-ink);
+  }
+
+  .sc-pdp-bar-read,
+  .sc-pdp-bar-buy {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 8px 12px;
+    border-radius: var(--sc-radius-sm);
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .sc-pdp-bar-read {
+    flex: 1 1 auto;
+    background: var(--sc-accent);
+    color: var(--sc-accent-ink);
+  }
+
+  .sc-pdp-bar-buy {
+    flex: 0 0 auto;
+    border: 1px solid var(--sc-border-strong);
+    color: var(--sc-ink);
+  }
+
+  /* Reserve the bar's own height, or it sits on the last line of the footer.
+     A body class rather than :has(), so the rule does not depend on selector
+     support to avoid covering content. */
+  .sc-pdp-page {
+    padding-bottom: calc(74px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
 /* Trust furniture: analysis label, label-source line, external-link marker,
    how-we-evaluate link near the hub filters. */
 .sc-analysis-tag {
@@ -2331,11 +2549,14 @@ button.sc-chip {
 .sc-eval-link {
   font-size: 0.82rem;
   color: var(--sc-info);
-  margin: 10px 0 0;
+  margin: 16px 0 0;
 }
 
-/* The toolbar is sticky, so every line inside it costs screen for the whole
-   session. On a phone the method note keeps its link and drops its sentence. */
+/* The note now sits below the toolbar rather than pinned inside it, so it no
+   longer costs screen for the whole session — but the sentence is still four
+   phone lines in front of the first product, and the link alone carries the
+   same promise. It stays a link on a phone and a sentence where there is room
+   for one. */
 .sc-eval-extra {
   display: none;
 }
@@ -2479,6 +2700,22 @@ button.sc-chip {
   background: var(--sc-photo-bg);
 }
 
+/* A square frame is 343px on a phone, and with the thumbnail strip and the
+   imagery note under it the product's own name started below the fold: the
+   page did not say what it was about until you scrolled it. The frame goes
+   landscape here, which costs a tub photographed portrait nothing it was
+   using — the fit is `contain` and the tub keeps its whole height, it just
+   stops reserving empty ground either side of itself. */
+@media (max-width: 559px) {
+  .sc-pdp-media-photo {
+    aspect-ratio: 4 / 3;
+  }
+
+  .sc-pdp-grid {
+    gap: 24px;
+  }
+}
+
 .sc-pdp-media-photo img {
   width: 100%;
   height: 100%;
@@ -2574,6 +2811,36 @@ button.sc-chip {
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 10px;
+}
+
+/* Five 64px squares and four 8px gaps come to 352px in a 343px column, so the
+   last one wrapped and a strip of thumbnails that should be one line became
+   two — 136px spent above a product name that was already below the fold.
+   The strip scrolls here for the same reason the chip row does, and bleeds to
+   the screen edges so the cut-off thumbnail says there are more. */
+@media (max-width: 559px) {
+  .sc-gallery-thumbs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 10px -16px 0;
+    padding: 4px 16px;
+    scrollbar-width: none;
+    /* Five 64px thumbs that cannot shrink are 352px of min-content, and a grid
+       item's automatic minimum size is exactly that — so the media column grew
+       to 352 inside a 343 track and the bleed carried 9px of it off the side
+       of the page. Both boxes have to be told they may be narrower than what
+       is inside them. */
+    min-width: 0;
+  }
+
+  .sc-gallery-thumbs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sc-gallery-thumb {
+    flex: 0 0 auto;
+  }
 }
 
 .sc-gallery-thumb {
@@ -3314,6 +3581,7 @@ button.sc-chip {
 /* Product-page top block load sequence (above the fold, CSS-only). */
 .sc-crumbs { animation: sc-fade 0.4s ease-out backwards; }
 .sc-pdp-media-col { animation: sc-rise 0.55s ease-out 0.05s backwards; }
+
 .sc-pdp .sc-eyebrow { animation: sc-rise 0.5s ease-out 0.08s backwards; }
 .sc-pdp-title { animation: sc-rise 0.5s ease-out 0.12s backwards; }
 .sc-pdp .sc-detail-tags { animation: sc-rise 0.5s ease-out 0.16s backwards; }

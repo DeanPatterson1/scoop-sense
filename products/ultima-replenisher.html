@@ -20,9 +20,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css?v=20260903a">
+  <link rel="stylesheet" href="../css/styles.css?v=20260903b">
 </head>
-<body>
+<body class="sc-pdp-page">
 
 <a class="sc-skip" href="#main">Skip to content</a>
 
@@ -100,7 +100,7 @@
     </div>
   </section>
 
-  <section class="sc-section">
+  <section class="sc-section" id="label-data">
     <div class="sc-container">
       <div class="sc-pdp-cols">
         <div class="sc-facts">
@@ -328,6 +328,18 @@
   </div>
 </footer>
 
+<!-- Phone-only action bar. The page's job is the label breakdown and the
+     breakdown is 3.6 screens down, while the affiliate link sat 1.8 screens
+     down with nothing to bring it back — a reader who wanted either had to go
+     hunting. The bar carries both, with the breakdown as the filled control
+     and the retailer link beside it: the same order of priority the page
+     itself keeps, held where a thumb can reach it. -->
+<div class="sc-pdp-bar">
+  <p class="sc-pdp-bar-tier"><span>Price tier</span><strong>Budget</strong></p>
+  <a class="sc-pdp-bar-read" href="#studied-doses">Label breakdown</a>
+  <a class="sc-pdp-bar-buy" href="https://www.amazon.com/dp/B01IIGCCIK?tag=thescoopsense-20" target="_blank" rel="sponsored nofollow noopener">Amazon <span class="sc-ext" aria-hidden="true">&#8599;</span></a>
+</div>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -431,6 +443,6 @@
   });
 })();
 </script>
-<script src="../js/app.js?v=20260903a"></script>
+<script src="../js/app.js?v=20260903b"></script>
 </body>
 </html>
