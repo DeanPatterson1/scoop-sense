@@ -1363,24 +1363,25 @@ th[aria-sort="descending"] .sc-sort-btn::after {
 }
 
 /* On a phone this panel sits between the reader and the products, so it
-   folds into two compact columns and drops its footnote. The database is
-   what they came for. */
+   tightens up and drops its footnote. The database is what they came for. */
 @media (max-width: 899px) {
   .sc-intropanel {
     padding: 10px 12px;
   }
 
-  .sc-intropanel dl {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 16px;
+  /* The panel's own title does not need display-size here — the rules and the
+     paper do the announcing, and the figures are what is being read. */
+  .sc-intropanel-title {
+    font-size: 1rem;
+    margin-bottom: 6px;
+    padding-bottom: 5px;
   }
 
   .sc-intropanel dl div {
     padding: 5px 0;
   }
 
-  /* Four figures fit two rows; the rest are a desktop luxury. */
+  /* Four figures are enough here; the rest are a desktop luxury. */
   .sc-intropanel dl div:nth-child(n + 5) {
     display: none;
   }
@@ -1391,6 +1392,22 @@ th[aria-sort="descending"] .sc-sort-btn::after {
 
   .sc-intropanel-note {
     display: none;
+  }
+}
+
+/* Two columns only where two columns fit. On a tablet each one is ~250px and
+   the fold is a saving; on a 343px phone column each is 152px, which is
+   narrower than the labels — "Caffeine range" and "Fully disclosed" both broke
+   over two lines while their figures stayed on the first, and every row grew
+   to 55px to hold the wrap. A facts panel whose labels no longer sit level
+   with their figures has stopped being a facts panel, which is the one thing
+   this panel is for. Below 560 it stays the single label-left, figure-right
+   column the base rule already describes. */
+@media (min-width: 560px) and (max-width: 899px) {
+  .sc-intropanel dl {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 16px;
   }
 }
 
