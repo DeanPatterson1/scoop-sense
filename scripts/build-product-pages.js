@@ -23,7 +23,7 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const OUT = path.join(ROOT, "products");
-const VERSION = "20260903d"; // the build rewrites every root page's ?v= to match (see the end of this file)
+const VERSION = "20260903e"; // the build rewrites every root page's ?v= to match (see the end of this file)
 
 // Set this to the real origin at domain time (see README "Sitemap & domain").
 // Absolute-URL metadata — canonical, og:url, BreadcrumbList — is emitted only
@@ -1313,7 +1313,7 @@ ${reviewsHTML(p)}
       </nav>
       <div class="sc-footer-legal">
         <p class="sc-footer-head">Disclosure</p>
-        <p>Some product links are affiliate links. Scoop Sense may earn a commission at no additional cost to you. As an Amazon Associate we earn from qualifying purchases.</p>
+        <p>Some product links are affiliate links. Scoop Sense may earn a commission at no additional cost to you. As an Amazon Associate I earn from qualifying purchases.</p>
         <p>These statements have not been evaluated by the Food and Drug Administration. These products are not intended to diagnose, treat, cure, or prevent any disease.</p>
       </div>
     </div>
