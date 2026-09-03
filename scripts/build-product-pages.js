@@ -23,7 +23,7 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const OUT = path.join(ROOT, "products");
-const VERSION = "20260730f"; // keep in sync with the ?v= on the other pages
+const VERSION = "20260903a"; // the build rewrites every root page's ?v= to match (see the end of this file)
 
 // Set this to the real origin at domain time (see README "Sitemap & domain").
 // Absolute-URL metadata — canonical, og:url, BreadcrumbList — is emitted only
@@ -395,6 +395,8 @@ function slidesOf(p) {
   const local = p.imageUrl && !/^https?:/i.test(p.imageUrl) ? p.imageUrl : null;
   if (local && fs.existsSync(path.join(ROOT, local))) {
     slides.push({ src: `../${local}`, alt: `${name} — product image` });
+  } else if (local) {
+    console.warn(`warn: ${p.id}: imageUrl "${local}" not found on disk — gallery falls back to retailer photos`);
   }
   // `images` is optional: a product can carry a locally stored lead shot and no
   // retailer gallery at all. Reading it unguarded turned that into a crash, and
@@ -942,14 +944,53 @@ function faqFor(p) {
 /* ---- related products ---------------------------------------------------- */
 
 // Same category only — a creatine page never recommends a pre-workout.
+// "Nearest" is measured on the category's lead metric: caffeine for a
+// pre-workout, but creatine, protein, sodium or EAA grams elsewhere — where
+// caffeine is 0 across the board and sorting on it just returned catalog order.
+const LEAD_METRIC = { creatine: "creatineG", protein: "proteinG", electrolytes: "sodiumMg", eaa: "eaaG" };
+function leadValue(p) {
+  const key = LEAD_METRIC[categoryOf(p)];
+  const v = key ? Number(p.metrics && p.metrics[key]) : p.caffeineMg;
+  return Number.isFinite(v) ? v : 0;
+}
 function relatedFor(p) {
   const others = PRODUCTS.filter((x) => x.id !== p.id && categoryOf(x) === categoryOf(p));
   const sameBrand = others.filter((x) => x.brand === p.brand);
+  const mine = leadValue(p);
   const rest = others
     .filter((x) => x.brand !== p.brand)
-    .sort((a, b) => Math.abs(a.caffeineMg - p.caffeineMg) - Math.abs(b.caffeineMg - p.caffeineMg));
+    .sort((a, b) => Math.abs(leadValue(a) - mine) - Math.abs(leadValue(b) - mine));
   return sameBrand.concat(rest).slice(0, 3);
 }
+
+/* ---- "labels verified" window ------------------------------------------
+ *
+ * Three pieces of site copy date the catalog: the homepage's "Labels last
+ * checked" row, each category page's "Labels verified …" line, and the footer
+ * on every page. They were hand-maintained, which meant a batch researched in
+ * a new month silently left the whole site claiming the old one. The window
+ * is the earliest and latest labelVerified month actually on file, so the
+ * claim is always one the data can support. */
+const MONTHS = ["January", "February", "March", "April", "May", "June", "July",
+  "August", "September", "October", "November", "December"];
+
+function monthKey(s) {
+  const m = /^([A-Za-z]+)\s+(\d{4})$/.exec(String(s || "").trim());
+  if (!m) return null;
+  const i = MONTHS.indexOf(m[1]);
+  return i === -1 ? null : Number(m[2]) * 12 + i;
+}
+
+const verifiedMonths = [...new Set(PRODUCTS.map((p) => p.labelVerified).filter((v) => monthKey(v)))]
+  .sort((a, b) => monthKey(a) - monthKey(b));
+const labelWindow = verifiedMonths.length
+  ? (verifiedMonths.length === 1
+      ? verifiedMonths[0]
+      // Same year on both ends: "July–September 2026", not the year twice.
+      : verifiedMonths[0].replace(/ (\d{4})$/, (_, y) =>
+          verifiedMonths[verifiedMonths.length - 1].endsWith(y) ? "" : " " + y)
+        + "\u2013" + verifiedMonths[verifiedMonths.length - 1])
+  : null;
 
 /* ---- page template ------------------------------------------------------- */
 
@@ -1244,7 +1285,7 @@ ${reviewsHTML(p)}
     </div>
     <div class="sc-footer-bottom">
       <p>&copy; 2026 Scoop Sense</p>
-      <p>Labels last reviewed July 2026</p>
+      <p>Labels last reviewed ${labelWindow || "July 2026"}</p>
     </div>
   </div>
 </footer>
@@ -1420,7 +1461,7 @@ let indexHTML = fs.readFileSync(indexPath, "utf8");
 const stale = [];
 for (const [key, value] of Object.entries(heroStats)) {
   indexHTML = indexHTML.replace(
-    new RegExp(`(data-stat="${key}">)([^<]*)`),
+    new RegExp(`(data-stat="${key}">)([^<]*)`, "g"),
     (_, open, was) => {
       if (was !== value) stale.push(`${key}: "${was}" -> "${value}"`);
       return open + value;
@@ -1435,7 +1476,7 @@ for (const slug of Object.keys(CATEGORY_CONFIG)) {
   const n = PRODUCTS.filter((p) => categoryOf(p) === slug).length;
   const value = `${n} ${n === 1 ? "label" : "labels"}`;
   indexHTML = indexHTML.replace(
-    new RegExp(`(data-cat-count="${slug}">)([^<]*)`),
+    new RegExp(`(data-cat-count="${slug}">)([^<]*)`, "g"),
     (_, open, was) => {
       if (was !== value) stale.push(`${slug}: "${was}" -> "${value}"`);
       return open + value;
@@ -1449,48 +1490,24 @@ console.log(
     : "Hero figures in index.html already current"
 );
 
-/* ---- "labels verified" window ------------------------------------------
- *
- * Three pieces of site copy date the catalog: the homepage's "Labels last
- * checked" row, each category page's "Labels verified …" line, and the footer
- * on every page. They were hand-maintained, which meant a batch researched in
- * a new month silently left the whole site claiming the old one. The window
- * is the earliest and latest labelVerified month actually on file, so the
- * claim is always one the data can support. */
-const MONTHS = ["January", "February", "March", "April", "May", "June", "July",
-  "August", "September", "October", "November", "December"];
-
-function monthKey(s) {
-  const m = /^([A-Za-z]+)\s+(\d{4})$/.exec(String(s || "").trim());
-  if (!m) return null;
-  const i = MONTHS.indexOf(m[1]);
-  return i === -1 ? null : Number(m[2]) * 12 + i;
-}
-
-const verifiedMonths = [...new Set(PRODUCTS.map((p) => p.labelVerified).filter((v) => monthKey(v)))]
-  .sort((a, b) => monthKey(a) - monthKey(b));
-const labelWindow = verifiedMonths.length
-  ? (verifiedMonths.length === 1
-      ? verifiedMonths[0]
-      // Same year on both ends: "July–September 2026", not the year twice.
-      : verifiedMonths[0].replace(/ (\d{4})$/, (_, y) =>
-          verifiedMonths[verifiedMonths.length - 1].endsWith(y) ? "" : " " + y)
-        + "\u2013" + verifiedMonths[verifiedMonths.length - 1])
-  : null;
-
-if (labelWindow) {
-  const pages = fs.readdirSync(ROOT).filter((f) => f.endsWith(".html"));
-  const touched = [];
-  for (const f of pages) {
-    const fp = path.join(ROOT, f);
-    const before = fs.readFileSync(fp, "utf8");
-    const after = before
+/* The same pass keeps every root page's cache-bust token equal to VERSION.
+ * Product pages are regenerated with it above; the hand-written pages were
+ * bumped by hand, and skipped a bump after a data change, so a returning
+ * browser kept its stale app.js and the old catalog. */
+const pages = fs.readdirSync(ROOT).filter((f) => f.endsWith(".html"));
+const touched = [];
+for (const f of pages) {
+  const fp = path.join(ROOT, f);
+  const before = fs.readFileSync(fp, "utf8");
+  let after = before.replace(/(\.(?:css|js))\?v=[A-Za-z0-9_.-]+/g, `$1?v=${VERSION}`);
+  if (labelWindow) {
+    after = after
       .replace(/Labels last reviewed [^<]*/g, `Labels last reviewed ${labelWindow}`)
       .replace(/Labels verified [^<]*?\./g, `Labels verified ${labelWindow}.`)
       .replace(/(<dt>Labels last checked<\/dt><dd>)[^<]*/g, (_, open) => open + labelWindow);
-    if (after !== before) { fs.writeFileSync(fp, after); touched.push(f); }
   }
-  console.log(touched.length
-    ? `Dated ${touched.length} page(s) "${labelWindow}": ${touched.join(", ")}`
-    : `Label window already reads "${labelWindow}" everywhere`);
+  if (after !== before) { fs.writeFileSync(fp, after); touched.push(f); }
 }
+console.log(touched.length
+  ? `Re-dated / re-versioned ${touched.length} root page(s) (v=${VERSION}${labelWindow ? `, "${labelWindow}"` : ""}): ${touched.join(", ")}`
+  : `Root pages already read v=${VERSION}${labelWindow ? ` and "${labelWindow}"` : ""}`);
