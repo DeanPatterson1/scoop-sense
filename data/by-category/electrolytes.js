@@ -2025,7 +2025,6 @@ var PRODUCTS = [
     "labelVerified": "July 2026",
     "imageUrl": "images/products/amacx-hydro-tabs.jpg",
     "images": [
-      "https://amacx.com/cdn/shop/files/6e2a9831a8c7820ffbd216fab9193f846fd826c0_Hydro_Tabs_Lime___3_pack_Amacx_73203849__1_cf33a78e-0aee-4f60-bc51-1114b81bb594.webp?v=1783693090&width=800",
       "https://amacx.com/cdn/shop/files/7aeec5b3e7b075e12cc1a69f7860aea10bc89db0_Hydro_tabs_lime_visma_b13b4e1b-3081-45cf-a66c-dbc59c1029db.jpg?v=1783693091&width=800"
     ],
     "metrics": {

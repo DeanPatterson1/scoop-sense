@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css?v=20260903b">
+  <link rel="stylesheet" href="../css/styles.css?v=20260903c">
 </head>
 <body class="sc-pdp-page">
 
@@ -348,6 +348,25 @@
   var main = document.getElementById("sc-gallery-main");
   if (!main) return;
   var thumbs = Array.prototype.slice.call(document.querySelectorAll(".sc-gallery-thumb"));
+
+  /* Gallery images are hotlinked from the manufacturer's own site — 570 URLs
+     across the catalog, on hosts nobody here controls. They rot: an Amacx
+     Shopify file started returning 404 and the thumbnail became a broken-image
+     box on a live page, silently, because nothing was watching. A thumbnail
+     whose picture will not load has nothing to offer, so it takes itself out
+     of the strip rather than advertising the breakage. Both paths are needed:
+     an image can fail before this script parses, in which case no error event
+     is ever coming and only the completed-but-empty check catches it. */
+  function dropThumb(b) {
+    b.hidden = true;
+  }
+  thumbs.forEach(function (b) {
+    var img = b.querySelector("img");
+    if (!img) return;
+    if (img.complete && img.naturalWidth === 0) dropThumb(b);
+    img.addEventListener("error", function () { dropThumb(b); });
+  });
+
   thumbs.forEach(function (b) {
     b.addEventListener("click", function () {
       main.src = b.getAttribute("data-src");
@@ -387,6 +406,6 @@
   });
 })();
 </script>
-<script src="../js/app.js?v=20260903b"></script>
+<script src="../js/app.js?v=20260903c"></script>
 </body>
 </html>

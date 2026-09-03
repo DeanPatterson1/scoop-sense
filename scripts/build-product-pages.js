@@ -23,7 +23,7 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const OUT = path.join(ROOT, "products");
-const VERSION = "20260903b"; // the build rewrites every root page's ?v= to match (see the end of this file)
+const VERSION = "20260903c"; // the build rewrites every root page's ?v= to match (see the end of this file)
 
 // Set this to the real origin at domain time (see README "Sitemap & domain").
 // Absolute-URL metadata — canonical, og:url, BreadcrumbList — is emitted only
@@ -433,11 +433,39 @@ function mediaHTML(p) {
           </div>`;
 }
 
+/* Emitted whenever a photograph is on the page — not, as it was, only when the
+   product carries more than one *retailer* image. The two counts are different:
+   the thumbnail strip is built from `slidesOf`, which leads with the locally
+   stored shot, so a product with one local image and one retailer image has two
+   thumbnails and used to get no script to work them. Worse, this script also
+   wires the zoom button and the lightbox, which every photographed product
+   renders — so 21 pages showed a Zoom button that did nothing at all when
+   clicked. The script guards its own pieces, so handing it a page with no
+   thumbnails costs nothing. */
 const GALLERY_SCRIPT = `<script>
 (function () {
   var main = document.getElementById("sc-gallery-main");
   if (!main) return;
   var thumbs = Array.prototype.slice.call(document.querySelectorAll(".sc-gallery-thumb"));
+
+  /* Gallery images are hotlinked from the manufacturer's own site — 570 URLs
+     across the catalog, on hosts nobody here controls. They rot: an Amacx
+     Shopify file started returning 404 and the thumbnail became a broken-image
+     box on a live page, silently, because nothing was watching. A thumbnail
+     whose picture will not load has nothing to offer, so it takes itself out
+     of the strip rather than advertising the breakage. Both paths are needed:
+     an image can fail before this script parses, in which case no error event
+     is ever coming and only the completed-but-empty check catches it. */
+  function dropThumb(b) {
+    b.hidden = true;
+  }
+  thumbs.forEach(function (b) {
+    var img = b.querySelector("img");
+    if (!img) return;
+    if (img.complete && img.naturalWidth === 0) dropThumb(b);
+    img.addEventListener("error", function () { dropThumb(b); });
+  });
+
   thumbs.forEach(function (b) {
     b.addEventListener("click", function () {
       main.src = b.getAttribute("data-src");
@@ -1314,7 +1342,7 @@ ${JSON.stringify(productLD, null, 2)}
 <script type="application/ld+json">
 ${JSON.stringify(faqLD, null, 2)}
 </script>
-${breadcrumbLD ? `<script type="application/ld+json">\n${JSON.stringify(breadcrumbLD, null, 2)}\n</script>\n` : ""}${p.images && p.images.length > 1 ? GALLERY_SCRIPT : ""}<script src="../js/app.js?v=${VERSION}"></script>
+${breadcrumbLD ? `<script type="application/ld+json">\n${JSON.stringify(breadcrumbLD, null, 2)}\n</script>\n` : ""}${slidesOf(p).length ? GALLERY_SCRIPT : ""}<script src="../js/app.js?v=${VERSION}"></script>
 </body>
 </html>
 `;

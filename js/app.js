@@ -910,6 +910,7 @@
     // the address bar has to be kept honest.
     writeHashState();
     syncClearBtn();
+    syncCatChips();
 
     // A new filter is a new question: answer it from the top.
     if (!keepShown) shown = PAGE_SIZE;
@@ -1174,6 +1175,38 @@
         "protein, beta-alanine, sodium. Everything else here then works on that figure.";
       advanced.textContent = "Pick a figure first, then type the amount you are after and " +
         "the grid reorders by how close each label sits to it.";
+    }
+  }
+
+  /* The category chips are static markup, and nothing was moving the active
+     one. Arriving at hub.html#cat-pre-workout — which 108 links across the
+     site do — filtered the grid to 51 pre-workouts and left the chip row
+     saying "All", as did picking a category from the toolbar list. The chip
+     that says where you are was the one thing on the page that did not know.
+
+     `aria-current="page"` moves with it: left on the wrong chip it tells a
+     screen reader the reader is on "All" while they are looking at a filtered
+     shelf, which is worse than the visual mismatch.
+
+     Each chip's category is read from its own href, so this stays correct if
+     a category is ever added: "hub.html" is everything, "hub.html#cat-x" is
+     the one category with no landing page of its own, and anything else is
+     "<category>.html". */
+  function syncCatChips() {
+    var nav = document.querySelector(".sc-cat-chips");
+    if (!nav) return;
+    var links = nav.querySelectorAll("a");
+    for (var i = 0; i < links.length; i++) {
+      var href = links[i].getAttribute("href") || "";
+      var hashCat = /#cat-([a-z-]+)$/.exec(href);
+      var cat;
+      if (hashCat) cat = hashCat[1];
+      else if (/^hub\.html(?:$|[?#])/.test(href)) cat = "all";
+      else cat = href.replace(/\.html.*$/, "");
+      var on = cat === state.category;
+      links[i].classList.toggle("sc-chip-active", on);
+      if (on) links[i].setAttribute("aria-current", "page");
+      else links[i].removeAttribute("aria-current");
     }
   }
 
