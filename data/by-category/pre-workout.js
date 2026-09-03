@@ -836,7 +836,6 @@ var PRODUCTS = [
     },
     "imageUrl": "images/products/ryse-godzilla.jpg",
     "images": [
-      "https://m.media-amazon.com/images/I/718qUjKuwAL._AC_SL1500_.jpg",
       "https://rysesupps.com/cdn/shop/files/sfp-godz-br.png?v=1708540057",
       "https://rysesupps.com/cdn/shop/files/RYSE_AMZ_GZPRE_BR_IMAGE.jpg?v=1747069052&width=800",
       "https://rysesupps.com/cdn/shop/files/RYSE_AMZ_GZPRE_BR_IMAGE_3.jpg?v=1747069052&width=800"
@@ -2261,7 +2260,6 @@ var PRODUCTS = [
     "labelVerified": "July 2026",
     "imageUrl": "images/products/engn-shred.jpg",
     "images": [
-      "https://m.media-amazon.com/images/I/61p2J5qpraL._AC_SL1500_.jpg",
       "https://www.evlnutrition.com/cdn/shop/files/ENGN-SHRED-30SERV-CL_1.jpg",
       "https://www.evlnutrition.com/cdn/shop/files/SFP-ENGN-SHRED-30SERV-CL.jpg",
       "https://www.evlnutrition.com/cdn/shop/files/ENGN-SHRED-30SERV-BR_1_404df98a-7e67-4165-8625-e961750a737f.jpg"

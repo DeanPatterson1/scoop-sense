@@ -17,6 +17,7 @@ worker.js
 # Internal notes and tooling
 docs
 scripts
+data/research
 .handoffs
 .superpowers
 README.md

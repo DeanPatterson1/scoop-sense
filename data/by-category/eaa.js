@@ -1343,7 +1343,7 @@ var PRODUCTS = [
       },
       {
         "name": "Electrolyte blend (sodium, potassium, chloride, calcium, magnesium)",
-        "dose": "See panel",
+        "dose": "amount not stated on label",
         "clinicalNote": "Supports fluid and electrolyte balance during exercise."
       }
     ],

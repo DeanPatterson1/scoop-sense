@@ -644,7 +644,7 @@ var PRODUCTS = [
       },
       {
         "name": "Tart cherry + probiotics (2 billion CFU)",
-        "dose": "amounts as labeled",
+        "dose": "amount not stated on label",
         "clinicalNote": "Recovery-oriented extras printed on the label; the probiotic is a heat-stable Bacillus subtilis strain."
       }
     ],
@@ -2192,11 +2192,6 @@ var PRODUCTS = [
         "name": "Micellar Casein Isolate",
         "dose": "25 g",
         "clinicalNote": "Casein is a slow-digesting milk protein studied for prolonged amino-acid release, often used before extended periods without food such as overnight."
-      },
-      {
-        "name": "Stevia Leaf Extract",
-        "dose": "n/a",
-        "clinicalNote": "A plant-derived non-nutritive sweetener used in place of sugar or artificial sweeteners."
       }
     ],
     "cautions": [
@@ -2781,7 +2776,7 @@ var PRODUCTS = [
   {
     "id": "ghost-whey",
     "name": "Whey Protein",
-    "brand": "GHOST",
+    "brand": "Ghost",
     "category": "protein",
     "stimFree": true,
     "badges": [

@@ -19,7 +19,7 @@
 //                  ("Third-Party Tested" ONLY for a label-verified NSF Certified
 //                  for Sport / Informed Sport / Informed Choice mark)
 //   caffeineMg     number  mg caffeine per full serving (0 if stim-free)
-//   keyIngredients array of 2–4 objects: { name: string, dose: string (with unit,
+//   keyIngredients array of 1–4 objects: { name: string, dose: string (with unit,
 //                  e.g. "8 g" or "350 mg"), clinicalNote: string (plain-English,
 //                  structure/function language only — never disease claims) }
 //   cautions       array of 1–3 short factual strings (rendered as amber chips)
@@ -72,14 +72,19 @@
 //                  a pasted rectangle. MEASURED, never guessed: the corner
 //                  pixels are read in a real browser, because a PNG can carry
 //                  an alpha channel and still be entirely opaque.
-//   imageUrl       string  OPTIONAL — official product image URL published by
-//                  the seller (brand-site or listing CDN). Kept equal to
-//                  images[0]. Hub tile and detail views render it instead of
-//                  the monogram placeholder. Never invent packaging.
-//   images         array of strings OPTIONAL — official seller product image
-//                  URLs, hotlinked from the seller's own CDN, front-of-tub
-//                  shot first. Every URL was checked (HTTP 200 + image
-//                  content-type) when the entry was last verified.
+//   imageUrl       string  OPTIONAL — the locally stored lead image, by
+//                  convention images/products/<id>.jpg (or .png): a
+//                  background-removed render of the real packaging. Hub tile
+//                  and detail views render it instead of the monogram
+//                  placeholder, and it leads the product-page gallery. Never
+//                  invent packaging.
+//   images         array of strings OPTIONAL — the product-page gallery
+//                  slides after the local lead: official brand-site or
+//                  retailer CDN URLs, hotlinked and never re-hosted. No
+//                  Amazon image hosts (m.media-amazon.com) — the Associates
+//                  agreement forbids hotlinking them. Every URL was checked
+//                  (HTTP 200 + image content-type) when the entry was last
+//                  verified.
 //   sources        array of { url, label } OPTIONAL — the label sources
 //                  actually used to research/verify the entry.
 //   metrics        object — REQUIRED for every category except pre-workout;
@@ -931,7 +936,6 @@ const PRODUCTS = [
     },
     imageUrl: "images/products/ryse-godzilla.jpg",
     images: [
-      "https://m.media-amazon.com/images/I/718qUjKuwAL._AC_SL1500_.jpg",
       "https://rysesupps.com/cdn/shop/files/sfp-godz-br.png?v=1708540057",
       "https://rysesupps.com/cdn/shop/files/RYSE_AMZ_GZPRE_BR_IMAGE.jpg?v=1747069052&width=800",
       "https://rysesupps.com/cdn/shop/files/RYSE_AMZ_GZPRE_BR_IMAGE_3.jpg?v=1747069052&width=800"
@@ -2356,7 +2360,6 @@ const PRODUCTS = [
     labelVerified: "July 2026",
     imageUrl: "images/products/engn-shred.jpg",
     images: [
-      "https://m.media-amazon.com/images/I/61p2J5qpraL._AC_SL1500_.jpg",
       "https://www.evlnutrition.com/cdn/shop/files/ENGN-SHRED-30SERV-CL_1.jpg",
       "https://www.evlnutrition.com/cdn/shop/files/SFP-ENGN-SHRED-30SERV-CL.jpg",
       "https://www.evlnutrition.com/cdn/shop/files/ENGN-SHRED-30SERV-BR_1_404df98a-7e67-4165-8625-e961750a737f.jpg"
@@ -5823,7 +5826,7 @@ const PRODUCTS = [
       },
       {
         "name": "Tart cherry + probiotics (2 billion CFU)",
-        "dose": "amounts as labeled",
+        "dose": "amount not stated on label",
         "clinicalNote": "Recovery-oriented extras printed on the label; the probiotic is a heat-stable Bacillus subtilis strain."
       }
     ],
@@ -10108,7 +10111,7 @@ const PRODUCTS = [
       },
       {
         "name": "Electrolyte blend (sodium, potassium, chloride, calcium, magnesium)",
-        "dose": "See panel",
+        "dose": "amount not stated on label",
         "clinicalNote": "Supports fluid and electrolyte balance during exercise."
       }
     ],
@@ -11945,11 +11948,6 @@ const PRODUCTS = [
         "name": "Micellar Casein Isolate",
         "dose": "25 g",
         "clinicalNote": "Casein is a slow-digesting milk protein studied for prolonged amino-acid release, often used before extended periods without food such as overnight."
-      },
-      {
-        "name": "Stevia Leaf Extract",
-        "dose": "n/a",
-        "clinicalNote": "A plant-derived non-nutritive sweetener used in place of sugar or artificial sweeteners."
       }
     ],
     "cautions": [
@@ -12986,7 +12984,7 @@ const PRODUCTS = [
   {
     "id": "ghost-whey",
     "name": "Whey Protein",
-    "brand": "GHOST",
+    "brand": "Ghost",
     "category": "protein",
     "stimFree": true,
     "badges": [

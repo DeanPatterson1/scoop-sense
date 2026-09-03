@@ -926,13 +926,12 @@
     }
 
     if (count) {
-      // First number is always what is on screen, second the set it was drawn
-      // from — the matches while tiles are still held back, otherwise what the
-      // page is scoped to. "2 of 187" is a lie once a category is picked, and
-      // "187 of 187" is a lie while only 24 tiles are drawn.
-      var pool = scopePool().length;
+      // First number is what is on screen, second is what matched — the same
+      // total the "Show more" row paginates over. Swapping in the whole
+      // catalog once everything fits made "16 of 219" sit beside "24 of 62",
+      // two different denominators for the same kind of narrowing.
       count.textContent = "Showing " + page.length + " of " +
-        (left > 0 ? results.length : pool) + " products" +
+        results.length + " products" +
         (isRanked() ? " — closest first" : "");
     }
     if (empty) {
@@ -1408,9 +1407,16 @@
    * pressed Enter. It arrives as ?q=... — read it once, then let
    * writeHashState turn it into the #q= the rest of the filters share, so the
    * address bar does not end up carrying two different filter languages. */
+  // A hash is a stranger's typing, and "#q=%E0" or "?q=100%" is malformed
+  // enough to make decodeURIComponent throw. Uncaught, that escapes init()
+  // and leaves every control on the page dead — better an empty value.
+  function safeDecode(s) {
+    try { return decodeURIComponent(s); } catch (e) { return ""; }
+  }
+
   function readQueryState() {
     var q = /[?&]q=([^&]*)/.exec(location.search);
-    if (q) state.search = decodeURIComponent(q[1].replace(/\+/g, " "));
+    if (q) state.search = safeDecode(q[1].replace(/\+/g, " "));
   }
 
   function readHashState() {
@@ -1423,7 +1429,7 @@
       var legacy = /^cat-([a-z-]+)$/.exec(part);
       if (legacy) { got.cat = legacy[1]; return; }
       var at = part.indexOf("=");
-      if (at > 0) got[part.slice(0, at)] = decodeURIComponent(part.slice(at + 1));
+      if (at > 0) got[part.slice(0, at)] = safeDecode(part.slice(at + 1));
     });
 
     if (!PAGE_CATEGORY && got.cat && CATEGORY_CONFIG[got.cat]) state.category = got.cat;
@@ -1634,6 +1640,10 @@
     }).sort(function (a, b) {
       var va = factSortValue(a, compareState.key);
       var vb = factSortValue(b, compareState.key);
+      // -1 means "not on label". It is not a small number; whichever way the
+      // column is sorted, the gaps belong at the bottom.
+      if (va === -1 && vb !== -1) return 1;
+      if (vb === -1 && va !== -1) return -1;
       if (va < vb) return -1 * compareState.dir;
       if (va > vb) return 1 * compareState.dir;
       return 0;
