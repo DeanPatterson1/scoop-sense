@@ -26,9 +26,13 @@ const existingIds = new Set(PRODUCTS.map((p) => p.id));
 
 const REQUIRED = ["id", "name", "brand", "category", "stimFree", "badges", "caffeineMg",
   "keyIngredients", "cautions", "servings", "priceRange", "flavorsNote", "affiliateUrl",
-  "blurb", "labelVerified", "metrics", "sources"];
+  "blurb", "labelVerified", "sources"];
 
+// Pre-workouts carry no metrics object — the category's figures are the
+// ingredient doses themselves, which every entry already lists. Every other
+// category drives its tiles and compare columns off these keys.
 const METRIC_KEYS = {
+  "pre-workout": [],
   creatine: ["creatineG", "form"],
   protein: ["proteinG", "servingG", "source", "sweetener"],
   eaa: ["eaaG", "bcaaG", "leucineG"],
@@ -66,8 +70,15 @@ for (const cat of Object.keys(METRIC_KEYS)) {
 
     const stims = (p.badges || []).filter((b) => STIM_BADGES.includes(b));
     const extras = (p.badges || []).filter((b) => !STIM_BADGES.includes(b));
-    if (p.caffeineMg > 0 && stims.length !== 1) errors.push(`${tag}: caffeinated but ${stims.length} stim badges`);
-    if (p.caffeineMg === 0 && stims.length > 0) errors.push(`${tag}: stim badge on stim-free non-pre product`);
+    if (cat === "pre-workout") {
+      // Every pre-workout carries a stim badge, stim-free ones included: on this
+      // category the reader is choosing on caffeine, so a missing badge reads as
+      // an omission rather than a zero.
+      if (stims.length !== 1) errors.push(`${tag}: pre-workout needs exactly one stim badge, has ${stims.length}`);
+    } else {
+      if (p.caffeineMg > 0 && stims.length !== 1) errors.push(`${tag}: caffeinated but ${stims.length} stim badges`);
+      if (p.caffeineMg === 0 && stims.length > 0) errors.push(`${tag}: stim badge on stim-free non-pre product`);
+    }
     for (const b of extras) if (!EXTRAS.includes(b)) errors.push(`${tag}: unknown badge "${b}"`);
     if (extras.length > 2) errors.push(`${tag}: more than 2 extra badges`);
 
@@ -80,8 +91,10 @@ for (const cat of Object.keys(METRIC_KEYS)) {
     if (typeof p.affiliateUrl !== "string" || !p.affiliateUrl.startsWith("https://www.amazon.com/s?k=") || !p.affiliateUrl.includes("tag=thescoopsense-20"))
       errors.push(`${tag}: affiliateUrl not in standard search form`);
 
-    if (!p.metrics || typeof p.metrics !== "object") errors.push(`${tag}: metrics missing`);
-    else for (const k of METRIC_KEYS[cat]) if (!(k in p.metrics)) errors.push(`${tag}: metrics.${k} missing`);
+    if (METRIC_KEYS[cat].length) {
+      if (!p.metrics || typeof p.metrics !== "object") errors.push(`${tag}: metrics missing`);
+      else for (const k of METRIC_KEYS[cat]) if (!(k in p.metrics)) errors.push(`${tag}: metrics.${k} missing`);
+    }
 
     const text = JSON.stringify([p.blurb, p.cautions, p.flavorsNote, (p.keyIngredients || []).map((i) => i.clinicalNote)]);
     if (CLAIM_RE.test(text.replace(/not intended to diagnose, treat, cure, or prevent/gi, "")))
@@ -114,7 +127,13 @@ for (const p of all) (byCat[p.category] = byCat[p.category] || []).push(p);
 
 let block = "";
 for (const cat of Object.keys(byCat)) {
-  block += `\n  /* ---- ${cat} (label-verified July 2026) ---- */\n\n`;
+  // The banner reports the batch's own verification month rather than a fixed
+  // date, so a later batch cannot inherit an earlier one's claim.
+  const months = [...new Set(byCat[cat].map((p) => p.labelVerified))].join(", ");
+  block += `
+  /* ---- ${cat} (label-verified ${months}) ---- */
+
+`;
   block += byCat[cat].map(serialize).join(",\n\n") + ",\n";
 }
 

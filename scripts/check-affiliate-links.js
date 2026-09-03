@@ -129,7 +129,13 @@ async function titleOf(url) {
     const nameHits = tokens(p.name).filter((w) => t.includes(w)).length;
 
     const nameWords = tokens(p.name);
-    if (!brandHit && nameWords.length && nameHits === nameWords.length) {
+    // A name made entirely of short or stop words ("C4 Sport") tokenizes to
+    // nothing, so the tokenized test below can never vouch for it. Fall back to
+    // the printed name appearing verbatim in the title, which is the same
+    // evidence a human would accept.
+    const nameLiteral = p.name.toLowerCase().replace(/\s+/g, " ").trim();
+    const literalHit = nameLiteral.length > 3 && t.includes(nameLiteral);
+    if (!brandHit && ((nameWords.length && nameHits === nameWords.length) || literalHit)) {
       // Some brands sell under a line name the listing title uses instead of
       // the company's — Cellucor's listings say "C4", not "Cellucor". The full
       // product name matching is enough to say this is the right tub, but it is

@@ -1448,3 +1448,49 @@ console.log(
     ? `Updated ${stale.length} stale hero figure(s) in index.html\n  ${stale.join("\n  ")}`
     : "Hero figures in index.html already current"
 );
+
+/* ---- "labels verified" window ------------------------------------------
+ *
+ * Three pieces of site copy date the catalog: the homepage's "Labels last
+ * checked" row, each category page's "Labels verified …" line, and the footer
+ * on every page. They were hand-maintained, which meant a batch researched in
+ * a new month silently left the whole site claiming the old one. The window
+ * is the earliest and latest labelVerified month actually on file, so the
+ * claim is always one the data can support. */
+const MONTHS = ["January", "February", "March", "April", "May", "June", "July",
+  "August", "September", "October", "November", "December"];
+
+function monthKey(s) {
+  const m = /^([A-Za-z]+)\s+(\d{4})$/.exec(String(s || "").trim());
+  if (!m) return null;
+  const i = MONTHS.indexOf(m[1]);
+  return i === -1 ? null : Number(m[2]) * 12 + i;
+}
+
+const verifiedMonths = [...new Set(PRODUCTS.map((p) => p.labelVerified).filter((v) => monthKey(v)))]
+  .sort((a, b) => monthKey(a) - monthKey(b));
+const labelWindow = verifiedMonths.length
+  ? (verifiedMonths.length === 1
+      ? verifiedMonths[0]
+      // Same year on both ends: "July–September 2026", not the year twice.
+      : verifiedMonths[0].replace(/ (\d{4})$/, (_, y) =>
+          verifiedMonths[verifiedMonths.length - 1].endsWith(y) ? "" : " " + y)
+        + "\u2013" + verifiedMonths[verifiedMonths.length - 1])
+  : null;
+
+if (labelWindow) {
+  const pages = fs.readdirSync(ROOT).filter((f) => f.endsWith(".html"));
+  const touched = [];
+  for (const f of pages) {
+    const fp = path.join(ROOT, f);
+    const before = fs.readFileSync(fp, "utf8");
+    const after = before
+      .replace(/Labels last reviewed [^<]*/g, `Labels last reviewed ${labelWindow}`)
+      .replace(/Labels verified [^<]*?\./g, `Labels verified ${labelWindow}.`)
+      .replace(/(<dt>Labels last checked<\/dt><dd>)[^<]*/g, (_, open) => open + labelWindow);
+    if (after !== before) { fs.writeFileSync(fp, after); touched.push(f); }
+  }
+  console.log(touched.length
+    ? `Dated ${touched.length} page(s) "${labelWindow}": ${touched.join(", ")}`
+    : `Label window already reads "${labelWindow}" everywhere`);
+}
