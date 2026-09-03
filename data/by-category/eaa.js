@@ -1968,5 +1968,75 @@ var PRODUCTS = [
         "label": "Evlution Nutrition product page"
       }
     ]
+  },
+  {
+    "id": "xtend-eaa-bcaa",
+    "name": "EAA",
+    "brand": "Xtend",
+    "category": "eaa",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "XTEND EAA Amino Blend",
+        "dose": "5 g",
+        "clinicalNote": "Covers all nine essential amino acids, but the per-scoop total sits under the roughly 10 to 15 g used in most free-form EAA research — the label's own two-scoop direction is what reaches 10 g."
+      },
+      {
+        "name": "L-Leucine",
+        "dose": "1.5 g",
+        "clinicalNote": "Below the roughly 2.5 to 3 g leucine amount commonly used to trigger muscle protein synthesis in studies; two scoops reach 3 g."
+      },
+      {
+        "name": "Electrolytes (sodium, potassium)",
+        "dose": "150 mg sodium / 120 mg potassium",
+        "clinicalNote": "A light electrolyte addition for sipping during training, far below the amounts in dedicated hydration mixes."
+      }
+    ],
+    "cautions": [
+      "The 10 g EAA figure on the front of the tub is a two-serving number; one scoop supplies 5 g",
+      "250 mg of the 5 g blend is L-arginine, which is not an essential amino acid",
+      "Sweetened with sucralose and acesulfame potassium"
+    ],
+    "servings": 40,
+    "priceRange": "$$",
+    "flavorsNote": "Four flavors — Mango, Lemon Lime, Blood Orange and Watermelon — sugar-free and sweetened with sucralose plus acesulfame potassium; the 328 g net weight is the Mango tub's, and the others vary a little.",
+    "affiliateUrl": "https://www.amazon.com/dp/B0CYVW51DV?tag=thescoopsense-20",
+    "blurb": "Trades the Original's 7 g of BCAAs for full nine-amino coverage at a smaller total: a 5 g blend per 8.2 g scoop with 1.5 g leucine, every amino spelled out individually, and the headline 10 g EAA claim resting on taking two scoops.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/xtend-eaa-bcaa.jpg",
+    "imageBg": "255,255,255",
+    "images": [
+      "https://cellucor.com/cdn/shop/files/XTEND_1144_Digital_Relabel_FlowThrough_Assets_PDPs_OnGreyBackground-XTEND-EAA-M.png?v=1771558529",
+      "https://cellucor.com/cdn/shop/files/XTEND_1144_Digital_Relabel_FlowThrough_Assets_PDPs_OnGreyBackground-XTEND-EAA-BO.png",
+      "https://cellucor.com/cdn/shop/files/XTEND_1144_Digital_Relabel_FlowThrough_Assets_PDPs_OnGreyBackground-XTEND-EAA-LL.png"
+    ],
+    "metrics": {
+      "netWeightG": 328,
+      "form": "powder tub",
+      "calories": 25,
+      "sodiumMg": 150,
+      "potassiumMg": 120,
+      "eaaG": 5,
+      "bcaaG": 3,
+      "leucineG": 1.5
+    },
+    "sources": [
+      {
+        "url": "https://www.priceplow.com/xtend/eaa",
+        "label": "PricePlow — XTEND EAA Supplement Facts transcription (8.2 g scoop, 5 g blend, per-amino doses)"
+      },
+      {
+        "url": "https://cellucor.com/products/xtend-eaa",
+        "label": "Cellucor (XTEND brand) — official product page: 40 servings, four flavors, current label artwork"
+      },
+      {
+        "url": "https://cellucor.com/cdn/shop/files/XTEND_1144_Digital_Relabel_FlowThrough_Assets_PDPs_OnGreyBackground-XTEND-EAA-M.png?v=1771558529",
+        "label": "Current front-of-tub artwork confirming 10 g EAA per 2 servings, 40 servings, net wt. 328 g (11.6 oz)"
+      }
+    ]
   }
 ];

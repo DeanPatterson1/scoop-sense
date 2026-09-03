@@ -2600,5 +2600,81 @@ var PRODUCTS = [
         "label": "GHOST Lifestyle — official product page and Supplement Facts panel"
       }
     ]
+  },
+  {
+    "id": "nutricost-electrolyte-complex",
+    "name": "Electrolytes Advanced Hydration Complex",
+    "brand": "Nutricost",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Budget Pick"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Potassium (potassium citrate and potassium chloride)",
+        "dose": "260 mg",
+        "clinicalNote": "The larger of the two main electrolytes here; potassium works alongside sodium in normal fluid balance and muscle function."
+      },
+      {
+        "name": "Sodium (sodium citrate and sodium chloride)",
+        "dose": "90 mg",
+        "clinicalNote": "Sodium is the electrolyte lost in the greatest quantity in sweat, and 90 mg is a fraction of the amounts used in heavy-sweat rehydration research."
+      },
+      {
+        "name": "Magnesium (magnesium citrate and di-magnesium malate)",
+        "dose": "40 mg",
+        "clinicalNote": "Magnesium plays a role in normal muscle and nerve function; 40 mg is about a tenth of a day's Daily Value."
+      },
+      {
+        "name": "Vitamin C (ascorbic acid)",
+        "dose": "90 mg",
+        "clinicalNote": "A full Daily Value of vitamin C, alongside B6 and B12 — additions that go beyond a straight electrolyte mix."
+      }
+    ],
+    "cautions": [
+      "At 90 mg sodium per scoop this is a light everyday mix, not a heavy-sweat sodium replacement",
+      "Sweetened with stevia and Reb M, which some people find has a distinct aftertaste",
+      "Blue spirulina is used as a color in some flavors"
+    ],
+    "servings": 120,
+    "priceRange": "$",
+    "flavorsNote": "Nine flavors including Fruit Punch, Grape, Blue Raspberry, Watermelon, Pineapple Ice, Orchard Blast and Strawberry Lemonade, in 60-serving tubs, with Fruit Punch, Grape and Blue Raspberry also sold at 120, sweetened with stevia and Reb M rather than sucralose.",
+    "affiliateUrl": "https://www.amazon.com/dp/B0D5NCFLBV?tag=thescoopsense-20",
+    "blurb": "Potassium-forward rather than sodium-forward — 260 mg potassium against 90 mg sodium in a 4 g scoop — with vitamin C, B6 and B12 folded in, zero sugar claimed on the front of the tub (the panel prints no calorie or sugar row at all), and one of the lowest per-serving costs in the category at the 120-serving size.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/nutricost-electrolyte-complex.jpg",
+    "imageBg": "255,255,255",
+    "images": [
+      "https://nutricost.com/cdn/shop/files/NTC_ElectrolytePowder_BlueRaspberry_120SER_Front_1.jpg?v=1752164968",
+      "https://nutricost.com/cdn/shop/files/NTC_ElectrolytePowder_BlueRaspberry_120SER_SFP_1.jpg?v=1752164968",
+      "https://nutricost.com/cdn/shop/files/NTC_Electrolytes_Grape_60SERV_350CC_Front_Square.jpg?v=1752164968"
+    ],
+    "metrics": {
+      "netWeightG": 468,
+      "form": "powder tub",
+      "servingG": 4,
+      "calciumMg": 30,
+      "sodiumMg": 90,
+      "potassiumMg": 260,
+      "magnesiumMg": 40,
+      "sugarG": 0
+    },
+    "sources": [
+      {
+        "url": "https://nutricost.com/products/electrolytes",
+        "label": "Nutricost — official product page (sizes, flavors, label artwork)"
+      },
+      {
+        "url": "https://nutricost.com/cdn/shop/files/NTC_ElectrolytePowder_BlueRaspberry_120SER_SFP_1.jpg?v=1752164968",
+        "label": "Blue Raspberry 120-serving Supplement Facts panel (4 g scoop; vitamin C 90 mg, B6 1.6 mg, B12 6 mcg, calcium 30 mg, magnesium 40 mg, sodium 90 mg, potassium 260 mg; full other-ingredients list)"
+      },
+      {
+        "url": "https://nutricost.com/cdn/shop/files/NTC_ElectrolytePowder_BlueRaspberry_120SER_Front_1.jpg?v=1752164968",
+        "label": "Front-of-tub artwork: 120 servings, net wt. 16.7 oz (468 g), zero sugar, sweetened with stevia"
+      }
+    ]
   }
 ];

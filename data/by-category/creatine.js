@@ -118,11 +118,6 @@ var PRODUCTS = [
         "name": "Creatine Monohydrate",
         "dose": "5 g",
         "clinicalNote": "Studied for supporting the regeneration of ATP, the energy currency used during short-duration, high-intensity activity, and for supporting cellular energy metabolism in muscle."
-      },
-      {
-        "name": "Micronized creatine monohydrate",
-        "dose": "5 g",
-        "clinicalNote": "Micronized for improved dissolution in water; the label lists creatine monohydrate as the sole ingredient with no sweeteners or fillers."
       }
     ],
     "cautions": [
@@ -435,11 +430,6 @@ var PRODUCTS = [
         "name": "Creatine HCl",
         "dose": "750 mg",
         "clinicalNote": "A hydrochloride salt of creatine studied for high water solubility, which is why the labeled serving is much smaller than a monohydrate scoop."
-      },
-      {
-        "name": "Patented creatine hydrochloride form",
-        "dose": "750 mg",
-        "clinicalNote": "Creatine itself is studied for supporting ATP recycling during short, intense efforts; the HCl form delivers it in a roughly 1 g scoop."
       }
     ],
     "cautions": [
@@ -2427,6 +2417,206 @@ var PRODUCTS = [
       {
         "url": "https://www.optimumnutrition.com/en-us/products/creatine-monohydrate-gummies",
         "label": "Optimum Nutrition — official product page"
+      }
+    ]
+  },
+  {
+    "id": "animal-creatine-chews",
+    "name": "Creatine Chews",
+    "brand": "Animal",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Beginner Friendly"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate",
+        "dose": "5 g (4 chewable tablets)",
+        "clinicalNote": "A full serving is four chews, and together they carry the same 5 g daily dose used in most published creatine research — one chew on its own is only about 1.25 g."
+      },
+      {
+        "name": "AstraGin (Panax notoginseng and Astragalus membranaceus extracts)",
+        "dose": "25 mg (not on every flavor's panel)",
+        "clinicalNote": "A patented botanical pairing sold as an absorption aid at the supplier's usual 25 mg use level; published human data on it is thin next to the decades of research behind the creatine itself."
+      },
+      {
+        "name": "Sea Salt",
+        "dose": "25 mg",
+        "clinicalNote": "Contributes the panel's 10 mg of sodium per serving — a trace amount, far below what an electrolyte product supplies."
+      }
+    ],
+    "cautions": [
+      "A serving is four chewable tablets, not one",
+      "Each serving adds 2 g of sugar and 10 calories, plus sucralose and acesulfame potassium",
+      "Draws water into muscle — drink more water"
+    ],
+    "servings": 30,
+    "priceRange": "$$",
+    "flavorsNote": "Candy-style chews across Fruit Punch, Grape, Watermelon Lime, Lemon Ice, Sour Apple, Smarties and Candy Crush'd, built on a sugar-and-dextrose base with sucralose and acesulfame potassium.",
+    "affiliateUrl": "https://www.amazon.com/dp/B0B4Z5JM25?tag=thescoopsense-20",
+    "blurb": "Four chews carry the full 5 g of monohydrate, so the dose matches a powder scoop, but the candy base brings 2 g of sugar and 10 calories along with it and the bottle holds only 30 servings.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/animal-creatine-chews.jpg",
+    "imageBg": "255,255,255",
+    "images": [
+      "https://www.animalpak.com/cdn/shop/files/01_Listing_Fruit_Punch.jpg",
+      "https://www.animalpak.com/cdn/shop/files/01_Listing_Grape.jpg",
+      "https://www.animalpak.com/cdn/shop/files/00042_CreatineChews_FruitPunch_SuppFacts_1003x1014_056afe05-6739-4744-9b0c-47ae08a9739b.jpg"
+    ],
+    "metrics": {
+      "chewsPerServing": 4,
+      "chewsPerContainer": 120,
+      "calories": 10,
+      "sugarG": 2,
+      "sodiumMg": 10,
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://animalpak.com/products/animal-creatine-chews",
+        "label": "Animal — official product page (\"Four chewable tablets make up one serving\", 5 g creatine monohydrate, AstraGin, sea salt)"
+      },
+      {
+        "url": "https://www.animalpak.com/cdn/shop/files/00042_CreatineChews_FruitPunch_SuppFacts_1003x1014_056afe05-6739-4744-9b0c-47ae08a9739b.jpg",
+        "label": "Animal — Supplement Facts panel, Fruit Punch: 4 chewable tablets, 30 servings, 10 cal, 2 g total sugars, 10 mg sodium, Creatine Monohydrate 5 g, AstraGin 25 mg, Sea Salt 25 mg"
+      },
+      {
+        "url": "https://topnutritionandfitness.com/collections/all-supplements/products/animal-creatine-chews-30-servings",
+        "label": "Top Nutrition and Fitness listing — 120 chews / 30 servings"
+      },
+      {
+        "url": "https://www.vitaminshoppe.com/p/animal-creatine-chews-fruit-punch-120-chewable-tablets/uv-0036",
+        "label": "Vitamin Shoppe listing — Animal Creatine Monohydrate Chews, 120 chewable tablets"
+      }
+    ]
+  },
+  {
+    "id": "ascent-creatine-monohydrate",
+    "name": "Clean Creatine",
+    "brand": "Ascent",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Third-Party Tested",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "Matches the 5 g daily maintenance dose used in most published creatine trials for supporting strength, power and lean mass alongside training."
+      }
+    ],
+    "cautions": [
+      "Draws water into muscle — drink more water",
+      "Label notice: produced on equipment that also processes tree nuts and peanuts",
+      "Talk to your doctor if you have kidney conditions"
+    ],
+    "servings": 45,
+    "priceRange": "$$",
+    "flavorsNote": "Unflavored only; with nothing on the panel but creatine it mixes into a shake or water without adding taste or sweetener.",
+    "affiliateUrl": "https://www.amazon.com/dp/B0FLF8JZQD?tag=thescoopsense-20",
+    "blurb": "5 g of Creapure monohydrate with an Informed Sport mark printed on the tub — batch-level banned-substance testing, which is a different program from the NSF Certified for Sport mark some governing bodies name by name.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/ascent-creatine-monohydrate.jpg",
+    "imageBg": "255,255,255",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0190/2411/7860/files/on_black4_zoom_03c1cc0b-2dca-45df-ae4b-d38be452f169.jpg",
+      "https://cdn.shopify.com/s/files/1/0190/2411/7860/files/ASCN0123_Creatine_Amazon_Carousel_05.png?v=1774995174",
+      "https://cdn.shopify.com/s/files/1/0190/2411/7860/files/ASCN0123_Creatine_Amazon_Carousel_01_A.png?v=1774995174"
+    ],
+    "metrics": {
+      "netWeightG": 225,
+      "certification": "Informed Sport",
+      "creapure": true,
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://www.ascentprotein.com/products/creatine",
+        "label": "Ascent — official product page, Clean Creatine 45 Servings (Net Wt 7.94 oz / 225 g)"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0190/2411/7860/files/ASCN0123_Creatine_Amazon_Carousel_05.png?v=1774995174",
+        "label": "Ascent — Supplement Facts artwork: 1 scoop (5 g), 45 servings, Creapure Creatine Monohydrate 5 g, Other Ingredients: None, Informed Sport mark"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0190/2411/7860/files/on_black4_zoom_03c1cc0b-2dca-45df-ae4b-d38be452f169.jpg",
+        "label": "Ascent — front-of-tub photo showing the Informed Sport and Creapure marks on the label"
+      },
+      {
+        "url": "https://thefeed.com/products/ascent-clean-creatine",
+        "label": "The Feed listing — \"Sport Tested: Informed Sport\""
+      }
+    ]
+  },
+  {
+    "id": "bulksupplements-creatine-monohydrate",
+    "name": "Creatine Monohydrate Micronized Powder",
+    "brand": "BulkSupplements.com",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Budget Pick",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "Sits squarely in the 3-5 g daily maintenance range used in most published creatine research for supporting strength and power output alongside resistance training."
+      }
+    ],
+    "cautions": [
+      "Draws water into muscle — drink more water",
+      "The label measures a serving as 2 tsp (about 5 g), so a gram scale is more accurate than a spoon",
+      "Talk to your doctor if you have kidney conditions"
+    ],
+    "servings": 200,
+    "priceRange": "$",
+    "flavorsNote": "Unflavored only, with no sweeteners or flow agents on the panel, so it takes on the taste of whatever it is mixed into.",
+    "affiliateUrl": "https://www.amazon.com/dp/B00E9M4XEE?tag=thescoopsense-20",
+    "blurb": "Single-ingredient micronized monohydrate in a 1 kg resealable bag — 200 servings at the labeled 5 g, with \"Other Ingredients: None\" printed on the panel. NSF lists this powder in its Certified for Sport database lot by lot, though no sport mark appears on the bag itself.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/bulksupplements-creatine-monohydrate.jpg",
+    "imageBg": "255,255,255",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0114/8869/0276/files/Creatine-Monohydrate-Powder-1kg-Main-Image-V003.jpg?v=1780426647",
+      "https://cdn.shopify.com/s/files/1/0114/8869/0276/files/Creatine-Monohydrate-Powder-500g-Main-Image-V003.jpg?v=1780426647",
+      "https://cdn.shopify.com/s/files/1/0114/8869/0276/files/Creatine-Monohydrate-_Micronized_-Powder-500g-Label-V004.jpg?v=1739485666"
+    ],
+    "metrics": {
+      "netWeightG": 1000,
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://www.nsfsport.com/certified-products/listing-detail.php?id=1796571",
+        "label": "NSF Certified for Sport — listing for Bulk Supplements Creatine Monohydrate Powder Unflavored (certified lot by lot; no mark on the retail bag)"
+      },
+      {
+        "url": "https://www.bulksupplements.com/products/creatine-monohydrate",
+        "label": "BulkSupplements.com — official product page (sizes 100 g through 25 kg, unflavored)"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0114/8869/0276/files/Creatine-Monohydrate-_Micronized_-Powder-500g-Label-V004.jpg?v=1739485666",
+        "label": "BulkSupplements.com — Supplement Facts artwork: serving size 2 tsp (about 5 g), Creatine Monohydrate 5 g, Other Ingredients: None"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0114/8869/0276/files/Creatine-Monohydrate-Powder-1kg-Main-Image-V003.jpg?v=1780426647",
+        "label": "BulkSupplements.com — 1 kg bag artwork: 5 g per serving, 200 servings, Net Wt 35.3 oz (2.2 lb)"
+      },
+      {
+        "url": "https://supp.co/products/bulksupplementscom-creatine-monohydrate-x000h9jj25-e727bc9b-1733422716",
+        "label": "SuppCo listing — serving size 5 g, 200 servings per container"
       }
     ]
   }

@@ -3047,12 +3047,8 @@ const PRODUCTS = [
         "name": "Creatine Monohydrate",
         "dose": "5 g",
         "clinicalNote": "Studied for supporting the regeneration of ATP, the energy currency used during short-duration, high-intensity activity, and for supporting cellular energy metabolism in muscle."
-      },
-      {
-        "name": "Micronized creatine monohydrate",
-        "dose": "5 g",
-        "clinicalNote": "Micronized for improved dissolution in water; the label lists creatine monohydrate as the sole ingredient with no sweeteners or fillers."
       }
+      
     ],
     "cautions": [
       "Draws water into muscle — drink more water",
@@ -3362,12 +3358,8 @@ const PRODUCTS = [
         "name": "Creatine HCl",
         "dose": "750 mg",
         "clinicalNote": "A hydrochloride salt of creatine studied for high water solubility, which is why the labeled serving is much smaller than a monohydrate scoop."
-      },
-      {
-        "name": "Patented creatine hydrochloride form",
-        "dose": "750 mg",
-        "clinicalNote": "Creatine itself is studied for supporting ATP recycling during short, intense efforts; the HCl form delivers it in a roughly 1 g scoop."
       }
+      
     ],
     "cautions": [
       "Most long-term saturation research was done on monohydrate, not HCl",
@@ -12512,6 +12504,1027 @@ const PRODUCTS = [
       {
         "url": "https://www.target.com/p/levels-grass-fed-whey-protein-powder-vanilla-23-7oz/-/A-92988645",
         "label": "Target listing (Nutrition Facts panel)"
+      }
+    ]
+  },
+
+  /* ---- pre-workout (label-verified September 2026) ---- */
+
+  {
+    "id": "cellucor-c4-sport",
+    "name": "C4 Sport",
+    "brand": "Cellucor",
+    "category": "pre-workout",
+    "stimFree": false,
+    "badges": [
+      "Moderate Stim",
+      "Third-Party Tested",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 200,
+    "keyIngredients": [
+      {
+        "name": "Beta-Alanine",
+        "dose": "2 g",
+        "clinicalNote": "Under the 3.2 g/day used in most beta-alanine research, though the ingredient works off cumulative daily intake over weeks rather than any single serving."
+      },
+      {
+        "name": "L-Arginine",
+        "dose": "2 g",
+        "clinicalNote": "Well under the amounts used in arginine blood-flow research, and arginine is absorbed less efficiently than the citrulline most pumps formulas now use."
+      },
+      {
+        "name": "Creatine Nitrate",
+        "dose": "1 g",
+        "clinicalNote": "Far below the 3-5 g daily amount used in creatine research, and nitrate-bound creatine carries less creatine by weight than monohydrate."
+      },
+      {
+        "name": "Caffeine Anhydrous",
+        "dose": "200 mg",
+        "clinicalNote": "A mid-range dose, roughly what most caffeine performance studies use for an average-sized adult."
+      }
+    ],
+    "cautions": [
+      "Beta-alanine tingles are possible at 2 g",
+      "The 1 g of creatine nitrate is a fraction of a standalone creatine serving, so it does not replace a separate creatine supplement",
+      "Carries 225 mg sodium and 340 mg chloride per scoop from added sea salt — worth noting if you track sodium"
+    ],
+    "servings": 20,
+    "priceRange": "$$",
+    "flavorsNote": "A rotating candy-and-punch lineup (Watermelon, Icy Blue Razz, Uncle Samberry, Frozen Bombsicle); zero sugar, sweetened with sucralose and acesulfame potassium and colored with spirulina extract instead of artificial dye.",
+    "affiliateUrl": "https://www.amazon.com/dp/B0D7N11ML9?tag=thescoopsense-20",
+    "blurb": "One of the few pre-workouts that actually carries the NSF Certified for Sport mark on the tub, which is the reason to buy it if you are drug-tested. The dosing is the trade-off: the panel prints every number, but beta-alanine at 2 g, arginine at 2 g and creatine nitrate at 1 g all sit below the amounts used in research. The current 5th-generation label runs 200 mg caffeine; older 135 mg panels still circulate.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/cellucor-c4-sport.jpg",
+    "images": [
+      "https://cellucor.com/cdn/shop/files/C4AN_1002_Brand_C4YellowLabel_Transition_C4Sport_CoreFlavors_BasicPDPs-Sport-WM-Hero-Grey.png",
+      "https://cellucor.com/cdn/shop/files/C4AN_1002_Brand_C4YellowLabel_Transition_C4Sport_CoreFlavors_StylizedPDPs-Sport-WM-NFP-Fun.png",
+      "https://cellucor.com/cdn/shop/files/C4AN_1009_Digital_C4Sport_FrozenBomb_LaunchAssets_PDPs-20serv-Sport-FB-Hero-Grey.png"
+    ],
+    "sources": [
+      {
+        "url": "https://cellucor.com/products/c4-sport",
+        "label": "Cellucor — official product page"
+      },
+      {
+        "url": "https://cellucor.com/cdn/shop/files/C4AN_1002_Brand_C4YellowLabel_Transition_C4Sport_CoreFlavors_StylizedPDPs-Sport-WM-NFP-Fun.png",
+        "label": "Cellucor — supplement facts panel image, 5th Gen formula (primary label source)"
+      },
+      {
+        "url": "https://www.nsfsport.com/certified-products/search-results.php?keyword=C4+Sport",
+        "label": "NSF Certified for Sport — certified product database listing for C4 Sport"
+      }
+    ]
+  },
+
+  {
+    "id": "gat-sport-nitraflex",
+    "name": "Nitraflex Advanced",
+    "brand": "GAT Sport",
+    "category": "pre-workout",
+    "stimFree": false,
+    "badges": [
+      "High Stim",
+      "Proprietary Blend"
+    ],
+    "caffeineMg": 325,
+    "keyIngredients": [
+      {
+        "name": "Caffeine Anhydrous",
+        "dose": "325 mg",
+        "clinicalNote": "Disclosed in the panel's footnote rather than inside the blend it belongs to; a high dose for a single 9.5 g scoop, and the label caps you at one scoop per 24 hours."
+      },
+      {
+        "name": "Nitrosigine",
+        "dose": "1,000 mg",
+        "clinicalNote": "The figure printed on the front of the tub, not on the Supplement Facts panel; Nitrosigine research generally uses 1,500 mg/day."
+      },
+      {
+        "name": "Beta-Alanine",
+        "dose": "1.5 g",
+        "clinicalNote": "Also a front-panel figure. Under half the 3.2 g/day used in most beta-alanine research."
+      },
+      {
+        "name": "Boron Citrate",
+        "dose": "200 mg",
+        "clinicalNote": "The only active besides caffeine that the Supplement Facts panel breaks out on its own line."
+      }
+    ],
+    "cautions": [
+      "Two proprietary blends totaling 6,321 mg — on the Supplement Facts panel only caffeine (325 mg) and boron citrate (200 mg) carry disclosed doses",
+      "Contains Rauwolfia vomitoria root extract, an added stimulant, at an undisclosed amount inside the energy blend",
+      "The label's own limits: start at half a scoop, no more than one scoop in 24 hours, none within 5 hours of bedtime, and a week off after eight weeks"
+    ],
+    "servings": 30,
+    "priceRange": "$$",
+    "flavorsNote": "Six flavors (Blue Raspberry, Fruit Punch, Grape, Green Apple, Watermelon, Black Cherry); sweetened with sucralose, acesulfame potassium and a natural blend of erythritol and fructooligosaccharides, with no artificial colors.",
+    "affiliateUrl": "https://www.amazon.com/dp/B007P7DOT0?tag=thescoopsense-20",
+    "blurb": "A split label. The front of the tub prints four numbers — 325 mg caffeine, 1,000 mg Nitrosigine, 1,500 mg beta-alanine, 200 mg boron citrate — while the Supplement Facts panel still folds everything else into a 3,700 mg pump blend and a 2,621 mg energy blend, so the L-citrulline, tyrosine, theanine and Rauwolfia amounts are anyone's guess.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/gat-sport-nitraflex.jpg",
+    "images": [
+      "https://gatsport.com/cdn/shop/files/nitraflex-advanced-827805.png",
+      "https://gatsport.com/cdn/shop/files/GAT-1001_P0GUP7CB_US_ISP_02.webp",
+      "https://gatsport.com/cdn/shop/files/nitraflex-advanced-br-pre-workout-611785.jpg"
+    ],
+    "sources": [
+      {
+        "url": "https://gatsport.com/products/nitraflex",
+        "label": "GAT Sport — official product page (Nitraflex Advanced)"
+      },
+      {
+        "url": "https://gatsport.com/cdn/shop/files/GAT-1001_P0GUP7CB_US_ISP_02.webp",
+        "label": "GAT Sport — supplement facts panel image (primary label source)"
+      },
+      {
+        "url": "https://gatsport.com/cdn/shop/files/nitraflex-advanced-827805.png",
+        "label": "GAT Sport — front-of-tub image showing the disclosed dose callouts"
+      }
+    ]
+  },
+
+  {
+    "id": "jacked-factory-nitrosurge",
+    "name": "Nitrosurge",
+    "brand": "Jacked Factory",
+    "category": "pre-workout",
+    "stimFree": false,
+    "badges": [
+      "High Stim",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 360,
+    "keyIngredients": [
+      {
+        "name": "L-Citrulline (Fermented)",
+        "dose": "6 g",
+        "clinicalNote": "At the full two-scoop serving this sits inside the 6-8 g range used in most L-citrulline studies; a single scoop delivers 3 g, which is under it."
+      },
+      {
+        "name": "Beta-Alanine",
+        "dose": "3.2 g",
+        "clinicalNote": "Matches the 3.2 g/day amount used in most beta-alanine research at two scoops — expect tingles."
+      },
+      {
+        "name": "Betaine Anhydrous",
+        "dose": "2.5 g",
+        "clinicalNote": "Matches the 2.5 g amount used in most betaine studies, again only at the two-scoop serving."
+      },
+      {
+        "name": "Caffeine Anhydrous",
+        "dose": "360 mg",
+        "clinicalNote": "A high dose, paired with 180 mg L-theanine — half the caffeine amount, below the 1:1 theanine-to-caffeine ratio used in most focus research."
+      }
+    ],
+    "cautions": [
+      "360 mg caffeine is the FULL two-scoop serving; the label prints a one-scoop column at exactly half (180 mg)",
+      "The doses advertised on the front of the tub are two-scoop figures, but the '30 servings' count on the same tub counts single scoops — at label strength it is 15 workouts",
+      "Beta-alanine tingles (harmless skin prickling) are likely at the full 3.2 g"
+    ],
+    "servings": 15,
+    "priceRange": "$$",
+    "flavorsNote": "A dozen-plus flavors including sour and dessert options; sweetened with sucralose alone and colored with beet root powder rather than artificial dyes.",
+    "affiliateUrl": "https://www.amazon.com/dp/B07SNTQ7QQ?tag=thescoopsense-20",
+    "blurb": "Every dose is printed, but in two columns, and the two columns tell different stories. The 6 g citrulline, 3.2 g beta-alanine and 2.5 g betaine on the front of the tub are all two-scoop numbers; the '30 servings' claim beside them counts single scoops, which land at half of each.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/jacked-factory-nitrosurge.jpg",
+    "images": [
+      "https://www.jackedfactory.com/cdn/shop/files/JF-140_Nitrosurge_US_GreenApple_30_1.3_Front.png",
+      "https://www.jackedfactory.com/cdn/shop/files/Nitrosurge_Optimized_ProductImage_5_SFP_CL.png",
+      "https://www.jackedfactory.com/cdn/shop/files/NS_Watermelon_Front_1_5453598f-8e8c-4d91-b972-a846cb7cdf5d.png",
+      "https://www.jackedfactory.com/cdn/shop/files/JF_Nitrosurge_Grape_1.png"
+    ],
+    "sources": [
+      {
+        "url": "https://www.jackedfactory.com/products/nitrosurge",
+        "label": "Jacked Factory — official product page"
+      },
+      {
+        "url": "https://www.jackedfactory.com/cdn/shop/files/Nitrosurge_Optimized_ProductImage_5_SFP_CL.png",
+        "label": "Jacked Factory — supplement facts panel image (primary label source)"
+      },
+      {
+        "url": "https://www.jackedfactory.com/cdn/shop/files/JF-140_Nitrosurge_US_GreenApple_30_1.3_Front.png",
+        "label": "Jacked Factory — front-of-tub image showing the two-scoop dose callouts"
+      }
+    ]
+  },
+
+  {
+    "id": "ryse-loaded-pre",
+    "name": "Loaded Pre",
+    "brand": "RYSE",
+    "category": "pre-workout",
+    "stimFree": false,
+    "badges": [
+      "High Stim",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 300,
+    "keyIngredients": [
+      {
+        "name": "L-Citrulline",
+        "dose": "4.5 g",
+        "clinicalNote": "Under the 6–8 g used in most citrulline blood-flow studies, and no citrulline malate or nitrate is stacked on top of it."
+      },
+      {
+        "name": "Beta-Alanine",
+        "dose": "3.2 g",
+        "clinicalNote": "Exactly the 3.2 g daily amount used in carnosine-loading research — tingles are expected at this dose."
+      },
+      {
+        "name": "Caffeine (two forms)",
+        "dose": "300 mg",
+        "clinicalNote": "270 mg caffeine anhydrous plus 30 mg zümXR extended-release caffeine, both broken out underneath the 300 mg RYSE Energy Fuel line."
+      },
+      {
+        "name": "Choline (as VitaCholine choline bitartrate)",
+        "dose": "500 mg choline bitartrate (200 mg choline)",
+        "clinicalNote": "The panel prints both the salt and the choline it yields; bitartrate carries less choline per gram than alpha-GPC does."
+      }
+    ],
+    "cautions": [
+      "300 mg caffeine in one scoop — three-quarters of the FDA's 400 mg daily reference amount for healthy adults, before any coffee",
+      "3.2 g beta-alanine — tingles expected",
+      "The brand's own bullet copy still advertises 3.5 g beta-alanine, 120 mg zümXR and a 390 mg caffeine total; the V5 panel printed on the tub says 3.2 g, 30 mg and 300 mg"
+    ],
+    "servings": 30,
+    "priceRange": "$$",
+    "flavorsNote": "Twenty-plus licensed candy, drink and freezer-pop collaboration flavors (Airheads, Popsicle Firecracker, SunnyD, Kool-Aid, Sour Punch, Ring Pop, Bazooka, Jell-O); sweetened with sucralose and acesulfame potassium, and scoop weight runs about 12–14 g depending on flavor while the active doses stay identical.",
+    "affiliateUrl": "https://www.amazon.com/dp/B0B94TDV83?tag=thescoopsense-20",
+    "blurb": "The current V5 panel puts 300 mg of caffeine (270 mg anhydrous plus 30 mg extended-release) behind 4.5 g of citrulline and a textbook 3.2 g of beta-alanine, with 100 mg theobromine and 50 mg L-theanine alongside — a step down from the 390 mg version that retailer listings and the brand's own bullets still describe.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/ryse-loaded-pre.jpg",
+    "images": [
+      "https://rysesupps.com/cdn/shop/files/cf_30s_1_noshadow_f52b4b21-747c-4a35-8109-009406f3e783.png",
+      "https://rysesupps.com/cdn/shop/files/cc_30s_1_noshadow_e4b56ac8-0318-403d-a1b3-1ca111bc04b0.png",
+      "https://rysesupps.com/cdn/shop/files/fc_30s_1_noshadow.png"
+    ],
+    "sources": [
+      {
+        "url": "https://rysesupps.com/products/loaded-pre",
+        "label": "RYSE Supps — Loaded Pre product page (Airheads Cherry and Cotton Candy Supplement Facts panels, V5 SKUs)"
+      },
+      {
+        "url": "https://supplementsuperstores.com/products/ryse-loaded-pre",
+        "label": "Supplement Superstores listing (Popsicle Firecracker label image — same panel, 12.1 g scoop)"
+      }
+    ]
+  },
+
+  /* ---- creatine (label-verified September 2026) ---- */
+
+  {
+    "id": "animal-creatine-chews",
+    "name": "Creatine Chews",
+    "brand": "Animal",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Beginner Friendly"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate",
+        "dose": "5 g (4 chewable tablets)",
+        "clinicalNote": "A full serving is four chews, and together they carry the same 5 g daily dose used in most published creatine research — one chew on its own is only about 1.25 g."
+      },
+      {
+        "name": "AstraGin (Panax notoginseng and Astragalus membranaceus extracts)",
+        "dose": "25 mg (not on every flavor's panel)",
+        "clinicalNote": "A patented botanical pairing sold as an absorption aid at the supplier's usual 25 mg use level; published human data on it is thin next to the decades of research behind the creatine itself."
+      },
+      {
+        "name": "Sea Salt",
+        "dose": "25 mg",
+        "clinicalNote": "Contributes the panel's 10 mg of sodium per serving — a trace amount, far below what an electrolyte product supplies."
+      }
+    ],
+    "cautions": [
+      "A serving is four chewable tablets, not one",
+      "Each serving adds 2 g of sugar and 10 calories, plus sucralose and acesulfame potassium",
+      "Draws water into muscle — drink more water"
+    ],
+    "servings": 30,
+    "priceRange": "$$",
+    "flavorsNote": "Candy-style chews across Fruit Punch, Grape, Watermelon Lime, Lemon Ice, Sour Apple, Smarties and Candy Crush'd, built on a sugar-and-dextrose base with sucralose and acesulfame potassium.",
+    "affiliateUrl": "https://www.amazon.com/dp/B0B4Z5JM25?tag=thescoopsense-20",
+    "blurb": "Four chews carry the full 5 g of monohydrate, so the dose matches a powder scoop, but the candy base brings 2 g of sugar and 10 calories along with it and the bottle holds only 30 servings.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/animal-creatine-chews.jpg",
+    "imageBg": "255,255,255",
+    "images": [
+      "https://www.animalpak.com/cdn/shop/files/01_Listing_Fruit_Punch.jpg",
+      "https://www.animalpak.com/cdn/shop/files/01_Listing_Grape.jpg",
+      "https://www.animalpak.com/cdn/shop/files/00042_CreatineChews_FruitPunch_SuppFacts_1003x1014_056afe05-6739-4744-9b0c-47ae08a9739b.jpg"
+    ],
+    "metrics": {
+      "chewsPerServing": 4,
+      "chewsPerContainer": 120,
+      "calories": 10,
+      "sugarG": 2,
+      "sodiumMg": 10,
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://animalpak.com/products/animal-creatine-chews",
+        "label": "Animal — official product page (\"Four chewable tablets make up one serving\", 5 g creatine monohydrate, AstraGin, sea salt)"
+      },
+      {
+        "url": "https://www.animalpak.com/cdn/shop/files/00042_CreatineChews_FruitPunch_SuppFacts_1003x1014_056afe05-6739-4744-9b0c-47ae08a9739b.jpg",
+        "label": "Animal — Supplement Facts panel, Fruit Punch: 4 chewable tablets, 30 servings, 10 cal, 2 g total sugars, 10 mg sodium, Creatine Monohydrate 5 g, AstraGin 25 mg, Sea Salt 25 mg"
+      },
+      {
+        "url": "https://topnutritionandfitness.com/collections/all-supplements/products/animal-creatine-chews-30-servings",
+        "label": "Top Nutrition and Fitness listing — 120 chews / 30 servings"
+      },
+      {
+        "url": "https://www.vitaminshoppe.com/p/animal-creatine-chews-fruit-punch-120-chewable-tablets/uv-0036",
+        "label": "Vitamin Shoppe listing — Animal Creatine Monohydrate Chews, 120 chewable tablets"
+      }
+    ]
+  },
+
+  {
+    "id": "ascent-creatine-monohydrate",
+    "name": "Clean Creatine",
+    "brand": "Ascent",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Third-Party Tested",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "Matches the 5 g daily maintenance dose used in most published creatine trials for supporting strength, power and lean mass alongside training."
+      }
+      
+    ],
+    "cautions": [
+      "Draws water into muscle — drink more water",
+      "Label notice: produced on equipment that also processes tree nuts and peanuts",
+      "Talk to your doctor if you have kidney conditions"
+    ],
+    "servings": 45,
+    "priceRange": "$$",
+    "flavorsNote": "Unflavored only; with nothing on the panel but creatine it mixes into a shake or water without adding taste or sweetener.",
+    "affiliateUrl": "https://www.amazon.com/dp/B0FLF8JZQD?tag=thescoopsense-20",
+    "blurb": "5 g of Creapure monohydrate with an Informed Sport mark printed on the tub — batch-level banned-substance testing, which is a different program from the NSF Certified for Sport mark some governing bodies name by name.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/ascent-creatine-monohydrate.jpg",
+    "imageBg": "255,255,255",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0190/2411/7860/files/on_black4_zoom_03c1cc0b-2dca-45df-ae4b-d38be452f169.jpg",
+      "https://cdn.shopify.com/s/files/1/0190/2411/7860/files/ASCN0123_Creatine_Amazon_Carousel_05.png?v=1774995174",
+      "https://cdn.shopify.com/s/files/1/0190/2411/7860/files/ASCN0123_Creatine_Amazon_Carousel_01_A.png?v=1774995174"
+    ],
+    "metrics": {
+      "netWeightG": 225,
+      "certification": "Informed Sport",
+      "creapure": true,
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://www.ascentprotein.com/products/creatine",
+        "label": "Ascent — official product page, Clean Creatine 45 Servings (Net Wt 7.94 oz / 225 g)"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0190/2411/7860/files/ASCN0123_Creatine_Amazon_Carousel_05.png?v=1774995174",
+        "label": "Ascent — Supplement Facts artwork: 1 scoop (5 g), 45 servings, Creapure Creatine Monohydrate 5 g, Other Ingredients: None, Informed Sport mark"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0190/2411/7860/files/on_black4_zoom_03c1cc0b-2dca-45df-ae4b-d38be452f169.jpg",
+        "label": "Ascent — front-of-tub photo showing the Informed Sport and Creapure marks on the label"
+      },
+      {
+        "url": "https://thefeed.com/products/ascent-clean-creatine",
+        "label": "The Feed listing — \"Sport Tested: Informed Sport\""
+      }
+    ]
+  },
+
+  {
+    "id": "bulksupplements-creatine-monohydrate",
+    "name": "Creatine Monohydrate Micronized Powder",
+    "brand": "BulkSupplements.com",
+    "category": "creatine",
+    "stimFree": true,
+    "badges": [
+      "Budget Pick",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "Sits squarely in the 3-5 g daily maintenance range used in most published creatine research for supporting strength and power output alongside resistance training."
+      }
+      
+    ],
+    "cautions": [
+      "Draws water into muscle — drink more water",
+      "The label measures a serving as 2 tsp (about 5 g), so a gram scale is more accurate than a spoon",
+      "Talk to your doctor if you have kidney conditions"
+    ],
+    "servings": 200,
+    "priceRange": "$",
+    "flavorsNote": "Unflavored only, with no sweeteners or flow agents on the panel, so it takes on the taste of whatever it is mixed into.",
+    "affiliateUrl": "https://www.amazon.com/dp/B00E9M4XEE?tag=thescoopsense-20",
+    "blurb": "Single-ingredient micronized monohydrate in a 1 kg resealable bag — 200 servings at the labeled 5 g, with \"Other Ingredients: None\" printed on the panel. NSF lists this powder in its Certified for Sport database lot by lot, though no sport mark appears on the bag itself.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/bulksupplements-creatine-monohydrate.jpg",
+    "imageBg": "255,255,255",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0114/8869/0276/files/Creatine-Monohydrate-Powder-1kg-Main-Image-V003.jpg?v=1780426647",
+      "https://cdn.shopify.com/s/files/1/0114/8869/0276/files/Creatine-Monohydrate-Powder-500g-Main-Image-V003.jpg?v=1780426647",
+      "https://cdn.shopify.com/s/files/1/0114/8869/0276/files/Creatine-Monohydrate-_Micronized_-Powder-500g-Label-V004.jpg?v=1739485666"
+    ],
+    "metrics": {
+      "netWeightG": 1000,
+      "creatineG": 5,
+      "form": "monohydrate"
+    },
+    "sources": [
+      {
+        "url": "https://www.nsfsport.com/certified-products/listing-detail.php?id=1796571",
+        "label": "NSF Certified for Sport — listing for Bulk Supplements Creatine Monohydrate Powder Unflavored (certified lot by lot; no mark on the retail bag)"
+      },
+      {
+        "url": "https://www.bulksupplements.com/products/creatine-monohydrate",
+        "label": "BulkSupplements.com — official product page (sizes 100 g through 25 kg, unflavored)"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0114/8869/0276/files/Creatine-Monohydrate-_Micronized_-Powder-500g-Label-V004.jpg?v=1739485666",
+        "label": "BulkSupplements.com — Supplement Facts artwork: serving size 2 tsp (about 5 g), Creatine Monohydrate 5 g, Other Ingredients: None"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0114/8869/0276/files/Creatine-Monohydrate-Powder-1kg-Main-Image-V003.jpg?v=1780426647",
+        "label": "BulkSupplements.com — 1 kg bag artwork: 5 g per serving, 200 servings, Net Wt 35.3 oz (2.2 lb)"
+      },
+      {
+        "url": "https://supp.co/products/bulksupplementscom-creatine-monohydrate-x000h9jj25-e727bc9b-1733422716",
+        "label": "SuppCo listing — serving size 5 g, 200 servings per container"
+      }
+    ]
+  },
+
+  /* ---- protein (label-verified September 2026) ---- */
+
+  {
+    "id": "ghost-whey",
+    "name": "Whey Protein",
+    "brand": "GHOST",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Whey protein blend (whey isolate, whey concentrate, hydrolyzed whey isolate)",
+        "dose": "25 g",
+        "clinicalNote": "Isolate is listed first and the hydrolysate last, and 25 g per scoop sits inside the 20–40 g per-serving range used in muscle protein synthesis research."
+      },
+      {
+        "name": "Digestive enzymes (proteases, bromelain, lactase)",
+        "dose": "amount not stated on label",
+        "clinicalNote": "Lactase is the enzyme that acts on lactose, but the label prints no enzyme weight or activity unit, so the amount cannot be compared to research doses."
+      },
+      {
+        "name": "Sucralose",
+        "dose": "amount not stated on label",
+        "clinicalNote": "The only high-intensity sweetener in the ingredient list; the 2 g of added sugar on the collab panels comes from the cereal and cookie inclusions, not from the protein blend."
+      }
+    ],
+    "cautions": [
+      "Contains milk — the blend is whey isolate, concentrate and hydrolyzed isolate",
+      "Scoop weight and added sugar move by flavor: Lucky Charms Cereal Milk is a 35 g scoop at 130 calories, Chocolate Chip Cookies a 39 g scoop at 150, both with 2 g added sugar — Trix is a 33.5 g scoop with none",
+      "Brand product page carries a California Prop 65 lead-exposure notice"
+    ],
+    "servings": 26,
+    "priceRange": "$$$",
+    "flavorsNote": "Nine flavors, most of them licensed cereal and dessert collaborations (Lucky Charms Cereal Milk, Cocoa Puffs, Trix, Cinnabon, Chocolate Chip Cookies) alongside plain Cereal Milk, Milk Chocolate and Coffee Ice Cream; sucralose is the only high-intensity sweetener listed.",
+    "affiliateUrl": "https://www.amazon.com/dp/B0BYBB4HF7?tag=thescoopsense-20",
+    "blurb": "Protein holds at 25 g across the range; almost nothing else does. Cereal Milk is a 2 lb (924 g) tub on a 35 g scoop, Chocolate Chip Cookies a 2.2 lb (1014 g) tub on a 39 g one — the tub grows with the scoop, and the extra weight goes to the licensed inclusions rather than to whey.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/ghost-whey.jpg",
+    "images": [
+      "https://www.ghostlifestyle.com/cdn/shop/files/WheyCerealMilk_27054e9f-840f-49e0-acc9-29340a5b6d60.webp",
+      "https://www.ghostlifestyle.com/cdn/shop/files/WheyCerealMilkBack_69ae70ad-0e7e-4c44-a40c-60a7884b6c7c.webp",
+      "https://www.ghostlifestyle.com/cdn/shop/files/GHOST_Whey_LuckyCharms_NFP.png"
+    ],
+    "metrics": {
+      "proteinG": 25,
+      "servingG": 35,
+      "source": "whey isolate, concentrate, and hydrolysate blend",
+      "sweetener": "sucralose"
+    },
+    "sources": [
+      {
+        "url": "https://www.ghostlifestyle.com/products/ghost-whey",
+        "label": "GHOST — WHEY product page (Lucky Charms Cereal Milk and Chocolate Chip Cookies Nutrition Facts panels and ingredient lists)"
+      },
+      {
+        "url": "https://www.ghostlifestyle.com/products/ghost-whey-cereal-milk",
+        "label": "GHOST — WHEY Cereal Milk page (front-of-tub: 26 servings, net wt. 2 lb / 924 g, 130 calories, 25 g protein)"
+      }
+    ]
+  },
+
+  {
+    "id": "jym-pro-jym",
+    "name": "Pro JYM",
+    "brand": "JYM Supplement Science",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Whey protein isolate",
+        "dose": "8.5 g",
+        "clinicalNote": "The fastest-absorbing fraction of the blend; whey is the protein most often used in post-training muscle protein synthesis research."
+      },
+      {
+        "name": "Micellar casein",
+        "dose": "7.75 g",
+        "clinicalNote": "Digests slowly, which is why casein is the protein studied for overnight and between-meal amino acid delivery."
+      },
+      {
+        "name": "Milk protein isolate",
+        "dose": "7.75 g",
+        "clinicalNote": "Naturally around 80 percent casein and 20 percent whey, bridging the fast and slow fractions in the same scoop."
+      }
+      
+    ],
+    "cautions": [
+      "Contains milk and soy, and is produced on equipment that also processes products containing egg",
+      "Sweetened with sucralose and acesulfame potassium",
+      "Protein powders supplement food intake, not replace it"
+    ],
+    "servings": 45,
+    "priceRange": "$$$",
+    "flavorsNote": "Eight flavors including Tahitian Vanilla Bean, Chocolate Cookie Crunch, Chocolate Mousse, Rocky Road, Caramel Frappe and S'mores, all sweetened with sucralose and acesulfame potassium; figures verified against the Tahitian Vanilla Bean 45-serving panel (36 g scoop, 140 calories) — Chocolate Cookie Crunch runs a heavier 42 g scoop at 160 calories and Chocolate Mousse a 39 g one at 150, all for the same 24 g of protein.",
+    "affiliateUrl": "https://www.amazon.com/dp/B07TSJLF39?tag=thescoopsense-20",
+    "blurb": "One of the few blends that prints the gram weight of each protein source on the front of the bag — 8.5 g whey isolate, 7.75 g micellar casein, 7.75 g milk protein isolate — so the 24 g total is traceable to its parts instead of hidden inside a blend line; note the current formula is three dairy sources, with the egg white protein of earlier versions gone.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/jym-pro-jym.jpg",
+    "images": [
+      "https://jymsupplementscience.com/cdn/shop/files/PRJ04VA20024285060422V1.1i_Front_Shadow-1200px_70e4d6f2-09fb-4f4a-a868-5652519a82bc.png?v=1770998535",
+      "https://jymsupplementscience.com/cdn/shop/files/PRJ04VA20024285060422V1.1i_BACK_SHADOW-1200px.png?v=1770998535",
+      "https://jymsupplementscience.com/cdn/shop/files/PRJ04CR20024438060422V1.1ii_FRONT_SHADOW-1200.png?v=1770998589"
+    ],
+    "metrics": {
+      "calories": 140,
+      "fatG": 3,
+      "carbsG": 4,
+      "sugarsG": 1,
+      "form": "powder bag",
+      "proteinG": 24,
+      "servingG": 36,
+      "source": "dairy blend — whey protein isolate, micellar casein, milk protein isolate",
+      "sweetener": "sucralose + acesulfame K"
+    },
+    "sources": [
+      {
+        "url": "https://jymsupplementscience.com/products/pro-jym-protein-powder",
+        "label": "JYM Supplement Science — official product page (per-source gram breakdown, sizes, flavors)"
+      },
+      {
+        "url": "https://jymsupplementscience.com/cdn/shop/files/PRJ04VA20024285060422V1.1i_BACK_SHADOW-1200px.png?v=1770998535",
+        "label": "Pro JYM Tahitian Vanilla Bean 45-serving back panel (Supplement Facts and full ingredient list)"
+      },
+      {
+        "url": "https://jymsupplementscience.com/cdn/shop/files/PRJ02CR200_24414_060422_V1.1ii_BACK_SHADOW-1200.png?v=1752648448",
+        "label": "Pro JYM Chocolate Cookie Crunch 22-serving back panel (42 g scoop comparison)"
+      }
+    ]
+  },
+
+  {
+    "id": "ryse-loaded-protein",
+    "name": "Loaded Protein",
+    "brand": "RYSE",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Whey protein blend (instantized whey isolate, then whey concentrate)",
+        "dose": "25 g",
+        "clinicalNote": "Isolate is listed ahead of concentrate, and 25 g per scoop sits inside the 20–40 g per-serving range used in muscle protein synthesis research."
+      },
+      {
+        "name": "MCT powder (medium-chain triglycerides from palm kernel and coconut oil)",
+        "dose": "amount not stated on label",
+        "clinicalNote": "Listed third, ahead of the flavor system, but the panel discloses only the 2.5 g total fat figure — the MCT share of it is not broken out."
+      },
+      {
+        "name": "Organic agave inulin (prebiotic fiber)",
+        "dose": "1 g dietary fiber per serving",
+        "clinicalNote": "Inulin is a prebiotic fiber; the 1 g on this panel is well under the several grams a day used in gut-microbiome research."
+      }
+    ],
+    "cautions": [
+      "Contains milk, and the rest of the list moves by flavor — Vanilla Ice Cream carries soy and/or sunflower lecithin, Jet-Puffed Marshmallow sodium caseinate with sunflower lecithin",
+      "Sweetened with sucralose and acesulfame potassium",
+      "Protein powders supplement food, not replace it"
+    ],
+    "servings": 27,
+    "priceRange": "$$$",
+    "flavorsNote": "Eighteen-plus flavors including licensed Little Debbie, JIF and Jet-Puffed collaborations; figures verified on the Vanilla Ice Cream panel (35 g scoop, 27 servings) and cross-checked against Jet-Puffed Marshmallow (33.9 g scoop), with sucralose and acesulfame potassium doing the sweetening.",
+    "affiliateUrl": "https://www.amazon.com/dp/B0BDTMHBC8?tag=thescoopsense-20",
+    "blurb": "Isolate is listed first, but the scoop also carries MCT powder and organic agave inulin, so 25 g of protein arrives in a 35 g scoop — a lower protein-per-gram ratio than a straight isolate, in exchange for 1 g of prebiotic fiber.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/ryse-loaded-protein.jpg",
+    "images": [
+      "https://rysesupps.com/cdn/shop/files/2lb_vic_1_noshadow_d83b9d5b-087c-43ca-bba7-8525bbab62a7.png",
+      "https://rysesupps.com/cdn/shop/files/2lb_vic_2_noshadow.png",
+      "https://rysesupps.com/cdn/shop/files/2lb_vic_3_noshadow.png"
+    ],
+    "metrics": {
+      "proteinG": 25,
+      "servingG": 35,
+      "source": "whey isolate and concentrate blend",
+      "sweetener": "sucralose + acesulfame potassium"
+    },
+    "sources": [
+      {
+        "url": "https://rysesupps.com/products/loaded-protein",
+        "label": "RYSE Supps — Loaded Protein product page (Vanilla Ice Cream and JIF Peanut Butter Marshmallow Nutrition Facts panels, per-flavor ingredient lists)"
+      }
+    ]
+  },
+
+  /* ---- eaa (label-verified September 2026) ---- */
+
+  {
+    "id": "xtend-eaa-bcaa",
+    "name": "EAA",
+    "brand": "Xtend",
+    "category": "eaa",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "XTEND EAA Amino Blend",
+        "dose": "5 g",
+        "clinicalNote": "Covers all nine essential amino acids, but the per-scoop total sits under the roughly 10 to 15 g used in most free-form EAA research — the label's own two-scoop direction is what reaches 10 g."
+      },
+      {
+        "name": "L-Leucine",
+        "dose": "1.5 g",
+        "clinicalNote": "Below the roughly 2.5 to 3 g leucine amount commonly used to trigger muscle protein synthesis in studies; two scoops reach 3 g."
+      },
+      {
+        "name": "Electrolytes (sodium, potassium)",
+        "dose": "150 mg sodium / 120 mg potassium",
+        "clinicalNote": "A light electrolyte addition for sipping during training, far below the amounts in dedicated hydration mixes."
+      }
+    ],
+    "cautions": [
+      "The 10 g EAA figure on the front of the tub is a two-serving number; one scoop supplies 5 g",
+      "250 mg of the 5 g blend is L-arginine, which is not an essential amino acid",
+      "Sweetened with sucralose and acesulfame potassium"
+    ],
+    "servings": 40,
+    "priceRange": "$$",
+    "flavorsNote": "Four flavors — Mango, Lemon Lime, Blood Orange and Watermelon — sugar-free and sweetened with sucralose plus acesulfame potassium; the 328 g net weight is the Mango tub's, and the others vary a little.",
+    "affiliateUrl": "https://www.amazon.com/dp/B0CYVW51DV?tag=thescoopsense-20",
+    "blurb": "Trades the Original's 7 g of BCAAs for full nine-amino coverage at a smaller total: a 5 g blend per 8.2 g scoop with 1.5 g leucine, every amino spelled out individually, and the headline 10 g EAA claim resting on taking two scoops.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/xtend-eaa-bcaa.jpg",
+    "imageBg": "255,255,255",
+    "images": [
+      "https://cellucor.com/cdn/shop/files/XTEND_1144_Digital_Relabel_FlowThrough_Assets_PDPs_OnGreyBackground-XTEND-EAA-M.png?v=1771558529",
+      "https://cellucor.com/cdn/shop/files/XTEND_1144_Digital_Relabel_FlowThrough_Assets_PDPs_OnGreyBackground-XTEND-EAA-BO.png",
+      "https://cellucor.com/cdn/shop/files/XTEND_1144_Digital_Relabel_FlowThrough_Assets_PDPs_OnGreyBackground-XTEND-EAA-LL.png"
+    ],
+    "metrics": {
+      "netWeightG": 328,
+      "form": "powder tub",
+      "calories": 25,
+      "sodiumMg": 150,
+      "potassiumMg": 120,
+      "eaaG": 5,
+      "bcaaG": 3,
+      "leucineG": 1.5
+    },
+    "sources": [
+      {
+        "url": "https://www.priceplow.com/xtend/eaa",
+        "label": "PricePlow — XTEND EAA Supplement Facts transcription (8.2 g scoop, 5 g blend, per-amino doses)"
+      },
+      {
+        "url": "https://cellucor.com/products/xtend-eaa",
+        "label": "Cellucor (XTEND brand) — official product page: 40 servings, four flavors, current label artwork"
+      },
+      {
+        "url": "https://cellucor.com/cdn/shop/files/XTEND_1144_Digital_Relabel_FlowThrough_Assets_PDPs_OnGreyBackground-XTEND-EAA-M.png?v=1771558529",
+        "label": "Current front-of-tub artwork confirming 10 g EAA per 2 servings, 40 servings, net wt. 328 g (11.6 oz)"
+      }
+    ]
+  },
+
+  /* ---- electrolytes (label-verified September 2026) ---- */
+
+  {
+    "id": "nutricost-electrolyte-complex",
+    "name": "Electrolytes Advanced Hydration Complex",
+    "brand": "Nutricost",
+    "category": "electrolytes",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label",
+      "Budget Pick"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Potassium (potassium citrate and potassium chloride)",
+        "dose": "260 mg",
+        "clinicalNote": "The larger of the two main electrolytes here; potassium works alongside sodium in normal fluid balance and muscle function."
+      },
+      {
+        "name": "Sodium (sodium citrate and sodium chloride)",
+        "dose": "90 mg",
+        "clinicalNote": "Sodium is the electrolyte lost in the greatest quantity in sweat, and 90 mg is a fraction of the amounts used in heavy-sweat rehydration research."
+      },
+      {
+        "name": "Magnesium (magnesium citrate and di-magnesium malate)",
+        "dose": "40 mg",
+        "clinicalNote": "Magnesium plays a role in normal muscle and nerve function; 40 mg is about a tenth of a day's Daily Value."
+      },
+      {
+        "name": "Vitamin C (ascorbic acid)",
+        "dose": "90 mg",
+        "clinicalNote": "A full Daily Value of vitamin C, alongside B6 and B12 — additions that go beyond a straight electrolyte mix."
+      }
+    ],
+    "cautions": [
+      "At 90 mg sodium per scoop this is a light everyday mix, not a heavy-sweat sodium replacement",
+      "Sweetened with stevia and Reb M, which some people find has a distinct aftertaste",
+      "Blue spirulina is used as a color in some flavors"
+    ],
+    "servings": 120,
+    "priceRange": "$",
+    "flavorsNote": "Nine flavors including Fruit Punch, Grape, Blue Raspberry, Watermelon, Pineapple Ice, Orchard Blast and Strawberry Lemonade, in 60-serving tubs, with Fruit Punch, Grape and Blue Raspberry also sold at 120, sweetened with stevia and Reb M rather than sucralose.",
+    "affiliateUrl": "https://www.amazon.com/dp/B0D5NCFLBV?tag=thescoopsense-20",
+    "blurb": "Potassium-forward rather than sodium-forward — 260 mg potassium against 90 mg sodium in a 4 g scoop — with vitamin C, B6 and B12 folded in, zero sugar claimed on the front of the tub (the panel prints no calorie or sugar row at all), and one of the lowest per-serving costs in the category at the 120-serving size.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/nutricost-electrolyte-complex.jpg",
+    "imageBg": "255,255,255",
+    "images": [
+      "https://nutricost.com/cdn/shop/files/NTC_ElectrolytePowder_BlueRaspberry_120SER_Front_1.jpg?v=1752164968",
+      "https://nutricost.com/cdn/shop/files/NTC_ElectrolytePowder_BlueRaspberry_120SER_SFP_1.jpg?v=1752164968",
+      "https://nutricost.com/cdn/shop/files/NTC_Electrolytes_Grape_60SERV_350CC_Front_Square.jpg?v=1752164968"
+    ],
+    "metrics": {
+      "netWeightG": 468,
+      "form": "powder tub",
+      "servingG": 4,
+      "calciumMg": 30,
+      "sodiumMg": 90,
+      "potassiumMg": 260,
+      "magnesiumMg": 40,
+      "sugarG": 0
+    },
+    "sources": [
+      {
+        "url": "https://nutricost.com/products/electrolytes",
+        "label": "Nutricost — official product page (sizes, flavors, label artwork)"
+      },
+      {
+        "url": "https://nutricost.com/cdn/shop/files/NTC_ElectrolytePowder_BlueRaspberry_120SER_SFP_1.jpg?v=1752164968",
+        "label": "Blue Raspberry 120-serving Supplement Facts panel (4 g scoop; vitamin C 90 mg, B6 1.6 mg, B12 6 mcg, calcium 30 mg, magnesium 40 mg, sodium 90 mg, potassium 260 mg; full other-ingredients list)"
+      },
+      {
+        "url": "https://nutricost.com/cdn/shop/files/NTC_ElectrolytePowder_BlueRaspberry_120SER_Front_1.jpg?v=1752164968",
+        "label": "Front-of-tub artwork: 120 servings, net wt. 16.7 oz (468 g), zero sugar, sweetened with stevia"
+      }
+    ]
+  },
+
+  /* ---- pre-workout (label-verified September 2026) ---- */
+
+  {
+    "id": "alpha-lion-core",
+    "name": "SuperHuman Core",
+    "brand": "Alpha Lion",
+    "category": "pre-workout",
+    "stimFree": false,
+    "badges": [
+      "High Stim",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 315,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "The standard 3-5g daily maintenance amount used in creatine research, and unusual to find at the full studied dose inside a pre-workout."
+      },
+      {
+        "name": "L-Citrulline",
+        "dose": "6 g",
+        "clinicalNote": "At the bottom of the 6-8g range used in straight-citrulline pump research, and it is pure citrulline rather than malate."
+      },
+      {
+        "name": "Beta-Alanine",
+        "dose": "3.2 g",
+        "clinicalNote": "Exactly the 3.2g daily amount used in most beta-alanine muscle-carnosine loading studies - expect tingles."
+      },
+      {
+        "name": "Caffeine (SXT Energy System)",
+        "dose": "315 mg",
+        "clinicalNote": "Well above the ~200mg single dose used in most caffeine performance research; the panel's own footnote gives a 157.5mg caffeine yield per scoop, so this is the two-scoop figure."
+      }
+    ],
+    "cautions": [
+      "Every number here is the two-scoop (20g) 'advanced' column; the label prints a one-scoop beginner column at exactly half of each figure, and the tub holds 30 of those single scoops - 15 full servings - with a double-size tub also sold.",
+      "The SXT Energy System line pools caffeine anhydrous with two zumXR release forms at 335mg combined and discloses only the total caffeine yield, so the split between the fast, extended and delayed portions is not on the panel.",
+      "The 5g creatine only arrives on days you take the full two scoops, so a separate creatine dose is needed on rest days if daily intake matters to you."
+    ],
+    "servings": 15,
+    "priceRange": "$$",
+    "flavorsNote": "Three flavors (Alpha Punch fruit punch, RazzleMania blue raspberry, King Lemonade pink lemonade), sweetened with sucralose and acesulfame potassium and colored with FD&C dye - Red #40 on the current panel, Blue #1 on the flavor checked at retail.",
+    "affiliateUrl": "https://www.amazon.com/dp/B0DKQMDFYQ?tag=thescoopsense-20",
+    "blurb": "The only pre-workout in Alpha Lion's line built around creatine, and it carries the full 5g - but only in the two-scoop column, where a 30-serving tub is really 15 sessions. The panel prints both scoop counts side by side, which makes it one of the easier labels to check the headline numbers against the beginner dose.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/alpha-lion-core.jpg",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/2321/6571/files/SH_CPW_ALPHA_PUNCH_ns.png?v=1762182185",
+      "https://cdn.shopify.com/s/files/1/2321/6571/files/SH-Core_SupplementFactsWebsite_2.webp?v=1741962797",
+      "https://cdn.shopify.com/s/files/1/2321/6571/files/SH_CPW_RAZZLEMANIA_3.png?v=1762182149",
+      "https://cdn.shopify.com/s/files/1/2321/6571/files/SH-CORE_KingLemonade_Render.png?v=1739748046"
+    ],
+    "sources": [
+      {
+        "url": "https://www.alphalion.com/products/superhuman-core-1",
+        "label": "Alpha Lion - official product page and supplement facts panel showing both the 1-scoop and 2-scoop columns"
+      },
+      {
+        "url": "https://www.strongsupplementshop.com/superhuman-core-pre-workout-by-alpha-lion",
+        "label": "Strong Supplement Shop - independent label image and directions (do not exceed two scoops in 24 hours)"
+      },
+      {
+        "url": "https://www.stack3d.com/2023/05/alpha-lion-superhuman-core.html",
+        "label": "Stack3d - formula breakdown at the two-scoop serving (15 full servings per tub)"
+      }
+    ]
+  },
+
+  {
+    "id": "animal-fury",
+    "name": "Fury",
+    "brand": "Animal",
+    "category": "pre-workout",
+    "stimFree": false,
+    "badges": [
+      "High Stim"
+    ],
+    "caffeineMg": 350,
+    "keyIngredients": [
+      {
+        "name": "Citrulline Malate",
+        "dose": "6 g",
+        "clinicalNote": "At the bottom of the 6-8g range used in most citrulline malate studies, which works out to roughly 4g of actual citrulline."
+      },
+      {
+        "name": "Caffeine Anhydrous",
+        "dose": "350 mg",
+        "clinicalNote": "Well above the ~200mg single dose used in most caffeine performance research, and close to the FDA's ~400mg daily reference for healthy adults."
+      },
+      {
+        "name": "Instant BCAA Blend (Leucine, Isoleucine, Valine)",
+        "dose": "5 g",
+        "clinicalNote": "5g is a conventional BCAA serving, but the effects studied in BCAA research track the leucine portion, and this pooled total does not say how much of the 5g is leucine."
+      },
+      {
+        "name": "Beta-Alanine",
+        "dose": "2 g",
+        "clinicalNote": "Under the 3.2g daily amount used in most beta-alanine carnosine research, so this is a partial daily dose rather than a full one."
+      }
+    ],
+    "cautions": [
+      "350mg caffeine sits in a single 16.5g scoop with no smaller labeled column; the label's own instruction is to start at half a scoop and work up.",
+      "The label caps intake at one serving per 24 hours and advises against taking it within 6-8 hours of bedtime.",
+      "Contains soy, and is made on equipment that also processes milk, egg, peanuts, tree nuts, fish, shellfish, wheat and sesame."
+    ],
+    "servings": 30,
+    "priceRange": "$$",
+    "flavorsNote": "Seven flavors (Blue Raspberry, Green Apple, Kiwi Lime, Ice Pop, Watermelon, Fruit Punch, Orange) in 20- and 30-serving tubs, sweetened with sucralose and acesulfame potassium; the Blue Raspberry panel checked here takes its color from spirulina extract, while older flavor panels list FD&C dyes.",
+    "affiliateUrl": "https://www.amazon.com/dp/B01NAHWMBI?tag=thescoopsense-20",
+    "blurb": "A pre-workout that doubles as a BCAA drink: 5g of aminos next to 6g citrulline malate and 350mg caffeine in one 16.5g scoop, with no creatine anywhere on the panel. Four of the five lines print an exact dose - the BCAA total is the only figure pooled, so the leucine share is the single number the label withholds.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/animal-fury.jpg",
+    "imageBg": "255,255,255",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0675/6882/8736/files/Fury_30Serving_BlueRaspberry_1200x1200_9425299e-5b85-4bfa-a517-f5b6d1fa2500.jpg?v=1762191016",
+      "https://www.animalpak.com/cdn/shop/files/AnimalFury30BlueRaspberry_H0323-G-38014_suppfacts.png?v=1774544437",
+      "https://cdn.shopify.com/s/files/1/0675/6882/8736/files/Fury_30Serving_KiwiLime_1200x1200_4057fcec-4cdb-402e-860e-3da7ebf364d9.jpg?v=1761930014",
+      "https://cdn.shopify.com/s/files/1/0675/6882/8736/files/Fury_30Serving_GreenApple_1200x1200_62ca7856-a1fc-47ac-b5cc-5f5bf5788076.jpg?v=1762191016"
+    ],
+    "sources": [
+      {
+        "url": "https://www.animalpak.com/products/animal-fury-pre-workout-powder-supplement",
+        "label": "Animal - official product page and supplement facts panel image (1 scoop 16.5g, 30 servings)"
+      },
+      {
+        "url": "https://tigerfitness.com/products/universal-nutrition-animal-fury",
+        "label": "Tiger Fitness - independent panel transcription plus full directions and warning text"
+      },
+      {
+        "url": "https://barbend.com/animal-fury-pre-workout-review/",
+        "label": "Barbend - 2026 review and dose cross-check"
+      }
+    ]
+  },
+
+  {
+    "id": "raw-nutrition-essential-pre",
+    "name": "Essential Pre-Workout",
+    "brand": "Raw Nutrition",
+    "category": "pre-workout",
+    "stimFree": false,
+    "badges": [
+      "Moderate Stim",
+      "Fully Disclosed Label",
+      "Third-Party Tested"
+    ],
+    "caffeineMg": 200,
+    "keyIngredients": [
+      {
+        "name": "L-Citrulline",
+        "dose": "4 g",
+        "clinicalNote": "Below the 6-8g of straight citrulline used in most pump research, though comparable to what a 6-8g citrulline malate dose actually delivers."
+      },
+      {
+        "name": "Beta-Alanine",
+        "dose": "3.2 g",
+        "clinicalNote": "Exactly the 3.2g daily amount used in most beta-alanine muscle-carnosine loading studies."
+      },
+      {
+        "name": "Caffeine",
+        "dose": "200 mg",
+        "clinicalNote": "Matches the ~200mg single dose used in most caffeine performance research; here it comes from green coffee bean extract rather than caffeine anhydrous."
+      },
+      {
+        "name": "L-Tyrosine",
+        "dose": "2 g",
+        "clinicalNote": "A real dose by pre-workout standards, but acute tyrosine studies typically use far more - on the order of 100-150mg per kg of bodyweight."
+      }
+    ],
+    "cautions": [
+      "3.2g beta-alanine commonly causes a harmless skin-tingling sensation; RAW sells a Tingle-Free version of this same pre-workout for anyone who dislikes it.",
+      "Every figure here is one 13.3-13.5g scoop (the scoop weight varies slightly by flavor) and the label offers no larger serving column.",
+      "RAW sells three similarly named Essential pre-workouts - Essential Pre-Workout, Essential Charged and Essential Performance - on different formulas, so check which tub a retailer is quoting."
+    ],
+    "servings": 30,
+    "priceRange": "$$",
+    "flavorsNote": "A very large, frequently rotated flavor lineup (Fruit Burst, Sour Watermelon, Blue Raspberry, Peach Mango, Cotton Candy, Blueberry Lemonade, Lychee and signature editions among them), sweetened with sucralose - some flavors add acesulfame potassium - and the Sour Watermelon panel checked here takes its color from beet root powder rather than dye.",
+    "affiliateUrl": "https://www.amazon.com/dp/B0CBCSTHMC?tag=thescoopsense-20",
+    "blurb": "A deliberately short label - five actives, every one printed, and an Informed Sport certification that little else at this cost per serving carries. The 200mg caffeine and 4g citrulline sit well under the same brand's Thavage formula, which is the point: this is the entry tier of the line, not a stripped-down version of the flagship.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/raw-nutrition-essential-pre.jpg",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0932/3141/5614/files/Essential_Pre_-_Fruit_Burst_-_Front_1.png?v=1772634170",
+      "https://cdn.shopify.com/s/files/1/0932/3141/5614/files/EssentialPWO-SourWatermelon-SFP_cfa022ae-5331-4edc-98ed-83de2bed7d79.png?v=1776643728",
+      "https://cdn.shopify.com/s/files/1/0932/3141/5614/files/Essential_Pre_-_Sour_Watermelon_-_Front.webp?v=1761313598",
+      "https://cdn.shopify.com/s/files/1/0932/3141/5614/files/Essential_Pre_-_Blue_Raspberry_-_Front.webp?v=1761313598"
+    ],
+    "sources": [
+      {
+        "url": "https://getrawnutrition.com/products/essential-pre",
+        "label": "RAW Nutrition - official product page and per-flavor supplement facts panels (13.5g scoop, 30 servings)"
+      },
+      {
+        "url": "https://getrawnutrition.com/collections/informed-sport-certified",
+        "label": "RAW Nutrition - Informed Sport certified collection, which lists Essential Pre-Workout"
+      },
+      {
+        "url": "https://thefeed.com/products/raw-essential-pre-workout",
+        "label": "The Feed - independent panel transcription"
       }
     ]
   },

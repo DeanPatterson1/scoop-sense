@@ -2833,5 +2833,462 @@ var PRODUCTS = [
         "label": "SuppCo independent label listing (Operation OJ, 30 servings) confirming all six ingredient doses"
       }
     ]
+  },
+  {
+    "id": "cellucor-c4-sport",
+    "name": "C4 Sport",
+    "brand": "Cellucor",
+    "category": "pre-workout",
+    "stimFree": false,
+    "badges": [
+      "Moderate Stim",
+      "Third-Party Tested",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 200,
+    "keyIngredients": [
+      {
+        "name": "Beta-Alanine",
+        "dose": "2 g",
+        "clinicalNote": "Under the 3.2 g/day used in most beta-alanine research, though the ingredient works off cumulative daily intake over weeks rather than any single serving."
+      },
+      {
+        "name": "L-Arginine",
+        "dose": "2 g",
+        "clinicalNote": "Well under the amounts used in arginine blood-flow research, and arginine is absorbed less efficiently than the citrulline most pumps formulas now use."
+      },
+      {
+        "name": "Creatine Nitrate",
+        "dose": "1 g",
+        "clinicalNote": "Far below the 3-5 g daily amount used in creatine research, and nitrate-bound creatine carries less creatine by weight than monohydrate."
+      },
+      {
+        "name": "Caffeine Anhydrous",
+        "dose": "200 mg",
+        "clinicalNote": "A mid-range dose, roughly what most caffeine performance studies use for an average-sized adult."
+      }
+    ],
+    "cautions": [
+      "Beta-alanine tingles are possible at 2 g",
+      "The 1 g of creatine nitrate is a fraction of a standalone creatine serving, so it does not replace a separate creatine supplement",
+      "Carries 225 mg sodium and 340 mg chloride per scoop from added sea salt — worth noting if you track sodium"
+    ],
+    "servings": 20,
+    "priceRange": "$$",
+    "flavorsNote": "A rotating candy-and-punch lineup (Watermelon, Icy Blue Razz, Uncle Samberry, Frozen Bombsicle); zero sugar, sweetened with sucralose and acesulfame potassium and colored with spirulina extract instead of artificial dye.",
+    "affiliateUrl": "https://www.amazon.com/dp/B0D7N11ML9?tag=thescoopsense-20",
+    "blurb": "One of the few pre-workouts that actually carries the NSF Certified for Sport mark on the tub, which is the reason to buy it if you are drug-tested. The dosing is the trade-off: the panel prints every number, but beta-alanine at 2 g, arginine at 2 g and creatine nitrate at 1 g all sit below the amounts used in research. The current 5th-generation label runs 200 mg caffeine; older 135 mg panels still circulate.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/cellucor-c4-sport.jpg",
+    "images": [
+      "https://cellucor.com/cdn/shop/files/C4AN_1002_Brand_C4YellowLabel_Transition_C4Sport_CoreFlavors_BasicPDPs-Sport-WM-Hero-Grey.png",
+      "https://cellucor.com/cdn/shop/files/C4AN_1002_Brand_C4YellowLabel_Transition_C4Sport_CoreFlavors_StylizedPDPs-Sport-WM-NFP-Fun.png",
+      "https://cellucor.com/cdn/shop/files/C4AN_1009_Digital_C4Sport_FrozenBomb_LaunchAssets_PDPs-20serv-Sport-FB-Hero-Grey.png"
+    ],
+    "sources": [
+      {
+        "url": "https://cellucor.com/products/c4-sport",
+        "label": "Cellucor — official product page"
+      },
+      {
+        "url": "https://cellucor.com/cdn/shop/files/C4AN_1002_Brand_C4YellowLabel_Transition_C4Sport_CoreFlavors_StylizedPDPs-Sport-WM-NFP-Fun.png",
+        "label": "Cellucor — supplement facts panel image, 5th Gen formula (primary label source)"
+      },
+      {
+        "url": "https://www.nsfsport.com/certified-products/search-results.php?keyword=C4+Sport",
+        "label": "NSF Certified for Sport — certified product database listing for C4 Sport"
+      }
+    ]
+  },
+  {
+    "id": "gat-sport-nitraflex",
+    "name": "Nitraflex Advanced",
+    "brand": "GAT Sport",
+    "category": "pre-workout",
+    "stimFree": false,
+    "badges": [
+      "High Stim",
+      "Proprietary Blend"
+    ],
+    "caffeineMg": 325,
+    "keyIngredients": [
+      {
+        "name": "Caffeine Anhydrous",
+        "dose": "325 mg",
+        "clinicalNote": "Disclosed in the panel's footnote rather than inside the blend it belongs to; a high dose for a single 9.5 g scoop, and the label caps you at one scoop per 24 hours."
+      },
+      {
+        "name": "Nitrosigine",
+        "dose": "1,000 mg",
+        "clinicalNote": "The figure printed on the front of the tub, not on the Supplement Facts panel; Nitrosigine research generally uses 1,500 mg/day."
+      },
+      {
+        "name": "Beta-Alanine",
+        "dose": "1.5 g",
+        "clinicalNote": "Also a front-panel figure. Under half the 3.2 g/day used in most beta-alanine research."
+      },
+      {
+        "name": "Boron Citrate",
+        "dose": "200 mg",
+        "clinicalNote": "The only active besides caffeine that the Supplement Facts panel breaks out on its own line."
+      }
+    ],
+    "cautions": [
+      "Two proprietary blends totaling 6,321 mg — on the Supplement Facts panel only caffeine (325 mg) and boron citrate (200 mg) carry disclosed doses",
+      "Contains Rauwolfia vomitoria root extract, an added stimulant, at an undisclosed amount inside the energy blend",
+      "The label's own limits: start at half a scoop, no more than one scoop in 24 hours, none within 5 hours of bedtime, and a week off after eight weeks"
+    ],
+    "servings": 30,
+    "priceRange": "$$",
+    "flavorsNote": "Six flavors (Blue Raspberry, Fruit Punch, Grape, Green Apple, Watermelon, Black Cherry); sweetened with sucralose, acesulfame potassium and a natural blend of erythritol and fructooligosaccharides, with no artificial colors.",
+    "affiliateUrl": "https://www.amazon.com/dp/B007P7DOT0?tag=thescoopsense-20",
+    "blurb": "A split label. The front of the tub prints four numbers — 325 mg caffeine, 1,000 mg Nitrosigine, 1,500 mg beta-alanine, 200 mg boron citrate — while the Supplement Facts panel still folds everything else into a 3,700 mg pump blend and a 2,621 mg energy blend, so the L-citrulline, tyrosine, theanine and Rauwolfia amounts are anyone's guess.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/gat-sport-nitraflex.jpg",
+    "images": [
+      "https://gatsport.com/cdn/shop/files/nitraflex-advanced-827805.png",
+      "https://gatsport.com/cdn/shop/files/GAT-1001_P0GUP7CB_US_ISP_02.webp",
+      "https://gatsport.com/cdn/shop/files/nitraflex-advanced-br-pre-workout-611785.jpg"
+    ],
+    "sources": [
+      {
+        "url": "https://gatsport.com/products/nitraflex",
+        "label": "GAT Sport — official product page (Nitraflex Advanced)"
+      },
+      {
+        "url": "https://gatsport.com/cdn/shop/files/GAT-1001_P0GUP7CB_US_ISP_02.webp",
+        "label": "GAT Sport — supplement facts panel image (primary label source)"
+      },
+      {
+        "url": "https://gatsport.com/cdn/shop/files/nitraflex-advanced-827805.png",
+        "label": "GAT Sport — front-of-tub image showing the disclosed dose callouts"
+      }
+    ]
+  },
+  {
+    "id": "jacked-factory-nitrosurge",
+    "name": "Nitrosurge",
+    "brand": "Jacked Factory",
+    "category": "pre-workout",
+    "stimFree": false,
+    "badges": [
+      "High Stim",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 360,
+    "keyIngredients": [
+      {
+        "name": "L-Citrulline (Fermented)",
+        "dose": "6 g",
+        "clinicalNote": "At the full two-scoop serving this sits inside the 6-8 g range used in most L-citrulline studies; a single scoop delivers 3 g, which is under it."
+      },
+      {
+        "name": "Beta-Alanine",
+        "dose": "3.2 g",
+        "clinicalNote": "Matches the 3.2 g/day amount used in most beta-alanine research at two scoops — expect tingles."
+      },
+      {
+        "name": "Betaine Anhydrous",
+        "dose": "2.5 g",
+        "clinicalNote": "Matches the 2.5 g amount used in most betaine studies, again only at the two-scoop serving."
+      },
+      {
+        "name": "Caffeine Anhydrous",
+        "dose": "360 mg",
+        "clinicalNote": "A high dose, paired with 180 mg L-theanine — half the caffeine amount, below the 1:1 theanine-to-caffeine ratio used in most focus research."
+      }
+    ],
+    "cautions": [
+      "360 mg caffeine is the FULL two-scoop serving; the label prints a one-scoop column at exactly half (180 mg)",
+      "The doses advertised on the front of the tub are two-scoop figures, but the '30 servings' count on the same tub counts single scoops — at label strength it is 15 workouts",
+      "Beta-alanine tingles (harmless skin prickling) are likely at the full 3.2 g"
+    ],
+    "servings": 15,
+    "priceRange": "$$",
+    "flavorsNote": "A dozen-plus flavors including sour and dessert options; sweetened with sucralose alone and colored with beet root powder rather than artificial dyes.",
+    "affiliateUrl": "https://www.amazon.com/dp/B07SNTQ7QQ?tag=thescoopsense-20",
+    "blurb": "Every dose is printed, but in two columns, and the two columns tell different stories. The 6 g citrulline, 3.2 g beta-alanine and 2.5 g betaine on the front of the tub are all two-scoop numbers; the '30 servings' claim beside them counts single scoops, which land at half of each.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/jacked-factory-nitrosurge.jpg",
+    "images": [
+      "https://www.jackedfactory.com/cdn/shop/files/JF-140_Nitrosurge_US_GreenApple_30_1.3_Front.png",
+      "https://www.jackedfactory.com/cdn/shop/files/Nitrosurge_Optimized_ProductImage_5_SFP_CL.png",
+      "https://www.jackedfactory.com/cdn/shop/files/NS_Watermelon_Front_1_5453598f-8e8c-4d91-b972-a846cb7cdf5d.png",
+      "https://www.jackedfactory.com/cdn/shop/files/JF_Nitrosurge_Grape_1.png"
+    ],
+    "sources": [
+      {
+        "url": "https://www.jackedfactory.com/products/nitrosurge",
+        "label": "Jacked Factory — official product page"
+      },
+      {
+        "url": "https://www.jackedfactory.com/cdn/shop/files/Nitrosurge_Optimized_ProductImage_5_SFP_CL.png",
+        "label": "Jacked Factory — supplement facts panel image (primary label source)"
+      },
+      {
+        "url": "https://www.jackedfactory.com/cdn/shop/files/JF-140_Nitrosurge_US_GreenApple_30_1.3_Front.png",
+        "label": "Jacked Factory — front-of-tub image showing the two-scoop dose callouts"
+      }
+    ]
+  },
+  {
+    "id": "ryse-loaded-pre",
+    "name": "Loaded Pre",
+    "brand": "RYSE",
+    "category": "pre-workout",
+    "stimFree": false,
+    "badges": [
+      "High Stim",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 300,
+    "keyIngredients": [
+      {
+        "name": "L-Citrulline",
+        "dose": "4.5 g",
+        "clinicalNote": "Under the 6–8 g used in most citrulline blood-flow studies, and no citrulline malate or nitrate is stacked on top of it."
+      },
+      {
+        "name": "Beta-Alanine",
+        "dose": "3.2 g",
+        "clinicalNote": "Exactly the 3.2 g daily amount used in carnosine-loading research — tingles are expected at this dose."
+      },
+      {
+        "name": "Caffeine (two forms)",
+        "dose": "300 mg",
+        "clinicalNote": "270 mg caffeine anhydrous plus 30 mg zümXR extended-release caffeine, both broken out underneath the 300 mg RYSE Energy Fuel line."
+      },
+      {
+        "name": "Choline (as VitaCholine choline bitartrate)",
+        "dose": "500 mg choline bitartrate (200 mg choline)",
+        "clinicalNote": "The panel prints both the salt and the choline it yields; bitartrate carries less choline per gram than alpha-GPC does."
+      }
+    ],
+    "cautions": [
+      "300 mg caffeine in one scoop — three-quarters of the FDA's 400 mg daily reference amount for healthy adults, before any coffee",
+      "3.2 g beta-alanine — tingles expected",
+      "The brand's own bullet copy still advertises 3.5 g beta-alanine, 120 mg zümXR and a 390 mg caffeine total; the V5 panel printed on the tub says 3.2 g, 30 mg and 300 mg"
+    ],
+    "servings": 30,
+    "priceRange": "$$",
+    "flavorsNote": "Twenty-plus licensed candy, drink and freezer-pop collaboration flavors (Airheads, Popsicle Firecracker, SunnyD, Kool-Aid, Sour Punch, Ring Pop, Bazooka, Jell-O); sweetened with sucralose and acesulfame potassium, and scoop weight runs about 12–14 g depending on flavor while the active doses stay identical.",
+    "affiliateUrl": "https://www.amazon.com/dp/B0B94TDV83?tag=thescoopsense-20",
+    "blurb": "The current V5 panel puts 300 mg of caffeine (270 mg anhydrous plus 30 mg extended-release) behind 4.5 g of citrulline and a textbook 3.2 g of beta-alanine, with 100 mg theobromine and 50 mg L-theanine alongside — a step down from the 390 mg version that retailer listings and the brand's own bullets still describe.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/ryse-loaded-pre.jpg",
+    "images": [
+      "https://rysesupps.com/cdn/shop/files/cf_30s_1_noshadow_f52b4b21-747c-4a35-8109-009406f3e783.png",
+      "https://rysesupps.com/cdn/shop/files/cc_30s_1_noshadow_e4b56ac8-0318-403d-a1b3-1ca111bc04b0.png",
+      "https://rysesupps.com/cdn/shop/files/fc_30s_1_noshadow.png"
+    ],
+    "sources": [
+      {
+        "url": "https://rysesupps.com/products/loaded-pre",
+        "label": "RYSE Supps — Loaded Pre product page (Airheads Cherry and Cotton Candy Supplement Facts panels, V5 SKUs)"
+      },
+      {
+        "url": "https://supplementsuperstores.com/products/ryse-loaded-pre",
+        "label": "Supplement Superstores listing (Popsicle Firecracker label image — same panel, 12.1 g scoop)"
+      }
+    ]
+  },
+  {
+    "id": "alpha-lion-core",
+    "name": "SuperHuman Core",
+    "brand": "Alpha Lion",
+    "category": "pre-workout",
+    "stimFree": false,
+    "badges": [
+      "High Stim",
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 315,
+    "keyIngredients": [
+      {
+        "name": "Creatine Monohydrate",
+        "dose": "5 g",
+        "clinicalNote": "The standard 3-5g daily maintenance amount used in creatine research, and unusual to find at the full studied dose inside a pre-workout."
+      },
+      {
+        "name": "L-Citrulline",
+        "dose": "6 g",
+        "clinicalNote": "At the bottom of the 6-8g range used in straight-citrulline pump research, and it is pure citrulline rather than malate."
+      },
+      {
+        "name": "Beta-Alanine",
+        "dose": "3.2 g",
+        "clinicalNote": "Exactly the 3.2g daily amount used in most beta-alanine muscle-carnosine loading studies - expect tingles."
+      },
+      {
+        "name": "Caffeine (SXT Energy System)",
+        "dose": "315 mg",
+        "clinicalNote": "Well above the ~200mg single dose used in most caffeine performance research; the panel's own footnote gives a 157.5mg caffeine yield per scoop, so this is the two-scoop figure."
+      }
+    ],
+    "cautions": [
+      "Every number here is the two-scoop (20g) 'advanced' column; the label prints a one-scoop beginner column at exactly half of each figure, and the tub holds 30 of those single scoops - 15 full servings - with a double-size tub also sold.",
+      "The SXT Energy System line pools caffeine anhydrous with two zumXR release forms at 335mg combined and discloses only the total caffeine yield, so the split between the fast, extended and delayed portions is not on the panel.",
+      "The 5g creatine only arrives on days you take the full two scoops, so a separate creatine dose is needed on rest days if daily intake matters to you."
+    ],
+    "servings": 15,
+    "priceRange": "$$",
+    "flavorsNote": "Three flavors (Alpha Punch fruit punch, RazzleMania blue raspberry, King Lemonade pink lemonade), sweetened with sucralose and acesulfame potassium and colored with FD&C dye - Red #40 on the current panel, Blue #1 on the flavor checked at retail.",
+    "affiliateUrl": "https://www.amazon.com/dp/B0DKQMDFYQ?tag=thescoopsense-20",
+    "blurb": "The only pre-workout in Alpha Lion's line built around creatine, and it carries the full 5g - but only in the two-scoop column, where a 30-serving tub is really 15 sessions. The panel prints both scoop counts side by side, which makes it one of the easier labels to check the headline numbers against the beginner dose.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/alpha-lion-core.jpg",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/2321/6571/files/SH_CPW_ALPHA_PUNCH_ns.png?v=1762182185",
+      "https://cdn.shopify.com/s/files/1/2321/6571/files/SH-Core_SupplementFactsWebsite_2.webp?v=1741962797",
+      "https://cdn.shopify.com/s/files/1/2321/6571/files/SH_CPW_RAZZLEMANIA_3.png?v=1762182149",
+      "https://cdn.shopify.com/s/files/1/2321/6571/files/SH-CORE_KingLemonade_Render.png?v=1739748046"
+    ],
+    "sources": [
+      {
+        "url": "https://www.alphalion.com/products/superhuman-core-1",
+        "label": "Alpha Lion - official product page and supplement facts panel showing both the 1-scoop and 2-scoop columns"
+      },
+      {
+        "url": "https://www.strongsupplementshop.com/superhuman-core-pre-workout-by-alpha-lion",
+        "label": "Strong Supplement Shop - independent label image and directions (do not exceed two scoops in 24 hours)"
+      },
+      {
+        "url": "https://www.stack3d.com/2023/05/alpha-lion-superhuman-core.html",
+        "label": "Stack3d - formula breakdown at the two-scoop serving (15 full servings per tub)"
+      }
+    ]
+  },
+  {
+    "id": "animal-fury",
+    "name": "Fury",
+    "brand": "Animal",
+    "category": "pre-workout",
+    "stimFree": false,
+    "badges": [
+      "High Stim"
+    ],
+    "caffeineMg": 350,
+    "keyIngredients": [
+      {
+        "name": "Citrulline Malate",
+        "dose": "6 g",
+        "clinicalNote": "At the bottom of the 6-8g range used in most citrulline malate studies, which works out to roughly 4g of actual citrulline."
+      },
+      {
+        "name": "Caffeine Anhydrous",
+        "dose": "350 mg",
+        "clinicalNote": "Well above the ~200mg single dose used in most caffeine performance research, and close to the FDA's ~400mg daily reference for healthy adults."
+      },
+      {
+        "name": "Instant BCAA Blend (Leucine, Isoleucine, Valine)",
+        "dose": "5 g",
+        "clinicalNote": "5g is a conventional BCAA serving, but the effects studied in BCAA research track the leucine portion, and this pooled total does not say how much of the 5g is leucine."
+      },
+      {
+        "name": "Beta-Alanine",
+        "dose": "2 g",
+        "clinicalNote": "Under the 3.2g daily amount used in most beta-alanine carnosine research, so this is a partial daily dose rather than a full one."
+      }
+    ],
+    "cautions": [
+      "350mg caffeine sits in a single 16.5g scoop with no smaller labeled column; the label's own instruction is to start at half a scoop and work up.",
+      "The label caps intake at one serving per 24 hours and advises against taking it within 6-8 hours of bedtime.",
+      "Contains soy, and is made on equipment that also processes milk, egg, peanuts, tree nuts, fish, shellfish, wheat and sesame."
+    ],
+    "servings": 30,
+    "priceRange": "$$",
+    "flavorsNote": "Seven flavors (Blue Raspberry, Green Apple, Kiwi Lime, Ice Pop, Watermelon, Fruit Punch, Orange) in 20- and 30-serving tubs, sweetened with sucralose and acesulfame potassium; the Blue Raspberry panel checked here takes its color from spirulina extract, while older flavor panels list FD&C dyes.",
+    "affiliateUrl": "https://www.amazon.com/dp/B01NAHWMBI?tag=thescoopsense-20",
+    "blurb": "A pre-workout that doubles as a BCAA drink: 5g of aminos next to 6g citrulline malate and 350mg caffeine in one 16.5g scoop, with no creatine anywhere on the panel. Four of the five lines print an exact dose - the BCAA total is the only figure pooled, so the leucine share is the single number the label withholds.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/animal-fury.jpg",
+    "imageBg": "255,255,255",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0675/6882/8736/files/Fury_30Serving_BlueRaspberry_1200x1200_9425299e-5b85-4bfa-a517-f5b6d1fa2500.jpg?v=1762191016",
+      "https://www.animalpak.com/cdn/shop/files/AnimalFury30BlueRaspberry_H0323-G-38014_suppfacts.png?v=1774544437",
+      "https://cdn.shopify.com/s/files/1/0675/6882/8736/files/Fury_30Serving_KiwiLime_1200x1200_4057fcec-4cdb-402e-860e-3da7ebf364d9.jpg?v=1761930014",
+      "https://cdn.shopify.com/s/files/1/0675/6882/8736/files/Fury_30Serving_GreenApple_1200x1200_62ca7856-a1fc-47ac-b5cc-5f5bf5788076.jpg?v=1762191016"
+    ],
+    "sources": [
+      {
+        "url": "https://www.animalpak.com/products/animal-fury-pre-workout-powder-supplement",
+        "label": "Animal - official product page and supplement facts panel image (1 scoop 16.5g, 30 servings)"
+      },
+      {
+        "url": "https://tigerfitness.com/products/universal-nutrition-animal-fury",
+        "label": "Tiger Fitness - independent panel transcription plus full directions and warning text"
+      },
+      {
+        "url": "https://barbend.com/animal-fury-pre-workout-review/",
+        "label": "Barbend - 2026 review and dose cross-check"
+      }
+    ]
+  },
+  {
+    "id": "raw-nutrition-essential-pre",
+    "name": "Essential Pre-Workout",
+    "brand": "Raw Nutrition",
+    "category": "pre-workout",
+    "stimFree": false,
+    "badges": [
+      "Moderate Stim",
+      "Fully Disclosed Label",
+      "Third-Party Tested"
+    ],
+    "caffeineMg": 200,
+    "keyIngredients": [
+      {
+        "name": "L-Citrulline",
+        "dose": "4 g",
+        "clinicalNote": "Below the 6-8g of straight citrulline used in most pump research, though comparable to what a 6-8g citrulline malate dose actually delivers."
+      },
+      {
+        "name": "Beta-Alanine",
+        "dose": "3.2 g",
+        "clinicalNote": "Exactly the 3.2g daily amount used in most beta-alanine muscle-carnosine loading studies."
+      },
+      {
+        "name": "Caffeine",
+        "dose": "200 mg",
+        "clinicalNote": "Matches the ~200mg single dose used in most caffeine performance research; here it comes from green coffee bean extract rather than caffeine anhydrous."
+      },
+      {
+        "name": "L-Tyrosine",
+        "dose": "2 g",
+        "clinicalNote": "A real dose by pre-workout standards, but acute tyrosine studies typically use far more - on the order of 100-150mg per kg of bodyweight."
+      }
+    ],
+    "cautions": [
+      "3.2g beta-alanine commonly causes a harmless skin-tingling sensation; RAW sells a Tingle-Free version of this same pre-workout for anyone who dislikes it.",
+      "Every figure here is one 13.3-13.5g scoop (the scoop weight varies slightly by flavor) and the label offers no larger serving column.",
+      "RAW sells three similarly named Essential pre-workouts - Essential Pre-Workout, Essential Charged and Essential Performance - on different formulas, so check which tub a retailer is quoting."
+    ],
+    "servings": 30,
+    "priceRange": "$$",
+    "flavorsNote": "A very large, frequently rotated flavor lineup (Fruit Burst, Sour Watermelon, Blue Raspberry, Peach Mango, Cotton Candy, Blueberry Lemonade, Lychee and signature editions among them), sweetened with sucralose - some flavors add acesulfame potassium - and the Sour Watermelon panel checked here takes its color from beet root powder rather than dye.",
+    "affiliateUrl": "https://www.amazon.com/dp/B0CBCSTHMC?tag=thescoopsense-20",
+    "blurb": "A deliberately short label - five actives, every one printed, and an Informed Sport certification that little else at this cost per serving carries. The 200mg caffeine and 4g citrulline sit well under the same brand's Thavage formula, which is the point: this is the entry tier of the line, not a stripped-down version of the flagship.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/raw-nutrition-essential-pre.jpg",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0932/3141/5614/files/Essential_Pre_-_Fruit_Burst_-_Front_1.png?v=1772634170",
+      "https://cdn.shopify.com/s/files/1/0932/3141/5614/files/EssentialPWO-SourWatermelon-SFP_cfa022ae-5331-4edc-98ed-83de2bed7d79.png?v=1776643728",
+      "https://cdn.shopify.com/s/files/1/0932/3141/5614/files/Essential_Pre_-_Sour_Watermelon_-_Front.webp?v=1761313598",
+      "https://cdn.shopify.com/s/files/1/0932/3141/5614/files/Essential_Pre_-_Blue_Raspberry_-_Front.webp?v=1761313598"
+    ],
+    "sources": [
+      {
+        "url": "https://getrawnutrition.com/products/essential-pre",
+        "label": "RAW Nutrition - official product page and per-flavor supplement facts panels (13.5g scoop, 30 servings)"
+      },
+      {
+        "url": "https://getrawnutrition.com/collections/informed-sport-certified",
+        "label": "RAW Nutrition - Informed Sport certified collection, which lists Essential Pre-Workout"
+      },
+      {
+        "url": "https://thefeed.com/products/raw-essential-pre-workout",
+        "label": "The Feed - independent panel transcription"
+      }
+    ]
   }
 ];

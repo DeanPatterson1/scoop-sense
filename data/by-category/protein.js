@@ -2777,5 +2777,193 @@ var PRODUCTS = [
         "label": "Target listing (Nutrition Facts panel)"
       }
     ]
+  },
+  {
+    "id": "ghost-whey",
+    "name": "Whey Protein",
+    "brand": "GHOST",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Whey protein blend (whey isolate, whey concentrate, hydrolyzed whey isolate)",
+        "dose": "25 g",
+        "clinicalNote": "Isolate is listed first and the hydrolysate last, and 25 g per scoop sits inside the 20–40 g per-serving range used in muscle protein synthesis research."
+      },
+      {
+        "name": "Digestive enzymes (proteases, bromelain, lactase)",
+        "dose": "amount not stated on label",
+        "clinicalNote": "Lactase is the enzyme that acts on lactose, but the label prints no enzyme weight or activity unit, so the amount cannot be compared to research doses."
+      },
+      {
+        "name": "Sucralose",
+        "dose": "amount not stated on label",
+        "clinicalNote": "The only high-intensity sweetener in the ingredient list; the 2 g of added sugar on the collab panels comes from the cereal and cookie inclusions, not from the protein blend."
+      }
+    ],
+    "cautions": [
+      "Contains milk — the blend is whey isolate, concentrate and hydrolyzed isolate",
+      "Scoop weight and added sugar move by flavor: Lucky Charms Cereal Milk is a 35 g scoop at 130 calories, Chocolate Chip Cookies a 39 g scoop at 150, both with 2 g added sugar — Trix is a 33.5 g scoop with none",
+      "Brand product page carries a California Prop 65 lead-exposure notice"
+    ],
+    "servings": 26,
+    "priceRange": "$$$",
+    "flavorsNote": "Nine flavors, most of them licensed cereal and dessert collaborations (Lucky Charms Cereal Milk, Cocoa Puffs, Trix, Cinnabon, Chocolate Chip Cookies) alongside plain Cereal Milk, Milk Chocolate and Coffee Ice Cream; sucralose is the only high-intensity sweetener listed.",
+    "affiliateUrl": "https://www.amazon.com/dp/B0BYBB4HF7?tag=thescoopsense-20",
+    "blurb": "Protein holds at 25 g across the range; almost nothing else does. Cereal Milk is a 2 lb (924 g) tub on a 35 g scoop, Chocolate Chip Cookies a 2.2 lb (1014 g) tub on a 39 g one — the tub grows with the scoop, and the extra weight goes to the licensed inclusions rather than to whey.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/ghost-whey.jpg",
+    "images": [
+      "https://www.ghostlifestyle.com/cdn/shop/files/WheyCerealMilk_27054e9f-840f-49e0-acc9-29340a5b6d60.webp",
+      "https://www.ghostlifestyle.com/cdn/shop/files/WheyCerealMilkBack_69ae70ad-0e7e-4c44-a40c-60a7884b6c7c.webp",
+      "https://www.ghostlifestyle.com/cdn/shop/files/GHOST_Whey_LuckyCharms_NFP.png"
+    ],
+    "metrics": {
+      "proteinG": 25,
+      "servingG": 35,
+      "source": "whey isolate, concentrate, and hydrolysate blend",
+      "sweetener": "sucralose"
+    },
+    "sources": [
+      {
+        "url": "https://www.ghostlifestyle.com/products/ghost-whey",
+        "label": "GHOST — WHEY product page (Lucky Charms Cereal Milk and Chocolate Chip Cookies Nutrition Facts panels and ingredient lists)"
+      },
+      {
+        "url": "https://www.ghostlifestyle.com/products/ghost-whey-cereal-milk",
+        "label": "GHOST — WHEY Cereal Milk page (front-of-tub: 26 servings, net wt. 2 lb / 924 g, 130 calories, 25 g protein)"
+      }
+    ]
+  },
+  {
+    "id": "jym-pro-jym",
+    "name": "Pro JYM",
+    "brand": "JYM Supplement Science",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Whey protein isolate",
+        "dose": "8.5 g",
+        "clinicalNote": "The fastest-absorbing fraction of the blend; whey is the protein most often used in post-training muscle protein synthesis research."
+      },
+      {
+        "name": "Micellar casein",
+        "dose": "7.75 g",
+        "clinicalNote": "Digests slowly, which is why casein is the protein studied for overnight and between-meal amino acid delivery."
+      },
+      {
+        "name": "Milk protein isolate",
+        "dose": "7.75 g",
+        "clinicalNote": "Naturally around 80 percent casein and 20 percent whey, bridging the fast and slow fractions in the same scoop."
+      }
+    ],
+    "cautions": [
+      "Contains milk and soy, and is produced on equipment that also processes products containing egg",
+      "Sweetened with sucralose and acesulfame potassium",
+      "Protein powders supplement food intake, not replace it"
+    ],
+    "servings": 45,
+    "priceRange": "$$$",
+    "flavorsNote": "Eight flavors including Tahitian Vanilla Bean, Chocolate Cookie Crunch, Chocolate Mousse, Rocky Road, Caramel Frappe and S'mores, all sweetened with sucralose and acesulfame potassium; figures verified against the Tahitian Vanilla Bean 45-serving panel (36 g scoop, 140 calories) — Chocolate Cookie Crunch runs a heavier 42 g scoop at 160 calories and Chocolate Mousse a 39 g one at 150, all for the same 24 g of protein.",
+    "affiliateUrl": "https://www.amazon.com/dp/B07TSJLF39?tag=thescoopsense-20",
+    "blurb": "One of the few blends that prints the gram weight of each protein source on the front of the bag — 8.5 g whey isolate, 7.75 g micellar casein, 7.75 g milk protein isolate — so the 24 g total is traceable to its parts instead of hidden inside a blend line; note the current formula is three dairy sources, with the egg white protein of earlier versions gone.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/jym-pro-jym.jpg",
+    "images": [
+      "https://jymsupplementscience.com/cdn/shop/files/PRJ04VA20024285060422V1.1i_Front_Shadow-1200px_70e4d6f2-09fb-4f4a-a868-5652519a82bc.png?v=1770998535",
+      "https://jymsupplementscience.com/cdn/shop/files/PRJ04VA20024285060422V1.1i_BACK_SHADOW-1200px.png?v=1770998535",
+      "https://jymsupplementscience.com/cdn/shop/files/PRJ04CR20024438060422V1.1ii_FRONT_SHADOW-1200.png?v=1770998589"
+    ],
+    "metrics": {
+      "calories": 140,
+      "fatG": 3,
+      "carbsG": 4,
+      "sugarsG": 1,
+      "form": "powder bag",
+      "proteinG": 24,
+      "servingG": 36,
+      "source": "dairy blend — whey protein isolate, micellar casein, milk protein isolate",
+      "sweetener": "sucralose + acesulfame K"
+    },
+    "sources": [
+      {
+        "url": "https://jymsupplementscience.com/products/pro-jym-protein-powder",
+        "label": "JYM Supplement Science — official product page (per-source gram breakdown, sizes, flavors)"
+      },
+      {
+        "url": "https://jymsupplementscience.com/cdn/shop/files/PRJ04VA20024285060422V1.1i_BACK_SHADOW-1200px.png?v=1770998535",
+        "label": "Pro JYM Tahitian Vanilla Bean 45-serving back panel (Supplement Facts and full ingredient list)"
+      },
+      {
+        "url": "https://jymsupplementscience.com/cdn/shop/files/PRJ02CR200_24414_060422_V1.1ii_BACK_SHADOW-1200.png?v=1752648448",
+        "label": "Pro JYM Chocolate Cookie Crunch 22-serving back panel (42 g scoop comparison)"
+      }
+    ]
+  },
+  {
+    "id": "ryse-loaded-protein",
+    "name": "Loaded Protein",
+    "brand": "RYSE",
+    "category": "protein",
+    "stimFree": true,
+    "badges": [
+      "Fully Disclosed Label"
+    ],
+    "caffeineMg": 0,
+    "keyIngredients": [
+      {
+        "name": "Whey protein blend (instantized whey isolate, then whey concentrate)",
+        "dose": "25 g",
+        "clinicalNote": "Isolate is listed ahead of concentrate, and 25 g per scoop sits inside the 20–40 g per-serving range used in muscle protein synthesis research."
+      },
+      {
+        "name": "MCT powder (medium-chain triglycerides from palm kernel and coconut oil)",
+        "dose": "amount not stated on label",
+        "clinicalNote": "Listed third, ahead of the flavor system, but the panel discloses only the 2.5 g total fat figure — the MCT share of it is not broken out."
+      },
+      {
+        "name": "Organic agave inulin (prebiotic fiber)",
+        "dose": "1 g dietary fiber per serving",
+        "clinicalNote": "Inulin is a prebiotic fiber; the 1 g on this panel is well under the several grams a day used in gut-microbiome research."
+      }
+    ],
+    "cautions": [
+      "Contains milk, and the rest of the list moves by flavor — Vanilla Ice Cream carries soy and/or sunflower lecithin, Jet-Puffed Marshmallow sodium caseinate with sunflower lecithin",
+      "Sweetened with sucralose and acesulfame potassium",
+      "Protein powders supplement food, not replace it"
+    ],
+    "servings": 27,
+    "priceRange": "$$$",
+    "flavorsNote": "Eighteen-plus flavors including licensed Little Debbie, JIF and Jet-Puffed collaborations; figures verified on the Vanilla Ice Cream panel (35 g scoop, 27 servings) and cross-checked against Jet-Puffed Marshmallow (33.9 g scoop), with sucralose and acesulfame potassium doing the sweetening.",
+    "affiliateUrl": "https://www.amazon.com/dp/B0BDTMHBC8?tag=thescoopsense-20",
+    "blurb": "Isolate is listed first, but the scoop also carries MCT powder and organic agave inulin, so 25 g of protein arrives in a 35 g scoop — a lower protein-per-gram ratio than a straight isolate, in exchange for 1 g of prebiotic fiber.",
+    "labelVerified": "September 2026",
+    "imageUrl": "images/products/ryse-loaded-protein.jpg",
+    "images": [
+      "https://rysesupps.com/cdn/shop/files/2lb_vic_1_noshadow_d83b9d5b-087c-43ca-bba7-8525bbab62a7.png",
+      "https://rysesupps.com/cdn/shop/files/2lb_vic_2_noshadow.png",
+      "https://rysesupps.com/cdn/shop/files/2lb_vic_3_noshadow.png"
+    ],
+    "metrics": {
+      "proteinG": 25,
+      "servingG": 35,
+      "source": "whey isolate and concentrate blend",
+      "sweetener": "sucralose + acesulfame potassium"
+    },
+    "sources": [
+      {
+        "url": "https://rysesupps.com/products/loaded-protein",
+        "label": "RYSE Supps — Loaded Protein product page (Vanilla Ice Cream and JIF Peanut Butter Marshmallow Nutrition Facts panels, per-flavor ingredient lists)"
+      }
+    ]
   }
 ];
