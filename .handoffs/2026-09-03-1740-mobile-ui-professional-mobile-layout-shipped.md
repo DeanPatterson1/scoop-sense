@@ -158,3 +158,50 @@ investigated and found sound; the panel was the actual defect.
 - Verify a claim about the phone layout by measuring, not by screenshotting a
   full page: `getBoundingClientRect`, `scrollHeight/innerHeight`, and
   `documentElement.scrollWidth > clientWidth` for overflow.
+
+---
+
+## Addendum — live-site audit (19:40, shipped as `f0781db`, `v=20260903c`)
+
+Owner asked to check the live site and fix what was wrong. Audited
+thescoopsense.com directly: **all 228 sitemap URLs and 457 referenced resources
+returned 200**, no console errors on any page, no horizontal overflow, compare
+sorting works, and the shortlist renders (localStorage key is **`sc-shortlist`**,
+not `sc-saved` — an array of product ids).
+
+Three real faults, all fixed and verified live:
+
+1. **The Zoom button did nothing on 21 of 219 product pages.** `GALLERY_SCRIPT`
+   was gated on `p.images.length > 1` — more than one *retailer* image — but the
+   markup it drives does not depend on that. The thumbnail strip comes from
+   `slidesOf()`, which leads with the local shot, and the zoom button plus the
+   lightbox are rendered for *every* photographed product. Now gated on
+   `slidesOf(p).length`. 5 of those pages also had inert thumbnails.
+2. **The category chip row never moved its active state**, including
+   `aria-current`. 108 links point at `hub.html#cat-pre-workout`; all of them
+   filtered the grid and left the chips saying "All". `syncCatChips()` now runs
+   from `renderHub()`.
+3. **One dead gallery image** (Amacx Shopify file, 404) removed from
+   `data/products.js`; gallery thumbs whose image fails now hide themselves,
+   because 570 of these are hotlinked from manufacturers' own sites and more
+   will rot.
+
+### Two false positives — do not "re-fix" these
+
+- **`#cat-pre-workout` is not a dead anchor.** A link checker will flag it on
+  ~108 pages because no element carries that id. It is *filter state*:
+  `readHashState()` parses `^cat-([a-z-]+)$`, and `isPlainAnchor()` explicitly
+  excludes it. Verified live — it filters to 51 pre-workouts.
+- **The imgix galleries are fine.** A naive fetcher reports 403 on
+  `maurten.imgix.net` and `pprotein.imgix.net` because the URLs carry `&amp;`
+  in the markup and the checker did not decode the entity. In a browser they
+  load (naturalWidth 1798/1800/432). Decode HTML entities before checking a URL
+  scraped from markup.
+
+### Tooling note
+
+Verifying a deploy in the browser needs a cache-buster query
+(`/hub?cb=931#cat-pre-workout`): the edge served the *previous* build's HTML to
+Playwright for minutes after `curl` was already reporting the new token. This is
+the non-uniform edge cache the deploy memory warns about — it bites the browser
+and `curl` differently at the same moment.
