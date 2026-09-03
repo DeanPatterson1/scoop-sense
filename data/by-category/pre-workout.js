@@ -3392,12 +3392,12 @@ var PRODUCTS = [
       },
       {
         "name": "Creatine HCl",
-        "dose": "250 mg",
+        "dose": "1 g",
         "clinicalNote": "Far under the roughly 3-5 g/day of creatine used in research; a token amount rather than a working dose."
       }
     ],
     "cautions": [
-      "378 mg is the label's own stated caffeine figure and it all sits in a single 7.8 g scoop — the directions say one scoop only, and to start with half a scoop",
+      "378 mg is the label's own stated caffeine figure and it all sits in a single 7.4 g scoop — the directions say one scoop only, and to start with half a scoop",
       "The panel also lists 3 mg of yohimbe bark extract standardized to 8% yohimbine alongside the caffeine",
       "Every line carries a dose except a 50 mg 'Caffeine Citric Acid Blend'; 2.5 g beta-alanine may cause harmless tingling (paresthesia)"
     ],
@@ -3405,7 +3405,7 @@ var PRODUCTS = [
     "priceRange": "$",
     "flavorsNote": "Five flavors (Blue Razz, Fruit Punch, Watermelon, Pixie Dust, Green Apple) sweetened with sucralose and acesulfame potassium; color comes from blue or green spirulina or fruit and vegetable juice depending on flavor, not FD&C dyes.",
     "affiliateUrl": "https://www.amazon.com/dp/B074CM1YMF?tag=thescoopsense-20",
-    "blurb": "A single-column, single-scoop label built almost entirely around stimulants: 378 mg of stated caffeine plus 3 mg of 8% yohimbe in 7.8 g of powder. The performance side is a 3.75 g Strength Matrix whose parts — 2.5 g beta-alanine, 500 mg Nitrosigine, 500 mg citrulline aspartate, 250 mg creatine HCl — each sit under their studied amounts, which is the mirror image of the Mr. HYDE Signature V2 label and its 200 mg caffeine and 2.5 g creatine monohydrate.",
+    "blurb": "A single-column, single-scoop label built almost entirely around stimulants: 378 mg of stated caffeine plus 3 mg of 8% yohimbe in 7.4 g of powder. The performance side is a 4.5 g Strength Matrix whose parts — 2.5 g beta-alanine, 1 g creatine HCl, 500 mg Nitrosigine, 500 mg citrulline aspartate — each sit under their studied amounts, which is the mirror image of the Mr. HYDE Signature V2 label and its 200 mg caffeine and 2.5 g creatine monohydrate.",
     "labelVerified": "September 2026",
     "imageUrl": "images/products/prosupps-mr-hyde-xtreme.jpg",
     "images": [
@@ -3440,43 +3440,43 @@ var PRODUCTS = [
     "category": "pre-workout",
     "stimFree": false,
     "badges": [
-      "High Stim",
+      "Moderate Stim",
       "Fully Disclosed Label",
       "Budget Pick"
     ],
-    "caffeineMg": 320,
+    "caffeineMg": 160,
     "keyIngredients": [
       {
         "name": "Caffeine Anhydrous",
-        "dose": "320 mg",
-        "clinicalNote": "A high amount, reached only at the two-scoop dose the front of the tub advertises; a single scoop is 160 mg, and there is no theanine on the panel to pair with it."
+        "dose": "160 mg",
+        "clinicalNote": "Below the 200-400 mg used in most caffeine performance research, and there is no theanine on the panel to pair with it. The 320 mg on the front of the tub is two scoops, which the directions escalate to after the first."
       },
       {
         "name": "Beta-Alanine",
-        "dose": "3.2 g",
-        "clinicalNote": "At two scoops this matches the 3.2 g/day amount used in most beta-alanine research — expect tingles; one scoop is 1.6 g, which is under it."
+        "dose": "1.6 g",
+        "clinicalNote": "Half the 3.2 g/day floor used in most beta-alanine research; the studied amount arrives only at the two scoops the directions build up to, and tingles are likely there."
       },
       {
         "name": "L-Citrulline",
-        "dose": "3 g",
-        "clinicalNote": "Under the 6-8 g range used in most citrulline pump studies even at the full two-scoop dose, and 1.5 g at one scoop."
+        "dose": "1.5 g",
+        "clinicalNote": "A quarter of the 6-8 g used in most citrulline pump studies, and still under half of it at the two-scoop dose."
       },
       {
         "name": "Betaine Anhydrous",
-        "dose": "2.5 g",
-        "clinicalNote": "Matches the 2.5 g used in most betaine power-output studies at two scoops; one scoop is 1.25 g."
+        "dose": "1.25 g",
+        "clinicalNote": "Half the 2.5 g used in most betaine power-output studies; two scoops reach it."
       }
     ],
     "cautions": [
-      "The 320 mg caffeine, 3.2 g beta-alanine and 3 g citrulline on the front of the tub are footnoted 'Per 2 Servings' — the Supplement Facts panel prints only the one-scoop column, at half of each",
-      "The '30 servings' count is single scoops, so at the two-scoop dose the directions call for, a tub is 15 workouts",
-      "The label's own instruction is to assess tolerance with one scoop first and not to exceed two scoops in 24 hours; 3.2 g beta-alanine commonly causes harmless tingling"
+      "The 320 mg caffeine, 3.2 g beta-alanine and 3 g citrulline on the front of the tub are two-scoop figures, footnoted 'Per 2 Servings' — the Supplement Facts panel's own serving is one 10 g scoop, at half of each",
+      "The directions escalate: one scoop to assess tolerance, then two scoops before a workout, capped at two servings in 24 hours — so a 30-serving tub is 15 workouts at the dose the front of the tub advertises",
+      "Beta-alanine tingling (harmless skin prickling) is likely at the two-scoop dose, where beta-alanine reaches 3.2 g"
     ],
-    "servings": 15,
+    "servings": 30,
     "priceRange": "$",
     "flavorsNote": "Four flavors (Fruit Punch, Grape, Icy Rocket Freeze, Pink Lemonade) sweetened with sucralose alone and colored with FD&C Red No. 40 and Blue No. 1 rather than fruit or vegetable sources.",
     "affiliateUrl": "https://www.amazon.com/dp/B0CM9R6J4L?tag=thescoopsense-20",
-    "blurb": "The 2.0 relaunch drops the old proprietary blend and prints a number beside every ingredient, but the headline figures are two-scoop numbers on a panel that only shows one scoop. At the full two scoops the beta-alanine and betaine land on their studied amounts while the citrulline stays under the researched range, and the 1,812 mg electrolyte matrix is mostly sodium citrate and salt.",
+    "blurb": "The 2.0 relaunch drops the old proprietary blend and prints a number beside every ingredient — then advertises the doubles. Every figure on the front of the tub is two scoops; the panel's own serving is one 10 g scoop at 160 mg caffeine, 1.6 g beta-alanine and 1.5 g citrulline, all under their studied amounts. Doubling reaches the beta-alanine and betaine research amounts and halves the tub.",
     "labelVerified": "September 2026",
     "imageUrl": "images/products/six-star-pre-workout-explosion.jpg",
     "imageBg": "255,255,255",
@@ -3543,7 +3543,7 @@ var PRODUCTS = [
     "priceRange": "$$",
     "flavorsNote": "Four core flavors (Icy Blue Razz, Cherry Limeade, Fruit Punch, Raspberry Lemonade); naturally and artificially flavored, sugar-free, sweetened with sucralose and acesulfame potassium and dyed with FD&C colors.",
     "affiliateUrl": "https://www.amazon.com/dp/B01D8107VY?tag=thescoopsense-20",
-    "blurb": "The one C4 that still hides its formula. Where C4 Original, Ultimate and Sport all print every dose, Ripped keeps two proprietary blends — a 1 g thermogenic blend and a 371 mg energy blend — and discloses only the caffeine inside them. It is also the C4 with the least in it: 150 mg caffeine, 1.6 g beta-alanine, 1 g of arginine AKG, no citrulline and no creatine, which Cellucor removed on purpose for a cutting formula.",
+    "blurb": "Named blends run through the whole C4 line, but this is the one that does not break them open: Original and Sport print an amount beside each ingredient inside their matrices, while Ripped's 1 g thermogenic blend and 371 mg energy blend disclose only the caffeine. It is also the thinnest of the C4s on this site — 150 mg caffeine, 1.6 g beta-alanine, 1 g arginine AKG, no citrulline and no creatine, which Cellucor removed on purpose for a cutting formula.",
     "labelVerified": "September 2026",
     "imageUrl": "images/products/cellucor-c4-ripped.jpg",
     "imageBg": "255,255,255",
@@ -3580,11 +3580,6 @@ var PRODUCTS = [
     ],
     "caffeineMg": 400,
     "keyIngredients": [
-      {
-        "name": "Psychotic Blend",
-        "dose": "4,459 mg total",
-        "clinicalNote": "Eight ingredients share one number — beta-alanine, creatine monohydrate, caffeine anhydrous, AMPiberry, OxyGold fulvic acid, DMAE, Rauwolfia vomitoria and Huperzia serrata — so only the blend total can be compared to anything."
-      },
       {
         "name": "Caffeine",
         "dose": "400 mg",
@@ -3669,7 +3664,7 @@ var PRODUCTS = [
       }
     ],
     "cautions": [
-      "The 180 mg on the panel is the PurCaf green-coffee extract, not pure caffeine — Transparent Labs' own FAQ puts the actual caffeine at about 162 mg",
+      "The 180 mg on the panel is PurCaf green-coffee extract, not pure caffeine, so the caffeine actually delivered is somewhat under that figure",
       "Beta-alanine tingles (harmless skin prickling) are possible at 2 g",
       "Every scoop carries a micronutrient group — 225 mcg iodine (150% DV), 15 mg zinc, 55 mcg selenium, 1 mg copper and 200 mcg chromium (571% DV) — which stacks with a multivitamin"
     ],

@@ -2050,7 +2050,7 @@ var PRODUCTS = [
     "keyIngredients": [
       {
         "name": "Anabolic BCAA & EAA Matrix (incl. Instant BCAA Blend)",
-        "dose": "5.9 g",
+        "dose": "6 g",
         "clinicalNote": "All nine essential amino acids are present, but the total sits under the roughly 10 to 15 g used in most free-form EAA research, and the branched-chain trio is pooled so the leucine share is never printed."
       },
       {

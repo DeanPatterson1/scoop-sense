@@ -2717,7 +2717,7 @@ var PRODUCTS = [
     "priceRange": "$$",
     "flavorsNote": "Unflavored only, in two formats — a 454 g tub of 90 scoops and a 150 g bag of 30 single-dose stick packs — with no sweetener or flavor on either panel.",
     "affiliateUrl": "https://www.amazon.com/dp/B0BT23VBLJ?tag=thescoopsense-20",
-    "blurb": "One line on the panel — Creatine Monohydrate 5 g — with \"Other Ingredients: None\" under it, in a 454 g tub of 90 servings or a 30-count box of pre-measured stick packs that carry the identical 5 g panel. The stick packs cost roughly twice as much per serving as the tub for the same powder.",
+    "blurb": "One line on the panel — Creatine Monohydrate 5 g — with \"Other Ingredients: None\" under it, in a 454 g tub of 90 servings or a 30-count box of pre-measured stick packs that carry the identical 5 g panel.",
     "labelVerified": "September 2026",
     "imageUrl": "images/products/jocko-fuel-creatine.jpg",
     "imageBg": "255,255,255",

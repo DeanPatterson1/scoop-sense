@@ -2968,13 +2968,11 @@ var PRODUCTS = [
   },
   {
     "id": "animal-whey",
-    "name": "Whey Isolate",
+    "name": "Isolate Loaded Whey Protein",
     "brand": "Animal",
     "category": "protein",
     "stimFree": true,
-    "badges": [
-      "Fully Disclosed Label"
-    ],
+    "badges": [],
     "caffeineMg": 0,
     "keyIngredients": [
       {
@@ -3001,8 +2999,8 @@ var PRODUCTS = [
     "servings": 27,
     "priceRange": "$$$",
     "flavorsNote": "Eight flavors - Vanilla, Chocolate, Chocolate Chip, Brownie Batter, Cookies & Cream, Frosted Cinnamon Bun, Strawberry and Banana Split - all sweetened with acesulfame potassium and sucralose; figures are anchored to the Vanilla 2 lb bag (33 g scoop, 27 servings, 120 calories, net wt 907 g), while Chocolate runs a 34 g scoop at 125 calories and Cookies & Cream a 32 g scoop at 28 servings.",
-    "affiliateUrl": "https://www.amazon.com/dp/B00XOXP8G6?tag=thescoopsense-20",
-    "blurb": "The bag reads Isolate Loaded Whey Protein while the brand sells it as Animal Whey, and the ingredient list backs the name only partway: it is a blend that lists whey isolate ahead of whey concentrate without printing the split, holding 25 g of protein in a 33 g Vanilla scoop with a papain-and-bromelain enzyme blend at the tail of the list.",
+    "affiliateUrl": "https://www.amazon.com/dp/B00XOXP3QG?tag=thescoopsense-20",
+    "blurb": "The bag reads Isolate Loaded Whey Protein while the brand sells it as Animal Whey, and the ingredient list backs the name only partway — the panel pools the sources, so this is not a fully disclosed label: it is a blend that lists whey isolate ahead of whey concentrate without printing the split, holding 25 g of protein in a 33 g Vanilla scoop with a papain-and-bromelain enzyme blend at the tail of the list.",
     "labelVerified": "September 2026",
     "imageUrl": "images/products/animal-whey.jpg",
     "imageBg": "255,255,255",
@@ -3015,7 +3013,7 @@ var PRODUCTS = [
       "calories": 120,
       "fatG": 1,
       "carbsG": 3,
-      "sugarsG": 2,
+      "sugarsG": 1,
       "netWeightG": 907,
       "proteinG": 25,
       "servingG": 33,
@@ -3074,9 +3072,9 @@ var PRODUCTS = [
       "Sweetened with sucralose and acesulfame potassium; all three flavors are artificially flavored",
       "The Banned Substance Tested mark on the tub is Optimum Nutrition's own; the brand's support page names Gold Standard 100% Whey and Gold Standard 100% Isolate - not Platinum Hydrowhey - as its Informed Choice certified powders"
     ],
-    "servings": 20,
+    "servings": 40,
     "priceRange": "$$$",
-    "flavorsNote": "Three flavors only - Velocity Vanilla, Turbo Chocolate and Supercharged Strawberry, all artificially flavored and sweetened with sucralose and acesulfame potassium; figures are anchored to the Velocity Vanilla 1.76 lb tub (40 g scoop, 20 servings, 800 g, 140 calories), while Turbo Chocolate runs a 41 g scoop for the same 30 g of protein, and the 40-serving tub is offered in vanilla and chocolate only.",
+    "flavorsNote": "Three flavors only - Velocity Vanilla, Turbo Chocolate and Supercharged Strawberry, all artificially flavored and sweetened with sucralose and acesulfame potassium; figures are anchored to the Velocity Vanilla panel (40 g scoop, 140 calories) at the 3.5 lb / 40-serving size, which is sold in vanilla and chocolate only; the 1.76 lb tub is the same scoop at 20 servings, and Turbo Chocolate runs a 39 g scoop for the same 30 g of protein.",
     "affiliateUrl": "https://www.amazon.com/dp/B002QZORGK?tag=thescoopsense-20",
     "blurb": "The one Optimum Nutrition powder built on hydrolyzed whey isolate instead of whole whey, and the biggest scoop in the line - 30 g of protein, 15.5 g of essential amino acids and 8.8 g of BCAAs in 40 g, against Gold Standard 100% Whey's 24 g in 31 g - though its banned-substance mark is the brand's own rather than the Informed Choice certification Optimum Nutrition names for Gold Standard whey and isolate.",
     "labelVerified": "September 2026",
@@ -3091,7 +3089,7 @@ var PRODUCTS = [
       "fatG": 1,
       "carbsG": 3,
       "sugarsG": 1,
-      "netWeightG": 800,
+      "netWeightG": 1590,
       "proteinG": 30,
       "servingG": 40,
       "source": "hydrolyzed whey protein isolate",
